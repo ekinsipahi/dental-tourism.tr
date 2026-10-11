@@ -19,6 +19,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.http import HttpResponse
+from django.views.decorators.cache import cache_page
 from django.urls import include, path
 from django.utils.translation import gettext_lazy as _
 
@@ -36,7 +37,8 @@ urlpatterns = [
     path("site.webmanifest", core_views.webmanifest, name="webmanifest"),
     # TEK sitemap: tüm bölümler (sayfalar, tedaviler, rehberler, paketler, fiyat, köken, blog, klinik, hekim)
     # hreflang alternates + x-default ile tek <urlset> içinde
-    path("sitemap.xml", sitemap, {"sitemaps": SITEMAPS}, name="sitemap-index"),
+    # 6 saat önbellek (DatabaseCache) — 949 URL × 16 dil hreflang her istekte yeniden üretilmez
+    path("sitemap.xml", cache_page(60 * 60 * 6)(sitemap), {"sitemaps": SITEMAPS}, name="sitemap-index"),
     path("sitemap-<section>.xml", sitemap, {"sitemaps": SITEMAPS}, name="sitemap-section"),
     path("api/persona/", include("apps.persona.api_urls")),
     path("api/tracking/", include("apps.tracking.urls")),

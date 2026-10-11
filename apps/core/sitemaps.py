@@ -19,7 +19,34 @@ class I18nSitemap(Sitemap):
 
     def get_urls(self, page=1, site=None, protocol=None):
         # İstek hangi host'tan gelirse gelsin kanonik domain kullanılır
-        return super().get_urls(page=page, site=_Site(), protocol=self.protocol)
+        self._loc_cache, self._lang_cache = {}, {}
+        try:
+            return super().get_urls(page=page, site=_Site(), protocol=self.protocol)
+        finally:
+            self._loc_cache, self._lang_cache = {}, {}
+
+    # Django her URL'nin hreflang alternatiflerini üretirken aynı (nesne, dil) adresini defalarca hesaplar
+    # (n × dil²). Her (nesne, dil) bir kez hesaplanır, dil listesi nesne başına bir kez alınır.
+    def _location(self, item, force_lang_code=None):
+        cache = getattr(self, "_loc_cache", None)
+        if cache is None:
+            return super()._location(item, force_lang_code)
+        key = (id(item[0]), force_lang_code or item[1])
+        if key not in cache:
+            cache[key] = super()._location(item, force_lang_code)
+        return cache[key]
+
+    def get_languages_for_item(self, item):
+        cache = getattr(self, "_lang_cache", None)
+        if cache is None:
+            return self._languages_for(item)
+        key = id(item)
+        if key not in cache:
+            cache[key] = self._languages_for(item)
+        return cache[key]
+
+    def _languages_for(self, item):
+        return self.languages
 
 
 class _Site:
@@ -45,8 +72,14 @@ class StaticSitemap(I18nSitemap):
 class TranslatableSitemap(I18nSitemap):
     """Nesne başına sadece canlı dilleri döndürür."""
 
-    def get_languages_for_item(self, item):
+    def _languages_for(self, item):
         return item.live_languages()
+
+
+def _all(qs, *paths):
+    from apps.localization.models import with_all_translations
+
+    return with_all_translations(qs, *paths)
 
 
 class TreatmentSitemap(TranslatableSitemap):
@@ -56,7 +89,7 @@ class TreatmentSitemap(TranslatableSitemap):
     def items(self):
         from apps.treatments.models import Treatment
 
-        return Treatment.objects.filter(is_active=True)
+        return _all(Treatment.objects.filter(is_active=True))
 
     def location(self, obj):
         return reverse("treatments:detail", kwargs={"slug": obj.localized(get_language()).slug})
@@ -72,11 +105,11 @@ class LandingPageSitemap(TranslatableSitemap):
     def items(self):
         from apps.seo.models import LandingPage
 
-        return (LandingPage.objects.filter(is_active=True, noindex=False, treatment__is_active=True,
-                                           page_type=LandingPage.TYPE_TREATMENT_CITY)
-                .select_related("treatment", "city"))
+        return _all(LandingPage.objects.filter(is_active=True, noindex=False, treatment__is_active=True,
+                                               page_type=LandingPage.TYPE_TREATMENT_CITY)
+                    .select_related("treatment", "city"), "treatment", "city")
 
-    def get_languages_for_item(self, item):
+    def _languages_for(self, item):
         return [lg for lg in item.live_languages() if item.treatment.has_language(lg)]
 
     def location(self, obj):
@@ -95,7 +128,7 @@ class ClinicSitemap(TranslatableSitemap):
     def items(self):
         from apps.clinics.models import Clinic
 
-        return Clinic.objects.published()
+        return _all(Clinic.objects.published())
 
     def lastmod(self, obj):
         return obj.updated_at
@@ -108,7 +141,7 @@ class DoctorSitemap(TranslatableSitemap):
     def items(self):
         from apps.clinics.models import Doctor
 
-        return Doctor.objects.filter(is_active=True, clinic__status="approved")
+        return _all(Doctor.objects.filter(is_active=True, clinic__status="approved"))
 
 
 class BlogPostSitemap(TranslatableSitemap):
@@ -117,7 +150,7 @@ class BlogPostSitemap(TranslatableSitemap):
     def items(self):
         from apps.blog.models import BlogPost
 
-        return BlogPost.published.filter(noindex=False)
+        return _all(BlogPost.published.filter(noindex=False))
 
     def location(self, obj):
         return obj.get_absolute_url(get_language())
@@ -136,7 +169,7 @@ class BlogCategorySitemap(TranslatableSitemap):
     def items(self):
         from apps.blog.models import BlogCategory
 
-        return BlogCategory.objects.filter(posts__status="published").distinct()
+        return _all(BlogCategory.objects.filter(posts__status="published").distinct())
 
     def location(self, obj):
         return obj.get_absolute_url(get_language())
@@ -150,7 +183,7 @@ class _TreatmentPerLang(TranslatableSitemap):
     def items(self):
         from apps.treatments.models import Treatment
 
-        return Treatment.objects.filter(is_active=True)
+        return _all(Treatment.objects.filter(is_active=True))
 
     def location(self, obj):
         return reverse(self.viewname, kwargs={"slug": obj.localized(get_language()).slug})
@@ -179,7 +212,7 @@ class OriginSitemap(I18nSitemap):
 
         return [c for c in ORIGINS if c != "TR"]
 
-    def get_languages_for_item(self, item):
+    def _languages_for(self, item):
         from apps.seo.package_data import langs_for_origin
 
         return langs_for_origin(item)
@@ -197,7 +230,7 @@ class GuideSitemap(TranslatableSitemap):
     def items(self):
         from apps.seo.models import SeoTopic
 
-        return SeoTopic.objects.filter(is_active=True, noindex=False)
+        return _all(SeoTopic.objects.filter(is_active=True, noindex=False))
 
     def location(self, obj):
         return reverse("guides:detail", kwargs={"slug": obj.localized(get_language()).slug})

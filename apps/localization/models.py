@@ -100,7 +100,19 @@ class TranslatableModel(models.Model):
         return hashlib.sha256(raw.encode()).hexdigest()
 
     # ── Çeviri erişimi ────────────────────────────────────────────────────
+    def _all_live(self):
+        """with_all_translations() ile TÜM canlı çeviriler prefetch edildiyse {dil: çeviri}, yoksa None."""
+        rows = getattr(self, "_all_tr_list", None)
+        if rows is None:
+            return None
+        d = getattr(self, "_all_tr_map", None)
+        if d is None:
+            d = self._all_tr_map = {t.language_code: t for t in rows}
+        return d
+
     def get_translation(self, lang, live_only=True):
+        if live_only and (allmap := self._all_live()) is not None:
+            return allmap.get(lang)
         # with_translations() ile o dil için (sadece canlı satırlar) prefetch edildiyse DB'ye gitme
         if live_only and getattr(self, "_prefetched_lang", None) == lang and hasattr(self, "_prefetched_tr"):
             return self._prefetched_tr[0] if self._prefetched_tr else None
@@ -124,7 +136,9 @@ class TranslatableModel(models.Model):
         return Localized(self, None, self.source_language, True)
 
     def live_languages(self) -> list:
-        langs = set(self.translations.filter(status__in=LIVE_STATUSES).values_list("language_code", flat=True))
+        allmap = self._all_live()
+        langs = set(allmap) if allmap is not None else set(
+            self.translations.filter(status__in=LIVE_STATUSES).values_list("language_code", flat=True))
         langs.add(self.source_language)
         return [c for c, _ in settings.LANGUAGES if c in langs]
 
@@ -145,6 +159,20 @@ def with_translations(queryset, lang=None):
                  queryset=tr_model.objects.filter(language_code=lang, status__in=LIVE_STATUSES),
                  to_attr="_prefetched_tr")
     )
+
+
+def with_all_translations(queryset, *paths):
+    """Sitemap gibi her nesnenin TÜM dillerini gezen yerler için: tüm canlı çeviriler tek sorguda.
+    paths: ilişkili çevrilebilir nesneler de (ör. "treatment", "city") aynı şekilde yüklenir."""
+    def _prefetch(path, model):
+        tr_model = model.translations.rel.related_model
+        lookup = f"{path}__translations" if path else "translations"
+        return Prefetch(lookup, queryset=tr_model.objects.filter(status__in=LIVE_STATUSES), to_attr="_all_tr_list")
+
+    lookups = [_prefetch("", queryset.model)]
+    for path in paths:
+        lookups.append(_prefetch(path, queryset.model._meta.get_field(path).related_model))
+    return queryset.prefetch_related(*lookups)
 
 
 def localize_list(objects, lang=None, fallback=True):
