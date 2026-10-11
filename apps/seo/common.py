@@ -71,6 +71,8 @@ def persona_hook(persona):
                   _("No hidden costs. Call or message us and receive your personal quote.")),
         "premium": (_("Time with your dentist, not with a sales team"),
                     _("One experienced dentist responsible for your whole treatment, premium materials, discreet care.")),
+        "quality": (_("A treatment planned for you — not a template"),
+                    _("Digital smile design, minimal preparation and one experienced dentist for every step. Healthy tooth tissue is saved first.")),
         "shame": (_("No judgement — only solutions"),
                   _("Whatever the state of your teeth, we have seen it before. We start with what can be saved.")),
         "trust": (_("A dentist-led clinic you can check"),

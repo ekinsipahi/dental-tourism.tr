@@ -587,3 +587,18 @@
 586|Agencja turystyki dentystycznej w Turcji: Sterr Agency
 587|W planowaniu podróży, transferach i zakwaterowaniu współpracujemy z naszą agencją partnerską. Decyzje medyczne zawsze podejmuje dentysta.
 588|Turystyka dentystyczna z Sterr Agency
+589|Chciałbym/chciałabym otrzymać indywidualny plan leczenia.
+590|Leczenie zaplanowane dla Ciebie — nie szablon
+591|Cyfrowe projektowanie uśmiechu, minimalne szlifowanie i jeden doświadczony dentysta na każdym etapie. Najpierw chronimy zdrowe tkanki zęba.
+592|Otrzymaj plan leczenia stworzony dla Twoich zębów
+593|Wyślij zdjęcie lub RTG. Dentysta osobiście analizuje Twój przypadek i wyjaśnia, która opcja przetrwa najdłużej — i dlaczego.
+594|Stomatologia indywidualna
+595|Wysokiej jakości leczenie stomatologiczne w Stambule —
+596|zaplanowane tylko dla Ciebie.
+597|Każdy plan zaczyna się od starannego badania i cyfrowego projektu uśmiechu. Najpierw ratujemy zdrowe zęby, używamy materiałów premium, a każdy etap wykonuje jeden doświadczony dentysta.
+598|Cyfrowy projekt uśmiechu
+599|Minimalne szlifowanie
+600|Jeden dentysta od początku do końca
+601|Otrzymaj mój plan leczenia
+602|Poznaj swojego dentystę
+603|Leczenie zaplanowane wokół Ciebie

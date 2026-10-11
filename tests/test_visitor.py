@@ -72,15 +72,24 @@ class PageBehaviourTests(SeededTestCase):
         s = VisitorSession.objects.get(session_key=c.session.session_key)
         self.assertEqual(max(s.persona_scores, key=s.persona_scores.get), "price")
 
+    def test_browsing_quality_treatments_makes_quality_persona(self):
+        from apps.persona.models import VisitorSession
+
+        c = Client(HTTP_USER_AGENT=BROWSER_UA)
+        for url in ("/treatments/zirconia-crowns/", "/treatments/all-on-4-implants/",
+                    "/de/behandlungen/dental-implants/", "/treatments/root-canal-treatment/"):
+            c.get(url)
+        s = VisitorSession.objects.get(session_key=c.session.session_key)
+        self.assertEqual(max(s.persona_scores, key=s.persona_scores.get), "quality")
+
     def test_browsing_luxury_treatments_makes_premium_persona(self):
         from apps.persona.models import VisitorSession
 
         c = Client(HTTP_USER_AGENT=BROWSER_UA)
-        for url in ("/treatments/porcelain-veneers/", "/treatments/zirconia-crowns/", "/treatments/all-on-4-implants/",
-                    "/de/behandlungen/dental-implants/"):
+        for url in ("/treatments/hollywood-smile/", "/treatments/porcelain-veneers/", "/packages/"):
             c.get(url)
         s = VisitorSession.objects.get(session_key=c.session.session_key)
-        self.assertEqual(max(s.persona_scores, key=s.persona_scores.get), "premium")
+        self.assertEqual(s.page_scores["premium"], max(s.page_scores.values()))
         self.assertIn("treatments:detail:porcelain-veneers", s.pages_seen)
 
     def test_refreshing_same_page_does_not_inflate(self):

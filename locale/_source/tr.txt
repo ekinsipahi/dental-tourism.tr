@@ -587,3 +587,18 @@
 586|Türkiye'de diş turizmi acentesi: Sterr Agency
 587|Seyahat planlaması, transfer ve konaklama için iş ortağı acentemizle çalışıyoruz. Tıbbi kararlar her zaman hekimde kalır.
 588|Sterr Agency ile diş turizmi
+589|Kişiye özel bir tedavi planı istiyorum.
+590|Size özel planlanan tedavi — şablon değil
+591|Dijital gülüş tasarımı, minimum aşındırma ve her adımda aynı deneyimli hekim. Önce sağlıklı diş dokusu korunur.
+592|Dişlerinize özel bir tedavi planı alın
+593|Bir fotoğraf ya da röntgen gönderin. Hekim vakanızı bizzat inceler ve hangi seçeneğin en uzun ömürlü olduğunu — ve nedenini — açıklar.
+594|Kişiye özel diş hekimliği
+595|İstanbul'da kaliteli diş tedavisi —
+596|yalnızca sizin için planlanır.
+597|Her plan dikkatli bir muayene ve dijital gülüş tasarımıyla başlar. Önce sağlıklı dişleri koruruz, premium malzeme kullanırız ve her adımı aynı deneyimli hekim yapar.
+598|Dijital gülüş tasarımı
+599|Minimum aşındırma
+600|Başından sonuna tek hekim
+601|Kişisel tedavi planımı al
+602|Hekiminizle tanışın
+603|Size göre planlanan tedaviler

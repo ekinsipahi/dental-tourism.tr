@@ -587,3 +587,18 @@
 586|Zahntourismus-Agentur in der Türkei: Sterr Agency
 587|Für Reiseplanung, Transfers und Unterkunft arbeiten wir mit unserer Partneragentur zusammen. Medizinische Entscheidungen trifft immer der Zahnarzt.
 588|Zahntourismus mit Sterr Agency
+589|Ich möchte einen individuellen Behandlungsplan.
+590|Eine Behandlung, für Sie geplant — keine Schablone
+591|Digitales Smile Design, minimale Präparation und ein erfahrener Zahnarzt für jeden Schritt. Gesunde Zahnsubstanz wird zuerst erhalten.
+592|Erhalten Sie einen Behandlungsplan für Ihre Zähne
+593|Senden Sie ein Foto oder Röntgenbild. Der Zahnarzt prüft Ihren Fall persönlich und erklärt, welche Option am längsten hält — und warum.
+594|Individuelle Zahnmedizin
+595|Hochwertige Zahnbehandlung in Istanbul —
+596|nur für Sie geplant.
+597|Jeder Plan beginnt mit einer sorgfältigen Untersuchung und einem digitalen Smile Design. Wir erhalten zuerst gesunde Zähne, verwenden Premium-Materialien, und ein erfahrener Zahnarzt führt jeden Schritt durch.
+598|Digitales Smile Design
+599|Minimale Präparation
+600|Ein Zahnarzt von Anfang bis Ende
+601|Meinen persönlichen Behandlungsplan erhalten
+602|Lernen Sie Ihren Zahnarzt kennen
+603|Behandlungen, die um Sie herum geplant werden

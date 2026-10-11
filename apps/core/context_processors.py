@@ -67,6 +67,7 @@ def build_wa_message(request, lang, clinic=None):
         "urgency": _("I would like to ask about available appointments this week."),
         "shame": _("I would like information about smile design."),
         "premium": _("I would like to request a private appointment."),
+        "quality": _("I would like a personalised treatment plan."),
         "ready": _("I would like to book an appointment."),
         "skeptic": _("I would like information about materials and certificates."),
         "trust": _("I would like to learn more."),

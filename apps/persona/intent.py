@@ -9,8 +9,8 @@ import re
 import unicodedata
 from urllib.parse import parse_qs, unquote_plus, urlparse
 
-from .models import (PERSONA_FEAR, PERSONA_PREMIUM, PERSONA_PRICE, PERSONA_READY, PERSONA_SHAME,
-                     PERSONA_SKEPTIC, PERSONA_TRUST, PERSONA_URGENCY)
+from .models import (PERSONA_FEAR, PERSONA_PREMIUM, PERSONA_PRICE, PERSONA_QUALITY, PERSONA_READY,
+                     PERSONA_SHAME, PERSONA_SKEPTIC, PERSONA_TRUST, PERSONA_URGENCY)
 
 # (desen, ağırlık). Desenler küçük harf, aksansız metinde aranır (kelime kökü).
 #
@@ -18,9 +18,10 @@ from .models import (PERSONA_FEAR, PERSONA_PREMIUM, PERSONA_PRICE, PERSONA_READY
 #   "cheap / billig / ucuz"              → PRICE   (pazarlıkçı; en güçlü fiyat sinyali)
 #   "cost / price / how much"            → PRICE   (fiyat merakı; daha zayıf)
 #   "dental work / teeth done / care"    → TRUST   (tedavi ihtiyacı olan, iyi bir hekim arayan — ucuz arayan DEĞİL)
-#   "best / quality / kalite / luxury"   → PREMIUM (kalite arayan — ucuz arayan DEĞİL)
+#   "best / quality / custom / kişiye özel" → QUALITY (doğru, kişiye özel, uzun ömürlü tedavi arayan)
+#   "luxury / vip / exclusive / lüks"    → PREMIUM (lüks/ayrıcalık HİSSİ arayan — kalite arayandan ayrı)
 # "package" fiyat sinyali değildir (dental tourism packages = paket/organizasyon arayışı).
-# Karışık sorguda en güçlü sinyal kazanır: "cheap dental work" → price, "best dental work" → premium.
+# Karışık sorguda en güçlü sinyal kazanır: "cheap dental work" → price, "best dental work" → quality, "luxury dental clinic" → premium.
 LEXICON = {
     PERSONA_PRICE: [
         ("cheap", 2.0), ("cost", 1.6), ("price", 1.6), ("prices", 1.6), ("afford", 1.8), ("budget", 1.5),
@@ -73,17 +74,45 @@ LEXICON = {
         ("snabb", 1.6), ("akut", 2.5), ("hurtig", 1.6), ("rask", 1.6), ("rapid", 1.6), ("urgent", 2.5),
         ("tecili", 2.5), ("hizli", 1.6), ("acil", 2.5), ("dugun", 2.5),
     ],
-    PERSONA_PREMIUM: [
+    PERSONA_QUALITY: [
+        # Kalite / kişiye özel tedavi: doğru tedavi, deneyimli hekim, isimli malzeme, uzun ömür
         ("best", 1.8), ("top", 1.2), ("quality", 2.0), ("high quality", 2.2), ("experienced", 1.6),
-        ("specialist", 1.4), ("qualitat", 2.0), ("kwaliteit", 2.0), ("qualite", 2.0), ("qualita", 2.0),
+        ("specialist", 1.4), ("expert", 1.4), ("qualitat", 2.0), ("kwaliteit", 2.0), ("qualite", 2.0), ("qualita", 2.0),
         ("calidad", 2.0), ("jakosc", 2.0), ("качеств", 2.0), ("якіст", 2.0), ("جودة", 2.0),
-        ("kvalitet", 2.0), ("calitate", 2.0), ("keyfiyyet", 2.0), ("kalite", 2.0), ("kaliteli", 2.2), ("luxury", 2.2), ("premium", 2.2), ("vip", 2.2), ("private", 1.5),
-        ("straumann", 2.0), ("nobel biocare", 2.0), ("emax", 1.6), ("e max", 1.6), ("high end", 2.0),
-        ("beste", 1.4), ("luxus", 2.2), ("hochwertig", 1.8), ("beste klinik", 1.8),
-        ("meilleur", 1.4), ("luxe", 2.2), ("migliore", 1.4), ("lusso", 2.2), ("mejor", 1.4), ("lujo", 2.2),
-        ("najlepsz", 1.4), ("luksus", 2.2), ("лучш", 1.4), ("премиум", 2.2), ("кращ", 1.4), ("преміум", 2.2),
-        ("افضل", 1.4), ("فاخر", 2.2), ("bast", 1.4), ("bedste", 1.4), ("cel mai bun", 1.4),
-        ("en yaxsi", 1.4), ("en iyi", 1.4), ("luks", 2.2),
+        ("kvalitet", 2.0), ("calitate", 2.0), ("keyfiyyet", 2.0), ("kalite", 2.0), ("kaliteli", 2.2),
+        ("straumann", 2.0), ("nobel biocare", 2.0), ("emax", 1.6), ("e max", 1.6), ("german implant", 1.6),
+        ("custom", 1.8), ("personalised", 2.0), ("personalized", 2.0), ("tailored", 2.0), ("individual", 1.6),
+        ("natural looking", 2.0), ("natural result", 2.0), ("long lasting", 2.0), ("durable", 1.8),
+        ("minimally invasive", 2.2), ("no shaving", 2.0), ("prepless", 2.0), ("no prep", 2.0),
+        ("digital smile design", 1.8), ("prosthodontist", 2.0), ("3d scan", 1.4), ("microscope", 1.6),
+        ("beste", 1.4), ("hochwertig", 1.8), ("beste klinik", 1.8), ("individuell", 2.0), ("massgeschneidert", 2.0),
+        ("naturlich", 1.6), ("langlebig", 2.0), ("ohne abschleifen", 2.2), ("erfahren", 1.6),
+        ("persoonlijk", 1.6), ("op maat", 2.0), ("natuurlijk", 1.6), ("duurzaam", 1.8), ("ervaren", 1.6),
+        ("meilleur", 1.4), ("sur mesure", 2.0), ("personnalis", 2.0), ("naturel", 1.6),
+        ("migliore", 1.4), ("su misura", 2.0), ("personalizzat", 2.0), ("naturale", 1.6), ("duratur", 1.8),
+        ("mejor", 1.4), ("a medida", 2.0), ("personalizad", 2.0), ("duradero", 1.8),
+        ("najlepsz", 1.4), ("indywidualn", 2.0), ("naturaln", 1.6), ("trwal", 1.8), ("doswiadczon", 1.6),
+        ("лучш", 1.4), ("индивидуальн", 2.0), ("естественн", 1.6), ("долговечн", 2.0), ("опытн", 1.6),
+        ("кращ", 1.4), ("індивідуальн", 2.0), ("природн", 1.6), ("довговічн", 2.0), ("досвідчен", 1.6),
+        ("افضل", 1.4), ("مخصص", 2.0), ("طبيعي", 1.6), ("خبرة", 1.6),
+        ("bast", 1.4), ("bedste", 1.4), ("skraddarsy", 2.0), ("individuel", 1.6), ("holdbar", 1.8), ("hallbar", 1.8),
+        ("cel mai bun", 1.4), ("personalizat", 2.0), ("natural", 1.4),
+        ("en yaxsi", 1.4), ("ferdi", 1.6), ("en iyi", 1.4), ("kisiye ozel", 2.4), ("dogal gorunum", 2.0),
+        ("uzun omurlu", 2.0), ("kesimsiz", 2.0), ("deneyimli", 1.6), ("uzman", 1.4),
+    ],
+    PERSONA_PREMIUM: [
+        # Lüks / VIP hissi: ayrıcalık, mahremiyet, beklememe, "en pahalısı olsun" — kalite arayışından AYRI
+        ("luxury", 2.4), ("luxurious", 2.4), ("premium", 2.2), ("vip", 2.4), ("private clinic", 1.8),
+        ("exclusive", 2.2), ("high end", 2.0), ("5 star", 2.0), ("five star", 2.0), ("boutique", 1.8),
+        ("celebrity", 2.2), ("celebrities", 2.2), ("concierge", 2.2), ("discreet", 1.8), ("first class", 2.0),
+        ("luxus", 2.4), ("exklusiv", 2.2), ("privatklinik", 1.8), ("promi", 1.8),
+        ("luxe", 2.4), ("exclusief", 2.2), ("exclusif", 2.2), ("haut de gamme", 2.2),
+        ("lusso", 2.4), ("esclusiv", 2.2), ("lujo", 2.4), ("exclusiva", 2.2), ("famosos", 2.0),
+        ("luksus", 2.4), ("ekskluzyw", 2.2), ("premium klinik", 2.0),
+        ("премиум", 2.2), ("люкс", 2.4), ("элитн", 2.2), ("vip клиник", 2.4), ("преміум", 2.2), ("елітн", 2.2),
+        ("فاخر", 2.4), ("فخم", 2.4), ("المشاهير", 2.2), ("حصري", 2.2),
+        ("lyx", 2.4), ("lux", 2.0),
+        ("luks", 2.4), ("unlu", 1.8), ("unluler", 2.2), ("ayricalik", 2.0), ("5 yildiz", 2.0),
     ],
     PERSONA_SKEPTIC: [
         ("review", 1.6), ("reviews", 1.6), ("experience", 1.4), ("worth it", 1.8), ("is it worth", 1.8),

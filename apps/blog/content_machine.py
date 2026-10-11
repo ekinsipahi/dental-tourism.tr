@@ -54,7 +54,7 @@ POST_SCHEMA = {
         "focus_keyword": {"type": "string"}, "featured_image_alt": {"type": "string"},
         "funnel_stage": {"type": "string", "enum": ["awareness", "consideration", "decision"]},
         "target_personas": {"type": "array", "items": {"type": "string", "enum": [
-            "skeptic", "price", "premium", "ready", "fear", "shame", "urgency", "trust"]}},
+            "skeptic", "price", "premium", "quality", "ready", "fear", "shame", "urgency", "trust"]}},
     },
     "required": ["title", "slug", "excerpt", "content", "faq", "meta_title", "meta_description", "focus_keyword",
                  "featured_image_alt", "funnel_stage", "target_personas"],
@@ -252,7 +252,7 @@ class ContentMachine:
                     "intent": {"type": "string", "enum": ["informational", "commercial", "transactional",
                                                           "navigational"]},
                     "funnel_stage": {"type": "string", "enum": ["awareness", "consideration", "decision"]},
-                    "persona_hint": {"type": "string", "enum": ["skeptic", "price", "premium", "ready", "fear",
+                    "persona_hint": {"type": "string", "enum": ["skeptic", "price", "premium", "quality", "ready", "fear",
                                                                 "shame", "urgency", "trust", ""]},
                     "page_type": {"type": "string", "enum": ["treatment", "treatment_city", "treatment_price",
                                                              "blog", "home"]},

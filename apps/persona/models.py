@@ -15,21 +15,23 @@ from django.utils import timezone
 PERSONA_UNKNOWN = "unknown"
 PERSONA_SKEPTIC = "skeptic"   # Araştırmacı / şüpheci
 PERSONA_PRICE = "price"       # Fiyat odaklı
-PERSONA_PREMIUM = "premium"   # Lüks / kalite
+PERSONA_PREMIUM = "premium"   # Lüks / VIP hissi, ayrıcalık
+PERSONA_QUALITY = "quality"   # Kalite / kişiye özel tedavi, deneyimli hekim, uzun ömür
 PERSONA_READY = "ready"       # Karar vermiş
 PERSONA_FEAR = "fear"         # Komplikasyon / yurtdışı korkusu
 PERSONA_SHAME = "shame"       # Gülüşünden utanıyor / estetik
 PERSONA_URGENCY = "urgency"   # Acil / düğün / tatil
 PERSONA_TRUST = "trust"       # Güven odaklı, yavaş karar
 
-PERSONAS = [PERSONA_SKEPTIC, PERSONA_PRICE, PERSONA_PREMIUM, PERSONA_READY,
+PERSONAS = [PERSONA_SKEPTIC, PERSONA_PRICE, PERSONA_PREMIUM, PERSONA_QUALITY, PERSONA_READY,
             PERSONA_FEAR, PERSONA_SHAME, PERSONA_URGENCY, PERSONA_TRUST]
 
 PERSONA_CHOICES = [
     (PERSONA_UNKNOWN, "Unknown"),
     (PERSONA_SKEPTIC, "Skeptic — research-focused"),
     (PERSONA_PRICE, "Price-sensitive"),
-    (PERSONA_PREMIUM, "Premium — quality-focused"),
+    (PERSONA_PREMIUM, "Premium — luxury / VIP feel"),
+    (PERSONA_QUALITY, "Quality — personalised, expert treatment"),
     (PERSONA_READY, "Ready — decision made"),
     (PERSONA_FEAR, "Fear — safety concerns"),
     (PERSONA_SHAME, "Aesthetic — smile confidence"),

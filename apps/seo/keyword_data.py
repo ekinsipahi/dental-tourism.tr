@@ -88,7 +88,7 @@ KEYWORD_PATTERNS = {
         ("{t} {country} vs {home}", C, "consideration", "price", "treatment_price"),
         ("{t} {country} reviews", C, "consideration", "skeptic", "blog"),
         ("is it safe to get {t} in {country}", I, "awareness", "fear", "blog"),
-        ("best clinic for {t} in {city}", T, "decision", "premium", "treatment_city"),
+        ("best clinic for {t} in {city}", T, "decision", "quality", "treatment_city"),
         ("{t} {country} package", T, "decision", "ready", "treatment"),
     ],
     "de": [
@@ -100,7 +100,7 @@ KEYWORD_PATTERNS = {
         ("{t} {country} oder {home}", C, "consideration", "price", "treatment_price"),
         ("{t} {country} erfahrungen", C, "consideration", "skeptic", "blog"),
         ("{t} {country} risiken", I, "awareness", "fear", "blog"),
-        ("beste zahnklinik {city} {t}", T, "decision", "premium", "treatment_city"),
+        ("beste zahnklinik {city} {t}", T, "decision", "quality", "treatment_city"),
         ("{t} {country} komplettpaket", T, "decision", "ready", "treatment"),
     ],
     "nl": [
@@ -112,7 +112,7 @@ KEYWORD_PATTERNS = {
         ("{t} {country} of {home}", C, "consideration", "price", "treatment_price"),
         ("{t} {country} ervaringen", C, "consideration", "skeptic", "blog"),
         ("{t} {country} veilig", I, "awareness", "fear", "blog"),
-        ("beste tandarts {city} {t}", T, "decision", "premium", "treatment_city"),
+        ("beste tandarts {city} {t}", T, "decision", "quality", "treatment_city"),
         ("{t} {country} all inclusive", T, "decision", "ready", "treatment"),
     ],
     "fr": [
@@ -124,7 +124,7 @@ KEYWORD_PATTERNS = {
         ("{t} {country} ou {home}", C, "consideration", "price", "treatment_price"),
         ("{t} {country} avis", C, "consideration", "skeptic", "blog"),
         ("{t} {country} danger", I, "awareness", "fear", "blog"),
-        ("meilleure clinique dentaire {city} {t}", T, "decision", "premium", "treatment_city"),
+        ("meilleure clinique dentaire {city} {t}", T, "decision", "quality", "treatment_city"),
         ("{t} {country} forfait", T, "decision", "ready", "treatment"),
     ],
     "it": [
@@ -136,7 +136,7 @@ KEYWORD_PATTERNS = {
         ("{t} {country} o {home}", C, "consideration", "price", "treatment_price"),
         ("{t} {country} opinioni", C, "consideration", "skeptic", "blog"),
         ("{t} {country} rischi", I, "awareness", "fear", "blog"),
-        ("migliore clinica dentale {city} {t}", T, "decision", "premium", "treatment_city"),
+        ("migliore clinica dentale {city} {t}", T, "decision", "quality", "treatment_city"),
         ("{t} {country} pacchetto", T, "decision", "ready", "treatment"),
     ],
     "es": [
@@ -148,7 +148,7 @@ KEYWORD_PATTERNS = {
         ("{t} {country} o {home}", C, "consideration", "price", "treatment_price"),
         ("{t} {country} opiniones", C, "consideration", "skeptic", "blog"),
         ("{t} {country} es seguro", I, "awareness", "fear", "blog"),
-        ("mejor clínica dental {city} {t}", T, "decision", "premium", "treatment_city"),
+        ("mejor clínica dental {city} {t}", T, "decision", "quality", "treatment_city"),
         ("{t} {country} paquete", T, "decision", "ready", "treatment"),
     ],
     "pl": [
@@ -160,7 +160,7 @@ KEYWORD_PATTERNS = {
         ("{t} {country} czy {home}", C, "consideration", "price", "treatment_price"),
         ("{t} {country} opinie", C, "consideration", "skeptic", "blog"),
         ("{t} {country} czy bezpieczne", I, "awareness", "fear", "blog"),
-        ("najlepsza klinika stomatologiczna {city} {t}", T, "decision", "premium", "treatment_city"),
+        ("najlepsza klinika stomatologiczna {city} {t}", T, "decision", "quality", "treatment_city"),
         ("{t} {country} pakiet", T, "decision", "ready", "treatment"),
     ],
     "ru": [
@@ -171,7 +171,7 @@ KEYWORD_PATTERNS = {
         ("сколько стоят {t} в турции", C, "consideration", "price", "treatment_price"),
         ("{t} {country} отзывы", C, "consideration", "skeptic", "blog"),
         ("{t} в турции риски", I, "awareness", "fear", "blog"),
-        ("лучшая стоматология {city} {t}", T, "decision", "premium", "treatment_city"),
+        ("лучшая стоматология {city} {t}", T, "decision", "quality", "treatment_city"),
         ("{t} {country} под ключ", T, "decision", "ready", "treatment"),
     ],
     "uk": [
@@ -182,7 +182,7 @@ KEYWORD_PATTERNS = {
         ("скільки коштують {t} в туреччині", C, "consideration", "price", "treatment_price"),
         ("{t} {country} відгуки", C, "consideration", "skeptic", "blog"),
         ("{t} в туреччині ризики", I, "awareness", "fear", "blog"),
-        ("найкраща стоматологія {city} {t}", T, "decision", "premium", "treatment_city"),
+        ("найкраща стоматологія {city} {t}", T, "decision", "quality", "treatment_city"),
     ],
     "ar": [
         ("{t} في {country}", C, "consideration", "", "treatment"),
@@ -192,7 +192,7 @@ KEYWORD_PATTERNS = {
         ("كم سعر {t} في {country}", C, "consideration", "price", "treatment_price"),
         ("تجربتي مع {t} في {country}", C, "consideration", "skeptic", "blog"),
         ("مخاطر {t} في {country}", I, "awareness", "fear", "blog"),
-        ("افضل عيادة {t} في {city}", T, "decision", "premium", "treatment_city"),
+        ("افضل عيادة {t} في {city}", T, "decision", "quality", "treatment_city"),
     ],
     "sv": [
         ("{t} {country}", C, "consideration", "", "treatment"),
@@ -202,7 +202,7 @@ KEYWORD_PATTERNS = {
         ("vad kostar {t} i {country}", C, "consideration", "price", "treatment_price"),
         ("{t} {country} erfarenheter", C, "consideration", "skeptic", "blog"),
         ("{t} {country} säkert", I, "awareness", "fear", "blog"),
-        ("bästa tandklinik {city} {t}", T, "decision", "premium", "treatment_city"),
+        ("bästa tandklinik {city} {t}", T, "decision", "quality", "treatment_city"),
     ],
     "da": [
         ("{t} {country}", C, "consideration", "", "treatment"),
@@ -212,7 +212,7 @@ KEYWORD_PATTERNS = {
         ("hvad koster {t} i {country}", C, "consideration", "price", "treatment_price"),
         ("{t} {country} erfaringer", C, "consideration", "skeptic", "blog"),
         ("{t} {country} sikkert", I, "awareness", "fear", "blog"),
-        ("bedste tandklinik {city} {t}", T, "decision", "premium", "treatment_city"),
+        ("bedste tandklinik {city} {t}", T, "decision", "quality", "treatment_city"),
     ],
     "no": [
         ("{t} {country}", C, "consideration", "", "treatment"),
@@ -222,7 +222,7 @@ KEYWORD_PATTERNS = {
         ("hva koster {t} i {country}", C, "consideration", "price", "treatment_price"),
         ("{t} {country} erfaringer", C, "consideration", "skeptic", "blog"),
         ("{t} {country} trygt", I, "awareness", "fear", "blog"),
-        ("beste tannklinikk {city} {t}", T, "decision", "premium", "treatment_city"),
+        ("beste tannklinikk {city} {t}", T, "decision", "quality", "treatment_city"),
     ],
     "ro": [
         ("{t} {country}", C, "consideration", "", "treatment"),
@@ -232,7 +232,7 @@ KEYWORD_PATTERNS = {
         ("cat costa {t} in {country}", C, "consideration", "price", "treatment_price"),
         ("{t} {country} pareri", C, "consideration", "skeptic", "blog"),
         ("{t} {country} riscuri", I, "awareness", "fear", "blog"),
-        ("cea mai buna clinica dentara {city} {t}", T, "decision", "premium", "treatment_city"),
+        ("cea mai buna clinica dentara {city} {t}", T, "decision", "quality", "treatment_city"),
     ],
     "az": [
         ("{t} {country}", C, "consideration", "", "treatment"),
@@ -240,7 +240,7 @@ KEYWORD_PATTERNS = {
         ("{t} {country} qiymeti", C, "consideration", "price", "treatment_price"),
         ("{t} {city} qiymet", C, "consideration", "price", "treatment_price"),
         ("{t} {country} reyler", C, "consideration", "skeptic", "blog"),
-        ("{city} en yaxsi stomatologiya {t}", T, "decision", "premium", "treatment_city"),
+        ("{city} en yaxsi stomatologiya {t}", T, "decision", "quality", "treatment_city"),
     ],
     "tr": [
         ("{t} {city}", C, "consideration", "", "treatment_city"),
@@ -249,7 +249,7 @@ KEYWORD_PATTERNS = {
         ("{city} {t} fiyat", C, "consideration", "price", "treatment_price"),
         ("{t} yorumları", C, "consideration", "skeptic", "blog"),
         ("{t} riskleri", I, "awareness", "fear", "blog"),
-        ("{city} en iyi diş kliniği {t}", T, "decision", "premium", "treatment_city"),
+        ("{city} en iyi diş kliniği {t}", T, "decision", "quality", "treatment_city"),
         ("yurtdışından türkiyeye {t}", C, "consideration", "price", "treatment_price"),
     ],
 }

@@ -587,3 +587,18 @@
 586|Tandturismbyrå i Turkiet: Sterr Agency
 587|För reseplanering, transfer och boende samarbetar vi med vår partnerbyrå. Medicinska beslut fattas alltid av tandläkaren.
 588|Tandturism med Sterr Agency
+589|Jag vill ha en personlig behandlingsplan.
+590|En behandling planerad för dig — ingen mall
+591|Digital smile design, minimal preparation och en erfaren tandläkare i varje steg. Frisk tandvävnad bevaras först.
+592|Få en behandlingsplan gjord för dina tänder
+593|Skicka ett foto eller en röntgenbild. Tandläkaren granskar ditt fall personligen och förklarar vilket alternativ som håller längst — och varför.
+594|Personlig tandvård
+595|Tandvård av hög kvalitet i Istanbul —
+596|planerad bara för dig.
+597|Varje plan börjar med en noggrann undersökning och en digital smile design. Vi bevarar friska tänder först, använder premiummaterial och en erfaren tandläkare utför varje steg.
+598|Digital smile design
+599|Minimal preparation
+600|En tandläkare från början till slut
+601|Få min personliga behandlingsplan
+602|Möt din tandläkare
+603|Behandlingar planerade efter dig

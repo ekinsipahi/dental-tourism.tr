@@ -125,6 +125,24 @@
   </div>
 </section>
 
+{% elif persona.persona == "quality" %}
+<section class="h-hero" aria-labelledby="hero-h1">
+  <div class="h-hero-left"><div class="h-hero-glow-l"></div><div class="h-hero-bar"></div>
+    <div class="h-hero-inner">
+      <div class="h-badge au1"><span class="h-dot"></span>{% trans "Personalised dentistry" %}</div>
+      <p class="h-eyebrow au1">{% cblock "home-hero-eyebrow" "title" _("Dental tourism Turkey — Istanbul") %}</p>
+      <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-quality" "title" _("Quality dental treatment in Istanbul —") %} <em>{% cblock "home-hero-quality" "subtitle" _("planned only for you.") %}</em></h1>
+      <p class="h-lead au3">{% cblock "home-hero-quality" "body" _("Every plan starts with a careful examination and a digital smile design. We save healthy teeth first, use premium materials, and one experienced dentist carries out every step.") %}</p>
+      <ul class="h-pills au3" style="list-style:none;padding:0"><li class="h-pill">✓ {% trans "Digital smile design" %}</li><li class="h-pill">✓ {% trans "Minimal preparation" %}</li><li class="h-pill">✓ {% trans "One dentist, start to finish" %}</li></ul>
+      <div class="h-cta-row au4">
+        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-quality" "button_text" _("Get my personal treatment plan") %}</a>
+        <a href="{% url 'core:about' %}" class="h-btn-outline">{% trans "Meet your dentist" %}</a>
+      </div>
+    </div>
+  </div>
+  {% include "home/_slideshow.html" %}
+</section>
+
 {% elif persona.persona == "ready" %}
 <section aria-labelledby="hero-h1" style="overflow:hidden">
   <div class="h-ready-banner"><span class="h-ready-banner-text">✅ {% trans "Appointments available this week" %}</span><a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-ready-banner-btn">{% trans "Book now" %} →</a></div>

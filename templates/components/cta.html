@@ -9,6 +9,9 @@
   {% elif persona.persona == "premium" %}
     <h2>{% trans "Request a private consultation" %}</h2>
     <p>{% trans "A personal treatment plan, discreet scheduling and one dentist responsible for your care from start to finish." %}</p>
+  {% elif persona.persona == "quality" %}
+    <h2>{% trans "Get a treatment plan made for your teeth" %}</h2>
+    <p>{% trans "Send a photo or X-ray. The dentist examines your case personally and explains which option lasts longest — and why." %}</p>
   {% elif persona.persona == "urgency" or persona.persona == "ready" %}
     <h2>{% trans "Check this week's availability" %}</h2>
     <p>{% trans "Tell us your travel dates and we will plan your appointments around them." %}</p>

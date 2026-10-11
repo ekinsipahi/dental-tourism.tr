@@ -16,7 +16,7 @@ from django.utils import timezone
 from . import bandit
 from .features import context_features, segment_key
 from .intent import intent_scores
-from .models import (PERSONA_FEAR, PERSONA_PREMIUM, PERSONA_PRICE, PERSONA_READY, PERSONA_SHAME,
+from .models import (PERSONA_FEAR, PERSONA_PREMIUM, PERSONA_PRICE, PERSONA_QUALITY, PERSONA_READY, PERSONA_SHAME,
                      PERSONA_SKEPTIC, PERSONA_THEME, PERSONA_TRUST, PERSONA_UNKNOWN, PERSONA_URGENCY,
                      PERSONAS, BehaviorEvent, PersonaExposure, VisitorSession)
 
@@ -44,7 +44,9 @@ def behavior_scores(s: VisitorSession) -> dict:
     sc[PERSONA_PRICE] += min(s.price_section_clicks, 4) * 0.8 + min(s.price_section_time, 180) / 45
     # Estetik
     sc[PERSONA_SHAME] += s.before_after_views * 1.2 + min(s.before_after_time, 180) / 40 + s.gallery_views * 0.4
-    sc[PERSONA_PREMIUM] += s.gallery_views * 0.5 + s.doctor_profile_views * 0.8
+    sc[PERSONA_PREMIUM] += s.gallery_views * 0.5
+    # Kalite: hekimi, sertifikaları, malzemeyi inceleyen
+    sc[PERSONA_QUALITY] += s.doctor_profile_views * 0.9 + s.certification_clicks * 0.5
     # Güvenlik / korku
     sc[PERSONA_FEAR] += s.certification_clicks * 1.5 + min(s.safety_section_time, 180) / 40 \
         + s.doctor_profile_views * 0.4 + s.faq_interactions * 0.5

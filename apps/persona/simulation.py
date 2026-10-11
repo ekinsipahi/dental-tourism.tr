@@ -25,15 +25,16 @@ from django.utils import timezone
 
 from .models import PERSONAS, PersonaExposure
 
-TRUE_MIX = {"price": .30, "fear": .15, "skeptic": .15, "shame": .15, "trust": .10, "premium": .05,
-            "urgency": .05, "ready": .05}
+TRUE_MIX = {"price": .30, "fear": .15, "skeptic": .15, "shame": .15, "trust": .10, "premium": .04,
+            "quality": .06, "urgency": .03, "ready": .02}
 QUERIES = {
     "price": {"en": "dental implants turkey cost", "de": "zahnimplantate türkei kosten", "nl": "tandimplantaten turkije prijs"},
     "fear": {"en": "is dental treatment in turkey safe", "de": "zahnbehandlung türkei risiken sicher", "nl": "tandarts turkije veilig"},
     "skeptic": {"en": "veneers turkey reviews reddit", "de": "veneers türkei erfahrungen", "nl": "facings turkije ervaringen"},
     "shame": {"en": "hollywood smile turkey", "de": "hollywood smile türkei veneers", "nl": "hollywood smile turkije"},
     "trust": {"en": "trusted dentist istanbul recommend", "de": "seriöser zahnarzt istanbul", "nl": "betrouwbaar tandarts istanbul"},
-    "premium": {"en": "best luxury dental clinic istanbul", "de": "beste zahnklinik istanbul luxus", "nl": "beste tandarts istanbul premium"},
+    "premium": {"en": "luxury vip dental clinic istanbul", "de": "luxus zahnklinik istanbul vip", "nl": "luxe tandarts istanbul premium"},
+    "quality": {"en": "best high quality dentist istanbul", "de": "beste hochwertige zahnklinik istanbul", "nl": "beste kwaliteit tandarts istanbul"},
     "urgency": {"en": "emergency dentist istanbul fast", "de": "notfall zahnarzt istanbul schnell", "nl": "spoed tandarts istanbul"},
     "ready": {"en": "book dentist istanbul appointment", "de": "zahnarzt istanbul termin", "nl": "tandarts istanbul afspraak"},
 }
@@ -43,7 +44,8 @@ BEHAVIOR = {
     "skeptic": [("faq_open", {}), ("faq_open", {}), ("section_time", {"section": "reviews", "seconds": 90})],
     "shame": [("before_after", {"seconds": 60}), ("gallery_view", {"section": "before_after"})],
     "trust": [("video_play", {}), ("video_time", {"seconds": 150})],
-    "premium": [("gallery_view", {}), ("gallery_view", {}), ("section_view", {"section": "doctor"})],
+    "premium": [("gallery_view", {}), ("gallery_view", {})],
+    "quality": [("section_view", {"section": "doctor"}), ("cert_click", {})],
     "urgency": [("urgency_cta", {}), ("cta_click", {})],
     "ready": [("form_start", {}), ("cta_click", {})],
 }

@@ -26,11 +26,25 @@ class IntentTests(SeededTestCase):
         self.assertEqual(top("zahnarzt türkei billig"), "price")
         self.assertEqual(top("dental work turkey"), "trust")
         self.assertEqual(top("türkiyede diş yaptırmak"), "trust")
-        self.assertEqual(top("best dental clinic turkey"), "premium")
-        self.assertEqual(top("high quality dentist istanbul"), "premium")
-        self.assertEqual(top("kaliteli diş kliniği istanbul"), "premium")
+        self.assertEqual(top("best dental clinic turkey"), "quality")
+        self.assertEqual(top("high quality dentist istanbul"), "quality")
+        self.assertEqual(top("kaliteli diş kliniği istanbul"), "quality")
         self.assertEqual(top("cheap dental work turkey"), "price")      # karışık: en güçlü sinyal
-        self.assertEqual(top("best dental work turkey"), "premium")
+        self.assertEqual(top("best dental work turkey"), "quality")
+
+    def test_quality_and_luxury_are_different_personas(self):
+        def top(q):
+            sc = score_text(q)
+            return max(sc, key=sc.get) if sc else None
+        # Kalite / kişiye özel tedavi arayan
+        self.assertEqual(top("kişiye özel diş tedavisi istanbul"), "quality")
+        self.assertEqual(top("natural looking veneers no shaving"), "quality")
+        self.assertEqual(top("individuelle zahnbehandlung türkei"), "quality")
+        # Lüks / VIP hissi arayan
+        self.assertEqual(top("luxury dental clinic istanbul"), "premium")
+        self.assertEqual(top("vip dental turkey"), "premium")
+        self.assertEqual(top("lüks diş kliniği istanbul"), "premium")
+        self.assertEqual(top("beste zahnklinik istanbul luxus"), "premium")
         self.assertNotEqual(top("dental tourism packages"), "price")    # paket ≠ ucuz
 
     def test_fear_and_skeptic_intent(self):
@@ -95,7 +109,10 @@ class EndToEndPersonaTests(SeededTestCase):
     def test_staff_preview_forces_variant_without_exposure(self):
         with override_settings(DEBUG=True):
             r = self.client.get("/?persona=premium")
+            q = self.client.get("/?persona=quality")
         self.assertIn('data-persona="premium"', r.content.decode())
+        self.assertIn('data-persona="quality"', q.content.decode())
+        self.assertIn("Quality dental treatment in Istanbul", q.content.decode())
         self.assertFalse(PersonaExposure.objects.exists())
 
     def test_ml_train_reports_insufficient_data(self):

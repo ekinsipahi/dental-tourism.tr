@@ -37,6 +37,8 @@
                            --ff-display: "DM Serif Display", Georgia, serif; --shadow-brand: 0 8px 30px rgba(201,169,110,.25); }
 [data-persona="skeptic"] { --brand: #38bdf8; --brand-lt: #7dd3fc; --brand-dk: #0369a1; --ff-display: "Source Serif 4", Georgia, serif;
                            --shadow-brand: 0 8px 30px rgba(56,189,248,.22); }
+[data-persona="quality"] { --brand: #6366f1; --brand-lt: #a5b4fc; --brand-dk: #4338ca; --ff-display: "Manrope", "DM Sans", sans-serif;
+                           --shadow-brand: 0 8px 30px rgba(99,102,241,.25); }
 [data-persona="fear"]    { --brand: #2dd4bf; --brand-lt: #5eead4; --brand-dk: #0f766e; }
 [data-persona="shame"]   { --brand: #f0abfc; --brand-lt: #f5d0fe; --brand-dk: #a21caf; --shadow-brand: 0 8px 30px rgba(240,171,252,.22); }
 [data-persona="urgency"] { --brand: #fb7185; --brand-lt: #fda4af; --brand-dk: #be123c; --shadow-brand: 0 8px 30px rgba(251,113,133,.25); }

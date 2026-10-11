@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-11 08:20+0300\n"
+"POT-Creation-Date: 2026-10-11 10:00+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -225,18 +225,23 @@ msgid "I would like to request a private appointment."
 msgstr "Я хотел(а) бы записаться на частный приём."
 
 #: apps/core/context_processors.py:70
+#| msgid "Personal treatment plan"
+msgid "I would like a personalised treatment plan."
+msgstr "Я хотел(а) бы получить индивидуальный план лечения."
+
+#: apps/core/context_processors.py:71
 msgid "I would like to book an appointment."
 msgstr "Я хочу записаться на приём."
 
-#: apps/core/context_processors.py:71
+#: apps/core/context_processors.py:72
 msgid "I would like information about materials and certificates."
 msgstr "Я хотел(а) бы узнать о материалах и сертификатах."
 
-#: apps/core/context_processors.py:72
+#: apps/core/context_processors.py:73
 msgid "I would like to learn more."
 msgstr "Я хотел(а) бы узнать подробнее."
 
-#: apps/core/context_processors.py:74
+#: apps/core/context_processors.py:75
 msgid "Hello, I would like a free consultation."
 msgstr "Здравствуйте, я хотел(а) бы получить бесплатную консультацию."
 
@@ -454,7 +459,7 @@ msgstr "Страница не найдена"
 #: apps/seo/common.py:36 templates/clinics/detail.html:78
 #: templates/clinics/doctor.html:26 templates/components/footer.html:49
 #: templates/components/navbar.html:56 templates/components/navbar.html:93
-#: templates/components/reviews.html:16 templates/home/sections/hero.html:162
+#: templates/components/reviews.html:16 templates/home/sections/hero.html:180
 msgid "Patient reviews"
 msgstr "Отзывы пациентов"
 
@@ -509,10 +514,22 @@ msgstr ""
 "деликатное отношение."
 
 #: apps/seo/common.py:74
+msgid "A treatment planned for you — not a template"
+msgstr "Лечение, спланированное для вас, — а не по шаблону"
+
+#: apps/seo/common.py:75
+msgid ""
+"Digital smile design, minimal preparation and one experienced dentist for "
+"every step. Healthy tooth tissue is saved first."
+msgstr ""
+"Цифровой дизайн улыбки, минимальное препарирование и один опытный врач на "
+"каждом этапе. Здоровые ткани зуба сохраняются в первую очередь."
+
+#: apps/seo/common.py:76
 msgid "No judgement — only solutions"
 msgstr "Без осуждения — только решения"
 
-#: apps/seo/common.py:75
+#: apps/seo/common.py:77
 msgid ""
 "Whatever the state of your teeth, we have seen it before. We start with what"
 " can be saved."
@@ -520,40 +537,40 @@ msgstr ""
 "В каком бы состоянии ни были ваши зубы, мы это уже видели. Начинаем с того, "
 "что можно сохранить."
 
-#: apps/seo/common.py:76
+#: apps/seo/common.py:78
 msgid "A dentist-led clinic you can check"
 msgstr "Клиника под руководством врача, которую можно проверить"
 
-#: apps/seo/common.py:77
+#: apps/seo/common.py:79
 msgid "Qualifications, reviews and real photos — all on this page."
 msgstr "Квалификация, отзывы и настоящие фото — всё на этой странице."
 
-#: apps/seo/common.py:78
+#: apps/seo/common.py:80
 msgid "Open 7 days a week in central Istanbul"
 msgstr "Открыто 7 дней в неделю в центре Стамбула"
 
-#: apps/seo/common.py:79
+#: apps/seo/common.py:81
 msgid ""
 "Tell us your travel dates; we plan the appointments around your flights."
 msgstr "Сообщите даты поездки — мы спланируем приёмы под ваши рейсы."
 
-#: apps/seo/common.py:80
+#: apps/seo/common.py:82
 msgid "Plan your visit in one message"
 msgstr "Спланируйте визит одним сообщением"
 
-#: apps/seo/common.py:81
+#: apps/seo/common.py:83
 msgid ""
 "Send your photos and travel dates on WhatsApp — we reply with your personal "
 "plan."
 msgstr ""
 "Отправьте фото и даты поездки в WhatsApp — мы ответим вашим личным планом."
 
-#: apps/seo/common.py:83 templates/components/footer.html:6
+#: apps/seo/common.py:85 templates/components/footer.html:6
 #: templates/packages/origin.html:19
 msgid "Dental work is more than a Hollywood smile"
 msgstr "Стоматология — это больше, чем голливудская улыбка"
 
-#: apps/seo/common.py:84
+#: apps/seo/common.py:86
 msgid ""
 "We save healthy teeth first and plan a real treatment made only for you."
 msgstr ""
@@ -1022,7 +1039,7 @@ msgstr ""
 "Каждый план начинается с сохранения ваших естественных зубов, прозрачной "
 "диагностики и фиксированной письменной цены."
 
-#: templates/about.html:10 templates/base.html:50
+#: templates/about.html:10 templates/base.html:52
 #: templates/clinics/detail.html:36 templates/components/footer.html:18
 #: templates/components/reviews.html:7 templates/home/_stats.html:5
 #: templates/pseo/_hero.html:9
@@ -1038,8 +1055,8 @@ msgstr[2] "%(n)s отзывов Google"
 msgid "Send a photo — free assessment"
 msgstr "Отправьте фото — бесплатная оценка"
 
-#: templates/about.html:13 templates/base.html:64
-#: templates/components/cta.html:21 templates/pseo/_hero.html:12
+#: templates/about.html:13 templates/base.html:66
+#: templates/components/cta.html:24 templates/pseo/_hero.html:12
 msgid "Call us"
 msgstr "Позвоните нам"
 
@@ -1073,7 +1090,7 @@ msgstr ""
 "эмали."
 
 #: templates/about.html:29 templates/home/sections/hero.html:12
-#: templates/home/sections/hero.html:32 templates/home/sections/hero.html:180
+#: templates/home/sections/hero.html:32 templates/home/sections/hero.html:198
 #: templates/packages/index.html:12
 msgid "Fixed written quote"
 msgstr "Фиксированная письменная смета"
@@ -1094,49 +1111,49 @@ msgstr "Профиль врача"
 msgid "Django site admin"
 msgstr "Администрирование Django"
 
-#: templates/base.html:29
+#: templates/base.html:31
 msgid "Skip to content"
 msgstr "Перейти к содержанию"
 
-#: templates/base.html:32
+#: templates/base.html:34
 msgid "Language suggestion"
 msgstr "Предложение языка"
 
-#: templates/base.html:36
+#: templates/base.html:38
 msgid "Close"
 msgstr "Закрыть"
 
-#: templates/base.html:45
+#: templates/base.html:47
 msgid "Very affordable — with a fixed written quote and no hidden costs."
 msgstr ""
 "Очень доступно — с письменной фиксированной ценой и без скрытых расходов."
 
-#: templates/base.html:45
+#: templates/base.html:47
 msgid "See personalised dental packages"
 msgstr "Смотреть индивидуальные стоматологические туры"
 
-#: templates/base.html:47
+#: templates/base.html:49
 msgid ""
 "Short on time? Many treatments are completed within one week in Istanbul."
 msgstr "Мало времени? Многие виды лечения в Стамбуле занимают одну неделю."
 
-#: templates/base.html:50 templates/clinics/list.html:32
+#: templates/base.html:52 templates/clinics/list.html:32
 #: templates/seo/_clinic_offers.html:6
 #, python-format
 msgid "%(y)s+ years experience"
 msgstr "%(y)s+ лет опыта"
 
-#: templates/base.html:50 templates/components/reviews.html:8
+#: templates/base.html:52 templates/components/reviews.html:8
 #: templates/pseo/_hero.html:9
 msgid "read them on Google"
 msgstr "читать в Google"
 
-#: templates/base.html:62 templates/components/footer.html:42
+#: templates/base.html:64 templates/components/footer.html:42
 #: templates/components/navbar.html:59 templates/components/navbar.html:94
 msgid "Contact"
 msgstr "Контакты"
 
-#: templates/base.html:68 templates/contact.html:13
+#: templates/base.html:70 templates/contact.html:13
 msgid "Chat on WhatsApp"
 msgstr "Написать в WhatsApp"
 
@@ -1502,20 +1519,33 @@ msgstr ""
 "Персональный план лечения, конфиденциальная запись и один врач, отвечающий "
 "за ваше лечение от начала до конца."
 
-#: templates/components/cta.html:13 templates/home/sections/hero.html:86
+#: templates/components/cta.html:13
+#| msgid "Treatment plan and fixed price"
+msgid "Get a treatment plan made for your teeth"
+msgstr "Получите план лечения, созданный для ваших зубов"
+
+#: templates/components/cta.html:14
+msgid ""
+"Send a photo or X-ray. The dentist examines your case personally and "
+"explains which option lasts longest — and why."
+msgstr ""
+"Пришлите фото или рентген. Врач лично изучит ваш случай и объяснит, какой "
+"вариант прослужит дольше всего — и почему."
+
+#: templates/components/cta.html:16 templates/home/sections/hero.html:86
 msgid "Check this week's availability"
 msgstr "Свободные даты на этой неделе"
 
-#: templates/components/cta.html:14
+#: templates/components/cta.html:17
 msgid ""
 "Tell us your travel dates and we will plan your appointments around them."
 msgstr "Сообщите нам даты поездки, и мы спланируем приёмы под них."
 
-#: templates/components/cta.html:16
+#: templates/components/cta.html:19
 msgid "Free assessment — no obligation"
 msgstr "Бесплатная оценка — без обязательств"
 
-#: templates/components/cta.html:17
+#: templates/components/cta.html:20
 msgid ""
 "Send us a photo or X-ray. Our dentist will reply with an honest treatment "
 "plan and a fixed price."
@@ -1523,7 +1553,7 @@ msgstr ""
 "Пришлите нам фото или снимок. Наш врач ответит честным планом лечения и "
 "фиксированной ценой."
 
-#: templates/components/cta.html:22
+#: templates/components/cta.html:25
 msgid "Contact form"
 msgstr "Форма связи"
 
@@ -1585,12 +1615,10 @@ msgid "Explore personalised dental packages"
 msgstr "Индивидуальные стоматологические туры"
 
 #: templates/components/navbar.html:44
-#| msgid "Find your clinic"
 msgid "Choosing a clinic"
 msgstr "Выбор клиники"
 
 #: templates/components/navbar.html:45
-#| msgid "Qualifications"
 msgid "Locations"
 msgstr "Локации"
 
@@ -1603,7 +1631,6 @@ msgid "About"
 msgstr "О нас"
 
 #: templates/components/navbar.html:57
-#| msgid "Find your clinic"
 msgid "Our clinic"
 msgstr "Наша клиника"
 
@@ -1615,13 +1642,19 @@ msgstr "Сменить язык"
 msgid "Get a free quote"
 msgstr "Бесплатный расчёт"
 
-#: templates/components/navbar.html:73 templates/home/sections/hero.html:130
+#: templates/components/navbar.html:73 templates/home/sections/hero.html:148
 msgid "Book now"
 msgstr "Записаться"
 
 #: templates/components/navbar.html:73
 msgid "Private consultation"
 msgstr "Частная консультация"
+
+#: templates/components/navbar.html:73
+#: templates/components/treatment_card.html:7
+#: templates/home/sections/hero.html:12 templates/seo/_clinic_offers.html:8
+msgid "Personal treatment plan"
+msgstr "Личный план лечения"
 
 #: templates/components/navbar.html:73 templates/contact.html:6
 msgid "Free consultation"
@@ -1653,11 +1686,6 @@ msgstr "Ответ клиники"
 #, python-format
 msgid "%(d)s days in Istanbul"
 msgstr "%(d)s дн. в Стамбуле"
-
-#: templates/components/treatment_card.html:7
-#: templates/home/sections/hero.html:12 templates/seo/_clinic_offers.html:8
-msgid "Personal treatment plan"
-msgstr "Личный план лечения"
 
 #: templates/components/treatment_card.html:8
 msgid "Details"
@@ -1714,7 +1742,6 @@ msgid "Our partner agency"
 msgstr "Наше партнёрское агентство"
 
 #: templates/guides/detail.html:16
-#| msgid "Dental tourism Turkey"
 msgid "Dental tourism agency in Turkey: Sterr Agency"
 msgstr "Агентство стоматологического туризма в Турции: Sterr Agency"
 
@@ -1727,7 +1754,6 @@ msgstr ""
 "партнёрским агентством. Медицинские решения всегда принимает врач."
 
 #: templates/guides/detail.html:18
-#| msgid "Dental tourism Turkey"
 msgid "Dental tourism with Sterr Agency"
 msgstr "Стоматологический туризм с Sterr Agency"
 
@@ -1770,7 +1796,8 @@ msgstr "Очень доступно · письменная фиксирован
 
 #: templates/home/sections/hero.html:9 templates/home/sections/hero.html:27
 #: templates/home/sections/hero.html:49 templates/home/sections/hero.html:96
-#: templates/home/sections/hero.html:135 templates/home/sections/hero.html:153
+#: templates/home/sections/hero.html:133 templates/home/sections/hero.html:153
+#: templates/home/sections/hero.html:171
 msgid "Dental tourism Turkey — Istanbul"
 msgstr "Стоматологический туризм в Турции — Стамбул"
 
@@ -1790,7 +1817,7 @@ msgstr ""
 "Часть цены, которую вы платите дома. Материалы с сертификатом CE, та же "
 "техника. Без скрытых платежей — названная цена и есть итоговая."
 
-#: templates/home/sections/hero.html:12 templates/home/sections/hero.html:185
+#: templates/home/sections/hero.html:12 templates/home/sections/hero.html:203
 msgid "Free assessment — WhatsApp"
 msgstr "Бесплатная оценка — WhatsApp"
 
@@ -1824,7 +1851,7 @@ msgstr ""
 "Самое ценное, чему нас научил опыт: хорошая медицина — это умение сказать "
 "«нет». Никаких лишних процедур. Прозрачная диагностика. Фиксированная цена."
 
-#: templates/home/sections/hero.html:31 templates/home/sections/hero.html:178
+#: templates/home/sections/hero.html:31 templates/home/sections/hero.html:196
 msgid "No unnecessary treatment"
 msgstr "Никакого лишнего лечения"
 
@@ -1998,23 +2025,71 @@ msgstr ""
 msgid "Request a private appointment"
 msgstr "Записаться на частный приём"
 
-#: templates/home/sections/hero.html:130
+#: templates/home/sections/hero.html:132
+#| msgid "Evidence-based dentistry"
+msgid "Personalised dentistry"
+msgstr "Индивидуальная стоматология"
+
+#: templates/home/sections/hero.html:134
+#| msgid "Safe dental treatment in Istanbul —"
+msgid "Quality dental treatment in Istanbul —"
+msgstr "Качественное лечение зубов в Стамбуле —"
+
+#: templates/home/sections/hero.html:134
+msgid "planned only for you."
+msgstr "спланированное только для вас."
+
+#: templates/home/sections/hero.html:135
+msgid ""
+"Every plan starts with a careful examination and a digital smile design. We "
+"save healthy teeth first, use premium materials, and one experienced dentist"
+" carries out every step."
+msgstr ""
+"Каждый план начинается с тщательного осмотра и цифрового дизайна улыбки. "
+"Сначала мы сохраняем здоровые зубы, используем материалы премиум-класса, и "
+"каждый этап выполняет один опытный врач."
+
+#: templates/home/sections/hero.html:136
+#| msgid "Ask about smile design"
+msgid "Digital smile design"
+msgstr "Цифровой дизайн улыбки"
+
+#: templates/home/sections/hero.html:136
+#| msgid "Preparation"
+msgid "Minimal preparation"
+msgstr "Минимальное препарирование"
+
+#: templates/home/sections/hero.html:136
+msgid "One dentist, start to finish"
+msgstr "Один врач от начала до конца"
+
+#: templates/home/sections/hero.html:138
+#| msgid "Personal treatment plan"
+msgid "Get my personal treatment plan"
+msgstr "Получить мой план лечения"
+
+#: templates/home/sections/hero.html:139
+#| msgid "Your dentist"
+msgid "Meet your dentist"
+msgstr "Познакомьтесь с вашим врачом"
+
+#: templates/home/sections/hero.html:148
 msgid "Appointments available this week"
 msgstr "Есть свободные даты на этой неделе"
 
-#: templates/home/sections/hero.html:134
+#: templates/home/sections/hero.html:152
 msgid "We're ready when you are"
 msgstr "Мы готовы, когда готовы вы"
 
-#: templates/home/sections/hero.html:136
+#: templates/home/sections/hero.html:154
 msgid "Book your dental treatment in Istanbul —"
 msgstr "Запишитесь на лечение зубов в Стамбуле —"
 
-#: templates/home/sections/hero.html:136
+#: templates/home/sections/hero.html:154
 msgid "are you ready?"
 msgstr "вы готовы?"
 
-#: templates/home/sections/hero.html:137
+#: templates/home/sections/hero.html:155
 msgid ""
 "Free evaluation, personal treatment plan, fixed price. Reply within 24 "
 "hours."
@@ -2022,23 +2097,23 @@ msgstr ""
 "Бесплатная оценка, персональный план лечения, фиксированная цена. Ответ в "
 "течение 24 часов."
 
-#: templates/home/sections/hero.html:140
+#: templates/home/sections/hero.html:158
 msgid "Book an appointment"
 msgstr "Записаться на приём"
 
-#: templates/home/sections/hero.html:152
+#: templates/home/sections/hero.html:170
 msgid "Evidence-based dentistry"
 msgstr "Доказательная стоматология"
 
-#: templates/home/sections/hero.html:154
+#: templates/home/sections/hero.html:172
 msgid "Is dental treatment in Turkey safe?"
 msgstr "Безопасно ли лечение зубов в Турции?"
 
-#: templates/home/sections/hero.html:154
+#: templates/home/sections/hero.html:172
 msgid "We answer everything."
 msgstr "Мы ответим на всё."
 
-#: templates/home/sections/hero.html:155
+#: templates/home/sections/hero.html:173
 msgid ""
 "Materials, qualifications, what happens if something goes wrong — you get a "
 "transparent answer to every question."
@@ -2046,27 +2121,27 @@ msgstr ""
 "Материалы, квалификация, что будет, если что-то пойдёт не так — на каждый "
 "вопрос вы получите прозрачный ответ."
 
-#: templates/home/sections/hero.html:159
+#: templates/home/sections/hero.html:177
 msgid "Ask any question — free"
 msgstr "Задайте любой вопрос — бесплатно"
 
-#: templates/home/sections/hero.html:163
+#: templates/home/sections/hero.html:181
 msgid "What patients actually say"
 msgstr "Что на самом деле говорят пациенты"
 
-#: templates/home/sections/hero.html:174
+#: templates/home/sections/hero.html:192
 msgid "Dental tourism Turkey"
 msgstr "Стоматологический туризм в Турции"
 
-#: templates/home/sections/hero.html:175
+#: templates/home/sections/hero.html:193
 msgid "Dental treatment in Istanbul —"
 msgstr "Лечение зубов в Стамбуле —"
 
-#: templates/home/sections/hero.html:175
+#: templates/home/sections/hero.html:193
 msgid "only what your teeth actually need."
 msgstr "только то, что действительно нужно вашим зубам."
 
-#: templates/home/sections/hero.html:176
+#: templates/home/sections/hero.html:194
 msgid ""
 "Good medicine means knowing when to say no. Ethical protocol, transparent "
 "diagnosis and one dentist responsible for your care — with direct WhatsApp "
@@ -2076,11 +2151,11 @@ msgstr ""
 "диагностика и один врач, отвечающий за ваше лечение, — с прямой связью в "
 "WhatsApp, а не через колл-центр."
 
-#: templates/home/sections/hero.html:179
+#: templates/home/sections/hero.html:197
 msgid "Transparent diagnosis"
 msgstr "Прозрачная диагностика"
 
-#: templates/home/sections/hero.html:181
+#: templates/home/sections/hero.html:199
 msgid "One dentist — full responsibility"
 msgstr "Один врач — полная ответственность"
 
@@ -2156,6 +2231,11 @@ msgstr "Лечение по лучшей цене"
 #: templates/home/sections/treatments.html:6
 msgid "Signature treatments"
 msgstr "Наши ключевые процедуры"
+
+#: templates/home/sections/treatments.html:6
+#| msgid "Appointments planned around your flights"
+msgid "Treatments planned around you"
+msgstr "Лечение, спланированное под вас"
 
 #: templates/home/sections/treatments.html:6
 msgid "Natural smile treatments"

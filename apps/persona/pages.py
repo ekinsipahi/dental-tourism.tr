@@ -3,8 +3,10 @@ Site içi gezinme → persona kanıtı.
 
 Ziyaretçi nerede vakit geçiriyorsa persona'sı o yöne kayar:
   fiyat sayfaları / paketler                      → price
-  lüks tedaviler (porselen lamina, zirkonyum, All-on-4, Hollywood smile),
-  "en iyi klinik" rehberleri, hekim profili        → premium
+  kalite / kişiye özel: zirkonyum, implant, All-on-4, kanal, "en iyi klinik" rehberleri,
+  hekim profili, hakkımızda, garanti & takip         → quality
+  lüks / VIP hissi: Hollywood smile, porselen lamina, gülüş galerisi, paketler,
+  İstanbul rehberi                                  → premium
   önce-sonra galerisi, estetik tedaviler          → shame (estetik)
   garanti / takip / cerrahi rehberleri            → fear
   yorumlar, karşılaştırma, "should I" rehberleri  → skeptic
@@ -16,52 +18,52 @@ Tüm dillerdeki slug'lar çözülür (/de/behandlungen/keramik-veneers/ → porc
 from django.core.cache import cache
 from django.urls import Resolver404, resolve
 
-from .models import (PERSONA_FEAR, PERSONA_PREMIUM, PERSONA_PRICE, PERSONA_READY, PERSONA_SHAME,
-                     PERSONA_SKEPTIC, PERSONA_TRUST)
+from .models import (PERSONA_FEAR, PERSONA_PREMIUM, PERSONA_PRICE, PERSONA_QUALITY, PERSONA_READY,
+                     PERSONA_SHAME, PERSONA_SKEPTIC, PERSONA_TRUST)
 
 REPEAT_CAP = 2
 PERSONA_CAP = 6.0
 
 TREATMENT_SIGNALS = {
-    "porcelain-veneers": {PERSONA_PREMIUM: 0.9, PERSONA_SHAME: 0.6},
-    "zirconia-crowns": {PERSONA_PREMIUM: 0.8},
-    "all-on-4-implants": {PERSONA_PREMIUM: 0.9, PERSONA_FEAR: 0.3},
-    "hollywood-smile": {PERSONA_SHAME: 1.0, PERSONA_PREMIUM: 0.7},
-    "dental-implants": {PERSONA_PREMIUM: 0.5, PERSONA_FEAR: 0.4},
+    "porcelain-veneers": {PERSONA_PREMIUM: 0.9, PERSONA_SHAME: 0.6, PERSONA_QUALITY: 0.3},
+    "zirconia-crowns": {PERSONA_QUALITY: 0.9, PERSONA_PREMIUM: 0.3},
+    "all-on-4-implants": {PERSONA_QUALITY: 0.8, PERSONA_PREMIUM: 0.4, PERSONA_FEAR: 0.3},
+    "hollywood-smile": {PERSONA_SHAME: 1.0, PERSONA_PREMIUM: 1.0},
+    "dental-implants": {PERSONA_QUALITY: 0.7, PERSONA_FEAR: 0.4},
     "composite-veneers": {PERSONA_SHAME: 0.7, PERSONA_PRICE: 0.3},
     "teeth-whitening": {PERSONA_SHAME: 0.6},
-    "root-canal-treatment": {PERSONA_TRUST: 0.5, PERSONA_FEAR: 0.4},
+    "root-canal-treatment": {PERSONA_QUALITY: 0.5, PERSONA_TRUST: 0.4, PERSONA_FEAR: 0.4},
     "tooth-fillings": {PERSONA_TRUST: 0.4},
     "teeth-cleaning": {PERSONA_TRUST: 0.4},
 }
 
 TOPIC_SIGNALS = {
-    "best-dental-clinic-istanbul": {PERSONA_PREMIUM: 1.0, PERSONA_SKEPTIC: 0.6},
-    "best-dental-clinic-turkey": {PERSONA_PREMIUM: 0.9, PERSONA_SKEPTIC: 0.8},
+    "best-dental-clinic-istanbul": {PERSONA_QUALITY: 1.1, PERSONA_SKEPTIC: 0.5},
+    "best-dental-clinic-turkey": {PERSONA_QUALITY: 1.0, PERSONA_SKEPTIC: 0.7},
     "dental-care-turkey": {PERSONA_TRUST: 0.6},
     "dental-tourism": {PERSONA_SKEPTIC: 0.6},
     "best-country-dental-tourism": {PERSONA_SKEPTIC: 0.9, PERSONA_PRICE: 0.4},
     "teeth-done-in-turkey": {PERSONA_SKEPTIC: 0.7, PERSONA_FEAR: 0.4},
-    "dental-surgery-turkey": {PERSONA_FEAR: 0.9},
-    "dental-guarantee-aftercare": {PERSONA_FEAR: 1.1, PERSONA_TRUST: 0.4},
-    "smile-gallery": {PERSONA_SHAME: 1.1, PERSONA_PREMIUM: 0.4},
+    "dental-surgery-turkey": {PERSONA_FEAR: 0.9, PERSONA_QUALITY: 0.3},
+    "dental-guarantee-aftercare": {PERSONA_FEAR: 1.0, PERSONA_QUALITY: 0.6, PERSONA_TRUST: 0.3},
+    "smile-gallery": {PERSONA_SHAME: 1.1, PERSONA_PREMIUM: 0.6},
     "dental-clinic-istanbul": {PERSONA_READY: 0.6},
     "dental-care-antalya": {PERSONA_READY: 0.3},
     "dental-clinic-aegean": {PERSONA_READY: 0.3},
     "dental-clinic-ankara": {PERSONA_READY: 0.3},
-    "istanbul-guide": {PERSONA_READY: 0.8},
+    "istanbul-guide": {PERSONA_READY: 0.8, PERSONA_PREMIUM: 0.3},
     "dental-tourism-agency": {PERSONA_READY: 0.4},
 }
 
 VIEW_SIGNALS = {
     "prices:index": {PERSONA_PRICE: 1.3},
     "prices:detail": {PERSONA_PRICE: 1.2},
-    "packages:index": {PERSONA_PRICE: 0.6},
+    "packages:index": {PERSONA_PRICE: 0.6, PERSONA_PREMIUM: 0.4},
     "packages:treatment": {PERSONA_PRICE: 0.5},
     "origins:detail": {PERSONA_PRICE: 0.3, PERSONA_READY: 0.4},
     "clinics:detail": {PERSONA_TRUST: 0.6, PERSONA_SKEPTIC: 0.3},
-    "doctors:detail": {PERSONA_PREMIUM: 0.6, PERSONA_TRUST: 0.6},
-    "core:about": {PERSONA_TRUST: 0.7, PERSONA_PREMIUM: 0.3},
+    "doctors:detail": {PERSONA_QUALITY: 0.9, PERSONA_TRUST: 0.5},
+    "core:about": {PERSONA_TRUST: 0.7, PERSONA_QUALITY: 0.5},
     "core:contact": {PERSONA_READY: 1.3},
     "blog:post_detail": {PERSONA_SKEPTIC: 0.5},
     "guides:index": {PERSONA_SKEPTIC: 0.4},

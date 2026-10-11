@@ -70,7 +70,7 @@
           </div>
         </details>
         <a href="{% url 'core:contact' %}" class="btn btn-primary btn-sm btn-shine" data-track="cta">
-          {% if persona.persona == "price" %}{% trans "Get a free quote" %}{% elif persona.persona == "ready" %}{% trans "Book now" %}{% elif persona.persona == "premium" %}{% trans "Private consultation" %}{% else %}{% trans "Free consultation" %}{% endif %}
+          {% if persona.persona == "price" %}{% trans "Get a free quote" %}{% elif persona.persona == "ready" %}{% trans "Book now" %}{% elif persona.persona == "premium" %}{% trans "Private consultation" %}{% elif persona.persona == "quality" %}{% trans "Personal treatment plan" %}{% else %}{% trans "Free consultation" %}{% endif %}
         </a>
         <button class="nav-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="{% trans 'Menu' %}">
           <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>

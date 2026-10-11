@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-11 08:20+0300\n"
+"POT-Creation-Date: 2026-10-11 10:00+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -226,18 +226,23 @@ msgid "I would like to request a private appointment."
 msgstr "Jeg vil gerne bestille en privat tid."
 
 #: apps/core/context_processors.py:70
+#| msgid "Personal treatment plan"
+msgid "I would like a personalised treatment plan."
+msgstr "Jeg vil gerne have en personlig behandlingsplan."
+
+#: apps/core/context_processors.py:71
 msgid "I would like to book an appointment."
 msgstr "Jeg vil gerne bestille en tid."
 
-#: apps/core/context_processors.py:71
+#: apps/core/context_processors.py:72
 msgid "I would like information about materials and certificates."
 msgstr "Jeg vil gerne have information om materialer og certifikater."
 
-#: apps/core/context_processors.py:72
+#: apps/core/context_processors.py:73
 msgid "I would like to learn more."
 msgstr "Jeg vil gerne vide mere."
 
-#: apps/core/context_processors.py:74
+#: apps/core/context_processors.py:75
 msgid "Hello, I would like a free consultation."
 msgstr "Hej, jeg vil gerne have en gratis konsultation."
 
@@ -457,7 +462,7 @@ msgstr "Siden blev ikke fundet"
 #: apps/seo/common.py:36 templates/clinics/detail.html:78
 #: templates/clinics/doctor.html:26 templates/components/footer.html:49
 #: templates/components/navbar.html:56 templates/components/navbar.html:93
-#: templates/components/reviews.html:16 templates/home/sections/hero.html:162
+#: templates/components/reviews.html:16 templates/home/sections/hero.html:180
 msgid "Patient reviews"
 msgstr "Patientanmeldelser"
 
@@ -511,10 +516,22 @@ msgstr ""
 "materialer og diskret pleje."
 
 #: apps/seo/common.py:74
+msgid "A treatment planned for you — not a template"
+msgstr "En behandling planlagt til dig — ikke en skabelon"
+
+#: apps/seo/common.py:75
+msgid ""
+"Digital smile design, minimal preparation and one experienced dentist for "
+"every step. Healthy tooth tissue is saved first."
+msgstr ""
+"Digitalt smildesign, minimal præparation og én erfaren tandlæge i hvert "
+"trin. Sundt tandvæv bevares først."
+
+#: apps/seo/common.py:76
 msgid "No judgement — only solutions"
 msgstr "Ingen fordømmelse – kun løsninger"
 
-#: apps/seo/common.py:75
+#: apps/seo/common.py:77
 msgid ""
 "Whatever the state of your teeth, we have seen it before. We start with what"
 " can be saved."
@@ -522,29 +539,29 @@ msgstr ""
 "Uanset hvordan dine tænder ser ud, har vi set det før. Vi starter med det, "
 "der kan reddes."
 
-#: apps/seo/common.py:76
+#: apps/seo/common.py:78
 msgid "A dentist-led clinic you can check"
 msgstr "En tandlægeledet klinik, du kan tjekke"
 
-#: apps/seo/common.py:77
+#: apps/seo/common.py:79
 msgid "Qualifications, reviews and real photos — all on this page."
 msgstr ""
 "Kvalifikationer, anmeldelser og ægte billeder – alt sammen på denne side."
 
-#: apps/seo/common.py:78
+#: apps/seo/common.py:80
 msgid "Open 7 days a week in central Istanbul"
 msgstr "Åbent 7 dage om ugen midt i Istanbul"
 
-#: apps/seo/common.py:79
+#: apps/seo/common.py:81
 msgid ""
 "Tell us your travel dates; we plan the appointments around your flights."
 msgstr "Fortæl os dine rejsedatoer; vi planlægger tiderne efter dine fly."
 
-#: apps/seo/common.py:80
+#: apps/seo/common.py:82
 msgid "Plan your visit in one message"
 msgstr "Planlæg dit besøg med én besked"
 
-#: apps/seo/common.py:81
+#: apps/seo/common.py:83
 msgid ""
 "Send your photos and travel dates on WhatsApp — we reply with your personal "
 "plan."
@@ -552,12 +569,12 @@ msgstr ""
 "Send dine billeder og rejsedatoer på WhatsApp – vi svarer med din personlige"
 " plan."
 
-#: apps/seo/common.py:83 templates/components/footer.html:6
+#: apps/seo/common.py:85 templates/components/footer.html:6
 #: templates/packages/origin.html:19
 msgid "Dental work is more than a Hollywood smile"
 msgstr "Tandbehandling er mere end et Hollywood-smil"
 
-#: apps/seo/common.py:84
+#: apps/seo/common.py:86
 msgid ""
 "We save healthy teeth first and plan a real treatment made only for you."
 msgstr ""
@@ -1025,7 +1042,7 @@ msgstr ""
 "ikke skal behandle. Hver plan starter med at bevare dine naturlige tænder, "
 "en gennemsigtig diagnose og en fast skriftlig pris."
 
-#: templates/about.html:10 templates/base.html:50
+#: templates/about.html:10 templates/base.html:52
 #: templates/clinics/detail.html:36 templates/components/footer.html:18
 #: templates/components/reviews.html:7 templates/home/_stats.html:5
 #: templates/pseo/_hero.html:9
@@ -1040,8 +1057,8 @@ msgstr[1] "%(n)s Google-anmeldelser"
 msgid "Send a photo — free assessment"
 msgstr "Send et billede – gratis vurdering"
 
-#: templates/about.html:13 templates/base.html:64
-#: templates/components/cta.html:21 templates/pseo/_hero.html:12
+#: templates/about.html:13 templates/base.html:66
+#: templates/components/cta.html:24 templates/pseo/_hero.html:12
 msgid "Call us"
 msgstr "Ring til os"
 
@@ -1075,7 +1092,7 @@ msgstr ""
 "slebet væk."
 
 #: templates/about.html:29 templates/home/sections/hero.html:12
-#: templates/home/sections/hero.html:32 templates/home/sections/hero.html:180
+#: templates/home/sections/hero.html:32 templates/home/sections/hero.html:198
 #: templates/packages/index.html:12
 msgid "Fixed written quote"
 msgstr "Fast skriftligt tilbud"
@@ -1097,49 +1114,49 @@ msgstr "Læs tandlægens profil"
 msgid "Django site admin"
 msgstr "Django-administration"
 
-#: templates/base.html:29
+#: templates/base.html:31
 msgid "Skip to content"
 msgstr "Spring til indhold"
 
-#: templates/base.html:32
+#: templates/base.html:34
 msgid "Language suggestion"
 msgstr "Sprogforslag"
 
-#: templates/base.html:36
+#: templates/base.html:38
 msgid "Close"
 msgstr "Luk"
 
-#: templates/base.html:45
+#: templates/base.html:47
 msgid "Very affordable — with a fixed written quote and no hidden costs."
 msgstr ""
 "Meget overkommeligt – med skriftlig fast pris og ingen skjulte omkostninger."
 
-#: templates/base.html:45
+#: templates/base.html:47
 msgid "See personalised dental packages"
 msgstr "Se personlige tandrejser"
 
-#: templates/base.html:47
+#: templates/base.html:49
 msgid ""
 "Short on time? Many treatments are completed within one week in Istanbul."
 msgstr "Kort tid? Mange behandlinger afsluttes inden for en uge i Istanbul."
 
-#: templates/base.html:50 templates/clinics/list.html:32
+#: templates/base.html:52 templates/clinics/list.html:32
 #: templates/seo/_clinic_offers.html:6
 #, python-format
 msgid "%(y)s+ years experience"
 msgstr "%(y)s+ års erfaring"
 
-#: templates/base.html:50 templates/components/reviews.html:8
+#: templates/base.html:52 templates/components/reviews.html:8
 #: templates/pseo/_hero.html:9
 msgid "read them on Google"
 msgstr "læs dem på Google"
 
-#: templates/base.html:62 templates/components/footer.html:42
+#: templates/base.html:64 templates/components/footer.html:42
 #: templates/components/navbar.html:59 templates/components/navbar.html:94
 msgid "Contact"
 msgstr "Kontakt"
 
-#: templates/base.html:68 templates/contact.html:13
+#: templates/base.html:70 templates/contact.html:13
 msgid "Chat on WhatsApp"
 msgstr "Skriv på WhatsApp"
 
@@ -1504,20 +1521,33 @@ msgstr ""
 "En personlig behandlingsplan, diskret tidsbestilling og én tandlæge, der har"
 " ansvaret for din behandling fra start til slut."
 
-#: templates/components/cta.html:13 templates/home/sections/hero.html:86
+#: templates/components/cta.html:13
+#| msgid "Treatment plan and fixed price"
+msgid "Get a treatment plan made for your teeth"
+msgstr "Få en behandlingsplan lavet til dine tænder"
+
+#: templates/components/cta.html:14
+msgid ""
+"Send a photo or X-ray. The dentist examines your case personally and "
+"explains which option lasts longest — and why."
+msgstr ""
+"Send et foto eller røntgenbillede. Tandlægen gennemgår dit tilfælde "
+"personligt og forklarer, hvilken løsning holder længst — og hvorfor."
+
+#: templates/components/cta.html:16 templates/home/sections/hero.html:86
 msgid "Check this week's availability"
 msgstr "Se ledige tider i denne uge"
 
-#: templates/components/cta.html:14
+#: templates/components/cta.html:17
 msgid ""
 "Tell us your travel dates and we will plan your appointments around them."
 msgstr "Fortæl os dine rejsedatoer, så planlægger vi dine besøg omkring dem."
 
-#: templates/components/cta.html:16
+#: templates/components/cta.html:19
 msgid "Free assessment — no obligation"
 msgstr "Gratis vurdering — uforpligtende"
 
-#: templates/components/cta.html:17
+#: templates/components/cta.html:20
 msgid ""
 "Send us a photo or X-ray. Our dentist will reply with an honest treatment "
 "plan and a fixed price."
@@ -1525,7 +1555,7 @@ msgstr ""
 "Send os et foto eller røntgenbillede. Vores tandlæge svarer med en ærlig "
 "behandlingsplan og en fast pris."
 
-#: templates/components/cta.html:22
+#: templates/components/cta.html:25
 msgid "Contact form"
 msgstr "Kontaktformular"
 
@@ -1588,12 +1618,10 @@ msgid "Explore personalised dental packages"
 msgstr "Opdag personlige tandrejser"
 
 #: templates/components/navbar.html:44
-#| msgid "Find your clinic"
 msgid "Choosing a clinic"
 msgstr "Vælg klinik"
 
 #: templates/components/navbar.html:45
-#| msgid "Qualifications"
 msgid "Locations"
 msgstr "Steder"
 
@@ -1606,7 +1634,6 @@ msgid "About"
 msgstr "Om os"
 
 #: templates/components/navbar.html:57
-#| msgid "Find your clinic"
 msgid "Our clinic"
 msgstr "Vores klinik"
 
@@ -1618,13 +1645,19 @@ msgstr "Skift sprog"
 msgid "Get a free quote"
 msgstr "Gratis tilbud"
 
-#: templates/components/navbar.html:73 templates/home/sections/hero.html:130
+#: templates/components/navbar.html:73 templates/home/sections/hero.html:148
 msgid "Book now"
 msgstr "Book nu"
 
 #: templates/components/navbar.html:73
 msgid "Private consultation"
 msgstr "Privat konsultation"
+
+#: templates/components/navbar.html:73
+#: templates/components/treatment_card.html:7
+#: templates/home/sections/hero.html:12 templates/seo/_clinic_offers.html:8
+msgid "Personal treatment plan"
+msgstr "Personlig behandlingsplan"
 
 #: templates/components/navbar.html:73 templates/contact.html:6
 msgid "Free consultation"
@@ -1656,11 +1689,6 @@ msgstr "Svar fra klinikken"
 #, python-format
 msgid "%(d)s days in Istanbul"
 msgstr "%(d)s dage i Istanbul"
-
-#: templates/components/treatment_card.html:7
-#: templates/home/sections/hero.html:12 templates/seo/_clinic_offers.html:8
-msgid "Personal treatment plan"
-msgstr "Personlig behandlingsplan"
 
 #: templates/components/treatment_card.html:8
 msgid "Details"
@@ -1717,7 +1745,6 @@ msgid "Our partner agency"
 msgstr "Vores partnerbureau"
 
 #: templates/guides/detail.html:16
-#| msgid "Dental tourism Turkey"
 msgid "Dental tourism agency in Turkey: Sterr Agency"
 msgstr "Tandturismebureau i Tyrkiet: Sterr Agency"
 
@@ -1730,7 +1757,6 @@ msgstr ""
 "partnerbureau. Medicinske beslutninger træffes altid af tandlægen."
 
 #: templates/guides/detail.html:18
-#| msgid "Dental tourism Turkey"
 msgid "Dental tourism with Sterr Agency"
 msgstr "Tandturisme med Sterr Agency"
 
@@ -1773,7 +1799,8 @@ msgstr "Meget overkommeligt · skriftlig fast pris"
 
 #: templates/home/sections/hero.html:9 templates/home/sections/hero.html:27
 #: templates/home/sections/hero.html:49 templates/home/sections/hero.html:96
-#: templates/home/sections/hero.html:135 templates/home/sections/hero.html:153
+#: templates/home/sections/hero.html:133 templates/home/sections/hero.html:153
+#: templates/home/sections/hero.html:171
 msgid "Dental tourism Turkey — Istanbul"
 msgstr "Tandturisme Tyrkiet — Istanbul"
 
@@ -1794,7 +1821,7 @@ msgstr ""
 "teknik. Ingen skjulte omkostninger — prisen, vi oplyser, er prisen, du "
 "betaler."
 
-#: templates/home/sections/hero.html:12 templates/home/sections/hero.html:185
+#: templates/home/sections/hero.html:12 templates/home/sections/hero.html:203
 msgid "Free assessment — WhatsApp"
 msgstr "Gratis vurdering — WhatsApp"
 
@@ -1829,7 +1856,7 @@ msgstr ""
 " hvornår man skal sige nej. Ingen unødvendige indgreb. Gennemsigtig "
 "diagnose. Fast pris."
 
-#: templates/home/sections/hero.html:31 templates/home/sections/hero.html:178
+#: templates/home/sections/hero.html:31 templates/home/sections/hero.html:196
 msgid "No unnecessary treatment"
 msgstr "Ingen unødvendig behandling"
 
@@ -2003,23 +2030,71 @@ msgstr ""
 msgid "Request a private appointment"
 msgstr "Anmod om en privat tid"
 
-#: templates/home/sections/hero.html:130
+#: templates/home/sections/hero.html:132
+#| msgid "Evidence-based dentistry"
+msgid "Personalised dentistry"
+msgstr "Personlig tandpleje"
+
+#: templates/home/sections/hero.html:134
+#| msgid "Safe dental treatment in Istanbul —"
+msgid "Quality dental treatment in Istanbul —"
+msgstr "Tandbehandling af høj kvalitet i Istanbul —"
+
+#: templates/home/sections/hero.html:134
+msgid "planned only for you."
+msgstr "planlagt kun til dig."
+
+#: templates/home/sections/hero.html:135
+msgid ""
+"Every plan starts with a careful examination and a digital smile design. We "
+"save healthy teeth first, use premium materials, and one experienced dentist"
+" carries out every step."
+msgstr ""
+"Hver plan begynder med en grundig undersøgelse og et digitalt smildesign. Vi"
+" bevarer sunde tænder først, bruger premiummaterialer, og én erfaren "
+"tandlæge udfører hvert trin."
+
+#: templates/home/sections/hero.html:136
+#| msgid "Ask about smile design"
+msgid "Digital smile design"
+msgstr "Digitalt smildesign"
+
+#: templates/home/sections/hero.html:136
+#| msgid "Preparation"
+msgid "Minimal preparation"
+msgstr "Minimal præparation"
+
+#: templates/home/sections/hero.html:136
+msgid "One dentist, start to finish"
+msgstr "Én tandlæge fra start til slut"
+
+#: templates/home/sections/hero.html:138
+#| msgid "Personal treatment plan"
+msgid "Get my personal treatment plan"
+msgstr "Få min personlige behandlingsplan"
+
+#: templates/home/sections/hero.html:139
+#| msgid "Your dentist"
+msgid "Meet your dentist"
+msgstr "Mød din tandlæge"
+
+#: templates/home/sections/hero.html:148
 msgid "Appointments available this week"
 msgstr "Ledige tider i denne uge"
 
-#: templates/home/sections/hero.html:134
+#: templates/home/sections/hero.html:152
 msgid "We're ready when you are"
 msgstr "Vi er klar, når du er"
 
-#: templates/home/sections/hero.html:136
+#: templates/home/sections/hero.html:154
 msgid "Book your dental treatment in Istanbul —"
 msgstr "Book din tandbehandling i Istanbul —"
 
-#: templates/home/sections/hero.html:136
+#: templates/home/sections/hero.html:154
 msgid "are you ready?"
 msgstr "er du klar?"
 
-#: templates/home/sections/hero.html:137
+#: templates/home/sections/hero.html:155
 msgid ""
 "Free evaluation, personal treatment plan, fixed price. Reply within 24 "
 "hours."
@@ -2027,23 +2102,23 @@ msgstr ""
 "Gratis vurdering, personlig behandlingsplan, fast pris. Svar inden for 24 "
 "timer."
 
-#: templates/home/sections/hero.html:140
+#: templates/home/sections/hero.html:158
 msgid "Book an appointment"
 msgstr "Book en tid"
 
-#: templates/home/sections/hero.html:152
+#: templates/home/sections/hero.html:170
 msgid "Evidence-based dentistry"
 msgstr "Evidensbaseret tandpleje"
 
-#: templates/home/sections/hero.html:154
+#: templates/home/sections/hero.html:172
 msgid "Is dental treatment in Turkey safe?"
 msgstr "Er tandbehandling i Tyrkiet sikker?"
 
-#: templates/home/sections/hero.html:154
+#: templates/home/sections/hero.html:172
 msgid "We answer everything."
 msgstr "Vi svarer på alt."
 
-#: templates/home/sections/hero.html:155
+#: templates/home/sections/hero.html:173
 msgid ""
 "Materials, qualifications, what happens if something goes wrong — you get a "
 "transparent answer to every question."
@@ -2051,27 +2126,27 @@ msgstr ""
 "Materialer, kvalifikationer, hvad der sker, hvis noget går galt — du får et "
 "gennemsigtigt svar på hvert spørgsmål."
 
-#: templates/home/sections/hero.html:159
+#: templates/home/sections/hero.html:177
 msgid "Ask any question — free"
 msgstr "Stil ethvert spørgsmål — gratis"
 
-#: templates/home/sections/hero.html:163
+#: templates/home/sections/hero.html:181
 msgid "What patients actually say"
 msgstr "Hvad patienterne virkelig siger"
 
-#: templates/home/sections/hero.html:174
+#: templates/home/sections/hero.html:192
 msgid "Dental tourism Turkey"
 msgstr "Tandturisme Tyrkiet"
 
-#: templates/home/sections/hero.html:175
+#: templates/home/sections/hero.html:193
 msgid "Dental treatment in Istanbul —"
 msgstr "Tandbehandling i Istanbul —"
 
-#: templates/home/sections/hero.html:175
+#: templates/home/sections/hero.html:193
 msgid "only what your teeth actually need."
 msgstr "kun det, dine tænder virkelig har brug for."
 
-#: templates/home/sections/hero.html:176
+#: templates/home/sections/hero.html:194
 msgid ""
 "Good medicine means knowing when to say no. Ethical protocol, transparent "
 "diagnosis and one dentist responsible for your care — with direct WhatsApp "
@@ -2081,11 +2156,11 @@ msgstr ""
 "gennemsigtig diagnose og én tandlæge med ansvar for din behandling — med "
 "direkte WhatsApp-kontakt, ikke et callcenter."
 
-#: templates/home/sections/hero.html:179
+#: templates/home/sections/hero.html:197
 msgid "Transparent diagnosis"
 msgstr "Gennemsigtig diagnose"
 
-#: templates/home/sections/hero.html:181
+#: templates/home/sections/hero.html:199
 msgid "One dentist — full responsibility"
 msgstr "Én tandlæge — fuldt ansvar"
 
@@ -2162,6 +2237,11 @@ msgstr "Behandlinger med mest for pengene"
 #: templates/home/sections/treatments.html:6
 msgid "Signature treatments"
 msgstr "Vores signaturbehandlinger"
+
+#: templates/home/sections/treatments.html:6
+#| msgid "Appointments planned around your flights"
+msgid "Treatments planned around you"
+msgstr "Behandlinger planlagt omkring dig"
 
 #: templates/home/sections/treatments.html:6
 msgid "Natural smile treatments"
