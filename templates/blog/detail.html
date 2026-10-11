@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+<article itemscope itemtype="https://schema.org/BlogPosting">
+<header class="page-head"><div class="wrap-narrow">
+  {% include "components/breadcrumb.html" %}
+  <a class="badge" href="{{ post.category.get_absolute_url }}">{{ category.name }}</a>
+  <h1 itemprop="headline" style="margin-top:1rem">{{ p.title }}</h1>
+  {% if p.excerpt %}<p class="lead">{{ p.excerpt }}</p>{% endif %}
+  <div class="meta-row">
+    {% if post.published_at %}<span>📅 <time datetime="{{ post.published_at|date:'c' }}" itemprop="datePublished">{{ post.published_at|date:"DATE_FORMAT" }}</time></span>{% endif %}
+    {% if post.updated_at|date:"Ymd" != post.published_at|date:"Ymd" %}<span>🔄 {% trans "Updated" %} <time datetime="{{ post.updated_at|date:'c' }}" itemprop="dateModified">{{ post.updated_at|date:"DATE_FORMAT" }}</time></span>{% endif %}
+    <span>⏱️ {% blocktrans with n=p.reading_time %}{{ n }} min read{% endblocktrans %}</span>
+    {% if reviewer %}<span>🩺 {% trans "Medically reviewed by" %} <a href="{{ reviewer.object.get_absolute_url }}">{{ reviewer.full_name }}</a></span>{% endif %}
+  </div>
+</div></header>
+
+{% if post.image_src %}<div class="wrap-narrow" style="margin-top:2rem"><img src="{{ post.image_src }}" alt="{{ p.featured_image_alt|default:p.title }}" style="border-radius:var(--radius)" width="1200" height="675" fetchpriority="high" itemprop="image"></div>{% endif %}
+
+<div class="section" style="padding-top:2rem"><div class="wrap-narrow">
+  {% with toc_items=p.content|toc %}{% if toc_items|length > 2 %}
+  <nav class="toc" aria-label="{% trans 'Contents' %}" style="margin-bottom:2rem"><p>{% trans "In this article" %}</p><ol>{% for id, title in toc_items %}<li><a href="#{{ id }}">{{ title }}</a></li>{% endfor %}</ol></nav>
+  {% endif %}{% endwith %}
+  <div class="prose" itemprop="articleBody" data-track-section="content">{{ p.content|markdown }}</div>
+
+  {% if treatment %}
+  <div class="side-cta" style="margin-top:2.5rem" data-track-section="price">
+    <h2>{{ treatment.icon }} {{ treatment.name }}</h2>
+    <p class="muted">{{ treatment.short_description|truncatechars:200 }}</p>
+    <a class="btn btn-outline btn-sm" href="{{ treatment.object.get_absolute_url }}">{% trans "Prices and details" %} →</a>
+  </div>
+  {% endif %}
+</div></div>
+</article>
+
+{% include "components/faq.html" with faq=p.faq %}
+
+<section class="section" style="padding-top:0"><div class="wrap-narrow">{% include "components/cta.html" %}</div></section>
+
+{% if related %}
+<section class="section section-alt"><div class="wrap">
+  <h2>{% trans "You might also find helpful" %}</h2>
+  <div class="grid grid-2">{% for r in related %}{% include "blog/_card.html" with p=r heading="h3" %}{% endfor %}</div>
+</div></section>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+{% include "pseo/_hero.html" %}
+{% if t.is_fallback %}<div class="wrap"><p class="fallback-note">{% trans "This page is not yet available in your language — showing the original version." %}</p></div>{% endif %}
+
+<section class="section"><div class="wrap layout-side">
+  <article>
+    {% with toc_items=t.body|toc %}{% if toc_items|length > 2 %}
+    <nav class="toc" aria-label="{% trans 'Contents' %}" style="margin-bottom:2rem"><p>{% trans "On this page" %}</p><ol>{% for id, title in toc_items %}<li><a href="#{{ id }}">{{ title }}</a></li>{% endfor %}</ol></nav>
+    {% endif %}{% endwith %}
+    <div class="prose">{{ t.body|markdown }}</div>
+    {% if partner_url %}
+    <div class="card pseo-partner reveal">
+      <span class="eyebrow">{% trans "Our partner agency" %}</span>
+      <h2>{% trans "Dental tourism agency in Turkey: Sterr Agency" %}</h2>
+      <p class="muted">{% trans "For travel planning, transfers and accommodation we work with our partner agency. Medical decisions always stay with the dentist." %}</p>
+      <a class="btn btn-outline btn-sm" href="{{ partner_url }}" target="_blank" rel="noopener">{% trans "Dental tourism with Sterr Agency" %} →</a>
+    </div>
+    {% endif %}
+    {% include "pseo/_price_note.html" %}
+  </article>
+  <aside class="sticky-side">
+    <div class="side-cta" data-track-section="contact">
+      <h2>{{ hook_title }}</h2>
+      <p class="muted">{{ hook_text }}</p>
+      {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my personal plan" %}</a>{% endif %}
+      {% if clinic.phone %}<a class="btn btn-outline" style="width:100%;margin-top:.6rem" href="{{ tel_url }}" data-track="phone">📞 {{ clinic.phone }}</a>{% endif %}
+    </div>
+    {% if gallery %}<img src="{{ gallery.0.src }}" alt="{{ gallery.0.alt }}" loading="lazy" style="border-radius:var(--radius);margin-top:1rem" width="400" height="300">{% endif %}
+  </aside>
+</div></section>
+
+{% include "pseo/_proof.html" %}
+{% include "pseo/_photos.html" %}
+{% include "components/faq.html" with faq=faq %}
+{% include "pseo/_related.html" %}
+{% include "pseo/_links.html" %}
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

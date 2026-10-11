@@ -1,0 +1,2710 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dentaltourism.tr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-11 08:20+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: apps/blog/views.py:36
+msgid "Dental Tourism Blog — Guides, Costs & Patient Advice"
+msgstr "Блог про стоматологічний туризм — гіди, ціни та поради пацієнтам"
+
+#: apps/blog/views.py:37
+msgid ""
+"Honest guides about dental treatment in Turkey: implant and veneer costs, "
+"safety, recovery and how to choose a dentist in Istanbul."
+msgstr ""
+"Чесні гіди про лікування зубів у Туреччині: ціни на імпланти та вініри, "
+"безпека, відновлення і як обрати стоматолога в Стамбулі."
+
+#: apps/blog/views.py:44 apps/blog/views.py:75 apps/blog/views.py:141
+#: apps/clinics/views.py:39 apps/clinics/views.py:68 apps/clinics/views.py:113
+#: apps/core/views.py:119 apps/seo/common.py:32 apps/seo/guide_views.py:34
+#: apps/seo/guide_views.py:70 apps/seo/package_views.py:62
+#: apps/seo/package_views.py:104 apps/seo/package_views.py:143
+#: apps/seo/views.py:69 apps/seo/views.py:113 apps/seo/views.py:145
+#: apps/treatments/views.py:27 apps/treatments/views.py:88
+#: templates/404.html:8 templates/components/navbar.html:5
+msgid "Home"
+msgstr "Головна"
+
+#: apps/blog/views.py:44 apps/blog/views.py:75 apps/blog/views.py:141
+#: templates/components/navbar.html:47
+msgid "Blog"
+msgstr "Блог"
+
+#: apps/blog/views.py:70
+#, python-format
+msgid "%(category)s — Dental Tourism Blog"
+msgstr "%(category)s — блог про стоматологічний туризм"
+
+#: apps/clinics/forms.py:6
+msgid "Your country"
+msgstr "Ваша країна"
+
+#: apps/clinics/forms.py:11
+msgid "Your name"
+msgstr "Ваше ім'я"
+
+#: apps/clinics/forms.py:12
+msgid "Shown as first name and initial, e.g. 'Anna K.'"
+msgstr "Відображається як ім'я та ініціал, напр. «Анна К.»"
+
+#: apps/clinics/forms.py:13 apps/core/forms.py:14
+msgid "Email"
+msgstr "Ел. пошта"
+
+#: apps/clinics/forms.py:13
+msgid "Not published — only used to verify your review."
+msgstr "Не публікується — використовується лише для перевірки відгуку."
+
+#: apps/clinics/forms.py:14
+msgid "Country"
+msgstr "Країна"
+
+#: apps/clinics/forms.py:15
+msgid "Rating"
+msgstr "Оцінка"
+
+#: apps/clinics/forms.py:17 apps/clinics/search.py:22
+#: templates/clinics/detail.html:44 templates/home/sections/hero.html:81
+#: templates/treatments/detail.html:6
+msgid "Treatment"
+msgstr "Лікування"
+
+#: apps/clinics/forms.py:18
+msgid "Select treatment"
+msgstr "Оберіть лікування"
+
+#: apps/clinics/forms.py:19
+msgid "Title"
+msgstr "Заголовок"
+
+#: apps/clinics/forms.py:20
+msgid "Your experience"
+msgstr "Ваш досвід"
+
+#: apps/clinics/forms.py:22
+msgid "I confirm this review describes my own experience as a patient."
+msgstr "Підтверджую, що цей відгук описує мій власний досвід пацієнта."
+
+#: apps/clinics/search.py:11 templates/clinics/list.html:25
+msgid "Recommended"
+msgstr "Рекомендовані"
+
+#: apps/clinics/search.py:12
+msgid "Highest rated"
+msgstr "З найвищим рейтингом"
+
+#: apps/clinics/search.py:13
+msgid "Most experienced"
+msgstr "З найбільшим досвідом"
+
+#: apps/clinics/search.py:18 templates/clinics/_search.html:17
+msgid "Search"
+msgstr "Знайти"
+
+#: apps/clinics/search.py:19
+msgid "Clinic, dentist or district…"
+msgstr "Клініка, лікар або район…"
+
+#: apps/clinics/search.py:21
+msgid "City"
+msgstr "Місто"
+
+#: apps/clinics/search.py:23
+msgid "Language spoken"
+msgstr "Мова спілкування"
+
+#: apps/clinics/search.py:24
+msgid "Google rating"
+msgstr "Рейтинг Google"
+
+#: apps/clinics/search.py:25
+msgid "Any"
+msgstr "Будь-який"
+
+#: apps/clinics/search.py:26
+msgid "Verified clinics only"
+msgstr "Лише перевірені клініки"
+
+#: apps/clinics/search.py:27 templates/clinics/list.html:34
+msgid "Airport transfer"
+msgstr "Трансфер з аеропорту"
+
+#: apps/clinics/search.py:28
+msgid "Hotel booking help"
+msgstr "Допомога з бронюванням готелю"
+
+#: apps/clinics/search.py:29
+msgid "Sort by"
+msgstr "Сортувати"
+
+#: apps/clinics/search.py:35
+msgid "All cities"
+msgstr "Усі міста"
+
+#: apps/clinics/search.py:37 templates/components/navbar.html:18
+#: templates/components/navbar.html:83
+msgid "All treatments"
+msgstr "Усі види лікування"
+
+#: apps/clinics/search.py:39
+msgid "Any language"
+msgstr "Будь-яка мова"
+
+#: apps/clinics/views.py:29
+msgid "Dental Clinics in Istanbul for International Patients"
+msgstr "Стоматологічні клініки Стамбула для іноземних пацієнтів"
+
+#: apps/clinics/views.py:30
+msgid ""
+"Verified dental clinics in Turkey: dentists' experience, languages spoken, "
+"prices and patient reviews. Free consultation."
+msgstr ""
+"Перевірені стоматологічні клініки в Туреччині: досвід лікарів, мови "
+"спілкування, ціни та відгуки пацієнтів. Безкоштовна консультація."
+
+#: apps/clinics/views.py:39 apps/clinics/views.py:68
+#: templates/clinics/list.html:6 templates/components/navbar.html:58
+msgid "Clinics"
+msgstr "Клініки"
+
+#: apps/clinics/views.py:61
+#, python-format
+msgid "%(clinic)s — Dental Clinic in %(city)s"
+msgstr "%(clinic)s — стоматологічна клініка, %(city)s"
+
+#: apps/clinics/views.py:105
+#, python-format
+msgid "%(doctor)s — Dentist in %(city)s"
+msgstr "%(doctor)s — стоматолог, %(city)s"
+
+#: apps/clinics/views.py:144
+msgid "Too many reviews from your connection. Please try again later."
+msgstr "Забагато відгуків з вашого з'єднання. Спробуйте пізніше."
+
+#: apps/clinics/views.py:148
+msgid "Please check the review form and try again."
+msgstr "Перевірте форму відгуку та спробуйте ще раз."
+
+#: apps/clinics/views.py:164
+msgid "Thank you! Your review will be published after a short check."
+msgstr "Дякуємо! Ваш відгук буде опубліковано після короткої перевірки."
+
+#: apps/core/context_processors.py:65
+msgid "I have some questions about safety and the treatment process."
+msgstr "У мене є запитання щодо безпеки та перебігу лікування."
+
+#: apps/core/context_processors.py:66
+msgid "I would like to get a price quote."
+msgstr "Я хочу отримати розрахунок вартості."
+
+#: apps/core/context_processors.py:67
+msgid "I would like to ask about available appointments this week."
+msgstr "Я хочу дізнатися про вільні дати цього тижня."
+
+#: apps/core/context_processors.py:68
+msgid "I would like information about smile design."
+msgstr "Я хочу дізнатися про дизайн усмішки."
+
+#: apps/core/context_processors.py:69
+msgid "I would like to request a private appointment."
+msgstr "Я хочу записатися на приватний прийом."
+
+#: apps/core/context_processors.py:70
+msgid "I would like to book an appointment."
+msgstr "Я хочу записатися на прийом."
+
+#: apps/core/context_processors.py:71
+msgid "I would like information about materials and certificates."
+msgstr "Я хочу дізнатися про матеріали та сертифікати."
+
+#: apps/core/context_processors.py:72
+msgid "I would like to learn more."
+msgstr "Я хочу дізнатися більше."
+
+#: apps/core/context_processors.py:74
+msgid "Hello, I would like a free consultation."
+msgstr "Вітаю, я хочу отримати безкоштовну консультацію."
+
+#: apps/core/forms.py:8
+msgid "Full name"
+msgstr "Ім'я та прізвище"
+
+#: apps/core/forms.py:10
+msgid "Your first and last name"
+msgstr "Ваше ім'я та прізвище"
+
+#: apps/core/forms.py:11
+msgid "Phone / WhatsApp"
+msgstr "Телефон / WhatsApp"
+
+#: apps/core/forms.py:16
+msgid "Treatment of interest"
+msgstr "Лікування, що цікавить"
+
+#: apps/core/forms.py:17
+msgid "Not sure yet"
+msgstr "Ще не знаю"
+
+#: apps/core/forms.py:18
+msgid "Message"
+msgstr "Повідомлення"
+
+#: apps/core/forms.py:20
+msgid "Tell us about your dental situation…"
+msgstr "Коротко опишіть стан ваших зубів…"
+
+#: apps/core/forms.py:22
+msgid "I agree that my data is processed to answer my request (GDPR / KVKK)."
+msgstr ""
+"Я погоджуюся на обробку моїх даних для відповіді на мій запит (GDPR / KVKK)."
+
+#: apps/core/forms.py:41
+msgid "Please enter a valid phone number with country code."
+msgstr "Введіть правильний номер телефону з кодом країни."
+
+#: apps/core/templatetags/site_tags.py:99
+msgid "per tooth"
+msgstr "за зуб"
+
+#: apps/core/templatetags/site_tags.py:99
+msgid "per implant"
+msgstr "за імплант"
+
+#: apps/core/templatetags/site_tags.py:99
+msgid "per crown"
+msgstr "за коронку"
+
+#: apps/core/templatetags/site_tags.py:100
+msgid "per arch"
+msgstr "за щелепу"
+
+#: apps/core/templatetags/site_tags.py:100
+msgid "per jaw"
+msgstr "за щелепу"
+
+#: apps/core/templatetags/site_tags.py:100
+msgid "per session"
+msgstr "за сеанс"
+
+#: apps/core/templatetags/site_tags.py:100
+msgid "per smile"
+msgstr "за усмішку"
+
+#: apps/core/urls.py:9
+msgid "about/"
+msgstr "pro-nas/"
+
+#: apps/core/urls.py:10
+msgid "contact/"
+msgstr "kontakty/"
+
+#: apps/core/urls.py:11
+msgid "contact/thank-you/"
+msgstr "kontakty/dyakuyemo/"
+
+#: apps/core/urls.py:12
+msgid "privacy/"
+msgstr "konfidentsiynist/"
+
+#: apps/core/views.py:21
+msgid "Is it safe to get dental treatment in Turkey?"
+msgstr "Чи безпечно лікувати зуби в Туреччині?"
+
+#: apps/core/views.py:22
+msgid ""
+"Yes, when you choose a licensed clinic with experienced dentists and "
+"certified materials. Ask for the dentist's credentials, the brands of "
+"implants and crowns, and a written treatment plan before you travel."
+msgstr ""
+"Так, якщо обрати ліцензовану клініку з досвідченими лікарями та "
+"сертифікованими матеріалами. Перед поїздкою запитайте про кваліфікацію "
+"стоматолога, марки імплантів і коронок та письмовий план лікування."
+
+#: apps/core/views.py:25
+msgid "How much does dental treatment in Istanbul cost?"
+msgstr "Скільки коштує лікування зубів у Стамбулі?"
+
+#: apps/core/views.py:26
+msgid ""
+"Very affordable compared with Western Europe — with the same materials and "
+"techniques. We do not publish one-size-fits-all prices: call us or send "
+"photos on WhatsApp and you receive a fixed written quote before treatment "
+"starts."
+msgstr ""
+"Дуже доступно порівняно з Європою — з тими самими матеріалами і "
+"технологіями. Ми не публікуємо однакових цін: зателефонуйте або надішліть "
+"фото у WhatsApp, і до початку лікування ви отримаєте письмову фіксовану "
+"ціну."
+
+#: apps/core/views.py:29
+msgid "How long do I need to stay in Istanbul?"
+msgstr "Скільки потрібно пробути в Стамбулі?"
+
+#: apps/core/views.py:30
+msgid ""
+"It depends on the treatment: fillings, cleaning and composite veneers take "
+"1–3 days, crowns and porcelain veneers about 5–7 days, implants usually two "
+"visits a few months apart."
+msgstr ""
+"Залежить від лікування: пломби, чистка та композитні вініри — 1–3 дні, "
+"коронки та керамічні вініри — приблизно 5–7 днів, імпланти — зазвичай дві "
+"поїздки з інтервалом у кілька місяців."
+
+#: apps/core/views.py:32
+msgid "Do you speak my language?"
+msgstr "Ви розмовляєте моєю мовою?"
+
+#: apps/core/views.py:33
+msgid ""
+"We communicate with international patients in English and other languages, "
+"and you can message the dentist directly on WhatsApp before, during and "
+"after your treatment."
+msgstr ""
+"Ми спілкуємося з іноземними пацієнтами англійською та іншими мовами, а до, "
+"під час і після лікування ви можете писати лікарю напряму у WhatsApp."
+
+#: apps/core/views.py:35
+msgid "How experienced is the dentist?"
+msgstr "Який досвід у лікаря?"
+
+#: apps/core/views.py:36
+#, python-format
+msgid "Our lead dentist has %(years)s years of clinical experience."
+msgstr "Досвід нашого головного лікаря — %(years)s років клінічної практики."
+
+#: apps/core/views.py:87
+msgid "Dental Tourism Istanbul — Implants, Veneers & Crowns in Turkey"
+msgstr "Стоматологія в Стамбулі — імпланти, вініри та коронки в Туреччині"
+
+#: apps/core/views.py:88
+msgid ""
+"Ethical dental treatment in Istanbul with an experienced dentist. Implants, "
+"veneers, zirconia crowns — very affordable, fixed written quote. Free "
+"WhatsApp consultation."
+msgstr ""
+"Етичне лікування зубів у Стамбулі в досвідченого стоматолога. Імпланти, "
+"вініри, цирконієві коронки — дуже доступно, письмова фіксована ціна. "
+"Безкоштовна консультація у WhatsApp."
+
+#: apps/core/views.py:111
+msgid "About Us — Ethical Dental Care in Istanbul"
+msgstr "Про нас — етична стоматологія в Стамбулі"
+
+#: apps/core/views.py:112
+msgid ""
+"Meet the dentist and the clinic behind dentaltourism.tr: decades of clinical"
+" experience, transparent diagnosis and only the treatment you actually need."
+msgstr ""
+"Познайомтеся з лікарем і клінікою dentaltourism.tr: десятиліття досвіду, "
+"прозора діагностика і лише те лікування, яке справді потрібне."
+
+#: apps/core/views.py:119 apps/seo/common.py:33
+#: templates/components/footer.html:48 templates/components/navbar.html:55
+msgid "About us"
+msgstr "Про нас"
+
+#: apps/core/views.py:142
+msgid "Please check the form and try again."
+msgstr "Перевірте форму та спробуйте ще раз."
+
+#: apps/core/views.py:145
+msgid "Free Consultation — Contact Our Dentist in Istanbul"
+msgstr "Безкоштовна консультація — зв'яжіться з нашим стоматологом у Стамбулі"
+
+#: apps/core/views.py:146
+msgid ""
+"Send your X-ray or photos and get a free treatment plan and fixed price "
+"quote. Reply within 24 hours. WhatsApp, phone or form."
+msgstr ""
+"Надішліть знімок або фото та отримайте безкоштовний план лікування й "
+"фіксовану ціну. Відповідь протягом 24 годин. WhatsApp, телефон або форма."
+
+#: apps/core/views.py:158
+msgid "Thank you — we will contact you shortly"
+msgstr "Дякуємо — ми незабаром зв'яжемося з вами"
+
+#: apps/core/views.py:164 templates/privacy.html:4
+msgid "Privacy Policy"
+msgstr "Політика конфіденційності"
+
+#: apps/core/views.py:164
+msgid "How we process and protect your personal data (GDPR / KVKK)."
+msgstr "Як ми обробляємо та захищаємо ваші персональні дані (GDPR / KVKK)."
+
+#: apps/core/views.py:205 templates/404.html:6
+msgid "Page not found"
+msgstr "Сторінку не знайдено"
+
+#: apps/seo/common.py:36 templates/clinics/detail.html:78
+#: templates/clinics/doctor.html:26 templates/components/footer.html:49
+#: templates/components/navbar.html:56 templates/components/navbar.html:93
+#: templates/components/reviews.html:16 templates/home/sections/hero.html:162
+msgid "Patient reviews"
+msgstr "Відгуки пацієнтів"
+
+#: apps/seo/common.py:42
+msgid "Google reviews"
+msgstr "Відгуки Google"
+
+#: apps/seo/common.py:66
+msgid "Calm, pain-free and explained step by step"
+msgstr "Спокійно, без болю і з поясненням кожного кроку"
+
+#: apps/seo/common.py:67
+msgid ""
+"Local anaesthesia, a dentist who explains everything first, and no decision "
+"under pressure."
+msgstr ""
+"Місцева анестезія, лікар, який спершу все пояснює, і жодних рішень під "
+"тиском."
+
+#: apps/seo/common.py:68
+msgid "Check everything before you trust us"
+msgstr "Перевірте все, перш ніж нам довіряти"
+
+#: apps/seo/common.py:69
+msgid ""
+"Real reviews with their source, named materials and a written plan before "
+"you travel."
+msgstr ""
+"Реальні відгуки з джерелом, названі матеріали і письмовий план до поїздки."
+
+#: apps/seo/common.py:70
+msgid "Very affordable — and a fixed price in writing"
+msgstr "Дуже доступно — і фіксована ціна письмово"
+
+#: apps/seo/common.py:71
+msgid "No hidden costs. Call or message us and receive your personal quote."
+msgstr ""
+"Жодних прихованих витрат. Зателефонуйте або напишіть і отримайте особисту "
+"пропозицію."
+
+#: apps/seo/common.py:72
+msgid "Time with your dentist, not with a sales team"
+msgstr "Час із вашим лікарем, а не з відділом продажів"
+
+#: apps/seo/common.py:73
+msgid ""
+"One experienced dentist responsible for your whole treatment, premium "
+"materials, discreet care."
+msgstr ""
+"Один досвідчений стоматолог відповідає за все лікування, преміальні "
+"матеріали, делікатне ставлення."
+
+#: apps/seo/common.py:74
+msgid "No judgement — only solutions"
+msgstr "Без осуду — лише рішення"
+
+#: apps/seo/common.py:75
+msgid ""
+"Whatever the state of your teeth, we have seen it before. We start with what"
+" can be saved."
+msgstr ""
+"У якому б стані не були ваші зуби, ми це вже бачили. Починаємо з того, що "
+"можна зберегти."
+
+#: apps/seo/common.py:76
+msgid "A dentist-led clinic you can check"
+msgstr "Клініка під керівництвом лікаря, яку можна перевірити"
+
+#: apps/seo/common.py:77
+msgid "Qualifications, reviews and real photos — all on this page."
+msgstr "Кваліфікація, відгуки і справжні фото — усе на цій сторінці."
+
+#: apps/seo/common.py:78
+msgid "Open 7 days a week in central Istanbul"
+msgstr "Відкрито 7 днів на тиждень у центрі Стамбула"
+
+#: apps/seo/common.py:79
+msgid ""
+"Tell us your travel dates; we plan the appointments around your flights."
+msgstr "Повідомте дати поїздки — ми сплануємо прийоми під ваші рейси."
+
+#: apps/seo/common.py:80
+msgid "Plan your visit in one message"
+msgstr "Сплануйте візит одним повідомленням"
+
+#: apps/seo/common.py:81
+msgid ""
+"Send your photos and travel dates on WhatsApp — we reply with your personal "
+"plan."
+msgstr ""
+"Надішліть фото і дати поїздки у WhatsApp — ми відповімо вашим особистим "
+"планом."
+
+#: apps/seo/common.py:83 templates/components/footer.html:6
+#: templates/packages/origin.html:19
+msgid "Dental work is more than a Hollywood smile"
+msgstr "Стоматологія — це більше, ніж голлівудська усмішка"
+
+#: apps/seo/common.py:84
+msgid ""
+"We save healthy teeth first and plan a real treatment made only for you."
+msgstr ""
+"Спершу ми зберігаємо здорові зуби і плануємо справжнє лікування лише для "
+"вас."
+
+#: apps/seo/guide_views.py:30
+msgid "Dental Tourism Guides — Turkey & Istanbul"
+msgstr "Гіди зі стоматологічного туризму — Туреччина і Стамбул"
+
+#: apps/seo/guide_views.py:31
+msgid ""
+"Honest guides about dental treatment in Turkey: choosing a clinic, reviews, "
+"travel, guarantee and aftercare — from a dentist in Istanbul."
+msgstr ""
+"Чесні гіди про лікування зубів у Туреччині: вибір клініки, відгуки, поїздка,"
+" гарантія і супровід — від стоматолога зі Стамбула."
+
+#: apps/seo/guide_views.py:34 apps/seo/guide_views.py:70
+#: templates/components/footer.html:31 templates/components/navbar.html:41
+#: templates/components/navbar.html:87
+msgid "Guides"
+msgstr "Гіди"
+
+#: apps/seo/guide_views.py:39
+msgid "Dental tourism guides: Turkey and Istanbul"
+msgstr "Гіди зі стоматологічного туризму: Туреччина і Стамбул"
+
+#: apps/seo/guide_views.py:40
+msgid ""
+"Everything you need to decide with confidence — written by a dentist, "
+"without sales talk."
+msgstr ""
+"Усе, що потрібно для впевненого рішення, — написано лікарем, без рекламних "
+"обіцянок."
+
+#: apps/seo/guide_views.py:82
+msgid "Guide"
+msgstr "Гід"
+
+#: apps/seo/package_views.py:22
+msgid "What is dental tourism?"
+msgstr "Що таке стоматологічний туризм?"
+
+#: apps/seo/package_views.py:23
+msgid ""
+"Dental tourism means travelling to another country for dental treatment — "
+"usually to combine experienced dentists, modern clinics and significantly "
+"lower costs with a short trip."
+msgstr ""
+"Стоматологічний туризм — це поїздка до іншої країни для лікування зубів, "
+"зазвичай щоб поєднати досвідчених лікарів, сучасні клініки і помітно нижчі "
+"ціни з короткою поїздкою."
+
+#: apps/seo/package_views.py:25
+msgid "What is included in a dental tourism package?"
+msgstr "Що входить у стоматологічний тур?"
+
+#: apps/seo/package_views.py:26
+msgid ""
+"A personal assessment, 3D scan and examination in Istanbul, the treatment "
+"itself, coordination of your transfers and hotel, and aftercare via WhatsApp"
+" when you are back home."
+msgstr ""
+"Особиста оцінка, 3D-знімок і огляд у Стамбулі, саме лікування, організація "
+"трансферів і готелю, а також супровід у WhatsApp після повернення."
+
+#: apps/seo/package_views.py:28
+msgid "How much does a dental package cost?"
+msgstr "Скільки коштує стоматологічний пакет?"
+
+#: apps/seo/package_views.py:29
+msgid ""
+"We do not sell fixed-price packages, because no two mouths are the same. "
+"Send photos or an X-ray on WhatsApp and you receive a personal treatment "
+"plan with a fixed written quote."
+msgstr ""
+"Ми не продаємо пакети з фіксованою ціною — двох однакових ротів не буває. "
+"Надішліть фото або знімок у WhatsApp, і ви отримаєте особистий план "
+"лікування з письмовою фіксованою ціною."
+
+#: apps/seo/package_views.py:31
+msgid "Is an all-inclusive Hollywood smile package a good idea?"
+msgstr "Чи варто брати пакет «голлівудська усмішка все включено»?"
+
+#: apps/seo/package_views.py:32
+msgid ""
+"Only if you actually need it. Packages that sell 20 veneers before anyone "
+"has examined your teeth often remove healthy tooth structure. A real plan "
+"starts with a diagnosis."
+msgstr ""
+"Лише якщо він вам справді потрібен. Пакети, де продають 20 вінірів до "
+"огляду, часто позбавляють вас здорових тканин зуба. Справжній план "
+"починається з діагностики."
+
+#: apps/seo/package_views.py:34
+msgid "How long does a dental trip to Turkey take?"
+msgstr "Скільки триває стоматологічна поїздка до Туреччини?"
+
+#: apps/seo/package_views.py:35
+msgid ""
+"Most treatments take 3–7 days in Istanbul. Implants usually need two short "
+"visits a few months apart; we plan both around your flights."
+msgstr ""
+"Більшість процедур займає 3–7 днів у Стамбулі. Для імплантів зазвичай "
+"потрібні два короткі візити з інтервалом у кілька місяців; обидва ми "
+"плануємо під ваші рейси."
+
+#: apps/seo/package_views.py:57
+msgid ""
+"Dental Tourism Packages in Istanbul — Personalised, Not One-Size-Fits-All"
+msgstr "Стоматологічні тури до Стамбула — індивідуально, а не шаблон"
+
+#: apps/seo/package_views.py:58
+msgid ""
+"Dental holiday packages in Turkey built around a real diagnosis: assessment,"
+" treatment, transfers, hotel and aftercare. No fixed packages — get your "
+"personal plan on WhatsApp."
+msgstr ""
+"Стоматологічний тур до Туреччини на основі реальної діагностики: огляд, "
+"лікування, трансфери, готель і супровід. Без готових пакетів — ваш особистий"
+" план у WhatsApp."
+
+#: apps/seo/package_views.py:62 apps/seo/package_views.py:74
+#: apps/seo/package_views.py:104 apps/seo/package_views.py:112
+#: apps/seo/package_views.py:143 apps/seo/package_views.py:152
+#: templates/components/footer.html:36 templates/components/footer.html:37
+#: templates/components/navbar.html:85
+msgid "Dental packages"
+msgstr "Стоматологічні тури"
+
+#: apps/seo/package_views.py:71
+msgid ""
+"Dental tourism packages in Istanbul — personalised, not one-size-fits-all"
+msgstr "Стоматологічні тури до Стамбула — індивідуально, а не за шаблоном"
+
+#: apps/seo/package_views.py:72
+msgid ""
+"Dental work is more than a Hollywood smile. Your package is built around a "
+"real diagnosis: assessment, treatment, transfers, hotel and aftercare."
+msgstr ""
+"Стоматологія — це більше, ніж голлівудська усмішка. Ваш пакет будується на "
+"реальній діагностиці: огляд, лікування, трансфери, готель і супровід."
+
+#: apps/seo/package_views.py:94
+#, python-format
+msgid "%(treatment)s package in Istanbul"
+msgstr "%(treatment)s: пакет у Стамбулі"
+
+#: apps/seo/package_views.py:97
+#, python-format
+msgid "%(treatment)s Package Turkey — Personal Plan, Not a Fixed Deal"
+msgstr "%(treatment)s у Туреччині — особистий план, а не готова пропозиція"
+
+#: apps/seo/package_views.py:98
+#, python-format
+msgid ""
+"%(treatment)s package in Istanbul built around your diagnosis: assessment, "
+"treatment, transfer and hotel coordination, aftercare. Get your personal "
+"plan on WhatsApp."
+msgstr ""
+"%(treatment)s у Стамбулі за вашою діагностикою: огляд, лікування, трансфер і"
+" готель, супровід. Ваш особистий план у WhatsApp."
+
+#: apps/seo/package_views.py:132
+#, python-format
+msgid "Dental holiday packages from %(country)s to Istanbul"
+msgstr "Лікування зубів у Стамбулі для пацієнтів із країни: %(country)s"
+
+#: apps/seo/package_views.py:138
+#, python-format
+msgid "Dental Holiday Packages from %(country)s — Istanbul, Turkey"
+msgstr "Стоматологічний тур із країни %(country)s — Стамбул, Туреччина"
+
+#: apps/seo/package_views.py:139
+#, python-format
+msgid ""
+"Planning dental treatment in Turkey from %(country)s? Flight time, how many "
+"trips you need, what a personalised dental package includes and aftercare at"
+" home."
+msgstr ""
+"Плануєте лікування зубів у Туреччині (%(country)s)? Час перельоту, кількість"
+" поїздок, що входить в індивідуальний пакет і супровід удома."
+
+#: apps/seo/package_views.py:150
+#, python-format
+msgid ""
+"Planning dental treatment in Istanbul from %(country)s? Flight times, how "
+"many trips you need and what a personalised dental package includes."
+msgstr ""
+"Плануєте лікування зубів у Стамбулі (%(country)s)? Час перельоту, кількість "
+"поїздок і що входить в індивідуальний пакет."
+
+#: apps/seo/package_views.py:161
+msgid ""
+"We plan treatment to keep the number of trips to a minimum — often one "
+"longer stay, with implants scheduled so that the second visit is short."
+msgstr ""
+"Ми плануємо лікування так, щоб поїздок було якомога менше — часто один "
+"довший візит, а імпланти так, щоб другий візит був коротким."
+
+#: apps/seo/package_views.py:163
+msgid ""
+"Crowns, veneers and most other treatments need one trip of about a week; "
+"implants usually need two short trips a few months apart."
+msgstr ""
+"Коронки, вініри і більшість інших процедур потребують однієї поїздки "
+"приблизно на тиждень; імпланти — зазвичай двох коротких поїздок з інтервалом"
+" у кілька місяців."
+
+#: apps/seo/package_views.py:166
+#, python-format
+msgid "How long is the flight from %(country)s to Istanbul?"
+msgstr "Скільки летіти до Стамбула (%(country)s)?"
+
+#: apps/seo/package_views.py:167
+#, python-format
+msgid ""
+"About %(hours)s hours, depending on your departure airport and connection."
+msgstr "Близько %(hours)s год, залежно від аеропорту вильоту і пересадки."
+
+#: apps/seo/package_views.py:169
+#, python-format
+msgid "How many trips will I need from %(country)s?"
+msgstr "Скільки поїздок знадобиться (%(country)s)?"
+
+#: apps/seo/package_views.py:170
+#, python-format
+msgid "What happens when I am back in %(country)s?"
+msgstr "Що буде після повернення додому (%(country)s)?"
+
+#: apps/seo/package_views.py:171
+msgid ""
+"Follow-up continues on WhatsApp and email. If needed we coordinate with a "
+"local dentist and guide you by video call — you are never left alone."
+msgstr ""
+"Супровід триває у WhatsApp і електронною поштою. За потреби ми зв’язуємося з"
+" місцевим лікарем і консультуємо через відеозв’язок — ви ніколи не "
+"залишитеся сам на сам."
+
+#: apps/seo/package_views.py:173
+msgid "How do I get a price for my dental package?"
+msgstr "Як дізнатися ціну мого стоматологічного пакета?"
+
+#: apps/seo/package_views.py:174
+msgid ""
+"Send your photos or X-ray on WhatsApp. After the dentist has reviewed your "
+"case you receive a personal plan with a fixed written quote — we never "
+"publish one-size-fits-all prices."
+msgstr ""
+"Надішліть фото або знімок у WhatsApp. Після того як лікар вивчить ваш "
+"випадок, ви отримаєте особистий план із письмовою фіксованою ціною — "
+"однакових цін ми не публікуємо."
+
+#: apps/seo/views.py:57
+#, python-format
+msgid "%(treatment)s in %(city)s"
+msgstr "%(treatment)s у місті %(city)s"
+
+#: apps/seo/views.py:62
+#, python-format
+msgid "%(treatment)s in %(city)s — Personal Plan"
+msgstr "%(treatment)s — %(city)s — особистий план"
+
+#: apps/seo/views.py:64
+#, python-format
+msgid ""
+"Compare %(treatment)s in %(city)s: affordable personal quotes, stay "
+"duration, dentist experience and patient reviews. Free consultation on "
+"WhatsApp."
+msgstr ""
+"Порівняйте %(treatment)s — %(city)s: доступні особисті пропозиції, "
+"тривалість перебування, досвід лікаря і відгуки пацієнтів. Безкоштовна "
+"консультація у WhatsApp."
+
+#: apps/seo/views.py:69 apps/treatments/views.py:27
+#: apps/treatments/views.py:88 templates/404.html:8
+#: templates/components/footer.html:26 templates/components/navbar.html:10
+#: templates/components/navbar.html:81 templates/treatments/list.html:6
+msgid "Treatments"
+msgstr "Лікування"
+
+#: apps/seo/views.py:83
+msgid "How much does dental treatment in Turkey cost?"
+msgstr "Скільки коштує лікування зубів у Туреччині?"
+
+#: apps/seo/views.py:84
+msgid ""
+"Dental treatment in Turkey is very affordable compared with Western Europe, "
+"the UK or the Gulf. The exact cost depends on your teeth, so we give you a "
+"personal, fixed quote after the dentist has seen your photos or X-ray — call"
+" us or send them on WhatsApp."
+msgstr ""
+"Лікування зубів у Туреччині дуже доступне порівняно з Європою. Точна "
+"вартість залежить від ваших зубів, тому ви отримаєте особисту фіксовану ціну"
+" після того, як лікар побачить фото або знімок, — зателефонуйте або "
+"надішліть їх у WhatsApp."
+
+#: apps/seo/views.py:87
+msgid "Why don't you publish a price list?"
+msgstr "Чому у вас немає прайс-листа?"
+
+#: apps/seo/views.py:88
+msgid ""
+"Because a price list sells the same treatment to everyone. Two patients "
+"asking for 'implants' may need completely different plans. We prefer to tell"
+" you your real price."
+msgstr ""
+"Бо прайс-лист продає всім однакове лікування. Двом пацієнтам, які питають "
+"про «імпланти», можуть знадобитися зовсім різні плани. Ми воліємо назвати "
+"вашу реальну ціну."
+
+#: apps/seo/views.py:90
+msgid "Are cheap dental clinics in Turkey a risk?"
+msgstr "Чи небезпечні дешеві стоматології в Туреччині?"
+
+#: apps/seo/views.py:91
+msgid ""
+"A very low price often means cheaper materials, no diagnosis or unnecessary "
+"treatment. Ask for material brands, the dentist's name and a written plan — "
+"quality and affordability can go together."
+msgstr ""
+"Дуже низька ціна часто означає дешевші матеріали, відсутність діагностики "
+"або зайве лікування. Запитайте марки матеріалів, ім’я лікаря і письмовий "
+"план — якість і доступність сумісні."
+
+#: apps/seo/views.py:94
+msgid "Is the quote fixed?"
+msgstr "Ціна фіксована?"
+
+#: apps/seo/views.py:95
+msgid ""
+"Yes. What we agree in writing before treatment is what you pay — no hidden "
+"costs."
+msgstr ""
+"Так. Те, про що ми письмово домовилися до лікування, ви й платите — без "
+"прихованих витрат."
+
+#: apps/seo/views.py:108
+msgid "Dental Prices in Turkey 2026 — Affordable, Personal Quote"
+msgstr "Ціни на стоматологію в Туреччині 2026 — доступно, особиста пропозиція"
+
+#: apps/seo/views.py:109
+msgid ""
+"How much do teeth cost in Turkey? Very affordable dental treatment in "
+"Istanbul with a fixed written quote. Call or WhatsApp for your personal "
+"price."
+msgstr ""
+"Скільки коштують зуби в Туреччині? Дуже доступне лікування зубів у Стамбулі "
+"з письмовою фіксованою ціною. Телефонуйте або пишіть у WhatsApp."
+
+#: apps/seo/views.py:113 apps/seo/views.py:116 apps/seo/views.py:145
+#: apps/seo/views.py:151 templates/components/footer.html:28
+#: templates/components/navbar.html:51 templates/components/navbar.html:91
+msgid "Prices"
+msgstr "Ціни"
+
+#: apps/seo/views.py:117
+msgid "Dental prices in Turkey: affordable — and personal"
+msgstr "Ціни на лікування зубів у Туреччині: доступно — та індивідуально"
+
+#: apps/seo/views.py:118
+msgid ""
+"How much do teeth cost in Turkey? Very affordable compared with home — but "
+"the honest answer is a personal quote, not a price list."
+msgstr ""
+"Скільки коштують зуби в Туреччині? Дуже доступно порівняно з домом — але "
+"чесна відповідь — це особиста пропозиція, а не прайс-лист."
+
+#: apps/seo/views.py:136
+#, python-format
+msgid "%(treatment)s cost in Turkey — affordable, with a fixed quote"
+msgstr "%(treatment)s у Туреччині: ціна — доступно, з фіксованою сумою"
+
+#: apps/seo/views.py:139
+#, python-format
+msgid "%(treatment)s Price in Turkey 2026 — Personal Quote"
+msgstr "%(treatment)s у Туреччині — ціна 2026, особиста пропозиція"
+
+#: apps/seo/views.py:140
+#, python-format
+msgid ""
+"How much does %(treatment)s cost in Turkey? Very affordable in Istanbul, "
+"with a fixed written quote after the dentist sees your case. Call or "
+"WhatsApp."
+msgstr ""
+"Скільки коштує %(treatment)s у Туреччині? Дуже доступно в Стамбулі, з "
+"письмовою фіксованою ціною після огляду вашого випадку. Телефонуйте або "
+"пишіть у WhatsApp."
+
+#: apps/seo/views.py:152
+#, python-format
+msgid ""
+"What affects the price of %(treatment)s, what is included — and how to get "
+"your personal quote by phone or WhatsApp."
+msgstr ""
+"Від чого залежить ціна (%(treatment)s), що входить — і як отримати особисту "
+"пропозицію телефоном або у WhatsApp."
+
+#: apps/treatments/views.py:19
+msgid "Dental Treatments in Istanbul — Prices & Information"
+msgstr "Лікування зубів у Стамбулі — ціни та інформація"
+
+#: apps/treatments/views.py:20
+msgid ""
+"All dental treatments for international patients in Istanbul: implants, "
+"veneers, crowns, All-on-4, root canal and more. Transparent prices and stay "
+"durations."
+msgstr ""
+"Усі види стоматологічного лікування для іноземних пацієнтів у Стамбулі: "
+"імпланти, вініри, коронки, All-on-4, лікування каналів та інше. Прозорі ціни"
+" й терміни."
+
+#: apps/treatments/views.py:80
+#, python-format
+msgid "%(treatment)s in Istanbul — Procedure & Personal Plan"
+msgstr "%(treatment)s у Стамбулі — процедура та особистий план"
+
+#: dental_tourism/urls.py:45
+msgid "treatments/"
+msgstr "likuvannya/"
+
+#: dental_tourism/urls.py:46
+msgid "prices/"
+msgstr "tsiny/"
+
+#: dental_tourism/urls.py:47
+msgid "packages/"
+msgstr "pakety/"
+
+#: dental_tourism/urls.py:48
+msgid "dental-holidays-from/"
+msgstr "stomatologichnyy-tur-z/"
+
+#: dental_tourism/urls.py:49
+msgid "guide/"
+msgstr "gid/"
+
+#: dental_tourism/urls.py:50
+msgid "clinics/"
+msgstr "kliniky/"
+
+#: dental_tourism/urls.py:51
+msgid "dentists/"
+msgstr "stomatology/"
+
+#: templates/404.html:7
+msgid "The page you are looking for does not exist or has moved."
+msgstr "Сторінка, яку ви шукаєте, не існує або була переміщена."
+
+#: templates/about.html:7
+msgid "Our story"
+msgstr "Наша історія"
+
+#: templates/about.html:8
+msgid "Ethical dentistry in Istanbul — only what you need"
+msgstr "Етична стоматологія в Стамбулі — лише те, що потрібно"
+
+#: templates/about.html:9
+msgid ""
+"We believe the most important skill in dentistry is knowing when not to "
+"treat. Every plan starts with saving your natural teeth, a transparent "
+"diagnosis and a fixed written price."
+msgstr ""
+"Ми вважаємо, що головне вміння в стоматології — знати, коли не лікувати. "
+"Кожен план починається зі збереження ваших природних зубів, прозорої "
+"діагностики та фіксованої письмової ціни."
+
+#: templates/about.html:10 templates/base.html:50
+#: templates/clinics/detail.html:36 templates/components/footer.html:18
+#: templates/components/reviews.html:7 templates/home/_stats.html:5
+#: templates/pseo/_hero.html:9
+#, python-format
+msgid "%(n)s Google review"
+msgid_plural "%(n)s Google reviews"
+msgstr[0] "%(n)s відгук Google"
+msgstr[1] "%(n)s відгуки Google"
+msgstr[2] "%(n)s відгуків Google"
+
+#: templates/about.html:12 templates/components/footer.html:7
+#: templates/pseo/_hero.html:11
+msgid "Send a photo — free assessment"
+msgstr "Надішліть фото — безкоштовна оцінка"
+
+#: templates/about.html:13 templates/base.html:64
+#: templates/components/cta.html:21 templates/pseo/_hero.html:12
+msgid "Call us"
+msgstr "Зателефонуйте нам"
+
+#: templates/about.html:19 templates/clinics/detail.html:34
+#: templates/home/_stats.html:3
+msgid "Years experience"
+msgstr "Років досвіду"
+
+#: templates/about.html:27 templates/packages/index.html:9
+msgid "Diagnosis first"
+msgstr "Спершу діагностика"
+
+#: templates/about.html:27 templates/packages/index.html:9
+msgid ""
+"Examination, X-ray and 3D scan by the dentist — the plan follows the "
+"diagnosis, not a price list."
+msgstr ""
+"Огляд, знімок і 3D-сканування лікарем — план іде за діагнозом, а не за "
+"прайс-листом."
+
+#: templates/about.html:28 templates/packages/index.html:10
+msgid "Only the treatment you need"
+msgstr "Лише потрібне лікування"
+
+#: templates/about.html:28 templates/packages/index.html:10
+msgid ""
+"We save natural teeth first. No unnecessary crowns, no healthy enamel ground"
+" away."
+msgstr ""
+"Спершу зберігаємо власні зуби. Жодних зайвих коронок і сточеної здорової "
+"емалі."
+
+#: templates/about.html:29 templates/home/sections/hero.html:12
+#: templates/home/sections/hero.html:32 templates/home/sections/hero.html:180
+#: templates/packages/index.html:12
+msgid "Fixed written quote"
+msgstr "Фіксований письмовий кошторис"
+
+#: templates/about.html:29 templates/packages/index.html:12
+msgid "Very affordable, and what we agree in writing is what you pay."
+msgstr "Дуже доступно — і скільки домовилися письмово, стільки й платите."
+
+#: templates/about.html:44
+msgid "Your dentist"
+msgstr "Ваш стоматолог"
+
+#: templates/about.html:49 templates/pseo/_proof.html:14
+msgid "Read the dentist's profile"
+msgstr "Профіль лікаря"
+
+#: templates/admin/base_site.html:3
+msgid "Django site admin"
+msgstr "Адміністрування Django"
+
+#: templates/base.html:29
+msgid "Skip to content"
+msgstr "Перейти до змісту"
+
+#: templates/base.html:32
+msgid "Language suggestion"
+msgstr "Пропозиція мови"
+
+#: templates/base.html:36
+msgid "Close"
+msgstr "Закрити"
+
+#: templates/base.html:45
+msgid "Very affordable — with a fixed written quote and no hidden costs."
+msgstr "Дуже доступно — з письмовою фіксованою ціною і без прихованих витрат."
+
+#: templates/base.html:45
+msgid "See personalised dental packages"
+msgstr "Переглянути індивідуальні стоматологічні тури"
+
+#: templates/base.html:47
+msgid ""
+"Short on time? Many treatments are completed within one week in Istanbul."
+msgstr "Мало часу? Багато видів лікування в Стамбулі тривають один тиждень."
+
+#: templates/base.html:50 templates/clinics/list.html:32
+#: templates/seo/_clinic_offers.html:6
+#, python-format
+msgid "%(y)s+ years experience"
+msgstr "%(y)s+ років досвіду"
+
+#: templates/base.html:50 templates/components/reviews.html:8
+#: templates/pseo/_hero.html:9
+msgid "read them on Google"
+msgstr "читати в Google"
+
+#: templates/base.html:62 templates/components/footer.html:42
+#: templates/components/navbar.html:59 templates/components/navbar.html:94
+msgid "Contact"
+msgstr "Контакти"
+
+#: templates/base.html:68 templates/contact.html:13
+msgid "Chat on WhatsApp"
+msgstr "Написати у WhatsApp"
+
+#: templates/blog/_card.html:7 templates/blog/detail.html:13
+#, python-format
+msgid "%(n)s min read"
+msgstr "%(n)s хв читання"
+
+#: templates/blog/_pagination.html:2
+msgid "Pagination"
+msgstr "Навігація сторінками"
+
+#: templates/blog/_pagination.html:3 templates/components/reviews.html:11
+msgid "Previous"
+msgstr "Назад"
+
+#: templates/blog/_pagination.html:5 templates/components/reviews.html:12
+msgid "Next"
+msgstr "Далі"
+
+#: templates/blog/category.html:6
+msgid "Category"
+msgstr "Категорія"
+
+#: templates/blog/category.html:9 templates/blog/list.html:9
+msgid "Categories"
+msgstr "Категорії"
+
+#: templates/blog/category.html:9 templates/blog/list.html:9
+msgid "All"
+msgstr "Усі"
+
+#: templates/blog/category.html:14
+msgid "No articles in this category yet."
+msgstr "У цій категорії поки немає статей."
+
+#: templates/blog/detail.html:12
+msgid "Updated"
+msgstr "Оновлено"
+
+#: templates/blog/detail.html:14
+msgid "Medically reviewed by"
+msgstr "Медична перевірка:"
+
+#: templates/blog/detail.html:22 templates/guides/detail.html:10
+#: templates/treatments/detail.html:24
+msgid "Contents"
+msgstr "Зміст"
+
+#: templates/blog/detail.html:22
+msgid "In this article"
+msgstr "У цій статті"
+
+#: templates/blog/detail.html:30
+msgid "Prices and details"
+msgstr "Ціни та подробиці"
+
+#: templates/blog/detail.html:42
+msgid "You might also find helpful"
+msgstr "Вам також може бути цікаво"
+
+#: templates/blog/list.html:6
+msgid "Patient resource centre"
+msgstr "Інформаційний центр для пацієнтів"
+
+#: templates/blog/list.html:7
+msgid "Learn before you decide"
+msgstr "Дізнайтеся все, перш ніж вирішити"
+
+#: templates/blog/list.html:8
+msgid ""
+"Honest guides about dental treatments, costs and what to expect from dental "
+"tourism in Istanbul."
+msgstr ""
+"Чесні гіди про лікування зубів, ціни та про те, чого очікувати від "
+"стоматологічного туризму в Стамбулі."
+
+#: templates/blog/list.html:14
+msgid "New articles are coming soon."
+msgstr "Нові статті незабаром."
+
+#: templates/clinics/_search.html:5
+msgid "Find your clinic"
+msgstr "Знайдіть свою клініку"
+
+#: templates/clinics/_search.html:6
+msgid "Search dental clinics in Turkey"
+msgstr "Пошук стоматологічних клінік у Туреччині"
+
+#: templates/clinics/_search.html:7
+msgid ""
+"Filter by treatment, city and language — and compare verified clinics side "
+"by side."
+msgstr ""
+"Фільтруйте за процедурою, містом і мовою — та порівнюйте перевірені клініки."
+
+#: templates/clinics/_search.html:8
+msgid "Search clinics"
+msgstr "Пошук клінік"
+
+#: templates/clinics/_search.html:20
+msgid "More filters"
+msgstr "Більше фільтрів"
+
+#: templates/clinics/detail.html:9 templates/clinics/doctor.html:10
+#: templates/guides/detail.html:5 templates/packages/treatment.html:5
+#: templates/treatments/detail.html:13
+msgid ""
+"This page is not yet available in your language — showing the original "
+"version."
+msgstr "Ця сторінка ще недоступна вашою мовою — показано оригінальну версію."
+
+#: templates/clinics/detail.html:11 templates/home/sections/hero.html:95
+#, python-format
+msgid "%(n)s review"
+msgid_plural "%(n)s reviews"
+msgstr[0] "%(n)s відгук"
+msgstr[1] "%(n)s відгуки"
+msgstr[2] "%(n)s відгуків"
+
+#: templates/clinics/detail.html:14
+msgid "Profiles"
+msgstr "Профілі"
+
+#: templates/clinics/detail.html:35 templates/home/_stats.html:4
+msgid "Patients treated"
+msgstr "Пацієнтів"
+
+#: templates/clinics/detail.html:37 templates/clinics/doctor.html:20
+#: templates/components/footer.html:54
+msgid "Languages"
+msgstr "Мови"
+
+#: templates/clinics/detail.html:42
+msgid "Treatments & prices"
+msgstr "Лікування та ціни"
+
+#: templates/clinics/detail.html:44
+msgid "Stay"
+msgstr "Перебування"
+
+#: templates/clinics/detail.html:45 templates/seo/_clinic_offers.html:9
+#: templates/treatments/detail.html:38
+#, python-format
+msgid "%(d)s days"
+msgstr "%(d)s дн."
+
+#: templates/clinics/detail.html:50
+msgid "Dentists"
+msgstr "Стоматологи"
+
+#: templates/clinics/detail.html:56
+msgid "Contact & location"
+msgstr "Контакти та адреса"
+
+#: templates/clinics/detail.html:60 templates/contact.html:16
+msgid "Map"
+msgstr "Карта"
+
+#: templates/clinics/detail.html:68 templates/components/navbar.html:20
+msgid "Before & after"
+msgstr "До і після"
+
+#: templates/clinics/detail.html:69 templates/home/sections/hero.html:60
+#: templates/home/sections/hero.html:63 templates/pseo/_photos.html:8
+msgid "Before"
+msgstr "До"
+
+#: templates/clinics/detail.html:69 templates/home/sections/hero.html:61
+#: templates/home/sections/hero.html:64 templates/pseo/_photos.html:8
+msgid "After"
+msgstr "Після"
+
+#: templates/clinics/detail.html:79
+#, python-format
+msgid "%(n)s review on dentaltourism.tr"
+msgid_plural "%(n)s reviews on dentaltourism.tr"
+msgstr[0] "%(n)s відгук на dentaltourism.tr"
+msgstr[1] "%(n)s відгуки на dentaltourism.tr"
+msgstr[2] "%(n)s відгуків на dentaltourism.tr"
+
+#: templates/clinics/detail.html:82
+msgid "All Google reviews"
+msgstr "Усі відгуки Google"
+
+#: templates/clinics/detail.html:83
+msgid "Review us on Google"
+msgstr "Залиште відгук у Google"
+
+#: templates/clinics/detail.html:84
+msgid "Write a review"
+msgstr "Написати відгук"
+
+#: templates/clinics/detail.html:88
+msgid "Reviews on dentaltourism.tr"
+msgstr "Відгуки на dentaltourism.tr"
+
+#: templates/clinics/detail.html:89
+msgid "Reviews on Google and other platforms"
+msgstr "Відгуки в Google та на інших платформах"
+
+#: templates/clinics/detail.html:92
+#, python-format
+msgid "Were you treated at %(name)s? Share your experience"
+msgstr "Ви лікувалися в %(name)s? Поділіться досвідом"
+
+#: templates/clinics/detail.html:93
+msgid ""
+"Reviews are checked before publication. Your email address is never shown."
+msgstr ""
+"Відгуки перевіряються перед публікацією. Ваш e-mail ніколи не показується."
+
+#: templates/clinics/detail.html:103
+msgid "Poor"
+msgstr "Погано"
+
+#: templates/clinics/detail.html:103
+msgid "Fair"
+msgstr "Задовільно"
+
+#: templates/clinics/detail.html:103
+msgid "Good"
+msgstr "Добре"
+
+#: templates/clinics/detail.html:103
+msgid "Very good"
+msgstr "Дуже добре"
+
+#: templates/clinics/detail.html:103
+msgid "Excellent"
+msgstr "Відмінно"
+
+#: templates/clinics/detail.html:106
+msgid "Tap a star"
+msgstr "Натисніть на зірку"
+
+#: templates/clinics/detail.html:111
+msgid "Submit review"
+msgstr "Надіслати відгук"
+
+#: templates/clinics/doctor.html:16
+msgid "Qualifications"
+msgstr "Кваліфікація"
+
+#: templates/clinics/doctor.html:18
+msgid "University"
+msgstr "Університет"
+
+#: templates/clinics/doctor.html:19
+msgid "Graduated"
+msgstr "Рік закінчення"
+
+#: templates/clinics/doctor.html:23
+msgid "Ask the dentist"
+msgstr "Запитати лікаря"
+
+#: templates/clinics/list.html:7
+msgid "Dental clinics in Istanbul for international patients"
+msgstr "Стоматологічні клініки Стамбула для іноземних пацієнтів"
+
+#: templates/clinics/list.html:8
+msgid ""
+"Every clinic is reviewed before it is listed: licence, dentist "
+"qualifications and real patient reviews."
+msgstr ""
+"Кожна клініка проходить перевірку перед розміщенням: ліцензія, кваліфікація "
+"лікарів і реальні відгуки пацієнтів."
+
+#: templates/clinics/list.html:14
+#, python-format
+msgid "%(n)s clinic found"
+msgid_plural "%(n)s clinics found"
+msgstr[0] "Знайдено %(n)s клініку"
+msgstr[1] "Знайдено %(n)s клініки"
+msgstr[2] "Знайдено %(n)s клінік"
+
+#: templates/clinics/list.html:14 templates/clinics/list.html:47
+msgid "Clear filters"
+msgstr "Скинути фільтри"
+
+#: templates/clinics/list.html:24 templates/seo/_clinic_offers.html:5
+msgid "Verified"
+msgstr "Перевірено"
+
+#: templates/clinics/list.html:42
+msgid "View clinic"
+msgstr "Переглянути клініку"
+
+#: templates/clinics/list.html:47
+msgid "No clinics match your filters."
+msgstr "Немає клінік, що відповідають фільтрам."
+
+#: templates/components/breadcrumb.html:1
+msgid "Breadcrumb"
+msgstr "Навігаційний ланцюжок"
+
+#: templates/components/consent.html:3
+msgid ""
+"We use cookies to measure our advertising and improve the site. You can "
+"accept or decline analytics cookies."
+msgstr ""
+"Ми використовуємо файли cookie для оцінки реклами та покращення сайту. Ви "
+"можете прийняти або відхилити аналітичні cookie."
+
+#: templates/components/consent.html:3 templates/components/footer.html:50
+msgid "Privacy policy"
+msgstr "Політика конфіденційності"
+
+#: templates/components/consent.html:4
+msgid "Accept"
+msgstr "Прийняти"
+
+#: templates/components/consent.html:4
+msgid "Decline"
+msgstr "Відхилити"
+
+#: templates/components/contact_form.html:14
+msgid "Send — we will get back to you"
+msgstr "Надіслати — ми зв'яжемося з вами"
+
+#: templates/components/contact_form.html:15
+msgid ""
+"Your data is protected under GDPR / KVKK and only used to answer your "
+"request."
+msgstr ""
+"Ваші дані захищені відповідно до GDPR / KVKK і використовуються лише для "
+"відповіді на ваш запит."
+
+#: templates/components/cta.html:4
+msgid "Get your exact price in 24 hours"
+msgstr "Точна ціна за 24 години"
+
+#: templates/components/cta.html:5
+msgid ""
+"Send a photo or X-ray on WhatsApp. You receive a written treatment plan and "
+"a fixed price — no obligation."
+msgstr ""
+"Надішліть фото або знімок у WhatsApp. Ви отримаєте письмовий план лікування "
+"та фіксовану ціну — без зобов'язань."
+
+#: templates/components/cta.html:7
+msgid "Ask the dentist anything — before you decide"
+msgstr "Запитайте лікаря про все — до ухвалення рішення"
+
+#: templates/components/cta.html:8
+msgid ""
+"Materials, guarantees, what happens if something goes wrong: you get honest "
+"answers directly from the dentist, not a call centre."
+msgstr ""
+"Матеріали, гарантії, що буде, якщо щось піде не так: чесні відповіді напряму"
+" від лікаря, а не від кол-центру."
+
+#: templates/components/cta.html:10
+msgid "Request a private consultation"
+msgstr "Запросити приватну консультацію"
+
+#: templates/components/cta.html:11
+msgid ""
+"A personal treatment plan, discreet scheduling and one dentist responsible "
+"for your care from start to finish."
+msgstr ""
+"Персональний план лікування, конфіденційний запис і один лікар, "
+"відповідальний за ваше лікування від початку до кінця."
+
+#: templates/components/cta.html:13 templates/home/sections/hero.html:86
+msgid "Check this week's availability"
+msgstr "Вільні дати цього тижня"
+
+#: templates/components/cta.html:14
+msgid ""
+"Tell us your travel dates and we will plan your appointments around them."
+msgstr "Повідомте нам дати поїздки, і ми сплануємо прийоми під них."
+
+#: templates/components/cta.html:16
+msgid "Free assessment — no obligation"
+msgstr "Безкоштовна оцінка — без зобов'язань"
+
+#: templates/components/cta.html:17
+msgid ""
+"Send us a photo or X-ray. Our dentist will reply with an honest treatment "
+"plan and a fixed price."
+msgstr ""
+"Надішліть нам фото або знімок. Наш лікар відповість чесним планом лікування "
+"та фіксованою ціною."
+
+#: templates/components/cta.html:22
+msgid "Contact form"
+msgstr "Форма зв'язку"
+
+#: templates/components/faq.html:4 templates/home/sections/faq.html:2
+msgid "Frequently asked questions"
+msgstr "Часті запитання"
+
+#: templates/components/footer.html:7 templates/pseo/_hero.html:14
+msgid ""
+"No obligation · reply from the dentist, not a call centre · open 7 days a "
+"week"
+msgstr ""
+"Без зобов’язань · відповідає лікар, а не колцентр · відкрито 7 днів на "
+"тиждень"
+
+#: templates/components/footer.html:17
+msgid ""
+"Ethical dental treatment in Istanbul for international patients — "
+"transparent diagnosis, fixed prices, direct contact with your dentist."
+msgstr ""
+"Етичне лікування зубів у Стамбулі для іноземних пацієнтів — прозора "
+"діагностика, фіксовані ціни, прямий контакт із лікарем."
+
+#: templates/components/footer.html:38 templates/packages/index.html:25
+#, python-format
+msgid "From %(c)s"
+msgstr "З країни: %(c)s"
+
+#: templates/components/navbar.html:4
+msgid "Main navigation"
+msgstr "Головне меню"
+
+#: templates/components/navbar.html:19 templates/pseo/_price_note.html:3
+msgid "What does it cost?"
+msgstr "Скільки це коштує?"
+
+#: templates/components/navbar.html:25 templates/components/navbar.html:84
+msgid "Packages"
+msgstr "Тури"
+
+#: templates/components/navbar.html:29 templates/packages/index.html:19
+#: templates/packages/origin.html:34
+msgid "Dental packages by treatment"
+msgstr "Стоматологічні пакети за видами лікування"
+
+#: templates/components/navbar.html:30 templates/packages/index.html:20
+#: templates/packages/origin.html:35 templates/seo/treatment_city.html:15
+#: templates/seo/treatment_price.html:23 templates/treatments/detail.html:16
+#, python-format
+msgid "%(name)s package"
+msgstr "%(name)s: пакет"
+
+#: templates/components/navbar.html:33 templates/packages/treatment.html:38
+msgid "Travelling from"
+msgstr "Летите з"
+
+#: templates/components/navbar.html:37
+#: templates/home/sections/treatments.html:13
+msgid "Explore personalised dental packages"
+msgstr "Індивідуальні стоматологічні тури"
+
+#: templates/components/navbar.html:44
+#| msgid "Find your clinic"
+msgid "Choosing a clinic"
+msgstr "Вибір клініки"
+
+#: templates/components/navbar.html:45
+#| msgid "Qualifications"
+msgid "Locations"
+msgstr "Локації"
+
+#: templates/components/navbar.html:46
+msgid "Practical"
+msgstr "Корисне"
+
+#: templates/components/navbar.html:53 templates/components/navbar.html:92
+msgid "About"
+msgstr "Про нас"
+
+#: templates/components/navbar.html:57
+#| msgid "Find your clinic"
+msgid "Our clinic"
+msgstr "Наша клініка"
+
+#: templates/components/navbar.html:65
+msgid "Change language"
+msgstr "Змінити мову"
+
+#: templates/components/navbar.html:73
+msgid "Get a free quote"
+msgstr "Безкоштовний розрахунок"
+
+#: templates/components/navbar.html:73 templates/home/sections/hero.html:130
+msgid "Book now"
+msgstr "Записатися"
+
+#: templates/components/navbar.html:73
+msgid "Private consultation"
+msgstr "Приватна консультація"
+
+#: templates/components/navbar.html:73 templates/contact.html:6
+msgid "Free consultation"
+msgstr "Безкоштовна консультація"
+
+#: templates/components/navbar.html:75
+msgid "Menu"
+msgstr "Меню"
+
+#: templates/components/reviews.html:26
+msgid "Verified on our site"
+msgstr "Перевірено на нашому сайті"
+
+#: templates/components/reviews.html:30
+#, python-format
+msgid "Translated from %(l)s · show original"
+msgstr "Перекладено з мови: %(l)s · показати оригінал"
+
+#: templates/components/reviews.html:31
+msgid "Verified patient"
+msgstr "Перевірений пацієнт"
+
+#: templates/components/reviews.html:32
+msgid "Reply from the clinic"
+msgstr "Відповідь клініки"
+
+#: templates/components/treatment_card.html:7
+#: templates/seo/treatment_city.html:10 templates/treatments/detail.html:10
+#, python-format
+msgid "%(d)s days in Istanbul"
+msgstr "%(d)s дн. у Стамбулі"
+
+#: templates/components/treatment_card.html:7
+#: templates/home/sections/hero.html:12 templates/seo/_clinic_offers.html:8
+msgid "Personal treatment plan"
+msgstr "Особистий план лікування"
+
+#: templates/components/treatment_card.html:8
+msgid "Details"
+msgstr "Детальніше"
+
+#: templates/components/videos.html:5 templates/home/sections/hero.html:109
+#, python-format
+msgid "%(name)s — patient video review"
+msgstr "%(name)s — відеовідгук пацієнта"
+
+#: templates/contact.html:7
+msgid "Get your free treatment plan"
+msgstr "Отримайте безкоштовний план лікування"
+
+#: templates/contact.html:8
+msgid ""
+"Send us your details — and if you have one, a photo or X-ray via WhatsApp. "
+"The dentist replies personally within 24 hours."
+msgstr ""
+"Надішліть нам свої дані, а якщо є — фото або знімок через WhatsApp. Лікар "
+"відповість особисто протягом 24 годин."
+
+#: templates/contact.html:13
+msgid "Fastest reply — usually within 30 minutes during clinic hours."
+msgstr ""
+"Найшвидша відповідь — зазвичай протягом 30 хвилин у робочий час клініки."
+
+#: templates/contact.html:14 templates/packages/origin.html:26
+msgid "Clinic"
+msgstr "Клініка"
+
+#: templates/contact.html:18
+msgid "Why is it free?"
+msgstr "Чому безкоштовно?"
+
+#: templates/contact.html:18
+msgid "No commitment required"
+msgstr "Без зобов'язань"
+
+#: templates/contact.html:18
+msgid "Treatment plan and fixed price"
+msgstr "План лікування та фіксована ціна"
+
+#: templates/contact.html:18 templates/home/sections/contact.html:11
+msgid "Reply within 24 hours"
+msgstr "Відповідь протягом 24 годин"
+
+#: templates/guides/detail.html:10 templates/treatments/detail.html:24
+msgid "On this page"
+msgstr "На цій сторінці"
+
+#: templates/guides/detail.html:15
+msgid "Our partner agency"
+msgstr "Наше партнерське агентство"
+
+#: templates/guides/detail.html:16
+#| msgid "Dental tourism Turkey"
+msgid "Dental tourism agency in Turkey: Sterr Agency"
+msgstr "Агентство стоматологічного туризму в Туреччині: Sterr Agency"
+
+#: templates/guides/detail.html:17
+msgid ""
+"For travel planning, transfers and accommodation we work with our partner "
+"agency. Medical decisions always stay with the dentist."
+msgstr ""
+"Планування поїздки, трансфери й проживання ми організовуємо разом із "
+"партнерським агентством. Медичні рішення завжди ухвалює лікар."
+
+#: templates/guides/detail.html:18
+#| msgid "Dental tourism Turkey"
+msgid "Dental tourism with Sterr Agency"
+msgstr "Стоматологічний туризм із Sterr Agency"
+
+#: templates/guides/detail.html:27 templates/packages/origin.html:29
+#: templates/packages/treatment.html:35 templates/treatments/detail.html:42
+msgid "Ask for my personal plan"
+msgstr "Запросити особистий план"
+
+#: templates/home/sections/contact.html:7
+msgid "Free initial evaluation"
+msgstr "Безкоштовна первинна оцінка"
+
+#: templates/home/sections/contact.html:8
+msgid "Let us call you"
+msgstr "Ми вам зателефонуємо"
+
+#: templates/home/sections/contact.html:9
+msgid ""
+"Wherever you are, fill in the form for a short consultation. No commitment, "
+"no pressure."
+msgstr ""
+"Де б ви не були, заповніть форму для короткої консультації. Без зобов'язань "
+"і тиску."
+
+#: templates/home/sections/contact.html:12
+msgid "No obligation whatsoever"
+msgstr "Жодних зобов'язань"
+
+#: templates/home/sections/contact.html:13
+msgid "Fixed price — no hidden fees"
+msgstr "Фіксована ціна — без прихованих платежів"
+
+#: templates/home/sections/contact.html:15
+msgid "For a faster reply, message the dentist directly:"
+msgstr "Щоб отримати відповідь швидше, напишіть лікарю напряму:"
+
+#: templates/home/sections/hero.html:8
+msgid "Very affordable · fixed written quote"
+msgstr "Дуже доступно · письмова фіксована ціна"
+
+#: templates/home/sections/hero.html:9 templates/home/sections/hero.html:27
+#: templates/home/sections/hero.html:49 templates/home/sections/hero.html:96
+#: templates/home/sections/hero.html:135 templates/home/sections/hero.html:153
+msgid "Dental tourism Turkey — Istanbul"
+msgstr "Стоматологічний туризм у Туреччині — Стамбул"
+
+#: templates/home/sections/hero.html:10
+msgid "Affordable dental implants in Istanbul —"
+msgstr "Доступні зубні імпланти в Стамбулі —"
+
+#: templates/home/sections/hero.html:10
+msgid "same quality."
+msgstr "та сама якість."
+
+#: templates/home/sections/hero.html:11
+msgid ""
+"A fraction of the price at home. CE-certified materials, identical "
+"technique. No hidden costs — the price we quote is the price you pay."
+msgstr ""
+"Частка ціни, яку ви платите вдома. Матеріали із сертифікатом CE, та сама "
+"техніка. Без прихованих платежів — названа ціна і є підсумковою."
+
+#: templates/home/sections/hero.html:12 templates/home/sections/hero.html:185
+msgid "Free assessment — WhatsApp"
+msgstr "Безкоштовна оцінка — WhatsApp"
+
+#: templates/home/sections/hero.html:14
+msgid "Get a free price quote"
+msgstr "Безкоштовний розрахунок ціни"
+
+#: templates/home/sections/hero.html:26
+#, python-format
+msgid "%(years)s+ years — ethical protocol"
+msgstr "%(years)s+ років — етичний протокол"
+
+#: templates/home/sections/hero.html:26
+msgid "Ethical protocol"
+msgstr "Етичний протокол"
+
+#: templates/home/sections/hero.html:28
+msgid "Safe dental treatment in Istanbul —"
+msgstr "Безпечне лікування зубів у Стамбулі —"
+
+#: templates/home/sections/hero.html:28
+msgid "and you will feel it."
+msgstr "і ви це відчуєте."
+
+#: templates/home/sections/hero.html:29
+msgid ""
+"The most valuable thing experience has taught us: good medicine means "
+"knowing when to say no. No unnecessary procedures. Transparent diagnosis. "
+"Fixed price."
+msgstr ""
+"Найцінніше, чого нас навчив досвід: добра медицина — це вміння сказати «ні»."
+" Жодних зайвих процедур. Прозора діагностика. Фіксована ціна."
+
+#: templates/home/sections/hero.html:31 templates/home/sections/hero.html:178
+msgid "No unnecessary treatment"
+msgstr "Жодного зайвого лікування"
+
+#: templates/home/sections/hero.html:31
+msgid "Saving your natural tooth always comes first"
+msgstr "Збереження власного зуба — завжди на першому місці"
+
+#: templates/home/sections/hero.html:32
+msgid "What we quote is what you pay"
+msgstr "Скільки назвали — стільки й платите"
+
+#: templates/home/sections/hero.html:33
+msgid "One dentist, full responsibility"
+msgstr "Один лікар — повна відповідальність"
+
+#: templates/home/sections/hero.html:33
+msgid "The same dentist from consultation to aftercare"
+msgstr "Той самий лікар від консультації до супроводу після лікування"
+
+#: templates/home/sections/hero.html:36
+msgid "Ask your question"
+msgstr "Поставте запитання"
+
+#: templates/home/sections/hero.html:48
+msgid "Minimally invasive — natural results"
+msgstr "Малоінвазивно — природний результат"
+
+#: templates/home/sections/hero.html:50
+msgid "Smile design in Istanbul —"
+msgstr "Дизайн усмішки в Стамбулі —"
+
+#: templates/home/sections/hero.html:50
+msgid "smile like yourself again."
+msgstr "знову усміхайтеся по-своєму."
+
+#: templates/home/sections/hero.html:51
+msgid ""
+"A natural smile that is truly yours, with as little tooth preparation as "
+"possible. Our goal is not only a beautiful result, but a healthy and lasting"
+" one."
+msgstr ""
+"Природна усмішка, яка справді ваша, з мінімальним обточуванням зубів. Наша "
+"мета — не лише гарний, а й здоровий і довговічний результат."
+
+#: templates/home/sections/hero.html:53
+msgid "Ask about smile design"
+msgstr "Запитати про дизайн усмішки"
+
+#: templates/home/sections/hero.html:54
+msgid "Before / after"
+msgstr "До / після"
+
+#: templates/home/sections/hero.html:58
+msgid "Before and after results"
+msgstr "Результати до і після"
+
+#: templates/home/sections/hero.html:60 templates/home/sections/hero.html:63
+msgid "BEFORE"
+msgstr "ДО"
+
+#: templates/home/sections/hero.html:61 templates/home/sections/hero.html:64
+msgid "AFTER"
+msgstr "ПІСЛЯ"
+
+#: templates/home/sections/hero.html:73
+msgid "Limited appointments this month"
+msgstr "Обмежена кількість місць цього місяця"
+
+#: templates/home/sections/hero.html:74
+msgid "A new smile in Istanbul —"
+msgstr "Нова усмішка в Стамбулі —"
+
+#: templates/home/sections/hero.html:74
+msgid "in about a week."
+msgstr "приблизно за тиждень."
+
+#: templates/home/sections/hero.html:75
+msgid ""
+"Wedding, holiday or job interview? Arrive on Monday, fly home smiling on "
+"Friday — for crowns, veneers and many other treatments."
+msgstr ""
+"Весілля, відпустка чи співбесіда? Прилітайте в понеділок, повертайтеся з "
+"усмішкою в п'ятницю — для коронок, вінірів і багатьох інших процедур."
+
+#: templates/home/sections/hero.html:76
+msgid "Treatment timeline"
+msgstr "План лікування за днями"
+
+#: templates/home/sections/hero.html:77
+msgid "Mon"
+msgstr "Пн"
+
+#: templates/home/sections/hero.html:77
+msgid "Arrival & exam"
+msgstr "Приліт і огляд"
+
+#: templates/home/sections/hero.html:79
+msgid "Tue"
+msgstr "Вт"
+
+#: templates/home/sections/hero.html:79
+msgid "Preparation"
+msgstr "Підготовка"
+
+#: templates/home/sections/hero.html:81
+msgid "Wed–Thu"
+msgstr "Ср–Чт"
+
+#: templates/home/sections/hero.html:83
+msgid "Fri"
+msgstr "Пт"
+
+#: templates/home/sections/hero.html:83
+msgid "Final fitting — fly home"
+msgstr "Фінальна фіксація — виліт додому"
+
+#: templates/home/sections/hero.html:95
+#, python-format
+msgid "%(n)s+ patients"
+msgstr "%(n)s+ пацієнтів"
+
+#: templates/home/sections/hero.html:97
+msgid "Dental tourism in Istanbul —"
+msgstr "Стоматологічний туризм у Стамбулі —"
+
+#: templates/home/sections/hero.html:97
+msgid "trusted by thousands."
+msgstr "нам довіряють тисячі пацієнтів."
+
+#: templates/home/sections/hero.html:98
+msgid ""
+"Don't trust us blindly — watch our patients' real stories first. Ask "
+"anything. No pressure, no rush."
+msgstr ""
+"Не вірте нам на слово — спершу подивіться реальні історії наших пацієнтів. "
+"Питайте про все. Без тиску і поспіху."
+
+#: templates/home/sections/hero.html:100
+msgid "See patient reviews"
+msgstr "Переглянути відгуки"
+
+#: templates/home/sections/hero.html:101
+msgid "Ask a question"
+msgstr "Поставити запитання"
+
+#: templates/home/sections/hero.html:103
+msgid "No commitment. Just answers."
+msgstr "Без зобов'язань. Просто відповіді."
+
+#: templates/home/sections/hero.html:120
+msgid "Private clinic"
+msgstr "Приватна клініка"
+
+#: templates/home/sections/hero.html:121
+msgid "Premium dental clinic in Istanbul —"
+msgstr "Преміальна стоматологія в Стамбулі —"
+
+#: templates/home/sections/hero.html:121
+msgid "dentistry as an art."
+msgstr "стоматологія як мистецтво."
+
+#: templates/home/sections/hero.html:122
+msgid ""
+"Decades of experience and aesthetic precision. Only what you need — nothing "
+"more, nothing less."
+msgstr ""
+"Десятиліття досвіду та естетична точність. Лише те, що вам потрібно, — ні "
+"більше, ні менше."
+
+#: templates/home/sections/hero.html:123
+msgid "Request a private appointment"
+msgstr "Записатися на приватний прийом"
+
+#: templates/home/sections/hero.html:130
+msgid "Appointments available this week"
+msgstr "Є вільні дати цього тижня"
+
+#: templates/home/sections/hero.html:134
+msgid "We're ready when you are"
+msgstr "Ми готові, коли готові ви"
+
+#: templates/home/sections/hero.html:136
+msgid "Book your dental treatment in Istanbul —"
+msgstr "Запишіться на лікування зубів у Стамбулі —"
+
+#: templates/home/sections/hero.html:136
+msgid "are you ready?"
+msgstr "ви готові?"
+
+#: templates/home/sections/hero.html:137
+msgid ""
+"Free evaluation, personal treatment plan, fixed price. Reply within 24 "
+"hours."
+msgstr ""
+"Безкоштовна оцінка, персональний план лікування, фіксована ціна. Відповідь "
+"протягом 24 годин."
+
+#: templates/home/sections/hero.html:140
+msgid "Book an appointment"
+msgstr "Записатися на прийом"
+
+#: templates/home/sections/hero.html:152
+msgid "Evidence-based dentistry"
+msgstr "Доказова стоматологія"
+
+#: templates/home/sections/hero.html:154
+msgid "Is dental treatment in Turkey safe?"
+msgstr "Чи безпечне лікування зубів у Туреччині?"
+
+#: templates/home/sections/hero.html:154
+msgid "We answer everything."
+msgstr "Ми відповімо на все."
+
+#: templates/home/sections/hero.html:155
+msgid ""
+"Materials, qualifications, what happens if something goes wrong — you get a "
+"transparent answer to every question."
+msgstr ""
+"Матеріали, кваліфікація, що буде, якщо щось піде не так, — на кожне "
+"запитання ви отримаєте прозору відповідь."
+
+#: templates/home/sections/hero.html:159
+msgid "Ask any question — free"
+msgstr "Поставте будь-яке запитання — безкоштовно"
+
+#: templates/home/sections/hero.html:163
+msgid "What patients actually say"
+msgstr "Що насправді кажуть пацієнти"
+
+#: templates/home/sections/hero.html:174
+msgid "Dental tourism Turkey"
+msgstr "Стоматологічний туризм у Туреччині"
+
+#: templates/home/sections/hero.html:175
+msgid "Dental treatment in Istanbul —"
+msgstr "Лікування зубів у Стамбулі —"
+
+#: templates/home/sections/hero.html:175
+msgid "only what your teeth actually need."
+msgstr "лише те, що справді потрібно вашим зубам."
+
+#: templates/home/sections/hero.html:176
+msgid ""
+"Good medicine means knowing when to say no. Ethical protocol, transparent "
+"diagnosis and one dentist responsible for your care — with direct WhatsApp "
+"contact, not a call centre."
+msgstr ""
+"Добра медицина — це вміння сказати «ні». Етичний протокол, прозора "
+"діагностика і один лікар, відповідальний за ваше лікування, — з прямим "
+"зв'язком у WhatsApp, а не через кол-центр."
+
+#: templates/home/sections/hero.html:179
+msgid "Transparent diagnosis"
+msgstr "Прозора діагностика"
+
+#: templates/home/sections/hero.html:181
+msgid "One dentist — full responsibility"
+msgstr "Один лікар — повна відповідальність"
+
+#: templates/home/sections/how.html:5
+msgid "How it works"
+msgstr "Як це працює"
+
+#: templates/home/sections/how.html:6
+msgid "From the first message to your new smile"
+msgstr "Від першого повідомлення до нової усмішки"
+
+#: templates/home/sections/how.html:8 templates/pseo/_proof.html:21
+msgid "Send a photo or X-ray"
+msgstr "Надішліть фото або знімок"
+
+#: templates/home/sections/how.html:8
+msgid "Message us on WhatsApp. The dentist reviews your case personally."
+msgstr "Напишіть нам у WhatsApp. Лікар особисто вивчить ваш випадок."
+
+#: templates/home/sections/how.html:9
+msgid "Get a plan and fixed price"
+msgstr "Отримайте план і фіксовану ціну"
+
+#: templates/home/sections/how.html:9
+msgid ""
+"You receive an honest treatment plan and a written quote within 24 hours."
+msgstr ""
+"Протягом 24 годин ви отримаєте чесний план лікування та письмовий кошторис."
+
+#: templates/home/sections/how.html:10
+msgid "Travel to Istanbul"
+msgstr "Прилітайте до Стамбула"
+
+#: templates/home/sections/how.html:10
+msgid "We schedule appointments around your flights and help with logistics."
+msgstr "Ми підлаштуємо прийоми під ваші рейси та допоможемо з організацією."
+
+#: templates/home/sections/how.html:11
+msgid "Treatment & aftercare"
+msgstr "Лікування та супровід"
+
+#: templates/home/sections/how.html:11
+msgid ""
+"After you fly home, WhatsApp follow-up continues — you are never alone."
+msgstr ""
+"Після повернення додому супровід у WhatsApp триває — ви ніколи не залишитеся"
+" самі."
+
+#: templates/home/sections/reviews.html:6
+msgid "Patient experiences"
+msgstr "Досвід пацієнтів"
+
+#: templates/home/sections/reviews.html:7
+msgid "Their stories — your inspiration"
+msgstr "Їхні історії — ваше натхнення"
+
+#: templates/home/sections/reviews.html:7
+msgid "Real patients, real results"
+msgstr "Реальні пацієнти, реальні результати"
+
+#: templates/home/sections/reviews.html:10
+msgid "Videos are published with patients' explicit consent."
+msgstr "Відео публікуються з явної згоди пацієнтів."
+
+#: templates/home/sections/reviews.html:10
+msgid "All patient videos"
+msgstr "Усі відео пацієнтів"
+
+#: templates/home/sections/treatments.html:6
+msgid "Best value treatments"
+msgstr "Лікування за найкращою ціною"
+
+#: templates/home/sections/treatments.html:6
+msgid "Signature treatments"
+msgstr "Наші ключові процедури"
+
+#: templates/home/sections/treatments.html:6
+msgid "Natural smile treatments"
+msgstr "Лікування для природної усмішки"
+
+#: templates/home/sections/treatments.html:6
+msgid "What we do"
+msgstr "Що ми робимо"
+
+#: templates/home/sections/treatments.html:7
+msgid "Dental treatments in Istanbul — and why we do them"
+msgstr "Лікування зубів у Стамбулі — і навіщо ми його робимо"
+
+#: templates/home/sections/treatments.html:8
+msgid ""
+"Our ethical protocol means we only recommend what you actually need. No "
+"upselling, no unnecessary procedures."
+msgstr ""
+"Наш етичний протокол означає, що ми рекомендуємо лише те, що вам справді "
+"потрібно. Жодних нав'язаних послуг і зайвих процедур."
+
+#: templates/packages/index.html:7
+msgid "What a personalised dental package includes"
+msgstr "Що входить в індивідуальний стоматологічний пакет"
+
+#: templates/packages/index.html:11
+msgid "Travel made simple"
+msgstr "Проста поїздка"
+
+#: templates/packages/index.html:11
+msgid ""
+"Appointments planned around your flights, help with transfers and a hotel "
+"near the clinic."
+msgstr ""
+"Прийоми під ваші рейси, допомога з трансферами і готель поруч із клінікою."
+
+#: templates/packages/index.html:13
+msgid "Aftercare at home"
+msgstr "Супровід удома"
+
+#: templates/packages/index.html:13
+msgid "Follow-up on WhatsApp and video call when you are back home."
+msgstr "Зв’язок у WhatsApp і по відео після повернення додому."
+
+#: templates/packages/index.html:14
+msgid "Open 7 days a week"
+msgstr "Відкрито 7 днів на тиждень"
+
+#: templates/packages/index.html:14
+msgid "Weekend appointments make short dental trips possible."
+msgstr "Прийоми у вихідні роблять можливими короткі поїздки."
+
+#: templates/packages/index.html:24
+msgid "Dental holiday packages from your country"
+msgstr "Стоматологічні тури з вашої країни"
+
+#: templates/packages/index.html:26
+msgid ""
+"Turkey vs Mexico, Thailand, Vietnam, Bali, Hungary — compare dental tourism "
+"destinations"
+msgstr ""
+"Туреччина, Мексика, Таїланд, В’єтнам, Балі, Угорщина — порівняння напрямків "
+"стоматологічного туризму"
+
+#: templates/packages/origin.html:8
+#, python-format
+msgid "Dental treatment in Istanbul from %(country)s: how it works"
+msgstr "Лікування зубів у Стамбулі (%(country)s): як це працює"
+
+#: templates/packages/origin.html:10
+msgid "Send photos or an X-ray on WhatsApp"
+msgstr "Надішліть фото або знімок у WhatsApp"
+
+#: templates/packages/origin.html:11
+msgid "Receive a personal plan and a fixed written quote"
+msgstr "Отримайте особистий план і письмову фіксовану ціну"
+
+#: templates/packages/origin.html:12
+msgid "Book flights — we plan appointments around them"
+msgstr "Купіть квитки — ми підлаштуємо прийоми"
+
+#: templates/packages/origin.html:13
+msgid "Examination and 3D scan on day one, then treatment"
+msgstr "Огляд і 3D-знімок у перший день, потім лікування"
+
+#: templates/packages/origin.html:14
+msgid "Aftercare on WhatsApp when you are home"
+msgstr "Супровід у WhatsApp удома"
+
+#: templates/packages/origin.html:16
+msgid "Departure cities"
+msgstr "Міста вильоту"
+
+#: templates/packages/origin.html:17
+#, python-format
+msgid "Patients from %(c)s usually fly from %(list)s to Istanbul."
+msgstr "Пацієнти (%(c)s) зазвичай летять до Стамбула з: %(list)s."
+
+#: templates/packages/origin.html:18
+msgid ""
+"For long-haul patients we plan treatment so that the number of trips stays "
+"as small as possible, and we take enough time on the first visit."
+msgstr ""
+"Для пацієнтів здалеку ми плануємо лікування з мінімальною кількістю поїздок "
+"і приділяємо достатньо часу першому візиту."
+
+#: templates/packages/origin.html:20
+msgid ""
+"Many dental holiday packages sell the same set of veneers to everyone. We "
+"start with a diagnosis, save healthy teeth first, and recommend only the "
+"treatment you really need."
+msgstr ""
+"Багато стоматологічних турів продають усім однакові вініри. Ми починаємо з "
+"діагностики, зберігаємо здорові зуби і рекомендуємо лише справді потрібне "
+"лікування."
+
+#: templates/packages/origin.html:24 templates/treatments/detail.html:36
+msgid "At a glance"
+msgstr "Коротко"
+
+#: templates/packages/origin.html:25
+msgid "Flight time"
+msgstr "Час перельоту"
+
+#: templates/packages/origin.html:27
+msgid "Open"
+msgstr "Відкрито"
+
+#: templates/packages/origin.html:27
+msgid "7 days a week"
+msgstr "7 днів на тиждень"
+
+#: templates/packages/origin.html:40
+#, python-format
+msgid "Patients from %(c)s"
+msgstr "Пацієнти: %(c)s"
+
+#: templates/packages/treatment.html:10
+#, python-format
+msgid "Your %(name)s package, planned around you"
+msgstr "Ваш пакет (%(name)s), спланований під вас"
+
+#: templates/packages/treatment.html:12
+msgid "Examination, X-ray and 3D scan by the dentist"
+msgstr "Огляд, знімок і 3D-сканування лікарем"
+
+#: templates/packages/treatment.html:13
+msgid "A written treatment plan with the brands of all materials"
+msgstr "Письмовий план лікування з марками всіх матеріалів"
+
+#: templates/packages/treatment.html:14
+msgid "Appointments planned around your flights"
+msgstr "Прийоми під ваші рейси"
+
+#: templates/packages/treatment.html:15
+msgid "Help with airport transfer and a hotel near the clinic"
+msgstr "Допомога з трансфером з аеропорту і готель поруч із клінікою"
+
+#: templates/packages/treatment.html:16
+msgid "Aftercare on WhatsApp when you are back home"
+msgstr "Супровід у WhatsApp після повернення додому"
+
+#: templates/packages/treatment.html:18
+#, python-format
+msgid "Typical stay in Istanbul: %(d)s days."
+msgstr "Зазвичай у Стамбулі: %(d)s дн."
+
+#: templates/packages/treatment.html:20
+#, python-format
+msgid "How to choose the best %(name)s clinic in Istanbul"
+msgstr "Як обрати найкращу клініку в Стамбулі: %(name)s"
+
+#: templates/packages/treatment.html:21
+#, python-format
+msgid ""
+"The best clinic for %(name)s in Istanbul and Turkey is not the one with the "
+"cheapest offer or the biggest advertising — it is the one where an "
+"experienced dentist examines you, explains the alternatives and recommends "
+"%(name)s only if you really need it."
+msgstr ""
+"Найкраща клініка (%(name)s) у Стамбулі й Туреччині — не та, що має "
+"найдешевшу пропозицію чи найбільше реклами, а та, де досвідчений лікар вас "
+"оглядає, пояснює альтернативи і рекомендує %(name)s, лише якщо це справді "
+"потрібно."
+
+#: templates/packages/treatment.html:23
+msgid "Ask who will treat you, and for the dentist's qualifications"
+msgstr "Запитайте, хто вас лікуватиме, і про кваліфікацію лікаря"
+
+#: templates/packages/treatment.html:24
+msgid "Ask for the brand and origin of every material"
+msgstr "Запитайте марку і походження кожного матеріалу"
+
+#: templates/packages/treatment.html:25
+msgid "Read reviews on Google and Trustpilot — and how the clinic replies"
+msgstr "Читайте відгуки в Google і Trustpilot — і як клініка відповідає"
+
+#: templates/packages/treatment.html:26
+msgid "Never accept a plan before anyone has examined your teeth"
+msgstr "Ніколи не погоджуйтеся на план до огляду ваших зубів"
+
+#: templates/packages/treatment.html:30 templates/seo/treatment_price.html:23
+#, python-format
+msgid "Everything about %(name)s"
+msgstr "Усе про процедуру: %(name)s"
+
+#: templates/packages/treatment.html:30
+#, python-format
+msgid "%(name)s cost in Turkey"
+msgstr "%(name)s у Туреччині: ціна"
+
+#: templates/packages/treatment.html:45 templates/seo/treatment_city.html:29
+#: templates/treatments/detail.html:54
+msgid "What patients say"
+msgstr "Відгуки пацієнтів"
+
+#: templates/packages/treatment.html:46 templates/seo/treatment_city.html:31
+#: templates/seo/treatment_price.html:36 templates/treatments/detail.html:65
+msgid "Related treatments"
+msgstr "Схожі процедури"
+
+#: templates/privacy.html:8
+#, python-format
+msgid ""
+"This website is operated by %(name)s. We process the personal data you send "
+"us (name, phone number, email, message and any images) only to answer your "
+"request and to plan your treatment."
+msgstr ""
+"Цей сайт керується %(name)s. Ми обробляємо персональні дані, які ви нам "
+"надсилаєте (ім'я, телефон, ел. пошта, повідомлення та зображення), виключно "
+"для відповіді на ваш запит і планування лікування."
+
+#: templates/privacy.html:9
+msgid "Which data we collect"
+msgstr "Які дані ми збираємо"
+
+#: templates/privacy.html:10
+msgid ""
+"Contact form and WhatsApp messages; technical data about your visit (pages "
+"viewed, device type, approximate country) to improve the website; and, only "
+"with your consent, advertising cookies (Google, Meta)."
+msgstr ""
+"Форма зв'язку та повідомлення WhatsApp; технічні дані про візит (переглянуті"
+" сторінки, тип пристрою, приблизна країна) для покращення сайту; і лише з "
+"вашої згоди — рекламні cookie (Google, Meta)."
+
+#: templates/privacy.html:11
+msgid "Your rights"
+msgstr "Ваші права"
+
+#: templates/privacy.html:12
+msgid ""
+"Under GDPR and the Turkish KVKK you can request access to, correction or "
+"deletion of your data at any time by contacting us."
+msgstr ""
+"Відповідно до GDPR і турецького закону KVKK ви можете будь-коли запросити "
+"доступ до своїх даних, їх виправлення або видалення, зв'язавшись із нами."
+
+#: templates/pseo/_hero.html:16
+msgid "Real photo from our clinic in Şişli, Istanbul"
+msgstr "Справжнє фото нашої клініки в Шишлі, Стамбул"
+
+#: templates/pseo/_links.html:3
+msgid "Learn more about us"
+msgstr "Детальніше про нас"
+
+#: templates/pseo/_links.html:4
+msgid "Transparent by design — check us yourself"
+msgstr "Прозорість — наш принцип. Перевірте самі"
+
+#: templates/pseo/_photos.html:4
+msgid "Real results from our clinic"
+msgstr "Реальні результати нашої клініки"
+
+#: templates/pseo/_photos.html:5
+msgid "Published with patient consent. No stock photos, no filters."
+msgstr "Опубліковано за згодою пацієнтів. Без стокових фото і фільтрів."
+
+#: templates/pseo/_photos.html:7
+msgid "Before treatment"
+msgstr "До лікування"
+
+#: templates/pseo/_photos.html:7
+msgid "After treatment"
+msgstr "Після лікування"
+
+#: templates/pseo/_photos.html:15
+msgid "Inside our clinic"
+msgstr "У нашій клініці"
+
+#: templates/pseo/_price_note.html:4
+msgid ""
+"Our prices are very affordable — but we never publish one-size-fits-all "
+"prices, because no two mouths are the same. After the dentist has seen your "
+"photos or X-ray, you receive a fixed written quote. What we agree is what "
+"you pay."
+msgstr ""
+"Наші ціни дуже доступні — але ми ніколи не публікуємо однакових цін, адже "
+"двох однакових ротів не буває. Після того як лікар побачить фото або знімок,"
+" ви отримаєте письмову фіксовану ціну. Скільки домовилися — стільки й "
+"платите."
+
+#: templates/pseo/_price_note.html:6 templates/seo/treatment_price.html:28
+msgid "Ask for my price on WhatsApp"
+msgstr "Дізнатися ціну у WhatsApp"
+
+#: templates/pseo/_proof.html:7
+msgid "Who will treat you"
+msgstr "Хто вас лікуватиме"
+
+#: templates/pseo/_proof.html:10
+msgid "Graduate of Ankara University Faculty of Dentistry"
+msgstr "Випускник стоматологічного факультету Університету Анкари"
+
+#: templates/pseo/_proof.html:11
+msgid ""
+"Oral and maxillofacial radiology, Marmara University — precise 3D diagnosis"
+msgstr ""
+"Щелепно-лицева рентгенологія, Університет Мармара — точна 3D-діагностика"
+
+#: templates/pseo/_proof.html:12
+msgid "Examines and treats every patient personally"
+msgstr "Особисто оглядає і лікує кожного пацієнта"
+
+#: templates/pseo/_proof.html:19
+msgid "Three simple steps"
+msgstr "Три прості кроки"
+
+#: templates/pseo/_proof.html:21
+msgid "on WhatsApp, it takes one minute."
+msgstr "у WhatsApp, це займе хвилину."
+
+#: templates/pseo/_proof.html:22
+msgid "Receive your personal plan"
+msgstr "Отримайте особистий план"
+
+#: templates/pseo/_proof.html:22
+msgid "with a fixed written quote, no obligation."
+msgstr "з письмовою фіксованою ціною, без зобов’язань."
+
+#: templates/pseo/_proof.html:23
+msgid "Come to Istanbul"
+msgstr "Приїжджайте до Стамбула"
+
+#: templates/pseo/_proof.html:23
+msgid "we plan the appointments around your flights."
+msgstr "ми сплануємо прийоми під ваші рейси."
+
+#: templates/pseo/_proof.html:25
+msgid ""
+"Healthy enamel never grows back. Before anyone grinds your teeth for a "
+"template smile, get a second opinion from a dentist who saves teeth first."
+msgstr ""
+"Здорова емаль не відростає. Перш ніж хтось сточить ваші зуби заради "
+"шаблонної усмішки, отримайте другу думку в лікаря, який спершу зберігає "
+"зуби."
+
+#: templates/pseo/_proof.html:28
+msgid "What our patients say"
+msgstr "Що кажуть наші пацієнти"
+
+#: templates/pseo/_related.html:4
+msgid "More guides"
+msgstr "Інші гіди"
+
+#: templates/seo/price_index.html:7
+msgid "What determines the price of your treatment"
+msgstr "Від чого залежить ціна лікування"
+
+#: templates/seo/price_index.html:9
+msgid "Your diagnosis"
+msgstr "Ваша діагностика"
+
+#: templates/seo/price_index.html:9
+msgid "How many teeth, bone volume, gum health — every mouth is different."
+msgstr ""
+"Скільки зубів, об’єм кістки, здоров’я ясен — кожен випадок індивідуальний."
+
+#: templates/seo/price_index.html:10
+msgid "Materials"
+msgstr "Матеріали"
+
+#: templates/seo/price_index.html:10
+msgid "Implant system, zirconia or E.max — we name every brand in your plan."
+msgstr ""
+"Система імплантів, цирконій або E.max — ми називаємо кожну марку в плані."
+
+#: templates/seo/price_index.html:11
+msgid "Number of visits"
+msgstr "Кількість візитів"
+
+#: templates/seo/price_index.html:11
+msgid "Some treatments need one trip, implants usually two."
+msgstr ""
+"Деяким процедурам вистачає однієї поїздки, імпланти зазвичай потребують "
+"двох."
+
+#: templates/seo/price_index.html:13
+msgid ""
+"The cheapest offer is often the most expensive one: unnecessary crowns, "
+"ground-down healthy teeth and repairs at home. Quality and affordability can"
+" go together."
+msgstr ""
+"Найдешевша пропозиція часто виявляється найдорожчою: зайві коронки, сточені "
+"здорові зуби і переробки вдома. Якість і доступність сумісні."
+
+#: templates/seo/price_index.html:16
+msgid "Ask about the cost of a specific treatment"
+msgstr "Дізнатися вартість конкретної процедури"
+
+#: templates/seo/price_index.html:17
+#, python-format
+msgid "%(name)s cost"
+msgstr "%(name)s: ціна"
+
+#: templates/seo/treatment_city.html:11
+#, python-format
+msgid "%(n)s clinic"
+msgid_plural "%(n)s clinics"
+msgstr[0] "%(n)s клініка"
+msgstr[1] "%(n)s клініки"
+msgstr[2] "%(n)s клінік"
+
+#: templates/seo/treatment_city.html:14 templates/treatments/detail.html:15
+msgid "Free assessment on WhatsApp"
+msgstr "Безкоштовна оцінка у WhatsApp"
+
+#: templates/seo/treatment_city.html:20
+#, python-format
+msgid "Clinics for %(t)s in %(c)s"
+msgstr "Клініки: %(t)s, %(c)s"
+
+#: templates/seo/treatment_city.html:22
+msgid "No clinic offers this treatment in this city yet."
+msgstr "У цьому місті поки немає клінік, що пропонують це лікування."
+
+#: templates/seo/treatment_price.html:8
+#, python-format
+msgid "What affects the price of %(name)s"
+msgstr "Від чого залежить ціна: %(name)s"
+
+#: templates/seo/treatment_price.html:10
+msgid "Your diagnosis: how many teeth and their condition"
+msgstr "Ваша діагностика: скільки зубів і в якому стані"
+
+#: templates/seo/treatment_price.html:11
+msgid "The brand and type of materials"
+msgstr "Марка і тип матеріалів"
+
+#: templates/seo/treatment_price.html:12
+msgid "Whether preparatory treatment is needed"
+msgstr "Чи потрібне підготовче лікування"
+
+#: templates/seo/treatment_price.html:13
+msgid "The number of visits to Istanbul"
+msgstr "Кількість візитів до Стамбула"
+
+#: templates/seo/treatment_price.html:15
+msgid "Included in your quote"
+msgstr "Входить у вартість"
+
+#: templates/seo/treatment_price.html:17
+msgid "Examination, X-ray and 3D scan"
+msgstr "Огляд, знімок і 3D-сканування"
+
+#: templates/seo/treatment_price.html:18
+msgid "Treatment by the dentist personally"
+msgstr "Лікування особисто лікарем"
+
+#: templates/seo/treatment_price.html:19
+msgid "Written guarantee information"
+msgstr "Письмова інформація про гарантію"
+
+#: templates/seo/treatment_price.html:20
+msgid "Aftercare on WhatsApp"
+msgstr "Супровід у WhatsApp"
+
+#: templates/seo/treatment_price.html:22
+msgid ""
+"Dental work is more than a Hollywood smile. We recommend only what you "
+"really need — that is also the most affordable plan."
+msgstr ""
+"Стоматологія — це більше, ніж голлівудська усмішка. Ми рекомендуємо лише те,"
+" що вам справді потрібно, — це і найдоступніший план."
+
+#: templates/thanks.html:6
+msgid "Thank you — your request has been received"
+msgstr "Дякуємо — ваш запит отримано"
+
+#: templates/thanks.html:7
+msgid ""
+"The dentist will contact you within 24 hours. For a faster answer, you can "
+"also send us a message on WhatsApp now."
+msgstr ""
+"Лікар зв'яжеться з вами протягом 24 годин. Для швидшої відповіді можете "
+"написати нам у WhatsApp просто зараз."
+
+#: templates/thanks.html:10
+msgid "Read our patient guides"
+msgstr "Читати наші гіди для пацієнтів"
+
+#: templates/treatments/detail.html:7
+#, python-format
+msgid "%(name)s in Istanbul"
+msgstr "%(name)s у Стамбулі"
+
+#: templates/treatments/detail.html:11
+#, python-format
+msgid "%(n)s visit"
+msgid_plural "%(n)s visits"
+msgstr[0] "%(n)s поїздка"
+msgstr[1] "%(n)s поїздки"
+msgstr[2] "%(n)s поїздок"
+
+#: templates/treatments/detail.html:29
+#, python-format
+msgid "%(name)s by city"
+msgstr "%(name)s за містами"
+
+#: templates/treatments/detail.html:38
+msgid "Stay in Istanbul"
+msgstr "Перебування в Стамбулі"
+
+#: templates/treatments/detail.html:39
+msgid "Visits"
+msgstr "Поїздки"
+
+#: templates/treatments/detail.html:40
+msgid "Anaesthesia"
+msgstr "Анестезія"
+
+#: templates/treatments/detail.html:40
+msgid "Local"
+msgstr "Місцева"
+
+#: templates/treatments/detail.html:45
+msgid "Clinics offering this treatment"
+msgstr "Клініки, що пропонують це лікування"
+
+#: templates/treatments/detail.html:58
+msgid "Guides about this treatment"
+msgstr "Гіди щодо цієї процедури"
+
+#: templates/treatments/list.html:7
+msgid "Dental treatments in Istanbul"
+msgstr "Лікування зубів у Стамбулі"
+
+#: templates/treatments/list.html:8
+msgid ""
+"Every treatment we offer, with honest information about the procedure, how "
+"long you need to stay in Istanbul and what it costs."
+msgstr ""
+"Усі види лікування, які ми пропонуємо, — з чесною інформацією про процедуру,"
+" термін перебування в Стамбулі та вартість."

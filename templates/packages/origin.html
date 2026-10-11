@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+{% include "pseo/_hero.html" %}
+
+<section class="section"><div class="wrap layout-side">
+  <article class="prose">
+    <h2>{% blocktrans with c=country %}Dental treatment in Istanbul from {{ country }}: how it works{% endblocktrans %}</h2>
+    <ol>
+      <li>{% trans "Send photos or an X-ray on WhatsApp" %}</li>
+      <li>{% trans "Receive a personal plan and a fixed written quote" %}</li>
+      <li>{% trans "Book flights — we plan appointments around them" %}</li>
+      <li>{% trans "Examination and 3D scan on day one, then treatment" %}</li>
+      <li>{% trans "Aftercare on WhatsApp when you are home" %}</li>
+    </ol>
+    {% if cities %}<h2>{% trans "Departure cities" %}</h2>
+    <p>{% blocktrans with list=cities|join:", " c=country %}Patients from {{ c }} usually fly from {{ list }} to Istanbul.{% endblocktrans %}</p>{% endif %}
+    {% if info.long_haul %}<p>{% trans "For long-haul patients we plan treatment so that the number of trips stays as small as possible, and we take enough time on the first visit." %}</p>{% endif %}
+    <h2>{% trans "Dental work is more than a Hollywood smile" %}</h2>
+    <p>{% trans "Many dental holiday packages sell the same set of veneers to everyone. We start with a diagnosis, save healthy teeth first, and recommend only the treatment you really need." %}</p>
+    {% include "pseo/_price_note.html" %}
+  </article>
+  <aside class="sticky-side">
+    <div class="side-cta"><h2>{% trans "At a glance" %}</h2><ul class="facts">
+      <li><span>{% trans "Flight time" %}</span><strong>~{{ info.hours }} h</strong></li>
+      <li><span>{% trans "Clinic" %}</span><strong>Şişli, {{ lang_meta.istanbul }}</strong></li>
+      <li><span>{% trans "Open" %}</span><strong>{% trans "7 days a week" %}</strong></li>
+    </ul>
+    {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my personal plan" %}</a>{% endif %}</div>
+  </aside>
+</div></section>
+
+<section class="section section-alt"><div class="wrap">
+  <h2>{% trans "Dental packages by treatment" %}</h2>
+  <div class="grid grid-4">{% for c in cards %}<a class="card" href="{{ c.url }}"><h3>{{ c.t.icon }} {% blocktrans with name=c.t.name %}{{ name }} package{% endblocktrans %}</h3></a>{% endfor %}</div>
+</div></section>
+{% include "pseo/_proof.html" %}
+{% include "pseo/_photos.html" %}
+{% include "components/faq.html" with faq=faq %}
+{% if reviews %}<section class="section"><div class="wrap"><h2>{% blocktrans with c=country %}Patients from {{ c }}{% endblocktrans %}</h2>{% include "components/reviews.html" %}</div></section>{% endif %}
+{% if origins|length > 1 %}<section class="section"><div class="wrap"><div class="chips">{% for o in origins %}<a class="chip" href="{{ o.url }}">{{ o.code|flag }} {{ o.name }}</a>{% endfor %}</div></div></section>{% endif %}
+{% include "pseo/_links.html" %}
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

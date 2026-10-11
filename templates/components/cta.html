@@ -1,0 +1,24 @@
+{% load i18n %}
+<div class="cta-box" data-track-section="contact">
+  {% if persona.persona == "price" %}
+    <h2>{% trans "Get your exact price in 24 hours" %}</h2>
+    <p>{% trans "Send a photo or X-ray on WhatsApp. You receive a written treatment plan and a fixed price — no obligation." %}</p>
+  {% elif persona.persona == "fear" or persona.persona == "skeptic" %}
+    <h2>{% trans "Ask the dentist anything — before you decide" %}</h2>
+    <p>{% trans "Materials, guarantees, what happens if something goes wrong: you get honest answers directly from the dentist, not a call centre." %}</p>
+  {% elif persona.persona == "premium" %}
+    <h2>{% trans "Request a private consultation" %}</h2>
+    <p>{% trans "A personal treatment plan, discreet scheduling and one dentist responsible for your care from start to finish." %}</p>
+  {% elif persona.persona == "urgency" or persona.persona == "ready" %}
+    <h2>{% trans "Check this week's availability" %}</h2>
+    <p>{% trans "Tell us your travel dates and we will plan your appointments around them." %}</p>
+  {% else %}
+    <h2>{% trans "Free assessment — no obligation" %}</h2>
+    <p>{% trans "Send us a photo or X-ray. Our dentist will reply with an honest treatment plan and a fixed price." %}</p>
+  {% endif %}
+  <div class="btn-row">
+    {% if wa_url %}<a href="{{ wa_url }}" class="btn btn-lg" style="background:#fff;color:#065f46" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=18 %} WhatsApp</a>{% endif %}
+    {% if clinic.phone %}<a href="tel:{{ clinic.phone|cut:' ' }}" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.5)" data-track="phone">📞 {% trans "Call us" %}</a>{% endif %}
+    <a href="{% url 'core:contact' %}" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.5)" data-track="cta">{% trans "Contact form" %}</a>
+  </div>
+</div>

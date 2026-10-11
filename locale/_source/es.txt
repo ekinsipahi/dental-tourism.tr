@@ -1,0 +1,589 @@
+0|Blog de turismo dental — guías, costes y consejos para pacientes
+1|Guías honestas sobre tratamientos dentales en Turquía: precios de implantes y carillas, seguridad, recuperación y cómo elegir dentista en Estambul.
+2|Inicio
+3|Blog
+4|%(category)s — Blog de turismo dental
+5|Clínicas dentales en Estambul para pacientes internacionales
+6|Clínicas dentales verificadas en Turquía: experiencia de los dentistas, idiomas, precios y opiniones de pacientes. Consulta gratuita.
+7|Clínicas
+8|%(clinic)s — clínica dental en %(city)s
+9|%(doctor)s — dentista en %(city)s
+10|Tengo algunas preguntas sobre la seguridad y el proceso del tratamiento.
+11|Me gustaría recibir un presupuesto.
+12|Me gustaría consultar las citas disponibles esta semana.
+13|Me gustaría información sobre el diseño de sonrisa.
+14|Me gustaría solicitar una cita privada.
+15|Me gustaría reservar una cita.
+16|Me gustaría información sobre materiales y certificados.
+17|Me gustaría saber más.
+18|Hola, me gustaría una consulta gratuita.
+19|Nombre completo
+20|Tu nombre y apellidos
+21|Teléfono / WhatsApp
+22|Correo electrónico
+23|Tratamiento de interés
+24|Aún no lo sé
+25|Mensaje
+26|Cuéntanos brevemente tu situación dental…
+27|Acepto que mis datos se traten para responder a mi solicitud (RGPD / KVKK).
+28|Introduce un número de teléfono válido con el prefijo del país.
+29|por diente
+30|por implante
+31|por corona
+32|por arcada
+33|por arcada
+34|por sesión
+35|por sonrisa
+36|sobre-nosotros/
+37|contacto/
+38|contacto/gracias/
+39|privacidad/
+40|¿Es seguro hacerse un tratamiento dental en Turquía?
+41|Sí, si eliges una clínica autorizada con dentistas experimentados y materiales certificados. Antes de viajar, pide las credenciales del dentista, las marcas de implantes y coronas y un plan de tratamiento por escrito.
+42|¿Cuánto puedo ahorrar en un tratamiento dental en Estambul?
+43|Los pacientes suelen pagar entre un 50 y un 70% menos que en Europa occidental por el mismo tratamiento y materiales. Recibes un presupuesto fijo por escrito antes de empezar.
+44|¿Cuánto tiempo debo quedarme en Estambul?
+45|Depende del tratamiento: empastes, limpieza y carillas de composite llevan 1–3 días, coronas y carillas de porcelana unos 5–7 días, y los implantes normalmente dos viajes con unos meses de diferencia.
+46|¿Habláis mi idioma?
+47|Nos comunicamos con pacientes internacionales en inglés y otros idiomas, y puedes escribir directamente al dentista por WhatsApp antes, durante y después del tratamiento.
+48|¿Qué experiencia tiene el dentista?
+49|Nuestra dentista principal tiene %(years)s años de experiencia clínica.
+50|Dentista en Estambul — implantes, carillas y coronas en Turquía
+51|Tratamiento dental ético en Estambul con una dentista con experiencia. Implantes, carillas y coronas de zirconio un 50–70% más baratos que en Europa. Precio fijo. Consulta gratis por WhatsApp.
+52|Sobre nosotros — odontología ética en Estambul
+53|Conoce a la dentista y la clínica detrás de dentaltourism.tr: décadas de experiencia, diagnóstico transparente y solo el tratamiento que realmente necesitas.
+54|Sobre nosotros
+55|Revisa el formulario e inténtalo de nuevo.
+56|Consulta gratuita — contacta con nuestra dentista en Estambul
+57|Envía tu radiografía o fotos y recibe gratis un plan de tratamiento y un presupuesto fijo. Respuesta en 24 horas. WhatsApp, teléfono o formulario.
+58|Gracias — te contactaremos en breve
+59|Política de privacidad
+60|Cómo tratamos y protegemos tus datos personales (RGPD / KVKK).
+61|Página no encontrada
+62|%(treatment)s en %(city)s
+63|%(treatment)s %(city)s — precios desde %(price)s €
+64|Compara %(treatment)s en %(city)s: precios de clínicas, duración de la estancia, experiencia de los dentistas y opiniones. Consulta gratuita por WhatsApp.
+65|Tratamientos
+66|Precios dentales Turquía vs %(country)s — lista de precios 2026
+67|Compara los precios de tratamientos dentales en Estambul con %(country)s: implantes, carillas, coronas, All-on-4. Precios fijos en EUR, sin costes ocultos.
+68|Precios
+69|Precio de %(treatment)s en Turquía vs %(country)s
+70|%(treatment)s precio Turquía vs %(country)s (2026)
+71|¿Cuánto cuestan %(treatment)s en Estambul comparado con %(country)s? Precios reales de clínicas desde %(price)s €, qué incluye y cuánto ahorras.
+72|Tratamientos dentales en Estambul — precios e información
+73|Todos los tratamientos dentales para pacientes internacionales en Estambul: implantes, carillas, coronas, All-on-4, endodoncia y más. Precios y estancias transparentes.
+74|%(treatment)s en Estambul — precio y procedimiento
+75|tratamientos/
+76|precios/
+77|clinicas/
+78|dentistas/
+79|La página que buscas no existe o se ha movido.
+80|Nuestra historia
+81|Odontología ética en Estambul — solo lo que necesitas
+82|Creemos que la habilidad más importante en odontología es saber cuándo no tratar. Cada plan empieza por conservar tus dientes naturales, con un diagnóstico transparente y un precio fijo por escrito.
+83|Tu dentista
+84|Administración del sitio Django
+85|Saltar al contenido
+86|Sugerencia de idioma
+87|Cerrar
+88|El mismo tratamiento, un 50–70%% más barato que en %(country)s.
+89|Ver la lista de precios
+90|¿Poco tiempo? Muchos tratamientos se completan en una semana en Estambul.
+91|Escríbenos por WhatsApp
+92|%(n)s min de lectura
+93|Paginación
+94|Anterior
+95|Siguiente
+96|Categoría
+97|Categorías
+98|Todos
+99|Todavía no hay artículos en esta categoría.
+100|Actualizado
+101|Revisado médicamente por
+102|Contenido
+103|En este artículo
+104|Precios y detalles
+105|También te puede interesar
+106|Centro de información para pacientes
+107|Infórmate antes de decidir
+108|Guías honestas sobre tratamientos dentales, costes y qué esperar del turismo dental en Estambul.
+109|Pronto habrá nuevos artículos.
+110|Esta página aún no está disponible en tu idioma — se muestra la versión original.
+111|Años de experiencia
+112|Pacientes tratados
+113|Valoración en Google
+114|Idiomas
+115|Tratamientos y precios
+116|Tratamiento
+117|Desde
+118|Estancia
+119|%(d)s días
+120|Dentistas
+121|Contacto y ubicación
+122|Mapa
+123|Antes y después
+124|Antes
+125|Después
+126|Opiniones de pacientes
+127|Formación
+128|Universidad
+129|Graduada
+130|Pregunta a la dentista
+131|Clínicas dentales en Estambul para pacientes internacionales
+132|Cada clínica se revisa antes de publicarse: licencia, formación de los dentistas y opiniones reales de pacientes.
+133|Verificada
+134|Todavía no hay clínicas publicadas.
+135|Ruta de navegación
+136|Usamos cookies para medir nuestra publicidad y mejorar el sitio. Puedes aceptar o rechazar las cookies de análisis.
+137|Política de privacidad
+138|Aceptar
+139|Rechazar
+140|Enviar — te responderemos
+141|Tus datos están protegidos según el RGPD / KVKK y solo se usan para responder a tu solicitud.
+142|Tu precio exacto en 24 horas
+143|Envía una foto o radiografía por WhatsApp. Recibirás un plan de tratamiento por escrito y un precio fijo, sin compromiso.
+144|Pregunta todo a la dentista — antes de decidir
+145|Materiales, garantías, qué pasa si algo sale mal: respuestas honestas directamente de la dentista, no de un call center.
+146|Solicita una consulta privada
+147|Un plan de tratamiento personal, citas discretas y un único dentista responsable de tu atención de principio a fin.
+148|Consulta la disponibilidad de esta semana
+149|Dinos tus fechas de viaje y organizaremos tus citas en torno a ellas.
+150|Valoración gratuita — sin compromiso
+151|Envíanos una foto o radiografía. Nuestra dentista te responderá con un plan de tratamiento honesto y un precio fijo.
+152|Formulario de contacto
+153|Preguntas frecuentes
+154|Tratamiento dental ético en Estambul para pacientes internacionales — diagnóstico transparente, precios fijos y contacto directo con tu dentista.
+155|Información
+156|Lista de precios
+157|Contacto
+158|Navegación principal
+159|Sobre nosotros
+160|Cambiar idioma
+161|Presupuesto gratis
+162|Reservar ahora
+163|Consulta privada
+164|Consulta gratuita
+165|Menú
+166|desde
+167|Precio a consultar
+168|Detalles
+169|%(name)s — opinión en vídeo de paciente
+170|Recibe tu plan de tratamiento gratuito
+171|Envíanos tus datos y, si la tienes, una foto o radiografía por WhatsApp. La dentista responde personalmente en 24 horas.
+172|Respuesta más rápida — normalmente en menos de 30 minutos en horario de clínica.
+173|Clínica
+174|¿Por qué es gratis?
+175|Sin compromiso
+176|Plan de tratamiento y precio fijo
+177|Respuesta en 24 horas
+178|Un 50–70%% más barato que en %(country)s
+179|Turismo dental Turquía — Estambul
+180|Implantes dentales asequibles en Estambul —
+181|la misma calidad.
+182|Una fracción del precio en tu país. Materiales con certificación CE, técnica idéntica. Sin costes ocultos: el precio que te damos es el que pagas.
+183|implante
+184|Estambul
+185|Tu ahorro
+186|Presupuesto gratis
+187|%(years)s+ años — protocolo ético
+188|Protocolo ético
+189|Tratamiento dental seguro en Estambul —
+190|y lo notarás.
+191|Lo más valioso que nos ha enseñado la experiencia: la buena medicina consiste en saber decir que no. Sin intervenciones innecesarias. Diagnóstico transparente. Precio fijo.
+192|Sin tratamientos innecesarios
+193|Conservar tu diente natural siempre es lo primero
+194|Presupuesto fijo por escrito
+195|Lo que presupuestamos es lo que pagas
+196|Un solo dentista, plena responsabilidad
+197|El mismo dentista desde la consulta hasta el seguimiento
+198|Haz tu pregunta
+199|Mínimamente invasivo — resultados naturales
+200|Diseño de sonrisa en Estambul —
+201|vuelve a sonreír como tú.
+202|Una sonrisa natural que de verdad es tuya, con el mínimo tallado posible. Nuestro objetivo no es solo un resultado bonito, sino sano y duradero.
+203|Pregunta por el diseño de sonrisa
+204|Antes / después
+205|Resultados antes y después
+206|ANTES
+207|DESPUÉS
+208|Citas limitadas este mes
+209|Una nueva sonrisa en Estambul —
+210|en una semana aproximadamente.
+211|¿Boda, vacaciones o entrevista de trabajo? Llega el lunes y vuelve sonriendo el viernes — en coronas, carillas y muchos otros tratamientos.
+212|Calendario del tratamiento
+213|Lun
+214|Llegada y revisión
+215|Mar
+216|Preparación
+217|Mié–Jue
+218|Vie
+219|Colocación final — vuelo de regreso
+220|%(n)s+ pacientes
+221|Turismo dental en Estambul —
+222|miles de pacientes confían en nosotros.
+223|No confíes en nosotros a ciegas — mira primero las historias reales de nuestros pacientes. Pregunta lo que quieras. Sin presión, sin prisas.
+224|Ver opiniones de pacientes
+225|Hacer una pregunta
+226|Sin compromiso. Solo respuestas.
+227|Clínica privada
+228|Clínica dental premium en Estambul —
+229|la odontología como arte.
+230|Décadas de experiencia y precisión estética. Solo lo que necesitas, ni más ni menos.
+231|Solicitar una cita privada
+232|Citas disponibles esta semana
+233|Estamos listos cuando tú lo estés
+234|Reserva tu tratamiento dental en Estambul —
+235|¿estás listo?
+236|Valoración gratuita, plan de tratamiento personal, precio fijo. Respuesta en 24 horas.
+237|Reservar una cita
+238|Odontología basada en la evidencia
+239|¿Es seguro el tratamiento dental en Turquía?
+240|Respondemos a todo.
+241|Materiales, formación, qué pasa si algo sale mal: obtienes una respuesta transparente a cada pregunta.
+242|Pregunta lo que quieras — gratis
+243|Lo que dicen de verdad los pacientes
+244|Turismo dental Turquía
+245|Tratamiento dental en Estambul —
+246|solo lo que tus dientes realmente necesitan.
+247|La buena medicina consiste en saber decir que no. Protocolo ético, diagnóstico transparente y un único dentista responsable de tu atención, con contacto directo por WhatsApp y no un call center.
+248|Diagnóstico transparente
+249|Un solo dentista — plena responsabilidad
+250|Valoración gratuita — WhatsApp
+251|Tratamientos con la mejor relación calidad-precio
+252|Nuestros tratamientos estrella
+253|Tratamientos para una sonrisa natural
+254|Qué hacemos
+255|Tratamientos dentales en Estambul — y por qué los hacemos
+256|Nuestro protocolo ético significa que solo recomendamos lo que realmente necesitas. Sin ventas adicionales ni intervenciones innecesarias.
+257|Compara precios con tu país
+258|Experiencias de pacientes
+259|Sus historias — tu inspiración
+260|Pacientes reales, resultados reales
+261|Los vídeos se publican con el consentimiento expreso de los pacientes.
+262|Todos los vídeos de pacientes
+263|Cómo funciona
+264|Del primer mensaje a tu nueva sonrisa
+265|Envía una foto o radiografía
+266|Escríbenos por WhatsApp. La dentista revisa tu caso personalmente.
+267|Recibe un plan y un precio fijo
+268|Recibirás un plan de tratamiento honesto y un presupuesto por escrito en 24 horas.
+269|Viaja a Estambul
+270|Organizamos las citas según tus vuelos y te ayudamos con la logística.
+271|Tratamiento y seguimiento
+272|Cuando vuelves a casa, el seguimiento por WhatsApp continúa: nunca estás solo.
+273|Primera valoración gratuita
+274|Te llamamos
+275|Estés donde estés, rellena el formulario para una breve consulta. Sin compromiso ni presión.
+276|Sin ninguna obligación
+277|Precio fijo — sin costes ocultos
+278|Para una respuesta más rápida, escribe directamente a la dentista:
+279|Este sitio web está gestionado por %(name)s. Tratamos los datos personales que nos envías (nombre, teléfono, correo, mensaje e imágenes) únicamente para responder a tu solicitud y planificar tu tratamiento.
+280|Qué datos recogemos
+281|Formulario de contacto y mensajes de WhatsApp; datos técnicos de tu visita (páginas vistas, tipo de dispositivo, país aproximado) para mejorar el sitio; y, solo con tu consentimiento, cookies publicitarias (Google, Meta).
+282|Tus derechos
+283|Según el RGPD y la ley turca KVKK puedes solicitar en cualquier momento el acceso, la rectificación o la supresión de tus datos contactándonos.
+284|%(y)s+ años de experiencia
+285|Precios dentales en Estambul vs %(country)s
+286|Precios desde en Estambul en EUR. Tu precio exacto depende de tu diagnóstico: recibes un presupuesto fijo por escrito antes de cualquier tratamiento.
+287|Estambul desde
+288|Ahorro
+289|Los precios en tu país son medias de mercado orientativas y se muestran solo para comparar.
+290|%(d)s días en Estambul
+291|%(n)s clínica‖%(n)s clínicas
+292|Valoración gratuita por WhatsApp
+293|Comparar precios
+294|Clínicas de %(t)s en %(c)s
+295|Todavía ninguna clínica ofrece este tratamiento en esta ciudad.
+296|Lo que dicen los pacientes
+297|Tratamientos relacionados
+298|Comparativa de precios
+299|Resumen de precios
+300|Dónde
+301|Precio
+302|a consultar
+303|Pronto añadiremos los precios habituales en %(country)s.
+304|Qué incluye el precio en Estambul
+305|Revisión y radiografía digital / escáner 3D
+306|Plan de tratamiento por escrito con precio fijo
+307|Tratamiento por un dentista experimentado con materiales certificados
+308|Seguimiento por WhatsApp tras tu regreso
+309|Precios de las clínicas
+310|Obtén tu precio exacto
+311|Envía una foto o radiografía y recibe un presupuesto fijo por escrito en 24 horas.
+312|Todo sobre %(name)s
+313|Gracias — hemos recibido tu solicitud
+314|La dentista se pondrá en contacto contigo en 24 horas. Para una respuesta más rápida, también puedes escribirnos ahora por WhatsApp.
+315|Lee nuestras guías para pacientes
+316|%(name)s en Estambul
+317|%(n)s viaje‖%(n)s viajes
+318|En esta página
+319|%(name)s: Estambul vs tu país
+320|País
+321|Precio habitual
+322|%(name)s por ciudad
+323|De un vistazo
+324|Precio en Estambul
+325|Estancia en Estambul
+326|Viajes
+327|Anestesia
+328|Local
+329|Obtener mi precio
+330|Clínicas que ofrecen este tratamiento
+331|Guías sobre este tratamiento
+332|Tratamientos dentales en Estambul
+333|Todos los tratamientos que ofrecemos, con información honesta sobre el procedimiento, cuánto tiempo debes quedarte en Estambul y cuánto cuesta.
+334|Tu país
+335|Tu nombre
+336|Se muestra como nombre e inicial, p. ej. 'Anna K.'
+337|No se publica — solo se usa para verificar tu opinión.
+338|Valoración
+339|Selecciona tratamiento
+340|Título
+341|Tu experiencia
+342|Confirmo que esta opinión describe mi propia experiencia como paciente.
+343|Recomendadas
+344|Mejor valoradas
+345|Precio más bajo
+346|Más experiencia
+347|Buscar
+348|Clínica, dentista o barrio…
+349|Ciudad
+350|Idioma hablado
+351|Cualquiera
+352|Precio máx. (€)
+353|Solo clínicas verificadas
+354|Traslado al aeropuerto
+355|Ayuda con la reserva de hotel
+356|Ordenar por
+357|Todas las ciudades
+358|Todos los tratamientos
+359|Cualquier idioma
+360|Demasiadas opiniones desde tu conexión. Inténtalo más tarde.
+361|Revisa el formulario de opinión e inténtalo de nuevo.
+362|¡Gracias! Tu opinión se publicará tras una breve revisión.
+363|Encuentra tu clínica
+364|Busca clínicas dentales en Turquía
+365|Filtra por tratamiento, ciudad, idioma y precio — y compara clínicas verificadas una al lado de otra.
+366|Buscar clínicas
+367|Más filtros
+368|%(n)s opinión‖%(n)s opiniones
+369|Perfiles
+370|%(n)s opinión en dentaltourism.tr‖%(n)s opiniones en dentaltourism.tr
+371|Todas las opiniones de Google
+372|Valóranos en Google
+373|Escribir una opinión
+374|Opiniones en dentaltourism.tr
+375|Opiniones en Google y otras plataformas
+376|¿Te trataste en %(name)s? Comparte tu experiencia
+377|Las opiniones se revisan antes de publicarse. Tu correo electrónico nunca se muestra.
+378|Enviar opinión
+379|%(n)s clínica encontrada‖%(n)s clínicas encontradas
+380|Borrar filtros
+381|Tratamientos desde
+382|Ver clínica
+383|Ninguna clínica coincide con tus filtros.
+384|Verificada en nuestro sitio
+385|Paciente verificado
+386|Respuesta de la clínica
+387|¿Cuánto cuesta un tratamiento dental en Estambul?
+388|Muy asequible en comparación con Europa occidental, con los mismos materiales y técnicas. No publicamos precios iguales para todos: llámanos o envía fotos por WhatsApp y recibirás un presupuesto cerrado por escrito antes de empezar.
+389|Tratamiento dental ético en Estambul con un dentista experimentado. Implantes, carillas, coronas de zirconio: muy asequible, presupuesto cerrado por escrito. Consulta gratuita por WhatsApp.
+390|Opiniones de Google
+391|Tranquilo, sin dolor y explicado paso a paso
+392|Anestesia local, un dentista que primero lo explica todo y ninguna decisión bajo presión.
+393|Compruébalo todo antes de confiar en nosotros
+394|Opiniones reales con su fuente, materiales identificados y un plan por escrito antes de viajar.
+395|Muy asequible, con un precio cerrado por escrito
+396|Sin costes ocultos. Llámanos o escríbenos y recibe tu presupuesto personal.
+397|Tiempo con tu dentista, no con un equipo comercial
+398|Un dentista experimentado responsable de todo tu tratamiento, materiales de primera y atención discreta.
+399|Sin juicios, solo soluciones
+400|Sea cual sea el estado de tus dientes, ya lo hemos visto. Empezamos por lo que se puede salvar.
+401|Una clínica dirigida por un dentista que puedes comprobar
+402|Titulación, opiniones y fotos reales: todo en esta página.
+403|Abierto 7 días a la semana en el centro de Estambul
+404|Dinos tus fechas de viaje; organizamos las citas según tus vuelos.
+405|Planifica tu visita con un solo mensaje
+406|Envía tus fotos y fechas por WhatsApp y te respondemos con tu plan personal.
+407|La odontología es más que una sonrisa de Hollywood
+408|Primero conservamos los dientes sanos y planificamos un tratamiento real, solo para ti.
+409|Guías de turismo dental – Turquía y Estambul
+410|Guías honestas sobre el tratamiento dental en Turquía: elegir clínica, opiniones, viaje, garantía y seguimiento, escritas por un dentista de Estambul.
+411|Guías
+412|Guías de turismo dental: Turquía y Estambul
+413|Todo lo que necesitas para decidir con confianza, escrito por un dentista y sin discurso comercial.
+414|Guía
+415|¿Qué es el turismo dental?
+416|El turismo dental consiste en viajar a otro país para recibir tratamiento dental, normalmente para combinar dentistas con experiencia, clínicas modernas y costes mucho más bajos con un viaje corto.
+417|¿Qué incluye un paquete de turismo dental?
+418|Una valoración personal, escáner 3D y exploración en Estambul, el tratamiento, la coordinación de traslados y hotel, y seguimiento por WhatsApp cuando vuelves a casa.
+419|¿Cuánto cuesta un paquete dental?
+420|No vendemos paquetes a precio fijo, porque no hay dos bocas iguales. Envía fotos o una radiografía por WhatsApp y recibirás un plan de tratamiento personal con presupuesto cerrado por escrito.
+421|¿Es buena idea un paquete todo incluido de sonrisa de Hollywood?
+422|Solo si de verdad lo necesitas. Los paquetes que venden 20 carillas antes de que nadie examine tus dientes suelen eliminar estructura dental sana. Un plan real empieza con un diagnóstico.
+423|¿Cuánto dura un viaje dental a Turquía?
+424|La mayoría de los tratamientos duran 3–7 días en Estambul. Los implantes suelen necesitar dos estancias cortas separadas unos meses; organizamos ambas según tus vuelos.
+425|Paquetes de turismo dental en Estambul – personalizados, no estándar
+426|Vacaciones dentales en Turquía basadas en un diagnóstico real: exploración, tratamiento, traslados, hotel y seguimiento. Sin paquetes cerrados: tu plan personal por WhatsApp.
+427|Paquetes dentales
+428|Paquetes de turismo dental en Estambul: personalizados, no estándar
+429|La odontología es más que una sonrisa de Hollywood. Tu paquete se basa en un diagnóstico real: exploración, tratamiento, traslados, hotel y seguimiento.
+430|Paquete de %(treatment)s en Estambul
+431|Paquete %(treatment)s Turquía – plan personal, no una oferta cerrada
+432|Paquete de %(treatment)s en Estambul basado en tu diagnóstico: exploración, tratamiento, traslados y hotel, seguimiento. Tu plan personal por WhatsApp.
+433|Vacaciones dentales desde %(country)s a Estambul
+434|Vacaciones dentales desde %(country)s – Estambul, Turquía
+435|¿Planificas un tratamiento dental en Turquía desde %(country)s? Duración del vuelo, número de viajes, qué incluye un paquete personalizado y seguimiento en casa.
+436|¿Planificas un tratamiento dental en Estambul desde %(country)s? Duración de los vuelos, número de viajes y qué incluye un paquete personalizado.
+437|Planificamos el tratamiento para reducir al mínimo los viajes: a menudo una estancia más larga, con implantes programados para que la segunda visita sea corta.
+438|Coronas, carillas y la mayoría de los tratamientos necesitan un viaje de una semana aprox.; los implantes suelen necesitar dos viajes cortos separados unos meses.
+439|¿Cuánto dura el vuelo de %(country)s a Estambul?
+440|Unas %(hours)s horas, según tu aeropuerto de salida y la conexión.
+441|¿Cuántos viajes necesitaré desde %(country)s?
+442|¿Qué pasa cuando vuelva a %(country)s?
+443|El seguimiento continúa por WhatsApp y correo electrónico. Si hace falta, nos coordinamos con un dentista local y te acompañamos por videollamada: nunca estarás solo.
+444|¿Cómo obtengo un precio para mi paquete dental?
+445|Envía tus fotos o radiografía por WhatsApp. Cuando el dentista haya revisado tu caso, recibirás un plan personal con presupuesto cerrado por escrito: nunca publicamos precios iguales para todos.
+446|%(treatment)s en %(city)s – plan personal
+447|Compara %(treatment)s en %(city)s: presupuestos personales asequibles, duración de la estancia, experiencia del dentista y opiniones. Consulta gratuita por WhatsApp.
+448|¿Cuánto cuesta el tratamiento dental en Turquía?
+449|El tratamiento dental en Turquía es muy asequible en comparación con Europa occidental. El coste exacto depende de tus dientes, así que recibes un presupuesto personal y cerrado cuando el dentista ve tus fotos o radiografía: llámanos o envíalas por WhatsApp.
+450|¿Por qué no publicáis una lista de precios?
+451|Porque una lista de precios vende el mismo tratamiento a todos. Dos pacientes que piden «implantes» pueden necesitar planes totalmente distintos. Preferimos decirte tu precio real.
+452|¿Son un riesgo las clínicas dentales baratas en Turquía?
+453|Un precio muy bajo suele significar materiales más baratos, ningún diagnóstico o tratamientos innecesarios. Pide las marcas de los materiales, el nombre del dentista y un plan por escrito: calidad y precio asequible pueden ir juntos.
+454|¿El presupuesto es cerrado?
+455|Sí. Lo que acordamos por escrito antes del tratamiento es lo que pagas: sin costes ocultos.
+456|Precios dentista Turquía 2026 – asequible, presupuesto personal
+457|¿Cuánto cuestan los dientes en Turquía? Tratamiento dental muy asequible en Estambul con presupuesto cerrado por escrito. Llama o escribe por WhatsApp.
+458|Precios dentales en Turquía: asequibles y personales
+459|¿Cuánto cuestan los dientes en Turquía? Muy asequibles comparados con tu país, pero la respuesta honesta es un presupuesto personal, no una lista de precios.
+460|Precio de %(treatment)s en Turquía – asequible y con presupuesto cerrado
+461|%(treatment)s precio Turquía 2026 – presupuesto personal
+462|¿Cuánto cuesta %(treatment)s en Turquía? Muy asequible en Estambul, con presupuesto cerrado por escrito tras ver tu caso. Llama o escribe por WhatsApp.
+463|Qué influye en el precio de %(treatment)s, qué incluye y cómo obtener tu presupuesto personal por teléfono o WhatsApp.
+464|%(treatment)s en Estambul – procedimiento y plan personal
+465|paquetes/
+466|vacaciones-dentales-desde/
+467|guia/
+468|Muy asequible, con presupuesto cerrado por escrito y sin costes ocultos.
+469|Ver paquetes dentales personalizados
+470|Filtra por tratamiento, ciudad e idioma y compara clínicas verificadas una junto a otra.
+471|Llámanos
+472|Paquetes
+473|Plan de tratamiento personal
+474|Pedir mi plan personal
+475|Muy asequible · presupuesto cerrado por escrito
+476|Descubre los paquetes dentales personalizados
+477|Qué incluye un paquete dental personalizado
+478|Primero el diagnóstico
+479|Exploración, radiografía y escáner 3D por el dentista: el plan sigue al diagnóstico, no a una lista de precios.
+480|Solo el tratamiento que necesitas
+481|Primero conservamos los dientes naturales. Sin coronas innecesarias ni esmalte sano tallado.
+482|Viajar es fácil
+483|Citas según tus vuelos, ayuda con los traslados y un hotel cerca de la clínica.
+484|Muy asequible, y lo que acordamos por escrito es lo que pagas.
+485|Seguimiento en casa
+486|Seguimiento por WhatsApp y videollamada cuando vuelvas a casa.
+487|Abierto 7 días a la semana
+488|Las citas en fin de semana hacen posibles los viajes dentales cortos.
+489|Paquetes dentales por tratamiento
+490|Paquete de %(name)s
+491|Vacaciones dentales desde tu país
+492|Desde %(c)s
+493|Turquía, México, Tailandia, Vietnam, Bali, Hungría: compara destinos de turismo dental
+494|Tratamiento dental en Estambul desde %(country)s: cómo funciona
+495|Envía fotos o una radiografía por WhatsApp
+496|Recibe un plan personal y un presupuesto cerrado por escrito
+497|Reserva vuelos; organizamos las citas según ellos
+498|Exploración y escáner 3D el primer día, luego el tratamiento
+499|Seguimiento por WhatsApp cuando estés en casa
+500|Ciudades de salida
+501|Los pacientes de %(c)s suelen volar desde %(list)s a Estambul.
+502|Para pacientes que vienen de lejos planificamos el tratamiento con el menor número de viajes posible y nos tomamos el tiempo necesario en la primera visita.
+503|Muchas vacaciones dentales venden las mismas carillas a todos. Nosotros empezamos con un diagnóstico, conservamos primero los dientes sanos y recomendamos solo el tratamiento que de verdad necesitas.
+504|Duración del vuelo
+505|Abierto
+506|7 días a la semana
+507|Pacientes de %(c)s
+508|Tu paquete de %(name)s, organizado a tu medida
+509|Exploración, radiografía y escáner 3D por el dentista
+510|Un plan de tratamiento por escrito con las marcas de todos los materiales
+511|Citas organizadas según tus vuelos
+512|Ayuda con el traslado del aeropuerto y un hotel cerca de la clínica
+513|Seguimiento por WhatsApp cuando vuelvas a casa
+514|Estancia habitual en Estambul: %(d)s días.
+515|Cómo elegir la mejor clínica de %(name)s en Estambul
+516|La mejor clínica de %(name)s en Estambul y Turquía no es la de la oferta más barata ni la de más publicidad, sino aquella donde un dentista con experiencia te examina, te explica las alternativas y recomienda %(name)s solo si de verdad lo necesitas.
+517|Pregunta quién te va a tratar y por la titulación del dentista
+518|Pregunta la marca y el origen de cada material
+519|Lee opiniones en Google y Trustpilot, y cómo responde la clínica
+520|Nunca aceptes un plan antes de que alguien haya examinado tus dientes
+521|Todo sobre %(name)s
+522|Precio de %(name)s en Turquía
+523|Viajas desde
+524|%(n)s opinión de Google‖%(n)s opiniones de Google
+525|léelas en Google
+526|Envía una foto: valoración gratuita
+527|Sin compromiso · responde el dentista, no un call center · abierto 7 días a la semana
+528|Foto real de nuestra clínica en Şişli, Estambul
+529|Más sobre nosotros
+530|Transparentes por principio: compruébalo tú mismo
+531|Resultados reales de nuestra clínica
+532|Publicados con el consentimiento de los pacientes. Sin fotos de archivo ni filtros.
+533|Antes del tratamiento
+534|Después del tratamiento
+535|Dentro de nuestra clínica
+536|¿Cuánto cuesta?
+537|Nuestros precios son muy asequibles, pero nunca publicamos precios iguales para todos, porque no hay dos bocas iguales. Cuando el dentista ve tus fotos o radiografía, recibes un presupuesto cerrado por escrito. Lo que acordamos es lo que pagas.
+538|Pedir mi precio por WhatsApp
+539|Quién te va a tratar
+540|Licenciado en la Facultad de Odontología de la Universidad de Ankara
+541|Radiología oral y maxilofacial, Universidad de Mármara: diagnóstico 3D preciso
+542|Examina y trata personalmente a cada paciente
+543|Ver el perfil del dentista
+544|Tres pasos sencillos
+545|por WhatsApp, en un minuto.
+546|Recibe tu plan personal
+547|con presupuesto cerrado por escrito, sin compromiso.
+548|Ven a Estambul
+549|organizamos las citas según tus vuelos.
+550|El esmalte sano nunca vuelve a crecer. Antes de que alguien talle tus dientes para una sonrisa de plantilla, pide una segunda opinión a un dentista que primero conserva los dientes.
+551|Lo que dicen nuestros pacientes
+552|Más guías
+553|Qué determina el precio de tu tratamiento
+554|Tu diagnóstico
+555|Cuántos dientes, volumen óseo, salud de las encías: cada boca es diferente.
+556|Materiales
+557|Sistema de implantes, zirconio o E.max: indicamos cada marca en tu plan.
+558|Número de visitas
+559|Algunos tratamientos necesitan un viaje; los implantes, normalmente dos.
+560|La oferta más barata suele ser la más cara: coronas innecesarias, dientes sanos tallados y reparaciones en casa. Calidad y precio asequible pueden ir juntos.
+561|Pregunta el coste de un tratamiento concreto
+562|Precio de %(name)s
+563|Qué influye en el precio de %(name)s
+564|Tu diagnóstico: cuántos dientes y en qué estado
+565|La marca y el tipo de materiales
+566|Si hace falta un tratamiento previo
+567|El número de visitas a Estambul
+568|Incluido en tu presupuesto
+569|Exploración, radiografía y escáner 3D
+570|Tratamiento realizado personalmente por el dentista
+571|Información de garantía por escrito
+572|Seguimiento por WhatsApp
+573|La odontología es más que una sonrisa de Hollywood. Recomendamos solo lo que de verdad necesitas, que también es el plan más asequible.
+574|Malo
+575|Regular
+576|Bueno
+577|Muy bueno
+578|Excelente
+579|Toca una estrella
+580|Elegir clínica
+581|Ubicaciones
+582|Información práctica
+583|Nuestra clínica
+584|Traducido del %(l)s · ver original
+585|Nuestra agencia colaboradora
+586|Agencia de turismo dental en Turquía: Sterr Agency
+587|Para la organización del viaje, los traslados y el alojamiento trabajamos con nuestra agencia colaboradora. Las decisiones médicas siempre las toma el dentista.
+588|Turismo dental con Sterr Agency

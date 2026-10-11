@@ -1,0 +1,7 @@
+{% load i18n humanize %}{% if clinic %}
+<div class="h-stats au4">
+  {% if clinic.years_experience %}<div class="h-stat"><div class="h-stat-num"><span data-count="{{ clinic.years_experience }}">{{ clinic.years_experience }}</span>+</div><div class="h-stat-label">{% trans "Years experience" %}</div></div>{% endif %}
+  {% if clinic.patients_treated %}<div class="h-stat"><div class="h-stat-num"><span data-count="{{ clinic.patients_treated }}">{{ clinic.patients_treated|intcomma }}</span>+</div><div class="h-stat-label">{% trans "Patients treated" %}</div></div>{% endif %}
+  {% if clinic.google_rating %}<a class="h-stat h-stat-link" href="{{ clinic.google_business_url|default:'#reviews' }}"{% if clinic.google_business_url %} target="_blank" rel="noopener"{% endif %}><div class="h-stat-num"><span data-count="{{ clinic.google_rating }}" data-decimals="1">{{ clinic.google_rating }}</span><span class="h-star">★</span></div><div class="h-stat-label">{% blocktrans count n=clinic.google_review_count|default:0 %}{{ n }} Google review{% plural %}{{ n }} Google reviews{% endblocktrans %}</div></a>{% endif %}
+</div>
+{% endif %}

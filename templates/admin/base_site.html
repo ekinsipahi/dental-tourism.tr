@@ -1,0 +1,10 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" href="{% static 'admin_custom/admin.css' %}">{% endblock %}
+{% block branding %}
+<div id="site-name"><a href="{% url 'admin:index' %}"><img src="{% static 'img/logo-sm.png' %}" alt="" height="34" style="height:34px;vertical-align:middle;border-radius:6px;margin-right:8px"> dental<b>tourism</b>.tr <span class="brand-sub">yönetim</span></a></div>
+{% if user.is_anonymous %}{% include "admin/color_theme_toggle.html" %}{% endif %}
+{% endblock %}
+{% block userlinks %}<a href="/" target="_blank">Siteyi aç ↗</a> / <a href="{% url 'admin:translation_center' %}">🌍 Çeviri merkezi</a> / <a href="/api/dashboard/">🧠 Persona paneli</a> / {{ block.super }}{% endblock %}
+{% block nav-global %}{% endblock %}

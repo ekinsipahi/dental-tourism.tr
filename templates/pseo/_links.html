@@ -1,0 +1,7 @@
+{% load i18n %}
+<section class="section" style="padding-top:0"><div class="wrap">
+  <nav class="pseo-links" aria-label="{% trans 'Learn more about us' %}">
+    <h2>{% trans "Transparent by design — check us yourself" %}</h2>
+    <ul>{% for l in trust_links %}<li><a href="{{ l.url }}"{% if l.external %} target="_blank" rel="noopener"{% endif %}>{{ l.icon }} {{ l.label }}</a></li>{% endfor %}</ul>
+  </nav>
+</div></section>

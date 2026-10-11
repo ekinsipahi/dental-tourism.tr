@@ -1,0 +1,589 @@
+0|Blog tourisme dentaire — guides, coûts et conseils aux patients
+1|Des guides honnêtes sur les soins dentaires en Turquie : prix des implants et facettes, sécurité, récupération et comment choisir un dentiste à Istanbul.
+2|Accueil
+3|Blog
+4|%(category)s — Blog tourisme dentaire
+5|Cliniques dentaires à Istanbul pour patients internationaux
+6|Cliniques dentaires vérifiées en Turquie : expérience des dentistes, langues parlées, prix et avis de patients. Consultation gratuite.
+7|Cliniques
+8|%(clinic)s — clinique dentaire à %(city)s
+9|%(doctor)s — dentiste à %(city)s
+10|J'ai quelques questions sur la sécurité et le déroulement du traitement.
+11|Je souhaite recevoir un devis.
+12|Je souhaite connaître les rendez-vous disponibles cette semaine.
+13|Je souhaite des informations sur le smile design.
+14|Je souhaite demander un rendez-vous privé.
+15|Je souhaite prendre rendez-vous.
+16|Je souhaite des informations sur les matériaux et les certificats.
+17|Je souhaite en savoir plus.
+18|Bonjour, je souhaite une consultation gratuite.
+19|Nom complet
+20|Votre prénom et votre nom
+21|Téléphone / WhatsApp
+22|E-mail
+23|Soin souhaité
+24|Je ne sais pas encore
+25|Message
+26|Décrivez brièvement votre situation dentaire…
+27|J'accepte que mes données soient traitées pour répondre à ma demande (RGPD / KVKK).
+28|Veuillez saisir un numéro de téléphone valide avec l'indicatif du pays.
+29|par dent
+30|par implant
+31|par couronne
+32|par arcade
+33|par mâchoire
+34|par séance
+35|par sourire
+36|a-propos/
+37|contact/
+38|contact/merci/
+39|confidentialite/
+40|Est-il sûr de se faire soigner les dents en Turquie ?
+41|Oui, si vous choisissez une clinique agréée avec des dentistes expérimentés et des matériaux certifiés. Avant de partir, demandez les qualifications du dentiste, les marques d'implants et de couronnes et un plan de traitement écrit.
+42|Combien puis-je économiser sur des soins dentaires à Istanbul ?
+43|Les patients paient généralement 50 à 70 % de moins qu'en Europe de l'Ouest pour le même traitement et les mêmes matériaux. Vous recevez un devis écrit et fixe avant le début du traitement.
+44|Combien de temps dois-je rester à Istanbul ?
+45|Cela dépend du traitement : plombages, détartrage et facettes en composite prennent 1 à 3 jours, couronnes et facettes en céramique environ 5 à 7 jours, les implants généralement deux séjours à quelques mois d'intervalle.
+46|Parlez-vous ma langue ?
+47|Nous communiquons avec les patients internationaux en anglais et dans d'autres langues, et vous pouvez écrire directement au dentiste sur WhatsApp avant, pendant et après votre traitement.
+48|Quelle est l'expérience du dentiste ?
+49|Notre dentiste principale a %(years)s ans d'expérience clinique.
+50|Soins dentaires à Istanbul — implants, facettes et couronnes en Turquie
+51|Soins dentaires éthiques à Istanbul avec une dentiste expérimentée. Implants, facettes, couronnes zircone 50–70 % moins chers qu'en Europe. Prix fixe. Consultation WhatsApp gratuite.
+52|À propos — dentisterie éthique à Istanbul
+53|Découvrez la dentiste et la clinique derrière dentaltourism.tr : des décennies d'expérience, un diagnostic transparent et uniquement le traitement dont vous avez vraiment besoin.
+54|À propos
+55|Veuillez vérifier le formulaire et réessayer.
+56|Consultation gratuite — contactez notre dentiste à Istanbul
+57|Envoyez votre radio ou vos photos et recevez gratuitement un plan de traitement et un devis fixe. Réponse sous 24 heures. WhatsApp, téléphone ou formulaire.
+58|Merci — nous vous contacterons très bientôt
+59|Politique de confidentialité
+60|Comment nous traitons et protégeons vos données personnelles (RGPD / KVKK).
+61|Page introuvable
+62|%(treatment)s à %(city)s
+63|%(treatment)s %(city)s — prix à partir de %(price)s €
+64|Comparez %(treatment)s à %(city)s : prix des cliniques, durée du séjour, expérience des dentistes et avis des patients. Consultation gratuite sur WhatsApp.
+65|Soins
+66|Prix dentaires Turquie vs %(country)s — liste des prix 2026
+67|Comparez les prix des soins dentaires à Istanbul avec %(country)s : implants, facettes, couronnes, All-on-4. Prix fixes en EUR, sans frais cachés.
+68|Prix
+69|Prix %(treatment)s en Turquie vs %(country)s
+70|%(treatment)s prix Turquie vs %(country)s (2026)
+71|Combien coûtent %(treatment)s à Istanbul par rapport à %(country)s ? Prix réels des cliniques à partir de %(price)s €, ce qui est inclus et combien vous économisez.
+72|Soins dentaires à Istanbul — prix et informations
+73|Tous les soins dentaires pour patients internationaux à Istanbul : implants, facettes, couronnes, All-on-4, traitement de canal et plus. Prix et durées de séjour transparents.
+74|%(treatment)s à Istanbul — prix et déroulement
+75|soins/
+76|prix/
+77|cliniques/
+78|dentistes/
+79|La page que vous recherchez n'existe pas ou a été déplacée.
+80|Notre histoire
+81|Dentisterie éthique à Istanbul — uniquement ce dont vous avez besoin
+82|Nous pensons que la compétence la plus importante en dentisterie est de savoir quand ne pas traiter. Chaque plan commence par la préservation de vos dents naturelles, un diagnostic transparent et un prix fixe écrit.
+83|Votre dentiste
+84|Administration du site Django
+85|Aller au contenu
+86|Suggestion de langue
+87|Fermer
+88|Même traitement, 50–70 %% moins cher qu'en %(country)s.
+89|Voir la liste des prix
+90|Peu de temps ? De nombreux soins sont réalisés en une semaine à Istanbul.
+91|Écrire sur WhatsApp
+92|%(n)s min de lecture
+93|Pagination
+94|Précédent
+95|Suivant
+96|Catégorie
+97|Catégories
+98|Tous
+99|Aucun article dans cette catégorie pour le moment.
+100|Mis à jour
+101|Relu médicalement par
+102|Sommaire
+103|Dans cet article
+104|Prix et détails
+105|Vous aimerez aussi
+106|Centre d'information patients
+107|S'informer avant de décider
+108|Des guides honnêtes sur les soins dentaires, les coûts et ce qui vous attend avec le tourisme dentaire à Istanbul.
+109|De nouveaux articles arrivent bientôt.
+110|Cette page n'est pas encore disponible dans votre langue — la version originale est affichée.
+111|Années d'expérience
+112|Patients soignés
+113|Note Google
+114|Langues
+115|Soins et prix
+116|Soin
+117|À partir de
+118|Séjour
+119|%(d)s jours
+120|Dentistes
+121|Contact et accès
+122|Carte
+123|Avant et après
+124|Avant
+125|Après
+126|Avis de patients
+127|Qualifications
+128|Université
+129|Diplômée
+130|Poser une question au dentiste
+131|Cliniques dentaires à Istanbul pour patients internationaux
+132|Chaque clinique est vérifiée avant d'être référencée : autorisation, qualifications des dentistes et vrais avis de patients.
+133|Vérifiée
+134|Aucune clinique référencée pour le moment.
+135|Fil d'Ariane
+136|Nous utilisons des cookies pour mesurer nos publicités et améliorer le site. Vous pouvez accepter ou refuser les cookies d'analyse.
+137|Politique de confidentialité
+138|Accepter
+139|Refuser
+140|Envoyer — nous vous recontactons
+141|Vos données sont protégées selon le RGPD / KVKK et utilisées uniquement pour répondre à votre demande.
+142|Votre prix exact en 24 heures
+143|Envoyez une photo ou une radio sur WhatsApp. Vous recevez un plan de traitement écrit et un prix fixe — sans engagement.
+144|Posez toutes vos questions au dentiste — avant de décider
+145|Matériaux, garanties, que se passe-t-il en cas de problème : des réponses honnêtes directement du dentiste, pas d'un centre d'appels.
+146|Demander une consultation privée
+147|Un plan de traitement personnel, une organisation discrète et un seul dentiste responsable de vos soins du début à la fin.
+148|Voir les disponibilités de la semaine
+149|Indiquez-nous vos dates de voyage et nous organiserons vos rendez-vous en conséquence.
+150|Évaluation gratuite — sans engagement
+151|Envoyez-nous une photo ou une radio. Notre dentiste vous répond avec un plan de traitement honnête et un prix fixe.
+152|Formulaire de contact
+153|Questions fréquentes
+154|Soins dentaires éthiques à Istanbul pour patients internationaux — diagnostic transparent, prix fixes, contact direct avec votre dentiste.
+155|Informations
+156|Liste des prix
+157|Contact
+158|Navigation principale
+159|À propos
+160|Changer de langue
+161|Devis gratuit
+162|Réserver
+163|Consultation privée
+164|Consultation gratuite
+165|Menu
+166|à partir de
+167|Prix sur demande
+168|Détails
+169|%(name)s — témoignage vidéo de patient
+170|Recevez votre plan de traitement gratuit
+171|Envoyez-nous vos coordonnées — et si vous en avez une, une photo ou une radio via WhatsApp. Le dentiste répond personnellement sous 24 heures.
+172|Réponse la plus rapide — généralement en moins de 30 minutes pendant les heures d'ouverture.
+173|Clinique
+174|Pourquoi est-ce gratuit ?
+175|Aucun engagement
+176|Plan de traitement et prix fixe
+177|Réponse sous 24 heures
+178|50–70 %% moins cher qu'en %(country)s
+179|Tourisme dentaire Turquie — Istanbul
+180|Implants dentaires abordables à Istanbul —
+181|même qualité.
+182|Une fraction du prix pratiqué chez vous. Matériaux certifiés CE, technique identique. Aucun frais caché — le prix annoncé est le prix payé.
+183|implant
+184|Istanbul
+185|Votre économie
+186|Devis gratuit
+187|%(years)s+ ans — protocole éthique
+188|Protocole éthique
+189|Des soins dentaires sûrs à Istanbul —
+190|et vous le sentirez.
+191|La chose la plus précieuse que l'expérience nous ait apprise : une bonne médecine, c'est savoir dire non. Aucun acte inutile. Diagnostic transparent. Prix fixe.
+192|Aucun traitement inutile
+193|Préserver votre dent naturelle passe toujours en premier
+194|Devis écrit et fixe
+195|Ce que nous annonçons, c'est ce que vous payez
+196|Un seul dentiste, une responsabilité totale
+197|Le même dentiste de la consultation au suivi
+198|Posez votre question
+199|Peu invasif — résultats naturels
+200|Smile design à Istanbul —
+201|retrouvez votre sourire.
+202|Un sourire naturel qui vous ressemble vraiment, avec le moins de préparation dentaire possible. Notre objectif : un résultat non seulement beau, mais sain et durable.
+203|Questions sur le smile design
+204|Avant / après
+205|Résultats avant et après
+206|AVANT
+207|APRÈS
+208|Rendez-vous limités ce mois-ci
+209|Un nouveau sourire à Istanbul —
+210|en une semaine environ.
+211|Mariage, vacances ou entretien d'embauche ? Arrivez le lundi, repartez souriant le vendredi — pour les couronnes, facettes et de nombreux autres soins.
+212|Calendrier du traitement
+213|Lun
+214|Arrivée et examen
+215|Mar
+216|Préparation
+217|Mer–Jeu
+218|Ven
+219|Pose définitive — vol retour
+220|%(n)s+ patients
+221|Tourisme dentaire à Istanbul —
+222|des milliers de patients nous font confiance.
+223|Ne nous croyez pas aveuglément — regardez d'abord les vraies histoires de nos patients. Posez toutes vos questions. Sans pression, sans précipitation.
+224|Voir les avis de patients
+225|Poser une question
+226|Sans engagement. Juste des réponses.
+227|Clinique privée
+228|Clinique dentaire premium à Istanbul —
+229|la dentisterie comme un art.
+230|Des décennies d'expérience et de précision esthétique. Uniquement ce dont vous avez besoin — ni plus, ni moins.
+231|Demander un rendez-vous privé
+232|Rendez-vous disponibles cette semaine
+233|Nous sommes prêts quand vous l'êtes
+234|Réservez vos soins dentaires à Istanbul —
+235|êtes-vous prêt ?
+236|Évaluation gratuite, plan de traitement personnel, prix fixe. Réponse sous 24 heures.
+237|Prendre rendez-vous
+238|Dentisterie fondée sur les preuves
+239|Les soins dentaires en Turquie sont-ils sûrs ?
+240|Nous répondons à tout.
+241|Matériaux, qualifications, que se passe-t-il en cas de problème — vous obtenez une réponse transparente à chaque question.
+242|Posez toutes vos questions — gratuitement
+243|Ce que disent vraiment les patients
+244|Tourisme dentaire Turquie
+245|Soins dentaires à Istanbul —
+246|uniquement ce dont vos dents ont vraiment besoin.
+247|Une bonne médecine, c'est savoir dire non. Protocole éthique, diagnostic transparent et un seul dentiste responsable de vos soins — avec un contact WhatsApp direct, pas un centre d'appels.
+248|Diagnostic transparent
+249|Un seul dentiste — responsabilité totale
+250|Évaluation gratuite — WhatsApp
+251|Soins au meilleur rapport qualité-prix
+252|Nos soins phares
+253|Soins pour un sourire naturel
+254|Ce que nous faisons
+255|Soins dentaires à Istanbul — et pourquoi nous les pratiquons
+256|Notre protocole éthique signifie que nous ne recommandons que ce dont vous avez vraiment besoin. Pas de vente forcée, aucun acte inutile.
+257|Comparer les prix avec votre pays
+258|Expériences de patients
+259|Leurs histoires — votre inspiration
+260|Vrais patients, vrais résultats
+261|Les vidéos sont publiées avec le consentement explicite des patients.
+262|Toutes les vidéos de patients
+263|Comment ça marche
+264|Du premier message à votre nouveau sourire
+265|Envoyez une photo ou une radio
+266|Écrivez-nous sur WhatsApp. Le dentiste étudie votre cas personnellement.
+267|Recevez un plan et un prix fixe
+268|Vous recevez un plan de traitement honnête et un devis écrit sous 24 heures.
+269|Venez à Istanbul
+270|Nous organisons les rendez-vous selon vos vols et vous aidons pour la logistique.
+271|Soins et suivi
+272|Après votre retour, le suivi continue sur WhatsApp — vous n'êtes jamais seul.
+273|Première évaluation gratuite
+274|Nous vous rappelons
+275|Où que vous soyez, remplissez le formulaire pour une courte consultation. Sans engagement, sans pression.
+276|Aucun engagement
+277|Prix fixe — aucun frais caché
+278|Pour une réponse plus rapide, écrivez directement au dentiste :
+279|Ce site est exploité par %(name)s. Nous traitons les données personnelles que vous nous envoyez (nom, téléphone, e-mail, message et images) uniquement pour répondre à votre demande et planifier votre traitement.
+280|Quelles données nous collectons
+281|Formulaire de contact et messages WhatsApp ; données techniques sur votre visite (pages vues, type d'appareil, pays approximatif) pour améliorer le site ; et, uniquement avec votre consentement, des cookies publicitaires (Google, Meta).
+282|Vos droits
+283|Conformément au RGPD et à la loi turque KVKK, vous pouvez à tout moment demander l'accès, la rectification ou la suppression de vos données en nous contactant.
+284|%(y)s+ ans d'expérience
+285|Prix dentaires à Istanbul vs %(country)s
+286|Prix de départ à Istanbul en EUR. Votre prix exact dépend de votre diagnostic — vous recevez un devis écrit et fixe avant tout traitement.
+287|Istanbul à partir de
+288|Économie
+289|Les prix dans votre pays sont des moyennes de marché indicatives, données à titre de comparaison.
+290|%(d)s jours à Istanbul
+291|%(n)s clinique‖%(n)s cliniques
+292|Évaluation gratuite sur WhatsApp
+293|Comparer les prix
+294|Cliniques pour %(t)s à %(c)s
+295|Aucune clinique ne propose encore ce soin dans cette ville.
+296|Ce que disent les patients
+297|Soins associés
+298|Comparaison des prix
+299|Aperçu des prix
+300|Où
+301|Prix
+302|sur demande
+303|Les prix habituels en %(country)s seront bientôt ajoutés.
+304|Ce qui est inclus dans le prix à Istanbul
+305|Examen et radio numérique / scanner 3D
+306|Plan de traitement écrit avec prix fixe
+307|Traitement par un dentiste expérimenté avec des matériaux certifiés
+308|Suivi via WhatsApp après votre retour
+309|Prix des cliniques
+310|Obtenez votre prix exact
+311|Envoyez une photo ou une radio et recevez un devis écrit et fixe sous 24 heures.
+312|Tout sur %(name)s
+313|Merci — votre demande a bien été reçue
+314|Le dentiste vous contactera sous 24 heures. Pour une réponse plus rapide, vous pouvez aussi nous écrire dès maintenant sur WhatsApp.
+315|Lire nos guides patients
+316|%(name)s à Istanbul
+317|%(n)s séjour‖%(n)s séjours
+318|Sur cette page
+319|%(name)s : Istanbul vs votre pays
+320|Pays
+321|Prix habituel
+322|%(name)s par ville
+323|En bref
+324|Prix à Istanbul
+325|Séjour à Istanbul
+326|Séjours
+327|Anesthésie
+328|Locale
+329|Obtenir mon prix
+330|Cliniques proposant ce soin
+331|Guides sur ce soin
+332|Soins dentaires à Istanbul
+333|Tous les soins que nous proposons, avec des informations honnêtes sur le déroulement, la durée du séjour à Istanbul et le coût.
+334|Votre pays
+335|Votre nom
+336|Affiché sous forme de prénom et initiale, par ex. « Anna K. »
+337|Non publié — utilisé uniquement pour vérifier votre avis.
+338|Note
+339|Choisir un soin
+340|Titre
+341|Votre expérience
+342|Je confirme que cet avis décrit ma propre expérience en tant que patient.
+343|Recommandées
+344|Mieux notées
+345|Prix le plus bas
+346|Plus expérimentées
+347|Rechercher
+348|Clinique, dentiste ou quartier…
+349|Ville
+350|Langue parlée
+351|Indifférent
+352|Prix max. (€)
+353|Cliniques vérifiées uniquement
+354|Transfert aéroport
+355|Aide à la réservation d'hôtel
+356|Trier par
+357|Toutes les villes
+358|Tous les soins
+359|Toutes les langues
+360|Trop d'avis depuis votre connexion. Veuillez réessayer plus tard.
+361|Veuillez vérifier le formulaire d'avis et réessayer.
+362|Merci ! Votre avis sera publié après une courte vérification.
+363|Trouvez votre clinique
+364|Rechercher des cliniques dentaires en Turquie
+365|Filtrez par soin, ville, langue et prix — et comparez les cliniques vérifiées côte à côte.
+366|Rechercher des cliniques
+367|Plus de filtres
+368|%(n)s avis‖%(n)s avis
+369|Profils
+370|%(n)s avis sur dentaltourism.tr‖%(n)s avis sur dentaltourism.tr
+371|Tous les avis Google
+372|Laissez-nous un avis sur Google
+373|Écrire un avis
+374|Avis sur dentaltourism.tr
+375|Avis sur Google et d'autres plateformes
+376|Avez-vous été soigné chez %(name)s ? Partagez votre expérience
+377|Les avis sont vérifiés avant publication. Votre adresse e-mail n'est jamais affichée.
+378|Envoyer l'avis
+379|%(n)s clinique trouvée‖%(n)s cliniques trouvées
+380|Effacer les filtres
+381|Soins à partir de
+382|Voir la clinique
+383|Aucune clinique ne correspond à vos filtres.
+384|Vérifié sur notre site
+385|Patient vérifié
+386|Réponse de la clinique
+387|Combien coûtent les soins dentaires à Istanbul ?
+388|Très abordables par rapport à l’Europe de l’Ouest – avec les mêmes matériaux et techniques. Nous ne publions pas de prix uniques : appelez-nous ou envoyez des photos sur WhatsApp et vous recevrez un devis écrit fixe avant le début du traitement.
+389|Soins dentaires éthiques à Istanbul avec un dentiste expérimenté. Implants, facettes, couronnes zircone – très abordable, devis écrit fixe. Consultation gratuite sur WhatsApp.
+390|Avis Google
+391|Calme, sans douleur et expliqué étape par étape
+392|Anesthésie locale, un dentiste qui explique tout d’abord, et aucune décision sous pression.
+393|Vérifiez tout avant de nous faire confiance
+394|De vrais avis avec leur source, des matériaux nommés et un plan écrit avant votre voyage.
+395|Très abordable – et un prix fixe par écrit
+396|Aucun coût caché. Appelez-nous ou écrivez-nous et recevez votre devis personnel.
+397|Du temps avec votre dentiste, pas avec une équipe commerciale
+398|Un dentiste expérimenté responsable de tout votre traitement, des matériaux haut de gamme, des soins discrets.
+399|Aucun jugement – seulement des solutions
+400|Quel que soit l’état de vos dents, nous l’avons déjà vu. Nous commençons par ce qui peut être sauvé.
+401|Une clinique dirigée par un dentiste, que vous pouvez vérifier
+402|Qualifications, avis et vraies photos – tout est sur cette page.
+403|Ouvert 7 jours sur 7 au cœur d’Istanbul
+404|Indiquez-nous vos dates de voyage ; nous organisons les rendez-vous selon vos vols.
+405|Planifiez votre visite en un message
+406|Envoyez vos photos et vos dates sur WhatsApp – nous vous répondons avec votre plan personnel.
+407|Les soins dentaires ne se résument pas à un sourire hollywoodien
+408|Nous préservons d’abord les dents saines et planifions un vrai traitement, fait pour vous seul.
+409|Guides du tourisme dentaire – Turquie & Istanbul
+410|Des guides honnêtes sur les soins dentaires en Turquie : choisir une clinique, avis, voyage, garantie et suivi – par un dentiste d’Istanbul.
+411|Guides
+412|Guides du tourisme dentaire : Turquie et Istanbul
+413|Tout ce qu’il faut pour décider en confiance – écrit par un dentiste, sans discours commercial.
+414|Guide
+415|Qu’est-ce que le tourisme dentaire ?
+416|Le tourisme dentaire consiste à se rendre dans un autre pays pour des soins dentaires – généralement pour combiner dentistes expérimentés, cliniques modernes et coûts nettement plus bas avec un court voyage.
+417|Que comprend un forfait de tourisme dentaire ?
+418|Une évaluation personnelle, un scanner 3D et un examen à Istanbul, le traitement lui-même, l’organisation des transferts et de l’hôtel, et un suivi sur WhatsApp à votre retour.
+419|Combien coûte un forfait dentaire ?
+420|Nous ne vendons pas de forfaits à prix fixe, car aucune bouche n’est identique. Envoyez des photos ou une radio sur WhatsApp et vous recevrez un plan de traitement personnel avec un devis écrit fixe.
+421|Un forfait « sourire hollywoodien » tout compris est-il une bonne idée ?
+422|Seulement si vous en avez vraiment besoin. Les forfaits qui vendent 20 facettes avant que quiconque ait examiné vos dents enlèvent souvent de la structure dentaire saine. Un vrai plan commence par un diagnostic.
+423|Combien de temps dure un voyage dentaire en Turquie ?
+424|La plupart des traitements prennent 3 à 7 jours à Istanbul. Les implants nécessitent généralement deux courts séjours à quelques mois d’intervalle ; nous organisons les deux selon vos vols.
+425|Séjour dentaire à Istanbul – personnalisé, pas de forfait standard
+426|Séjour dentaire en Turquie fondé sur un vrai diagnostic : examen, traitement, transferts, hôtel et suivi. Pas de forfaits figés – votre plan personnel sur WhatsApp.
+427|Forfaits dentaires
+428|Forfaits de tourisme dentaire à Istanbul – personnalisés, pas standardisés
+429|Les soins dentaires ne se résument pas à un sourire hollywoodien. Votre forfait repose sur un vrai diagnostic : examen, traitement, transferts, hôtel et suivi.
+430|Forfait %(treatment)s à Istanbul
+431|Forfait %(treatment)s Turquie – plan personnel, pas d’offre figée
+432|Forfait %(treatment)s à Istanbul fondé sur votre diagnostic : examen, traitement, transferts et hôtel, suivi. Votre plan personnel sur WhatsApp.
+433|Séjour dentaire depuis %(country)s vers Istanbul
+434|Séjour dentaire depuis %(country)s – Istanbul, Turquie
+435|Vous préparez des soins dentaires en Turquie depuis %(country)s ? Durée du vol, nombre de voyages, contenu d’un forfait personnalisé et suivi à domicile.
+436|Vous préparez des soins dentaires à Istanbul depuis %(country)s ? Durée des vols, nombre de voyages et contenu d’un forfait personnalisé.
+437|Nous planifions le traitement pour limiter au maximum le nombre de voyages – souvent un séjour plus long, avec des implants programmés pour que la deuxième visite soit courte.
+438|Couronnes, facettes et la plupart des autres traitements demandent un voyage d’environ une semaine ; les implants, généralement deux courts voyages à quelques mois d’intervalle.
+439|Combien de temps dure le vol entre %(country)s et Istanbul ?
+440|Environ %(hours)s heures, selon votre aéroport de départ et votre correspondance.
+441|Combien de voyages faudra-t-il depuis %(country)s ?
+442|Que se passe-t-il une fois rentré en %(country)s ?
+443|Le suivi continue sur WhatsApp et par e-mail. Si besoin, nous nous coordonnons avec un dentiste local et vous accompagnons par appel vidéo – vous n’êtes jamais seul.
+444|Comment obtenir un prix pour mon forfait dentaire ?
+445|Envoyez vos photos ou votre radio sur WhatsApp. Après examen de votre cas par le dentiste, vous recevez un plan personnel avec un devis écrit fixe – nous ne publions jamais de prix standard.
+446|%(treatment)s à %(city)s – plan personnel
+447|Comparez %(treatment)s à %(city)s : devis personnels abordables, durée du séjour, expérience du dentiste et avis de patients. Consultation gratuite sur WhatsApp.
+448|Combien coûtent les soins dentaires en Turquie ?
+449|Les soins dentaires en Turquie sont très abordables par rapport à l’Europe de l’Ouest. Le coût exact dépend de vos dents : vous recevez donc un devis personnel et fixe après que le dentiste a vu vos photos ou votre radio – appelez-nous ou envoyez-les sur WhatsApp.
+450|Pourquoi ne publiez-vous pas de liste de prix ?
+451|Parce qu’une liste de prix vend le même traitement à tout le monde. Deux patients qui demandent des « implants » peuvent avoir besoin de plans totalement différents. Nous préférons vous donner votre vrai prix.
+452|Les cliniques dentaires bon marché en Turquie sont-elles risquées ?
+453|Un prix très bas signifie souvent des matériaux moins chers, aucun diagnostic ou des soins inutiles. Demandez les marques des matériaux, le nom du dentiste et un plan écrit – qualité et prix abordable peuvent aller ensemble.
+454|Le devis est-il fixe ?
+455|Oui. Ce que nous convenons par écrit avant le traitement est ce que vous payez – aucun coût caché.
+456|Prix dentiste Turquie 2026 – abordable, devis personnel
+457|Combien coûtent les dents en Turquie ? Soins dentaires très abordables à Istanbul avec devis écrit fixe. Appelez ou écrivez sur WhatsApp.
+458|Prix des soins dentaires en Turquie : abordables – et personnels
+459|Combien coûtent les dents en Turquie ? Très abordable par rapport à chez vous – mais la réponse honnête est un devis personnel, pas une liste de prix.
+460|Prix %(treatment)s en Turquie – abordable, avec devis fixe
+461|%(treatment)s prix Turquie 2026 – devis personnel
+462|Combien coûte %(treatment)s en Turquie ? Très abordable à Istanbul, avec un devis écrit fixe après examen de votre cas. Appel ou WhatsApp.
+463|Ce qui influence le prix de %(treatment)s, ce qui est inclus – et comment obtenir votre devis personnel par téléphone ou WhatsApp.
+464|%(treatment)s à Istanbul – déroulement & plan personnel
+465|forfaits/
+466|sejour-dentaire-depuis/
+467|guide/
+468|Très abordable – avec un devis écrit fixe et sans coûts cachés.
+469|Voir les forfaits dentaires personnalisés
+470|Filtrez par traitement, ville et langue – et comparez des cliniques vérifiées côte à côte.
+471|Appelez-nous
+472|Forfaits
+473|Plan de traitement personnel
+474|Demander mon plan personnel
+475|Très abordable · devis écrit fixe
+476|Découvrir les forfaits dentaires personnalisés
+477|Ce que comprend un forfait dentaire personnalisé
+478|D’abord le diagnostic
+479|Examen, radio et scanner 3D par le dentiste – le plan suit le diagnostic, pas une liste de prix.
+480|Seulement le traitement nécessaire
+481|Nous préservons d’abord les dents naturelles. Pas de couronnes inutiles, pas d’émail sain limé.
+482|Un voyage simplifié
+483|Rendez-vous organisés selon vos vols, aide pour les transferts et un hôtel près de la clinique.
+484|Très abordable – et ce que nous convenons par écrit est ce que vous payez.
+485|Suivi à domicile
+486|Suivi sur WhatsApp et par appel vidéo une fois rentré chez vous.
+487|Ouvert 7 jours sur 7
+488|Les rendez-vous le week-end rendent possibles des voyages dentaires courts.
+489|Forfaits dentaires par traitement
+490|Forfait %(name)s
+491|Séjours dentaires depuis votre pays
+492|Depuis %(c)s
+493|Turquie, Mexique, Thaïlande, Vietnam, Bali, Hongrie – comparez les destinations de tourisme dentaire
+494|Soins dentaires à Istanbul depuis %(country)s : comment ça marche
+495|Envoyez des photos ou une radio sur WhatsApp
+496|Recevez un plan personnel et un devis écrit fixe
+497|Réservez vos vols – nous organisons les rendez-vous en fonction
+498|Examen et scanner 3D le premier jour, puis traitement
+499|Suivi sur WhatsApp une fois chez vous
+500|Villes de départ
+501|Les patients de %(c)s partent généralement de %(list)s vers Istanbul.
+502|Pour les patients venant de loin, nous planifions le traitement pour limiter le nombre de voyages et prenons le temps nécessaire lors de la première visite.
+503|Beaucoup de séjours dentaires vendent les mêmes facettes à tout le monde. Nous commençons par un diagnostic, préservons d’abord les dents saines et ne recommandons que le traitement dont vous avez vraiment besoin.
+504|Durée du vol
+505|Ouvert
+506|7 jours sur 7
+507|Patients de %(c)s
+508|Votre forfait %(name)s, organisé autour de vous
+509|Examen, radio et scanner 3D par le dentiste
+510|Un plan de traitement écrit avec les marques de tous les matériaux
+511|Rendez-vous organisés selon vos vols
+512|Aide pour le transfert aéroport et un hôtel près de la clinique
+513|Suivi sur WhatsApp une fois rentré chez vous
+514|Séjour habituel à Istanbul : %(d)s jours.
+515|Comment choisir la meilleure clinique pour %(name)s à Istanbul
+516|La meilleure clinique pour %(name)s à Istanbul et en Turquie n’est pas celle qui a l’offre la moins chère ou la plus grande publicité – c’est celle où un dentiste expérimenté vous examine, explique les alternatives et ne recommande %(name)s que si vous en avez vraiment besoin.
+517|Demandez qui vous soignera et quelles sont ses qualifications
+518|Demandez la marque et l’origine de chaque matériau
+519|Lisez les avis sur Google et Trustpilot – et la façon dont la clinique répond
+520|N’acceptez jamais un plan avant que quelqu’un ait examiné vos dents
+521|Tout sur %(name)s
+522|Prix %(name)s en Turquie
+523|Vous venez de
+524|%(n)s avis Google‖%(n)s avis Google
+525|les lire sur Google
+526|Envoyez une photo – évaluation gratuite
+527|Sans engagement · réponse du dentiste, pas d’un centre d’appels · ouvert 7 jours sur 7
+528|Vraie photo de notre clinique à Şişli, Istanbul
+529|En savoir plus sur nous
+530|Transparents par principe – vérifiez par vous-même
+531|De vrais résultats de notre clinique
+532|Publiés avec l’accord des patients. Pas de photos de banque d’images, pas de filtres.
+533|Avant le traitement
+534|Après le traitement
+535|Dans notre clinique
+536|Combien ça coûte ?
+537|Nos prix sont très abordables – mais nous ne publions jamais de prix uniques, car aucune bouche n’est identique. Après avoir vu vos photos ou votre radio, le dentiste vous remet un devis écrit fixe. Ce que nous convenons est ce que vous payez.
+538|Demander mon prix sur WhatsApp
+539|Qui va vous soigner
+540|Diplômé de la Faculté de médecine dentaire de l’Université d’Ankara
+541|Radiologie bucco-maxillo-faciale, Université de Marmara – diagnostic 3D précis
+542|Examine et soigne chaque patient personnellement
+543|Voir le profil du dentiste
+544|Trois étapes simples
+545|sur WhatsApp, cela prend une minute.
+546|Recevez votre plan personnel
+547|avec un devis écrit fixe, sans engagement.
+548|Venez à Istanbul
+549|nous organisons les rendez-vous selon vos vols.
+550|L’émail sain ne repousse jamais. Avant que quelqu’un lime vos dents pour un sourire standard, demandez un second avis à un dentiste qui préserve d’abord les dents.
+551|Ce que disent nos patients
+552|Plus de guides
+553|Ce qui détermine le prix de votre traitement
+554|Votre diagnostic
+555|Nombre de dents, volume osseux, santé des gencives – chaque bouche est différente.
+556|Matériaux
+557|Système d’implant, zircone ou E.max – nous nommons chaque marque dans votre plan.
+558|Nombre de visites
+559|Certains traitements demandent un voyage, les implants généralement deux.
+560|L’offre la moins chère est souvent la plus coûteuse : couronnes inutiles, dents saines limées et réparations à la maison. Qualité et prix abordable peuvent aller ensemble.
+561|Demander le coût d’un traitement précis
+562|Prix %(name)s
+563|Ce qui influence le prix de %(name)s
+564|Votre diagnostic : combien de dents et dans quel état
+565|La marque et le type de matériaux
+566|Si un traitement préalable est nécessaire
+567|Le nombre de visites à Istanbul
+568|Inclus dans votre devis
+569|Examen, radio et scanner 3D
+570|Traitement par le dentiste en personne
+571|Informations de garantie écrites
+572|Suivi sur WhatsApp
+573|Les soins dentaires ne se résument pas à un sourire hollywoodien. Nous recommandons seulement ce dont vous avez vraiment besoin – c’est aussi le plan le plus abordable.
+574|Mauvais
+575|Passable
+576|Bien
+577|Très bien
+578|Excellent
+579|Touchez une étoile
+580|Choisir une clinique
+581|Destinations
+582|Infos pratiques
+583|Notre clinique
+584|Traduit de : %(l)s · voir l’original
+585|Notre agence partenaire
+586|Agence de tourisme dentaire en Turquie : Sterr Agency
+587|Pour l’organisation du voyage, les transferts et l’hébergement, nous travaillons avec notre agence partenaire. Les décisions médicales restent toujours entre les mains du dentiste.
+588|Tourisme dentaire avec Sterr Agency

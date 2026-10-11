@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+{% include "pseo/_hero.html" %}
+{% if t.is_fallback %}<div class="wrap"><p class="fallback-note">{% trans "This page is not yet available in your language — showing the original version." %}</p></div>{% endif %}
+
+<section class="section"><div class="wrap layout-side">
+  <article>
+    {% if page.intro %}<div class="prose">{{ page.intro|markdown }}</div>{% endif %}
+    <h2>{% blocktrans with name=t.name %}Your {{ name }} package, planned around you{% endblocktrans %}</h2>
+    <ul class="pseo-ticks">
+      <li>{% trans "Examination, X-ray and 3D scan by the dentist" %}</li>
+      <li>{% trans "A written treatment plan with the brands of all materials" %}</li>
+      <li>{% trans "Appointments planned around your flights" %}</li>
+      <li>{% trans "Help with airport transfer and a hotel near the clinic" %}</li>
+      <li>{% trans "Aftercare on WhatsApp when you are back home" %}</li>
+    </ul>
+    <p class="muted">{% blocktrans with d=t.stay_days|default:"3–7" %}Typical stay in Istanbul: {{ d }} days.{% endblocktrans %}</p>
+
+    <h2>{% blocktrans with name=t.name %}How to choose the best {{ name }} clinic in Istanbul{% endblocktrans %}</h2>
+    <p>{% blocktrans with name=t.name %}The best clinic for {{ name }} in Istanbul and Turkey is not the one with the cheapest offer or the biggest advertising — it is the one where an experienced dentist examines you, explains the alternatives and recommends {{ name }} only if you really need it.{% endblocktrans %}</p>
+    <ul>
+      <li>{% trans "Ask who will treat you, and for the dentist's qualifications" %}</li>
+      <li>{% trans "Ask for the brand and origin of every material" %}</li>
+      <li>{% trans "Read reviews on Google and Trustpilot — and how the clinic replies" %}</li>
+      <li>{% trans "Never accept a plan before anyone has examined your teeth" %}</li>
+    </ul>
+    {% if page.body %}<div class="prose">{{ page.body|markdown }}</div>{% endif %}
+    {% include "pseo/_price_note.html" %}
+    <p><a href="{{ treatment_url }}">{% blocktrans with name=t.name %}Everything about {{ name }}{% endblocktrans %} →</a> · <a href="{{ price_url }}">{% blocktrans with name=t.name %}{{ name }} cost in Turkey{% endblocktrans %} →</a></p>
+  </article>
+  <aside class="sticky-side">
+    <div class="side-cta" data-track-section="contact">
+      <h2>{{ hook_title }}</h2><p class="muted">{{ hook_text }}</p>
+      {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my personal plan" %}</a>{% endif %}
+      {% if clinic.phone %}<a class="btn btn-outline" style="width:100%;margin-top:.6rem" href="{{ tel_url }}" data-track="phone">📞 {{ clinic.phone }}</a>{% endif %}
+    </div>
+    {% if origins %}<div class="side-cta"><h2>{% trans "Travelling from" %}</h2><ul class="facts">{% for o in origins %}<li><a href="{{ o.url }}">{{ o.code|flag }} {{ o.name }}</a></li>{% endfor %}</ul></div>{% endif %}
+  </aside>
+</div></section>
+
+{% include "pseo/_proof.html" %}
+{% include "pseo/_photos.html" %}
+{% include "components/faq.html" with faq=faq %}
+{% if reviews %}<section class="section section-alt"><div class="wrap"><h2>{% trans "What patients say" %}</h2>{% include "components/reviews.html" %}</div></section>{% endif %}
+{% if related %}<section class="section"><div class="wrap"><h2>{% trans "Related treatments" %}</h2><div class="grid grid-4">{% for r in related %}{% include "components/treatment_card.html" with t=r %}{% endfor %}</div></div></section>{% endif %}
+{% include "pseo/_links.html" %}
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

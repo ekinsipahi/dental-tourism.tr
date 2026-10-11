@@ -1,0 +1,62 @@
+{% extends "admin/index.html" %}
+{% block content %}
+<div id="content-main" style="width:100%">
+  {% if not api_ready %}<div class="dt-alert warn">⚠️ ANTHROPIC_API_KEY tanımlı değil — otomatik çeviri ve AI içerik üretimi kapalı. <code>.env</code> dosyasına anahtarı ekleyip sunucuyu yeniden başlatın.</div>
+  {% else %}<div class="dt-alert ok">✅ AI çeviri motoru aktif{% if not celery %} (arka plan thread modu — production için CELERY_ENABLED=True önerilir){% endif %}.</div>{% endif %}
+
+  <div class="dt-actions">
+    <a href="{% url 'admin:blog_blogpost_add' %}">✍️ Yeni blog yazısı</a>
+    <a href="{% url 'admin:clinics_clinicimage_add' %}">🖼️ Görsel yükle</a>
+    <a href="{% url 'admin:clinics_review_add' %}">⭐ Yorum ekle</a>
+    <a href="{% url 'admin:clinics_clinic_add' %}" class="alt">🏥 Klinik ekle</a>
+    <a href="{% url 'admin:clinics_doctor_add' %}" class="alt">👩‍⚕️ Hekim ekle</a>
+    <a href="{% url 'admin:translation_center' %}" class="alt">🌍 Çeviri merkezi</a>
+    <a href="{% url 'admin:core_sitesettings_changelist' %}" class="alt">⚙️ Site ayarları</a>
+  </div>
+
+  <div class="dt-grid">
+    <div class="dt-kpi"><a href="{% url 'admin:tracking_lead_changelist' %}"><div class="n">{{ kpi.leads_today }}</div><div class="l">Bugünkü lead</div></a></div>
+    <div class="dt-kpi"><a href="{% url 'admin:tracking_lead_changelist' %}"><div class="n">{{ kpi.leads_week }}</div><div class="l">Son 7 gün lead</div></a></div>
+    <div class="dt-kpi"><a href="{% url 'admin:tracking_lead_changelist' %}?status__exact=new"><div class="n">{{ kpi.leads_new }}</div><div class="l">Aranmayı bekleyen</div></a></div>
+    <div class="dt-kpi"><a href="{% url 'admin:blog_blogpost_changelist' %}?status__exact=review"><div class="n">{{ kpi.posts_review }}</div><div class="l">Onay bekleyen yazı</div></a></div>
+    <div class="dt-kpi"><div class="n">{{ kpi.posts_live }}</div><div class="l">Yayındaki yazı</div></div>
+    <div class="dt-kpi"><a href="{% url 'admin:seo_landingpage_changelist' %}"><div class="n">{{ kpi.landing_live }}/{{ kpi.landing_total }}</div><div class="l">İndexlenen programatik sayfa</div></a></div>
+    <div class="dt-kpi"><a href="{% url 'admin:seo_keyword_changelist' %}"><div class="n">{{ kpi.keywords }}</div><div class="l">Keyword ({{ kpi.keywords_open }} sayfasız)</div></a></div>
+    <div class="dt-kpi"><a href="/api/dashboard/"><div class="n">%{{ kpi.cr_30d }}</div><div class="l">Persona dönüşüm (30g, {{ kpi.exposures_30d }} ziyaret)</div></a></div>
+    {% if kpi.clinics_pending %}<div class="dt-kpi"><a href="{% url 'admin:clinics_clinic_changelist' %}?status__exact=pending"><div class="n">{{ kpi.clinics_pending }}</div><div class="l">Onay bekleyen klinik</div></a></div>{% endif %}
+  </div>
+
+  <div class="dt-two" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div class="module">
+      <table style="width:100%"><caption>📥 Son lead'ler</caption>
+        <tr><th>Tarih</th><th>İsim</th><th>Telefon</th><th>Dil</th><th>Durum</th></tr>
+        {% for l in latest_leads %}<tr><td>{{ l.created_at|date:"d.m H:i" }}</td><td><a href="{% url 'admin:tracking_lead_change' l.pk %}">{{ l.name|default:"—" }}</a></td><td>{{ l.phone }}</td><td>{{ l.language|upper }}</td><td>{{ l.get_status_display }}</td></tr>
+        {% empty %}<tr><td colspan="5">Henüz lead yok.</td></tr>{% endfor %}
+      </table>
+    </div>
+    <div class="module">
+      <table style="width:100%"><caption>🌍 Çeviri kapsaması (16 dil)</caption>
+        <tr><th>İçerik</th><th>Kayıt</th><th>Kapsama</th><th>Hata / eski</th></tr>
+        {% for c in coverage %}<tr><td><a href="{{ c.url }}">{{ c.label }}</a></td><td>{{ c.objects }}</td><td><div class="dt-bar"><span style="width:{{ c.pct }}%"></span></div> {{ c.pct }}%</td><td>{{ c.failed }} / {{ c.outdated }}</td></tr>
+        {% empty %}<tr><td colspan="4">İçerik yok.</td></tr>{% endfor %}
+      </table>
+    </div>
+    <div class="module">
+      <table style="width:100%"><caption>✍️ Onay bekleyen yazılar (yayınlayınca 15 dile çevrilir)</caption>
+        {% for p in review_posts %}<tr><td><a href="{% url 'admin:blog_blogpost_change' p.pk %}">{{ p.title }}</a></td><td>{{ p.source_language|upper }}</td></tr>
+        {% empty %}<tr><td>Bekleyen yazı yok.</td></tr>{% endfor %}
+      </table>
+    </div>
+    <div class="module">
+      <table style="width:100%"><caption>🧠 Kişiselleştirme</caption>
+        <tr><td>Aktif politika</td><td>{% if ml_model %}ML modeli v{{ ml_model.version }} (AUC {{ ml_model.accuracy|floatformat:3 }}){% else %}Thompson Sampling bandit (ML için veri toplanıyor){% endif %}</td></tr>
+        <tr><td colspan="2"><a href="/api/dashboard/">Detaylı persona paneli →</a></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h2 style="margin-top:28px">Tüm modüller</h2>
+  {% include "admin/app_list.html" with app_list=app_list show_changelinks=True %}
+</div>
+{% endblock %}
+{% block sidebar %}{% endblock %}

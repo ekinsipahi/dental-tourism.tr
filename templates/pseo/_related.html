@@ -1,0 +1,7 @@
+{% load i18n %}
+{% if related_guides %}
+<section class="section section-alt"><div class="wrap">
+  <h2>{% trans "More guides" %}</h2>
+  <div class="chips">{% for g in related_guides %}<a class="chip" href="{{ g.url }}">{{ g.h1 }}</a>{% endfor %}</div>
+</div></section>
+{% endif %}

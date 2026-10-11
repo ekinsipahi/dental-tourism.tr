@@ -1,0 +1,98 @@
+{% load i18n static site_tags %}{% language_links seo as lang_links %}
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="{% trans 'Main navigation' %}">
+      <a href="{% url 'core:home' %}" class="logo" aria-label="{{ site_name }} — {% trans 'Home' %}">
+        <img src="{% if site_settings.logo %}{{ site_settings.logo.url }}{% else %}{% static 'img/logo-sm.png' %}{% endif %}" alt="Dr. Dt. Devrim Biriken Sipahi — {{ site_name }}" width="114" height="49" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <li class="has-mega">
+          <a href="{% url 'treatments:list' %}" aria-haspopup="true">{% trans "Treatments" %} <span class="caret">▾</span></a>
+          <div class="mega" role="menu">
+            <div class="mega-grid mega-3">
+              {% for t in nav.treatments %}
+              <a class="mega-item" href="{{ t.url }}" role="menuitem"><span class="mega-ico">{{ t.icon }}</span><span>{{ t.name }}</span></a>
+              {% endfor %}
+            </div>
+            <div class="mega-foot">
+              <a href="{% url 'treatments:list' %}">{% trans "All treatments" %} →</a>
+              <a href="{% url 'prices:index' %}">{% trans "What does it cost?" %} →</a>
+              {% if nav.gallery_url %}<a href="{{ nav.gallery_url }}">{% trans "Before & after" %} →</a>{% endif %}
+            </div>
+          </div>
+        </li>
+        <li class="has-mega">
+          <a href="{% url 'packages:index' %}" aria-haspopup="true">{% trans "Packages" %} <span class="caret">▾</span></a>
+          <div class="mega" role="menu">
+            <div class="mega-cols">
+              <div>
+                <p class="mega-title">{% trans "Dental packages by treatment" %}</p>
+                {% for t in nav.treatments|slice:":6" %}<a class="mega-link" href="{{ t.package_url }}" role="menuitem">{{ t.icon }} {% blocktrans with name=t.name %}{{ name }} package{% endblocktrans %}</a>{% endfor %}
+              </div>
+              {% if nav.origins %}<div>
+                <p class="mega-title">{% trans "Travelling from" %}</p>
+                {% for o in nav.origins %}<a class="mega-link" href="{{ o.url }}" role="menuitem">{{ o.code|flag }} {{ o.name }}</a>{% endfor %}
+              </div>{% endif %}
+            </div>
+            <div class="mega-foot"><a href="{% url 'packages:index' %}">{% trans "Explore personalised dental packages" %} →</a></div>
+          </div>
+        </li>
+        <li class="has-mega">
+          <a href="{% url 'guides:index' %}" aria-haspopup="true">{% trans "Guides" %} <span class="caret">▾</span></a>
+          <div class="mega mega-wide" role="menu">
+            <div class="mega-cols mega-cols-3">
+              <div><p class="mega-title">{% trans "Choosing a clinic" %}</p>{% for g in nav.guides.choose %}<a class="mega-link" href="{{ g.url }}" role="menuitem">{{ g.name }}</a>{% endfor %}</div>
+              <div><p class="mega-title">{% trans "Locations" %}</p>{% for g in nav.guides.places %}<a class="mega-link" href="{{ g.url }}" role="menuitem">{{ g.name }}</a>{% endfor %}</div>
+              <div><p class="mega-title">{% trans "Practical" %}</p>{% for g in nav.guides.practical %}<a class="mega-link" href="{{ g.url }}" role="menuitem">{{ g.name }}</a>{% endfor %}
+                <a class="mega-link" href="{% url 'blog:post_list' %}" role="menuitem">{% trans "Blog" %}</a></div>
+            </div>
+          </div>
+        </li>
+        <li><a href="{% url 'prices:index' %}">{% trans "Prices" %}</a></li>
+        <li class="has-mega">
+          <a href="{% url 'core:about' %}" aria-haspopup="true">{% trans "About" %} <span class="caret">▾</span></a>
+          <div class="mega mega-narrow" role="menu">
+            <a class="mega-link" href="{% url 'core:about' %}" role="menuitem">{% trans "About us" %}</a>
+            {% if clinic %}<a class="mega-link" href="{{ clinic.get_absolute_url }}#reviews" role="menuitem">⭐ {% trans "Patient reviews" %}</a>
+            <a class="mega-link" href="{{ clinic.get_absolute_url }}" role="menuitem">{% trans "Our clinic" %}</a>{% endif %}
+            <a class="mega-link" href="{% url 'clinics:list' %}" role="menuitem">{% trans "Clinics" %}</a>
+            <a class="mega-link" href="{% url 'core:contact' %}" role="menuitem">{% trans "Contact" %}</a>
+          </div>
+        </li>
+      </ul>
+      <div class="nav-actions">
+        <details class="lang">
+          <summary aria-label="{% trans 'Change language' %}">{% lang_flag lang_code %} <span>{{ lang_code|upper }}</span> <span class="caret">▾</span></summary>
+          <div class="lang-menu">
+            {% for l in lang_links %}
+            <a href="{{ l.url }}" hreflang="{{ l.code }}" lang="{{ l.code }}" data-track="lang-switch"{% if l.active %} aria-current="true"{% endif %}{% if not l.available %} class="unavailable"{% endif %}>{% lang_flag l.code %} {{ l.native }}</a>
+            {% endfor %}
+          </div>
+        </details>
+        <a href="{% url 'core:contact' %}" class="btn btn-primary btn-sm btn-shine" data-track="cta">
+          {% if persona.persona == "price" %}{% trans "Get a free quote" %}{% elif persona.persona == "ready" %}{% trans "Book now" %}{% elif persona.persona == "premium" %}{% trans "Private consultation" %}{% else %}{% trans "Free consultation" %}{% endif %}
+        </a>
+        <button class="nav-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="{% trans 'Menu' %}">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu">
+      <details><summary>{% trans "Treatments" %}</summary>
+        {% for t in nav.treatments %}<a href="{{ t.url }}">{{ t.icon }} {{ t.name }}</a>{% endfor %}
+        <a href="{% url 'treatments:list' %}">{% trans "All treatments" %} →</a></details>
+      <details><summary>{% trans "Packages" %}</summary>
+        <a href="{% url 'packages:index' %}">{% trans "Dental packages" %}</a>
+        {% for o in nav.origins %}<a href="{{ o.url }}">{{ o.code|flag }} {{ o.name }}</a>{% endfor %}</details>
+      <details><summary>{% trans "Guides" %}</summary>
+        {% for g in nav.guides.choose %}<a href="{{ g.url }}">{{ g.name }}</a>{% endfor %}
+        {% for g in nav.guides.places %}<a href="{{ g.url }}">{{ g.name }}</a>{% endfor %}
+        {% for g in nav.guides.practical %}<a href="{{ g.url }}">{{ g.name }}</a>{% endfor %}</details>
+      <a href="{% url 'prices:index' %}">{% trans "Prices" %}</a>
+      <a href="{% url 'core:about' %}">{% trans "About" %}</a>
+      {% if clinic %}<a href="{{ clinic.get_absolute_url }}#reviews">⭐ {% trans "Patient reviews" %}</a>{% endif %}
+      <a href="{% url 'core:contact' %}">{% trans "Contact" %}</a>
+      <div class="mobile-langs">{% for l in lang_links %}<a href="{{ l.url }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.active %} aria-current="true"{% endif %}>{% lang_flag l.code %} {{ l.code|upper }}</a>{% endfor %}</div>
+    </div>
+  </div>
+</header>

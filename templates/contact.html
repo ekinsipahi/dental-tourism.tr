@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<header class="page-head"><div class="wrap">
+  {% include "components/breadcrumb.html" %}
+  <span class="eyebrow">{% trans "Free consultation" %}</span>
+  <h1>{% trans "Get your free treatment plan" %}</h1>
+  <p class="lead">{% trans "Send us your details — and if you have one, a photo or X-ray via WhatsApp. The dentist replies personally within 24 hours." %}</p>
+</div></header>
+<section class="section"><div class="wrap layout-side">
+  <div class="card" style="padding:clamp(1.4rem,3vw,2.2rem)">{% include "components/contact_form.html" %}</div>
+  <aside class="sticky-side">
+    {% if wa_url %}<div class="side-cta"><h2>💬 WhatsApp</h2><p class="muted">{% trans "Fastest reply — usually within 30 minutes during clinic hours." %}</p><a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Chat on WhatsApp" %}</a></div>{% endif %}
+    {% if clinic %}<div class="side-cta"><h2>📍 {% trans "Clinic" %}</h2>
+      <address style="font-style:normal" class="muted">{{ clinic.name }}<br>{{ clinic.address }}<br><a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone">{{ clinic.phone }}</a>{% if clinic.email %}<br><a href="mailto:{{ clinic.email }}">{{ clinic.email }}</a>{% endif %}</address>
+      {% if clinic.maps_embed_url %}<iframe src="{{ clinic.maps_embed_url }}" title="{% trans 'Map' %}" style="width:100%;height:220px;border:0;border-radius:10px;margin-top:1rem" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>{% endif %}
+    </div>{% endif %}
+    <div class="side-cta"><h2>✅ {% trans "Why is it free?" %}</h2><ul class="check-list"><li>{% trans "No commitment required" %}</li><li>{% trans "Treatment plan and fixed price" %}</li><li>{% trans "Reply within 24 hours" %}</li></ul></div>
+  </aside>
+</div></section>
+{% endblock %}

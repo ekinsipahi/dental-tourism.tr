@@ -1,0 +1,241 @@
+from django.conf import settings
+from django.contrib import messages
+from django.http import HttpResponse
+from django.shortcuts import redirect, render
+from django.urls import reverse
+from django.utils.translation import get_language, gettext as _
+from django.views.decorators.cache import cache_page
+from django.views.decorators.http import require_GET
+
+from apps.clinics.models import Review
+from apps.localization.models import localize_list, with_translations
+from apps.treatments.models import Treatment
+
+from .forms import ContactForm
+from .seo import page_meta, Seo, absolute, alternates_for, clinic_schema, faq_schema, organization_schema, website_schema
+
+
+def _home_faq(clinic):
+    years = clinic.years_experience if clinic and clinic.years_experience else None
+    return [
+        {"question": _("Is it safe to get dental treatment in Turkey?"),
+         "answer": _("Yes, when you choose a licensed clinic with experienced dentists and certified materials. "
+                     "Ask for the dentist's credentials, the brands of implants and crowns, and a written "
+                     "treatment plan before you travel.")},
+        {"question": _("How much does dental treatment in Istanbul cost?"),
+         "answer": _("Very affordable compared with Western Europe — with the same materials and techniques. "
+                     "We do not publish one-size-fits-all prices: call us or send photos on WhatsApp and you "
+                     "receive a fixed written quote before treatment starts.")},
+        {"question": _("How long do I need to stay in Istanbul?"),
+         "answer": _("It depends on the treatment: fillings, cleaning and composite veneers take 1–3 days, "
+                     "crowns and porcelain veneers about 5–7 days, implants usually two visits a few months apart.")},
+        {"question": _("Do you speak my language?"),
+         "answer": _("We communicate with international patients in English and other languages, and you can "
+                     "message the dentist directly on WhatsApp before, during and after your treatment.")},
+    ] + ([{"question": _("How experienced is the dentist?"),
+           "answer": _("Our lead dentist has %(years)s years of clinical experience.") % {"years": years}}]
+         if years else [])
+
+
+HOME_SECTIONS = ["hero", "treatments", "reviews", "how", "clinic-search", "contact", "faq", "cta"]
+
+
+def home_sections():
+    """Ana sayfa bölüm sırası/görünürlüğü — admin'de 'home-<bölüm>' content block'larının order/visible alanları."""
+    from .models import ContentBlock
+
+    blocks = {b.key: b for b in ContentBlock.objects.filter(key__in=[f"home-{n}" for n in HOME_SECTIONS])}
+    out = []
+    for i, name in enumerate(HOME_SECTIONS):
+        b = blocks.get(f"home-{name}")
+        if b is not None and not b.visible:
+            continue
+        order = -1 if name == "hero" else (b.order if b is not None and b.order else (i + 1) * 10)
+        out.append({"name": name, "order": order, "template": f"home/sections/{name}.html"})
+    return sorted(out, key=lambda x: x["order"])
+
+
+def home(request):
+    from apps.clinics.models import Clinic
+
+    lang = get_language()
+    clinic = Clinic.primary()
+    treatments = localize_list(with_translations(
+        Treatment.objects.filter(is_active=True, is_featured=True), lang), lang)
+    # Tüm yayındaki kliniklerden yorumlar (öne çıkanlar önce) — çok klinikli yapıda karışık gelir
+    from apps.clinics.models import Clinic as _Clinic
+
+    live = _Clinic.objects.published()
+    reviews = (Review.objects.filter(is_published=True, clinic__in=live).exclude(text="")
+               .select_related("clinic", "treatment").order_by("-is_featured", "order", "-review_date")[:12])
+    videos = (Review.objects.filter(is_published=True, clinic__in=live).exclude(video_id="")
+              .select_related("clinic", "treatment").order_by("-is_featured", "order")[:6])
+    faq = _home_faq(clinic)
+    from .models import ContentBlock
+
+    block = ContentBlock.objects.filter(key="home-faq", is_active=True).first()
+    if block:
+        loc = block.localized(lang)
+        if not loc.is_fallback and loc.items:
+            faq = loc.items  # Admin'den düzenlenen SSS (FAQPage schema'sı da buradan üretilir)
+    from apps.clinics.search import ClinicSearchForm
+
+    search_form = ClinicSearchForm(lang=lang)
+    slides = list(clinic.images.filter(show_in_hero=True)[:5]) if clinic else []
+    cases = list(clinic.cases.filter(is_published=True, patient_consent=True)[:2]) if clinic else []
+
+    _meta_home = page_meta("home", _("Dental Tourism Istanbul — Implants, Veneers & Crowns in Turkey"),
+                           _("Ethical dental treatment in Istanbul with an experienced dentist. Implants, veneers, "
+                      "zirconia crowns — very affordable, fixed written quote. Free WhatsApp consultation."))
+    seo = Seo(
+        title=_meta_home[0],
+        description=_meta_home[1],
+        canonical=absolute(request.path),
+        alternates=alternates_for("core:home"),
+        append_site_name=True,
+        schema=[s for s in [organization_schema(), website_schema(),
+                            clinic_schema(clinic, url="/") if clinic else None, faq_schema(faq)] if s],
+    )
+    return render(request, "home.html", {
+        "seo": seo, "treatments": treatments, "reviews": reviews, "videos": videos, "faq": faq,
+        "form": ContactForm(), "page_type": "home", "search_form": search_form,
+        "home_sections": home_sections(), "multi_clinic": live.count() > 1, "slides": slides, "cases": cases,
+    })
+
+
+def about(request):
+    from apps.clinics.models import Clinic
+
+    clinic = Clinic.primary()
+    doctors = list(clinic.doctors.filter(is_active=True)) if clinic else []
+    _meta_about = page_meta("about", _("About Us — Ethical Dental Care in Istanbul"),
+                           _("Meet the dentist and the clinic behind dentaltourism.tr: decades of clinical experience, "
+                      "transparent diagnosis and only the treatment you actually need."))
+    seo = Seo(
+        title=_meta_about[0],
+        description=_meta_about[1],
+        canonical=absolute(request.path),
+        alternates=alternates_for("core:about"),
+        breadcrumbs=[(_("Home"), reverse("core:home")), (_("About us"), request.path)],
+    )
+    from apps.seo.common import pseo_context
+
+    ctx = pseo_context(request, offset=0, show_cases=True, photos=8)
+    photos = list(clinic.images.all()) if clinic else []
+    ctx.update({"seo": seo, "doctors": [d.localized() for d in doctors], "page_type": "about",
+                "about_photos": photos[:3], "story_photos": photos[3:5] or photos[:2],
+                "clinic_loc": clinic.localized() if clinic else None})
+    return render(request, "about.html", ctx)
+
+
+def contact(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            from apps.tracking.service import create_lead
+
+            cd = form.cleaned_data
+            create_lead(request, name=cd["name"], phone=cd["phone"], email=cd.get("email", ""),
+                        message=cd.get("message", ""), page=cd.get("page") or request.path,
+                        language=get_language(), treatment=cd.get("treatment"))
+            return redirect(reverse("core:thanks"))
+        messages.error(request, _("Please check the form and try again."))
+    else:
+        form = ContactForm()
+    _meta_contact = page_meta("contact", _("Free Consultation — Contact Our Dentist in Istanbul"),
+                           _("Send your X-ray or photos and get a free treatment plan and fixed price quote. "
+                      "Reply within 24 hours. WhatsApp, phone or form."))
+    seo = Seo(
+        title=_meta_contact[0],
+        description=_meta_contact[1],
+        canonical=absolute(request.path),
+        alternates=alternates_for("core:contact"),
+    )
+    return render(request, "contact.html", {"seo": seo, "form": form, "page_type": "contact"})
+
+
+def thanks(request):
+    seo = Seo(title=_("Thank you — we will contact you shortly"), robots="noindex,follow",
+              canonical=absolute(request.path))
+    return render(request, "thanks.html", {"seo": seo, "page_type": "thanks"})
+
+
+def privacy(request):
+    seo = Seo(title=_("Privacy Policy"), description=_("How we process and protect your personal data (GDPR / KVKK)."),
+              canonical=absolute(request.path), alternates=alternates_for("core:privacy"),
+              robots="noindex,follow")
+    return render(request, "privacy.html", {"seo": seo, "page_type": "privacy"})
+
+
+@require_GET
+@cache_page(60 * 60)
+def robots_txt(request):
+    lines = [
+        "User-agent: *",
+        "Disallow: /admin/",
+        "Disallow: /api/",
+        "Disallow: /*?persona=",
+        "Disallow: /*contact/thank-you/",
+        "",
+        f"Sitemap: {settings.SITE_URL}/sitemap.xml",
+    ]
+    return HttpResponse("\n".join(lines) + "\n", content_type="text/plain")
+
+
+@require_GET
+@cache_page(60 * 60)
+def llms_txt(request):
+    """AI arama motorları için site özeti (llms.txt önerisi)."""
+    from apps.clinics.models import Clinic
+
+    clinic = Clinic.primary()
+    lines = [f"# {settings.SITE_NAME}", "",
+             "> Dental tourism in Istanbul, Turkey: implants, veneers, crowns and full-mouth restorations "
+             "for international patients, in 16 languages.", ""]
+    if clinic:
+        lines += [f"- Clinic: {clinic.name}, {clinic.address}", f"- Phone/WhatsApp: {clinic.phone}", ""]
+    lines += ["## Main pages"]
+    for t in Treatment.objects.filter(is_active=True):
+        lines.append(f"- [{t.name}]({absolute(t.get_absolute_url())})")
+    lines += ["", f"Sitemap: {settings.SITE_URL}/sitemap.xml"]
+    return HttpResponse("\n".join(lines) + "\n", content_type="text/plain; charset=utf-8")
+
+
+def page_not_found(request, exception=None):
+    seo = Seo(title=_("Page not found"), robots="noindex,follow")
+    return render(request, "404.html", {"seo": seo, "page_type": "404"}, status=404)
+
+
+# ── Favicon / manifest (Google arama sonuçlarındaki site ikonu için kök dizinden erişilebilir olmalı) ──
+def favicon(request):
+    from django.contrib.staticfiles.storage import staticfiles_storage
+    from django.shortcuts import redirect
+
+    from .models import SiteSettings
+
+    site = SiteSettings.load()
+    if site.favicon:
+        return redirect(site.favicon.url, permanent=False)
+    return redirect(staticfiles_storage.url("favicon.ico"), permanent=True)
+
+
+def apple_touch_icon(request):
+    from django.contrib.staticfiles.storage import staticfiles_storage
+    from django.shortcuts import redirect
+
+    return redirect(staticfiles_storage.url("icons/apple-touch-icon.png"), permanent=True)
+
+
+@cache_page(60 * 60 * 24)
+def webmanifest(request):
+    import json
+
+    from django.contrib.staticfiles.storage import staticfiles_storage
+
+    data = {
+        "name": settings.SITE_NAME, "short_name": settings.SITE_NAME, "start_url": "/", "display": "standalone",
+        "background_color": "#070d10", "theme_color": "#070d10",
+        "icons": [{"src": staticfiles_storage.url(f"icons/favicon-{n}.png"), "sizes": f"{n}x{n}", "type": "image/png"}
+                  for n in (48, 96, 144, 192, 512)],
+    }
+    return HttpResponse(json.dumps(data), content_type="application/manifest+json")

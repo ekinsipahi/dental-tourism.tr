@@ -1,0 +1,16 @@
+{% load i18n %}
+<form method="post" action="{% url 'core:contact' %}" class="form" data-track-section="contact" novalidate>
+  {% csrf_token %}
+  <input type="hidden" name="page" value="{{ request.path }}">
+  <div class="hp" aria-hidden="true">{{ form.website }}</div>
+  {% for field in form %}{% if field.name != "website" and field.name != "page" %}
+    {% if field.name == "consent" %}
+    <label class="checkbox">{{ field }} <span>{{ field.label }}</span></label>
+    {% else %}
+    <div><label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %} *{% endif %}</label>{{ field }}</div>
+    {% endif %}
+    {{ field.errors }}
+  {% endif %}{% endfor %}
+  <button type="submit" class="btn btn-primary btn-lg" data-track="form">{% trans "Send — we will get back to you" %}</button>
+  <p class="faint" style="margin:0">{% trans "Your data is protected under GDPR / KVKK and only used to answer your request." %}</p>
+</form>

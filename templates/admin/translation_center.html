@@ -1,0 +1,21 @@
+{% extends "admin/base_site.html" %}
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">Ana sayfa</a> › Çeviri merkezi</div>{% endblock %}
+{% block content %}
+<div id="content-main">
+  {% if not api_ready %}<div class="dt-alert warn">⚠️ ANTHROPIC_API_KEY tanımlı değil.</div>{% endif %}
+  <p>Her hücre: o dilde yayında olan kayıt sayısı / toplam. Yeşil = tamamı çevrilmiş. Kaynak dil her zaman sayılır.
+     Çeviriler kaynak içerik değiştikçe otomatik yenilenir; insan tarafından düzeltilen (reviewed) çeviriler ezilmez.</p>
+  <form method="post">{% csrf_token %}<button class="button default" type="submit">🌍 Tüm eksik çevirileri başlat</button></form>
+  <div class="module" style="margin-top:16px;overflow-x:auto">
+    <table class="dt-matrix" style="width:100%">
+      <tr><th style="text-align:left">İçerik</th><th>Toplam</th>{% for l in langs %}<th>{{ l|upper }}</th>{% endfor %}<th></th></tr>
+      {% for row in table %}
+      <tr><td style="text-align:left">{{ row.name }}</td><td>{{ row.total }}</td>
+        {% for c in row.cells %}<td class="{% if c.full %}full{% elif c.n %}partial{% else %}none{% endif %}">{{ c.n }}</td>{% endfor %}
+        <td><form method="post" style="margin:0">{% csrf_token %}<input type="hidden" name="model" value="{{ row.label }}"><button class="button" type="submit">Çevir</button></form></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# Veritabanı: Supabase PostgreSQL (DATABASE_URL, session pooler). Redis/Celery YOK.
+# Gizli değerler (sync: false) Render panelinden girilir — repoya YAZILMAZ.
+services:
+  - type: web
+    name: dental-tourism
+    runtime: python
+    region: frankfurt
+    plan: starter
+    buildCommand: ./build.sh
+    startCommand: gunicorn dental_tourism.wsgi:application --workers 2 --threads 4 --timeout 60 --access-logfile -
+    healthCheckPath: /robots.txt
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
+      - key: DB_SSLMODE
+        value: require
+      - key: ALLOWED_HOSTS
+        value: dentaltourism.tr,www.dentaltourism.tr,dental-tourism.tr,www.dental-tourism.tr
+      - key: CSRF_TRUSTED_ORIGINS
+        value: https://dentaltourism.tr,https://www.dentaltourism.tr,https://dental-tourism.tr,https://www.dental-tourism.tr
+      - key: SITE_URL
+        value: https://dentaltourism.tr
+      - key: SITE_NAME
+        value: dentaltourism.tr
+      - key: SITE_DOMAIN
+        value: dentaltourism.tr
+      - key: DEFAULT_LANGUAGE
+        value: en
+      - key: PRIMARY_CLINIC_SLUG
+        value: dr-devrim-sipahi
+      - key: PROFILE_SITES
+        value: https://drdevrim.com|root,https://devrimbirikensipahi.com.tr|en
+      - key: PARTNER_AGENCY_URL
+        value: https://sterragency.com/dental-tourism
+      - key: BACKGROUND_WORKERS
+        value: "2"
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: CONTENT_MACHINE_MODEL
+        value: claude-opus-5-5
+
+  # Zamanlanmış işler (Render Cron Job) — Redis/Celery yerine
+  - type: cron
+    name: dental-tourism-hourly
+    runtime: python
+    region: frankfurt
+    plan: starter
+    schedule: "15 * * * *"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python manage.py periodic --job translations --job conversions
+    envVars:
+      - fromGroup: dental-tourism-shared
+  - type: cron
+    name: dental-tourism-daily
+    runtime: python
+    region: frankfurt
+    plan: starter
+    schedule: "0 3 * * *"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python manage.py periodic --job related --job cleanup --job persona
+    envVars:
+      - fromGroup: dental-tourism-shared
+
+envVarGroups:
+  - name: dental-tourism-shared
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: DATABASE_URL
+        sync: false
+      - key: DB_SSLMODE
+        value: require
+      - key: SECRET_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false

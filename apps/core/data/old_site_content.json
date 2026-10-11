@@ -1,0 +1,1030 @@
+{
+ "home_faq": [
+  {
+   "q": {
+    "tr": "Türkiye'de diş turizmi güvenli mi?",
+    "en": "Is dental tourism in Turkey safe?",
+    "de": "Ist Zahnmedizintourismus in der Türkei sicher?",
+    "nl": "Is tandtoerisme in Turkije veilig?"
+   },
+   "a": {
+    "tr": "Evet. Lisanslı, denetlenen kliniklerde uluslararası sterilizasyon ve tedavi standartları eksiksiz uygulanır. Türk Tabipleri Birliği ve Sağlık Bakanlığı denetimleri düzenli yapılır. Kliniğimiz bu denetimleri her yıl başarıyla geçmektedir.",
+    "en": "Yes. International sterilization and treatment standards are fully applied in licensed, inspected clinics. Inspections by the Turkish Medical Association and the Ministry of Health are conducted regularly. Our clinic passes these inspections successfully every year.",
+    "de": "Ja. In lizenzierten, kontrollierten Kliniken werden internationale Sterilisations- und Behandlungsstandards vollständig eingehalten. Kontrollen durch die Türkische Ärztekammer und das Gesundheitsministerium werden regelmäßig durchgeführt. Unsere Klinik besteht diese Kontrollen jedes Jahr erfolgreich.",
+    "nl": "Ja. In erkende, gecontroleerde klinieken worden internationale sterilisatie- en behandelingsnormen volledig nageleefd. De Turkse Artsenvereniging en het Ministerie van Volksgezondheid voeren regelmatig inspecties uit. Onze kliniek doorstaat deze inspecties elk jaar met succes."
+   }
+  },
+  {
+   "q": {
+    "tr": "Diş tedavileri neden Türkiye'de daha uygun fiyatlı?",
+    "en": "Why are dental treatments more affordable in Turkey?",
+    "de": "Warum sind Zahnbehandlungen in der Türkei günstiger?",
+    "nl": "Waarom zijn tandheelkundige behandelingen goedkoper in Turkije?"
+   },
+   "a": {
+    "tr": "Türkiye'deki operasyon maliyetleri ve döviz kuru farkı, Avrupa ülkelerine kıyasla ciddi bir avantaj sağlar. Kullanılan malzeme kalitesi aynı ya da eşdeğer olmasına rağmen toplam maliyet %50–70 daha düşük olabilir. Bu fark size hem uçak hem konaklama masraflarınızı karşılayacak düzeyde olabilir.",
+    "en": "Operating costs and the exchange rate difference in Turkey provide a significant advantage compared to European countries. Although the quality of materials used is the same or equivalent, the total cost can be %50–70 lower. This difference may be enough to cover both your flight and accommodation costs.",
+    "de": "Die Betriebskosten in der Türkei und der Wechselkursvorteil bieten einen erheblichen Vorteil gegenüber europäischen Ländern. Obwohl die Materialqualität gleich oder gleichwertig ist, können die Gesamtkosten %50–70 niedriger sein. Diese Ersparnis kann ausreichen, um sowohl Flug- als auch Unterkunftskosten zu decken.",
+    "nl": "De operationele kosten in Turkije en het valutaverschil bieden een aanzienlijk voordeel ten opzichte van Europese landen. Hoewel de kwaliteit van de gebruikte materialen gelijk of gelijkwaardig is, kunnen de totale kosten %50–70 lager zijn. Dit verschil kan groot genoeg zijn om zowel uw vlieg- als verblijfskosten te dekken."
+   }
+  },
+  {
+   "q": {
+    "tr": "Tedavi için İstanbul'da kaç gün kalmam gerekir?",
+    "en": "How many days do I need to stay in Istanbul for treatment?",
+    "de": "Wie viele Tage muss ich für die Behandlung in Istanbul bleiben?",
+    "nl": "Hoeveel dagen moet ik in Istanbul blijven voor de behandeling?"
+   },
+   "a": {
+    "tr": "Çoğu tedavi 3 ila 7 gün arasında tamamlanır. İmplant için ilk seans 2–3 gün, implant üstü protez için ise 3–6 ay sonra kısa bir ikinci ziyaret yeterlidir. Zirkonyum kaplama veya gülüş tasarımı genellikle 5–7 günde tamamlanır. Ön görüşmemizde size özel bir zaman çizelgesi hazırlarız.",
+    "en": "Most treatments are completed in 3 to 7 days. For implants, the first session takes 2–3 days; for the prosthesis on the implant, a short second visit after 3–6 months is sufficient. Zirconia crowns or smile design are usually completed in 5–7 days. In our pre-consultation we prepare a personalised timeline for you.",
+    "de": "Die meisten Behandlungen werden in 3 bis 7 Tagen abgeschlossen. Für ein Implantat sind 2–3 Tage für die erste Sitzung ausreichend; für die Prothetik auf dem Implantat genügt nach 3–6 Monaten ein kurzer zweiter Besuch. Zirkonkronen oder Smile Design werden in der Regel in 5–7 Tagen abgeschlossen. Im Vorgespräch erstellen wir einen individuellen Zeitplan für Sie.",
+    "nl": "De meeste behandelingen zijn voltooid binnen 3 tot 7 dagen. Voor een implantaat zijn de eerste sessie 2–3 dagen en een kort tweede bezoek na 3–6 maanden voor de prothese voldoende. Zirkoonkronen of smile design worden doorgaans in 5–7 dagen afgerond. Tijdens ons voorgesprek stellen wij een persoonlijk tijdschema voor u op."
+   }
+  },
+  {
+   "q": {
+    "tr": "Tedavi sonrası takip nasıl yapılıyor?",
+    "en": "How is follow-up care handled after treatment?",
+    "de": "Wie wird die Nachsorge nach der Behandlung durchgeführt?",
+    "nl": "Hoe verloopt de nazorg na de behandeling?"
+   },
+   "a": {
+    "tr": "Ülkenize döndükten sonra WhatsApp ve e-posta üzerinden takip devam eder. Gerekirse ülkenizdeki yerel bir diş hekimiyle koordinasyon sağlarız. Acil bir durum oluşması halinde video görüşme ile yönlendirme yapılır. Bizimle bir kez çalışan hasta, hiçbir zaman yalnız kalmaz.",
+    "en": "After you return to your country, follow-up continues via WhatsApp and email. If needed, we coordinate with a local dentist in your country. In case of an emergency, guidance is provided via video call. A patient who has worked with us once is never left alone.",
+    "de": "Nach Ihrer Rückkehr in Ihr Land wird die Nachsorge per WhatsApp und E-Mail fortgesetzt. Bei Bedarf koordinieren wir mit einem lokalen Zahnarzt in Ihrem Land. Im Notfall erfolgt eine Beratung per Videogespräch. Ein Patient, der einmal mit uns zusammengearbeitet hat, ist nie auf sich allein gestellt.",
+    "nl": "Na uw terugkeer naar uw eigen land gaat de opvolging verder via WhatsApp en e-mail. Indien nodig zorgen wij voor coördinatie met een lokale tandarts in uw land. In geval van een noodsituatie wordt u begeleid via een videogesprek. Een patiënt die eenmaal met ons heeft samengewerkt, staat nooit alleen."
+   }
+  },
+  {
+   "q": {
+    "tr": "Fiyat teklifi nasıl alırım?",
+    "en": "How do I get a price quote?",
+    "de": "Wie erhalte ich ein Preisangebot?",
+    "nl": "Hoe vraag ik een prijsofferte aan?"
+   },
+   "a": {
+    "tr": "Formu doldurmanız veya bizi aramanız yeterli. Mevcut röntgen ve fotoğraflarınızı paylaşırsanız, İstanbul'a gelmeden önce detaylı bir ön plan ve fiyat teklifi sunabiliriz. Gizli maliyet yoktur — başta söylenen fiyat, sonda ödenen fiyattır.",
+    "en": "Simply fill out the form or give us a call. If you share your existing X-rays and photos, we can provide a detailed preliminary plan and price quote before you travel to Istanbul. There are no hidden costs — the price quoted at the start is the price paid at the end.",
+    "de": "Es reicht aus, das Formular auszufüllen oder uns anzurufen. Wenn Sie Ihre vorhandenen Röntgenbilder und Fotos teilen, können wir vor Ihrer Anreise nach Istanbul einen detaillierten Vorabplan und ein Preisangebot erstellen. Es gibt keine versteckten Kosten – der am Anfang genannte Preis ist der am Ende bezahlte Preis.",
+    "nl": "Het is voldoende om het formulier in te vullen of ons te bellen. Als u uw bestaande röntgenfoto's en foto's deelt, kunnen wij een gedetailleerd voorplan en prijsofferte aanbieden voordat u naar Istanbul komt. Er zijn geen verborgen kosten — de prijs die vooraf wordt genoemd, is de prijs die u aan het einde betaalt."
+   }
+  }
+ ],
+ "clinic_faq": [
+  {
+   "q": {
+    "tr": "Devrim Sipahi Diş kliniğini nerede?",
+    "en": "Where is Devrim Sipahi Dental Clinic located?",
+    "de": "Wo befindet sich die Zahnklinik von Devrim Sipahi?",
+    "nl": "Waar is de tandartskliniek van Devrim Sipahi?"
+   },
+   "a": {
+    "tr": "Kliniğimiz Şişli Merkezdedir. Adresimiz: Abide-i Hürriyet Caddesi No:148, Kat:4, Daire:11 – İstanbul.",
+    "en": "Our clinic is located in Şişli Centre. Our address: Abide-i Hürriyet Caddesi No:148, Floor:4, Apt:11 – Istanbul.",
+    "de": "Unsere Klinik befindet sich im Zentrum von Şişli. Unsere Adresse: Abide-i Hürriyet Caddesi Nr. 148, Etage 4, Wohnung 11 – Istanbul, Türkei.",
+    "nl": "Onze kliniek bevindt zich in het centrum van Istanbul Şişli. Ons adres: Abide-i Hürriyet Caddesi No:148, Verdieping:4, Appartement:11 – Istanbul."
+   }
+  },
+  {
+   "q": {
+    "tr": "Hafta sonu açık diş kliniği misiniz?",
+    "en": "Are you open on weekends?",
+    "de": "Haben Sie am Wochenende geöffnet?",
+    "nl": "Is de tandartskliniek in het weekend geopend?"
+   },
+   "a": {
+    "tr": "Evet, haftanın 7 günü açığız. Pazar dahil hizmet veriyoruz.",
+    "en": "Yes, we are open 7 days a week. We provide service including Sundays.",
+    "de": "Ja, wir sind 7 Tage die Woche geöffnet. Wir bieten auch sonntags Dienstleistungen an.",
+    "nl": "Ja, wij zijn 7 dagen per week geopend. Ook op zondag zijn wij beschikbaar."
+   }
+  },
+  {
+   "q": {
+    "tr": "Randevusuz diş hastası kabul ediliyor mu?",
+    "en": "Do you accept walk-in patients?",
+    "de": "Nehmen Sie Patienten ohne Termin an?",
+    "nl": "Worden er ook patiënten zonder afspraak ontvangen?"
+   },
+   "a": {
+    "tr": "Randevusuz gelebilirsiniz. Sadece öncesinde telefonla arayıp haber vermeniz gerekir.",
+    "en": "You can come without an appointment. You just need to call and inform us in advance.",
+    "de": "Sie können ohne Termin kommen. Sie müssen uns nur vorher telefonisch informieren.",
+    "nl": "U kunt zonder afspraak langskomen. U moet alleen van tevoren bellen om het te melden."
+   }
+  },
+  {
+   "q": {
+    "tr": "Diş randevusu nasıl alabilirim?",
+    "en": "How can I make a dental appointment?",
+    "de": "Wie kann ich einen Zahnarzttermin vereinbaren?",
+    "nl": "Hoe kan ik een afspraak maken bij de tandarts?"
+   },
+   "a": {
+    "tr": "Web sitemizden online randevu formu doldurarak, WhatsApptan yazarak veya bizi arayarak kolayca randevu alabilirsiniz.",
+    "en": "You can easily make an appointment by filling out the online form on our website, messaging us on WhatsApp, or calling us.",
+    "de": "Sie können ganz einfach einen Termin vereinbaren, indem Sie das Online-Formular auf unserer Website ausfüllen, uns über WhatsApp schreiben oder uns anrufen.",
+    "nl": "U kunt gemakkelijk een afspraak maken door het online afspraakformulier op onze website in te vullen, via WhatsApp te schrijven of ons te bellen."
+   }
+  },
+  {
+   "q": {
+    "tr": "WhatsApptan diş randevusu alabilir miyim?",
+    "en": "Can I book a dental appointment via WhatsApp?",
+    "de": "Kann ich über WhatsApp einen Zahnarzttermin vereinbaren?",
+    "nl": "Kan ik via WhatsApp een afspraak bij de tandarts maken?"
+   },
+   "a": {
+    "tr": "Evet, WhatsApptan hızlıca iletişime geçebilir ve randevu oluşturabilirsiniz.",
+    "en": "Yes, you can quickly get in touch via WhatsApp and create an appointment.",
+    "de": "Ja, Sie können uns schnell über WhatsApp kontaktieren und einen Termin vereinbaren.",
+    "nl": "Ja, u kunt snel contact opnemen via WhatsApp en een afspraak maken."
+   }
+  },
+  {
+   "q": {
+    "tr": "Acil durumlarda müdahale ediyor musunuz?",
+    "en": "Do you handle emergency cases?",
+    "de": "Behandeln Sie Notfälle?",
+    "nl": "Behandelt u spoedgevallen?"
+   },
+   "a": {
+    "tr": "Sabah erken saatlerde bize ulaşırsanız, acil ağrılı vakalara öncelik tanıyoruz.",
+    "en": "If you reach us in the early morning hours, we give priority to emergency painful cases.",
+    "de": "Wenn Sie uns früh am Morgen erreichen, priorisieren wir akute Schmerzfälle.",
+    "nl": "Als u ons vroeg in de ochtend bereikt, geven wij prioriteit aan spoedgevallen met pijn."
+   }
+  },
+  {
+   "q": {
+    "tr": "Ne tür tedaviler yapılıyor?",
+    "en": "What types of treatments are performed?",
+    "de": "Welche Arten von Behandlungen werden durchgeführt?",
+    "nl": "Welke soorten behandelingen worden uitgevoerd?"
+   },
+   "a": {
+    "tr": "Kanal tedavisi, dolgu, çekim, implant, estetik işlemler ve ortodonti dışında tüm işlemler dahil olacak şekilde genel diş hekimliği hizmeti veriyoruz çocuk ve bebek hastaları dahi kabul ediyoruz. Ama detay için muayene gerekir.",
+    "en": "We provide general dentistry services including root canal treatment, fillings, extractions, implants, aesthetic procedures and all procedures except orthodontics. We even accept child and baby patients. But an examination is required for details.",
+    "de": "Wir bieten allgemeine Zahnheilkunde, einschließlich Wurzelkanalbehandlung, Füllungen, Extraktionen, Implantate, ästhetische Behandlungen und alle Verfahren außer Kieferorthopädie. Wir behandeln auch Kinder und Babys. Für Details ist jedoch eine Untersuchung erforderlich.",
+    "nl": "Wij bieden algemene tandheelkundige diensten aan, inclusief wortelkanaalbehandeling, vullingen, extracties, implantaten, esthetische behandelingen en met uitzondering van orthodontie. Wij behandelen ook kinderen en baby's. Voor details is echter een onderzoek nodig."
+   }
+  },
+  {
+   "q": {
+    "tr": "Hijyen konusunda nasıl önlem alıyorsunuz?",
+    "en": "What hygiene precautions do you take?",
+    "de": "Welche Hygienemaßnahmen ergreifen Sie?",
+    "nl": "Welke hygiënemaatregelen neemt u?"
+   },
+   "a": {
+    "tr": "Her işlem sonrası cihazlar sterilize edilir, zeminler silinir. Sterilizasyona maksimum önem verilen bir kliniktir.",
+    "en": "Devices are sterilized after each procedure, floors are cleaned. It is a clinic where maximum importance is given to sterilization.",
+    "de": "Nach jedem Eingriff werden die Geräte sterilisiert und die Böden gereinigt. Unsere Klinik legt größten Wert auf Sterilisation.",
+    "nl": "Na elke behandeling worden de apparaten gesteriliseerd en worden de vloeren schoongemaakt. Dit is een kliniek waar maximaal belang wordt gehecht aan sterilisatie."
+   }
+  },
+  {
+   "q": {
+    "tr": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
+    "en": "What payment methods do you accept?",
+    "de": "Welche Zahlungsmethoden akzeptieren Sie?",
+    "nl": "Welke betaalmethoden accepteert u?"
+   },
+   "a": {
+    "tr": "Nakit ve kredi kartı ile ödeme kabul ediyoruz.",
+    "en": "We accept cash and credit card payments.",
+    "de": "Wir akzeptieren Barzahlung und Kreditkartenzahlung.",
+    "nl": "Wij accepteren contante betalingen en creditcards."
+   }
+  }
+ ],
+ "treatment_faq": {
+  "root-canal": [
+   {
+    "q": {
+     "tr": "Çok ağrıyor ama korkuyorum, iğne yapılıyor mu?",
+     "en": "It hurts a lot but I'm scared, will there be an injection?",
+     "de": "Es tut sehr weh, aber ich habe Angst, wird gespritzt?",
+     "nl": "Het doet veel pijn maar ik ben bang, wordt er een injectie gegeven?"
+    },
+    "a": {
+     "tr": "Evet, işlem öncesi lokal anestezi uygulanır. Hiçbir şey hissetmezsiniz.",
+     "en": "Yes, local anesthesia is applied before the procedure. You won't feel anything.",
+     "de": "Ja, vor dem Eingriff wird eine Lokalanästhesie durchgeführt. Sie werden nichts spüren.",
+     "nl": "Ja, er wordt lokale anesthesie toegepast voor de behandeling. U zult niets voelen."
+    }
+   },
+   {
+    "q": {
+     "tr": "Diş ağrıyor ama çekmek istemiyorum, başka çözüm var mı?",
+     "en": "My tooth hurts but I don't want it extracted, is there another solution?",
+     "de": "Mein Zahn schmerzt, aber ich möchte ihn nicht ziehen lassen, gibt es eine andere Lösung?",
+     "nl": "Mijn tand doet pijn maar ik wil hem niet laten trekken, is er een andere oplossing?"
+    },
+    "a": {
+     "tr": "Evet, kanal tedavisiyle dişi kurtarma şansımız yüksek. İlk muayene ücretsizdir",
+     "en": "Yes, we have a high chance of saving the tooth with root canal treatment. The first examination is free",
+     "de": "Ja, wir haben gute Chancen, den Zahn durch eine Wurzelbehandlung zu retten. Die Erstuntersuchung ist kostenlos.",
+     "nl": "Ja, de kans om de tand te redden met een wortelkanaalbehandeling is groot. Het eerste onderzoek is gratis"
+    }
+   },
+   {
+    "q": {
+     "tr": "Kanal tedavisi mi çekim mi daha mantıklı?",
+     "en": "Which makes more sense, root canal treatment or extraction?",
+     "de": "Was ist sinnvoller, eine Wurzelbehandlung oder eine Extraktion?",
+     "nl": "Wat is logischer, een wortelkanaalbehandeling of extractie?"
+    },
+    "a": {
+     "tr": "Diş kurtarılabiliyorsa kanal tedavisi her zaman daha iyidir. Bize ulaşırsanız sizin için uygun olanı söyleyelim.",
+     "en": "If the tooth can be saved, root canal treatment is always better. If you contact us, we'll tell you what's suitable for you.",
+     "de": "Wenn der Zahn gerettet werden kann, ist eine Wurzelbehandlung immer besser. Wenn Sie uns kontaktieren, werden wir Ihnen sagen, was für Sie geeignet ist.",
+     "nl": "Als de tand gered kan worden, is een wortelkanaalbehandeling altijd beter. Als u contact met ons opneemt, vertellen we u wat geschikt is voor u."
+    }
+   },
+   {
+    "q": {
+     "tr": "Kanal tedavisi şart mı yoksa dolgu yeterli olur mu?",
+     "en": "Is root canal treatment necessary or is filling sufficient?",
+     "de": "Ist eine Wurzelkanalbehandlung notwendig oder reicht eine Füllung?",
+     "nl": "Is een wortelkanaalbehandeling noodzakelijk of is een vulling voldoende?"
+    },
+    "a": {
+     "tr": "Sinire ulaşan çürüklerde kanal gerekir. Karar muayene sonrası netleşir.",
+     "en": "Root canal is needed for cavities that reach the nerve. The decision becomes clear after examination.",
+     "de": "Bei Karies, die den Nerv erreicht hat, ist eine Wurzelbehandlung erforderlich. Die Entscheidung wird nach der Untersuchung getroffen.",
+     "nl": "Bij cariës die de zenuw bereikt, is een wortelkanaalbehandeling nodig. De beslissing wordt duidelijk na het onderzoek."
+    }
+   },
+   {
+    "q": {
+     "tr": "Soğuk sıcak hassasiyetim var, bu kanal ihtimali mi?",
+     "en": "I have hot and cold sensitivity, does this mean I need a root canal?",
+     "de": "Ich habe Empfindlichkeit gegen Kälte und Hitze, bedeutet das eine Wurzelbehandlung?",
+     "nl": "Ik heb gevoeligheid voor koud en warm, is dit een indicatie voor een wortelkanaalbehandeling?"
+    },
+    "a": {
+     "tr": "Sıcak-soğuk hassasiyeti sinir hasarına işaret edebilir. Net bilgi için muayene gerekir.",
+     "en": "Hot-cold sensitivity may indicate nerve damage. An examination is required for clear information.",
+     "de": "Empfindlichkeit gegen Hitze und Kälte kann auf Nervenschäden hinweisen. Für genaue Informationen ist eine Untersuchung erforderlich.",
+     "nl": "Gevoeligheid voor warm en koud kan wijzen op zenuwbeschadiging. Voor exacte informatie is een onderzoek nodig."
+    }
+   },
+   {
+    "q": {
+     "tr": "Gece başlayan şiddetli diş ağrısına ne yapmalıyım?",
+     "en": "What should I do for severe toothache that starts at night?",
+     "de": "Was soll ich bei starken Zahnschmerzen tun, die nachts beginnen?",
+     "nl": "Wat moet ik doen bij hevige kiespijn die 's nachts begint?"
+    },
+    "a": {
+     "tr": "Gece ağrısı zonklayıcıysa kanal tedavisi gerekebilir. Sabah erken ulaşarak randevu alabilirsiniz.",
+     "en": "If the night pain is throbbing, root canal treatment may be needed. You can make an appointment by contacting us early in the morning.",
+     "de": "Wenn die nächtlichen Schmerzen pochend sind, kann eine Wurzelkanalbehandlung erforderlich sein. Sie können früh am Morgen einen Termin vereinbaren.",
+     "nl": "Als de nachtelijke pijn kloppend is, kan een wortelkanaalbehandeling nodig zijn. U kunt vroeg in de ochtend contact opnemen om een afspraak te maken."
+    }
+   },
+   {
+    "q": {
+     "tr": "Dişim kırıldı, ne yapmam gerekiyor?",
+     "en": "My tooth is broken, what should I do?",
+     "de": "Mein Zahn ist abgebrochen, was soll ich tun?",
+     "nl": "Mijn tand is gebroken, wat moet ik doen?"
+    },
+    "a": {
+     "tr": "Kırık dişi saklayın, bölgeyi zorlamayın ve hemen kliniğe başvurun.",
+     "en": "Keep the broken tooth, don't force the area and apply to the clinic immediately.",
+     "de": "Bewahren Sie den abgebrochenen Zahn auf, belasten Sie den Bereich nicht und suchen Sie sofort die Klinik auf.",
+     "nl": "Bewaar de gebroken tand, forceer het gebied niet en meld u direct bij de kliniek."
+    }
+   },
+   {
+    "q": {
+     "tr": "Ağrılı dişi bekletmek sorun olur mu?",
+     "en": "Is it a problem to delay treating a painful tooth?",
+     "de": "Ist es ein Problem, einen schmerzenden Zahn zu verzögern?",
+     "nl": "Is het een probleem om een pijnlijke tand te laten wachten?"
+    },
+    "a": {
+     "tr": "Evet, iltihap yayılabilir ve şişlik oluşabilir. Geciktirmeyin.",
+     "en": "Yes, the infection can spread and swelling can occur. Don't delay.",
+     "de": "Ja, die Entzündung kann sich ausbreiten und es kann zu Schwellungen kommen. Zögern Sie nicht.",
+     "nl": "Ja, de ontsteking kan zich verspreiden en er kan zwelling optreden. Stel het niet uit."
+    }
+   }
+  ],
+  "dental-implants": [
+   {
+    "q": {
+     "tr": "İmplant ağrılı bir işlem midir?",
+     "en": "Is an implant a painful procedure?",
+     "de": "Ist eine Implantatbehandlung schmerzhaft?",
+     "nl": "Is een implantaat een pijnlijke behandeling?"
+    },
+    "a": {
+     "tr": "Hayır. Lokal anestezi altında yapıldığı için işlem sırasında ağrı hissedilmez.",
+     "en": "No. Since it is done under local anesthesia, no pain is felt during the procedure.",
+     "de": "Nein. Da sie unter Lokalanästhesie durchgeführt wird, werden während des Eingriffs keine Schmerzen verspürt.",
+     "nl": "Nee. Omdat het onder lokale anesthesie wordt uitgevoerd, wordt er geen pijn gevoeld tijdens de behandeling."
+    }
+   },
+   {
+    "q": {
+     "tr": "Tek diş için implant yapılabilir mi?",
+     "en": "Can an implant be done for a single tooth?",
+     "de": "Kann ein Implantat für einen einzelnen Zahn eingesetzt werden?",
+     "nl": "Kan er een implantaat worden geplaatst voor één tand?"
+    },
+    "a": {
+     "tr": "Evet, sadece bir diş eksikliğinde bile implant uygulanabilir.",
+     "en": "Yes, an implant can be applied even for just one missing tooth.",
+     "de": "Ja, ein Implantat kann auch bei einem einzelnen fehlenden Zahn eingesetzt werden.",
+     "nl": "Ja, zelfs bij het ontbreken van slechts één tand kan een implantaat worden geplaatst."
+    }
+   },
+   {
+    "q": {
+     "tr": "İmplant fiyatları neye göre belirlenir?",
+     "en": "How are implant prices determined?",
+     "de": "Wie werden die Implantatpreise festgelegt?",
+     "nl": "Waarop zijn de prijzen van implantaten gebaseerd?"
+    },
+    "a": {
+     "tr": "Kullanılan markaya, eksik diş sayısına ve seçeceğiniz üst yapı (protez) materyalinin durumuna göre değişir.",
+     "en": "It varies depending on the brand used, the number of missing teeth, and the condition of the superstructure (prosthesis) material you choose.",
+     "de": "Sie variieren je nach verwendeter Marke, Anzahl der fehlenden Zähne und dem Zustand des von Ihnen gewählten Aufbaumaterials (Prothese).",
+     "nl": "Het varieert afhankelijk van het gebruikte merk, het aantal ontbrekende tanden en de toestand van het bovenstructuur (prothese) materiaal dat u kiest."
+    }
+   },
+   {
+    "q": {
+     "tr": "İmplant sonrası ne zaman yemek yiyebilirim?",
+     "en": "When can I eat after an implant?",
+     "de": "Wann kann ich nach einem Implantat essen?",
+     "nl": "Wanneer kan ik eten na een implantaat?"
+    },
+    "a": {
+     "tr": "İlk birkaç gün sıvı gıdalar önerilir. Aynı gün içinde yumuşak gıdalara geçilebilir.",
+     "en": "Liquid foods are recommended for the first few days. You can switch to soft foods the same day.",
+     "de": "In den ersten Tagen werden flüssige Nahrungsmittel empfohlen. Am selben Tag können Sie auf weiche Lebensmittel umsteigen.",
+     "nl": "De eerste paar dagen worden vloeibare voedingsmiddelen aanbevolen. Dezelfde dag kan worden overgegaan op zachte voedingsmiddelen."
+    }
+   },
+   {
+    "q": {
+     "tr": "Herkese implant uygulanabilir mi?",
+     "en": "Can everyone get an implant?",
+     "de": "Kann bei jedem ein Implantat eingesetzt werden?",
+     "nl": "Kan iedereen een implantaat krijgen?"
+    },
+    "a": {
+     "tr": "Genellikle evet. Ancak genel sağlık durumu ve kemik yapısı değerlendirilmelidir.",
+     "en": "Generally yes. However, overall health condition and bone structure must be evaluated.",
+     "de": "Im Allgemeinen ja. Der allgemeine Gesundheitszustand und die Knochenstruktur müssen jedoch beurteilt werden.",
+     "nl": "Over het algemeen wel. Maar de algemene gezondheidstoestand en botstructuur moeten worden beoordeeld."
+    }
+   },
+   {
+    "q": {
+     "tr": "Sigara içenlere implant yapılır mı?",
+     "en": "Can smokers get implants?",
+     "de": "Können Implantate bei Rauchern eingesetzt werden?",
+     "nl": "Kunnen rokers een implantaat krijgen?"
+    },
+    "a": {
+     "tr": "Yapılabilir ancak iyileşme sürecini olumsuz etkileyebilir. Başarı oranı düşebilir.",
+     "en": "It can be done but may negatively affect the healing process. Success rate may decrease.",
+     "de": "Es ist möglich, kann aber den Heilungsprozess negativ beeinflussen. Die Erfolgsrate kann sinken.",
+     "nl": "Het kan worden gedaan, maar het kan het genezingsproces negatief beïnvloeden. Het slagingspercentage kan afnemen."
+    }
+   },
+   {
+    "q": {
+     "tr": "İmplant sonrası şişlik olur mu?",
+     "en": "Will there be swelling after an implant?",
+     "de": "Gibt es nach einem Implantat Schwellungen?",
+     "nl": "Is er zwelling na een implantaat?"
+    },
+    "a": {
+     "tr": "Hafif şişlik ve morluk olabilir, genellikle birkaç gün içinde, soğuk buz kompresyonları ile geçer.",
+     "en": "There may be mild swelling and bruising, usually subsiding within a few days with cold ice compresses.",
+     "de": "Es kann zu leichten Schwellungen und Blutergüssen kommen, die normalerweise innerhalb weniger Tage mit kalten Kompressen abklingen.",
+     "nl": "Er kan lichte zwelling en blauwe plekken optreden, die meestal binnen een paar dagen verdwijnen met koude ijscompressen."
+    }
+   },
+   {
+    "q": {
+     "tr": "İmplant düşer mi, vücut reddeder mi?",
+     "en": "Can an implant fall out, can the body reject it?",
+     "de": "Kann ein Implantat herausfallen oder vom Körper abgestoßen werden?",
+     "nl": "Kan een implantaat eruit vallen, wordt het door het lichaam afgestoten?"
+    },
+    "a": {
+     "tr": "Çok nadiren. Doğru uygulama ve kaliteli malzeme ile başarı oranı oldukça yüksektir.",
+     "en": "Very rarely. With proper application and quality materials, the success rate is quite high.",
+     "de": "Sehr selten. Mit korrekter Anwendung und qualitativ hochwertigen Materialien ist die Erfolgsrate sehr hoch.",
+     "nl": "Zeer zelden. Met correcte toepassing en kwalitatief materiaal is het slagingspercentage zeer hoog."
+    }
+   },
+   {
+    "q": {
+     "tr": "Diş çekildikten sonra hemen implant yapılabilir mi?",
+     "en": "Can an implant be done immediately after tooth extraction?",
+     "de": "Kann ein Implantat sofort nach der Zahnextraktion eingesetzt werden?",
+     "nl": "Kan er direct na het trekken van een tand een implantaat worden geplaatst?"
+    },
+    "a": {
+     "tr": "Duruma bağlı olarak evet. Uygun vakalarda aynı seansta implant yerleştirilebilir.",
+     "en": "Depending on the situation, yes. In suitable cases, the implant can be placed in the same session.",
+     "de": "Je nach Situation ja. In geeigneten Fällen kann das Implantat in derselben Sitzung eingesetzt werden.",
+     "nl": "Afhankelijk van de situatie, ja. In geschikte gevallen kan het implantaat tijdens dezelfde sessie worden geplaatst."
+    }
+   }
+  ],
+  "porcelain-veneers": [
+   {
+    "q": {
+     "tr": "Yaprak diş nedir, kimlere uygulanır? lamina diş nedir, kimlere uygulanır?",
+     "en": "What are veneers, who are they applied to? What are laminates, who are they applied to?",
+     "de": "Was sind Veneers und für wen sind sie geeignet? Was sind Laminat-Veneers und für wen sind sie geeignet?",
+     "nl": "Wat zijn veneers, voor wie zijn ze geschikt? Wat zijn laminaten, voor wie zijn ze geschikt?"
+    },
+    "a": {
+     "tr": "Yaprak diş, yani lamina, ön dişlere uygulanan ince porselen tabakalardır. Rengi bozuk, aralıklı veya şekil bozukluğu olan dişlere yapılır.",
+     "en": "Veneers, also known as laminates, are thin porcelain layers applied to front teeth. They are applied to teeth with discoloration, gaps, or shape deformities.",
+     "de": "Veneers, also Laminate, sind dünne Porzellanschichten, die auf die Frontzähne aufgebracht werden. Sie werden bei verfärbten, lückigen oder deformierten Zähnen angewendet.",
+     "nl": "Veneers, oftewel laminaten, zijn dunne porselein laagjes die op de voortanden worden aangebracht. Ze worden toegepast op tanden met verkleuring, ruimtes of vormafwijkingen."
+    }
+   },
+   {
+    "q": {
+     "tr": "Zirkonyum kaplama mı, lamina mı daha iyi?",
+     "en": "Which is better, zirconium crowns or laminates?",
+     "de": "Was ist besser, Zirkonkrone oder Veneer?",
+     "nl": "Wat is beter, zirkonium kronen of laminaten?"
+    },
+    "a": {
+     "tr": "Dişin durumu ve estetik beklentiye göre değişir. Lamina daha doğaldır, zirkonyum ise daha dayanıklıdır.",
+     "en": "It depends on the condition of the tooth and aesthetic expectations. Laminates are more natural, while zirconium is more durable.",
+     "de": "Es hängt vom Zustand des Zahns und den ästhetischen Erwartungen ab. Veneers sind natürlicher, Zirkon ist haltbarer.",
+     "nl": "Het hangt af van de toestand van de tand en de esthetische verwachting. Laminaten zijn natuurlijker, zirkonium is duurzamer."
+    }
+   },
+   {
+    "q": {
+     "tr": "Lamina işlemi ağrılı mıdır?",
+     "en": "Is the laminate procedure painful?",
+     "de": "Ist die Veneer-Behandlung schmerzhaft?",
+     "nl": "Is de laminaatbehandeling pijnlijk?"
+    },
+    "a": {
+     "tr": "Hayır. İşlem sırasında anestezi uygulanır ve genellikle ağrısızdır.",
+     "en": "No. Anesthesia is applied during the procedure and it is usually painless.",
+     "de": "Nein. Während des Eingriffs wird eine Anästhesie durchgeführt und er ist in der Regel schmerzfrei.",
+     "nl": "Nee. Tijdens de behandeling wordt anesthesie toegepast en is het meestal pijnloos."
+    }
+   },
+   {
+    "q": {
+     "tr": "Lamina diş sararır mı?",
+     "en": "Do laminate teeth turn yellow?",
+     "de": "Verfärben sich Veneers?",
+     "nl": "Verkleuren laminaten?"
+    },
+    "a": {
+     "tr": "Porselen lamineler yüzey olarak leke tutmaz. Uzun yıllar boyunca beyazlığını korur. Ancak doğal dişlerde sararma olursa kontrast farkı oluşabilir.",
+     "en": "Porcelain laminates do not stain on the surface. They maintain their whiteness for many years. However, if natural teeth turn yellow, a contrast difference may occur.",
+     "de": "Porzellan-Veneers nehmen keine Flecken auf der Oberfläche auf. Sie behalten ihre Weiße über viele Jahre. Wenn sich jedoch die natürlichen Zähne verfärben, kann ein Kontrast entstehen.",
+     "nl": "Porseleinen laminaten verkleuren niet aan het oppervlak. Ze behouden hun witheid gedurende vele jaren. Als de natuurlijke tanden echter vergelen, kan er een contrastverschil ontstaan."
+    }
+   },
+   {
+    "q": {
+     "tr": "Lamina diş takınca konuşmam değişir mi?",
+     "en": "Will my speech change when I get laminate teeth?",
+     "de": "Ändert sich meine Aussprache mit Veneers?",
+     "nl": "Verandert mijn spraak als ik laminaten krijg?"
+    },
+    "a": {
+     "tr": "İlk birkaç gün alışma süreci olabilir ama sonrasında konuşmanız tamamen normale döner. Dişlerin formu ağız yapınıza özel tasarlanır.",
+     "en": "There may be an adaptation period for the first few days, but afterwards your speech returns to completely normal. The form of the teeth is designed specifically for your mouth structure.",
+     "de": "Es kann eine Gewöhnungsphase von einigen Tagen geben, aber danach kehrt Ihre Aussprache vollständig zur Normalität zurück. Die Form der Zähne wird speziell für Ihre Mundstruktur entworfen.",
+     "nl": "De eerste paar dagen kan er een gewenningsperiode zijn, maar daarna keert uw spraak volledig terug naar normaal. De vorm van de tanden wordt speciaal ontworpen voor uw mondstructuur."
+    }
+   },
+   {
+    "q": {
+     "tr": "Estetik diş işlemleri kaç günde tamamlanır?",
+     "en": "How many days does aesthetic dental treatment take to complete?",
+     "de": "Wie viele Tage dauern ästhetische Zahnbehandlungen?",
+     "nl": "In hoeveel dagen worden esthetische tandbehandelingen voltooid?"
+    },
+    "a": {
+     "tr": "Kompozit bonding genellikle tek seansta biter. Lamina ve zirkonyum işlemleri birkaç gün sürebilir.",
+     "en": "Composite bonding usually finishes in one session. Laminate and zirconium procedures may take several days.",
+     "de": "Komposit-Bonding ist normalerweise in einer Sitzung abgeschlossen. Veneer- und Zirkonbehandlungen können mehrere Tage dauern.",
+     "nl": "Composiet bonding wordt meestal in één sessie voltooid. Laminaat- en zirkoniumbehandelingen kunnen enkele dagen duren."
+    }
+   }
+  ],
+  "composite-veneers": [
+   {
+    "q": {
+     "tr": "Kompozit bonding nedir?",
+     "en": "What is composite bonding?",
+     "de": "Was ist Komposit-Bonding?",
+     "nl": "Wat is composiet bonding?"
+    },
+    "a": {
+     "tr": "Dişin yüzeyine özel bir estetik dolgu materyali eklenerek şekil, renk ve form düzeltmesi yapılan işlemdir.",
+     "en": "It is a procedure where a special aesthetic filling material is added to the tooth surface to correct shape, color and form.",
+     "de": "Es ist ein Verfahren, bei dem ein spezielles ästhetisches Füllmaterial auf die Zahnoberfläche aufgetragen wird, um Form, Farbe und Gestalt zu korrigieren.",
+     "nl": "Het is een behandeling waarbij een speciaal esthetisch vullingsmateriaal op het tandoppervlak wordt aangebracht om de vorm, kleur en structuur te corrigeren."
+    }
+   },
+   {
+    "q": {
+     "tr": "Diş estetiği için dişim kesilecek mi?",
+     "en": "Will my tooth be cut for dental aesthetics?",
+     "de": "Wird mein Zahn für die Zahnästhetik beschliffen?",
+     "nl": "Wordt mijn tand afgeslepen voor tandesthetiek?"
+    },
+    "a": {
+     "tr": "Hayır, biz minimal invaziv çalışıyoruz. Dişi mümkün olduğunca koruyarak estetik sağlıyoruz.",
+     "en": "No, we work minimally invasive. We provide aesthetics while preserving the tooth as much as possible.",
+     "de": "Nein, wir arbeiten minimalinvasiv. Wir erzielen Ästhetik, indem wir den Zahn so weit wie möglich erhalten.",
+     "nl": "Nee, wij werken minimaal invasief. We zorgen voor esthetiek terwijl we de tand zoveel mogelijk behouden."
+    }
+   },
+   {
+    "q": {
+     "tr": "Kompozit bonding kaç yıl dayanır?",
+     "en": "How many years does composite bonding last?",
+     "de": "Wie viele Jahre hält Komposit-Bonding?",
+     "nl": "Hoeveel jaar gaat composiet bonding mee?"
+    },
+    "a": {
+     "tr": "Kullanıma bağlı olarak değişir. Ortalama 5–7 yıl kalıcılığı vardır ama 30 yıl boyunca hiç işlem yaptırmadan kullanan hastalar da vardır.",
+     "en": "It varies depending on use. It has an average durability of 5-7 years, but there are also patients who have used them for 30 years without any treatment.",
+     "de": "Es variiert je nach Nutzung. Die durchschnittliche Haltbarkeit beträgt 5–7 Jahre, aber es gibt auch Patienten, die es 30 Jahre lang ohne weitere Behandlung verwenden.",
+     "nl": "Het varieert afhankelijk van het gebruik. Gemiddeld houdt het 5–7 jaar, maar er zijn ook patiënten die het 30 jaar zonder behandeling gebruiken."
+    }
+   }
+  ]
+ },
+ "doctor_bio": [
+  {
+   "tr": "**Dr. Dt. Devrim Biriken Sipahi**, 35 yılı aşkın tecrübesiyle İstanbul Şişli'de hizmet veren köklü bir diş hekimidir. Ankara Üniversitesi Diş Hekimliği Fakültesi mezunudur; akademik yolculuğunu Marmara Üniversitesi'nde *Ağız, Diş ve Çene Radyolojisi* alanında tamamlamıştır. Radyoloji temelli tanı yaklaşımı sayesinde planlar net, sürpriz minimumdur.",
+   "en": "**Dr. Dt. Devrim Biriken Sipahi** is an established dentist serving in Istanbul Şişli with over 35 years of experience. She is a graduate of Ankara University Faculty of Dentistry; she completed her academic journey at Marmara University in the field of *Oral and Maxillofacial Radiology*. Thanks to her radiology-based diagnostic approach, plans are clear and surprises are minimal.",
+   "de": "**Dr. Devrim Biriken Sipahi** ist eine etablierte Zahnärztin mit über 35 Jahren Erfahrung, die in Şişli, Istanbul, Türkei praktiziert. Sie ist Absolventin der Fakultät für Zahnmedizin der Universität Ankara; ihre akademische Laufbahn schloss sie an der Marmara-Universität im Bereich *Mund-, Zahn- und Kieferradiologie* ab. Dank ihres radiologiebasierten Diagnoseansatzes sind die Pläne klar und Überraschungen minimal.",
+   "nl": "**Dr. Dt. Devrim Biriken Sipahi** is een gerenommeerde tandarts met meer dan 35 jaar ervaring, werkzaam in Istanbul Şişli. Ze is afgestudeerd aan de Faculteit Tandheelkunde van de Universiteit van Ankara; haar academische reis heeft ze voltooid aan de Marmara Universiteit op het gebied van *Mond-, Tand- en Kaakradiologie*. Dankzij de op radiologie gebaseerde diagnostische aanpak zijn plannen duidelijk en verrassingen minimaal."
+  },
+  {
+   "tr": "Bizim çizgimiz net: dişi kurtarmak. Gereksiz işlem yok, doğru endikasyonda konservatif tedavi var. Gülüş tasarımından estetik lamina ve kanal tedavisine kadar her adım, 'doğru tanı → doğru plan → konforlu süreç' formülüyle ilerler. Amaç güzel görünen değil, sağlıklı ve uzun ömürlü sonuç.",
+   "en": "Our line is clear: save the tooth. No unnecessary procedures, conservative treatment with the right indication. Every step from smile design to aesthetic laminate and root canal treatment proceeds with the formula 'correct diagnosis → correct plan → comfortable process'. The goal is not what looks beautiful, but healthy and long-lasting results.",
+   "de": "Unsere Linie ist klar: den Zahn erhalten. Keine unnötigen Eingriffe, sondern konservative Behandlung bei richtiger Indikation. Von Smile-Design über ästhetische Veneers bis zur Wurzelkanalbehandlung verläuft jeder Schritt nach der Formel 'richtige Diagnose → richtiger Plan → komfortabler Prozess'. Das Ziel ist nicht schön aussehend, sondern gesund und langlebig.",
+   "nl": "Onze lijn is duidelijk: de tand redden. Geen onnodige procedures, alleen conservatieve behandeling bij de juiste indicatie. Van glimlachontwerp tot esthetisch laminaat en wortelkanaalbehandeling, elke stap verloopt volgens de formule 'juiste diagnose → juist plan → comfortabel proces'. Het doel is niet mooi lijken, maar een gezond en langdurig resultaat."
+  },
+  {
+   "tr": "Peki implant? Önce şunu söyleyelim: İmplant son seçenektir—kurtarılabilecek dişi koruruz. Fakat ihtiyaç doğduğunda, radyolojik (CBCT) destekli 3D planlama, kemik kalitesi/yoğunluğu analizi ve dijital cerrahi kılavuzlarla estetik ve fonksiyon odaklı, öngörülebilir bir yol izleriz. Yeri geldiğinde geçici dişle sosyal hayat kopmadan süreç tamamlanır.",
+   "en": "What about implants? Let's say this first: Implant is the last option—we save teeth that can be saved. But when the need arises, we follow a predictable path focused on aesthetics and function with radiological (CBCT) supported 3D planning, bone quality/density analysis and digital surgical guides. When appropriate, the process is completed with temporary teeth without interrupting social life.",
+   "de": "Und Implantate? Zunächst einmal: Implantate sind die letzte Option—wir erhalten jeden Zahn, der gerettet werden kann. Wenn jedoch die Notwendigkeit besteht, folgen wir einem vorhersehbaren Weg mit radiologisch (CBCT) unterstützter 3D-Planung, Knochenqualitäts-/Dichteanalyse und digitalen Operationsleitfäden, der auf Ästhetik und Funktion ausgerichtet ist. Bei Bedarf wird der Prozess mit provisorischen Zähnen abgeschlossen, ohne dass das soziale Leben unterbrochen wird.",
+   "nl": "En implantaten dan? Laten we dit eerst zeggen: Implantaat is de laatste optie—we behouden tanden die gered kunnen worden. Maar wanneer nodig, volgen we een voorspelbare weg gericht op esthetiek en functie met radiologisch (CBCT) ondersteunde 3D-planning, analyse van botkwaliteit/dichtheid en digitale chirurgische gidsen. Indien nodig wordt het proces voltooid met tijdelijke tanden zonder onderbreking van het sociale leven."
+  },
+  {
+   "tr": "Kliniğin kuruluş motivasyonu sadece 'tedavi' değil, bir mirastır: Dr. Sipahi'nin bilgi ve tecrübesinin gelecek nesle aktarılması. Bu nedenle klinik yapılanması, Dt. Ekin Sipahi ile birlikte aynı kalite standartlarını sürdürecek şekilde kurgulandı. İki nesil, tek çizgi: doğru, sade, etkin hekimlik.",
+   "en": "The clinic's founding motivation is not just 'treatment', but a legacy: passing on Dr. Sipahi's knowledge and experience to the next generation. Therefore, the clinic structure was designed together with Dt. Ekin Sipahi to maintain the same quality standards. Two generations, one line: correct, simple, effective medical practice.",
+   "de": "Die Gründungsmotivation der Klinik ist nicht nur 'Behandlung', sondern ein Erbe: Die Weitergabe von Dr. Sipahis Wissen und Erfahrung an die nächste Generation. Aus diesem Grund wurde die Klinikstruktur zusammen mit Dt. Ekin Sipahi so konzipiert, dass die gleichen Qualitätsstandards aufrechterhalten werden. Zwei Generationen, eine Linie: korrekte, schlichte, wirksame Zahnheilkunde.",
+   "nl": "De motivatie voor de oprichting van de kliniek is niet alleen 'behandeling', maar een erfenis: de overdracht van Dr. Sipahi's kennis en ervaring aan de volgende generatie. Daarom is de kliniekstructuur opgezet om samen met Dt. Ekin Sipahi dezelfde kwaliteitsnormen voort te zetten. Twee generaties, één lijn: juiste, eenvoudige, effectieve tandheelkunde."
+  }
+ ],
+ "clinic": {
+  "tagline": {
+   "tr": "Doğru tanı, doğru tedavi, dişi koru.",
+   "en": "Correct diagnosis, correct treatment, save the tooth.",
+   "de": "Richtige Diagnose, richtige Behandlung, Zahn erhalten.",
+   "nl": "Juiste diagnose, juiste behandeling, behoud de tand."
+  },
+  "short": {
+   "tr": "Dr. Dt. Devrim Biriken Sipahi, 35 yılı aşkın deneyimiyle Şişlide hizmet veren, estetik diş tedavileri ve implant uygulamalarında uzmanlaşmış bir diş hekimidir.",
+   "en": "Dr. Dt. Devrim Biriken Sipahi is a dentist with over 35 years of experience serving in Şişli, specialized in aesthetic dental treatments and implant applications.",
+   "de": "Dr. Devrim Biriken Sipahi ist eine Zahnärztin mit über 35 Jahren Erfahrung, die in Şişli, Istanbul, Türkei praktiziert und auf ästhetische Zahnbehandlungen und Implantatanwendungen spezialisiert ist.",
+   "nl": "Dr. Dt. Devrim Biriken Sipahi is een tandarts met meer dan 35 jaar ervaring die diensten verleent in Istanbul Şişli, gespecialiseerd in esthetische tandbehandelingen en implantaattoepassingen."
+  },
+  "meta_title": {
+   "tr": "Dr. Devrim Biriken Sipahi - 35 Yıllık Deneyim | Şişli Diş Kliniği",
+   "en": "Dr. Devrim Biriken Sipahi - 35 Years of Experience | Şişli Dental Clinic",
+   "de": "Dr. Devrim Biriken Sipahi – 35 Jahre Erfahrung | Zahnklinik Şişli Istanbul",
+   "nl": "Dr. Devrim Biriken Sipahi - 35 Jaar Ervaring | Istanbul Şişli Tandartskliniek"
+  },
+  "meta_description": {
+   "tr": "35+ yıllık deneyimle Şişli merkezde hizmet. Hafta sonu açık, acil randevu. İmplant, estetik ve kanal tedavisi. 10.000+ başarılı vaka.",
+   "en": "Serving in central Şişli with 35+ years of experience. Open on weekends, emergency appointments. Implant, aesthetic and root canal treatment. 10,000+ successful cases.",
+   "de": "35+ Jahre Erfahrung im Zentrum von Şişli, Istanbul. Am Wochenende geöffnet, Notfalltermine möglich. Implantat, Ästhetik und Wurzelkanalbehandlung. 10.000+ erfolgreiche Fälle.",
+   "nl": "Service in het centrum van Istanbul Şişli met 35+ jaar ervaring. Open in het weekend, spoedafspraken mogelijk. Implantaat, esthetiek en wortelkanaalbehandeling. 10.000+ succesvolle gevallen."
+  },
+  "hours_note": {
+   "tr": "Cumartesi ve Pazar dahil haftanın 7 günü hizmetinizdeyiz. Acil durumlarınız için de erişilebiliriz.",
+   "en": "We are at your service 7 days a week including Saturday and Sunday. We are also accessible for your emergencies.",
+   "de": "Wir sind 7 Tage die Woche, einschließlich Samstag und Sonntag, für Sie da. Auch in Notfällen sind wir erreichbar.",
+   "nl": "Wij zijn 7 dagen per week voor u beschikbaar, ook op zaterdag en zondag. Wij zijn ook bereikbaar voor spoedsituaties."
+  },
+  "weekend": {
+   "tr": "Şişli'de hafta sonu açık dişçi arıyorsanız, kliniğimiz cumartesi ve pazar günleri de hizmetinizdedir. Pazar günü açık diş kliniği olarak İstanbul'da birçok ilçeden hastalarımıza hizmet veriyoruz. Hafta sonu dişçi açık mı sorusunun cevabı bizde her zaman 'evet'tir. Cumartesi açık dişçi veya pazar açık dişçi ihtiyacınız için randevusuz da gelebilirsiniz - sadece önceden telefon ile haber vermeniz yeterlidir.",
+   "en": "If you are looking for a dentist open on weekends in Istanbul Şişli, our clinic is also at your service on Saturdays and Sundays. As a dental clinic open on Sundays, we serve patients from many districts of Istanbul. The answer to the question 'is the dentist open on weekends?' is always 'yes' with us. You can also come without an appointment for your Saturday or Sunday dentist needs — just give us a call beforehand.",
+   "de": "Wenn Sie in Şişli, Istanbul einen auch am Wochenende geöffneten Zahnarzt suchen, steht unsere Klinik Ihnen auch samstags und sonntags zur Verfügung. Als am Sonntag geöffnete Zahnklinik versorgen wir Patienten aus vielen Stadtteilen Istanbuls. Die Antwort auf die Frage, ob am Wochenende ein Zahnarzt geöffnet ist, lautet bei uns immer 'Ja'. Sie können auch ohne Termin kommen – bitte rufen Sie vorher kurz an.",
+   "nl": "Als u in Istanbul Şişli een tandarts zoekt die in het weekend open is, staat onze kliniek ook op zaterdag en zondag voor u klaar. Als tandartskliniek die ook op zondag open is, bedienen wij patiënten uit vele stadsdelen van Istanbul. Het antwoord op de vraag 'is de tandarts in het weekend open?' is bij ons altijd 'ja'. Voor uw behoefte aan een tandarts op zaterdag of zondag kunt u ook zonder afspraak langskomen — bel ons alleen van tevoren even."
+  },
+  "areas": {
+   "tr": "Şişli diş hekimi olarak Mecidiyeköy, Osmanbey, Beşiktaş, Beyoğlu başta olmak üzere İstanbul'un her ilçesinden hastalarımıza hizmet veriyoruz. Şişli diş kliniğimiz merkezi konumu sayesinde kolay ulaşılabilir. Avrupa yakasından Anadolu yakasına, Kadıköy'den Bakırköy'e kadar geniş bir coğrafyadan gelen hastalarımız için hafta içi ve hafta sonu randevu imkanı sunuyoruz.",
+   "en": "As an Istanbul Şişli dentist, we serve patients from every district of Istanbul, particularly Mecidiyeköy, Osmanbey, Beşiktaş and Beyoğlu. Our Istanbul Şişli dental clinic is easily accessible thanks to its central location. We offer weekday and weekend appointment options for patients coming from a wide geography, from the European side to the Asian side, from Kadıköy to Bakırköy.",
+   "de": "Als Zahnarzt in Şişli, Istanbul betreuen wir Patienten aus allen Stadtteilen Istanbuls, insbesondere aus Mecidiyeköy, Osmanbey, Beşiktaş und Beyoğlu. Unsere Zahnklinik in Şişli ist dank ihrer zentralen Lage leicht erreichbar. Wir bieten Terminmöglichkeiten unter der Woche und am Wochenende für Patienten aus einem weiten Einzugsgebiet von der europäischen bis zur asiatischen Seite, von Kadıköy bis Bakırköy.",
+   "nl": "Als tandarts in Istanbul Şişli bedienen wij patiënten uit alle stadsdelen van Istanbul, met name Mecidiyeköy, Osmanbey, Beşiktaş en Beyoğlu. Onze Istanbul Şişli tandartskliniek is goed bereikbaar dankzij de centrale ligging. Wij bieden doordeweekse en weekendafspraken voor patiënten die komen vanuit een groot gebied, van de Europese naar de Aziatische kant, van Kadıköy tot Bakırköy."
+  }
+ },
+ "cases": {
+  "sanem": {
+   "tr": "Sanem'in dişleri hiç kesilmeden, sadece kompozit uygulamayla doğalından daha estetik hale getirildi.",
+   "en": "Sanem's teeth were made more aesthetic than natural with only composite application, without any cutting.",
+   "de": "Sanems Zähne wurden ohne jegliches Beschleifen, nur durch Kompositanwendung, ästhetischer als ihre natürlichen Zähne gemacht.",
+   "nl": "Sanem's tanden zijn esthetischer gemaakt dan hun natuurlijke staat, alleen met composiettoepassing en zonder enig slijpen."
+  },
+  "hazan": {
+   "tr": "Hazan geçirdiği travma sonucu, dişi pembe olarak kliniğimize geldi estetik olarak dişlerini hiç bozmadan eski halinden daha iyi duruma getirdik.",
+   "en": "After the trauma Hazan experienced, her tooth came to our clinic pink, and we brought it to a better condition than its old state without spoiling the aesthetics of her teeth at all.",
+   "de": "Nach einem Trauma kam Hazan mit einem rosa Zahn zu unserer Klinik. Wir haben ihre Zähne in einen besseren Zustand als zuvor gebracht, ohne ihre Ästhetik zu beeinträchtigen.",
+   "nl": "Na het trauma dat Hazan doormaakte, kwam ze bij onze kliniek met een roze tand; we hebben haar tand in een betere staat gebracht dan voorheen, zonder de esthetiek van haar tanden te beschadigen."
+  }
+ },
+ "privacy": [
+  {
+   "tr": "KİŞİSEL VERİLERİN KORUNMASI HAKKINDA AYDINLATMA METNİ",
+   "en": "DISCLOSURE TEXT REGARDING THE PROTECTION OF PERSONAL DATA",
+   "de": "INFORMATIONSTEXT ZUM SCHUTZ PERSONENBEZOGENER DATEN",
+   "nl": "INFORMATIETEKST OVER DE BESCHERMING VAN PERSOONSGEGEVENS"
+  },
+  {
+   "tr": "1. Veri Sorumlusu",
+   "en": "1. Data Controller",
+   "de": "1. Datenverantwortlicher",
+   "nl": "1. Verantwoordelijke voor Gegevensverwerking"
+  },
+  {
+   "tr": "İşbu internet sitesi üzerinden toplanan kişisel veriler, veri sorumlusu sıfatıyla Dr. Dt. Devrim Biriken Sipahi",
+   "en": "Personal data collected through this website is processed by Dr. Dt. Devrim Biriken Sipahi as the data controller",
+   "de": "Die über diese Website gesammelten personenbezogenen Daten werden als Datenverantwortlicher von Dr. Dt. Devrim Biriken Sipahi",
+   "nl": "De via deze website verzamelde persoonsgegevens worden verwerkt door Dr. Dt. Devrim Biriken Sipahi als verantwoordelijke voor gegevensverwerking"
+  },
+  {
+   "tr": "2. İşlenen Kişisel Veriler",
+   "en": "2. Personal Data Processed",
+   "de": "2. Verarbeitete personenbezogene Daten",
+   "nl": "2. Verwerkte Persoonsgegevens"
+  },
+  {
+   "tr": "Sitemiz üzerinden sunulan hizmetlere bağlı olarak, tarafınızca iletilen aşağıdaki kişisel veriler işlenmektedir:",
+   "en": "Depending on the services provided through our website, the following personal data submitted by you are processed:",
+   "de": "In Abhängigkeit von den über unsere Website angebotenen Dienstleistungen werden die folgenden von Ihnen übermittelten personenbezogenen Daten verarbeitet:",
+   "nl": "Afhankelijk van de diensten die via onze website worden aangeboden, worden de volgende door u verstrekte persoonsgegevens verwerkt:"
+  },
+  {
+   "tr": "Ad ve soyad",
+   "en": "First and last name",
+   "de": "Vor- und Nachname",
+   "nl": "Voor- en achternaam"
+  },
+  {
+   "tr": "Telefon numarası",
+   "en": "Phone number",
+   "de": "Telefonnummer",
+   "nl": "Telefoonnummer"
+  },
+  {
+   "tr": "Tercih edilen randevu tarihi",
+   "en": "Preferred appointment date",
+   "de": "Bevorzugtes Termindatum",
+   "nl": "Gewenste afspraakdatum"
+  },
+  {
+   "tr": "GCLID (Google reklam etkileşim ID'si)",
+   "en": "GCLID (Google ad interaction ID)",
+   "de": "GCLID (Google Werbeinteraktions-ID)",
+   "nl": "GCLID (Google advertentie-interactie-ID)"
+  },
+  {
+   "tr": "Cihaz türü (iOS/macOS/Android/Windows)",
+   "en": "Device type (iOS/macOS/Android/Windows)",
+   "de": "Gerätetyp (iOS/macOS/Android/Windows)",
+   "nl": "Apparaattype (iOS/macOS/Android/Windows)"
+  },
+  {
+   "tr": "Pil durumu (Low Power Mode açık/kapalı)",
+   "en": "Battery status (Low Power Mode on/off)",
+   "de": "Batteriestatus (Low Power Mode ein/aus)",
+   "nl": "Batterijstatus (energiebesparingsmodus aan/uit)"
+  },
+  {
+   "tr": "Çerezler ve pazarlama etiketleri (Meta Pixel, Google Analytics, Tag Manager)",
+   "en": "Cookies and marketing tags (Meta Pixel, Google Analytics, Tag Manager)",
+   "de": "Cookies und Marketing-Tags (Meta Pixel, Google Analytics, Tag Manager)",
+   "nl": "Cookies en marketingtags (Meta Pixel, Google Analytics, Tag Manager)"
+  },
+  {
+   "tr": "3. Kişisel Verilerin İşlenme Amaçları",
+   "en": "3. Purposes of Processing Personal Data",
+   "de": "3. Zwecke der Verarbeitung personenbezogener Daten",
+   "nl": "3. Doeleinden van Verwerking van Persoonsgegevens"
+  },
+  {
+   "tr": "Toplanan kişisel verileriniz aşağıdaki amaçlarla işlenmektedir:",
+   "en": "Your collected personal data is processed for the following purposes:",
+   "de": "Ihre gesammelten personenbezogenen Daten werden für folgende Zwecke verarbeitet:",
+   "nl": "Uw verzamelde persoonsgegevens worden verwerkt voor de volgende doeleinden:"
+  },
+  {
+   "tr": "Randevu taleplerinin işlenmesi ve tarafınıza geri dönüş sağlanması",
+   "en": "Processing appointment requests and providing a response to you",
+   "de": "Bearbeitung von Terminanfragen und Rückmeldung an Sie",
+   "nl": "Verwerking van afspraakverzoeken en het verstrekken van feedback aan u"
+  },
+  {
+   "tr": "Google Ads ve diğer reklam kampanyalarının performansının ölçülmesi",
+   "en": "Measuring the performance of Google Ads and other advertising campaigns",
+   "de": "Messung der Leistung von Google Ads und anderen Werbekampagnen",
+   "nl": "Meting van de prestaties van Google Ads en andere reclamecampagnes"
+  },
+  {
+   "tr": "Klinik hizmetlerinin sunulması ve iyileştirilmesi",
+   "en": "Providing and improving clinic services",
+   "de": "Bereitstellung und Verbesserung der Klinikdienstleistungen",
+   "nl": "Het leveren en verbeteren van klinische diensten"
+  },
+  {
+   "tr": "İlgili pazarlama analizlerinin yapılması",
+   "en": "Conducting relevant marketing analyses",
+   "de": "Durchführung relevanter Marketinganalysen",
+   "nl": "Uitvoering van relevante marketinganalyses"
+  },
+  {
+   "tr": "Yasal yükümlülüklerin yerine getirilmesi",
+   "en": "Fulfilling legal obligations",
+   "de": "Erfüllung gesetzlicher Verpflichtungen",
+   "nl": "Naleving van wettelijke verplichtingen"
+  },
+  {
+   "tr": "4. Hukuki Sebep ve Toplama Yöntemi",
+   "en": "4. Legal Basis and Collection Method",
+   "de": "4. Rechtsgrundlage und Erfassungsmethode",
+   "nl": "4. Juridische Grondslag en Verzamelingsmethode"
+  },
+  {
+   "tr": "Verileriniz, KVKK'nın 5. ve 6. maddelerinde belirtilen;",
+   "en": "Your data is processed based on the grounds specified in Articles 5 and 6 of the PDPL;",
+   "de": "Ihre Daten werden basierend auf den in Artikeln 5 und 6 der DSGVO genannten;",
+   "nl": "Uw gegevens worden verkregen op basis van de juridische grondslagen vermeld in artikel 5 en 6 van de KVKK;"
+  },
+  {
+   "tr": "Açık rıza (siteyi kullanmaya devam ederek verilmiş sayılır),",
+   "en": "Explicit consent (deemed given by continuing to use the website),",
+   "de": "Ausdrückliche Einwilligung (gilt als erteilt durch fortgesetzte Nutzung der Website),",
+   "nl": "Expliciete toestemming (wordt geacht te zijn gegeven door het gebruik van de website voort te zetten),"
+  },
+  {
+   "tr": "Bir sözleşmenin kurulması veya ifasıyla doğrudan ilgili olma,",
+   "en": "Being directly related to the establishment or performance of a contract,",
+   "de": "Direkter Bezug zur Begründung oder Erfüllung eines Vertrags,",
+   "nl": "Direct verband houden met het sluiten of uitvoeren van een contract,"
+  },
+  {
+   "tr": "Veri sorumlusunun hukuki yükümlülüğünü yerine getirmesi,",
+   "en": "Fulfillment of the data controller's legal obligation,",
+   "de": "Erfüllung rechtlicher Verpflichtungen des Datenverantwortlichen,",
+   "nl": "Nakoming van de wettelijke verplichting van de verantwoordelijke voor gegevensverwerking,"
+  },
+  {
+   "tr": "İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla meşru menfaatin varlığı",
+   "en": "The existence of legitimate interest provided that it does not harm the fundamental rights and freedoms of the data subject",
+   "de": "Bestehen eines berechtigten Interesses, sofern die Grundrechte und Freiheiten der betroffenen Person nicht beeinträchtigt werden",
+   "nl": "Het bestaan van een legitiem belang, op voorwaarde dat dit geen afbreuk doet aan de fundamentele rechten en vrijheden van de betrokkene"
+  },
+  {
+   "tr": "hukuki sebeplerine dayanarak, otomatik yollarla (form doldurulması, çerezler, tarayıcı verileri) elde edilir.",
+   "en": "and is collected through automated means (form submission, cookies, browser data) based on these legal grounds.",
+   "de": "Rechtsgrundlagen erfasst, durch automatisierte Verfahren (Formularausfüllung, Cookies, Browserdaten).",
+   "nl": "op basis van deze juridische grondslagen, worden verkregen via geautomatiseerde middelen (formulierinvulling, cookies, browsergegevens)."
+  },
+  {
+   "tr": "5. Kişisel Verilerin Aktarımı",
+   "en": "5. Transfer of Personal Data",
+   "de": "5. Weitergabe personenbezogener Daten",
+   "nl": "5. Overdracht van Persoonsgegevens"
+  },
+  {
+   "tr": "Verileriniz, yalnızca aşağıdaki koşullarda ve amaçlarla sınırlı olmak üzere aktarılabilir:",
+   "en": "Your data may be transferred only under the following conditions and limited to the following purposes:",
+   "de": "Ihre Daten können nur unter den folgenden Bedingungen und zu den folgenden Zwecken weitergegeben werden:",
+   "nl": "Uw gegevens kunnen alleen worden overgedragen onder de volgende voorwaarden en beperkt tot de volgende doeleinden:"
+  },
+  {
+   "tr": "Yetkili kamu kurumlarıyla yasal yükümlülüklerin yerine getirilmesi amacıyla",
+   "en": "For the purpose of fulfilling legal obligations with authorized public institutions",
+   "de": "An zuständige Behörden zur Erfüllung gesetzlicher Verpflichtungen",
+   "nl": "Met bevoegde overheidsinstanties met het oog op de naleving van wettelijke verplichtingen"
+  },
+  {
+   "tr": "Dentsoft sistemine, yalnızca randevu takibi ve hasta iletişimi için",
+   "en": "To the Dentsoft system, solely for appointment tracking and patient communication",
+   "de": "An das Dentsoft-System, ausschließlich für Terminverfolgung und Patientenkommunikation",
+   "nl": "Naar het Dentsoft-systeem, alleen voor afspraakopvolging en patiëntcommunicatie"
+  },
+  {
+   "tr": "Google ve Meta gibi yurtdışı merkezli reklam sistemlerine, kampanya optimizasyonu ve izleme amacıyla",
+   "en": "To overseas-based advertising systems such as Google and Meta, for campaign optimization and tracking purposes",
+   "de": "An im Ausland ansässige Werbesysteme wie Google und Meta, zum Zweck der Kampagnenoptimierung und -verfolgung",
+   "nl": "Naar in het buitenland gevestigde advertentiesystemen zoals Google en Meta, met het oog op campagneoptimalisatie en tracking"
+  },
+  {
+   "tr": "Bu aktarımlar, KVKK'nın 9. maddesi uyarınca yeterli korumaya sahip ülkeler ile sınırlıdır.",
+   "en": "These transfers are limited to countries with adequate protection pursuant to Article 9 of the PDPL.",
+   "de": "Diese Übermittlungen sind gemäß Artikel 9 der DSGVO auf Länder mit angemessenem Schutz beschränkt.",
+   "nl": "Deze overdrachten zijn beperkt tot landen met voldoende bescherming in overeenstemming met artikel 9 van de KVKK."
+  },
+  {
+   "tr": "6. Verilerin Saklama Süresi",
+   "en": "6. Data Retention Period",
+   "de": "6. Aufbewahrungsdauer der Daten",
+   "nl": "6. Bewaartermijn van Gegevens"
+  },
+  {
+   "tr": "Kişisel verileriniz, işleme amacının sona ermesi veya ilgili mevzuatta öngörülen sürelerin dolması halinde",
+   "en": "Your personal data will be, upon the expiration of the processing purpose or the periods stipulated in the relevant legislation,",
+   "de": "Ihre personenbezogenen Daten werden nach Beendigung des Verarbeitungszwecks oder Ablauf der in den einschlägigen Rechtsvorschriften vorgesehenen Fristen",
+   "nl": "Uw persoonsgegevens worden, wanneer het verwerkingsdoel eindigt of de in de relevante wetgeving voorziene termijnen verlopen,"
+  },
+  {
+   "tr": "silinir,",
+   "en": "deleted,",
+   "de": "gelöscht,",
+   "nl": "verwijderd,"
+  },
+  {
+   "tr": "yok edilir veya anonim hale getirilir. Klinik bünyesinde alınan randevu ve iletişim talepleri en fazla 2 yıl",
+   "en": "destroyed or anonymized. Appointment and communication requests received within the clinic are retained for a maximum of 2 years",
+   "de": "vernichtet oder anonymisiert. Termin- und Kommunikationsanfragen innerhalb der Klinik werden maximal 2 Jahre lang",
+   "nl": "vernietigd of geanonimiseerd. Afspraak- en communicatieverzoeken die binnen de kliniek zijn ontvangen, worden maximaal 2 jaar"
+  },
+  {
+   "tr": "süreyle saklanır.",
+   "en": "and then deleted.",
+   "de": "aufbewahrt.",
+   "nl": "bewaard."
+  },
+  {
+   "tr": "7. Haklarınız",
+   "en": "7. Your Rights",
+   "de": "7. Ihre Rechte",
+   "nl": "7. Uw Rechten"
+  },
+  {
+   "tr": "KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:",
+   "en": "Pursuant to Article 11 of the PDPL, you have the following rights:",
+   "de": "Gemäß Artikel 11 der DSGVO haben Sie folgende Rechte:",
+   "nl": "In overeenstemming met artikel 11 van de KVKK heeft u de volgende rechten:"
+  },
+  {
+   "tr": "Kişisel verilerinizin işlenip işlenmediğini öğrenme",
+   "en": "Learning whether your personal data is being processed",
+   "de": "Zu erfahren, ob Ihre personenbezogenen Daten verarbeitet werden",
+   "nl": "Te weten of uw persoonsgegevens worden verwerkt"
+  },
+  {
+   "tr": "İşlenmişse bilgi talep etme",
+   "en": "Requesting information if it has been processed",
+   "de": "Auskunft zu verlangen, falls sie verarbeitet wurden",
+   "nl": "Informatie opvragen indien deze zijn verwerkt"
+  },
+  {
+   "tr": "İşlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme",
+   "en": "Learning the purpose of processing and whether it is used in accordance with its purpose",
+   "de": "Den Verarbeitungszweck zu erfahren und ob sie zweckgemäß verwendet werden",
+   "nl": "Te weten wat het verwerkingsdoel is en of ze worden gebruikt in overeenstemming met dit doel"
+  },
+  {
+   "tr": "Yurt içi/yurt dışı üçüncü kişilere aktarım durumunu öğrenme",
+   "en": "Learning the status of transfer to domestic/overseas third parties",
+   "de": "Zu erfahren, ob sie an Dritte im In- oder Ausland weitergegeben wurden",
+   "nl": "Te weten of ze worden overgedragen aan binnenlandse/buitenlandse derde partijen"
+  },
+  {
+   "tr": "Eksik/yanlış işlenmiş verilerin düzeltilmesini isteme",
+   "en": "Requesting correction of incomplete/incorrectly processed data",
+   "de": "Die Berichtigung unvollständiger/fehlerhaft verarbeiteter Daten zu verlangen",
+   "nl": "Correctie vragen van onvolledige/onjuist verwerkte gegevens"
+  },
+  {
+   "tr": "İşleme amacı sona erdiğinde verilerin silinmesini/yok edilmesini isteme",
+   "en": "Requesting deletion/destruction of data when the processing purpose expires",
+   "de": "Die Löschung/Vernichtung der Daten zu verlangen, wenn der Verarbeitungszweck beendet ist",
+   "nl": "Verzoeken om verwijdering/vernietiging van gegevens wanneer het verwerkingsdoel eindigt"
+  },
+  {
+   "tr": "Otomatik sistemlerle analiz sonucu aleyhinize çıkabilecek duruma itiraz etme",
+   "en": "Objecting to a result that may arise against you as a result of analysis by automated systems",
+   "de": "Gegen Entscheidungen zu widersprechen, die durch automatisierte Analyse zu Ihrem Nachteil ausfallen könnten",
+   "nl": "Bezwaar maken tegen situaties die tot uw nadeel kunnen zijn als gevolg van analyse door geautomatiseerde systemen"
+  },
+  {
+   "tr": "KVKK'ya aykırı işlem sebebiyle zarara uğramanız hâlinde tazminat talep etme",
+   "en": "Claiming compensation in case you suffer damage due to processing contrary to the PDPL",
+   "de": "Schadensersatz zu verlangen, falls Sie durch DSGVO-widrige Verarbeitung Schaden erlitten haben",
+   "nl": "Schadevergoeding eisen indien u schade lijdt als gevolg van verwerking in strijd met de KVKK"
+  },
+  {
+   "tr": "8. İletişim",
+   "en": "8. Contact",
+   "de": "8. Kontakt",
+   "nl": "8. Contact"
+  },
+  {
+   "tr": "KVKK kapsamındaki başvurularınızı, ad-soyad ve telefon bilginizi belirterek aşağıdaki e-posta adresine",
+   "en": "You may submit your applications under the PDPL, stating your full name and phone number, to the following e-mail address",
+   "de": "Sie können Ihre Anträge im Rahmen der DSGVO unter Angabe Ihres Vor- und Nachnamens sowie Ihrer Telefonnummer an folgende E-Mail-Adresse",
+   "nl": "U kunt uw aanvragen in het kader van de KVKK, met vermelding van uw voor- en achternaam en telefoonnummer, naar het volgende e-mailadres"
+  },
+  {
+   "tr": "iletebilirsiniz:",
+   "en": "as follows:",
+   "de": "senden:",
+   "nl": "sturen:"
+  },
+  {
+   "tr": "Bu siteyi kullanmaya devam ederek, yukarıda yer alan Aydınlatma Metni'ni okuduğunuzu, anladığınızı ve kişisel verilerinizin bu çerçevede işlenmesine rıza gösterdiğinizi kabul etmiş sayılırsınız.",
+   "en": "By continuing to use this website, you are deemed to have accepted that you have read and understood the Disclosure Text above and that you consent to the processing of your personal data within this framework.",
+   "de": "Durch die fortgesetzte Nutzung dieser Website bestätigen Sie, dass Sie den oben stehenden Informationstext gelesen und verstanden haben und der Verarbeitung Ihrer personenbezogenen Daten in diesem Rahmen zustimmen.",
+   "nl": "Door deze website te blijven gebruiken, wordt u geacht te hebben geaccepteerd dat u de bovenstaande Informatietekst heeft gelezen en begrepen, en dat u toestemming geeft voor de verwerking van uw persoonsgegevens binnen dit kader."
+  }
+ ],
+ "reviews": [
+  {
+   "author": "Melih E.",
+   "text": "Kanal tedavim acısız ve başarılı gecti ellerine sağlık"
+  },
+  {
+   "author": "Munkhtsetseg R.",
+   "text": "Dişim yaklaşık bir hafta boyunca ağrıdı. Bu diş kliniğini tercih ettiğim için çok memnunum. Daha önce başka bir doktora gittiğimde implant yapılması gerektiği söylenen dişim, burada 2–3 seanslık tedaviyle başarılı bir şekilde tedavi edilerek kendi dişim korunmuştur. Doktoruma emekleri için çok teşekkür ederim. Ayrıca tedavi ve hizmet kalitesinden de son derece memnun kaldım."
+  },
+  {
+   "author": "Ece Y.",
+   "text": "38 yaşındayım, korkumu yenmeme neden bir doktordur kendisi. İşini özenle ve TEMİZ yapan, eli hafif, güler yüzlü ve güvende hissetmenizi sağlayan bir doktor. Aynı anda 3 dolgu ve temizleme yaptık, 2 gün sonra 4 dolgu yaptırdım, hiç ağrım olmadı :) - maşallah- Devrim Hanım iyi ki sizin gibi hekimler var"
+  },
+  {
+   "author": "Süleyman B.",
+   "text": "Devrim hocamız güler yüzü ile yaptığı işlemlerde acı hiss etmiyorsunuz, anlaşılmıyor ve çok sağlam oluyor"
+  },
+  {
+   "author": "Cem T.",
+   "text": "Ufacık dişten dolgu ile diş yaptı ve çok güzel oldu, daha önce 3 doktora gittim hepsi çekilmesinin gerektiği söylemesine rağmen Devrim hanım zamanından alarak emek harçayarak diş yaptı. Ellerine kollarına sağlık hocam bulduğumuz ve tanıdığımız için çok mutlu olduk. Güvenle gidebilirsiniz."
+  },
+  {
+   "author": "Buse Y.",
+   "text": "Devrim hocam yıllardır güvendiğim, işini özenle yapan bir hekim. Yaptırdığım dolgular ve tedavi süreçleri hep çok iyi sonuç verdi. Eli de hafif ve gerçekten hızlı bir şekilde tedaviyi tamamlıyor, kesinlikle öneriyorum"
+  },
+  {
+   "author": "Hüseyin U. Y.",
+   "text": "Devrim hocaya çocukluğumdan beri gidiyorum, bugün de dolgularımı yaptı, eli çok temiz, herhangi bir sıkıntı olmadan halletti, kesinlikle öneriyorum"
+  },
+  {
+   "author": "Melis Ç.",
+   "text": "Dişlerime uygulanan lamina estetik olarak harikaydı."
+  },
+  {
+   "author": "Ceren S.",
+   "text": "Devrim hoca ile 2020 yılında tanıştık, yirmilik dişimi çektirmiştim, o kadar güler yüzlü, eli hafif bir doktor ki beni kendisine hayran bıraktı. Hemen sonrasında ön dişlerimi kaplama yaptırdım, yıllardır sorunsuz kullanıyorum 🙏☺️"
+  },
+  {
+   "author": "Merve A.",
+   "text": "Devrim hanım sayesinde 20'lik dişim sorunsuz çekildi, ön dişlerim daha temiz ve güzel oldu. En son yaptığı kanal tedavi sayesinde yemek yerken artık canım acımıyor. Kesinlikle gözüm kapalı tavsiye ederim. Yıllardır tüm dişlerimi emanet ettiğim canım hekimim Devrim hanım, iyi ki varsınız!"
+  },
+  {
+   "author": "Özlem H.",
+   "text": "Yıllardır hekimliğine, tecrübesine, tedavisine güvendiğim, her gittiğimde temizlik konusunda en ufak bir şüphe duymadığım işinin ehli bir diş doktorudur kendisi."
+  }
+ ],
+ "profiles": {
+  "website": "https://devrimbirikensipahi.com.tr",
+  "google_maps": "https://maps.app.goo.gl/nVmTfMKXq2jTeNvy5",
+  "instagram": "drdevrimbirikensipahi",
+  "youtube": "https://www.youtube.com/@devrimbirikensipahi",
+  "opening_hours": [
+   "Mo-Su 05:00-23:59"
+  ],
+  "specialties": [
+   "Oral & Maxillofacial Radiology",
+   "Implantology",
+   "Cosmetic dentistry",
+   "Endodontics",
+   "General & preventive dentistry"
+  ]
+ }
+}

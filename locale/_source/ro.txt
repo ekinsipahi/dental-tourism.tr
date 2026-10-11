@@ -1,0 +1,589 @@
+0|Blog despre turismul dentar — ghiduri, costuri și sfaturi pentru pacienți
+1|Ghiduri oneste despre tratamentul dentar în Turcia: prețuri pentru implanturi și fațete, siguranță, recuperare și cum alegi un medic dentist în Istanbul.
+2|Acasă
+3|Blog
+4|%(category)s — Blog despre turismul dentar
+5|Clinici dentare în Istanbul pentru pacienți internaționali
+6|Clinici dentare verificate în Turcia: experiența medicilor, limbi vorbite, prețuri și recenzii ale pacienților. Consultație gratuită.
+7|Clinici
+8|%(clinic)s — clinică dentară în %(city)s
+9|%(doctor)s — medic dentist în %(city)s
+10|Am câteva întrebări despre siguranță și desfășurarea tratamentului.
+11|Aș dori să primesc o ofertă de preț.
+12|Aș dori să întreb despre programările disponibile săptămâna aceasta.
+13|Aș dori informații despre designul zâmbetului.
+14|Aș dori să solicit o programare privată.
+15|Aș dori să fac o programare.
+16|Aș dori informații despre materiale și certificate.
+17|Aș dori să aflu mai multe.
+18|Bună ziua, aș dori o consultație gratuită.
+19|Nume complet
+20|Prenumele și numele dvs.
+21|Telefon / WhatsApp
+22|E-mail
+23|Tratamentul dorit
+24|Nu știu încă
+25|Mesaj
+26|Descrieți pe scurt situația dinților dvs.…
+27|Sunt de acord cu prelucrarea datelor mele pentru a primi un răspuns la solicitare (GDPR / KVKK).
+28|Introduceți un număr de telefon valid, cu prefixul țării.
+29|per dinte
+30|per implant
+31|per coroană
+32|per arcadă
+33|per arcadă
+34|per ședință
+35|per zâmbet
+36|despre-noi/
+37|contact/
+38|contact/multumim/
+39|confidentialitate/
+40|Este sigur să faci un tratament dentar în Turcia?
+41|Da, dacă alegi o clinică autorizată, cu medici cu experiență și materiale certificate. Înainte de călătorie cere calificările medicului, mărcile implanturilor și coroanelor și un plan de tratament scris.
+42|Cât pot economisi la tratamentul dentar în Istanbul?
+43|Pacienții plătesc de obicei cu 50–70% mai puțin decât în Europa de Vest pentru același tratament și aceleași materiale. Primiți o ofertă fixă, în scris, înainte de începerea tratamentului.
+44|Cât timp trebuie să stau în Istanbul?
+45|Depinde de tratament: plombele, detartrajul și fațetele din compozit durează 1–3 zile, coroanele și fațetele din porțelan aproximativ 5–7 zile, iar implanturile de obicei două vizite la câteva luni distanță.
+46|Vorbiți limba mea?
+47|Comunicăm cu pacienții internaționali în engleză și alte limbi, iar înainte, în timpul și după tratament puteți scrie direct medicului pe WhatsApp.
+48|Câtă experiență are medicul?
+49|Medicul nostru principal are %(years)s ani de experiență clinică.
+50|Stomatologie în Istanbul — implanturi, fațete și coroane în Turcia
+51|Tratament dentar etic în Istanbul cu un medic experimentat. Implanturi, fațete, coroane din zirconiu cu 50–70% mai ieftine decât în Europa. Preț fix. Consultație gratuită pe WhatsApp.
+52|Despre noi — stomatologie etică în Istanbul
+53|Cunoașteți medicul și clinica din spatele dentaltourism.tr: decenii de experiență, diagnostic transparent și doar tratamentul de care aveți cu adevărat nevoie.
+54|Despre noi
+55|Verificați formularul și încercați din nou.
+56|Consultație gratuită — contactați medicul nostru din Istanbul
+57|Trimiteți radiografia sau fotografiile și primiți gratuit un plan de tratament și o ofertă fixă. Răspuns în 24 de ore. WhatsApp, telefon sau formular.
+58|Mulțumim — vă vom contacta în curând
+59|Politica de confidențialitate
+60|Cum prelucrăm și protejăm datele dvs. personale (GDPR / KVKK).
+61|Pagina nu a fost găsită
+62|%(treatment)s în %(city)s
+63|%(treatment)s %(city)s — prețuri de la €%(price)s
+64|Comparați %(treatment)s în %(city)s: prețurile clinicilor, durata șederii, experiența medicilor și recenzii. Consultație gratuită pe WhatsApp.
+65|Tratamente
+66|Prețuri stomatologie Turcia vs %(country)s — listă de prețuri 2026
+67|Comparați prețurile tratamentelor dentare din Istanbul cu %(country)s: implanturi, fațete, coroane, All-on-4. Prețuri fixe în EUR, fără costuri ascunse.
+68|Prețuri
+69|Cost %(treatment)s în Turcia vs %(country)s
+70|%(treatment)s cost Turcia vs %(country)s (2026)
+71|Cât costă %(treatment)s în Istanbul comparativ cu %(country)s? Prețuri reale ale clinicilor de la €%(price)s, ce este inclus și cât economisiți.
+72|Tratamente dentare în Istanbul — prețuri și informații
+73|Toate tratamentele dentare pentru pacienți internaționali în Istanbul: implanturi, fațete, coroane, All-on-4, tratament de canal și altele. Prețuri și durate de ședere transparente.
+74|%(treatment)s în Istanbul — preț și procedură
+75|tratamente/
+76|preturi/
+77|clinici/
+78|medici-dentisti/
+79|Pagina pe care o căutați nu există sau a fost mutată.
+80|Povestea noastră
+81|Stomatologie etică în Istanbul — doar ce vă trebuie
+82|Credem că cea mai importantă abilitate în stomatologie este să știi când să nu tratezi. Fiecare plan începe cu păstrarea dinților naturali, un diagnostic transparent și un preț fix scris.
+83|Medicul dvs. dentist
+84|Administrare site Django
+85|Salt la conținut
+86|Sugestie de limbă
+87|Închide
+88|Același tratament, cu 50–70%% mai ieftin decât în %(country)s.
+89|Vezi lista de prețuri
+90|Aveți puțin timp? Multe tratamente se finalizează într-o săptămână în Istanbul.
+91|Scrieți-ne pe WhatsApp
+92|%(n)s min de citit
+93|Paginare
+94|Anterior
+95|Următor
+96|Categorie
+97|Categorii
+98|Toate
+99|Nu există încă articole în această categorie.
+100|Actualizat
+101|Verificat medical de
+102|Cuprins
+103|În acest articol
+104|Prețuri și detalii
+105|S-ar putea să vă intereseze și
+106|Centru de informare pentru pacienți
+107|Informați-vă înainte să decideți
+108|Ghiduri oneste despre tratamente dentare, costuri și la ce să vă așteptați de la turismul dentar în Istanbul.
+109|Articole noi în curând.
+110|Această pagină nu este încă disponibilă în limba dvs. — este afișată versiunea originală.
+111|Ani de experiență
+112|Pacienți tratați
+113|Evaluare Google
+114|Limbi
+115|Tratamente și prețuri
+116|Tratament
+117|De la
+118|Ședere
+119|%(d)s zile
+120|Medici dentiști
+121|Contact și locație
+122|Hartă
+123|Înainte și după
+124|Înainte
+125|După
+126|Recenziile pacienților
+127|Calificări
+128|Universitate
+129|Absolvire
+130|Întrebați medicul
+131|Clinici dentare în Istanbul pentru pacienți internaționali
+132|Fiecare clinică este verificată înainte de a fi listată: autorizație, calificările medicilor și recenzii reale ale pacienților.
+133|Verificată
+134|Nicio clinică listată încă.
+135|Fir de navigare
+136|Folosim cookie-uri pentru a măsura publicitatea și a îmbunătăți site-ul. Puteți accepta sau refuza cookie-urile de analiză.
+137|Politica de confidențialitate
+138|Accept
+139|Refuz
+140|Trimite — vă vom contacta
+141|Datele dvs. sunt protejate conform GDPR / KVKK și folosite doar pentru a răspunde solicitării.
+142|Prețul exact în 24 de ore
+143|Trimiteți o fotografie sau o radiografie pe WhatsApp. Primiți un plan de tratament scris și un preț fix — fără obligații.
+144|Întrebați medicul orice — înainte să decideți
+145|Materiale, garanții, ce se întâmplă dacă apare o problemă: răspunsuri oneste direct de la medic, nu de la un call center.
+146|Solicitați o consultație privată
+147|Un plan de tratament personalizat, programări discrete și un singur medic responsabil de îngrijirea dvs. de la început până la sfârșit.
+148|Vedeți disponibilitatea din această săptămână
+149|Spuneți-ne datele călătoriei și vă planificăm programările în funcție de ele.
+150|Evaluare gratuită — fără obligații
+151|Trimiteți-ne o fotografie sau o radiografie. Medicul nostru vă răspunde cu un plan de tratament onest și un preț fix.
+152|Formular de contact
+153|Întrebări frecvente
+154|Tratament dentar etic în Istanbul pentru pacienți internaționali — diagnostic transparent, prețuri fixe, contact direct cu medicul dvs.
+155|Informații
+156|Listă de prețuri
+157|Contact
+158|Navigare principală
+159|Despre noi
+160|Schimbă limba
+161|Ofertă gratuită
+162|Programează acum
+163|Consultație privată
+164|Consultație gratuită
+165|Meniu
+166|de la
+167|Preț la cerere
+168|Detalii
+169|%(name)s — recenzie video a pacientului
+170|Primiți planul de tratament gratuit
+171|Trimiteți-ne datele dvs. — și, dacă aveți, o fotografie sau radiografie pe WhatsApp. Medicul răspunde personal în 24 de ore.
+172|Cel mai rapid răspuns — de obicei în 30 de minute în programul clinicii.
+173|Clinică
+174|De ce gratuit?
+175|Fără obligații
+176|Plan de tratament și preț fix
+177|Răspuns în 24 de ore
+178|Cu 50–70%% mai ieftin decât în %(country)s
+179|Turism dentar Turcia — Istanbul
+180|Implanturi dentare accesibile în Istanbul —
+181|aceeași calitate.
+182|O fracțiune din prețul de acasă. Materiale certificate CE, tehnică identică. Fără costuri ascunse — prețul pe care îl comunicăm este prețul pe care îl plătiți.
+183|implant
+184|Istanbul
+185|Economia dvs.
+186|Ofertă de preț gratuită
+187|%(years)s+ ani — protocol etic
+188|Protocol etic
+189|Tratament dentar sigur în Istanbul —
+190|și veți simți asta.
+191|Cel mai valoros lucru pe care ni l-a învățat experiența: medicina bună înseamnă să știi când să spui nu. Fără proceduri inutile. Diagnostic transparent. Preț fix.
+192|Fără tratamente inutile
+193|Păstrarea dintelui natural este întotdeauna pe primul loc
+194|Ofertă fixă scrisă
+195|Ce vă oferim, aceea plătiți
+196|Un singur medic, responsabilitate deplină
+197|Același medic de la consultație până la controalele ulterioare
+198|Puneți-vă întrebarea
+199|Minim invaziv — rezultate naturale
+200|Designul zâmbetului în Istanbul —
+201|zâmbiți din nou ca dvs.
+202|Un zâmbet natural, cu adevărat al dvs., cu cât mai puțină șlefuire a dinților. Scopul nostru nu este doar un rezultat frumos, ci unul sănătos și durabil.
+203|Întrebați despre designul zâmbetului
+204|Înainte / după
+205|Rezultate înainte și după
+206|ÎNAINTE
+207|DUPĂ
+208|Programări limitate luna aceasta
+209|Un zâmbet nou în Istanbul —
+210|în aproximativ o săptămână.
+211|Nuntă, vacanță sau interviu de angajare? Veniți luni și plecați acasă zâmbind vineri — pentru coroane, fațete și multe alte tratamente.
+212|Calendarul tratamentului
+213|Lun
+214|Sosire și consultație
+215|Mar
+216|Pregătire
+217|Mie–Joi
+218|Vin
+219|Fixare finală — zbor spre casă
+220|%(n)s+ pacienți
+221|Turism dentar în Istanbul —
+222|ales de mii de pacienți.
+223|Nu ne credeți orbește — urmăriți mai întâi poveștile reale ale pacienților noștri. Întrebați orice. Fără presiune, fără grabă.
+224|Vedeți recenziile pacienților
+225|Puneți o întrebare
+226|Fără obligații. Doar răspunsuri.
+227|Clinică privată
+228|Clinică dentară premium în Istanbul —
+229|stomatologia ca artă.
+230|Decenii de experiență și precizie estetică. Doar ce vă trebuie — nimic mai mult, nimic mai puțin.
+231|Solicitați o programare privată
+232|Programări disponibile săptămâna aceasta
+233|Suntem pregătiți când sunteți și dvs.
+234|Programați-vă tratamentul dentar în Istanbul —
+235|sunteți pregătit?
+236|Evaluare gratuită, plan de tratament personalizat, preț fix. Răspuns în 24 de ore.
+237|Faceți o programare
+238|Stomatologie bazată pe dovezi
+239|Este sigur tratamentul dentar în Turcia?
+240|Răspundem la tot.
+241|Materiale, calificări, ce se întâmplă dacă apare o problemă — primiți un răspuns transparent la fiecare întrebare.
+242|Puneți orice întrebare — gratuit
+243|Ce spun cu adevărat pacienții
+244|Turism dentar Turcia
+245|Tratament dentar în Istanbul —
+246|doar ce au cu adevărat nevoie dinții dvs.
+247|Medicina bună înseamnă să știi când să spui nu. Protocol etic, diagnostic transparent și un singur medic responsabil de îngrijirea dvs. — cu contact direct pe WhatsApp, nu un call center.
+248|Diagnostic transparent
+249|Un singur medic — responsabilitate deplină
+250|Evaluare gratuită — WhatsApp
+251|Tratamente cu cel mai bun raport calitate-preț
+252|Tratamentele noastre de referință
+253|Tratamente pentru un zâmbet natural
+254|Ce facem
+255|Tratamente dentare în Istanbul — și de ce le facem
+256|Protocolul nostru etic înseamnă că recomandăm doar ce aveți cu adevărat nevoie. Fără vânzări forțate, fără proceduri inutile.
+257|Comparați prețurile cu țara dvs.
+258|Experiențele pacienților
+259|Poveștile lor — inspirația dvs.
+260|Pacienți reali, rezultate reale
+261|Videoclipurile sunt publicate cu acordul explicit al pacienților.
+262|Toate videoclipurile pacienților
+263|Cum funcționează
+264|De la primul mesaj la noul dvs. zâmbet
+265|Trimiteți o fotografie sau o radiografie
+266|Scrieți-ne pe WhatsApp. Medicul analizează personal cazul dvs.
+267|Primiți un plan și un preț fix
+268|Primiți un plan de tratament onest și o ofertă scrisă în 24 de ore.
+269|Călătoriți la Istanbul
+270|Programăm vizitele în funcție de zborurile dvs. și vă ajutăm cu logistica.
+271|Tratament și monitorizare
+272|După ce vă întoarceți acasă, monitorizarea pe WhatsApp continuă — nu sunteți niciodată singur.
+273|Evaluare inițială gratuită
+274|Vă sunăm noi
+275|Oriunde v-ați afla, completați formularul pentru o scurtă consultație. Fără obligații, fără presiune.
+276|Absolut nicio obligație
+277|Preț fix — fără taxe ascunse
+278|Pentru un răspuns mai rapid, scrieți direct medicului:
+279|Acest site este administrat de %(name)s. Prelucrăm datele personale pe care ni le trimiteți (nume, telefon, e-mail, mesaj și imagini) doar pentru a răspunde solicitării și a vă planifica tratamentul.
+280|Ce date colectăm
+281|Formularul de contact și mesajele WhatsApp; date tehnice despre vizită (pagini vizualizate, tipul dispozitivului, țara aproximativă) pentru îmbunătățirea site-ului; și, doar cu acordul dvs., cookie-uri publicitare (Google, Meta).
+282|Drepturile dvs.
+283|Conform GDPR și legii turce KVKK, puteți solicita oricând accesul la date, rectificarea sau ștergerea lor contactându-ne.
+284|%(y)s+ ani de experiență
+285|Prețuri dentare în Istanbul vs %(country)s
+286|Prețuri de pornire în Istanbul, în EUR. Prețul exact depinde de diagnostic — primiți o ofertă fixă scrisă înainte de orice tratament.
+287|Istanbul de la
+288|Economie
+289|Prețurile din țara dvs. sunt medii tipice de piață și sunt afișate doar pentru comparație.
+290|%(d)s zile în Istanbul
+291|%(n)s clinică‖%(n)s clinici‖%(n)s de clinici
+292|Evaluare gratuită pe WhatsApp
+293|Comparați prețurile
+294|Clinici pentru %(t)s în %(c)s
+295|Nicio clinică nu oferă încă acest tratament în acest oraș.
+296|Ce spun pacienții
+297|Tratamente similare
+298|Comparație de prețuri
+299|Prezentare generală a prețurilor
+300|Unde
+301|Preț
+302|la cerere
+303|Prețurile tipice din %(country)s vor fi adăugate în curând.
+304|Ce include prețul din Istanbul
+305|Consultație și radiografie digitală / scanare 3D
+306|Plan de tratament scris, cu preț fix
+307|Tratament efectuat de un medic experimentat, cu materiale certificate
+308|Monitorizare pe WhatsApp după întoarcerea acasă
+309|Prețurile clinicilor
+310|Aflați prețul exact
+311|Trimiteți o fotografie sau o radiografie și primiți o ofertă fixă scrisă în 24 de ore.
+312|Totul despre %(name)s
+313|Mulțumim — am primit solicitarea dvs.
+314|Medicul vă va contacta în 24 de ore. Pentru un răspuns mai rapid, ne puteți scrie și acum pe WhatsApp.
+315|Citiți ghidurile noastre pentru pacienți
+316|%(name)s în Istanbul
+317|%(n)s vizită‖%(n)s vizite‖%(n)s de vizite
+318|Pe această pagină
+319|%(name)s: Istanbul vs țara dvs.
+320|Țară
+321|Preț tipic
+322|%(name)s pe orașe
+323|Pe scurt
+324|Preț în Istanbul
+325|Ședere în Istanbul
+326|Vizite
+327|Anestezie
+328|Locală
+329|Aflați prețul meu
+330|Clinici care oferă acest tratament
+331|Ghiduri despre acest tratament
+332|Tratamente dentare în Istanbul
+333|Toate tratamentele pe care le oferim, cu informații oneste despre procedură, cât timp trebuie să stați în Istanbul și cât costă.
+334|Țara dvs.
+335|Numele dvs.
+336|Afișat ca prenume și inițială, de ex. 'Anna K.'
+337|Nu se publică — folosit doar pentru verificarea recenziei.
+338|Evaluare
+339|Alegeți tratamentul
+340|Titlu
+341|Experiența dvs.
+342|Confirm că această recenzie descrie propria mea experiență ca pacient.
+343|Recomandate
+344|Cele mai bine evaluate
+345|Cel mai mic preț
+346|Cele mai experimentate
+347|Caută
+348|Clinică, medic sau cartier…
+349|Oraș
+350|Limba vorbită
+351|Oricare
+352|Preț max. (€)
+353|Doar clinici verificate
+354|Transfer de la aeroport
+355|Ajutor la rezervarea hotelului
+356|Sortează după
+357|Toate orașele
+358|Toate tratamentele
+359|Orice limbă
+360|Prea multe recenzii de pe conexiunea dvs. Încercați mai târziu.
+361|Verificați formularul de recenzie și încercați din nou.
+362|Mulțumim! Recenzia dvs. va fi publicată după o scurtă verificare.
+363|Găsiți-vă clinica
+364|Căutați clinici dentare în Turcia
+365|Filtrați după tratament, oraș, limbă și preț — și comparați clinicile verificate una lângă alta.
+366|Caută clinici
+367|Mai multe filtre
+368|%(n)s recenzie‖%(n)s recenzii‖%(n)s de recenzii
+369|Profiluri
+370|%(n)s recenzie pe dentaltourism.tr‖%(n)s recenzii pe dentaltourism.tr‖%(n)s de recenzii pe dentaltourism.tr
+371|Toate recenziile Google
+372|Lăsați-ne o recenzie pe Google
+373|Scrieți o recenzie
+374|Recenzii pe dentaltourism.tr
+375|Recenzii pe Google și alte platforme
+376|Ați fost tratat la %(name)s? Împărtășiți experiența
+377|Recenziile sunt verificate înainte de publicare. Adresa de e-mail nu este afișată niciodată.
+378|Trimite recenzia
+379|%(n)s clinică găsită‖%(n)s clinici găsite‖%(n)s de clinici găsite
+380|Șterge filtrele
+381|Tratamente de la
+382|Vezi clinica
+383|Nicio clinică nu corespunde filtrelor.
+384|Verificat pe site-ul nostru
+385|Pacient verificat
+386|Răspunsul clinicii
+387|Cât costă tratamentul dentar în Istanbul?
+388|Foarte accesibil față de Europa de Vest – cu aceleași materiale și tehnici. Nu publicăm prețuri unice pentru toți: sună-ne sau trimite fotografii pe WhatsApp și primești un preț fix în scris înainte de începerea tratamentului.
+389|Tratament dentar etic în Istanbul, la un dentist cu experiență. Implanturi, fațete, coroane din zirconiu – foarte accesibil, preț fix în scris. Consultanță gratuită pe WhatsApp.
+390|Recenzii Google
+391|Calm, fără durere și explicat pas cu pas
+392|Anestezie locală, un dentist care îți explică totul mai întâi și nicio decizie sub presiune.
+393|Verifică totul înainte să ai încredere în noi
+394|Recenzii reale cu sursa, materiale numite și un plan scris înainte de călătorie.
+395|Foarte accesibil – și un preț fix în scris
+396|Fără costuri ascunse. Sună-ne sau scrie-ne și primești oferta ta personală.
+397|Timp cu dentistul tău, nu cu o echipă de vânzări
+398|Un singur dentist cu experiență, responsabil de întregul tratament, materiale premium și îngrijire discretă.
+399|Fără judecăți – doar soluții
+400|Indiferent de starea dinților tăi, am mai văzut-o. Începem cu ce se poate salva.
+401|O clinică condusă de un dentist, pe care o poți verifica
+402|Calificări, recenzii și fotografii reale – toate pe această pagină.
+403|Deschis 7 zile din 7, în centrul Istanbulului
+404|Spune-ne datele călătoriei; programăm vizitele în funcție de zborurile tale.
+405|Planifică vizita cu un singur mesaj
+406|Trimite fotografiile și datele călătoriei pe WhatsApp – îți răspundem cu planul tău personal.
+407|Stomatologia înseamnă mai mult decât un zâmbet de Hollywood
+408|Salvăm mai întâi dinții sănătoși și planificăm un tratament real, doar pentru tine.
+409|Ghiduri de turism dentar – Turcia & Istanbul
+410|Ghiduri oneste despre tratamentul dentar în Turcia: alegerea clinicii, recenzii, călătorie, garanție și îngrijire – de la un dentist din Istanbul.
+411|Ghiduri
+412|Ghiduri de turism dentar: Turcia și Istanbul
+413|Tot ce ai nevoie ca să decizi cu încredere – scris de un dentist, fără discurs de vânzare.
+414|Ghid
+415|Ce este turismul dentar?
+416|Turismul dentar înseamnă să călătorești în altă țară pentru tratament dentar – de obicei pentru a combina dentiști cu experiență, clinici moderne și costuri mult mai mici cu o călătorie scurtă.
+417|Ce include un pachet de turism dentar?
+418|O evaluare personală, scanare 3D și consult în Istanbul, tratamentul propriu-zis, coordonarea transferurilor și a hotelului și îngrijire pe WhatsApp după întoarcere.
+419|Cât costă un pachet dentar?
+420|Nu vindem pachete cu preț fix, pentru că nu există două guri la fel. Trimite fotografii sau o radiografie pe WhatsApp și primești un plan de tratament personal cu preț fix în scris.
+421|Este o idee bună un pachet all inclusive „zâmbet de Hollywood”?
+422|Doar dacă ai cu adevărat nevoie de el. Pachetele care vând 20 de fațete înainte ca cineva să-ți consulte dinții îndepărtează adesea țesut dentar sănătos. Un plan real începe cu un diagnostic.
+423|Cât durează o călătorie dentară în Turcia?
+424|Majoritatea tratamentelor durează 3–7 zile în Istanbul. Implanturile necesită de obicei două vizite scurte la câteva luni distanță; le programăm pe amândouă în funcție de zborurile tale.
+425|Pachete de turism dentar Istanbul – personalizate, nu standard
+426|Vacanță dentară în Turcia bazată pe un diagnostic real: consult, tratament, transferuri, hotel și îngrijire. Fără pachete fixe – planul tău personal pe WhatsApp.
+427|Pachete dentare
+428|Pachete de turism dentar în Istanbul – personalizate, nu standard
+429|Stomatologia înseamnă mai mult decât un zâmbet de Hollywood. Pachetul tău se bazează pe un diagnostic real: consult, tratament, transferuri, hotel și îngrijire.
+430|Pachet %(treatment)s în Istanbul
+431|Pachet %(treatment)s Turcia – plan personal, nu o ofertă fixă
+432|Pachet %(treatment)s în Istanbul bazat pe diagnosticul tău: consult, tratament, transfer și hotel, îngrijire ulterioară. Planul tău personal pe WhatsApp.
+433|Vacanțe dentare din %(country)s la Istanbul
+434|Vacanțe dentare din %(country)s – Istanbul, Turcia
+435|Plănuiești tratament dentar în Turcia din %(country)s? Durata zborului, numărul de călătorii, ce include un pachet personalizat și îngrijirea acasă.
+436|Plănuiești tratament dentar în Istanbul din %(country)s? Durata zborurilor, numărul de călătorii și ce include un pachet personalizat.
+437|Planificăm tratamentul cu cât mai puține călătorii – adesea o ședere mai lungă, cu implanturile programate astfel încât a doua vizită să fie scurtă.
+438|Coroanele, fațetele și majoritatea tratamentelor necesită o călătorie de aproximativ o săptămână; implanturile, de obicei două călătorii scurte la câteva luni distanță.
+439|Cât durează zborul din %(country)s la Istanbul?
+440|Aproximativ %(hours)s ore, în funcție de aeroportul de plecare și de legătură.
+441|Câte călătorii îmi vor trebui din %(country)s?
+442|Ce se întâmplă după ce mă întorc în %(country)s?
+443|Urmărirea continuă pe WhatsApp și prin e-mail. Dacă e nevoie, ne coordonăm cu un dentist local și te ghidăm prin apel video – nu rămâi niciodată singur.
+444|Cum primesc un preț pentru pachetul meu dentar?
+445|Trimite fotografiile sau radiografia pe WhatsApp. După ce dentistul îți analizează cazul, primești un plan personal cu preț fix în scris – nu publicăm niciodată prețuri unice.
+446|%(treatment)s în %(city)s – plan personal
+447|Compară %(treatment)s în %(city)s: oferte personale accesibile, durata șederii, experiența dentistului și recenzii. Consultanță gratuită pe WhatsApp.
+448|Cât costă tratamentul dentar în Turcia?
+449|Tratamentul dentar în Turcia este foarte accesibil față de Europa de Vest. Costul exact depinde de dinții tăi, așa că primești un preț personal și fix după ce dentistul îți vede fotografiile sau radiografia – sună-ne sau trimite-le pe WhatsApp.
+450|De ce nu publicați o listă de prețuri?
+451|Pentru că o listă de prețuri vinde tuturor același tratament. Doi pacienți care întreabă de „implanturi” pot avea nevoie de planuri complet diferite. Preferăm să-ți spunem prețul tău real.
+452|Sunt riscante clinicile dentare ieftine din Turcia?
+453|Un preț foarte mic înseamnă adesea materiale mai ieftine, lipsa diagnosticului sau tratamente inutile. Cere mărcile materialelor, numele dentistului și un plan scris – calitatea și prețul accesibil pot merge împreună.
+454|Prețul este fix?
+455|Da. Ce stabilim în scris înainte de tratament este ce plătești – fără costuri ascunse.
+456|Prețuri dentist Turcia 2026 – accesibil, ofertă personală
+457|Cât costă dinții în Turcia? Tratament dentar foarte accesibil în Istanbul, cu preț fix în scris. Sună sau scrie pe WhatsApp.
+458|Prețuri tratament dentar în Turcia: accesibile – și personale
+459|Cât costă dinții în Turcia? Foarte accesibil față de acasă – dar răspunsul onest este o ofertă personală, nu o listă de prețuri.
+460|Cost %(treatment)s în Turcia – accesibil, cu preț fix
+461|%(treatment)s preț Turcia 2026 – ofertă personală
+462|Cât costă %(treatment)s în Turcia? Foarte accesibil în Istanbul, cu preț fix în scris după ce dentistul îți vede cazul. Sună sau WhatsApp.
+463|Ce influențează prețul pentru %(treatment)s, ce include – și cum primești oferta personală la telefon sau pe WhatsApp.
+464|%(treatment)s în Istanbul – procedură și plan personal
+465|pachete/
+466|vacante-dentare-din/
+467|ghid/
+468|Foarte accesibil – cu preț fix în scris și fără costuri ascunse.
+469|Vezi pachetele dentare personalizate
+470|Filtrează după tratament, oraș și limbă – și compară clinici verificate una lângă alta.
+471|Sună-ne
+472|Pachete
+473|Plan de tratament personal
+474|Cere planul meu personal
+475|Foarte accesibil · preț fix în scris
+476|Descoperă pachetele dentare personalizate
+477|Ce include un pachet dentar personalizat
+478|Mai întâi diagnosticul
+479|Consult, radiografie și scanare 3D făcute de dentist – planul urmează diagnosticul, nu o listă de prețuri.
+480|Doar tratamentul de care ai nevoie
+481|Salvăm mai întâi dinții naturali. Fără coroane inutile, fără smalț sănătos șlefuit.
+482|Călătorie simplă
+483|Programări în funcție de zboruri, ajutor la transferuri și un hotel lângă clinică.
+484|Foarte accesibil – și ce stabilim în scris este ce plătești.
+485|Îngrijire acasă
+486|Urmărire pe WhatsApp și prin apel video după ce te întorci acasă.
+487|Deschis 7 zile din 7
+488|Programările în weekend fac posibile călătoriile dentare scurte.
+489|Pachete dentare după tratament
+490|Pachet %(name)s
+491|Vacanțe dentare din țara ta
+492|Din %(c)s
+493|Turcia, Mexic, Thailanda, Vietnam, Bali, Ungaria – compară destinațiile de turism dentar
+494|Tratament dentar în Istanbul din %(country)s: cum funcționează
+495|Trimite fotografii sau o radiografie pe WhatsApp
+496|Primești un plan personal și un preț fix în scris
+497|Rezervă zborurile – programăm vizitele în funcție de ele
+498|Consult și scanare 3D în prima zi, apoi tratamentul
+499|Îngrijire pe WhatsApp acasă
+500|Orașe de plecare
+501|Pacienții din %(c)s zboară de obicei din %(list)s spre Istanbul.
+502|Pentru pacienții care vin de departe planificăm tratamentul cu cât mai puține călătorii și ne luăm timp suficient la prima vizită.
+503|Multe vacanțe dentare vând tuturor aceleași fațete. Noi începem cu un diagnostic, salvăm mai întâi dinții sănătoși și recomandăm doar tratamentul de care ai cu adevărat nevoie.
+504|Durata zborului
+505|Program
+506|7 zile din 7
+507|Pacienți din %(c)s
+508|Pachetul tău %(name)s, planificat în jurul tău
+509|Consult, radiografie și scanare 3D făcute de dentist
+510|Un plan de tratament scris, cu mărcile tuturor materialelor
+511|Programări în funcție de zborurile tale
+512|Ajutor la transferul de la aeroport și un hotel lângă clinică
+513|Îngrijire pe WhatsApp după ce te întorci acasă
+514|Ședere obișnuită în Istanbul: %(d)s zile.
+515|Cum alegi cea mai bună clinică pentru %(name)s în Istanbul
+516|Cea mai bună clinică pentru %(name)s în Istanbul și Turcia nu este cea cu oferta cea mai ieftină sau cu cea mai multă reclamă – ci cea în care un dentist cu experiență te consultă, îți explică alternativele și recomandă %(name)s doar dacă ai cu adevărat nevoie.
+517|Întreabă cine te va trata și care sunt calificările dentistului
+518|Întreabă marca și originea fiecărui material
+519|Citește recenziile pe Google și Trustpilot – și cum răspunde clinica
+520|Nu accepta niciodată un plan înainte ca cineva să-ți consulte dinții
+521|Totul despre %(name)s
+522|Cost %(name)s în Turcia
+523|Călătorești din
+524|%(n)s recenzie Google‖%(n)s recenzii Google‖%(n)s de recenzii Google
+525|citește-le pe Google
+526|Trimite o fotografie – evaluare gratuită
+527|Fără obligații · răspunde dentistul, nu un call center · deschis 7 zile din 7
+528|Fotografie reală din clinica noastră din Şişli, Istanbul
+529|Află mai multe despre noi
+530|Transparenți din principiu – verifică-ne singur
+531|Rezultate reale din clinica noastră
+532|Publicate cu acordul pacienților. Fără fotografii de stoc, fără filtre.
+533|Înainte de tratament
+534|După tratament
+535|În clinica noastră
+536|Cât costă?
+537|Prețurile noastre sunt foarte accesibile – dar nu publicăm niciodată prețuri unice, pentru că nu există două guri la fel. După ce dentistul îți vede fotografiile sau radiografia, primești un preț fix în scris. Ce stabilim este ce plătești.
+538|Cere prețul meu pe WhatsApp
+539|Cine te va trata
+540|Absolvent al Facultății de Stomatologie a Universității din Ankara
+541|Radiologie oro-maxilo-facială, Universitatea Marmara – diagnostic 3D precis
+542|Consultă și tratează personal fiecare pacient
+543|Vezi profilul dentistului
+544|Trei pași simpli
+545|pe WhatsApp, durează un minut.
+546|Primești planul personal
+547|cu preț fix în scris, fără obligații.
+548|Vino la Istanbul
+549|programăm vizitele în funcție de zborurile tale.
+550|Smalțul sănătos nu mai crește niciodată. Înainte ca cineva să-ți șlefuiască dinții pentru un zâmbet șablon, cere a doua opinie de la un dentist care salvează mai întâi dinții.
+551|Ce spun pacienții noștri
+552|Mai multe ghiduri
+553|Ce determină prețul tratamentului tău
+554|Diagnosticul tău
+555|Câți dinți, volumul osos, sănătatea gingiilor – fiecare gură e diferită.
+556|Materiale
+557|Sistem de implant, zirconiu sau E.max – numim fiecare marcă în planul tău.
+558|Numărul de vizite
+559|Unele tratamente necesită o călătorie, implanturile de obicei două.
+560|Cea mai ieftină ofertă este adesea cea mai scumpă: coroane inutile, dinți sănătoși șlefuiți și reparații acasă. Calitatea și prețul accesibil pot merge împreună.
+561|Întreabă de costul unui anumit tratament
+562|Cost %(name)s
+563|Ce influențează prețul pentru %(name)s
+564|Diagnosticul tău: câți dinți și în ce stare
+565|Marca și tipul materialelor
+566|Dacă e nevoie de tratament pregătitor
+567|Numărul de vizite în Istanbul
+568|Inclus în oferta ta
+569|Consult, radiografie și scanare 3D
+570|Tratament făcut personal de dentist
+571|Informații de garanție în scris
+572|Îngrijire pe WhatsApp
+573|Stomatologia înseamnă mai mult decât un zâmbet de Hollywood. Recomandăm doar ce îți trebuie cu adevărat – acesta este și planul cel mai accesibil.
+574|Slab
+575|Acceptabil
+576|Bun
+577|Foarte bun
+578|Excelent
+579|Atinge o stea
+580|Alegerea clinicii
+581|Locații
+582|Informații practice
+583|Clinica noastră
+584|Tradus din %(l)s · vezi originalul
+585|Agenția noastră parteneră
+586|Agenție de turism dentar în Turcia: Sterr Agency
+587|Pentru planificarea călătoriei, transferuri și cazare colaborăm cu agenția noastră parteneră. Deciziile medicale rămân întotdeauna la medicul dentist.
+588|Turism dentar cu Sterr Agency

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<header class="page-head"><div class="wrap">
+  {% include "components/breadcrumb.html" %}
+  <span class="eyebrow">📚 {% trans "Patient resource centre" %}</span>
+  <h1>{% trans "Learn before you decide" %}</h1>
+  <p class="lead">{% trans "Honest guides about dental treatments, costs and what to expect from dental tourism in Istanbul." %}</p>
+  {% if categories %}<nav class="chips" style="margin-top:1.5rem" aria-label="{% trans 'Categories' %}"><a class="chip active" href="{% url 'blog:post_list' %}">{% trans "All" %}</a>{% for c in categories %}<a class="chip" href="{{ c.object.get_absolute_url }}">{{ c.name }}</a>{% endfor %}</nav>{% endif %}
+</div></header>
+<section class="section"><div class="wrap">
+  {% if posts %}<div class="grid grid-3">{% for p in posts %}{% include "blog/_card.html" with p=p heading="h2" %}{% endfor %}</div>
+  {% include "blog/_pagination.html" %}
+  {% else %}<p class="muted center">{% trans "New articles are coming soon." %}</p>{% endif %}
+</div></section>
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

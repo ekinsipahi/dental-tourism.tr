@@ -1,0 +1,14 @@
+{% load i18n site_tags %}{% if offers %}
+<div class="grid grid-2">
+  {% for o in offers %}
+  <a class="card" href="{{ o.clinic.get_absolute_url }}">
+    <h3>{{ o.clinic.name }}{% if o.clinic.is_verified %} <span class="badge">✓ {% trans "Verified" %}</span>{% endif %}</h3>
+    <p>{{ o.clinic.district }}, {{ o.clinic.city.localized.name }}{% if o.clinic.years_experience %} · {% blocktrans with y=o.clinic.years_experience %}{{ y }}+ years experience{% endblocktrans %}{% endif %}{% if o.clinic.google_rating %} · {{ o.clinic.google_rating }}★{% endif %}</p>
+    <div class="card-foot">
+      <span class="faint">{% trans "Personal treatment plan" %}</span>
+      {% if o.stay_days %}<span class="faint">🗓️ {% blocktrans with d=o.stay_days %}{{ d }} days{% endblocktrans %}</span>{% endif %}
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}

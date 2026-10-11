@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+<header class="page-head"><div class="wrap">
+  {% include "components/breadcrumb.html" %}
+  <span class="eyebrow">🏥 {% cblock "clinics-list" "eyebrow" _("Clinics") %}</span>
+  <h1>{% cblock "clinics-list" "title" _("Dental clinics in Istanbul for international patients") %}</h1>
+  <p class="lead">{% cblock "clinics-list" "subtitle" _("Every clinic is reviewed before it is listed: licence, dentist qualifications and real patient reviews.") %}</p>
+</div></header>
+
+{% include "clinics/_search.html" %}
+
+<section class="section" style="padding-top:0" aria-live="polite"><div class="wrap">
+  <p class="faint" style="margin-bottom:1rem">{% blocktrans count n=total %}{{ n }} clinic found{% plural %}{{ n }} clinics found{% endblocktrans %}{% if filtered %} · <a href="{% url 'clinics:list' %}">{% trans "Clear filters" %}</a>{% endif %}</p>
+  <div class="clinic-list">
+    {% for r in rows %}{% with c=r.c %}
+    <article class="clinic-card">
+      <a class="clinic-media" href="{{ c.object.get_absolute_url }}" tabindex="-1" aria-hidden="true">
+        {% with img=c.object.display_image %}{% if img %}<img src="{{ img }}" alt="{{ c.name }}" loading="lazy" width="640" height="420">{% else %}<span class="clinic-ph">🏥</span>{% endif %}{% endwith %}
+        {% if c.logo_src %}<img class="clinic-logo" src="{{ c.logo_src }}" alt="" loading="lazy">{% endif %}
+      </a>
+      <div class="clinic-body">
+        <div class="chips" style="margin-bottom:.5rem">
+          {% if c.is_verified %}<span class="badge">✓ {% trans "Verified" %}</span>{% endif %}
+          {% if c.is_featured or c.is_primary %}<span class="badge badge-gold">★ {% trans "Recommended" %}</span>{% endif %}
+        </div>
+        <h2><a href="{{ c.object.get_absolute_url }}">{{ c.name }}</a></h2>
+        <p class="faint">📍 {{ c.district }}{% if c.neighborhood %} · {{ c.neighborhood }}{% endif %}, {{ c.city.localized.name }}</p>
+        {% if c.short_description %}<p>{{ c.short_description|truncatechars:180 }}</p>{% endif %}
+        <ul class="clinic-facts">
+          {% if c.google_rating %}<li>⭐ <strong>{{ c.google_rating }}</strong>{% if c.google_review_count %} ({{ c.google_review_count }}){% endif %}</li>{% endif %}
+          {% if c.years_experience %}<li>🩺 {% blocktrans with y=c.years_experience %}{{ y }}+ years experience{% endblocktrans %}</li>{% endif %}
+          {% if c.languages_spoken %}<li>🗣️ {{ c.languages_spoken|join:", "|upper }}</li>{% endif %}
+          {% if c.offers_airport_transfer %}<li>✈️ {% trans "Airport transfer" %}</li>{% endif %}
+          {% if r.doctor %}<li>👩‍⚕️ {{ r.doctor.full_name }}</li>{% endif %}
+        </ul>
+        {% with thumbs=c.object.gallery_preview %}{% if thumbs|length > 1 %}
+        <div class="clinic-thumbs">{% for g in thumbs %}<img src="{{ g.src }}" alt="{{ g.alt }}" loading="lazy" width="96" height="72">{% endfor %}</div>
+        {% endif %}{% endwith %}
+      </div>
+      <div class="clinic-side">
+        <a class="btn btn-primary btn-sm" href="{{ c.object.get_absolute_url }}">{% trans "View clinic" %}</a>
+        <a class="btn btn-wa btn-sm" href="{{ c.whatsapp_url }}" data-track="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </article>
+    {% endwith %}{% empty %}
+    <div class="card center"><p>{% trans "No clinics match your filters." %}</p><a class="btn btn-outline btn-sm" href="{% url 'clinics:list' %}">{% trans "Clear filters" %}</a></div>
+    {% endfor %}
+  </div>
+  {% include "blog/_pagination.html" %}
+</div></section>
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

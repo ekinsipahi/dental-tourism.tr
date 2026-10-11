@@ -1,0 +1,589 @@
+0|Diş Turizmi Blogu — Rehberler, Fiyatlar ve Hasta Tavsiyeleri
+1|Türkiye'de diş tedavisi hakkında dürüst rehberler: implant ve lamina fiyatları, güvenlik, iyileşme süreci ve İstanbul'da diş hekimi seçimi.
+2|Ana sayfa
+3|Blog
+4|%(category)s — Diş Turizmi Blogu
+5|Yabancı Hastalar İçin İstanbul'daki Diş Klinikleri
+6|Türkiye'de doğrulanmış diş klinikleri: hekim deneyimi, konuşulan diller, fiyatlar ve hasta yorumları. Ücretsiz danışmanlık.
+7|Klinikler
+8|%(clinic)s — %(city)s Diş Kliniği
+9|%(doctor)s — %(city)s Diş Hekimi
+10|Güvenlik ve tedavi süreci hakkında bazı sorularım var.
+11|Fiyat teklifi almak istiyorum.
+12|Bu haftaki uygun randevuları sormak istiyorum.
+13|Gülüş tasarımı hakkında bilgi almak istiyorum.
+14|Özel randevu talep etmek istiyorum.
+15|Randevu almak istiyorum.
+16|Malzemeler ve sertifikalar hakkında bilgi almak istiyorum.
+17|Daha fazla bilgi almak istiyorum.
+18|Merhaba, ücretsiz değerlendirme almak istiyorum.
+19|Ad soyad
+20|Adınız ve soyadınız
+21|Telefon / WhatsApp
+22|E-posta
+23|İlgilendiğiniz tedavi
+24|Henüz emin değilim
+25|Mesaj
+26|Diş durumunuzu kısaca anlatın…
+27|Talebime yanıt verilmesi için verilerimin işlenmesini kabul ediyorum (KVKK / GDPR).
+28|Lütfen ülke koduyla birlikte geçerli bir telefon numarası girin.
+29|diş başına
+30|implant başına
+31|kaplama başına
+32|çene başına
+33|çene başına
+34|seans başına
+35|gülüş başına
+36|hakkimizda/
+37|iletisim/
+38|iletisim/tesekkurler/
+39|gizlilik/
+40|Türkiye'de diş tedavisi olmak güvenli mi?
+41|Evet; lisanslı, deneyimli hekimlerin çalıştığı ve sertifikalı malzeme kullanan bir klinik seçtiğinizde. Seyahatten önce hekimin yetkinliklerini, implant ve kaplama markalarını ve yazılı tedavi planını isteyin.
+42|İstanbul'da diş tedavisinde ne kadar tasarruf edebilirim?
+43|Hastalar aynı tedavi ve malzemeler için Batı Avrupa'ya göre genellikle %50–70 daha az öder. Tedavi başlamadan önce sabit, yazılı bir fiyat teklifi alırsınız.
+44|İstanbul'da ne kadar kalmam gerekiyor?
+45|Tedaviye bağlıdır: dolgu, diş taşı temizliği ve kompozit lamina 1–3 gün, kaplama ve porselen lamina yaklaşık 5–7 gün, implant ise genellikle birkaç ay arayla iki ziyaret sürer.
+46|Benim dilimi konuşuyor musunuz?
+47|Yabancı hastalarla İngilizce ve diğer dillerde iletişim kuruyoruz; tedaviden önce, tedavi sırasında ve sonrasında hekime doğrudan WhatsApp'tan yazabilirsiniz.
+48|Hekim ne kadar deneyimli?
+49|Baş hekimimizin %(years)s yıllık klinik deneyimi vardır.
+50|İstanbul Diş Tedavisi — İmplant, Lamina ve Zirkonyum Kaplama
+51|İstanbul'da deneyimli hekimle etik diş tedavisi. İmplant, lamina ve zirkonyum kaplamada Avrupa'ya göre %50–70 tasarruf. Sabit fiyat. Ücretsiz WhatsApp danışmanlığı.
+52|Hakkımızda — İstanbul'da Etik Diş Hekimliği
+53|dentaltourism.tr'nin arkasındaki hekim ve kliniği tanıyın: onlarca yıllık deneyim, şeffaf teşhis ve sadece gerçekten ihtiyacınız olan tedavi.
+54|Hakkımızda
+55|Lütfen formu kontrol edip tekrar deneyin.
+56|Ücretsiz Danışmanlık — İstanbul'daki Diş Hekimimize Ulaşın
+57|Röntgeninizi veya fotoğraflarınızı gönderin, ücretsiz tedavi planı ve sabit fiyat teklifi alın. 24 saat içinde yanıt. WhatsApp, telefon veya form.
+58|Teşekkürler — en kısa sürede sizinle iletişime geçeceğiz
+59|Gizlilik Politikası
+60|Kişisel verilerinizi nasıl işlediğimiz ve koruduğumuz (KVKK / GDPR).
+61|Sayfa bulunamadı
+62|%(city)s %(treatment)s
+63|%(city)s %(treatment)s — Fiyatlar €%(price)s'dan başlayan
+64|%(city)s'da %(treatment)s karşılaştırın: klinik fiyatları, kalış süresi, hekim deneyimi ve hasta yorumları. WhatsApp'tan ücretsiz danışmanlık.
+65|Tedaviler
+66|Türkiye ve %(country)s Diş Fiyatları — 2026 Fiyat Listesi
+67|İstanbul'daki diş tedavisi fiyatlarını %(country)s ile karşılaştırın: implant, lamina, kaplama, All-on-4. EUR cinsinden sabit fiyatlar, gizli maliyet yok.
+68|Fiyatlar
+69|%(treatment)s fiyatı: Türkiye ve %(country)s karşılaştırması
+70|%(treatment)s Fiyatı Türkiye vs %(country)s (2026)
+71|İstanbul'da %(treatment)s %(country)s'ya göre ne kadar? €%(price)s'dan başlayan gerçek klinik fiyatları, fiyata neler dahil ve ne kadar tasarruf edersiniz.
+72|İstanbul'da Diş Tedavileri — Fiyatlar ve Bilgiler
+73|İstanbul'da yabancı hastalar için tüm diş tedavileri: implant, lamina, kaplama, All-on-4, kanal tedavisi ve daha fazlası. Şeffaf fiyatlar ve kalış süreleri.
+74|İstanbul'da %(treatment)s — Fiyat ve Süreç
+75|tedaviler/
+76|fiyatlar/
+77|klinikler/
+78|dis-hekimleri/
+79|Aradığınız sayfa mevcut değil veya taşınmış.
+80|Hikayemiz
+81|İstanbul'da etik diş hekimliği — sadece ihtiyacınız olan
+82|Diş hekimliğindeki en önemli becerinin ne zaman tedavi etmemek gerektiğini bilmek olduğuna inanıyoruz. Her plan doğal dişlerinizi korumakla, şeffaf bir teşhisle ve yazılı sabit bir fiyatla başlar.
+83|Diş hekiminiz
+84|Django site yönetimi
+85|İçeriğe geç
+86|Dil önerisi
+87|Kapat
+88|Aynı tedavi, %(country)s'ya göre %%50–70 daha uygun.
+89|Fiyat listesini gör
+90|Zamanınız mı kısıtlı? Birçok tedavi İstanbul'da bir hafta içinde tamamlanır.
+91|WhatsApp'tan yazın
+92|%(n)s dk okuma
+93|Sayfalama
+94|Önceki
+95|Sonraki
+96|Kategori
+97|Kategoriler
+98|Tümü
+99|Bu kategoride henüz yazı yok.
+100|Güncellendi
+101|Tıbbi kontrol:
+102|İçindekiler
+103|Bu yazıda
+104|Fiyatlar ve detaylar
+105|Bunlar da ilginizi çekebilir
+106|Hasta bilgi merkezi
+107|Karar vermeden önce bilgi edinin
+108|Diş tedavileri, fiyatlar ve İstanbul'da diş turizminde sizi nelerin beklediği hakkında dürüst rehberler.
+109|Yeni yazılar çok yakında.
+110|Bu sayfa henüz sizin dilinizde mevcut değil — orijinal sürüm gösteriliyor.
+111|Yıllık deneyim
+112|Tedavi edilen hasta
+113|Google puanı
+114|Diller
+115|Tedaviler ve fiyatlar
+116|Tedavi
+117|Başlangıç
+118|Kalış
+119|%(d)s gün
+120|Diş hekimleri
+121|İletişim ve konum
+122|Harita
+123|Önce ve sonra
+124|Önce
+125|Sonra
+126|Hasta yorumları
+127|Yetkinlikler
+128|Üniversite
+129|Mezuniyet
+130|Hekime sorun
+131|Yabancı hastalar için İstanbul'daki diş klinikleri
+132|Her klinik listelenmeden önce incelenir: ruhsat, hekim yetkinlikleri ve gerçek hasta yorumları.
+133|Doğrulandı
+134|Henüz listelenmiş klinik yok.
+135|Sayfa yolu
+136|Reklamlarımızı ölçmek ve siteyi geliştirmek için çerez kullanıyoruz. Analitik çerezleri kabul edebilir veya reddedebilirsiniz.
+137|Gizlilik politikası
+138|Kabul et
+139|Reddet
+140|Gönder — size dönüş yapacağız
+141|Verileriniz KVKK / GDPR kapsamında korunur ve sadece talebinizi yanıtlamak için kullanılır.
+142|Kesin fiyatınızı 24 saatte alın
+143|WhatsApp'tan bir fotoğraf veya röntgen gönderin. Yazılı tedavi planı ve sabit fiyat alın — hiçbir yükümlülük yok.
+144|Karar vermeden önce hekime her şeyi sorun
+145|Malzemeler, garantiler, bir sorun çıkarsa ne olur: dürüst yanıtları çağrı merkezinden değil, doğrudan hekimden alırsınız.
+146|Özel danışmanlık talep edin
+147|Kişisel tedavi planı, gizli randevu planlaması ve baştan sona bakımınızdan sorumlu tek bir hekim.
+148|Bu haftaki uygun randevulara bakın
+149|Seyahat tarihlerinizi bildirin, randevularınızı onlara göre planlayalım.
+150|Ücretsiz değerlendirme — yükümlülük yok
+151|Bize bir fotoğraf veya röntgen gönderin. Hekimimiz dürüst bir tedavi planı ve sabit fiyatla yanıt verir.
+152|İletişim formu
+153|Sıkça sorulan sorular
+154|Yabancı hastalar için İstanbul'da etik diş tedavisi — şeffaf teşhis, sabit fiyatlar, hekiminizle doğrudan iletişim.
+155|Bilgi
+156|Fiyat listesi
+157|İletişim
+158|Ana menü
+159|Hakkımızda
+160|Dili değiştir
+161|Ücretsiz teklif al
+162|Hemen randevu al
+163|Özel danışmanlık
+164|Ücretsiz danışmanlık
+165|Menü
+166|başlayan
+167|Fiyat için sorun
+168|Detaylar
+169|%(name)s — hasta video yorumu
+170|Ücretsiz tedavi planınızı alın
+171|Bilgilerinizi ve varsa WhatsApp üzerinden bir fotoğraf ya da röntgen gönderin. Hekim 24 saat içinde kişisel olarak yanıt verir.
+172|En hızlı yanıt — mesai saatlerinde genellikle 30 dakika içinde.
+173|Klinik
+174|Neden ücretsiz?
+175|Hiçbir yükümlülük yok
+176|Tedavi planı ve sabit fiyat
+177|24 saat içinde yanıt
+178|%(country)s'ya göre %%50–70 daha uygun
+179|Diş turizmi Türkiye — İstanbul
+180|İstanbul'da uygun fiyatlı diş implantı —
+181|aynı kalite.
+182|Kendi ülkenizdeki fiyatın çok küçük bir kısmı. CE sertifikalı malzemeler, aynı teknik. Gizli maliyet yok — size verdiğimiz fiyat ödediğiniz fiyattır.
+183|implant
+184|İstanbul
+185|Tasarrufunuz
+186|Ücretsiz fiyat teklifi al
+187|%(years)s+ yıl — etik protokol
+188|Etik protokol
+189|İstanbul'da güvenli diş tedavisi —
+190|ve bunu hissedeceksiniz.
+191|Deneyimin bize öğrettiği en değerli şey: iyi hekimlik, ne zaman hayır diyeceğini bilmektir. Gereksiz işlem yok. Şeffaf teşhis. Sabit fiyat.
+192|Gereksiz tedavi yok
+193|Doğal dişinizi korumak her zaman önce gelir
+194|Yazılı sabit fiyat
+195|Ne teklif edersek onu ödersiniz
+196|Tek hekim, tam sorumluluk
+197|Muayeneden tedavi sonrasına kadar aynı hekim
+198|Sorunuzu sorun
+199|Minimal invaziv — doğal sonuçlar
+200|İstanbul'da gülüş tasarımı —
+201|yeniden kendiniz gibi gülümseyin.
+202|Mümkün olduğunca az diş aşındırmayla, gerçekten size ait doğal bir gülüş. Hedefimiz sadece güzel değil, sağlıklı ve kalıcı bir sonuç.
+203|Gülüş tasarımını sorun
+204|Önce / sonra
+205|Önce ve sonra sonuçları
+206|ÖNCE
+207|SONRA
+208|Bu ay sınırlı randevu
+209|İstanbul'da yeni bir gülüş —
+210|yaklaşık bir haftada.
+211|Düğün, tatil ya da iş görüşmesi mi? Pazartesi gelin, cuma gülümseyerek dönün — kaplama, lamina ve birçok tedavi için.
+212|Tedavi takvimi
+213|Pzt
+214|Varış ve muayene
+215|Sal
+216|Hazırlık
+217|Çar–Per
+218|Cum
+219|Son prova — dönüş uçuşu
+220|%(n)s+ hasta
+221|İstanbul'da diş turizmi —
+222|binlerce kişi bize güveniyor.
+223|Bize körü körüne güvenmeyin — önce hastalarımızın gerçek hikayelerini izleyin. Her şeyi sorun. Baskı yok, acele yok.
+224|Hasta yorumlarını gör
+225|Soru sor
+226|Yükümlülük yok. Sadece yanıtlar.
+227|Özel klinik
+228|İstanbul'da premium diş kliniği —
+229|sanat olarak diş hekimliği.
+230|Onlarca yıllık deneyim ve estetik hassasiyet. Sadece ihtiyacınız olan — ne fazlası, ne eksiği.
+231|Özel randevu talep et
+232|Bu hafta uygun randevular var
+233|Siz hazır olduğunuzda biz hazırız
+234|İstanbul'da diş tedavinizi planlayın —
+235|hazır mısınız?
+236|Ücretsiz değerlendirme, kişisel tedavi planı, sabit fiyat. 24 saat içinde yanıt.
+237|Randevu al
+238|Kanıta dayalı diş hekimliği
+239|Türkiye'de diş tedavisi güvenli mi?
+240|Her şeyi yanıtlıyoruz.
+241|Malzemeler, yetkinlikler, bir sorun çıkarsa ne olur — her soruya şeffaf bir yanıt alırsınız.
+242|Her şeyi sorun — ücretsiz
+243|Hastalar gerçekten ne diyor
+244|Diş turizmi Türkiye
+245|İstanbul'da diş tedavisi —
+246|sadece dişlerinizin gerçekten ihtiyacı olan.
+247|İyi hekimlik, ne zaman hayır diyeceğini bilmektir. Etik protokol, şeffaf teşhis ve tedavinizden sorumlu tek bir hekim — çağrı merkezi değil, doğrudan WhatsApp iletişimi.
+248|Şeffaf teşhis
+249|Tek hekim — tam sorumluluk
+250|Ücretsiz değerlendirme — WhatsApp
+251|En avantajlı tedaviler
+252|İmza tedavilerimiz
+253|Doğal gülüş tedavileri
+254|Neler yapıyoruz
+255|İstanbul'da diş tedavileri — ve neden yapıyoruz
+256|Etik protokolümüz, sadece gerçekten ihtiyacınız olanı önermemiz demektir. Ek satış yok, gereksiz işlem yok.
+257|Fiyatları kendi ülkenizle karşılaştırın
+258|Hasta deneyimleri
+259|Onların hikayeleri — sizin ilhamınız
+260|Gerçek hastalar, gerçek sonuçlar
+261|Videolar hastaların açık onayıyla yayınlanmaktadır.
+262|Tüm hasta videoları
+263|Nasıl işliyor
+264|İlk mesajdan yeni gülüşünüze
+265|Fotoğraf veya röntgen gönderin
+266|Bize WhatsApp'tan yazın. Hekim vakanızı kişisel olarak inceler.
+267|Plan ve sabit fiyat alın
+268|24 saat içinde dürüst bir tedavi planı ve yazılı teklif alırsınız.
+269|İstanbul'a gelin
+270|Randevuları uçuşlarınıza göre planlar, lojistikte yardımcı oluruz.
+271|Tedavi ve takip
+272|Eve döndükten sonra WhatsApp takibi devam eder — asla yalnız değilsiniz.
+273|Ücretsiz ön değerlendirme
+274|Sizi arayalım
+275|Nerede olursanız olun, kısa bir görüşme için formu doldurun. Yükümlülük yok, baskı yok.
+276|Hiçbir yükümlülük yok
+277|Sabit fiyat — gizli ücret yok
+278|Daha hızlı yanıt için hekime doğrudan yazın:
+279|Bu web sitesi %(name)s tarafından işletilmektedir. Bize gönderdiğiniz kişisel verileri (ad, telefon, e-posta, mesaj ve görseller) yalnızca talebinizi yanıtlamak ve tedavinizi planlamak için işleriz.
+280|Hangi verileri topluyoruz
+281|İletişim formu ve WhatsApp mesajları; siteyi geliştirmek için ziyaretinize ait teknik veriler (görüntülenen sayfalar, cihaz türü, yaklaşık ülke); ve sadece onayınızla reklam çerezleri (Google, Meta).
+282|Haklarınız
+283|KVKK ve GDPR kapsamında, bizimle iletişime geçerek dilediğiniz zaman verilerinize erişim, düzeltme veya silme talep edebilirsiniz.
+284|%(y)s+ yıl deneyim
+285|İstanbul ve %(country)s diş fiyatları
+286|İstanbul'daki başlangıç fiyatları EUR cinsindendir. Kesin fiyatınız teşhisinize bağlıdır — tedaviden önce yazılı sabit fiyat teklifi alırsınız.
+287|İstanbul başlangıç
+288|Tasarruf
+289|Kendi ülkenizdeki fiyatlar tipik piyasa ortalamalarıdır ve sadece karşılaştırma amaçlıdır.
+290|İstanbul'da %(d)s gün
+291|%(n)s klinik‖%(n)s klinik
+292|WhatsApp'tan ücretsiz değerlendirme
+293|Fiyatları karşılaştır
+294|%(c)s %(t)s klinikleri
+295|Bu şehirde henüz bu tedaviyi sunan klinik yok.
+296|Hastalar ne diyor
+297|İlgili tedaviler
+298|Fiyat karşılaştırması
+299|Fiyat özeti
+300|Nerede
+301|Fiyat
+302|sorunuz
+303|%(country)s için tipik fiyatlar yakında eklenecek.
+304|İstanbul fiyatına neler dahil
+305|Muayene ve dijital röntgen / 3D tomografi
+306|Sabit fiyatlı yazılı tedavi planı
+307|Sertifikalı malzemelerle deneyimli bir hekim tarafından tedavi
+308|Eve döndükten sonra WhatsApp üzerinden takip
+309|Klinik fiyatları
+310|Kesin fiyatınızı alın
+311|Bir fotoğraf veya röntgen gönderin, 24 saat içinde yazılı sabit fiyat teklifi alın.
+312|%(name)s hakkında her şey
+313|Teşekkürler — talebiniz alındı
+314|Hekim 24 saat içinde sizinle iletişime geçecek. Daha hızlı yanıt için şimdi WhatsApp'tan da yazabilirsiniz.
+315|Hasta rehberlerimizi okuyun
+316|İstanbul'da %(name)s
+317|%(n)s ziyaret‖%(n)s ziyaret
+318|Bu sayfada
+319|%(name)s: İstanbul ve sizin ülkeniz
+320|Ülke
+321|Tipik fiyat
+322|Şehre göre %(name)s
+323|Bir bakışta
+324|İstanbul'da fiyat
+325|İstanbul'da kalış
+326|Ziyaret
+327|Anestezi
+328|Lokal
+329|Fiyatımı öğren
+330|Bu tedaviyi sunan klinikler
+331|Bu tedavi hakkında rehberler
+332|İstanbul'da diş tedavileri
+333|Sunduğumuz tüm tedaviler — işlem, İstanbul'da kalış süresi ve maliyet hakkında dürüst bilgilerle.
+334|Ülkeniz
+335|Adınız
+336|Ad ve soyadın baş harfi olarak gösterilir, ör. 'Anna K.'
+337|Yayınlanmaz — sadece yorumunuzu doğrulamak için kullanılır.
+338|Puan
+339|Tedavi seçin
+340|Başlık
+341|Deneyiminiz
+342|Bu yorumun hasta olarak kendi deneyimimi anlattığını onaylıyorum.
+343|Önerilen
+344|En yüksek puan
+345|En düşük fiyat
+346|En deneyimli
+347|Ara
+348|Klinik, hekim veya semt…
+349|Şehir
+350|Konuşulan dil
+351|Farketmez
+352|Maks. fiyat (€)
+353|Sadece doğrulanmış klinikler
+354|Havalimanı transferi
+355|Otel rezervasyon desteği
+356|Sırala
+357|Tüm şehirler
+358|Tüm tedaviler
+359|Farketmez
+360|Bağlantınızdan çok fazla yorum gönderildi. Lütfen daha sonra tekrar deneyin.
+361|Lütfen yorum formunu kontrol edip tekrar deneyin.
+362|Teşekkürler! Yorumunuz kısa bir kontrolden sonra yayınlanacak.
+363|Kliniğinizi bulun
+364|Türkiye'deki diş kliniklerini arayın
+365|Tedavi, şehir, dil ve fiyata göre filtreleyin — doğrulanmış klinikleri yan yana karşılaştırın.
+366|Klinik ara
+367|Daha fazla filtre
+368|%(n)s yorum‖%(n)s yorum
+369|Profiller
+370|dentaltourism.tr'de %(n)s yorum‖dentaltourism.tr'de %(n)s yorum
+371|Tüm Google yorumları
+372|Bizi Google'da değerlendirin
+373|Yorum yaz
+374|dentaltourism.tr yorumları
+375|Google ve diğer platformlardaki yorumlar
+376|%(name)s kliniğinde tedavi oldunuz mu? Deneyiminizi paylaşın
+377|Yorumlar yayından önce kontrol edilir. E-posta adresiniz asla gösterilmez.
+378|Yorumu gönder
+379|%(n)s klinik bulundu‖%(n)s klinik bulundu
+380|Filtreleri temizle
+381|Tedaviler
+382|Kliniği görüntüle
+383|Filtrelerinize uyan klinik yok.
+384|Sitemizde doğrulandı
+385|Doğrulanmış hasta
+386|Kliniğin yanıtı
+387|İstanbul'da diş tedavisi ne kadar tutar?
+388|Batı Avrupa'ya göre oldukça uygun — aynı malzeme ve tekniklerle. Herkese aynı fiyatı yayınlamıyoruz: bizi arayın veya WhatsApp'tan fotoğraf gönderin, tedaviden önce yazılı sabit fiyat alın.
+389|İstanbul'da deneyimli bir diş hekiminden etik diş tedavisi. İmplant, lamina, zirkonyum kaplama — oldukça uygun, yazılı sabit fiyat. WhatsApp'tan ücretsiz danışın.
+390|Google yorumları
+391|Sakin, ağrısız ve adım adım anlatılarak
+392|Lokal anestezi, önce her şeyi anlatan bir hekim ve baskı altında hiçbir karar yok.
+393|Bize güvenmeden önce her şeyi kontrol edin
+394|Kaynağıyla gerçek yorumlar, adı belli malzemeler ve seyahatten önce yazılı plan.
+395|Oldukça uygun — ve yazılı sabit fiyat
+396|Gizli maliyet yok. Arayın veya yazın, size özel fiyatınızı alın.
+397|Satış ekibiyle değil, hekiminizle zaman
+398|Tüm tedavinizden sorumlu tek bir deneyimli hekim, kaliteli malzemeler, özenli ve gizli bakım.
+399|Yargı yok — sadece çözüm
+400|Dişleriniz ne durumda olursa olsun, daha önce gördük. Kurtarılabilecek olandan başlıyoruz.
+401|Kontrol edebileceğiniz, hekim tarafından yönetilen bir klinik
+402|Yetkinlikler, yorumlar ve gerçek fotoğraflar — hepsi bu sayfada.
+403|İstanbul'un merkezinde haftanın 7 günü açık
+404|Seyahat tarihlerinizi bildirin; randevuları uçuşunuza göre planlayalım.
+405|Ziyaretinizi tek mesajla planlayın
+406|Fotoğraflarınızı ve seyahat tarihlerinizi WhatsApp'tan gönderin — size özel planla dönelim.
+407|Diş tedavisi bir Hollywood gülüşünden ibaret değildir
+408|Önce sağlıklı dişleri koruyor, yalnızca size özel gerçek bir tedavi planlıyoruz.
+409|Diş Turizmi Rehberleri — Türkiye ve İstanbul
+410|Türkiye'de diş tedavisi hakkında dürüst rehberler: klinik seçimi, yorumlar, seyahat, garanti ve takip — İstanbul'daki bir diş hekiminden.
+411|Rehberler
+412|Diş turizmi rehberleri: Türkiye ve İstanbul
+413|Güvenle karar vermeniz için gereken her şey — bir diş hekimi tarafından, satış ağzı olmadan yazıldı.
+414|Rehber
+415|Diş turizmi nedir?
+416|Diş turizmi, diş tedavisi için başka bir ülkeye seyahat etmek demektir — genellikle deneyimli hekimleri, modern klinikleri ve belirgin şekilde düşük maliyeti kısa bir seyahatle birleştirmek için.
+417|Diş turizmi paketine neler dahildir?
+418|Kişisel değerlendirme, İstanbul'da 3D tomografi ve muayene, tedavinin kendisi, transfer ve otel koordinasyonu ve döndükten sonra WhatsApp'tan takip.
+419|Diş paketi ne kadar tutar?
+420|Sabit fiyatlı paket satmıyoruz, çünkü hiçbir ağız diğerine benzemez. WhatsApp'tan fotoğraf veya röntgen gönderin, yazılı sabit fiyatlı kişisel tedavi planınızı alın.
+421|Her şey dahil Hollywood gülüşü paketi iyi bir fikir mi?
+422|Yalnızca gerçekten ihtiyacınız varsa. Dişlerinize kimse bakmadan 20 lamina satan paketler çoğu zaman sağlıklı diş dokusunu yok eder. Gerçek bir plan teşhisle başlar.
+423|Türkiye'ye diş seyahati ne kadar sürer?
+424|Çoğu tedavi İstanbul'da 3–7 gün sürer. İmplantlar genellikle birkaç ay arayla iki kısa ziyaret gerektirir; ikisini de uçuşlarınıza göre planlarız.
+425|İstanbul Diş Turizmi Paketleri — Kişiye Özel, Hazır Paket Değil
+426|Gerçek bir teşhise dayalı Türkiye diş tatili: muayene, tedavi, transfer, otel ve takip. Hazır paket yok — kişisel planınız WhatsApp'ta.
+427|Diş paketleri
+428|İstanbul'da diş turizmi paketleri — kişiye özel, hazır paket değil
+429|Diş tedavisi bir Hollywood gülüşünden ibaret değildir. Paketiniz gerçek bir teşhise dayanır: muayene, tedavi, transfer, otel ve takip.
+430|İstanbul'da %(treatment)s paketi
+431|%(treatment)s Paketi İstanbul — Hazır Teklif Değil, Kişisel Plan
+432|Teşhisinize göre İstanbul'da %(treatment)s paketi: muayene, tedavi, transfer ve otel koordinasyonu, takip. Kişisel planınız WhatsApp'ta.
+433|%(country)s'dan İstanbul'a diş tedavisi
+434|%(country)s'dan Diş Tedavisi — İstanbul, Türkiye
+435|%(country)s'dan Türkiye'de diş tedavisi mi planlıyorsunuz? Uçuş süresi, kaç seyahat gerektiği, kişisel paketin içeriği ve döndükten sonra takip.
+436|%(country)s'dan İstanbul'da diş tedavisi mi planlıyorsunuz? Uçuş süreleri, kaç seyahat gerektiği ve kişisel paketin içeriği.
+437|Tedaviyi seyahat sayısı en az olacak şekilde planlıyoruz — çoğu zaman tek bir uzun kalış, implantlar ise ikinci ziyaret kısa olacak şekilde.
+438|Kaplama, lamina ve diğer çoğu tedavi yaklaşık bir haftalık tek seyahat gerektirir; implantlar genellikle birkaç ay arayla iki kısa seyahat.
+439|%(country)s'dan İstanbul'a uçuş ne kadar sürer?
+440|Kalkış havalimanı ve aktarmaya göre yaklaşık %(hours)s saat.
+441|%(country)s'dan kaç seyahat gerekir?
+442|%(country)s'a döndüğümde ne olur?
+443|Takip WhatsApp ve e-postayla devam eder. Gerekirse yerel bir hekimle koordinasyon kurar, görüntülü görüşmeyle yol gösteririz — asla yalnız kalmazsınız.
+444|Diş paketimin fiyatını nasıl öğrenirim?
+445|Fotoğraf veya röntgeninizi WhatsApp'tan gönderin. Hekim durumunuzu inceledikten sonra yazılı sabit fiyatlı kişisel plan alırsınız — herkese aynı fiyatı asla yayınlamıyoruz.
+446|%(city)s'da %(treatment)s — Kişisel Plan
+447|%(city)s'da %(treatment)s: uygun kişisel fiyat teklifleri, kalış süresi, hekim deneyimi ve hasta yorumları. WhatsApp'tan ücretsiz danışın.
+448|Türkiye'de diş tedavisi ne kadar tutar?
+449|Türkiye'de diş tedavisi Batı Avrupa'ya göre oldukça uygundur. Kesin maliyet dişlerinize bağlıdır; bu yüzden hekim fotoğraflarınızı veya röntgeninizi gördükten sonra kişisel, sabit fiyat alırsınız — bizi arayın ya da WhatsApp'tan gönderin.
+450|Neden fiyat listesi yayınlamıyorsunuz?
+451|Çünkü fiyat listesi herkese aynı tedaviyi satar. "İmplant" diye soran iki hastanın tamamen farklı planlara ihtiyacı olabilir. Size gerçek fiyatınızı söylemeyi tercih ediyoruz.
+452|Türkiye'deki ucuz diş klinikleri riskli mi?
+453|Çok düşük fiyat çoğu zaman ucuz malzeme, teşhis yapılmaması ya da gereksiz tedavi demektir. Malzeme markalarını, hekimin adını sorun ve yazılı plan isteyin — kalite ve uygun fiyat bir arada olabilir.
+454|Fiyat sabit mi?
+455|Evet. Tedaviden önce yazılı olarak anlaştığımız fiyatı ödersiniz — gizli maliyet yok.
+456|İstanbul Diş Tedavisi Fiyatları 2026 — Uygun, Kişisel Teklif
+457|Türkiye'de diş tedavisi ne kadar? İstanbul'da yazılı sabit fiyatla oldukça uygun diş tedavisi. Arayın veya WhatsApp'tan yazın.
+458|Diş tedavisi fiyatları: uygun — ve kişiye özel
+459|Türkiye'de dişler ne kadar tutar? Yurt dışına göre oldukça uygun — ama dürüst cevap bir fiyat listesi değil, kişisel tekliftir.
+460|%(treatment)s fiyatı — uygun, sabit fiyatlı
+461|%(treatment)s Fiyatları İstanbul 2026 — Kişisel Teklif
+462|%(treatment)s ne kadar? İstanbul'da oldukça uygun; hekim durumunuzu gördükten sonra yazılı sabit fiyat. Arayın veya WhatsApp'tan yazın.
+463|%(treatment)s fiyatını neler etkiler, neler dahildir — ve kişisel fiyatınızı telefonla ya da WhatsApp'tan nasıl alırsınız.
+464|İstanbul'da %(treatment)s — Süreç ve Kişisel Plan
+465|paketler/
+466|dis-tatili/
+467|rehber/
+468|Oldukça uygun — yazılı sabit fiyat, gizli maliyet yok.
+469|Kişiye özel diş paketlerini görün
+470|Tedavi, şehir ve dile göre filtreleyin — doğrulanmış klinikleri yan yana karşılaştırın.
+471|Bizi arayın
+472|Paketler
+473|Kişisel tedavi planı
+474|Kişisel planımı iste
+475|Oldukça uygun · yazılı sabit fiyat
+476|Kişiye özel diş paketlerini keşfedin
+477|Kişiye özel diş paketine neler dahil
+478|Önce teşhis
+479|Hekim tarafından muayene, röntgen ve 3D tomografi — plan fiyat listesini değil, teşhisi takip eder.
+480|Sadece ihtiyacınız olan tedavi
+481|Önce kendi dişlerinizi koruruz. Gereksiz kaplama yok, sağlıklı mine kesilmez.
+482|Kolay seyahat
+483|Uçuşunuza göre randevular, transfer desteği ve kliniğe yakın otel.
+484|Oldukça uygun — ve yazılı anlaştığımız fiyatı ödersiniz.
+485|Döndükten sonra takip
+486|Evinize döndüğünüzde WhatsApp ve görüntülü görüşmeyle takip.
+487|Haftanın 7 günü açık
+488|Hafta sonu randevuları kısa diş seyahatlerini mümkün kılar.
+489|Tedaviye göre diş paketleri
+490|%(name)s paketi
+491|Ülkenizden diş tedavisi
+492|%(c)s'dan
+493|Türkiye, Meksika, Tayland, Vietnam, Bali, Macaristan — diş turizmi destinasyonlarını karşılaştırın
+494|%(country)s'dan İstanbul'da diş tedavisi: nasıl işler
+495|WhatsApp'tan fotoğraf veya röntgen gönderin
+496|Kişisel plan ve yazılı sabit fiyat alın
+497|Biletinizi alın — randevuları buna göre planlarız
+498|İlk gün muayene ve 3D tomografi, ardından tedavi
+499|Döndükten sonra WhatsApp'tan takip
+500|Kalkış şehirleri
+501|%(c)s'daki hastalar genellikle %(list)s üzerinden İstanbul'a uçar.
+502|Uzaktan gelen hastalar için tedaviyi en az seyahatle planlıyor, ilk ziyarete yeterli zaman ayırıyoruz.
+503|Pek çok diş tatili paketi herkese aynı laminaları satar. Biz teşhisle başlar, önce sağlıklı dişleri korur ve yalnızca gerçekten ihtiyacınız olan tedaviyi öneririz.
+504|Uçuş süresi
+505|Açık
+506|Haftanın 7 günü
+507|%(c)s'dan gelen hastalar
+508|Size göre planlanan %(name)s paketiniz
+509|Hekim tarafından muayene, röntgen ve 3D tomografi
+510|Tüm malzemelerin markasıyla yazılı tedavi planı
+511|Uçuşunuza göre randevular
+512|Havalimanı transferi ve kliniğe yakın otel desteği
+513|Döndükten sonra WhatsApp'tan takip
+514|İstanbul'da ortalama kalış: %(d)s gün.
+515|İstanbul'da en iyi %(name)s kliniği nasıl seçilir
+516|İstanbul'da ve Türkiye'de %(name)s için en iyi klinik en ucuz teklifi veya en çok reklamı olan değil; deneyimli bir hekimin sizi muayene ettiği, alternatifleri anlattığı ve %(name)s tedavisini yalnızca gerçekten gerekiyorsa önerdiği kliniktir.
+517|Sizi kimin tedavi edeceğini ve hekimin yetkinliğini sorun
+518|Her malzemenin markasını ve menşeini sorun
+519|Google ve Trustpilot yorumlarını okuyun — kliniğin cevaplarına da bakın
+520|Dişlerinize kimse bakmadan hiçbir planı kabul etmeyin
+521|%(name)s hakkında her şey
+522|%(name)s fiyatları
+523|Nereden geliyorsunuz
+524|%(n)s Google yorumu‖%(n)s Google yorumu
+525|Google'da okuyun
+526|Fotoğraf gönderin — ücretsiz değerlendirme
+527|Yükümlülük yok · çağrı merkezi değil, hekim cevaplar · haftanın 7 günü açık
+528|Şişli, İstanbul'daki kliniğimizden gerçek fotoğraf
+529|Bizi daha yakından tanıyın
+530|İlkemiz şeffaflık — bizi kendiniz kontrol edin
+531|Kliniğimizden gerçek sonuçlar
+532|Hasta onayıyla yayınlandı. Stok fotoğraf yok, filtre yok.
+533|Tedavi öncesi
+534|Tedavi sonrası
+535|Kliniğimizden
+536|Ne kadar tutar?
+537|Fiyatlarımız oldukça uygundur — ama herkese aynı fiyatı asla yayınlamayız, çünkü hiçbir ağız diğerine benzemez. Hekim fotoğraflarınızı veya röntgeninizi gördükten sonra yazılı sabit fiyat alırsınız. Ne anlaşırsak onu ödersiniz.
+538|Fiyatımı WhatsApp'tan sor
+539|Sizi kim tedavi edecek
+540|Ankara Üniversitesi Diş Hekimliği Fakültesi mezunu
+541|Ağız, Diş ve Çene Radyolojisi, Marmara Üniversitesi — hassas 3D teşhis
+542|Her hastayı bizzat muayene ve tedavi eder
+543|Hekim profilini okuyun
+544|Üç basit adım
+545|WhatsApp'tan, bir dakika sürer.
+546|Kişisel planınızı alın
+547|yazılı sabit fiyatla, yükümlülük olmadan.
+548|İstanbul'a gelin
+549|randevuları uçuşunuza göre planlarız.
+550|Sağlıklı mine bir daha geri gelmez. Birileri dişlerinizi şablon bir gülüş için kesmeden önce, önce dişi korumayı seçen bir hekimden ikinci görüş alın.
+551|Hastalarımız ne diyor
+552|Diğer rehberler
+553|Tedavinizin fiyatını neler belirler
+554|Teşhisiniz
+555|Kaç diş, kemik hacmi, diş eti sağlığı — her ağız farklıdır.
+556|Malzemeler
+557|İmplant sistemi, zirkonyum veya E.max — planınızda her markayı yazarız.
+558|Ziyaret sayısı
+559|Bazı tedaviler tek seyahat, implantlar genellikle iki seyahat gerektirir.
+560|En ucuz teklif çoğu zaman en pahalısıdır: gereksiz kaplamalar, kesilmiş sağlıklı dişler ve sonradan yapılan tamirler. Kalite ve uygun fiyat bir arada olabilir.
+561|Belirli bir tedavinin fiyatını sorun
+562|%(name)s fiyatı
+563|%(name)s fiyatını neler etkiler
+564|Teşhisiniz: kaç diş ve ne durumda
+565|Malzemelerin markası ve türü
+566|Ön tedavi gerekip gerekmediği
+567|İstanbul'a kaç kez geleceğiniz
+568|Fiyata dahil olanlar
+569|Muayene, röntgen ve 3D tomografi
+570|Tedaviyi hekim bizzat yapar
+571|Yazılı garanti bilgisi
+572|WhatsApp'tan takip
+573|Diş tedavisi bir Hollywood gülüşünden ibaret değildir. Yalnızca gerçekten ihtiyacınız olanı öneririz — bu aynı zamanda en uygun plandır.
+574|Kötü
+575|Orta
+576|İyi
+577|Çok iyi
+578|Mükemmel
+579|Bir yıldıza dokunun
+580|Klinik seçimi
+581|Lokasyonlar
+582|Pratik bilgiler
+583|Kliniğimiz
+584|%(l)s dilinden çevrildi · orijinali göster
+585|İş ortağı acentemiz
+586|Türkiye'de diş turizmi acentesi: Sterr Agency
+587|Seyahat planlaması, transfer ve konaklama için iş ortağı acentemizle çalışıyoruz. Tıbbi kararlar her zaman hekimde kalır.
+588|Sterr Agency ile diş turizmi

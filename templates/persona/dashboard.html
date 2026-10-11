@@ -1,0 +1,30 @@
+{% extends "admin/base_site.html" %}
+{% block title %}Persona paneli{% endblock %}
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">Ana sayfa</a> › Persona / dönüşüm paneli</div>{% endblock %}
+{% block content %}
+<div id="content-main">
+  <div class="dt-grid">
+    <div class="dt-kpi"><div class="n">{{ total_sessions }}</div><div class="l">Ziyaretçi</div></div>
+    <div class="dt-kpi"><div class="n">{{ converted }}</div><div class="l">Dönüşüm (WA / tel / form)</div></div>
+    <div class="dt-kpi"><div class="n">%{{ conversion_rate }}</div><div class="l">Dönüşüm oranı</div></div>
+    <div class="dt-kpi"><div class="n">{{ exposures }}</div><div class="l">Persona deneyi (exposure)</div></div>
+  </div>
+  <div class="module"><table style="width:100%"><caption>Varyant performansı (Thompson Sampling — global)</caption>
+    <tr><th>Varyant</th><th>Gösterim</th><th>Dönüşüm</th><th>Oran %</th><th>Trafik payı %</th><th>En iyi olma olasılığı %</th></tr>
+    {% for a in arms %}<tr><td>{{ a.persona }}</td><td>{{ a.impressions }}</td><td>{{ a.conversions }}</td><td>{{ a.rate }}</td><td>{{ a.share }}</td><td><div class="dt-bar"><span style="width:{{ a.p_best }}%"></span></div> {{ a.p_best }}</td></tr>{% endfor %}
+  </table></div>
+  <p class="help">"unknown" = kişiselleştirilmemiş varsayılan sayfa. Bandit, trafiği zamanla en çok dönüştüren varyanta kaydırır; "En iyi olma olasılığı" %95'i geçtiğinde sonuç güvenilirdir.</p>
+  <div class="module"><table style="width:100%"><caption>Tahmin edilen vs gösterilen persona</caption>
+    <tr><th>Tahmin</th><th>Gösterilen</th><th>Ziyaret</th><th>Dönüşüm</th></tr>
+    {% for r in inferred_vs_shown %}<tr><td>{{ r.inferred_persona }}</td><td>{{ r.persona }}</td><td>{{ r.n }}</td><td>{{ r.conv }}</td></tr>{% endfor %}
+  </table></div>
+  <div class="module"><table style="width:100%"><caption>Arama sorgusu → persona (reklam kelimeleri)</caption>
+    <tr><th>Sorgu</th><th>Persona</th><th>Ziyaret</th></tr>
+    {% for r in by_query %}<tr><td>{{ r.search_query }}</td><td>{{ r.assigned_persona }}</td><td>{{ r.n }}</td></tr>{% empty %}<tr><td colspan="3">Henüz utm_term / arama sorgusu verisi yok.</td></tr>{% endfor %}
+  </table></div>
+  <div class="module"><table style="width:100%"><caption>ML model sürümleri</caption>
+    <tr><th>Sürüm</th><th>Aktif</th><th>CV AUC</th><th>Örnek / pozitif</th><th>Metrikler</th></tr>
+    {% for m in models %}<tr><td>{{ m.version }}</td><td>{{ m.is_active|yesno:"✅,—" }}</td><td>{{ m.accuracy|floatformat:3 }}</td><td>{{ m.training_samples }} / {{ m.positives }}</td><td><code>{{ m.metrics }}</code></td></tr>{% empty %}<tr><td colspan="5">Henüz eğitilmiş model yok — <code>python manage.py persona_ml train</code> (yeterli veri olunca haftalık otomatik).</td></tr>{% endfor %}
+  </table></div>
+</div>
+{% endblock %}

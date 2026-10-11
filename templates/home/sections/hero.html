@@ -1,0 +1,193 @@
+{% load i18n static site_tags humanize %}
+{% with years=clinic.years_experience patients=clinic.patients_treated|default:0 rating=clinic.google_rating %}
+{# ═════════ HERO — persona'ya göre varyant. Botlar ve ilk ziyaretçiler DEFAULT görür. ═════════ #}
+{% if persona.persona == "price" %}
+<section class="h-hero" aria-labelledby="hero-h1">
+  <div class="h-hero-left"><div class="h-hero-glow-l"></div><div class="h-hero-bar"></div>
+    <div class="h-hero-inner">
+      <div class="h-badge h-badge--red au1">✓ {% trans "Very affordable · fixed written quote" %}</div>
+      <p class="h-eyebrow au1">{% cblock "home-hero-eyebrow" "title" _("Dental tourism Turkey — Istanbul") %}</p>
+      <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-price" "title" _("Affordable dental implants in Istanbul —") %} <em>{% cblock "home-hero-price" "subtitle" _("same quality.") %}</em></h1>
+      <p class="h-lead au3">{% cblock "home-hero-price" "body" _("A fraction of the price at home. CE-certified materials, identical technique. No hidden costs — the price we quote is the price you pay.") %}</p>
+      <ul class="h-pills au3" style="list-style:none;padding:0"><li class="h-pill">✓ {% trans "Personal treatment plan" %}</li><li class="h-pill">✓ {% trans "Fixed written quote" %}</li><li class="h-pill">✓ {% trans "Free assessment — WhatsApp" %}</li></ul>
+      <div class="h-cta-row au4">
+        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-price" "button_text" _("Get a free price quote") %}</a>
+        {% if clinic %}<a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone" class="h-btn-phone">{{ clinic.phone }}</a>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% include "home/_slideshow.html" %}
+</section>
+
+{% elif persona.persona == "fear" %}
+<section class="h-hero" aria-labelledby="hero-h1">
+  <div class="h-hero-left"><div class="h-hero-glow-l"></div><div class="h-hero-bar"></div>
+    <div class="h-hero-inner">
+      <div class="h-badge au1"><span class="h-dot"></span>{% if years %}{% blocktrans %}{{ years }}+ years — ethical protocol{% endblocktrans %}{% else %}{% trans "Ethical protocol" %}{% endif %}</div>
+      <p class="h-eyebrow au1">{% cblock "home-hero-eyebrow" "title" _("Dental tourism Turkey — Istanbul") %}</p>
+      <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-fear" "title" _("Safe dental treatment in Istanbul —") %} <em>{% cblock "home-hero-fear" "subtitle" _("and you will feel it.") %}</em></h1>
+      <p class="h-lead au3">{% cblock "home-hero-fear" "body" _("The most valuable thing experience has taught us: good medicine means knowing when to say no. No unnecessary procedures. Transparent diagnosis. Fixed price.") %}</p>
+      <div class="h-trust-cards au3" data-track-section="safety">
+        <div class="h-trust-card"><span class="h-trust-icon">🔬</span><div><div class="h-trust-title">{% trans "No unnecessary treatment" %}</div><div class="h-trust-sub">{% trans "Saving your natural tooth always comes first" %}</div></div></div>
+        <div class="h-trust-card"><span class="h-trust-icon">📋</span><div><div class="h-trust-title">{% trans "Fixed written quote" %}</div><div class="h-trust-sub">{% trans "What we quote is what you pay" %}</div></div></div>
+        <div class="h-trust-card"><span class="h-trust-icon">👩‍⚕️</span><div><div class="h-trust-title">{% trans "One dentist, full responsibility" %}</div><div class="h-trust-sub">{% trans "The same dentist from consultation to aftercare" %}</div></div></div>
+      </div>
+      <div class="h-cta-row au4">
+        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-fear" "button_text" _("Ask your question") %}</a>
+        {% if clinic %}<a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone" class="h-btn-phone">{{ clinic.phone }}</a>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% include "home/_slideshow.html" %}
+</section>
+
+{% elif persona.persona == "shame" %}
+<section class="h-hero" aria-labelledby="hero-h1">
+  <div class="h-hero-left"><div class="h-hero-glow-l"></div><div class="h-hero-bar"></div>
+    <div class="h-hero-inner">
+      <div class="h-badge au1"><span class="h-dot"></span>{% trans "Minimally invasive — natural results" %}</div>
+      <p class="h-eyebrow au1">{% cblock "home-hero-eyebrow" "title" _("Dental tourism Turkey — Istanbul") %}</p>
+      <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-shame" "title" _("Smile design in Istanbul —") %} <em>{% cblock "home-hero-shame" "subtitle" _("smile like yourself again.") %}</em></h1>
+      <p class="h-lead au3">{% cblock "home-hero-shame" "body" _("A natural smile that is truly yours, with as little tooth preparation as possible. Our goal is not only a beautiful result, but a healthy and lasting one.") %}</p>
+      <div class="h-cta-row au4">
+        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-shame" "button_text" _("Ask about smile design") %}</a>
+        <a href="#before-after" class="h-btn-outline">{% trans "Before / after" %} ↓</a>
+      </div>
+    </div>
+  </div>
+  <div id="before-after" class="h-ba-grid" data-track-section="before_after" aria-label="{% trans 'Before and after results' %}">
+    {% for case in cases|slice:":2" %}
+    <div class="h-ba-panel"><img src="{{ case.before_src }}" alt="{% trans 'Before' %} — {{ case.caption }}" loading="eager" style="width:100%;height:100%;object-fit:cover"><div class="h-ba-label">{% trans "BEFORE" %}</div></div>
+    <div class="h-ba-panel"><img src="{{ case.after_src }}" alt="{% trans 'After' %} — {{ case.caption }}" loading="eager" style="width:100%;height:100%;object-fit:cover"><div class="h-ba-label h-ba-label-after">{% trans "AFTER" %}</div></div>
+    {% empty %}
+    <div class="h-ba-panel"><div class="h-ba-placeholder" style="display:flex"><span class="h-ba-ph-icon">😬</span><span class="h-ba-ph-label">{% trans "Before" %}</span></div><div class="h-ba-label">{% trans "BEFORE" %}</div></div>
+    <div class="h-ba-panel"><div class="h-ba-placeholder" style="display:flex;background:rgba(16,185,129,.07)"><span class="h-ba-ph-icon">😁</span><span class="h-ba-ph-label">{% trans "After" %}</span></div><div class="h-ba-label h-ba-label-after">{% trans "AFTER" %}</div></div>
+    {% endfor %}
+  </div>
+</section>
+
+{% elif persona.persona == "urgency" %}
+<section class="h-hero-full" aria-labelledby="hero-h1">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(16,185,129,.08) 0%,transparent 65%);pointer-events:none"></div>
+  <div class="h-urgency-inner">
+    <div class="h-badge h-badge--red au1">⚡ {% trans "Limited appointments this month" %}</div>
+    <h1 id="hero-h1" class="h-h1 h-h1-center au2">{% cblock "home-hero-urgency" "title" _("A new smile in Istanbul —") %} <em>{% cblock "home-hero-urgency" "subtitle" _("in about a week.") %}</em></h1>
+    <p class="h-lead h-lead-center au3">{% cblock "home-hero-urgency" "body" _("Wedding, holiday or job interview? Arrive on Monday, fly home smiling on Friday — for crowns, veneers and many other treatments.") %}</p>
+    <div class="h-timeline au3" role="list" aria-label="{% trans 'Treatment timeline' %}">
+      <div class="h-tstep h-tstep-active" role="listitem"><div class="h-tstep-day">{% trans "Mon" %}</div><div class="h-tstep-desc">{% trans "Arrival & exam" %}</div></div>
+      <div class="h-timeline-line"></div>
+      <div class="h-tstep" role="listitem"><div class="h-tstep-day">{% trans "Tue" %}</div><div class="h-tstep-desc">{% trans "Preparation" %}</div></div>
+      <div class="h-timeline-line"></div>
+      <div class="h-tstep" role="listitem"><div class="h-tstep-day">{% trans "Wed–Thu" %}</div><div class="h-tstep-desc">{% trans "Treatment" %}</div></div>
+      <div class="h-timeline-line"></div>
+      <div class="h-tstep h-tstep-done" role="listitem"><div class="h-tstep-day">{% trans "Fri" %}</div><div class="h-tstep-desc">{% trans "Final fitting — fly home" %}</div></div>
+    </div>
+    <div class="h-cta-row h-cta-center au4">
+      <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-urgency" "button_text" _("Check this week's availability") %}</a>
+    </div>
+  </div>
+</section>
+
+{% elif persona.persona == "trust" %}
+<section class="h-hero" aria-labelledby="hero-h1">
+  <div class="h-hero-left"><div class="h-hero-glow-l"></div><div class="h-hero-bar"></div>
+    <div class="h-hero-inner">
+      {% if rating %}<div class="h-badge au1"><span class="h-dot"></span>{{ rating }}★ Google · {% blocktrans count n=clinic.google_review_count|default:0 %}{{ n }} review{% plural %}{{ n }} reviews{% endblocktrans %}{% if patients %} · {% blocktrans with n=patients|intcomma %}{{ n }}+ patients{% endblocktrans %}{% endif %}</div>{% endif %}
+      <p class="h-eyebrow au1">{% cblock "home-hero-eyebrow" "title" _("Dental tourism Turkey — Istanbul") %}</p>
+      <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-trust" "title" _("Dental tourism in Istanbul —") %} <em>{% cblock "home-hero-trust" "subtitle" _("trusted by thousands.") %}</em></h1>
+      <p class="h-lead au3">{% cblock "home-hero-trust" "body" _("Don't trust us blindly — watch our patients' real stories first. Ask anything. No pressure, no rush.") %}</p>
+      <div class="h-cta-row au4">
+        <a href="#reviews" class="h-btn-outline">{% trans "See patient reviews" %}</a>
+        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa">{% include "components/wa-icon.html" with size=17 color="#fff" %} {% cblock "home-hero-trust" "button_text" _("Ask a question") %}</a>
+      </div>
+      <p class="h-micro au5">{% trans "No commitment. Just answers." %}</p>
+    </div>
+  </div>
+  {% with v=videos.0 %}{% if v %}
+  <div class="h-video-panel">
+    <a class="h-video-card" href="https://youtube.com/shorts/{{ v.video_id }}" target="_blank" rel="noopener" data-track="youtube">
+      <div class="h-video-thumb"><img src="https://i.ytimg.com/vi/{{ v.video_id }}/hqdefault.jpg" alt="{% blocktrans with name=v.author_name %}{{ name }} — patient video review{% endblocktrans %}" loading="eager"><div class="h-video-play-wrap"><div class="h-video-play-btn"><svg width="16" height="16" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div></div>
+      <div class="h-video-meta"><div class="h-video-title">{{ v.author_name }}{% if v.treatment %} — {{ v.treatment.localized.name }}{% endif %}</div></div>
+    </a>
+  </div>
+  {% else %}{% include "home/_slideshow.html" %}{% endif %}{% endwith %}
+</section>
+
+{% elif persona.persona == "premium" %}
+<section class="h-hero-full" aria-labelledby="hero-h1">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 65% 65% at 60% 40%,rgba(201,169,110,.07) 0%,transparent 62%);pointer-events:none"></div>
+  <div style="position:relative;z-index:1;max-width:680px;padding:2rem clamp(1.5rem,5vw,4rem);display:flex;flex-direction:column;align-items:center;gap:2rem;text-align:center">
+    <div class="h-premium-rule au1"><div class="h-premium-line"></div><span class="h-premium-label">{% trans "Private clinic" %}{% if clinic %} — {{ clinic.district }}, {{ clinic.city.localized.name }}{% endif %}</span><div class="h-premium-line"></div></div>
+    <h1 id="hero-h1" class="h-h1 h-h1-center au2">{% cblock "home-hero-premium" "title" _("Premium dental clinic in Istanbul —") %} <em class="gold">{% cblock "home-hero-premium" "subtitle" _("dentistry as an art.") %}</em></h1>
+    <p class="h-lead h-lead-center au3" style="margin-bottom:0">{% cblock "home-hero-premium" "body" _("Decades of experience and aesthetic precision. Only what you need — nothing more, nothing less.") %}</p>
+    <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-gold au4">{% cblock "home-hero-premium" "button_text" _("Request a private appointment") %}</a>
+    {% include "home/_stats.html" %}
+  </div>
+</section>
+
+{% elif persona.persona == "ready" %}
+<section aria-labelledby="hero-h1" style="overflow:hidden">
+  <div class="h-ready-banner"><span class="h-ready-banner-text">✅ {% trans "Appointments available this week" %}</span><a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-ready-banner-btn">{% trans "Book now" %} →</a></div>
+  <div class="h-hero h-hero-ready-inner" style="min-height:calc(100svh - 52px)">
+    <div class="h-hero-left"><div class="h-hero-glow-l"></div><div class="h-hero-bar"></div>
+      <div class="h-hero-inner">
+        <div class="h-badge au1"><span class="h-dot"></span>{% trans "We're ready when you are" %}</div>
+        <p class="h-eyebrow au1">{% cblock "home-hero-eyebrow" "title" _("Dental tourism Turkey — Istanbul") %}</p>
+        <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-ready" "title" _("Book your dental treatment in Istanbul —") %} <em>{% cblock "home-hero-ready" "subtitle" _("are you ready?") %}</em></h1>
+        <p class="h-lead au3">{% cblock "home-hero-ready" "body" _("Free evaluation, personal treatment plan, fixed price. Reply within 24 hours.") %}</p>
+        <div class="h-cta-row au4">
+          <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} WhatsApp</a>
+          <a href="#contact" data-track="cta" class="h-btn-primary">{% trans "Book an appointment" %}</a>
+        </div>
+      </div>
+    </div>
+    {% include "home/_slideshow.html" %}
+  </div>
+</section>
+
+{% elif persona.persona == "skeptic" %}
+<section class="h-hero" aria-labelledby="hero-h1">
+  <div class="h-hero-left"><div class="h-hero-glow-l"></div><div class="h-hero-bar"></div>
+    <div class="h-hero-inner">
+      <div class="h-badge au1"><span class="h-dot"></span>{% trans "Evidence-based dentistry" %}</div>
+      <p class="h-eyebrow au1">{% cblock "home-hero-eyebrow" "title" _("Dental tourism Turkey — Istanbul") %}</p>
+      <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-skeptic" "title" _("Is dental treatment in Turkey safe?") %} <em>{% cblock "home-hero-skeptic" "subtitle" _("We answer everything.") %}</em></h1>
+      <p class="h-lead au3">{% cblock "home-hero-skeptic" "body" _("Materials, qualifications, what happens if something goes wrong — you get a transparent answer to every question.") %}</p>
+      <div class="h-faq au3" data-track-section="faq">
+        {% for item in faq|slice:":3" %}<details class="h-faq-item" data-track="faq"><summary class="h-faq-summary">{{ item.question }} <span class="h-faq-icon">+</span></summary><div class="h-faq-body">{{ item.answer }}</div></details>{% endfor %}
+      </div>
+      <div class="h-cta-row au4"><a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa">{% include "components/wa-icon.html" with size=17 color="#fff" %} {% cblock "home-hero-skeptic" "button_text" _("Ask any question — free") %}</a></div>
+    </div>
+  </div>
+  <div class="h-rev-panel" aria-label="{% trans 'Patient reviews' %}" data-track-section="reviews">
+    <p style="font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--tx-muted);margin-bottom:.5rem">{% trans "What patients actually say" %}</p>
+    {% for r in reviews|slice:":3" %}{% review_text r as rt %}<div class="h-rev-card"><div class="h-rev-stars">{{ r.rating|stars }}</div><p class="h-rev-text"{% if not rt.translated and r.language %} lang="{{ r.language }}"{% endif %}>“{{ rt.text|truncatechars:120 }}”</p><div class="h-rev-author">{{ r.author_name }} {{ r.country_code|flag }}</div></div>{% endfor %}
+  </div>
+</section>
+
+{% else %}
+{# ── DEFAULT HERO — Googlebot ve kişiselleştirilmemiş ziyaretçiler ── #}
+<section class="h-hero" aria-labelledby="hero-h1">
+  <div class="h-hero-left"><div class="h-hero-glow-l"></div><div class="h-hero-bar"></div>
+    <div class="h-hero-inner">
+      {% if clinic %}<div class="h-badge au1"><span class="h-dot"></span>{{ clinic.city.localized.name }}, {{ clinic.district }}{% if clinic.neighborhood %} — {{ clinic.neighborhood }}{% endif %}</div>{% endif %}
+      <p class="h-eyebrow au1">{% cblock "home-hero-default" "eyebrow" _("Dental tourism Turkey") %}</p>
+      <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-default" "title" _("Dental treatment in Istanbul —") %} <em>{% cblock "home-hero-default" "subtitle" _("only what your teeth actually need.") %}</em></h1>
+      <p class="h-lead au3">{% cblock "home-hero-default" "body" _("Good medicine means knowing when to say no. Ethical protocol, transparent diagnosis and one dentist responsible for your care — with direct WhatsApp contact, not a call centre.") %}</p>
+      <ul class="h-pills au3" style="list-style:none;padding:0">
+        <li class="h-pill">✓ {% trans "No unnecessary treatment" %}</li>
+        <li class="h-pill">✓ {% trans "Transparent diagnosis" %}</li>
+        <li class="h-pill">✓ {% trans "Fixed written quote" %}</li>
+        <li class="h-pill">✓ {% trans "One dentist — full responsibility" %}</li>
+      </ul>
+      {% include "home/_stats.html" %}
+      <div class="h-cta-row au5">
+        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-default" "button_text" _("Free assessment — WhatsApp") %}</a>
+        {% if clinic %}<a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone" class="h-btn-phone">{{ clinic.phone }}</a>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% include "home/_slideshow.html" %}
+</section>
+{% endif %}
+{% endwith %}

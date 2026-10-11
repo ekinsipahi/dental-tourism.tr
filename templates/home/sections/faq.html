@@ -1,0 +1,3 @@
+{% load i18n static site_tags humanize %}
+{% cblock "home-faq" "title" _("Frequently asked questions") as faq_title %}
+{% include "components/faq.html" with faq=faq faq_title=faq_title %}

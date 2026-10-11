@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+<header class="page-head"><div class="wrap">
+  {% include "components/breadcrumb.html" %}
+  <span class="eyebrow">{% trans "Treatments" %}</span>
+  <h1>{% trans "Dental treatments in Istanbul" %}</h1>
+  <p class="lead">{% trans "Every treatment we offer, with honest information about the procedure, how long you need to stay in Istanbul and what it costs." %}</p>
+</div></header>
+<section class="section" data-track-section="treatments"><div class="wrap">
+  <div class="grid grid-3">
+    {% for it in items %}{% include "components/treatment_card.html" with t=it.loc heading="h2" %}{% endfor %}
+  </div>
+</div></section>
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

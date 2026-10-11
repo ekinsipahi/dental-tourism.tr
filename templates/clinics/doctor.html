@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+<header class="page-head"><div class="wrap" style="display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center">
+  {% if d.photo_src %}<img src="{{ d.photo_src }}" alt="{{ d.full_name }}" width="160" height="160" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid var(--brand)">{% endif %}
+  <div>
+    {% include "components/breadcrumb.html" %}
+    <h1>{{ d.full_name }}</h1>
+    <p class="lead">{{ d.title_display }} · <a href="{{ clinic.get_absolute_url }}">{{ clinic.name }}</a></p>
+    {% if d.is_fallback %}<p class="fallback-note">{% trans "This page is not yet available in your language — showing the original version." %}</p>{% endif %}
+  </div>
+</div></header>
+<section class="section"><div class="wrap layout-side">
+  <article class="prose" data-track-section="doctor">{{ d.bio|markdown }}</article>
+  <aside class="sticky-side"><div class="side-cta">
+    <h2>{% trans "Qualifications" %}</h2>
+    <ul class="facts">
+      {% if d.university %}<li><span>{% trans "University" %}</span><strong>{{ d.university }}</strong></li>{% endif %}
+      {% if d.graduation_year %}<li><span>{% trans "Graduated" %}</span><strong>{{ d.graduation_year }}</strong></li>{% endif %}
+      {% if d.languages_spoken %}<li><span>{% trans "Languages" %}</span><strong>{{ d.languages_spoken|join:", "|upper }}</strong></li>{% endif %}
+    </ul>
+    {% if d.memberships %}<div class="chips" style="margin-top:1rem">{% for m in d.memberships %}<span class="badge badge-gold">{{ m }}</span>{% endfor %}</div>{% endif %}
+    <a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ clinic.whatsapp_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask the dentist" %}</a>
+  </div></aside>
+</div></section>
+{% if reviews %}<section class="section section-alt"><div class="wrap"><h2>{% trans "Patient reviews" %}</h2>{% include "components/reviews.html" %}</div></section>{% endif %}
+{% endblock %}

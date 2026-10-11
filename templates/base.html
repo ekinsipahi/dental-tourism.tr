@@ -1,0 +1,87 @@
+{% load static i18n site_tags %}<!DOCTYPE html>
+<html lang="{{ lang_code }}" dir="{{ lang_dir }}" data-persona="{{ persona.persona|default:'unknown' }}" data-stage="{{ persona.stage|default:'awareness' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include "components/seo_head.html" %}
+  {% if site_settings.favicon %}<link rel="icon" href="{{ site_settings.favicon.url }}">
+  {% else %}<link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="{% static 'icons/favicon-48.png' %}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{% static 'icons/favicon-96.png' %}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{% static 'icons/favicon-192.png' %}">{% endif %}
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'icons/apple-touch-icon.png' %}">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {% if persona.persona == "premium" %}
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  {% elif persona.persona == "skeptic" %}
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  {% else %}
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  {% endif %}
+  {% if lang_code == "ar" %}<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">{% endif %}
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+  <link rel="stylesheet" href="{% static 'css/ui.css' %}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body data-page-type="{{ page_type|default:'page' }}">
+  <a class="skip-link" href="#main">{% trans "Skip to content" %}</a>
+
+  {% if suggested_language %}
+  <div class="lang-hint" id="lang-hint" role="region" aria-label="{% trans 'Language suggestion' %}">
+    <div class="wrap">
+      <span>{% lang_flag suggested_language.code %} {{ suggested_language.native }}?</span>
+      <a href="/" id="lang-hint-link" data-lang="{{ suggested_language.code }}" lang="{{ suggested_language.code }}">→ {{ suggested_language.native }}</a>
+      <button type="button" aria-label="{% trans 'Close' %}" onclick="document.cookie='lang_hint_closed=1;path=/;max-age=31536000;SameSite=Lax';this.closest('.lang-hint').remove()">×</button>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if site_settings.announcement %}<div class="persona-bar">{% if site_settings.announcement_url %}<a href="{{ site_settings.announcement_url }}">{{ site_settings.announcement }}</a>{% else %}{{ site_settings.announcement }}{% endif %}</div>{% endif %}
+  {% include "components/navbar.html" %}
+
+  {% if persona.persona == "price" %}
+  <div class="persona-bar">💶 {% trans "Very affordable — with a fixed written quote and no hidden costs." %} <a href="{% url 'packages:index' %}">{% trans "See personalised dental packages" %} →</a></div>
+  {% elif persona.persona == "urgency" %}
+  <div class="persona-bar">⚡ {% trans "Short on time? Many treatments are completed within one week in Istanbul." %}</div>
+  {% elif persona.stage == "consideration" and clinic.google_rating %}
+  {# Değerlendirme aşaması: güven kanıtı #}
+  <div class="persona-bar stage-bar">⭐ <strong>{{ clinic.google_rating }}</strong> · {% blocktrans count n=clinic.google_review_count|default:0 %}{{ n }} Google review{% plural %}{{ n }} Google reviews{% endblocktrans %}{% if clinic.years_experience %} · {% blocktrans with y=clinic.years_experience %}{{ y }}+ years experience{% endblocktrans %}{% endif %} <a href="{{ clinic.get_absolute_url }}#reviews">{% trans "read them on Google" %} →</a></div>
+  {% endif %}
+
+  <main id="main">
+    {% if messages %}<div class="wrap"><ul class="messages">{% for m in messages %}<li>{{ m }}</li>{% endfor %}</ul></div>{% endif %}
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include "components/footer.html" %}
+
+  {% if wa_url and persona.stage == "decision" %}
+  {# Karar aşaması: mobilde sabit alt iletişim çubuğu #}
+  <div class="stage-dock" role="complementary" aria-label="{% trans 'Contact' %}">
+    <a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=16 %} WhatsApp</a>
+    {% if clinic.phone %}<a href="tel:{{ clinic.phone|cut:' ' }}" class="btn btn-outline" data-track="phone">📞 {% trans "Call us" %}</a>{% endif %}
+  </div>
+  {% endif %}
+  {% if wa_url %}
+  <a href="{{ wa_url }}" class="wa-float" data-track="whatsapp" target="_blank" rel="noopener" aria-label="{% trans 'Chat on WhatsApp' %}">
+    {% include "components/wa-icon.html" with size=28 color="#fff" %}
+  </a>
+  {% endif %}
+
+  {% include "components/consent.html" %}
+  <script>window.DENTAL = {persona: "{{ persona.persona|default:'unknown'|escapejs }}", lang: "{{ lang_code|escapejs }}", pageType: "{{ page_type|default:'page'|escapejs }}"};</script>
+  {% if not is_bot %}<script src="{% static 'js/tracker.js' %}" defer></script>{% endif %}
+  <script src="{% static 'js/ui.js' %}" defer></script>
+  <script>
+    (function () {
+      var t = document.querySelector('.nav-toggle'), m = document.getElementById('mobile-menu');
+      if (t && m) t.addEventListener('click', function () { var o = m.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+      var hint = document.getElementById('lang-hint-link');
+      if (hint) { var alt = document.querySelector('link[rel=alternate][hreflang="' + hint.dataset.lang + '"]'); var home = document.querySelector('.lang-menu a[lang="' + hint.dataset.lang + '"]'); hint.href = alt ? alt.href : (home ? home.href : '/'); }
+    })();
+  </script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

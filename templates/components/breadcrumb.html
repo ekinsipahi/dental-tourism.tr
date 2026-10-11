@@ -1,0 +1,1 @@
+{% load i18n %}{% if seo.breadcrumbs %}<nav aria-label="{% trans 'Breadcrumb' %}"><ol class="breadcrumb">{% for name, url in seo.breadcrumbs %}<li>{% if forloop.last %}<span aria-current="page">{{ name|truncatechars:60 }}</span>{% else %}<a href="{{ url }}">{{ name }}</a>{% endif %}</li>{% endfor %}</ol></nav>{% endif %}

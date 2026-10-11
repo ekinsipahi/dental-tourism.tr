@@ -1,0 +1,11 @@
+{% load i18n site_tags %}{% if videos %}
+<div class="grid grid-4" data-track-section="video">
+  {% for v in videos %}
+  <a class="video-card" href="https://youtube.com/shorts/{{ v.video_id }}" target="_blank" rel="noopener" data-track="youtube">
+    <img src="https://i.ytimg.com/vi/{{ v.video_id }}/hqdefault.jpg" alt="{% blocktrans with name=v.author_name %}{{ name }} — patient video review{% endblocktrans %}" loading="lazy" width="480" height="360">
+    <span class="play" aria-hidden="true"><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+    <span class="info"><strong>{{ v.author_name }}</strong> {{ v.country_code|flag }}{% if v.treatment %}<br>{{ v.treatment.localized.name }}{% endif %}</span>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}

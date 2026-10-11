@@ -1,0 +1,13 @@
+{% load i18n static %}
+<div class="h-slideshow" aria-hidden="true">
+  {% for img in slides %}
+  <div class="h-slide{% if forloop.first %} active{% endif %}">
+    <img src="{{ img.src }}" alt="{{ img.alt }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+  </div>
+  {% empty %}
+  <div class="h-slide active"><div class="h-slide-placeholder" style="display:flex"><span class="h-slide-ph-icon">🏥</span><span class="h-slide-ph-label">{% if clinic %}{{ clinic.display_name }}{% endif %}</span></div></div>
+  {% endfor %}
+  <div class="h-slide-fade"></div><div class="h-slide-fade-b"></div>
+  {% if clinic %}<div class="h-slide-caption">{{ clinic.district }}, {{ clinic.city.localized.name }}{% if clinic.neighborhood %} — {{ clinic.neighborhood }}{% endif %}</div>{% endif %}
+  <div class="h-slide-dots" id="slide-dots"></div>
+</div>

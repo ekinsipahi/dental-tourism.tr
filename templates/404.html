@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n static %}
+{% block content %}
+<section class="section"><div class="wrap-narrow center">
+  <img src="{% static 'img/logo-sm.png' %}" alt="Dr. Dt. Devrim Biriken Sipahi" width="171" height="73" style="margin:0 auto 1rem;border-radius:10px">
+  <h1>{% trans "Page not found" %}</h1>
+  <p class="lead">{% trans "The page you are looking for does not exist or has moved." %}</p>
+  <div class="btn-row" style="justify-content:center"><a class="btn btn-primary" href="{% url 'core:home' %}">{% trans "Home" %}</a><a class="btn btn-outline" href="{% url 'treatments:list' %}">{% trans "Treatments" %}</a></div>
+</div></section>
+{% endblock %}

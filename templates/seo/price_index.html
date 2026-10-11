@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+{% include "pseo/_hero.html" %}
+<section class="section"><div class="wrap">
+  {% include "pseo/_price_note.html" %}
+  <h2>{% trans "What determines the price of your treatment" %}</h2>
+  <div class="grid grid-3">
+    <div class="card"><h3>🦷 {% trans "Your diagnosis" %}</h3><p class="muted">{% trans "How many teeth, bone volume, gum health — every mouth is different." %}</p></div>
+    <div class="card"><h3>🏷️ {% trans "Materials" %}</h3><p class="muted">{% trans "Implant system, zirconia or E.max — we name every brand in your plan." %}</p></div>
+    <div class="card"><h3>🗓️ {% trans "Number of visits" %}</h3><p class="muted">{% trans "Some treatments need one trip, implants usually two." %}</p></div>
+  </div>
+  <p class="pseo-loss" style="margin-top:1.5rem">{% trans "The cheapest offer is often the most expensive one: unnecessary crowns, ground-down healthy teeth and repairs at home. Quality and affordability can go together." %}</p>
+</div></section>
+<section class="section section-alt"><div class="wrap">
+  <h2>{% trans "Ask about the cost of a specific treatment" %}</h2>
+  <div class="grid grid-4">{% for c in cards %}<a class="card" href="{{ c.url }}"><h3>{{ c.loc.icon }} {% blocktrans with name=c.loc.name %}{{ name }} cost{% endblocktrans %}</h3><p class="muted">{{ c.loc.short_description|truncatechars:100 }}</p></a>{% endfor %}</div>
+</div></section>
+{% include "pseo/_proof.html" %}
+{% include "pseo/_photos.html" %}
+{% include "components/faq.html" with faq=faq %}
+{% include "pseo/_links.html" %}
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

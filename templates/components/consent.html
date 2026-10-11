@@ -1,0 +1,25 @@
+{% load i18n %}{% if analytics.gtag or analytics.meta_pixel %}
+<div id="consent" hidden style="position:fixed;inset:auto 16px 16px 16px;max-width:520px;z-index:400;background:var(--bg-card);border:1px solid var(--border-hv);border-radius:var(--radius);padding:1rem 1.2rem;box-shadow:var(--shadow-lg);font-size:.85rem">
+  <p style="margin:0 0 .8rem;color:var(--tx-muted)">{% trans "We use cookies to measure our advertising and improve the site. You can accept or decline analytics cookies." %} <a href="{% url 'core:privacy' %}">{% trans "Privacy policy" %}</a></p>
+  <div class="btn-row"><button class="btn btn-primary btn-sm" data-consent="yes">{% trans "Accept" %}</button><button class="btn btn-outline btn-sm" data-consent="no">{% trans "Decline" %}</button></div>
+</div>
+<script>
+(function () {
+  var KEY = "dt_consent", box = document.getElementById("consent");
+  function load() {
+    {% if analytics.gtag %}var s = document.createElement("script"); s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id={{ analytics.gtag }}"; document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
+    gtag("js", new Date()); gtag("config", "{{ analytics.gtag }}");{% if analytics.ads %} gtag("config", "{{ analytics.ads }}");{% endif %}{% endif %}
+    {% if analytics.meta_pixel %}!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '{{ analytics.meta_pixel }}'); fbq('track', 'PageView');{% endif %}
+  }
+  var v = null; try { v = localStorage.getItem(KEY); } catch (e) {}
+  if (v === "yes") load(); else if (v === null && box) box.hidden = false;
+  box && box.addEventListener("click", function (e) {
+    var c = e.target.getAttribute("data-consent"); if (!c) return;
+    try { localStorage.setItem(KEY, c); } catch (err) {}
+    box.hidden = true; if (c === "yes") load();
+  });
+})();
+</script>
+{% endif %}

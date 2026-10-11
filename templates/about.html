@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load i18n site_tags humanize %}
+{% block content %}
+<header class="page-head about-hero"><div class="wrap about-hero-grid">
+  <div class="reveal">
+    {% include "components/breadcrumb.html" %}
+    <span class="eyebrow">{% trans "Our story" %}</span>
+    <h1>{% trans "Ethical dentistry in Istanbul — only what you need" %}</h1>
+    <p class="lead">{% trans "We believe the most important skill in dentistry is knowing when not to treat. Every plan starts with saving your natural teeth, a transparent diagnosis and a fixed written price." %}</p>
+    {% if clinic.google_rating %}<a class="about-rating" href="{{ clinic.google_business_url|default:'#reviews' }}" target="_blank" rel="noopener"><span class="rv-stars">★★★★★</span> <strong>{{ clinic.google_rating }}</strong> · {% blocktrans count n=clinic.google_review_count|default:0 %}{{ n }} Google review{% plural %}{{ n }} Google reviews{% endblocktrans %} ↗</a>{% endif %}
+    <div class="btn-row" style="margin-top:1.4rem">
+      {% if wa_url %}<a class="btn btn-wa" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} {% trans "Send a photo — free assessment" %}</a>{% endif %}
+      {% if clinic.phone %}<a class="btn btn-outline" href="{{ tel_url }}" data-track="phone">📞 {% trans "Call us" %}</a>{% endif %}
+    </div>
+  </div>
+  <div class="about-collage reveal" data-delay="150">
+    {% if doctor.photo_src %}<figure class="ac-main tilt"><img src="{{ doctor.photo_src }}" alt="{{ doctor.name }}" width="520" height="620" fetchpriority="high"><figcaption>{{ doctor.name }}<span>{{ doctor_loc.title_display }}</span></figcaption></figure>{% endif %}
+    {% for p in about_photos|slice:":2" %}<figure class="ac-side ac-side-{{ forloop.counter }} tilt"><img src="{{ p.src }}" alt="{{ p.alt }}" width="320" height="240" loading="lazy"></figure>{% endfor %}
+    {% if clinic.years_experience %}<div class="ac-badge float"><strong><span data-count="{{ clinic.years_experience }}">{{ clinic.years_experience }}</span>+</strong><span>{% trans "Years experience" %}</span></div>{% endif %}
+  </div>
+</div></header>
+
+<section class="section" style="padding-top:2rem"><div class="wrap">{% include "home/_stats.html" %}</div></section>
+
+<section class="section section-alt"><div class="wrap">
+  <div class="grid grid-3 values">
+    <div class="card value reveal"><span class="value-ico">🔍</span><h3>{% trans "Diagnosis first" %}</h3><p class="muted">{% trans "Examination, X-ray and 3D scan by the dentist — the plan follows the diagnosis, not a price list." %}</p></div>
+    <div class="card value reveal" data-delay="100"><span class="value-ico">🦷</span><h3>{% trans "Only the treatment you need" %}</h3><p class="muted">{% trans "We save natural teeth first. No unnecessary crowns, no healthy enamel ground away." %}</p></div>
+    <div class="card value reveal" data-delay="200"><span class="value-ico">📝</span><h3>{% trans "Fixed written quote" %}</h3><p class="muted">{% trans "Very affordable, and what we agree in writing is what you pay." %}</p></div>
+  </div>
+</div></section>
+
+{% if clinic_loc %}
+<section class="section"><div class="wrap about-story">
+  <div class="prose reveal">{{ clinic_loc.description|markdown }}</div>
+  <aside class="about-story-photos">
+    {% for p in story_photos %}<figure class="reveal" data-delay="{% widthratio forloop.counter0 1 120 %}"><img src="{{ p.src }}" alt="{{ p.alt }}" loading="lazy" width="480" height="360"></figure>{% endfor %}
+  </aside>
+</div></section>
+{% endif %}
+
+{% if doctors %}
+<section class="section section-alt" aria-labelledby="team-h2"><div class="wrap">
+  <h2 id="team-h2" class="reveal">{% trans "Your dentist" %}</h2>
+  <div class="grid grid-2 team">
+    {% for d in doctors %}
+    <a class="card team-card reveal" href="{{ d.object.get_absolute_url }}" data-delay="{% widthratio forloop.counter0 1 120 %}">
+      {% if d.photo_src %}<img class="team-photo" src="{{ d.photo_src }}" alt="{{ d.full_name }}" loading="lazy" width="120" height="120">{% else %}<span class="team-photo team-initial">{{ d.full_name|first }}</span>{% endif %}
+      <div><h3>{{ d.full_name }}</h3><p class="team-title">{{ d.title_display }}</p><p class="muted">{{ d.bio|markdown|striptags|truncatewords:32 }}</p><span class="team-more">{% trans "Read the dentist's profile" %} →</span></div>
+    </a>
+    {% endfor %}
+  </div>
+</div></section>
+{% endif %}
+
+{% include "pseo/_photos.html" %}
+{% include "pseo/_proof.html" %}
+{% include "pseo/_links.html" %}
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load i18n site_tags %}
+<section class="section{% if search_title_key %} section-alt{% endif %}" aria-labelledby="clinic-search-h2" data-track-section="clinic_search">
+  <div class="wrap">
+    {% if search_title_key %}
+    <span class="eyebrow">{% cblock search_title_key "eyebrow" _("Find your clinic") %}</span>
+    <h2 id="clinic-search-h2" style="font-size:clamp(1.6rem,3.5vw,2.3rem)">{% cblock search_title_key "title" _("Search dental clinics in Turkey") %}</h2>
+    <p class="lead">{% cblock search_title_key "subtitle" _("Filter by treatment, city and language — and compare verified clinics side by side.") %}</p>
+    {% else %}<h2 id="clinic-search-h2" class="sr-only">{% trans "Search clinics" %}</h2>{% endif %}
+    <form method="get" action="{% url 'clinics:list' %}" class="search-box" role="search">
+      <div class="search-main">
+        <label class="sr-only" for="cs-q">{{ search_form.q.label }}</label>
+        <input id="cs-q" name="q" type="search" value="{{ search_form.q.value|default:'' }}" placeholder="{{ search_form.q.field.widget.attrs.placeholder }}">
+        <label class="sr-only" for="cs-t">{{ search_form.treatment.label }}</label>
+        <select id="cs-t" name="treatment">{% for v, l in search_form.treatment.field.choices %}<option value="{{ v }}"{% if search_form.treatment.value == v %} selected{% endif %}>{{ l }}</option>{% endfor %}</select>
+        <label class="sr-only" for="cs-c">{{ search_form.city.label }}</label>
+        <select id="cs-c" name="city">{% for v, l in search_form.city.field.choices %}<option value="{{ v }}"{% if search_form.city.value == v %} selected{% endif %}>{{ l }}</option>{% endfor %}</select>
+        <button class="btn btn-primary" type="submit" data-track="cta">🔍 {% trans "Search" %}</button>
+      </div>
+      <details class="search-more"{% if filtered %} open{% endif %}>
+        <summary>{% trans "More filters" %}</summary>
+        <div class="search-grid">
+          <div><label for="cs-l">{{ search_form.language.label }}</label><select id="cs-l" name="language">{% for v, l in search_form.language.field.choices %}<option value="{{ v }}"{% if search_form.language.value == v %} selected{% endif %}>{{ l }}</option>{% endfor %}</select></div>
+          <div><label for="cs-r">{{ search_form.min_rating.label }}</label><select id="cs-r" name="min_rating">{% for v, l in search_form.min_rating.field.choices %}<option value="{{ v }}"{% if search_form.min_rating.value == v %} selected{% endif %}>{{ l }}</option>{% endfor %}</select></div>
+          <div><label for="cs-s">{{ search_form.sort.label }}</label><select id="cs-s" name="sort">{% for v, l in search_form.sort.field.choices %}<option value="{{ v }}"{% if search_form.sort.value == v %} selected{% endif %}>{{ l }}</option>{% endfor %}</select></div>
+          <label class="check"><input type="checkbox" name="verified" value="on"{% if search_form.verified.value %} checked{% endif %}> {{ search_form.verified.label }}</label>
+          <label class="check"><input type="checkbox" name="transfer" value="on"{% if search_form.transfer.value %} checked{% endif %}> {{ search_form.transfer.label }}</label>
+          <label class="check"><input type="checkbox" name="hotel" value="on"{% if search_form.hotel.value %} checked{% endif %}> {{ search_form.hotel.label }}</label>
+        </div>
+      </details>
+    </form>
+  </div>
+</section>

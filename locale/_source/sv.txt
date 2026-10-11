@@ -1,0 +1,589 @@
+0|Blogg om tandturism — guider, kostnader och patientråd
+1|Ärliga guider om tandvård i Turkiet: priser på implantat och fasader, säkerhet, läkning och hur du väljer tandläkare i Istanbul.
+2|Hem
+3|Blogg
+4|%(category)s — Blogg om tandturism
+5|Tandkliniker i Istanbul för internationella patienter
+6|Granskade tandkliniker i Turkiet: tandläkarnas erfarenhet, språk, priser och patientomdömen. Kostnadsfri konsultation.
+7|Kliniker
+8|%(clinic)s — tandklinik i %(city)s
+9|%(doctor)s — tandläkare i %(city)s
+10|Jag har några frågor om säkerhet och behandlingsförloppet.
+11|Jag vill gärna få en prisuppgift.
+12|Jag vill fråga om lediga tider den här veckan.
+13|Jag vill gärna ha information om smile design.
+14|Jag vill boka en privat tid.
+15|Jag vill boka en tid.
+16|Jag vill ha information om material och certifikat.
+17|Jag vill veta mer.
+18|Hej, jag vill gärna ha en kostnadsfri konsultation.
+19|Fullständigt namn
+20|Ditt för- och efternamn
+21|Telefon / WhatsApp
+22|E-post
+23|Önskad behandling
+24|Inte säker än
+25|Meddelande
+26|Berätta kort om din tandsituation…
+27|Jag godkänner att mina uppgifter behandlas för att besvara min förfrågan (GDPR / KVKK).
+28|Ange ett giltigt telefonnummer med landsnummer.
+29|per tand
+30|per implantat
+31|per krona
+32|per käke
+33|per käke
+34|per behandlingstillfälle
+35|per leende
+36|om-oss/
+37|kontakt/
+38|kontakt/tack/
+39|integritet/
+40|Är det säkert att göra tandbehandling i Turkiet?
+41|Ja, om du väljer en licensierad klinik med erfarna tandläkare och certifierade material. Fråga innan resan efter tandläkarens kvalifikationer, märken på implantat och kronor samt en skriftlig behandlingsplan.
+42|Hur mycket kan jag spara på tandvård i Istanbul?
+43|Patienter betalar oftast 50–70 % mindre än i Västeuropa för samma behandling och material. Du får en fast skriftlig offert innan behandlingen börjar.
+44|Hur länge behöver jag stanna i Istanbul?
+45|Det beror på behandlingen: fyllningar, tandrengöring och kompositfasader tar 1–3 dagar, kronor och porslinsfasader cirka 5–7 dagar, implantat oftast två besök med några månaders mellanrum.
+46|Talar ni mitt språk?
+47|Vi kommunicerar med internationella patienter på engelska och andra språk, och du kan skriva direkt till tandläkaren på WhatsApp före, under och efter behandlingen.
+48|Hur erfaren är tandläkaren?
+49|Vår ansvariga tandläkare har %(years)s års klinisk erfarenhet.
+50|Tandvård i Istanbul — implantat, fasader och kronor i Turkiet
+51|Etisk tandvård i Istanbul hos en erfaren tandläkare. Implantat, fasader, zirkoniakronor 50–70 % billigare än i Europa. Fast pris. Kostnadsfri konsultation via WhatsApp.
+52|Om oss — etisk tandvård i Istanbul
+53|Möt tandläkaren och kliniken bakom dentaltourism.tr: decenniers erfarenhet, transparent diagnos och bara den behandling du verkligen behöver.
+54|Om oss
+55|Kontrollera formuläret och försök igen.
+56|Kostnadsfri konsultation — kontakta vår tandläkare i Istanbul
+57|Skicka din röntgenbild eller foton och få en kostnadsfri behandlingsplan och fast prisoffert. Svar inom 24 timmar. WhatsApp, telefon eller formulär.
+58|Tack — vi kontaktar dig snart
+59|Integritetspolicy
+60|Hur vi behandlar och skyddar dina personuppgifter (GDPR / KVKK).
+61|Sidan hittades inte
+62|%(treatment)s i %(city)s
+63|%(treatment)s %(city)s — priser från €%(price)s
+64|Jämför %(treatment)s i %(city)s: klinikpriser, vistelsens längd, tandläkarnas erfarenhet och patientomdömen. Kostnadsfri konsultation via WhatsApp.
+65|Behandlingar
+66|Tandvårdspriser Turkiet vs %(country)s — prislista 2026
+67|Jämför priser för tandvård i Istanbul med %(country)s: implantat, fasader, kronor, All-on-4. Fasta priser i EUR, inga dolda kostnader.
+68|Priser
+69|Kostnad för %(treatment)s i Turkiet vs %(country)s
+70|%(treatment)s kostnad Turkiet vs %(country)s (2026)
+71|Vad kostar %(treatment)s i Istanbul jämfört med %(country)s? Riktiga klinikpriser från €%(price)s, vad som ingår och hur mycket du sparar.
+72|Tandvård i Istanbul — priser och information
+73|Alla tandbehandlingar för internationella patienter i Istanbul: implantat, fasader, kronor, All-on-4, rotfyllning och mer. Tydliga priser och vistelsetider.
+74|%(treatment)s i Istanbul — pris och behandling
+75|behandlingar/
+76|priser/
+77|kliniker/
+78|tandlakare/
+79|Sidan du söker finns inte eller har flyttats.
+80|Vår historia
+81|Etisk tandvård i Istanbul — bara det du behöver
+82|Vi anser att den viktigaste färdigheten inom tandvården är att veta när man inte ska behandla. Varje plan börjar med att bevara dina naturliga tänder, en transparent diagnos och ett fast skriftligt pris.
+83|Din tandläkare
+84|Django-administration
+85|Hoppa till innehållet
+86|Språkförslag
+87|Stäng
+88|Samma behandling, 50–70 %% billigare än i %(country)s.
+89|Se prislistan
+90|Ont om tid? Många behandlingar blir klara inom en vecka i Istanbul.
+91|Chatta på WhatsApp
+92|%(n)s min läsning
+93|Sidnavigering
+94|Föregående
+95|Nästa
+96|Kategori
+97|Kategorier
+98|Alla
+99|Inga artiklar i den här kategorin ännu.
+100|Uppdaterad
+101|Medicinskt granskad av
+102|Innehåll
+103|I den här artikeln
+104|Priser och detaljer
+105|Du kanske också gillar
+106|Informationscenter för patienter
+107|Ta reda på mer innan du bestämmer dig
+108|Ärliga guider om tandbehandlingar, kostnader och vad du kan förvänta dig av tandturism i Istanbul.
+109|Nya artiklar kommer snart.
+110|Den här sidan finns ännu inte på ditt språk — originalversionen visas.
+111|Års erfarenhet
+112|Behandlade patienter
+113|Betyg på Google
+114|Språk
+115|Behandlingar och priser
+116|Behandling
+117|Från
+118|Vistelse
+119|%(d)s dagar
+120|Tandläkare
+121|Kontakt och hitta hit
+122|Karta
+123|Före och efter
+124|Före
+125|Efter
+126|Patientomdömen
+127|Kvalifikationer
+128|Universitet
+129|Examen
+130|Fråga tandläkaren
+131|Tandkliniker i Istanbul för internationella patienter
+132|Varje klinik granskas innan den listas: tillstånd, tandläkarnas kvalifikationer och verkliga patientomdömen.
+133|Granskad
+134|Inga kliniker listade ännu.
+135|Brödsmulor
+136|Vi använder cookies för att mäta vår annonsering och förbättra webbplatsen. Du kan godkänna eller avböja analyscookies.
+137|Integritetspolicy
+138|Godkänn
+139|Avböj
+140|Skicka — vi återkommer till dig
+141|Dina uppgifter skyddas enligt GDPR / KVKK och används endast för att besvara din förfrågan.
+142|Ditt exakta pris inom 24 timmar
+143|Skicka ett foto eller en röntgenbild på WhatsApp. Du får en skriftlig behandlingsplan och ett fast pris — utan förpliktelser.
+144|Fråga tandläkaren om allt — innan du bestämmer dig
+145|Material, garantier, vad som händer om något går fel: ärliga svar direkt från tandläkaren, inte från ett callcenter.
+146|Begär en privat konsultation
+147|En personlig behandlingsplan, diskret bokning och en tandläkare som ansvarar för din vård från början till slut.
+148|Se lediga tider den här veckan
+149|Berätta dina resedatum så planerar vi dina besök runt dem.
+150|Kostnadsfri bedömning — utan förpliktelser
+151|Skicka oss ett foto eller en röntgenbild. Vår tandläkare svarar med en ärlig behandlingsplan och ett fast pris.
+152|Kontaktformulär
+153|Vanliga frågor
+154|Etisk tandvård i Istanbul för internationella patienter — transparent diagnos, fasta priser, direktkontakt med din tandläkare.
+155|Information
+156|Prislista
+157|Kontakt
+158|Huvudmeny
+159|Om oss
+160|Byt språk
+161|Kostnadsfri offert
+162|Boka nu
+163|Privat konsultation
+164|Kostnadsfri konsultation
+165|Meny
+166|från
+167|Pris på förfrågan
+168|Detaljer
+169|%(name)s — videoomdöme från patient
+170|Få din kostnadsfria behandlingsplan
+171|Skicka oss dina uppgifter — och om du har, ett foto eller en röntgenbild via WhatsApp. Tandläkaren svarar personligen inom 24 timmar.
+172|Snabbast svar — oftast inom 30 minuter under klinikens öppettider.
+173|Klinik
+174|Varför kostnadsfritt?
+175|Inga förpliktelser
+176|Behandlingsplan och fast pris
+177|Svar inom 24 timmar
+178|50–70 %% billigare än i %(country)s
+179|Tandturism Turkiet — Istanbul
+180|Prisvärda tandimplantat i Istanbul —
+181|samma kvalitet.
+182|En bråkdel av priset hemma. CE-certifierade material, identisk teknik. Inga dolda kostnader — priset vi anger är priset du betalar.
+183|implantat
+184|Istanbul
+185|Din besparing
+186|Kostnadsfri prisoffert
+187|%(years)s+ år — etiskt protokoll
+188|Etiskt protokoll
+189|Säker tandvård i Istanbul —
+190|och det kommer du att känna.
+191|Det värdefullaste erfarenheten har lärt oss: god medicin innebär att veta när man ska säga nej. Inga onödiga ingrepp. Transparent diagnos. Fast pris.
+192|Ingen onödig behandling
+193|Att bevara din egen tand kommer alltid först
+194|Fast skriftlig offert
+195|Det vi offererar är det du betalar
+196|En tandläkare, fullt ansvar
+197|Samma tandläkare från konsultation till eftervård
+198|Ställ din fråga
+199|Minimalt invasivt — naturliga resultat
+200|Smile design i Istanbul —
+201|le som dig själv igen.
+202|Ett naturligt leende som verkligen är ditt, med så lite slipning som möjligt. Vårt mål är inte bara ett vackert utan ett friskt och hållbart resultat.
+203|Fråga om smile design
+204|Före / efter
+205|Resultat före och efter
+206|FÖRE
+207|EFTER
+208|Begränsat antal tider den här månaden
+209|Ett nytt leende i Istanbul —
+210|på ungefär en vecka.
+211|Bröllop, semester eller anställningsintervju? Kom på måndag och flyg hem leende på fredag — för kronor, fasader och många andra behandlingar.
+212|Behandlingsschema
+213|Mån
+214|Ankomst och undersökning
+215|Tis
+216|Förberedelse
+217|Ons–Tor
+218|Fre
+219|Slutlig utprovning — hemresa
+220|%(n)s+ patienter
+221|Tandturism i Istanbul —
+222|tusentals litar på oss.
+223|Lita inte blint på oss — titta först på våra patienters verkliga berättelser. Fråga om allt. Ingen press, ingen brådska.
+224|Se patientomdömen
+225|Ställ en fråga
+226|Utan förpliktelser. Bara svar.
+227|Privatklinik
+228|Premiumtandklinik i Istanbul —
+229|tandvård som konst.
+230|Decennier av erfarenhet och estetisk precision. Bara det du behöver — varken mer eller mindre.
+231|Begär en privat tid
+232|Lediga tider den här veckan
+233|Vi är redo när du är det
+234|Boka din tandbehandling i Istanbul —
+235|är du redo?
+236|Kostnadsfri bedömning, personlig behandlingsplan, fast pris. Svar inom 24 timmar.
+237|Boka en tid
+238|Evidensbaserad tandvård
+239|Är tandvård i Turkiet säker?
+240|Vi svarar på allt.
+241|Material, kvalifikationer, vad som händer om något går fel — du får ett transparent svar på varje fråga.
+242|Ställ vilken fråga som helst — kostnadsfritt
+243|Vad patienterna verkligen säger
+244|Tandturism Turkiet
+245|Tandvård i Istanbul —
+246|bara det dina tänder verkligen behöver.
+247|God medicin innebär att veta när man ska säga nej. Etiskt protokoll, transparent diagnos och en tandläkare som ansvarar för din vård — med direktkontakt via WhatsApp, inte ett callcenter.
+248|Transparent diagnos
+249|En tandläkare — fullt ansvar
+250|Kostnadsfri bedömning — WhatsApp
+251|Behandlingar med bäst valuta för pengarna
+252|Våra signaturbehandlingar
+253|Behandlingar för ett naturligt leende
+254|Vad vi gör
+255|Tandvård i Istanbul — och varför vi gör den
+256|Vårt etiska protokoll innebär att vi bara rekommenderar det du verkligen behöver. Ingen merförsäljning, inga onödiga ingrepp.
+257|Jämför priser med ditt land
+258|Patienters erfarenheter
+259|Deras berättelser — din inspiration
+260|Riktiga patienter, riktiga resultat
+261|Videorna publiceras med patienternas uttryckliga samtycke.
+262|Alla patientvideor
+263|Så fungerar det
+264|Från första meddelandet till ditt nya leende
+265|Skicka ett foto eller en röntgenbild
+266|Skriv till oss på WhatsApp. Tandläkaren går personligen igenom ditt fall.
+267|Få en plan och ett fast pris
+268|Du får en ärlig behandlingsplan och en skriftlig offert inom 24 timmar.
+269|Res till Istanbul
+270|Vi planerar besöken efter dina flyg och hjälper till med logistiken.
+271|Behandling och eftervård
+272|När du har rest hem fortsätter uppföljningen via WhatsApp — du är aldrig ensam.
+273|Kostnadsfri första bedömning
+274|Vi ringer upp dig
+275|Var du än befinner dig, fyll i formuläret för en kort konsultation. Utan förpliktelser, utan press.
+276|Inga förpliktelser alls
+277|Fast pris — inga dolda avgifter
+278|För snabbare svar, skriv direkt till tandläkaren:
+279|Webbplatsen drivs av %(name)s. Vi behandlar de personuppgifter du skickar till oss (namn, telefonnummer, e-post, meddelande och bilder) endast för att besvara din förfrågan och planera din behandling.
+280|Vilka uppgifter vi samlar in
+281|Kontaktformulär och WhatsApp-meddelanden; tekniska uppgifter om ditt besök (visade sidor, enhetstyp, ungefärligt land) för att förbättra webbplatsen; och endast med ditt samtycke reklamcookies (Google, Meta).
+282|Dina rättigheter
+283|Enligt GDPR och turkiska KVKK kan du när som helst begära tillgång till, rättelse eller radering av dina uppgifter genom att kontakta oss.
+284|%(y)s+ års erfarenhet
+285|Tandvårdspriser i Istanbul vs %(country)s
+286|Startpriser i Istanbul i EUR. Ditt exakta pris beror på din diagnos — du får en fast skriftlig offert före varje behandling.
+287|Istanbul från
+288|Besparing
+289|Priserna i ditt hemland är typiska marknadsgenomsnitt och visas endast som jämförelse.
+290|%(d)s dagar i Istanbul
+291|%(n)s klinik‖%(n)s kliniker
+292|Kostnadsfri bedömning på WhatsApp
+293|Jämför priser
+294|Kliniker för %(t)s i %(c)s
+295|Ingen klinik erbjuder ännu denna behandling i den här staden.
+296|Vad patienterna säger
+297|Relaterade behandlingar
+298|Prisjämförelse
+299|Prisöversikt
+300|Var
+301|Pris
+302|på förfrågan
+303|Typiska priser i %(country)s läggs till snart.
+304|Vad som ingår i priset i Istanbul
+305|Undersökning och digital röntgen / 3D-skanning
+306|Skriftlig behandlingsplan med fast pris
+307|Behandling av en erfaren tandläkare med certifierade material
+308|Uppföljning via WhatsApp när du har rest hem
+309|Klinikpriser
+310|Få ditt exakta pris
+311|Skicka ett foto eller en röntgenbild och få en fast skriftlig offert inom 24 timmar.
+312|Allt om %(name)s
+313|Tack — vi har tagit emot din förfrågan
+314|Tandläkaren kontaktar dig inom 24 timmar. För snabbare svar kan du också skriva till oss på WhatsApp nu.
+315|Läs våra patientguider
+316|%(name)s i Istanbul
+317|%(n)s besök‖%(n)s besök
+318|På den här sidan
+319|%(name)s: Istanbul vs ditt land
+320|Land
+321|Typiskt pris
+322|%(name)s per stad
+323|I korthet
+324|Pris i Istanbul
+325|Vistelse i Istanbul
+326|Besök
+327|Bedövning
+328|Lokal
+329|Få mitt pris
+330|Kliniker som erbjuder denna behandling
+331|Guider om denna behandling
+332|Tandvård i Istanbul
+333|Alla behandlingar vi erbjuder, med ärlig information om förloppet, hur länge du behöver stanna i Istanbul och vad det kostar.
+334|Ditt land
+335|Ditt namn
+336|Visas som förnamn och initial, t.ex. 'Anna K.'
+337|Publiceras inte — används endast för att verifiera ditt omdöme.
+338|Betyg
+339|Välj behandling
+340|Rubrik
+341|Din upplevelse
+342|Jag bekräftar att detta omdöme beskriver min egen upplevelse som patient.
+343|Rekommenderade
+344|Högst betyg
+345|Lägsta pris
+346|Mest erfarna
+347|Sök
+348|Klinik, tandläkare eller stadsdel…
+349|Stad
+350|Språk
+351|Valfritt
+352|Maxpris (€)
+353|Endast granskade kliniker
+354|Flygplatstransfer
+355|Hjälp med hotellbokning
+356|Sortera efter
+357|Alla städer
+358|Alla behandlingar
+359|Valfritt språk
+360|För många omdömen från din anslutning. Försök igen senare.
+361|Kontrollera omdömesformuläret och försök igen.
+362|Tack! Ditt omdöme publiceras efter en kort kontroll.
+363|Hitta din klinik
+364|Sök tandkliniker i Turkiet
+365|Filtrera efter behandling, stad, språk och pris — och jämför granskade kliniker sida vid sida.
+366|Sök kliniker
+367|Fler filter
+368|%(n)s omdöme‖%(n)s omdömen
+369|Profiler
+370|%(n)s omdöme på dentaltourism.tr‖%(n)s omdömen på dentaltourism.tr
+371|Alla Google-omdömen
+372|Recensera oss på Google
+373|Skriv ett omdöme
+374|Omdömen på dentaltourism.tr
+375|Omdömen på Google och andra plattformar
+376|Har du behandlats på %(name)s? Dela din upplevelse
+377|Omdömen granskas före publicering. Din e-postadress visas aldrig.
+378|Skicka omdöme
+379|%(n)s klinik hittades‖%(n)s kliniker hittades
+380|Rensa filter
+381|Behandlingar från
+382|Visa klinik
+383|Inga kliniker matchar dina filter.
+384|Verifierad på vår webbplats
+385|Verifierad patient
+386|Svar från kliniken
+387|Vad kostar tandvård i Istanbul?
+388|Mycket prisvärt jämfört med Västeuropa – med samma material och tekniker. Vi publicerar inga standardpriser: ring oss eller skicka bilder på WhatsApp så får du ett skriftligt fast pris innan behandlingen börjar.
+389|Etisk tandvård i Istanbul hos en erfaren tandläkare. Implantat, skalfasader, zirkoniakronor – mycket prisvärt, skriftligt fast pris. Kostnadsfri rådgivning på WhatsApp.
+390|Google-omdömen
+391|Lugnt, smärtfritt och förklarat steg för steg
+392|Lokalbedövning, en tandläkare som förklarar allt först och inga beslut under press.
+393|Kontrollera allt innan du litar på oss
+394|Riktiga omdömen med källa, namngivna material och en skriftlig plan före resan.
+395|Mycket prisvärt – och ett fast pris skriftligt
+396|Inga dolda kostnader. Ring eller skriv till oss och få ditt personliga pris.
+397|Tid med din tandläkare, inte med ett säljteam
+398|En erfaren tandläkare ansvarar för hela behandlingen, förstklassiga material, diskret omvårdnad.
+399|Inga pekpinnar – bara lösningar
+400|Oavsett hur dina tänder ser ut har vi sett det förut. Vi börjar med det som går att rädda.
+401|En tandläkarledd klinik som du kan granska
+402|Kvalifikationer, omdömen och riktiga bilder – allt på den här sidan.
+403|Öppet 7 dagar i veckan mitt i Istanbul
+404|Berätta dina resdatum; vi planerar tiderna efter dina flyg.
+405|Planera ditt besök med ett meddelande
+406|Skicka bilder och resdatum på WhatsApp – vi svarar med din personliga plan.
+407|Tandvård är mer än ett Hollywood-leende
+408|Vi bevarar friska tänder först och planerar en riktig behandling bara för dig.
+409|Guider om tandturism – Turkiet & Istanbul
+410|Ärliga guider om tandvård i Turkiet: välja klinik, omdömen, resa, garanti och eftervård – från en tandläkare i Istanbul.
+411|Guider
+412|Guider om tandturism: Turkiet och Istanbul
+413|Allt du behöver för att bestämma dig tryggt – skrivet av en tandläkare, utan säljsnack.
+414|Guide
+415|Vad är tandturism?
+416|Tandturism innebär att resa till ett annat land för tandvård – oftast för att kombinera erfarna tandläkare, moderna kliniker och betydligt lägre kostnader med en kort resa.
+417|Vad ingår i ett tandturismpaket?
+418|En personlig bedömning, 3D-skanning och undersökning i Istanbul, själva behandlingen, samordning av transfer och hotell samt eftervård på WhatsApp när du är hemma.
+419|Vad kostar ett tandpaket?
+420|Vi säljer inga paket till fast pris, eftersom ingen mun är den andra lik. Skicka bilder eller röntgen på WhatsApp så får du en personlig behandlingsplan med skriftligt fast pris.
+421|Är ett all inclusive-paket med Hollywood-leende en bra idé?
+422|Bara om du verkligen behöver det. Paket som säljer 20 skalfasader innan någon har undersökt dina tänder tar ofta bort frisk tandsubstans. En riktig plan börjar med en diagnos.
+423|Hur lång tid tar en tandresa till Turkiet?
+424|De flesta behandlingar tar 3–7 dagar i Istanbul. Implantat kräver oftast två korta besök med några månaders mellanrum; vi planerar båda efter dina flyg.
+425|Tandresor till Istanbul – personliga, inte standardpaket
+426|Tandresa till Turkiet byggd på en riktig diagnos: undersökning, behandling, transfer, hotell och eftervård. Inga färdiga paket – din personliga plan på WhatsApp.
+427|Tandresor
+428|Tandresor till Istanbul – personliga, inte standardpaket
+429|Tandvård är mer än ett Hollywood-leende. Ditt paket bygger på en riktig diagnos: undersökning, behandling, transfer, hotell och eftervård.
+430|%(treatment)s – paket i Istanbul
+431|%(treatment)s paket Turkiet – personlig plan, inget färdigt erbjudande
+432|%(treatment)s i Istanbul byggt på din diagnos: undersökning, behandling, transfer och hotell, eftervård. Din personliga plan på WhatsApp.
+433|Tandresor från %(country)s till Istanbul
+434|Tandresor från %(country)s – Istanbul, Turkiet
+435|Planerar du tandvård i Turkiet från %(country)s? Flygtid, antal resor, vad ett personligt paket innehåller och eftervård hemma.
+436|Planerar du tandvård i Istanbul från %(country)s? Flygtider, antal resor och vad ett personligt paket innehåller.
+437|Vi planerar behandlingen för så få resor som möjligt – ofta en längre vistelse, med implantat planerade så att det andra besöket blir kort.
+438|Kronor, skalfasader och de flesta andra behandlingar kräver en resa på ungefär en vecka; implantat oftast två korta resor med några månaders mellanrum.
+439|Hur lång är flygresan från %(country)s till Istanbul?
+440|Cirka %(hours)s timmar, beroende på avreseflygplats och anslutning.
+441|Hur många resor behöver jag från %(country)s?
+442|Vad händer när jag är tillbaka i %(country)s?
+443|Uppföljningen fortsätter på WhatsApp och e-post. Vid behov samordnar vi med en lokal tandläkare och vägleder dig via videosamtal – du lämnas aldrig ensam.
+444|Hur får jag ett pris för mitt tandpaket?
+445|Skicka bilder eller röntgen på WhatsApp. När tandläkaren har gått igenom ditt fall får du en personlig plan med skriftligt fast pris – vi publicerar aldrig standardpriser.
+446|%(treatment)s i %(city)s – personlig plan
+447|Jämför %(treatment)s i %(city)s: prisvärda personliga offerter, vistelsens längd, tandläkarens erfarenhet och patientomdömen. Kostnadsfri rådgivning på WhatsApp.
+448|Vad kostar tandvård i Turkiet?
+449|Tandvård i Turkiet är mycket prisvärd jämfört med Västeuropa. Exakt kostnad beror på dina tänder, så du får ett personligt fast pris när tandläkaren har sett dina bilder eller din röntgen – ring oss eller skicka dem på WhatsApp.
+450|Varför publicerar ni ingen prislista?
+451|Eftersom en prislista säljer samma behandling till alla. Två patienter som frågar efter ”implantat” kan behöva helt olika planer. Vi berättar hellre ditt verkliga pris.
+452|Är billiga tandkliniker i Turkiet en risk?
+453|Ett mycket lågt pris betyder ofta billigare material, ingen diagnos eller onödig behandling. Fråga efter materialmärken, tandläkarens namn och en skriftlig plan – kvalitet och prisvärdhet kan gå ihop.
+454|Är priset fast?
+455|Ja. Det vi kommer överens om skriftligt före behandlingen är det du betalar – inga dolda kostnader.
+456|Tandläkare Turkiet priser 2026 – prisvärt, personligt pris
+457|Vad kostar tänder i Turkiet? Mycket prisvärd tandvård i Istanbul med skriftligt fast pris. Ring eller skriv på WhatsApp.
+458|Tandvård i Turkiet – priser: prisvärt och personligt
+459|Vad kostar tänder i Turkiet? Mycket prisvärt jämfört med hemma – men det ärliga svaret är ett personligt pris, ingen prislista.
+460|%(treatment)s pris i Turkiet – prisvärt, med fast pris
+461|%(treatment)s pris Turkiet 2026 – personligt pris
+462|Vad kostar %(treatment)s i Turkiet? Mycket prisvärt i Istanbul, med skriftligt fast pris när tandläkaren har sett ditt fall. Ring eller WhatsApp.
+463|Vad som påverkar priset för %(treatment)s, vad som ingår – och hur du får ditt personliga pris via telefon eller WhatsApp.
+464|%(treatment)s i Istanbul – behandling och personlig plan
+465|paket/
+466|tandresa-fran/
+467|guide/
+468|Mycket prisvärt – med skriftligt fast pris och inga dolda kostnader.
+469|Se personliga tandresor
+470|Filtrera på behandling, stad och språk – och jämför verifierade kliniker sida vid sida.
+471|Ring oss
+472|Paket
+473|Personlig behandlingsplan
+474|Be om min personliga plan
+475|Mycket prisvärt · skriftligt fast pris
+476|Upptäck personliga tandresor
+477|Vad ett personligt tandpaket innehåller
+478|Diagnos först
+479|Undersökning, röntgen och 3D-skanning av tandläkaren – planen följer diagnosen, inte en prislista.
+480|Bara den behandling du behöver
+481|Vi bevarar egna tänder först. Inga onödiga kronor, ingen frisk emalj som slipas bort.
+482|Enkelt att resa
+483|Tider efter dina flyg, hjälp med transfer och hotell nära kliniken.
+484|Mycket prisvärt – och det vi kommer överens om skriftligt är det du betalar.
+485|Eftervård hemma
+486|Uppföljning på WhatsApp och via videosamtal när du är hemma.
+487|Öppet 7 dagar i veckan
+488|Helgtider gör korta tandresor möjliga.
+489|Tandpaket efter behandling
+490|%(name)s – paket
+491|Tandresor från ditt land
+492|Från %(c)s
+493|Turkiet, Mexiko, Thailand, Vietnam, Bali, Ungern – jämför resmål för tandturism
+494|Tandvård i Istanbul från %(country)s: så fungerar det
+495|Skicka bilder eller röntgen på WhatsApp
+496|Få en personlig plan och ett skriftligt fast pris
+497|Boka flyg – vi planerar tiderna efter dem
+498|Undersökning och 3D-skanning dag ett, sedan behandling
+499|Eftervård på WhatsApp hemma
+500|Avreseorter
+501|Patienter från %(c)s flyger oftast från %(list)s till Istanbul.
+502|För patienter från långt bort planerar vi behandlingen med så få resor som möjligt och tar oss tid vid första besöket.
+503|Många tandresor säljer samma skalfasader till alla. Vi börjar med en diagnos, bevarar friska tänder först och rekommenderar bara den behandling du verkligen behöver.
+504|Flygtid
+505|Öppet
+506|7 dagar i veckan
+507|Patienter från %(c)s
+508|Ditt paket för %(name)s, planerat efter dig
+509|Undersökning, röntgen och 3D-skanning av tandläkaren
+510|En skriftlig behandlingsplan med märken på alla material
+511|Tider efter dina flyg
+512|Hjälp med flygplatstransfer och hotell nära kliniken
+513|Eftervård på WhatsApp när du är hemma
+514|Vanlig vistelse i Istanbul: %(d)s dagar.
+515|Så väljer du bästa kliniken för %(name)s i Istanbul
+516|Den bästa kliniken för %(name)s i Istanbul och Turkiet är inte den med billigast erbjudande eller mest reklam – utan den där en erfaren tandläkare undersöker dig, förklarar alternativen och rekommenderar %(name)s bara om du verkligen behöver det.
+517|Fråga vem som behandlar dig och om tandläkarens kvalifikationer
+518|Fråga om märke och ursprung för varje material
+519|Läs omdömen på Google och Trustpilot – och hur kliniken svarar
+520|Acceptera aldrig en plan innan någon har undersökt dina tänder
+521|Allt om %(name)s
+522|%(name)s – pris i Turkiet
+523|Reser du från
+524|%(n)s Google-omdöme‖%(n)s Google-omdömen
+525|läs dem på Google
+526|Skicka en bild – kostnadsfri bedömning
+527|Utan förpliktelser · svar från tandläkaren, inte ett callcenter · öppet 7 dagar i veckan
+528|Riktig bild från vår klinik i Şişli, Istanbul
+529|Läs mer om oss
+530|Transparenta av princip – granska oss själv
+531|Riktiga resultat från vår klinik
+532|Publicerade med patienternas samtycke. Inga stockbilder, inga filter.
+533|Före behandlingen
+534|Efter behandlingen
+535|Inne på vår klinik
+536|Vad kostar det?
+537|Våra priser är mycket prisvärda – men vi publicerar aldrig standardpriser, eftersom ingen mun är den andra lik. När tandläkaren har sett dina bilder eller din röntgen får du ett skriftligt fast pris. Det vi kommer överens om är det du betalar.
+538|Fråga om mitt pris på WhatsApp
+539|Vem som behandlar dig
+540|Utbildad vid tandläkarfakulteten vid Ankara universitet
+541|Käk- och ansiktsradiologi, Marmara universitet – exakt 3D-diagnos
+542|Undersöker och behandlar varje patient personligen
+543|Läs tandläkarens profil
+544|Tre enkla steg
+545|på WhatsApp, det tar en minut.
+546|Få din personliga plan
+547|med skriftligt fast pris, utan förpliktelser.
+548|Kom till Istanbul
+549|vi planerar tiderna efter dina flyg.
+550|Frisk emalj växer aldrig tillbaka. Innan någon slipar ner dina tänder för ett mallleende, få ett andra utlåtande från en tandläkare som bevarar tänder först.
+551|Vad våra patienter säger
+552|Fler guider
+553|Vad som avgör priset på din behandling
+554|Din diagnos
+555|Antal tänder, benvolym, tandköttets hälsa – varje mun är olik.
+556|Material
+557|Implantatsystem, zirkonia eller E.max – vi anger varje märke i din plan.
+558|Antal besök
+559|Vissa behandlingar kräver en resa, implantat oftast två.
+560|Det billigaste erbjudandet blir ofta det dyraste: onödiga kronor, nedslipade friska tänder och reparationer hemma. Kvalitet och prisvärdhet kan gå ihop.
+561|Fråga om kostnaden för en viss behandling
+562|%(name)s – pris
+563|Vad som påverkar priset för %(name)s
+564|Din diagnos: hur många tänder och i vilket skick
+565|Märke och typ av material
+566|Om förbehandling behövs
+567|Antal besök i Istanbul
+568|Ingår i ditt pris
+569|Undersökning, röntgen och 3D-skanning
+570|Behandling personligen av tandläkaren
+571|Skriftlig garantiinformation
+572|Eftervård på WhatsApp
+573|Tandvård är mer än ett Hollywood-leende. Vi rekommenderar bara det du verkligen behöver – det är också den mest prisvärda planen.
+574|Dåligt
+575|Godkänt
+576|Bra
+577|Mycket bra
+578|Utmärkt
+579|Tryck på en stjärna
+580|Välja klinik
+581|Platser
+582|Praktiskt
+583|Vår klinik
+584|Översatt från %(l)s · visa original
+585|Vår partnerbyrå
+586|Tandturismbyrå i Turkiet: Sterr Agency
+587|För reseplanering, transfer och boende samarbetar vi med vår partnerbyrå. Medicinska beslut fattas alltid av tandläkaren.
+588|Tandturism med Sterr Agency

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<header class="page-head"><div class="wrap">
+  {% include "components/breadcrumb.html" %}
+  <span class="eyebrow">📂 {% trans "Category" %}</span>
+  <h1>{{ category.name }}</h1>
+  {% if category.description %}<p class="lead">{{ category.description }}</p>{% endif %}
+  {% if categories %}<nav class="chips" style="margin-top:1.5rem" aria-label="{% trans 'Categories' %}"><a class="chip" href="{% url 'blog:post_list' %}">{% trans "All" %}</a>{% for c in categories %}<a class="chip{% if c.object.pk == category.object.pk %} active{% endif %}" href="{{ c.object.get_absolute_url }}">{{ c.name }}</a>{% endfor %}</nav>{% endif %}
+</div></header>
+<section class="section"><div class="wrap">
+  {% if posts %}<div class="grid grid-3">{% for p in posts %}{% include "blog/_card.html" with p=p heading="h2" %}{% endfor %}</div>
+  {% include "blog/_pagination.html" %}
+  {% else %}<p class="muted center">{% trans "No articles in this category yet." %}</p>{% endif %}
+</div></section>
+{% endblock %}

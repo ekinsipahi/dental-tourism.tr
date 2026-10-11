@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n static site_tags humanize %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% if slides %}<link rel="preload" as="image" href="{{ slides.0.src }}">{% endif %}
+{% endblock %}
+
+{% block content %}
+{# Bölümler admin → Content blocks (home-*) üzerinden sıralanır / gizlenir #}
+{% for section in home_sections %}{% include section.template %}{% endfor %}
+{% endblock %}
+{% block extra_js %}
+<script>
+(function () {
+  var slides = document.querySelectorAll('.h-slide'), dots = document.getElementById('slide-dots');
+  if (slides.length < 2) return;
+  var cur = 0, els = [], timer;
+  slides.forEach(function (_, i) { var d = document.createElement('button'); d.type = 'button'; d.className = 'h-slide-dot' + (i === 0 ? ' active' : ''); d.setAttribute('aria-label', String(i + 1)); d.onclick = function () { go(i); }; if (dots) dots.appendChild(d); els.push(d); });
+  function go(n) { slides[cur].classList.remove('active'); els[cur] && els[cur].classList.remove('active'); cur = n; slides[cur].classList.add('active'); els[cur] && els[cur].classList.add('active'); clearInterval(timer); timer = setInterval(next, 5500); }
+  function next() { go((cur + 1) % slides.length); }
+  timer = setInterval(next, 5500);
+})();
+</script>
+{% endblock %}

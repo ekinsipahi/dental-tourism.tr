@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+{% include "pseo/_hero.html" %}
+<section class="section"><div class="wrap layout-side">
+  <article>
+    {% include "pseo/_price_note.html" %}
+    <h2>{% blocktrans with name=t.name %}What affects the price of {{ name }}{% endblocktrans %}</h2>
+    <ul class="pseo-ticks">
+      <li>{% trans "Your diagnosis: how many teeth and their condition" %}</li>
+      <li>{% trans "The brand and type of materials" %}</li>
+      <li>{% trans "Whether preparatory treatment is needed" %}</li>
+      <li>{% trans "The number of visits to Istanbul" %}</li>
+    </ul>
+    <h2>{% trans "Included in your quote" %}</h2>
+    <ul class="pseo-ticks">
+      <li>{% trans "Examination, X-ray and 3D scan" %}</li>
+      <li>{% trans "Treatment by the dentist personally" %}</li>
+      <li>{% trans "Written guarantee information" %}</li>
+      <li>{% trans "Aftercare on WhatsApp" %}</li>
+    </ul>
+    <p class="pseo-loss">{% trans "Dental work is more than a Hollywood smile. We recommend only what you really need — that is also the most affordable plan." %}</p>
+    <p><a href="{{ treatment_url }}">{% blocktrans with name=t.name %}Everything about {{ name }}{% endblocktrans %} →</a> · <a href="{{ package_url }}">{% blocktrans with name=t.name %}{{ name }} package{% endblocktrans %} →</a></p>
+  </article>
+  <aside class="sticky-side">
+    <div class="side-cta" data-track-section="contact">
+      <h2>{{ hook_title }}</h2><p class="muted">{{ hook_text }}</p>
+      {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my price on WhatsApp" %}</a>{% endif %}
+      {% if clinic.phone %}<a class="btn btn-outline" style="width:100%;margin-top:.6rem" href="{{ tel_url }}" data-track="phone">📞 {{ clinic.phone }}</a>{% endif %}
+    </div>
+  </aside>
+</div></section>
+{% include "pseo/_proof.html" %}
+{% include "pseo/_photos.html" %}
+{% include "components/faq.html" with faq=faq %}
+{% if related %}<section class="section"><div class="wrap"><h2>{% trans "Related treatments" %}</h2><div class="grid grid-4">{% for r in related %}{% include "components/treatment_card.html" with t=r %}{% endfor %}</div></div></section>{% endif %}
+{% include "pseo/_links.html" %}
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

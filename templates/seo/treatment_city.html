@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+<header class="page-head"><div class="wrap">
+  {% include "components/breadcrumb.html" %}
+  <span class="eyebrow">{{ t.icon }} {{ city.name }}</span>
+  <h1>{{ h1 }}</h1>
+  {% if page.intro %}<div class="lead prose">{{ page.intro|markdown }}</div>{% else %}<p class="lead">{{ t.short_description }}</p>{% endif %}
+  <div class="meta-row">
+    {% if t.stay_days %}<span>🗓️ {% blocktrans with d=t.stay_days %}{{ d }} days in Istanbul{% endblocktrans %}</span>{% endif %}
+    {% if offers %}<span>🏥 {% blocktrans count n=offers|length %}{{ n }} clinic{% plural %}{{ n }} clinics{% endblocktrans %}</span>{% endif %}
+  </div>
+  <div class="btn-row" style="margin-top:1.5rem">
+    {% if wa_url %}<a class="btn btn-wa" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} {% trans "Free assessment on WhatsApp" %}</a>{% endif %}
+    <a class="btn btn-outline" href="{{ package_url }}">{% blocktrans with name=t.name %}{{ name }} package{% endblocktrans %} →</a>
+  </div>
+</div></header>
+
+<section class="section" aria-labelledby="clinics-h2"><div class="wrap">
+  <h2 id="clinics-h2">{% blocktrans with t=t.name c=city.name %}Clinics for {{ t }} in {{ c }}{% endblocktrans %}</h2>
+  {% include "seo/_clinic_offers.html" %}
+  {% if not offers %}<p class="muted">{% trans "No clinic offers this treatment in this city yet." %}</p>{% endif %}
+</div></section>
+
+{% if page.body %}<section class="section section-alt"><div class="wrap-narrow prose">{{ page.body|markdown }}</div></section>{% endif %}
+
+{% include "components/faq.html" with faq=faq %}
+
+{% if reviews %}<section class="section section-alt"><div class="wrap"><h2>{% trans "What patients say" %}</h2>{% include "components/reviews.html" %}</div></section>{% endif %}
+
+{% if related %}<section class="section"><div class="wrap"><h2>{% trans "Related treatments" %}</h2><div class="grid grid-4">{% for r in related %}{% include "components/treatment_card.html" with t=r %}{% endfor %}</div></div></section>{% endif %}
+
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+{% include "pseo/_hero.html" %}
+<section class="section"><div class="wrap">
+  <div class="grid grid-3">{% for g in guides %}<a class="card" href="{{ g.url }}"><h2>{{ g.h1 }}</h2><p class="muted">{{ g.lead|truncatechars:150 }}</p></a>{% endfor %}</div>
+</div></section>
+{% include "pseo/_proof.html" %}
+{% include "pseo/_photos.html" %}
+{% include "pseo/_links.html" %}
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

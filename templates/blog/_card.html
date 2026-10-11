@@ -1,0 +1,8 @@
+{% load i18n static %}
+<a class="card" href="{{ p.object.get_absolute_url }}">
+  <div class="card-img">{% if p.image_src %}<img src="{{ p.image_src }}" alt="{{ p.featured_image_alt|default:p.title }}" loading="lazy" width="640" height="360">{% else %}<img src="{% static 'img/og-default.png' %}" alt="" loading="lazy" width="640" height="336">{% endif %}</div>
+  <span class="eyebrow" style="margin-bottom:.4rem">{{ p.category.localized.name }}</span>
+  <{{ heading|default:"h2" }}>{{ p.title }}</{{ heading|default:"h2" }}>
+  <p>{{ p.excerpt|truncatechars:150 }}</p>
+  <div class="card-foot"><span class="faint">{% if p.published_at %}<time datetime="{{ p.published_at|date:'c' }}">{{ p.published_at|date:"DATE_FORMAT" }}</time>{% endif %}</span><span class="faint">{% blocktrans with n=p.reading_time %}{{ n }} min read{% endblocktrans %}</span></div>
+</a>

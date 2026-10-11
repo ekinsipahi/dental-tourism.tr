@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+ml_models/*.joblib
+*.log
+.venv/
+venv/
+.ruff_cache/
+.qodo/
+*.sqlite3
+.DS_Store

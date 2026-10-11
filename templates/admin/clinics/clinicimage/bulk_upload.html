@@ -1,0 +1,13 @@
+{% extends "admin/base_site.html" %}
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">Ana sayfa</a> › <a href="{% url 'admin:clinics_clinicimage_changelist' %}">Clinic images</a> › Toplu yükle</div>{% endblock %}
+{% block content %}
+<div id="content-main">
+  <p>Birden fazla görseli tek seferde yükleyin. Önerilen: JPG/WebP, en az 1600px genişlik, 500 KB altı. Alt metinleri SEO için açıklayıcı yazın.</p>
+  <form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <fieldset class="module aligned">
+      {% for field in form %}<div class="form-row"><div>{{ field.errors }}<label class="required">{{ field.label }}</label>{{ field }}{% if field.help_text %}<div class="help">{{ field.help_text }}</div>{% endif %}</div></div>{% endfor %}
+    </fieldset>
+    <div class="submit-row"><input type="submit" class="default" value="Yükle"></div>
+  </form>
+</div>
+{% endblock %}

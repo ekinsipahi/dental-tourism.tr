@@ -1,0 +1,20 @@
+{% load i18n static site_tags humanize %}
+{# ═════════ CONTACT FORM ═════════ #}
+<section id="contact" class="section section-alt" aria-labelledby="contact-h2" data-track-section="contact">
+  <div class="wrap">
+    <div class="h-contact-grid">
+      <div>
+        <span class="eyebrow">{% cblock "home-contact" "eyebrow" _("Free initial evaluation") %}</span>
+        <h2 id="contact-h2" style="font-size:clamp(1.8rem,4vw,2.6rem)">{% cblock "home-contact" "title" _("Let us call you") %}</h2>
+        <p class="lead">{% cblock "home-contact" "subtitle" _("Wherever you are, fill in the form for a short consultation. No commitment, no pressure.") %}</p>
+        <ul class="check-list" style="margin:1.5rem 0">
+          <li>{% trans "Reply within 24 hours" %}</li>
+          <li>{% trans "No obligation whatsoever" %}</li>
+          <li>{% trans "Fixed price — no hidden fees" %}</li>
+        </ul>
+        {% if wa_url %}<p class="muted">{% trans "For a faster reply, message the dentist directly:" %}</p><a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="btn btn-wa">{% include "components/wa-icon.html" with size=17 %} WhatsApp</a>{% endif %}
+      </div>
+      <div class="card" style="padding:clamp(1.4rem,3vw,2.2rem)">{% include "components/contact_form.html" %}</div>
+    </div>
+  </div>
+</section>

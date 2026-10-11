@@ -1,0 +1,37 @@
+{% load i18n site_tags %}{% if reviews %}
+<div class="rv" data-track-section="reviews">
+  {% if clinic.google_rating %}
+  <div class="rv-summary reveal">
+    <div class="rv-score"><strong data-count="{{ clinic.google_rating }}">{{ clinic.google_rating }}</strong><span class="rv-stars" aria-hidden="true">★★★★★</span></div>
+    <div class="rv-meta">
+      <span>{% blocktrans count n=clinic.google_review_count|default:0 %}{{ n }} Google review{% plural %}{{ n }} Google reviews{% endblocktrans %}</span>
+      {% if clinic.google_business_url %}<a href="{{ clinic.google_business_url }}" target="_blank" rel="noopener">{% trans "read them on Google" %} ↗</a>{% endif %}
+    </div>
+    <div class="rv-nav">
+      <button type="button" class="rv-btn" data-rv="prev" aria-label="{% trans 'Previous' %}">‹</button>
+      <button type="button" class="rv-btn" data-rv="next" aria-label="{% trans 'Next' %}">›</button>
+    </div>
+  </div>
+  {% endif %}
+  <div class="rv-track" tabindex="0" aria-label="{% trans 'Patient reviews' %}">
+    {% for r in reviews %}{% review_text r as rt %}
+    <figure class="review rv-card">
+      <div class="rv-head">
+        <span class="rv-avatar" aria-hidden="true">{{ r.author_name|first|upper }}</span>
+        <div>
+          <cite>{{ r.author_name }} {{ r.country_code|flag }}</cite>
+          <span class="stars" aria-label="{{ r.rating }}/5">{{ r.rating|stars }}</span>
+        </div>
+        {% if r.source_url %}<a class="src-badge src-{{ r.source }}" href="{{ r.source_url }}" target="_blank" rel="noopener nofollow">{{ r.get_source_display }} ↗</a>
+        {% else %}<span class="src-badge src-{{ r.source }}">{% if r.is_internal %}✓ {% trans "Verified on our site" %}{% else %}{{ r.get_source_display }}{% endif %}</span>{% endif %}
+      </div>
+      {% if r.title %}<strong>{{ r.title }}</strong>{% endif %}
+      <blockquote{% if not rt.translated and r.language %} lang="{{ r.language }}"{% endif %}>“{{ rt.text|truncatechars:320 }}”</blockquote>
+      {% if rt.translated %}<details class="rv-orig"><summary>{% blocktrans with l=rt.source_lang %}Translated from {{ l }} · show original{% endblocktrans %}</summary><p lang="{{ r.language }}">{{ rt.original }}</p></details>{% endif %}
+      <figcaption>{% if r.is_verified_patient %}<span title="{% trans 'Verified patient' %}">✔︎ {% trans "Verified patient" %}</span>{% endif %}{% if r.treatment %} · {{ r.treatment.localized.name }}{% endif %}{% if show_clinic %} · <a href="{{ r.clinic.get_absolute_url }}">{{ r.clinic.display_name }}</a>{% endif %}</figcaption>
+      {% if r.reply %}<div class="review-reply"><strong>{% trans "Reply from the clinic" %}:</strong> {{ r.reply|linebreaksbr }}</div>{% endif %}
+    </figure>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

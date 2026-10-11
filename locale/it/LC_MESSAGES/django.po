@@ -1,0 +1,2730 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dentaltourism.tr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-11 08:20+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/blog/views.py:36
+msgid "Dental Tourism Blog — Guides, Costs & Patient Advice"
+msgstr "Blog turismo dentale — guide, costi e consigli per i pazienti"
+
+#: apps/blog/views.py:37
+msgid ""
+"Honest guides about dental treatment in Turkey: implant and veneer costs, "
+"safety, recovery and how to choose a dentist in Istanbul."
+msgstr ""
+"Guide oneste sulle cure dentali in Turchia: costi di impianti e faccette, "
+"sicurezza, recupero e come scegliere un dentista a Istanbul."
+
+#: apps/blog/views.py:44 apps/blog/views.py:75 apps/blog/views.py:141
+#: apps/clinics/views.py:39 apps/clinics/views.py:68 apps/clinics/views.py:113
+#: apps/core/views.py:119 apps/seo/common.py:32 apps/seo/guide_views.py:34
+#: apps/seo/guide_views.py:70 apps/seo/package_views.py:62
+#: apps/seo/package_views.py:104 apps/seo/package_views.py:143
+#: apps/seo/views.py:69 apps/seo/views.py:113 apps/seo/views.py:145
+#: apps/treatments/views.py:27 apps/treatments/views.py:88
+#: templates/404.html:8 templates/components/navbar.html:5
+msgid "Home"
+msgstr "Home"
+
+#: apps/blog/views.py:44 apps/blog/views.py:75 apps/blog/views.py:141
+#: templates/components/navbar.html:47
+msgid "Blog"
+msgstr "Blog"
+
+#: apps/blog/views.py:70
+#, python-format
+msgid "%(category)s — Dental Tourism Blog"
+msgstr "%(category)s — Blog turismo dentale"
+
+#: apps/clinics/forms.py:6
+msgid "Your country"
+msgstr "Il tuo Paese"
+
+#: apps/clinics/forms.py:11
+msgid "Your name"
+msgstr "Il tuo nome"
+
+#: apps/clinics/forms.py:12
+msgid "Shown as first name and initial, e.g. 'Anna K.'"
+msgstr "Mostrato come nome e iniziale, ad es. 'Anna K.'"
+
+#: apps/clinics/forms.py:13 apps/core/forms.py:14
+msgid "Email"
+msgstr "E-mail"
+
+#: apps/clinics/forms.py:13
+msgid "Not published — only used to verify your review."
+msgstr "Non pubblicato — usato solo per verificare la recensione."
+
+#: apps/clinics/forms.py:14
+msgid "Country"
+msgstr "Paese"
+
+#: apps/clinics/forms.py:15
+msgid "Rating"
+msgstr "Valutazione"
+
+#: apps/clinics/forms.py:17 apps/clinics/search.py:22
+#: templates/clinics/detail.html:44 templates/home/sections/hero.html:81
+#: templates/treatments/detail.html:6
+msgid "Treatment"
+msgstr "Trattamento"
+
+#: apps/clinics/forms.py:18
+msgid "Select treatment"
+msgstr "Seleziona il trattamento"
+
+#: apps/clinics/forms.py:19
+msgid "Title"
+msgstr "Titolo"
+
+#: apps/clinics/forms.py:20
+msgid "Your experience"
+msgstr "La tua esperienza"
+
+#: apps/clinics/forms.py:22
+msgid "I confirm this review describes my own experience as a patient."
+msgstr ""
+"Confermo che questa recensione descrive la mia esperienza personale come "
+"paziente."
+
+#: apps/clinics/search.py:11 templates/clinics/list.html:25
+msgid "Recommended"
+msgstr "Consigliate"
+
+#: apps/clinics/search.py:12
+msgid "Highest rated"
+msgstr "Più votate"
+
+#: apps/clinics/search.py:13
+msgid "Most experienced"
+msgstr "Più esperte"
+
+#: apps/clinics/search.py:18 templates/clinics/_search.html:17
+msgid "Search"
+msgstr "Cerca"
+
+#: apps/clinics/search.py:19
+msgid "Clinic, dentist or district…"
+msgstr "Clinica, dentista o quartiere…"
+
+#: apps/clinics/search.py:21
+msgid "City"
+msgstr "Città"
+
+#: apps/clinics/search.py:23
+msgid "Language spoken"
+msgstr "Lingua parlata"
+
+#: apps/clinics/search.py:24
+msgid "Google rating"
+msgstr "Valutazione Google"
+
+#: apps/clinics/search.py:25
+msgid "Any"
+msgstr "Qualsiasi"
+
+#: apps/clinics/search.py:26
+msgid "Verified clinics only"
+msgstr "Solo cliniche verificate"
+
+#: apps/clinics/search.py:27 templates/clinics/list.html:34
+msgid "Airport transfer"
+msgstr "Transfer aeroportuale"
+
+#: apps/clinics/search.py:28
+msgid "Hotel booking help"
+msgstr "Aiuto prenotazione hotel"
+
+#: apps/clinics/search.py:29
+msgid "Sort by"
+msgstr "Ordina per"
+
+#: apps/clinics/search.py:35
+msgid "All cities"
+msgstr "Tutte le città"
+
+#: apps/clinics/search.py:37 templates/components/navbar.html:18
+#: templates/components/navbar.html:83
+msgid "All treatments"
+msgstr "Tutti i trattamenti"
+
+#: apps/clinics/search.py:39
+msgid "Any language"
+msgstr "Qualsiasi lingua"
+
+#: apps/clinics/views.py:29
+msgid "Dental Clinics in Istanbul for International Patients"
+msgstr "Cliniche dentali a Istanbul per pazienti internazionali"
+
+#: apps/clinics/views.py:30
+msgid ""
+"Verified dental clinics in Turkey: dentists' experience, languages spoken, "
+"prices and patient reviews. Free consultation."
+msgstr ""
+"Cliniche dentali verificate in Turchia: esperienza dei dentisti, lingue "
+"parlate, prezzi e recensioni dei pazienti. Consulenza gratuita."
+
+#: apps/clinics/views.py:39 apps/clinics/views.py:68
+#: templates/clinics/list.html:6 templates/components/navbar.html:58
+msgid "Clinics"
+msgstr "Cliniche"
+
+#: apps/clinics/views.py:61
+#, python-format
+msgid "%(clinic)s — Dental Clinic in %(city)s"
+msgstr "%(clinic)s — clinica dentale a %(city)s"
+
+#: apps/clinics/views.py:105
+#, python-format
+msgid "%(doctor)s — Dentist in %(city)s"
+msgstr "%(doctor)s — dentista a %(city)s"
+
+#: apps/clinics/views.py:144
+msgid "Too many reviews from your connection. Please try again later."
+msgstr "Troppe recensioni dalla tua connessione. Riprova più tardi."
+
+#: apps/clinics/views.py:148
+msgid "Please check the review form and try again."
+msgstr "Controlla il modulo della recensione e riprova."
+
+#: apps/clinics/views.py:164
+msgid "Thank you! Your review will be published after a short check."
+msgstr "Grazie! La tua recensione sarà pubblicata dopo un breve controllo."
+
+#: apps/core/context_processors.py:65
+msgid "I have some questions about safety and the treatment process."
+msgstr "Ho alcune domande sulla sicurezza e sul percorso di cura."
+
+#: apps/core/context_processors.py:66
+msgid "I would like to get a price quote."
+msgstr "Vorrei ricevere un preventivo."
+
+#: apps/core/context_processors.py:67
+msgid "I would like to ask about available appointments this week."
+msgstr "Vorrei chiedere gli appuntamenti disponibili questa settimana."
+
+#: apps/core/context_processors.py:68
+msgid "I would like information about smile design."
+msgstr "Vorrei informazioni sullo smile design."
+
+#: apps/core/context_processors.py:69
+msgid "I would like to request a private appointment."
+msgstr "Vorrei richiedere un appuntamento privato."
+
+#: apps/core/context_processors.py:70
+msgid "I would like to book an appointment."
+msgstr "Vorrei prenotare un appuntamento."
+
+#: apps/core/context_processors.py:71
+msgid "I would like information about materials and certificates."
+msgstr "Vorrei informazioni su materiali e certificati."
+
+#: apps/core/context_processors.py:72
+msgid "I would like to learn more."
+msgstr "Vorrei saperne di più."
+
+#: apps/core/context_processors.py:74
+msgid "Hello, I would like a free consultation."
+msgstr "Buongiorno, vorrei una consulenza gratuita."
+
+#: apps/core/forms.py:8
+msgid "Full name"
+msgstr "Nome e cognome"
+
+#: apps/core/forms.py:10
+msgid "Your first and last name"
+msgstr "Il tuo nome e cognome"
+
+#: apps/core/forms.py:11
+msgid "Phone / WhatsApp"
+msgstr "Telefono / WhatsApp"
+
+#: apps/core/forms.py:16
+msgid "Treatment of interest"
+msgstr "Trattamento di interesse"
+
+#: apps/core/forms.py:17
+msgid "Not sure yet"
+msgstr "Non lo so ancora"
+
+#: apps/core/forms.py:18
+msgid "Message"
+msgstr "Messaggio"
+
+#: apps/core/forms.py:20
+msgid "Tell us about your dental situation…"
+msgstr "Descrivi brevemente la tua situazione dentale…"
+
+#: apps/core/forms.py:22
+msgid "I agree that my data is processed to answer my request (GDPR / KVKK)."
+msgstr ""
+"Acconsento al trattamento dei miei dati per rispondere alla mia richiesta "
+"(GDPR / KVKK)."
+
+#: apps/core/forms.py:41
+msgid "Please enter a valid phone number with country code."
+msgstr ""
+"Inserisci un numero di telefono valido con il prefisso internazionale."
+
+#: apps/core/templatetags/site_tags.py:99
+msgid "per tooth"
+msgstr "per dente"
+
+#: apps/core/templatetags/site_tags.py:99
+msgid "per implant"
+msgstr "per impianto"
+
+#: apps/core/templatetags/site_tags.py:99
+msgid "per crown"
+msgstr "per corona"
+
+#: apps/core/templatetags/site_tags.py:100
+msgid "per arch"
+msgstr "per arcata"
+
+#: apps/core/templatetags/site_tags.py:100
+msgid "per jaw"
+msgstr "per arcata"
+
+#: apps/core/templatetags/site_tags.py:100
+msgid "per session"
+msgstr "per seduta"
+
+#: apps/core/templatetags/site_tags.py:100
+msgid "per smile"
+msgstr "per sorriso"
+
+#: apps/core/urls.py:9
+msgid "about/"
+msgstr "chi-siamo/"
+
+#: apps/core/urls.py:10
+msgid "contact/"
+msgstr "contatti/"
+
+#: apps/core/urls.py:11
+msgid "contact/thank-you/"
+msgstr "contatti/grazie/"
+
+#: apps/core/urls.py:12
+msgid "privacy/"
+msgstr "privacy/"
+
+#: apps/core/views.py:21
+msgid "Is it safe to get dental treatment in Turkey?"
+msgstr "È sicuro fare cure dentali in Turchia?"
+
+#: apps/core/views.py:22
+msgid ""
+"Yes, when you choose a licensed clinic with experienced dentists and "
+"certified materials. Ask for the dentist's credentials, the brands of "
+"implants and crowns, and a written treatment plan before you travel."
+msgstr ""
+"Sì, se scegli una clinica autorizzata con dentisti esperti e materiali "
+"certificati. Prima di partire chiedi le qualifiche del dentista, le marche "
+"di impianti e corone e un piano di cura scritto."
+
+#: apps/core/views.py:25
+msgid "How much does dental treatment in Istanbul cost?"
+msgstr "Quanto costano le cure dentali a Istanbul?"
+
+#: apps/core/views.py:26
+msgid ""
+"Very affordable compared with Western Europe — with the same materials and "
+"techniques. We do not publish one-size-fits-all prices: call us or send "
+"photos on WhatsApp and you receive a fixed written quote before treatment "
+"starts."
+msgstr ""
+"Molto convenienti rispetto all’Europa occidentale – con gli stessi materiali"
+" e tecniche. Non pubblichiamo prezzi uguali per tutti: chiamaci o invia foto"
+" su WhatsApp e riceverai un preventivo scritto fisso prima dell’inizio della"
+" cura."
+
+#: apps/core/views.py:29
+msgid "How long do I need to stay in Istanbul?"
+msgstr "Quanto tempo devo restare a Istanbul?"
+
+#: apps/core/views.py:30
+msgid ""
+"It depends on the treatment: fillings, cleaning and composite veneers take "
+"1–3 days, crowns and porcelain veneers about 5–7 days, implants usually two "
+"visits a few months apart."
+msgstr ""
+"Dipende dal trattamento: otturazioni, pulizia e faccette in composito "
+"richiedono 1–3 giorni, corone e faccette in ceramica circa 5–7 giorni, gli "
+"impianti di solito due viaggi a distanza di qualche mese."
+
+#: apps/core/views.py:32
+msgid "Do you speak my language?"
+msgstr "Parlate la mia lingua?"
+
+#: apps/core/views.py:33
+msgid ""
+"We communicate with international patients in English and other languages, "
+"and you can message the dentist directly on WhatsApp before, during and "
+"after your treatment."
+msgstr ""
+"Comunichiamo con i pazienti internazionali in inglese e in altre lingue, e "
+"puoi scrivere direttamente al dentista su WhatsApp prima, durante e dopo il "
+"trattamento."
+
+#: apps/core/views.py:35
+msgid "How experienced is the dentist?"
+msgstr "Quanta esperienza ha il dentista?"
+
+#: apps/core/views.py:36
+#, python-format
+msgid "Our lead dentist has %(years)s years of clinical experience."
+msgstr ""
+"La nostra dentista responsabile ha %(years)s anni di esperienza clinica."
+
+#: apps/core/views.py:87
+msgid "Dental Tourism Istanbul — Implants, Veneers & Crowns in Turkey"
+msgstr "Dentista a Istanbul — impianti, faccette e corone in Turchia"
+
+#: apps/core/views.py:88
+msgid ""
+"Ethical dental treatment in Istanbul with an experienced dentist. Implants, "
+"veneers, zirconia crowns — very affordable, fixed written quote. Free "
+"WhatsApp consultation."
+msgstr ""
+"Cure dentali etiche a Istanbul con un dentista esperto. Impianti, faccette, "
+"corone in zirconia – molto convenienti, preventivo scritto fisso. Consulenza"
+" gratuita su WhatsApp."
+
+#: apps/core/views.py:111
+msgid "About Us — Ethical Dental Care in Istanbul"
+msgstr "Chi siamo — odontoiatria etica a Istanbul"
+
+#: apps/core/views.py:112
+msgid ""
+"Meet the dentist and the clinic behind dentaltourism.tr: decades of clinical"
+" experience, transparent diagnosis and only the treatment you actually need."
+msgstr ""
+"Scopri la dentista e la clinica dietro dentaltourism.tr: decenni di "
+"esperienza, diagnosi trasparente e solo le cure di cui hai davvero bisogno."
+
+#: apps/core/views.py:119 apps/seo/common.py:33
+#: templates/components/footer.html:48 templates/components/navbar.html:55
+msgid "About us"
+msgstr "Chi siamo"
+
+#: apps/core/views.py:142
+msgid "Please check the form and try again."
+msgstr "Controlla il modulo e riprova."
+
+#: apps/core/views.py:145
+msgid "Free Consultation — Contact Our Dentist in Istanbul"
+msgstr "Consulenza gratuita — contatta la nostra dentista a Istanbul"
+
+#: apps/core/views.py:146
+msgid ""
+"Send your X-ray or photos and get a free treatment plan and fixed price "
+"quote. Reply within 24 hours. WhatsApp, phone or form."
+msgstr ""
+"Invia la tua radiografia o le foto e ricevi gratis un piano di cura e un "
+"preventivo fisso. Risposta entro 24 ore. WhatsApp, telefono o modulo."
+
+#: apps/core/views.py:158
+msgid "Thank you — we will contact you shortly"
+msgstr "Grazie — ti contatteremo a breve"
+
+#: apps/core/views.py:164 templates/privacy.html:4
+msgid "Privacy Policy"
+msgstr "Informativa sulla privacy"
+
+#: apps/core/views.py:164
+msgid "How we process and protect your personal data (GDPR / KVKK)."
+msgstr "Come trattiamo e proteggiamo i tuoi dati personali (GDPR / KVKK)."
+
+#: apps/core/views.py:205 templates/404.html:6
+msgid "Page not found"
+msgstr "Pagina non trovata"
+
+#: apps/seo/common.py:36 templates/clinics/detail.html:78
+#: templates/clinics/doctor.html:26 templates/components/footer.html:49
+#: templates/components/navbar.html:56 templates/components/navbar.html:93
+#: templates/components/reviews.html:16 templates/home/sections/hero.html:162
+msgid "Patient reviews"
+msgstr "Recensioni dei pazienti"
+
+#: apps/seo/common.py:42
+msgid "Google reviews"
+msgstr "Recensioni Google"
+
+#: apps/seo/common.py:66
+msgid "Calm, pain-free and explained step by step"
+msgstr "Tranquillo, senza dolore e spiegato passo dopo passo"
+
+#: apps/seo/common.py:67
+msgid ""
+"Local anaesthesia, a dentist who explains everything first, and no decision "
+"under pressure."
+msgstr ""
+"Anestesia locale, un dentista che spiega tutto prima e nessuna decisione "
+"sotto pressione."
+
+#: apps/seo/common.py:68
+msgid "Check everything before you trust us"
+msgstr "Verifica tutto prima di fidarti di noi"
+
+#: apps/seo/common.py:69
+msgid ""
+"Real reviews with their source, named materials and a written plan before "
+"you travel."
+msgstr ""
+"Recensioni reali con la fonte, materiali dichiarati e un piano scritto prima"
+" del viaggio."
+
+#: apps/seo/common.py:70
+msgid "Very affordable — and a fixed price in writing"
+msgstr "Molto conveniente – e un prezzo fisso per iscritto"
+
+#: apps/seo/common.py:71
+msgid "No hidden costs. Call or message us and receive your personal quote."
+msgstr ""
+"Nessun costo nascosto. Chiamaci o scrivici e ricevi il tuo preventivo "
+"personale."
+
+#: apps/seo/common.py:72
+msgid "Time with your dentist, not with a sales team"
+msgstr "Tempo con il tuo dentista, non con un team di vendita"
+
+#: apps/seo/common.py:73
+msgid ""
+"One experienced dentist responsible for your whole treatment, premium "
+"materials, discreet care."
+msgstr ""
+"Un dentista esperto responsabile di tutta la cura, materiali di qualità, "
+"assistenza discreta."
+
+#: apps/seo/common.py:74
+msgid "No judgement — only solutions"
+msgstr "Nessun giudizio – solo soluzioni"
+
+#: apps/seo/common.py:75
+msgid ""
+"Whatever the state of your teeth, we have seen it before. We start with what"
+" can be saved."
+msgstr ""
+"Qualunque sia lo stato dei tuoi denti, l’abbiamo già visto. Partiamo da ciò "
+"che si può salvare."
+
+#: apps/seo/common.py:76
+msgid "A dentist-led clinic you can check"
+msgstr "Una clinica guidata da un dentista, che puoi verificare"
+
+#: apps/seo/common.py:77
+msgid "Qualifications, reviews and real photos — all on this page."
+msgstr "Qualifiche, recensioni e foto reali – tutto in questa pagina."
+
+#: apps/seo/common.py:78
+msgid "Open 7 days a week in central Istanbul"
+msgstr "Aperti 7 giorni su 7 nel centro di Istanbul"
+
+#: apps/seo/common.py:79
+msgid ""
+"Tell us your travel dates; we plan the appointments around your flights."
+msgstr ""
+"Dicci le date del viaggio; organizziamo gli appuntamenti in base ai tuoi "
+"voli."
+
+#: apps/seo/common.py:80
+msgid "Plan your visit in one message"
+msgstr "Pianifica la visita con un solo messaggio"
+
+#: apps/seo/common.py:81
+msgid ""
+"Send your photos and travel dates on WhatsApp — we reply with your personal "
+"plan."
+msgstr ""
+"Invia foto e date di viaggio su WhatsApp – ti rispondiamo con il tuo piano "
+"personale."
+
+#: apps/seo/common.py:83 templates/components/footer.html:6
+#: templates/packages/origin.html:19
+msgid "Dental work is more than a Hollywood smile"
+msgstr "Le cure dentali non sono solo un Hollywood smile"
+
+#: apps/seo/common.py:84
+msgid ""
+"We save healthy teeth first and plan a real treatment made only for you."
+msgstr ""
+"Salviamo prima i denti sani e pianifichiamo una vera cura, fatta solo per "
+"te."
+
+#: apps/seo/guide_views.py:30
+msgid "Dental Tourism Guides — Turkey & Istanbul"
+msgstr "Guide al turismo dentale – Turchia & Istanbul"
+
+#: apps/seo/guide_views.py:31
+msgid ""
+"Honest guides about dental treatment in Turkey: choosing a clinic, reviews, "
+"travel, guarantee and aftercare — from a dentist in Istanbul."
+msgstr ""
+"Guide oneste sulle cure dentali in Turchia: scegliere una clinica, "
+"recensioni, viaggio, garanzia e assistenza – da un dentista di Istanbul."
+
+#: apps/seo/guide_views.py:34 apps/seo/guide_views.py:70
+#: templates/components/footer.html:31 templates/components/navbar.html:41
+#: templates/components/navbar.html:87
+msgid "Guides"
+msgstr "Guide"
+
+#: apps/seo/guide_views.py:39
+msgid "Dental tourism guides: Turkey and Istanbul"
+msgstr "Guide al turismo dentale: Turchia e Istanbul"
+
+#: apps/seo/guide_views.py:40
+msgid ""
+"Everything you need to decide with confidence — written by a dentist, "
+"without sales talk."
+msgstr ""
+"Tutto ciò che serve per decidere con fiducia – scritto da un dentista, senza"
+" discorsi di vendita."
+
+#: apps/seo/guide_views.py:82
+msgid "Guide"
+msgstr "Guida"
+
+#: apps/seo/package_views.py:22
+msgid "What is dental tourism?"
+msgstr "Cos’è il turismo dentale?"
+
+#: apps/seo/package_views.py:23
+msgid ""
+"Dental tourism means travelling to another country for dental treatment — "
+"usually to combine experienced dentists, modern clinics and significantly "
+"lower costs with a short trip."
+msgstr ""
+"Turismo dentale significa recarsi in un altro paese per cure dentali – di "
+"solito per unire dentisti esperti, cliniche moderne e costi molto più bassi "
+"a un breve viaggio."
+
+#: apps/seo/package_views.py:25
+msgid "What is included in a dental tourism package?"
+msgstr "Cosa comprende un pacchetto di turismo dentale?"
+
+#: apps/seo/package_views.py:26
+msgid ""
+"A personal assessment, 3D scan and examination in Istanbul, the treatment "
+"itself, coordination of your transfers and hotel, and aftercare via WhatsApp"
+" when you are back home."
+msgstr ""
+"Una valutazione personale, scansione 3D e visita a Istanbul, la cura stessa,"
+" l’organizzazione di transfer e hotel e assistenza su WhatsApp al rientro."
+
+#: apps/seo/package_views.py:28
+msgid "How much does a dental package cost?"
+msgstr "Quanto costa un pacchetto dentale?"
+
+#: apps/seo/package_views.py:29
+msgid ""
+"We do not sell fixed-price packages, because no two mouths are the same. "
+"Send photos or an X-ray on WhatsApp and you receive a personal treatment "
+"plan with a fixed written quote."
+msgstr ""
+"Non vendiamo pacchetti a prezzo fisso, perché nessuna bocca è uguale. Invia "
+"foto o una radiografia su WhatsApp e ricevi un piano di cura personale con "
+"preventivo scritto fisso."
+
+#: apps/seo/package_views.py:31
+msgid "Is an all-inclusive Hollywood smile package a good idea?"
+msgstr "Un pacchetto Hollywood smile tutto incluso è una buona idea?"
+
+#: apps/seo/package_views.py:32
+msgid ""
+"Only if you actually need it. Packages that sell 20 veneers before anyone "
+"has examined your teeth often remove healthy tooth structure. A real plan "
+"starts with a diagnosis."
+msgstr ""
+"Solo se ne hai davvero bisogno. I pacchetti che vendono 20 faccette prima "
+"che qualcuno visiti i tuoi denti spesso rimuovono struttura dentale sana. Un"
+" vero piano inizia con una diagnosi."
+
+#: apps/seo/package_views.py:34
+msgid "How long does a dental trip to Turkey take?"
+msgstr "Quanto dura un viaggio dentale in Turchia?"
+
+#: apps/seo/package_views.py:35
+msgid ""
+"Most treatments take 3–7 days in Istanbul. Implants usually need two short "
+"visits a few months apart; we plan both around your flights."
+msgstr ""
+"La maggior parte delle cure richiede 3–7 giorni a Istanbul. Gli impianti di "
+"solito richiedono due brevi soggiorni a distanza di alcuni mesi; li "
+"organizziamo entrambi in base ai tuoi voli."
+
+#: apps/seo/package_views.py:57
+msgid ""
+"Dental Tourism Packages in Istanbul — Personalised, Not One-Size-Fits-All"
+msgstr "Pacchetti turismo dentale Istanbul – personalizzati, non standard"
+
+#: apps/seo/package_views.py:58
+msgid ""
+"Dental holiday packages in Turkey built around a real diagnosis: assessment,"
+" treatment, transfers, hotel and aftercare. No fixed packages — get your "
+"personal plan on WhatsApp."
+msgstr ""
+"Vacanza dentale in Turchia basata su una vera diagnosi: visita, cura, "
+"transfer, hotel e assistenza. Niente pacchetti fissi – il tuo piano "
+"personale su WhatsApp."
+
+#: apps/seo/package_views.py:62 apps/seo/package_views.py:74
+#: apps/seo/package_views.py:104 apps/seo/package_views.py:112
+#: apps/seo/package_views.py:143 apps/seo/package_views.py:152
+#: templates/components/footer.html:36 templates/components/footer.html:37
+#: templates/components/navbar.html:85
+msgid "Dental packages"
+msgstr "Pacchetti dentali"
+
+#: apps/seo/package_views.py:71
+msgid ""
+"Dental tourism packages in Istanbul — personalised, not one-size-fits-all"
+msgstr ""
+"Pacchetti di turismo dentale a Istanbul – personalizzati, non standard"
+
+#: apps/seo/package_views.py:72
+msgid ""
+"Dental work is more than a Hollywood smile. Your package is built around a "
+"real diagnosis: assessment, treatment, transfers, hotel and aftercare."
+msgstr ""
+"Le cure dentali non sono solo un Hollywood smile. Il tuo pacchetto si basa "
+"su una vera diagnosi: visita, cura, transfer, hotel e assistenza."
+
+#: apps/seo/package_views.py:94
+#, python-format
+msgid "%(treatment)s package in Istanbul"
+msgstr "Pacchetto %(treatment)s a Istanbul"
+
+#: apps/seo/package_views.py:97
+#, python-format
+msgid "%(treatment)s Package Turkey — Personal Plan, Not a Fixed Deal"
+msgstr ""
+"Pacchetto %(treatment)s Turchia – piano personale, non un’offerta fissa"
+
+#: apps/seo/package_views.py:98
+#, python-format
+msgid ""
+"%(treatment)s package in Istanbul built around your diagnosis: assessment, "
+"treatment, transfer and hotel coordination, aftercare. Get your personal "
+"plan on WhatsApp."
+msgstr ""
+"Pacchetto %(treatment)s a Istanbul basato sulla tua diagnosi: visita, cura, "
+"transfer e hotel, assistenza. Il tuo piano personale su WhatsApp."
+
+#: apps/seo/package_views.py:132
+#, python-format
+msgid "Dental holiday packages from %(country)s to Istanbul"
+msgstr "Vacanze dentali da %(country)s a Istanbul"
+
+#: apps/seo/package_views.py:138
+#, python-format
+msgid "Dental Holiday Packages from %(country)s — Istanbul, Turkey"
+msgstr "Vacanze dentali da %(country)s – Istanbul, Turchia"
+
+#: apps/seo/package_views.py:139
+#, python-format
+msgid ""
+"Planning dental treatment in Turkey from %(country)s? Flight time, how many "
+"trips you need, what a personalised dental package includes and aftercare at"
+" home."
+msgstr ""
+"Organizzi cure dentali in Turchia da %(country)s? Durata del volo, numero di"
+" viaggi, cosa include un pacchetto personalizzato e assistenza a casa."
+
+#: apps/seo/package_views.py:150
+#, python-format
+msgid ""
+"Planning dental treatment in Istanbul from %(country)s? Flight times, how "
+"many trips you need and what a personalised dental package includes."
+msgstr ""
+"Organizzi cure dentali a Istanbul da %(country)s? Durata dei voli, numero di"
+" viaggi e cosa include un pacchetto personalizzato."
+
+#: apps/seo/package_views.py:161
+msgid ""
+"We plan treatment to keep the number of trips to a minimum — often one "
+"longer stay, with implants scheduled so that the second visit is short."
+msgstr ""
+"Pianifichiamo la cura per ridurre al minimo i viaggi – spesso un soggiorno "
+"più lungo, con impianti programmati in modo che la seconda visita sia breve."
+
+#: apps/seo/package_views.py:163
+msgid ""
+"Crowns, veneers and most other treatments need one trip of about a week; "
+"implants usually need two short trips a few months apart."
+msgstr ""
+"Corone, faccette e la maggior parte delle altre cure richiedono un viaggio "
+"di circa una settimana; gli impianti di solito due brevi viaggi a distanza "
+"di alcuni mesi."
+
+#: apps/seo/package_views.py:166
+#, python-format
+msgid "How long is the flight from %(country)s to Istanbul?"
+msgstr "Quanto dura il volo da %(country)s a Istanbul?"
+
+#: apps/seo/package_views.py:167
+#, python-format
+msgid ""
+"About %(hours)s hours, depending on your departure airport and connection."
+msgstr ""
+"Circa %(hours)s ore, a seconda dell’aeroporto di partenza e del "
+"collegamento."
+
+#: apps/seo/package_views.py:169
+#, python-format
+msgid "How many trips will I need from %(country)s?"
+msgstr "Quanti viaggi mi serviranno da %(country)s?"
+
+#: apps/seo/package_views.py:170
+#, python-format
+msgid "What happens when I am back in %(country)s?"
+msgstr "Cosa succede quando torno in %(country)s?"
+
+#: apps/seo/package_views.py:171
+msgid ""
+"Follow-up continues on WhatsApp and email. If needed we coordinate with a "
+"local dentist and guide you by video call — you are never left alone."
+msgstr ""
+"Il follow-up continua su WhatsApp ed e-mail. Se serve, ci coordiniamo con un"
+" dentista locale e ti seguiamo in videochiamata – non sei mai solo."
+
+#: apps/seo/package_views.py:173
+msgid "How do I get a price for my dental package?"
+msgstr "Come ottengo un prezzo per il mio pacchetto dentale?"
+
+#: apps/seo/package_views.py:174
+msgid ""
+"Send your photos or X-ray on WhatsApp. After the dentist has reviewed your "
+"case you receive a personal plan with a fixed written quote — we never "
+"publish one-size-fits-all prices."
+msgstr ""
+"Invia foto o radiografia su WhatsApp. Dopo che il dentista ha valutato il "
+"tuo caso ricevi un piano personale con preventivo scritto fisso – non "
+"pubblichiamo mai prezzi uguali per tutti."
+
+#: apps/seo/views.py:57
+#, python-format
+msgid "%(treatment)s in %(city)s"
+msgstr "%(treatment)s a %(city)s"
+
+#: apps/seo/views.py:62
+#, python-format
+msgid "%(treatment)s in %(city)s — Personal Plan"
+msgstr "%(treatment)s a %(city)s – piano personale"
+
+#: apps/seo/views.py:64
+#, python-format
+msgid ""
+"Compare %(treatment)s in %(city)s: affordable personal quotes, stay "
+"duration, dentist experience and patient reviews. Free consultation on "
+"WhatsApp."
+msgstr ""
+"Confronta %(treatment)s a %(city)s: preventivi personali convenienti, durata"
+" del soggiorno, esperienza del dentista e recensioni. Consulenza gratuita su"
+" WhatsApp."
+
+#: apps/seo/views.py:69 apps/treatments/views.py:27
+#: apps/treatments/views.py:88 templates/404.html:8
+#: templates/components/footer.html:26 templates/components/navbar.html:10
+#: templates/components/navbar.html:81 templates/treatments/list.html:6
+msgid "Treatments"
+msgstr "Trattamenti"
+
+#: apps/seo/views.py:83
+msgid "How much does dental treatment in Turkey cost?"
+msgstr "Quanto costano le cure dentali in Turchia?"
+
+#: apps/seo/views.py:84
+msgid ""
+"Dental treatment in Turkey is very affordable compared with Western Europe, "
+"the UK or the Gulf. The exact cost depends on your teeth, so we give you a "
+"personal, fixed quote after the dentist has seen your photos or X-ray — call"
+" us or send them on WhatsApp."
+msgstr ""
+"Le cure dentali in Turchia sono molto convenienti rispetto all’Europa "
+"occidentale. Il costo esatto dipende dai tuoi denti, per questo ricevi un "
+"preventivo personale e fisso dopo che il dentista ha visto le foto o la "
+"radiografia – chiamaci o inviale su WhatsApp."
+
+#: apps/seo/views.py:87
+msgid "Why don't you publish a price list?"
+msgstr "Perché non pubblicate un listino prezzi?"
+
+#: apps/seo/views.py:88
+msgid ""
+"Because a price list sells the same treatment to everyone. Two patients "
+"asking for 'implants' may need completely different plans. We prefer to tell"
+" you your real price."
+msgstr ""
+"Perché un listino vende a tutti la stessa cura. Due pazienti che chiedono "
+"«impianti» possono aver bisogno di piani completamente diversi. Preferiamo "
+"dirti il tuo prezzo reale."
+
+#: apps/seo/views.py:90
+msgid "Are cheap dental clinics in Turkey a risk?"
+msgstr "Le cliniche dentali economiche in Turchia sono un rischio?"
+
+#: apps/seo/views.py:91
+msgid ""
+"A very low price often means cheaper materials, no diagnosis or unnecessary "
+"treatment. Ask for material brands, the dentist's name and a written plan — "
+"quality and affordability can go together."
+msgstr ""
+"Un prezzo molto basso spesso significa materiali più economici, nessuna "
+"diagnosi o cure inutili. Chiedi le marche dei materiali, il nome del "
+"dentista e un piano scritto – qualità e convenienza possono andare insieme."
+
+#: apps/seo/views.py:94
+msgid "Is the quote fixed?"
+msgstr "Il preventivo è fisso?"
+
+#: apps/seo/views.py:95
+msgid ""
+"Yes. What we agree in writing before treatment is what you pay — no hidden "
+"costs."
+msgstr ""
+"Sì. Quello che concordiamo per iscritto prima della cura è ciò che paghi – "
+"nessun costo nascosto."
+
+#: apps/seo/views.py:108
+msgid "Dental Prices in Turkey 2026 — Affordable, Personal Quote"
+msgstr "Prezzi dentista Turchia 2026 – convenienti, preventivo personale"
+
+#: apps/seo/views.py:109
+msgid ""
+"How much do teeth cost in Turkey? Very affordable dental treatment in "
+"Istanbul with a fixed written quote. Call or WhatsApp for your personal "
+"price."
+msgstr ""
+"Quanto costano i denti in Turchia? Cure dentali molto convenienti a Istanbul"
+" con preventivo scritto fisso. Chiama o scrivi su WhatsApp."
+
+#: apps/seo/views.py:113 apps/seo/views.py:116 apps/seo/views.py:145
+#: apps/seo/views.py:151 templates/components/footer.html:28
+#: templates/components/navbar.html:51 templates/components/navbar.html:91
+msgid "Prices"
+msgstr "Prezzi"
+
+#: apps/seo/views.py:117
+msgid "Dental prices in Turkey: affordable — and personal"
+msgstr "Prezzi delle cure dentali in Turchia: convenienti – e personali"
+
+#: apps/seo/views.py:118
+msgid ""
+"How much do teeth cost in Turkey? Very affordable compared with home — but "
+"the honest answer is a personal quote, not a price list."
+msgstr ""
+"Quanto costano i denti in Turchia? Molto convenienti rispetto a casa – ma la"
+" risposta onesta è un preventivo personale, non un listino."
+
+#: apps/seo/views.py:136
+#, python-format
+msgid "%(treatment)s cost in Turkey — affordable, with a fixed quote"
+msgstr "Costo %(treatment)s in Turchia – conveniente, con preventivo fisso"
+
+#: apps/seo/views.py:139
+#, python-format
+msgid "%(treatment)s Price in Turkey 2026 — Personal Quote"
+msgstr "%(treatment)s prezzo Turchia 2026 – preventivo personale"
+
+#: apps/seo/views.py:140
+#, python-format
+msgid ""
+"How much does %(treatment)s cost in Turkey? Very affordable in Istanbul, "
+"with a fixed written quote after the dentist sees your case. Call or "
+"WhatsApp."
+msgstr ""
+"Quanto costa %(treatment)s in Turchia? Molto conveniente a Istanbul, con "
+"preventivo scritto fisso dopo che il dentista ha visto il tuo caso. Chiama o"
+" WhatsApp."
+
+#: apps/seo/views.py:152
+#, python-format
+msgid ""
+"What affects the price of %(treatment)s, what is included — and how to get "
+"your personal quote by phone or WhatsApp."
+msgstr ""
+"Cosa influisce sul prezzo di %(treatment)s, cosa è incluso – e come ottenere"
+" il preventivo personale per telefono o WhatsApp."
+
+#: apps/treatments/views.py:19
+msgid "Dental Treatments in Istanbul — Prices & Information"
+msgstr "Cure dentali a Istanbul — prezzi e informazioni"
+
+#: apps/treatments/views.py:20
+msgid ""
+"All dental treatments for international patients in Istanbul: implants, "
+"veneers, crowns, All-on-4, root canal and more. Transparent prices and stay "
+"durations."
+msgstr ""
+"Tutte le cure dentali per pazienti internazionali a Istanbul: impianti, "
+"faccette, corone, All-on-4, devitalizzazione e altro. Prezzi e durate del "
+"soggiorno trasparenti."
+
+#: apps/treatments/views.py:80
+#, python-format
+msgid "%(treatment)s in Istanbul — Procedure & Personal Plan"
+msgstr "%(treatment)s a Istanbul – procedura e piano personale"
+
+#: dental_tourism/urls.py:45
+msgid "treatments/"
+msgstr "trattamenti/"
+
+#: dental_tourism/urls.py:46
+msgid "prices/"
+msgstr "prezzi/"
+
+#: dental_tourism/urls.py:47
+msgid "packages/"
+msgstr "pacchetti/"
+
+#: dental_tourism/urls.py:48
+msgid "dental-holidays-from/"
+msgstr "vacanze-dentali-da/"
+
+#: dental_tourism/urls.py:49
+msgid "guide/"
+msgstr "guida/"
+
+#: dental_tourism/urls.py:50
+msgid "clinics/"
+msgstr "cliniche/"
+
+#: dental_tourism/urls.py:51
+msgid "dentists/"
+msgstr "dentisti/"
+
+#: templates/404.html:7
+msgid "The page you are looking for does not exist or has moved."
+msgstr "La pagina che cerchi non esiste o è stata spostata."
+
+#: templates/about.html:7
+msgid "Our story"
+msgstr "La nostra storia"
+
+#: templates/about.html:8
+msgid "Ethical dentistry in Istanbul — only what you need"
+msgstr "Odontoiatria etica a Istanbul — solo ciò di cui hai bisogno"
+
+#: templates/about.html:9
+msgid ""
+"We believe the most important skill in dentistry is knowing when not to "
+"treat. Every plan starts with saving your natural teeth, a transparent "
+"diagnosis and a fixed written price."
+msgstr ""
+"Crediamo che l'abilità più importante in odontoiatria sia sapere quando non "
+"intervenire. Ogni piano parte dalla conservazione dei tuoi denti naturali, "
+"da una diagnosi trasparente e da un prezzo fisso scritto."
+
+#: templates/about.html:10 templates/base.html:50
+#: templates/clinics/detail.html:36 templates/components/footer.html:18
+#: templates/components/reviews.html:7 templates/home/_stats.html:5
+#: templates/pseo/_hero.html:9
+#, python-format
+msgid "%(n)s Google review"
+msgid_plural "%(n)s Google reviews"
+msgstr[0] "%(n)s recensione Google"
+msgstr[1] "%(n)s recensioni Google"
+
+#: templates/about.html:12 templates/components/footer.html:7
+#: templates/pseo/_hero.html:11
+msgid "Send a photo — free assessment"
+msgstr "Invia una foto – valutazione gratuita"
+
+#: templates/about.html:13 templates/base.html:64
+#: templates/components/cta.html:21 templates/pseo/_hero.html:12
+msgid "Call us"
+msgstr "Chiamaci"
+
+#: templates/about.html:19 templates/clinics/detail.html:34
+#: templates/home/_stats.html:3
+msgid "Years experience"
+msgstr "Anni di esperienza"
+
+#: templates/about.html:27 templates/packages/index.html:9
+msgid "Diagnosis first"
+msgstr "Prima la diagnosi"
+
+#: templates/about.html:27 templates/packages/index.html:9
+msgid ""
+"Examination, X-ray and 3D scan by the dentist — the plan follows the "
+"diagnosis, not a price list."
+msgstr ""
+"Visita, radiografia e scansione 3D dal dentista – il piano segue la "
+"diagnosi, non un listino."
+
+#: templates/about.html:28 templates/packages/index.html:10
+msgid "Only the treatment you need"
+msgstr "Solo la cura che ti serve"
+
+#: templates/about.html:28 templates/packages/index.html:10
+msgid ""
+"We save natural teeth first. No unnecessary crowns, no healthy enamel ground"
+" away."
+msgstr ""
+"Salviamo prima i denti naturali. Niente corone inutili, nessuno smalto sano "
+"limato."
+
+#: templates/about.html:29 templates/home/sections/hero.html:12
+#: templates/home/sections/hero.html:32 templates/home/sections/hero.html:180
+#: templates/packages/index.html:12
+msgid "Fixed written quote"
+msgstr "Preventivo scritto e fisso"
+
+#: templates/about.html:29 templates/packages/index.html:12
+msgid "Very affordable, and what we agree in writing is what you pay."
+msgstr ""
+"Molto conveniente – e ciò che concordiamo per iscritto è ciò che paghi."
+
+#: templates/about.html:44
+msgid "Your dentist"
+msgstr "La tua dentista"
+
+#: templates/about.html:49 templates/pseo/_proof.html:14
+msgid "Read the dentist's profile"
+msgstr "Leggi il profilo del dentista"
+
+#: templates/admin/base_site.html:3
+msgid "Django site admin"
+msgstr "Amministrazione sito Django"
+
+#: templates/base.html:29
+msgid "Skip to content"
+msgstr "Vai al contenuto"
+
+#: templates/base.html:32
+msgid "Language suggestion"
+msgstr "Suggerimento lingua"
+
+#: templates/base.html:36
+msgid "Close"
+msgstr "Chiudi"
+
+#: templates/base.html:45
+msgid "Very affordable — with a fixed written quote and no hidden costs."
+msgstr ""
+"Molto conveniente – con preventivo scritto fisso e senza costi nascosti."
+
+#: templates/base.html:45
+msgid "See personalised dental packages"
+msgstr "Vedi i pacchetti dentali personalizzati"
+
+#: templates/base.html:47
+msgid ""
+"Short on time? Many treatments are completed within one week in Istanbul."
+msgstr ""
+"Poco tempo? Molti trattamenti si completano in una settimana a Istanbul."
+
+#: templates/base.html:50 templates/clinics/list.html:32
+#: templates/seo/_clinic_offers.html:6
+#, python-format
+msgid "%(y)s+ years experience"
+msgstr "%(y)s+ anni di esperienza"
+
+#: templates/base.html:50 templates/components/reviews.html:8
+#: templates/pseo/_hero.html:9
+msgid "read them on Google"
+msgstr "leggile su Google"
+
+#: templates/base.html:62 templates/components/footer.html:42
+#: templates/components/navbar.html:59 templates/components/navbar.html:94
+msgid "Contact"
+msgstr "Contatti"
+
+#: templates/base.html:68 templates/contact.html:13
+msgid "Chat on WhatsApp"
+msgstr "Scrivi su WhatsApp"
+
+#: templates/blog/_card.html:7 templates/blog/detail.html:13
+#, python-format
+msgid "%(n)s min read"
+msgstr "%(n)s min di lettura"
+
+#: templates/blog/_pagination.html:2
+msgid "Pagination"
+msgstr "Paginazione"
+
+#: templates/blog/_pagination.html:3 templates/components/reviews.html:11
+msgid "Previous"
+msgstr "Precedente"
+
+#: templates/blog/_pagination.html:5 templates/components/reviews.html:12
+msgid "Next"
+msgstr "Successivo"
+
+#: templates/blog/category.html:6
+msgid "Category"
+msgstr "Categoria"
+
+#: templates/blog/category.html:9 templates/blog/list.html:9
+msgid "Categories"
+msgstr "Categorie"
+
+#: templates/blog/category.html:9 templates/blog/list.html:9
+msgid "All"
+msgstr "Tutti"
+
+#: templates/blog/category.html:14
+msgid "No articles in this category yet."
+msgstr "Nessun articolo in questa categoria per ora."
+
+#: templates/blog/detail.html:12
+msgid "Updated"
+msgstr "Aggiornato"
+
+#: templates/blog/detail.html:14
+msgid "Medically reviewed by"
+msgstr "Revisione medica di"
+
+#: templates/blog/detail.html:22 templates/guides/detail.html:10
+#: templates/treatments/detail.html:24
+msgid "Contents"
+msgstr "Indice"
+
+#: templates/blog/detail.html:22
+msgid "In this article"
+msgstr "In questo articolo"
+
+#: templates/blog/detail.html:30
+msgid "Prices and details"
+msgstr "Prezzi e dettagli"
+
+#: templates/blog/detail.html:42
+msgid "You might also find helpful"
+msgstr "Potrebbe interessarti anche"
+
+#: templates/blog/list.html:6
+msgid "Patient resource centre"
+msgstr "Centro informazioni pazienti"
+
+#: templates/blog/list.html:7
+msgid "Learn before you decide"
+msgstr "Informati prima di decidere"
+
+#: templates/blog/list.html:8
+msgid ""
+"Honest guides about dental treatments, costs and what to expect from dental "
+"tourism in Istanbul."
+msgstr ""
+"Guide oneste su cure dentali, costi e cosa aspettarsi dal turismo dentale a "
+"Istanbul."
+
+#: templates/blog/list.html:14
+msgid "New articles are coming soon."
+msgstr "Nuovi articoli in arrivo."
+
+#: templates/clinics/_search.html:5
+msgid "Find your clinic"
+msgstr "Trova la tua clinica"
+
+#: templates/clinics/_search.html:6
+msgid "Search dental clinics in Turkey"
+msgstr "Cerca cliniche dentali in Turchia"
+
+#: templates/clinics/_search.html:7
+msgid ""
+"Filter by treatment, city and language — and compare verified clinics side "
+"by side."
+msgstr ""
+"Filtra per cura, città e lingua – e confronta cliniche verificate fianco a "
+"fianco."
+
+#: templates/clinics/_search.html:8
+msgid "Search clinics"
+msgstr "Cerca cliniche"
+
+#: templates/clinics/_search.html:20
+msgid "More filters"
+msgstr "Altri filtri"
+
+#: templates/clinics/detail.html:9 templates/clinics/doctor.html:10
+#: templates/guides/detail.html:5 templates/packages/treatment.html:5
+#: templates/treatments/detail.html:13
+msgid ""
+"This page is not yet available in your language — showing the original "
+"version."
+msgstr ""
+"Questa pagina non è ancora disponibile nella tua lingua — viene mostrata la "
+"versione originale."
+
+#: templates/clinics/detail.html:11 templates/home/sections/hero.html:95
+#, python-format
+msgid "%(n)s review"
+msgid_plural "%(n)s reviews"
+msgstr[0] "%(n)s recensione"
+msgstr[1] "%(n)s recensioni"
+
+#: templates/clinics/detail.html:14
+msgid "Profiles"
+msgstr "Profili"
+
+#: templates/clinics/detail.html:35 templates/home/_stats.html:4
+msgid "Patients treated"
+msgstr "Pazienti trattati"
+
+#: templates/clinics/detail.html:37 templates/clinics/doctor.html:20
+#: templates/components/footer.html:54
+msgid "Languages"
+msgstr "Lingue"
+
+#: templates/clinics/detail.html:42
+msgid "Treatments & prices"
+msgstr "Trattamenti e prezzi"
+
+#: templates/clinics/detail.html:44
+msgid "Stay"
+msgstr "Soggiorno"
+
+#: templates/clinics/detail.html:45 templates/seo/_clinic_offers.html:9
+#: templates/treatments/detail.html:38
+#, python-format
+msgid "%(d)s days"
+msgstr "%(d)s giorni"
+
+#: templates/clinics/detail.html:50
+msgid "Dentists"
+msgstr "Dentisti"
+
+#: templates/clinics/detail.html:56
+msgid "Contact & location"
+msgstr "Contatti e posizione"
+
+#: templates/clinics/detail.html:60 templates/contact.html:16
+msgid "Map"
+msgstr "Mappa"
+
+#: templates/clinics/detail.html:68 templates/components/navbar.html:20
+msgid "Before & after"
+msgstr "Prima e dopo"
+
+#: templates/clinics/detail.html:69 templates/home/sections/hero.html:60
+#: templates/home/sections/hero.html:63 templates/pseo/_photos.html:8
+msgid "Before"
+msgstr "Prima"
+
+#: templates/clinics/detail.html:69 templates/home/sections/hero.html:61
+#: templates/home/sections/hero.html:64 templates/pseo/_photos.html:8
+msgid "After"
+msgstr "Dopo"
+
+#: templates/clinics/detail.html:79
+#, python-format
+msgid "%(n)s review on dentaltourism.tr"
+msgid_plural "%(n)s reviews on dentaltourism.tr"
+msgstr[0] "%(n)s recensione su dentaltourism.tr"
+msgstr[1] "%(n)s recensioni su dentaltourism.tr"
+
+#: templates/clinics/detail.html:82
+msgid "All Google reviews"
+msgstr "Tutte le recensioni Google"
+
+#: templates/clinics/detail.html:83
+msgid "Review us on Google"
+msgstr "Recensiscici su Google"
+
+#: templates/clinics/detail.html:84
+msgid "Write a review"
+msgstr "Scrivi una recensione"
+
+#: templates/clinics/detail.html:88
+msgid "Reviews on dentaltourism.tr"
+msgstr "Recensioni su dentaltourism.tr"
+
+#: templates/clinics/detail.html:89
+msgid "Reviews on Google and other platforms"
+msgstr "Recensioni su Google e altre piattaforme"
+
+#: templates/clinics/detail.html:92
+#, python-format
+msgid "Were you treated at %(name)s? Share your experience"
+msgstr "Sei stato curato da %(name)s? Condividi la tua esperienza"
+
+#: templates/clinics/detail.html:93
+msgid ""
+"Reviews are checked before publication. Your email address is never shown."
+msgstr ""
+"Le recensioni vengono controllate prima della pubblicazione. Il tuo "
+"indirizzo e-mail non viene mai mostrato."
+
+#: templates/clinics/detail.html:103
+msgid "Poor"
+msgstr "Scarso"
+
+#: templates/clinics/detail.html:103
+msgid "Fair"
+msgstr "Discreto"
+
+#: templates/clinics/detail.html:103
+msgid "Good"
+msgstr "Buono"
+
+#: templates/clinics/detail.html:103
+msgid "Very good"
+msgstr "Molto buono"
+
+#: templates/clinics/detail.html:103
+msgid "Excellent"
+msgstr "Eccellente"
+
+#: templates/clinics/detail.html:106
+msgid "Tap a star"
+msgstr "Tocca una stella"
+
+#: templates/clinics/detail.html:111
+msgid "Submit review"
+msgstr "Invia recensione"
+
+#: templates/clinics/doctor.html:16
+msgid "Qualifications"
+msgstr "Qualifiche"
+
+#: templates/clinics/doctor.html:18
+msgid "University"
+msgstr "Università"
+
+#: templates/clinics/doctor.html:19
+msgid "Graduated"
+msgstr "Laureata"
+
+#: templates/clinics/doctor.html:23
+msgid "Ask the dentist"
+msgstr "Chiedi alla dentista"
+
+#: templates/clinics/list.html:7
+msgid "Dental clinics in Istanbul for international patients"
+msgstr "Cliniche dentali a Istanbul per pazienti internazionali"
+
+#: templates/clinics/list.html:8
+msgid ""
+"Every clinic is reviewed before it is listed: licence, dentist "
+"qualifications and real patient reviews."
+msgstr ""
+"Ogni clinica viene verificata prima di essere inserita: autorizzazione, "
+"qualifiche dei dentisti e recensioni reali dei pazienti."
+
+#: templates/clinics/list.html:14
+#, python-format
+msgid "%(n)s clinic found"
+msgid_plural "%(n)s clinics found"
+msgstr[0] "%(n)s clinica trovata"
+msgstr[1] "%(n)s cliniche trovate"
+
+#: templates/clinics/list.html:14 templates/clinics/list.html:47
+msgid "Clear filters"
+msgstr "Cancella filtri"
+
+#: templates/clinics/list.html:24 templates/seo/_clinic_offers.html:5
+msgid "Verified"
+msgstr "Verificata"
+
+#: templates/clinics/list.html:42
+msgid "View clinic"
+msgstr "Vedi la clinica"
+
+#: templates/clinics/list.html:47
+msgid "No clinics match your filters."
+msgstr "Nessuna clinica corrisponde ai filtri."
+
+#: templates/components/breadcrumb.html:1
+msgid "Breadcrumb"
+msgstr "Percorso di navigazione"
+
+#: templates/components/consent.html:3
+msgid ""
+"We use cookies to measure our advertising and improve the site. You can "
+"accept or decline analytics cookies."
+msgstr ""
+"Usiamo i cookie per misurare la nostra pubblicità e migliorare il sito. Puoi"
+" accettare o rifiutare i cookie di analisi."
+
+#: templates/components/consent.html:3 templates/components/footer.html:50
+msgid "Privacy policy"
+msgstr "Informativa sulla privacy"
+
+#: templates/components/consent.html:4
+msgid "Accept"
+msgstr "Accetta"
+
+#: templates/components/consent.html:4
+msgid "Decline"
+msgstr "Rifiuta"
+
+#: templates/components/contact_form.html:14
+msgid "Send — we will get back to you"
+msgstr "Invia — ti ricontatteremo"
+
+#: templates/components/contact_form.html:15
+msgid ""
+"Your data is protected under GDPR / KVKK and only used to answer your "
+"request."
+msgstr ""
+"I tuoi dati sono protetti secondo GDPR / KVKK e usati solo per rispondere "
+"alla tua richiesta."
+
+#: templates/components/cta.html:4
+msgid "Get your exact price in 24 hours"
+msgstr "Il tuo prezzo esatto in 24 ore"
+
+#: templates/components/cta.html:5
+msgid ""
+"Send a photo or X-ray on WhatsApp. You receive a written treatment plan and "
+"a fixed price — no obligation."
+msgstr ""
+"Invia una foto o una radiografia su WhatsApp. Ricevi un piano di cura "
+"scritto e un prezzo fisso — senza impegno."
+
+#: templates/components/cta.html:7
+msgid "Ask the dentist anything — before you decide"
+msgstr "Chiedi tutto alla dentista — prima di decidere"
+
+#: templates/components/cta.html:8
+msgid ""
+"Materials, guarantees, what happens if something goes wrong: you get honest "
+"answers directly from the dentist, not a call centre."
+msgstr ""
+"Materiali, garanzie, cosa succede se qualcosa va storto: risposte oneste "
+"direttamente dalla dentista, non da un call center."
+
+#: templates/components/cta.html:10
+msgid "Request a private consultation"
+msgstr "Richiedi una consulenza privata"
+
+#: templates/components/cta.html:11
+msgid ""
+"A personal treatment plan, discreet scheduling and one dentist responsible "
+"for your care from start to finish."
+msgstr ""
+"Un piano di cura personale, appuntamenti riservati e un unico dentista "
+"responsabile delle tue cure dall'inizio alla fine."
+
+#: templates/components/cta.html:13 templates/home/sections/hero.html:86
+msgid "Check this week's availability"
+msgstr "Verifica la disponibilità di questa settimana"
+
+#: templates/components/cta.html:14
+msgid ""
+"Tell us your travel dates and we will plan your appointments around them."
+msgstr ""
+"Comunicaci le date del viaggio e organizzeremo gli appuntamenti di "
+"conseguenza."
+
+#: templates/components/cta.html:16
+msgid "Free assessment — no obligation"
+msgstr "Valutazione gratuita — senza impegno"
+
+#: templates/components/cta.html:17
+msgid ""
+"Send us a photo or X-ray. Our dentist will reply with an honest treatment "
+"plan and a fixed price."
+msgstr ""
+"Inviaci una foto o una radiografia. La nostra dentista risponde con un piano"
+" di cura onesto e un prezzo fisso."
+
+#: templates/components/cta.html:22
+msgid "Contact form"
+msgstr "Modulo di contatto"
+
+#: templates/components/faq.html:4 templates/home/sections/faq.html:2
+msgid "Frequently asked questions"
+msgstr "Domande frequenti"
+
+#: templates/components/footer.html:7 templates/pseo/_hero.html:14
+msgid ""
+"No obligation · reply from the dentist, not a call centre · open 7 days a "
+"week"
+msgstr ""
+"Senza impegno · risponde il dentista, non un call center · aperti 7 giorni "
+"su 7"
+
+#: templates/components/footer.html:17
+msgid ""
+"Ethical dental treatment in Istanbul for international patients — "
+"transparent diagnosis, fixed prices, direct contact with your dentist."
+msgstr ""
+"Cure dentali etiche a Istanbul per pazienti internazionali — diagnosi "
+"trasparente, prezzi fissi, contatto diretto con la tua dentista."
+
+#: templates/components/footer.html:38 templates/packages/index.html:25
+#, python-format
+msgid "From %(c)s"
+msgstr "Da %(c)s"
+
+#: templates/components/navbar.html:4
+msgid "Main navigation"
+msgstr "Navigazione principale"
+
+#: templates/components/navbar.html:19 templates/pseo/_price_note.html:3
+msgid "What does it cost?"
+msgstr "Quanto costa?"
+
+#: templates/components/navbar.html:25 templates/components/navbar.html:84
+msgid "Packages"
+msgstr "Pacchetti"
+
+#: templates/components/navbar.html:29 templates/packages/index.html:19
+#: templates/packages/origin.html:34
+msgid "Dental packages by treatment"
+msgstr "Pacchetti dentali per cura"
+
+#: templates/components/navbar.html:30 templates/packages/index.html:20
+#: templates/packages/origin.html:35 templates/seo/treatment_city.html:15
+#: templates/seo/treatment_price.html:23 templates/treatments/detail.html:16
+#, python-format
+msgid "%(name)s package"
+msgstr "Pacchetto %(name)s"
+
+#: templates/components/navbar.html:33 templates/packages/treatment.html:38
+msgid "Travelling from"
+msgstr "Arrivi da"
+
+#: templates/components/navbar.html:37
+#: templates/home/sections/treatments.html:13
+msgid "Explore personalised dental packages"
+msgstr "Scopri i pacchetti dentali personalizzati"
+
+#: templates/components/navbar.html:44
+#| msgid "Find your clinic"
+msgid "Choosing a clinic"
+msgstr "Scegliere una clinica"
+
+#: templates/components/navbar.html:45
+#| msgid "Qualifications"
+msgid "Locations"
+msgstr "Località"
+
+#: templates/components/navbar.html:46
+msgid "Practical"
+msgstr "Info pratiche"
+
+#: templates/components/navbar.html:53 templates/components/navbar.html:92
+msgid "About"
+msgstr "Chi siamo"
+
+#: templates/components/navbar.html:57
+#| msgid "Find your clinic"
+msgid "Our clinic"
+msgstr "La nostra clinica"
+
+#: templates/components/navbar.html:65
+msgid "Change language"
+msgstr "Cambia lingua"
+
+#: templates/components/navbar.html:73
+msgid "Get a free quote"
+msgstr "Preventivo gratuito"
+
+#: templates/components/navbar.html:73 templates/home/sections/hero.html:130
+msgid "Book now"
+msgstr "Prenota ora"
+
+#: templates/components/navbar.html:73
+msgid "Private consultation"
+msgstr "Consulenza privata"
+
+#: templates/components/navbar.html:73 templates/contact.html:6
+msgid "Free consultation"
+msgstr "Consulenza gratuita"
+
+#: templates/components/navbar.html:75
+msgid "Menu"
+msgstr "Menu"
+
+#: templates/components/reviews.html:26
+msgid "Verified on our site"
+msgstr "Verificata sul nostro sito"
+
+#: templates/components/reviews.html:30
+#, python-format
+msgid "Translated from %(l)s · show original"
+msgstr "Tradotto da: %(l)s · mostra originale"
+
+#: templates/components/reviews.html:31
+msgid "Verified patient"
+msgstr "Paziente verificato"
+
+#: templates/components/reviews.html:32
+msgid "Reply from the clinic"
+msgstr "Risposta della clinica"
+
+#: templates/components/treatment_card.html:7
+#: templates/seo/treatment_city.html:10 templates/treatments/detail.html:10
+#, python-format
+msgid "%(d)s days in Istanbul"
+msgstr "%(d)s giorni a Istanbul"
+
+#: templates/components/treatment_card.html:7
+#: templates/home/sections/hero.html:12 templates/seo/_clinic_offers.html:8
+msgid "Personal treatment plan"
+msgstr "Piano di cura personale"
+
+#: templates/components/treatment_card.html:8
+msgid "Details"
+msgstr "Dettagli"
+
+#: templates/components/videos.html:5 templates/home/sections/hero.html:109
+#, python-format
+msgid "%(name)s — patient video review"
+msgstr "%(name)s — video recensione del paziente"
+
+#: templates/contact.html:7
+msgid "Get your free treatment plan"
+msgstr "Ricevi il tuo piano di cura gratuito"
+
+#: templates/contact.html:8
+msgid ""
+"Send us your details — and if you have one, a photo or X-ray via WhatsApp. "
+"The dentist replies personally within 24 hours."
+msgstr ""
+"Inviaci i tuoi dati — e, se ce l'hai, una foto o radiografia via WhatsApp. "
+"La dentista risponde personalmente entro 24 ore."
+
+#: templates/contact.html:13
+msgid "Fastest reply — usually within 30 minutes during clinic hours."
+msgstr ""
+"Risposta più rapida — di solito entro 30 minuti negli orari di apertura."
+
+#: templates/contact.html:14 templates/packages/origin.html:26
+msgid "Clinic"
+msgstr "Clinica"
+
+#: templates/contact.html:18
+msgid "Why is it free?"
+msgstr "Perché è gratis?"
+
+#: templates/contact.html:18
+msgid "No commitment required"
+msgstr "Nessun impegno"
+
+#: templates/contact.html:18
+msgid "Treatment plan and fixed price"
+msgstr "Piano di cura e prezzo fisso"
+
+#: templates/contact.html:18 templates/home/sections/contact.html:11
+msgid "Reply within 24 hours"
+msgstr "Risposta entro 24 ore"
+
+#: templates/guides/detail.html:10 templates/treatments/detail.html:24
+msgid "On this page"
+msgstr "In questa pagina"
+
+#: templates/guides/detail.html:15
+msgid "Our partner agency"
+msgstr "La nostra agenzia partner"
+
+#: templates/guides/detail.html:16
+#| msgid "Dental tourism Turkey"
+msgid "Dental tourism agency in Turkey: Sterr Agency"
+msgstr "Agenzia di turismo dentale in Turchia: Sterr Agency"
+
+#: templates/guides/detail.html:17
+msgid ""
+"For travel planning, transfers and accommodation we work with our partner "
+"agency. Medical decisions always stay with the dentist."
+msgstr ""
+"Per l’organizzazione del viaggio, i transfer e l’alloggio collaboriamo con "
+"la nostra agenzia partner. Le decisioni mediche restano sempre al dentista."
+
+#: templates/guides/detail.html:18
+#| msgid "Dental tourism Turkey"
+msgid "Dental tourism with Sterr Agency"
+msgstr "Turismo dentale con Sterr Agency"
+
+#: templates/guides/detail.html:27 templates/packages/origin.html:29
+#: templates/packages/treatment.html:35 templates/treatments/detail.html:42
+msgid "Ask for my personal plan"
+msgstr "Richiedi il mio piano personale"
+
+#: templates/home/sections/contact.html:7
+msgid "Free initial evaluation"
+msgstr "Prima valutazione gratuita"
+
+#: templates/home/sections/contact.html:8
+msgid "Let us call you"
+msgstr "Ti chiamiamo noi"
+
+#: templates/home/sections/contact.html:9
+msgid ""
+"Wherever you are, fill in the form for a short consultation. No commitment, "
+"no pressure."
+msgstr ""
+"Ovunque tu sia, compila il modulo per una breve consulenza. Senza impegno, "
+"senza pressioni."
+
+#: templates/home/sections/contact.html:12
+msgid "No obligation whatsoever"
+msgstr "Nessun obbligo"
+
+#: templates/home/sections/contact.html:13
+msgid "Fixed price — no hidden fees"
+msgstr "Prezzo fisso — nessun costo nascosto"
+
+#: templates/home/sections/contact.html:15
+msgid "For a faster reply, message the dentist directly:"
+msgstr "Per una risposta più rapida, scrivi direttamente alla dentista:"
+
+#: templates/home/sections/hero.html:8
+msgid "Very affordable · fixed written quote"
+msgstr "Molto conveniente · preventivo scritto fisso"
+
+#: templates/home/sections/hero.html:9 templates/home/sections/hero.html:27
+#: templates/home/sections/hero.html:49 templates/home/sections/hero.html:96
+#: templates/home/sections/hero.html:135 templates/home/sections/hero.html:153
+msgid "Dental tourism Turkey — Istanbul"
+msgstr "Turismo dentale Turchia — Istanbul"
+
+#: templates/home/sections/hero.html:10
+msgid "Affordable dental implants in Istanbul —"
+msgstr "Impianti dentali convenienti a Istanbul —"
+
+#: templates/home/sections/hero.html:10
+msgid "same quality."
+msgstr "stessa qualità."
+
+#: templates/home/sections/hero.html:11
+msgid ""
+"A fraction of the price at home. CE-certified materials, identical "
+"technique. No hidden costs — the price we quote is the price you pay."
+msgstr ""
+"Una frazione del prezzo di casa. Materiali certificati CE, tecnica identica."
+" Nessun costo nascosto — il prezzo che ti indichiamo è quello che paghi."
+
+#: templates/home/sections/hero.html:12 templates/home/sections/hero.html:185
+msgid "Free assessment — WhatsApp"
+msgstr "Valutazione gratuita — WhatsApp"
+
+#: templates/home/sections/hero.html:14
+msgid "Get a free price quote"
+msgstr "Preventivo gratuito"
+
+#: templates/home/sections/hero.html:26
+#, python-format
+msgid "%(years)s+ years — ethical protocol"
+msgstr "%(years)s+ anni — protocollo etico"
+
+#: templates/home/sections/hero.html:26
+msgid "Ethical protocol"
+msgstr "Protocollo etico"
+
+#: templates/home/sections/hero.html:28
+msgid "Safe dental treatment in Istanbul —"
+msgstr "Cure dentali sicure a Istanbul —"
+
+#: templates/home/sections/hero.html:28
+msgid "and you will feel it."
+msgstr "e lo sentirai."
+
+#: templates/home/sections/hero.html:29
+msgid ""
+"The most valuable thing experience has taught us: good medicine means "
+"knowing when to say no. No unnecessary procedures. Transparent diagnosis. "
+"Fixed price."
+msgstr ""
+"La cosa più preziosa che l'esperienza ci ha insegnato: buona medicina "
+"significa sapere quando dire di no. Nessun intervento inutile. Diagnosi "
+"trasparente. Prezzo fisso."
+
+#: templates/home/sections/hero.html:31 templates/home/sections/hero.html:178
+msgid "No unnecessary treatment"
+msgstr "Nessun trattamento inutile"
+
+#: templates/home/sections/hero.html:31
+msgid "Saving your natural tooth always comes first"
+msgstr "Salvare il dente naturale viene sempre prima"
+
+#: templates/home/sections/hero.html:32
+msgid "What we quote is what you pay"
+msgstr "Quello che preventiviamo è quello che paghi"
+
+#: templates/home/sections/hero.html:33
+msgid "One dentist, full responsibility"
+msgstr "Un solo dentista, piena responsabilità"
+
+#: templates/home/sections/hero.html:33
+msgid "The same dentist from consultation to aftercare"
+msgstr "Lo stesso dentista dalla visita ai controlli"
+
+#: templates/home/sections/hero.html:36
+msgid "Ask your question"
+msgstr "Fai la tua domanda"
+
+#: templates/home/sections/hero.html:48
+msgid "Minimally invasive — natural results"
+msgstr "Minimamente invasivo — risultati naturali"
+
+#: templates/home/sections/hero.html:50
+msgid "Smile design in Istanbul —"
+msgstr "Smile design a Istanbul —"
+
+#: templates/home/sections/hero.html:50
+msgid "smile like yourself again."
+msgstr "torna a sorridere come te stesso."
+
+#: templates/home/sections/hero.html:51
+msgid ""
+"A natural smile that is truly yours, with as little tooth preparation as "
+"possible. Our goal is not only a beautiful result, but a healthy and lasting"
+" one."
+msgstr ""
+"Un sorriso naturale davvero tuo, con la minima preparazione dei denti. Il "
+"nostro obiettivo non è solo un risultato bello, ma sano e duraturo."
+
+#: templates/home/sections/hero.html:53
+msgid "Ask about smile design"
+msgstr "Chiedi dello smile design"
+
+#: templates/home/sections/hero.html:54
+msgid "Before / after"
+msgstr "Prima / dopo"
+
+#: templates/home/sections/hero.html:58
+msgid "Before and after results"
+msgstr "Risultati prima e dopo"
+
+#: templates/home/sections/hero.html:60 templates/home/sections/hero.html:63
+msgid "BEFORE"
+msgstr "PRIMA"
+
+#: templates/home/sections/hero.html:61 templates/home/sections/hero.html:64
+msgid "AFTER"
+msgstr "DOPO"
+
+#: templates/home/sections/hero.html:73
+msgid "Limited appointments this month"
+msgstr "Appuntamenti limitati questo mese"
+
+#: templates/home/sections/hero.html:74
+msgid "A new smile in Istanbul —"
+msgstr "Un nuovo sorriso a Istanbul —"
+
+#: templates/home/sections/hero.html:74
+msgid "in about a week."
+msgstr "in circa una settimana."
+
+#: templates/home/sections/hero.html:75
+msgid ""
+"Wedding, holiday or job interview? Arrive on Monday, fly home smiling on "
+"Friday — for crowns, veneers and many other treatments."
+msgstr ""
+"Matrimonio, vacanza o colloquio di lavoro? Arrivi lunedì, torni a casa "
+"sorridendo venerdì — per corone, faccette e molti altri trattamenti."
+
+#: templates/home/sections/hero.html:76
+msgid "Treatment timeline"
+msgstr "Tempistica del trattamento"
+
+#: templates/home/sections/hero.html:77
+msgid "Mon"
+msgstr "Lun"
+
+#: templates/home/sections/hero.html:77
+msgid "Arrival & exam"
+msgstr "Arrivo e visita"
+
+#: templates/home/sections/hero.html:79
+msgid "Tue"
+msgstr "Mar"
+
+#: templates/home/sections/hero.html:79
+msgid "Preparation"
+msgstr "Preparazione"
+
+#: templates/home/sections/hero.html:81
+msgid "Wed–Thu"
+msgstr "Mer–Gio"
+
+#: templates/home/sections/hero.html:83
+msgid "Fri"
+msgstr "Ven"
+
+#: templates/home/sections/hero.html:83
+msgid "Final fitting — fly home"
+msgstr "Applicazione finale — volo di ritorno"
+
+#: templates/home/sections/hero.html:95
+#, python-format
+msgid "%(n)s+ patients"
+msgstr "%(n)s+ pazienti"
+
+#: templates/home/sections/hero.html:97
+msgid "Dental tourism in Istanbul —"
+msgstr "Turismo dentale a Istanbul —"
+
+#: templates/home/sections/hero.html:97
+msgid "trusted by thousands."
+msgstr "scelto da migliaia di pazienti."
+
+#: templates/home/sections/hero.html:98
+msgid ""
+"Don't trust us blindly — watch our patients' real stories first. Ask "
+"anything. No pressure, no rush."
+msgstr ""
+"Non fidarti ciecamente di noi — guarda prima le storie reali dei nostri "
+"pazienti. Chiedi tutto. Nessuna pressione, nessuna fretta."
+
+#: templates/home/sections/hero.html:100
+msgid "See patient reviews"
+msgstr "Vedi le recensioni"
+
+#: templates/home/sections/hero.html:101
+msgid "Ask a question"
+msgstr "Fai una domanda"
+
+#: templates/home/sections/hero.html:103
+msgid "No commitment. Just answers."
+msgstr "Senza impegno. Solo risposte."
+
+#: templates/home/sections/hero.html:120
+msgid "Private clinic"
+msgstr "Clinica privata"
+
+#: templates/home/sections/hero.html:121
+msgid "Premium dental clinic in Istanbul —"
+msgstr "Clinica dentale premium a Istanbul —"
+
+#: templates/home/sections/hero.html:121
+msgid "dentistry as an art."
+msgstr "l'odontoiatria come arte."
+
+#: templates/home/sections/hero.html:122
+msgid ""
+"Decades of experience and aesthetic precision. Only what you need — nothing "
+"more, nothing less."
+msgstr ""
+"Decenni di esperienza e precisione estetica. Solo ciò di cui hai bisogno — "
+"né più, né meno."
+
+#: templates/home/sections/hero.html:123
+msgid "Request a private appointment"
+msgstr "Richiedi un appuntamento privato"
+
+#: templates/home/sections/hero.html:130
+msgid "Appointments available this week"
+msgstr "Appuntamenti disponibili questa settimana"
+
+#: templates/home/sections/hero.html:134
+msgid "We're ready when you are"
+msgstr "Siamo pronti quando lo sei tu"
+
+#: templates/home/sections/hero.html:136
+msgid "Book your dental treatment in Istanbul —"
+msgstr "Prenota le tue cure dentali a Istanbul —"
+
+#: templates/home/sections/hero.html:136
+msgid "are you ready?"
+msgstr "sei pronto?"
+
+#: templates/home/sections/hero.html:137
+msgid ""
+"Free evaluation, personal treatment plan, fixed price. Reply within 24 "
+"hours."
+msgstr ""
+"Valutazione gratuita, piano di cura personale, prezzo fisso. Risposta entro "
+"24 ore."
+
+#: templates/home/sections/hero.html:140
+msgid "Book an appointment"
+msgstr "Prenota un appuntamento"
+
+#: templates/home/sections/hero.html:152
+msgid "Evidence-based dentistry"
+msgstr "Odontoiatria basata sulle evidenze"
+
+#: templates/home/sections/hero.html:154
+msgid "Is dental treatment in Turkey safe?"
+msgstr "Le cure dentali in Turchia sono sicure?"
+
+#: templates/home/sections/hero.html:154
+msgid "We answer everything."
+msgstr "Rispondiamo a tutto."
+
+#: templates/home/sections/hero.html:155
+msgid ""
+"Materials, qualifications, what happens if something goes wrong — you get a "
+"transparent answer to every question."
+msgstr ""
+"Materiali, qualifiche, cosa succede se qualcosa va storto — ricevi una "
+"risposta trasparente a ogni domanda."
+
+#: templates/home/sections/hero.html:159
+msgid "Ask any question — free"
+msgstr "Fai qualsiasi domanda — gratis"
+
+#: templates/home/sections/hero.html:163
+msgid "What patients actually say"
+msgstr "Cosa dicono davvero i pazienti"
+
+#: templates/home/sections/hero.html:174
+msgid "Dental tourism Turkey"
+msgstr "Turismo dentale Turchia"
+
+#: templates/home/sections/hero.html:175
+msgid "Dental treatment in Istanbul —"
+msgstr "Cure dentali a Istanbul —"
+
+#: templates/home/sections/hero.html:175
+msgid "only what your teeth actually need."
+msgstr "solo ciò di cui i tuoi denti hanno davvero bisogno."
+
+#: templates/home/sections/hero.html:176
+msgid ""
+"Good medicine means knowing when to say no. Ethical protocol, transparent "
+"diagnosis and one dentist responsible for your care — with direct WhatsApp "
+"contact, not a call centre."
+msgstr ""
+"Buona medicina significa sapere quando dire di no. Protocollo etico, "
+"diagnosi trasparente e un solo dentista responsabile delle tue cure — con "
+"contatto diretto su WhatsApp, non un call center."
+
+#: templates/home/sections/hero.html:179
+msgid "Transparent diagnosis"
+msgstr "Diagnosi trasparente"
+
+#: templates/home/sections/hero.html:181
+msgid "One dentist — full responsibility"
+msgstr "Un solo dentista — piena responsabilità"
+
+#: templates/home/sections/how.html:5
+msgid "How it works"
+msgstr "Come funziona"
+
+#: templates/home/sections/how.html:6
+msgid "From the first message to your new smile"
+msgstr "Dal primo messaggio al tuo nuovo sorriso"
+
+#: templates/home/sections/how.html:8 templates/pseo/_proof.html:21
+msgid "Send a photo or X-ray"
+msgstr "Invia una foto o una radiografia"
+
+#: templates/home/sections/how.html:8
+msgid "Message us on WhatsApp. The dentist reviews your case personally."
+msgstr "Scrivici su WhatsApp. La dentista esamina personalmente il tuo caso."
+
+#: templates/home/sections/how.html:9
+msgid "Get a plan and fixed price"
+msgstr "Ricevi un piano e un prezzo fisso"
+
+#: templates/home/sections/how.html:9
+msgid ""
+"You receive an honest treatment plan and a written quote within 24 hours."
+msgstr "Ricevi un piano di cura onesto e un preventivo scritto entro 24 ore."
+
+#: templates/home/sections/how.html:10
+msgid "Travel to Istanbul"
+msgstr "Vieni a Istanbul"
+
+#: templates/home/sections/how.html:10
+msgid "We schedule appointments around your flights and help with logistics."
+msgstr ""
+"Organizziamo gli appuntamenti in base ai tuoi voli e ti aiutiamo con la "
+"logistica."
+
+#: templates/home/sections/how.html:11
+msgid "Treatment & aftercare"
+msgstr "Cure e follow-up"
+
+#: templates/home/sections/how.html:11
+msgid ""
+"After you fly home, WhatsApp follow-up continues — you are never alone."
+msgstr ""
+"Dopo il rientro, il follow-up su WhatsApp continua — non sei mai solo."
+
+#: templates/home/sections/reviews.html:6
+msgid "Patient experiences"
+msgstr "Esperienze dei pazienti"
+
+#: templates/home/sections/reviews.html:7
+msgid "Their stories — your inspiration"
+msgstr "Le loro storie — la tua ispirazione"
+
+#: templates/home/sections/reviews.html:7
+msgid "Real patients, real results"
+msgstr "Pazienti veri, risultati veri"
+
+#: templates/home/sections/reviews.html:10
+msgid "Videos are published with patients' explicit consent."
+msgstr "I video sono pubblicati con il consenso esplicito dei pazienti."
+
+#: templates/home/sections/reviews.html:10
+msgid "All patient videos"
+msgstr "Tutti i video dei pazienti"
+
+#: templates/home/sections/treatments.html:6
+msgid "Best value treatments"
+msgstr "Trattamenti con il miglior rapporto qualità-prezzo"
+
+#: templates/home/sections/treatments.html:6
+msgid "Signature treatments"
+msgstr "I nostri trattamenti di punta"
+
+#: templates/home/sections/treatments.html:6
+msgid "Natural smile treatments"
+msgstr "Trattamenti per un sorriso naturale"
+
+#: templates/home/sections/treatments.html:6
+msgid "What we do"
+msgstr "Cosa facciamo"
+
+#: templates/home/sections/treatments.html:7
+msgid "Dental treatments in Istanbul — and why we do them"
+msgstr "Cure dentali a Istanbul — e perché le facciamo"
+
+#: templates/home/sections/treatments.html:8
+msgid ""
+"Our ethical protocol means we only recommend what you actually need. No "
+"upselling, no unnecessary procedures."
+msgstr ""
+"Il nostro protocollo etico significa che consigliamo solo ciò di cui hai "
+"davvero bisogno. Nessuna vendita forzata, nessun intervento inutile."
+
+#: templates/packages/index.html:7
+msgid "What a personalised dental package includes"
+msgstr "Cosa include un pacchetto dentale personalizzato"
+
+#: templates/packages/index.html:11
+msgid "Travel made simple"
+msgstr "Viaggio semplice"
+
+#: templates/packages/index.html:11
+msgid ""
+"Appointments planned around your flights, help with transfers and a hotel "
+"near the clinic."
+msgstr ""
+"Appuntamenti in base ai tuoi voli, aiuto con i transfer e un hotel vicino "
+"alla clinica."
+
+#: templates/packages/index.html:13
+msgid "Aftercare at home"
+msgstr "Assistenza a casa"
+
+#: templates/packages/index.html:13
+msgid "Follow-up on WhatsApp and video call when you are back home."
+msgstr "Follow-up su WhatsApp e videochiamata dopo il rientro."
+
+#: templates/packages/index.html:14
+msgid "Open 7 days a week"
+msgstr "Aperti 7 giorni su 7"
+
+#: templates/packages/index.html:14
+msgid "Weekend appointments make short dental trips possible."
+msgstr ""
+"Gli appuntamenti nel fine settimana rendono possibili brevi viaggi dentali."
+
+#: templates/packages/index.html:24
+msgid "Dental holiday packages from your country"
+msgstr "Vacanze dentali dal tuo paese"
+
+#: templates/packages/index.html:26
+msgid ""
+"Turkey vs Mexico, Thailand, Vietnam, Bali, Hungary — compare dental tourism "
+"destinations"
+msgstr ""
+"Turchia, Messico, Thailandia, Vietnam, Bali, Ungheria – mete di turismo "
+"dentale a confronto"
+
+#: templates/packages/origin.html:8
+#, python-format
+msgid "Dental treatment in Istanbul from %(country)s: how it works"
+msgstr "Cure dentali a Istanbul da %(country)s: come funziona"
+
+#: templates/packages/origin.html:10
+msgid "Send photos or an X-ray on WhatsApp"
+msgstr "Invia foto o una radiografia su WhatsApp"
+
+#: templates/packages/origin.html:11
+msgid "Receive a personal plan and a fixed written quote"
+msgstr "Ricevi un piano personale e un preventivo scritto fisso"
+
+#: templates/packages/origin.html:12
+msgid "Book flights — we plan appointments around them"
+msgstr "Prenota i voli – organizziamo gli appuntamenti di conseguenza"
+
+#: templates/packages/origin.html:13
+msgid "Examination and 3D scan on day one, then treatment"
+msgstr "Visita e scansione 3D il primo giorno, poi la cura"
+
+#: templates/packages/origin.html:14
+msgid "Aftercare on WhatsApp when you are home"
+msgstr "Assistenza su WhatsApp a casa"
+
+#: templates/packages/origin.html:16
+msgid "Departure cities"
+msgstr "Città di partenza"
+
+#: templates/packages/origin.html:17
+#, python-format
+msgid "Patients from %(c)s usually fly from %(list)s to Istanbul."
+msgstr "I pazienti da %(c)s di solito volano da %(list)s a Istanbul."
+
+#: templates/packages/origin.html:18
+msgid ""
+"For long-haul patients we plan treatment so that the number of trips stays "
+"as small as possible, and we take enough time on the first visit."
+msgstr ""
+"Per chi arriva da lontano pianifichiamo la cura con il minor numero di "
+"viaggi possibile e ci prendiamo tutto il tempo necessario alla prima visita."
+
+#: templates/packages/origin.html:20
+msgid ""
+"Many dental holiday packages sell the same set of veneers to everyone. We "
+"start with a diagnosis, save healthy teeth first, and recommend only the "
+"treatment you really need."
+msgstr ""
+"Molte vacanze dentali vendono a tutti le stesse faccette. Noi partiamo da "
+"una diagnosi, salviamo prima i denti sani e consigliamo solo la cura di cui "
+"hai davvero bisogno."
+
+#: templates/packages/origin.html:24 templates/treatments/detail.html:36
+msgid "At a glance"
+msgstr "In sintesi"
+
+#: templates/packages/origin.html:25
+msgid "Flight time"
+msgstr "Durata del volo"
+
+#: templates/packages/origin.html:27
+msgid "Open"
+msgstr "Aperto"
+
+#: templates/packages/origin.html:27
+msgid "7 days a week"
+msgstr "7 giorni su 7"
+
+#: templates/packages/origin.html:40
+#, python-format
+msgid "Patients from %(c)s"
+msgstr "Pazienti da %(c)s"
+
+#: templates/packages/treatment.html:10
+#, python-format
+msgid "Your %(name)s package, planned around you"
+msgstr "Il tuo pacchetto %(name)s, organizzato intorno a te"
+
+#: templates/packages/treatment.html:12
+msgid "Examination, X-ray and 3D scan by the dentist"
+msgstr "Visita, radiografia e scansione 3D dal dentista"
+
+#: templates/packages/treatment.html:13
+msgid "A written treatment plan with the brands of all materials"
+msgstr "Un piano di cura scritto con le marche di tutti i materiali"
+
+#: templates/packages/treatment.html:14
+msgid "Appointments planned around your flights"
+msgstr "Appuntamenti in base ai tuoi voli"
+
+#: templates/packages/treatment.html:15
+msgid "Help with airport transfer and a hotel near the clinic"
+msgstr "Aiuto con il transfer dall’aeroporto e un hotel vicino alla clinica"
+
+#: templates/packages/treatment.html:16
+msgid "Aftercare on WhatsApp when you are back home"
+msgstr "Assistenza su WhatsApp dopo il rientro"
+
+#: templates/packages/treatment.html:18
+#, python-format
+msgid "Typical stay in Istanbul: %(d)s days."
+msgstr "Soggiorno tipico a Istanbul: %(d)s giorni."
+
+#: templates/packages/treatment.html:20
+#, python-format
+msgid "How to choose the best %(name)s clinic in Istanbul"
+msgstr "Come scegliere la migliore clinica per %(name)s a Istanbul"
+
+#: templates/packages/treatment.html:21
+#, python-format
+msgid ""
+"The best clinic for %(name)s in Istanbul and Turkey is not the one with the "
+"cheapest offer or the biggest advertising — it is the one where an "
+"experienced dentist examines you, explains the alternatives and recommends "
+"%(name)s only if you really need it."
+msgstr ""
+"La migliore clinica per %(name)s a Istanbul e in Turchia non è quella con "
+"l’offerta più economica o la pubblicità più grande – è quella dove un "
+"dentista esperto ti visita, spiega le alternative e consiglia %(name)s solo "
+"se ne hai davvero bisogno."
+
+#: templates/packages/treatment.html:23
+msgid "Ask who will treat you, and for the dentist's qualifications"
+msgstr "Chiedi chi ti curerà e le qualifiche del dentista"
+
+#: templates/packages/treatment.html:24
+msgid "Ask for the brand and origin of every material"
+msgstr "Chiedi marca e origine di ogni materiale"
+
+#: templates/packages/treatment.html:25
+msgid "Read reviews on Google and Trustpilot — and how the clinic replies"
+msgstr ""
+"Leggi le recensioni su Google e Trustpilot – e come risponde la clinica"
+
+#: templates/packages/treatment.html:26
+msgid "Never accept a plan before anyone has examined your teeth"
+msgstr ""
+"Non accettare mai un piano prima che qualcuno abbia visitato i tuoi denti"
+
+#: templates/packages/treatment.html:30 templates/seo/treatment_price.html:23
+#, python-format
+msgid "Everything about %(name)s"
+msgstr "Tutto su %(name)s"
+
+#: templates/packages/treatment.html:30
+#, python-format
+msgid "%(name)s cost in Turkey"
+msgstr "Costo %(name)s in Turchia"
+
+#: templates/packages/treatment.html:45 templates/seo/treatment_city.html:29
+#: templates/treatments/detail.html:54
+msgid "What patients say"
+msgstr "Cosa dicono i pazienti"
+
+#: templates/packages/treatment.html:46 templates/seo/treatment_city.html:31
+#: templates/seo/treatment_price.html:36 templates/treatments/detail.html:65
+msgid "Related treatments"
+msgstr "Trattamenti correlati"
+
+#: templates/privacy.html:8
+#, python-format
+msgid ""
+"This website is operated by %(name)s. We process the personal data you send "
+"us (name, phone number, email, message and any images) only to answer your "
+"request and to plan your treatment."
+msgstr ""
+"Questo sito è gestito da %(name)s. Trattiamo i dati personali che ci invii "
+"(nome, telefono, e-mail, messaggio e immagini) solo per rispondere alla tua "
+"richiesta e pianificare le tue cure."
+
+#: templates/privacy.html:9
+msgid "Which data we collect"
+msgstr "Quali dati raccogliamo"
+
+#: templates/privacy.html:10
+msgid ""
+"Contact form and WhatsApp messages; technical data about your visit (pages "
+"viewed, device type, approximate country) to improve the website; and, only "
+"with your consent, advertising cookies (Google, Meta)."
+msgstr ""
+"Modulo di contatto e messaggi WhatsApp; dati tecnici sulla tua visita "
+"(pagine viste, tipo di dispositivo, paese approssimativo) per migliorare il "
+"sito; e, solo con il tuo consenso, cookie pubblicitari (Google, Meta)."
+
+#: templates/privacy.html:11
+msgid "Your rights"
+msgstr "I tuoi diritti"
+
+#: templates/privacy.html:12
+msgid ""
+"Under GDPR and the Turkish KVKK you can request access to, correction or "
+"deletion of your data at any time by contacting us."
+msgstr ""
+"In base al GDPR e alla legge turca KVKK puoi richiedere in qualsiasi momento"
+" l'accesso, la rettifica o la cancellazione dei tuoi dati contattandoci."
+
+#: templates/pseo/_hero.html:16
+msgid "Real photo from our clinic in Şişli, Istanbul"
+msgstr "Foto reale della nostra clinica a Şişli, Istanbul"
+
+#: templates/pseo/_links.html:3
+msgid "Learn more about us"
+msgstr "Scopri di più su di noi"
+
+#: templates/pseo/_links.html:4
+msgid "Transparent by design — check us yourself"
+msgstr "Trasparenti per principio – verificaci tu stesso"
+
+#: templates/pseo/_photos.html:4
+msgid "Real results from our clinic"
+msgstr "Risultati reali della nostra clinica"
+
+#: templates/pseo/_photos.html:5
+msgid "Published with patient consent. No stock photos, no filters."
+msgstr ""
+"Pubblicati con il consenso dei pazienti. Niente foto di repertorio, niente "
+"filtri."
+
+#: templates/pseo/_photos.html:7
+msgid "Before treatment"
+msgstr "Prima della cura"
+
+#: templates/pseo/_photos.html:7
+msgid "After treatment"
+msgstr "Dopo la cura"
+
+#: templates/pseo/_photos.html:15
+msgid "Inside our clinic"
+msgstr "Dentro la nostra clinica"
+
+#: templates/pseo/_price_note.html:4
+msgid ""
+"Our prices are very affordable — but we never publish one-size-fits-all "
+"prices, because no two mouths are the same. After the dentist has seen your "
+"photos or X-ray, you receive a fixed written quote. What we agree is what "
+"you pay."
+msgstr ""
+"I nostri prezzi sono molto convenienti – ma non pubblichiamo mai prezzi "
+"uguali per tutti, perché nessuna bocca è uguale. Dopo che il dentista ha "
+"visto foto o radiografia ricevi un preventivo scritto fisso. Ciò che "
+"concordiamo è ciò che paghi."
+
+#: templates/pseo/_price_note.html:6 templates/seo/treatment_price.html:28
+msgid "Ask for my price on WhatsApp"
+msgstr "Chiedi il mio prezzo su WhatsApp"
+
+#: templates/pseo/_proof.html:7
+msgid "Who will treat you"
+msgstr "Chi ti curerà"
+
+#: templates/pseo/_proof.html:10
+msgid "Graduate of Ankara University Faculty of Dentistry"
+msgstr "Laureato alla Facoltà di Odontoiatria dell’Università di Ankara"
+
+#: templates/pseo/_proof.html:11
+msgid ""
+"Oral and maxillofacial radiology, Marmara University — precise 3D diagnosis"
+msgstr ""
+"Radiologia oro-maxillo-facciale, Università di Marmara – diagnosi 3D precisa"
+
+#: templates/pseo/_proof.html:12
+msgid "Examines and treats every patient personally"
+msgstr "Visita e cura ogni paziente di persona"
+
+#: templates/pseo/_proof.html:19
+msgid "Three simple steps"
+msgstr "Tre semplici passi"
+
+#: templates/pseo/_proof.html:21
+msgid "on WhatsApp, it takes one minute."
+msgstr "su WhatsApp, basta un minuto."
+
+#: templates/pseo/_proof.html:22
+msgid "Receive your personal plan"
+msgstr "Ricevi il tuo piano personale"
+
+#: templates/pseo/_proof.html:22
+msgid "with a fixed written quote, no obligation."
+msgstr "con preventivo scritto fisso, senza impegno."
+
+#: templates/pseo/_proof.html:23
+msgid "Come to Istanbul"
+msgstr "Vieni a Istanbul"
+
+#: templates/pseo/_proof.html:23
+msgid "we plan the appointments around your flights."
+msgstr "organizziamo gli appuntamenti in base ai tuoi voli."
+
+#: templates/pseo/_proof.html:25
+msgid ""
+"Healthy enamel never grows back. Before anyone grinds your teeth for a "
+"template smile, get a second opinion from a dentist who saves teeth first."
+msgstr ""
+"Lo smalto sano non ricresce mai. Prima che qualcuno limi i tuoi denti per un"
+" sorriso standard, chiedi un secondo parere a un dentista che salva prima i "
+"denti."
+
+#: templates/pseo/_proof.html:28
+msgid "What our patients say"
+msgstr "Cosa dicono i nostri pazienti"
+
+#: templates/pseo/_related.html:4
+msgid "More guides"
+msgstr "Altre guide"
+
+#: templates/seo/price_index.html:7
+msgid "What determines the price of your treatment"
+msgstr "Cosa determina il prezzo della tua cura"
+
+#: templates/seo/price_index.html:9
+msgid "Your diagnosis"
+msgstr "La tua diagnosi"
+
+#: templates/seo/price_index.html:9
+msgid "How many teeth, bone volume, gum health — every mouth is different."
+msgstr ""
+"Quanti denti, volume osseo, salute delle gengive – ogni bocca è diversa."
+
+#: templates/seo/price_index.html:10
+msgid "Materials"
+msgstr "Materiali"
+
+#: templates/seo/price_index.html:10
+msgid "Implant system, zirconia or E.max — we name every brand in your plan."
+msgstr ""
+"Sistema implantare, zirconia o E.max – indichiamo ogni marca nel tuo piano."
+
+#: templates/seo/price_index.html:11
+msgid "Number of visits"
+msgstr "Numero di visite"
+
+#: templates/seo/price_index.html:11
+msgid "Some treatments need one trip, implants usually two."
+msgstr "Alcune cure richiedono un viaggio, gli impianti di solito due."
+
+#: templates/seo/price_index.html:13
+msgid ""
+"The cheapest offer is often the most expensive one: unnecessary crowns, "
+"ground-down healthy teeth and repairs at home. Quality and affordability can"
+" go together."
+msgstr ""
+"L’offerta più economica è spesso la più cara: corone inutili, denti sani "
+"limati e riparazioni a casa. Qualità e convenienza possono andare insieme."
+
+#: templates/seo/price_index.html:16
+msgid "Ask about the cost of a specific treatment"
+msgstr "Chiedi il costo di una cura specifica"
+
+#: templates/seo/price_index.html:17
+#, python-format
+msgid "%(name)s cost"
+msgstr "Costo %(name)s"
+
+#: templates/seo/treatment_city.html:11
+#, python-format
+msgid "%(n)s clinic"
+msgid_plural "%(n)s clinics"
+msgstr[0] "%(n)s clinica"
+msgstr[1] "%(n)s cliniche"
+
+#: templates/seo/treatment_city.html:14 templates/treatments/detail.html:15
+msgid "Free assessment on WhatsApp"
+msgstr "Valutazione gratuita su WhatsApp"
+
+#: templates/seo/treatment_city.html:20
+#, python-format
+msgid "Clinics for %(t)s in %(c)s"
+msgstr "Cliniche per %(t)s a %(c)s"
+
+#: templates/seo/treatment_city.html:22
+msgid "No clinic offers this treatment in this city yet."
+msgstr "Nessuna clinica offre ancora questo trattamento in questa città."
+
+#: templates/seo/treatment_price.html:8
+#, python-format
+msgid "What affects the price of %(name)s"
+msgstr "Cosa influisce sul prezzo di %(name)s"
+
+#: templates/seo/treatment_price.html:10
+msgid "Your diagnosis: how many teeth and their condition"
+msgstr "La tua diagnosi: quanti denti e in che stato"
+
+#: templates/seo/treatment_price.html:11
+msgid "The brand and type of materials"
+msgstr "Marca e tipo di materiali"
+
+#: templates/seo/treatment_price.html:12
+msgid "Whether preparatory treatment is needed"
+msgstr "Se serve una cura preliminare"
+
+#: templates/seo/treatment_price.html:13
+msgid "The number of visits to Istanbul"
+msgstr "Il numero di visite a Istanbul"
+
+#: templates/seo/treatment_price.html:15
+msgid "Included in your quote"
+msgstr "Incluso nel preventivo"
+
+#: templates/seo/treatment_price.html:17
+msgid "Examination, X-ray and 3D scan"
+msgstr "Visita, radiografia e scansione 3D"
+
+#: templates/seo/treatment_price.html:18
+msgid "Treatment by the dentist personally"
+msgstr "Cura eseguita personalmente dal dentista"
+
+#: templates/seo/treatment_price.html:19
+msgid "Written guarantee information"
+msgstr "Informazioni scritte sulla garanzia"
+
+#: templates/seo/treatment_price.html:20
+msgid "Aftercare on WhatsApp"
+msgstr "Assistenza su WhatsApp"
+
+#: templates/seo/treatment_price.html:22
+msgid ""
+"Dental work is more than a Hollywood smile. We recommend only what you "
+"really need — that is also the most affordable plan."
+msgstr ""
+"Le cure dentali non sono solo un Hollywood smile. Consigliamo solo ciò che "
+"ti serve davvero – che è anche il piano più conveniente."
+
+#: templates/thanks.html:6
+msgid "Thank you — your request has been received"
+msgstr "Grazie — abbiamo ricevuto la tua richiesta"
+
+#: templates/thanks.html:7
+msgid ""
+"The dentist will contact you within 24 hours. For a faster answer, you can "
+"also send us a message on WhatsApp now."
+msgstr ""
+"La dentista ti contatterà entro 24 ore. Per una risposta più rapida puoi "
+"scriverci subito anche su WhatsApp."
+
+#: templates/thanks.html:10
+msgid "Read our patient guides"
+msgstr "Leggi le nostre guide per pazienti"
+
+#: templates/treatments/detail.html:7
+#, python-format
+msgid "%(name)s in Istanbul"
+msgstr "%(name)s a Istanbul"
+
+#: templates/treatments/detail.html:11
+#, python-format
+msgid "%(n)s visit"
+msgid_plural "%(n)s visits"
+msgstr[0] "%(n)s viaggio"
+msgstr[1] "%(n)s viaggi"
+
+#: templates/treatments/detail.html:29
+#, python-format
+msgid "%(name)s by city"
+msgstr "%(name)s per città"
+
+#: templates/treatments/detail.html:38
+msgid "Stay in Istanbul"
+msgstr "Soggiorno a Istanbul"
+
+#: templates/treatments/detail.html:39
+msgid "Visits"
+msgstr "Viaggi"
+
+#: templates/treatments/detail.html:40
+msgid "Anaesthesia"
+msgstr "Anestesia"
+
+#: templates/treatments/detail.html:40
+msgid "Local"
+msgstr "Locale"
+
+#: templates/treatments/detail.html:45
+msgid "Clinics offering this treatment"
+msgstr "Cliniche che offrono questo trattamento"
+
+#: templates/treatments/detail.html:58
+msgid "Guides about this treatment"
+msgstr "Guide su questo trattamento"
+
+#: templates/treatments/list.html:7
+msgid "Dental treatments in Istanbul"
+msgstr "Cure dentali a Istanbul"
+
+#: templates/treatments/list.html:8
+msgid ""
+"Every treatment we offer, with honest information about the procedure, how "
+"long you need to stay in Istanbul and what it costs."
+msgstr ""
+"Tutti i trattamenti che offriamo, con informazioni oneste su procedura, "
+"permanenza a Istanbul e costi."

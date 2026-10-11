@@ -1,0 +1,17 @@
+{% load i18n site_tags %}
+<header class="page-head pseo-head"><div class="wrap pseo-head-grid">
+  <div>
+    {% include "components/breadcrumb.html" %}
+    {% if eyebrow %}<span class="eyebrow">{{ eyebrow }}</span>{% endif %}
+    <h1>{{ h1 }}</h1>
+    {% if lead %}<p class="lead">{{ lead }}</p>{% endif %}
+    <p class="pseo-hook"><strong>{{ hook_title }}.</strong> {{ hook_text }}</p>
+    {% if rating %}<p class="pseo-proof-line" data-track-section="proof"><span class="stars">{{ rating|stars }}</span> <strong>{{ rating }}/5</strong> · {% blocktrans count n=rating_count|default:0 %}{{ n }} Google review{% plural %}{{ n }} Google reviews{% endblocktrans %}{% if clinic.google_business_url %} · <a href="{{ clinic.google_business_url }}" target="_blank" rel="noopener">{% trans "read them on Google" %} ↗</a>{% endif %}</p>{% endif %}
+    <div class="btn-row" style="margin-top:1.4rem">
+      {% if wa_url %}<a class="btn btn-wa" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} {% trans "Send a photo — free assessment" %}</a>{% endif %}
+      {% if clinic.phone %}<a class="btn btn-outline" href="{{ tel_url }}" data-track="phone">📞 {% trans "Call us" %} {{ clinic.phone }}</a>{% endif %}
+    </div>
+    <p class="faint pseo-micro">{% trans "No obligation · reply from the dentist, not a call centre · open 7 days a week" %}</p>
+  </div>
+  {% if hero_photo %}<figure class="pseo-hero-photo"><img src="{{ hero_photo.src }}" alt="{{ hero_photo.alt }}" width="720" height="560" fetchpriority="high"><figcaption>{% trans "Real photo from our clinic in Şişli, Istanbul" %}</figcaption></figure>{% endif %}
+</div></header>

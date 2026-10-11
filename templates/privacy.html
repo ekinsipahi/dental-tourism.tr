@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+<header class="page-head"><div class="wrap">{% include "components/breadcrumb.html" %}<h1>{% trans "Privacy Policy" %}</h1></div></header>
+{% cblock_data "page-privacy" as privacy %}
+<section class="section"><div class="wrap-narrow prose">
+  {% if privacy.body %}{{ privacy.body|markdown }}{% else %}
+  <p>{% blocktrans with name=clinic.name|default:site_name %}This website is operated by {{ name }}. We process the personal data you send us (name, phone number, email, message and any images) only to answer your request and to plan your treatment.{% endblocktrans %}</p>
+  <h2>{% trans "Which data we collect" %}</h2>
+  <p>{% trans "Contact form and WhatsApp messages; technical data about your visit (pages viewed, device type, approximate country) to improve the website; and, only with your consent, advertising cookies (Google, Meta)." %}</p>
+  <h2>{% trans "Your rights" %}</h2>
+  <p>{% trans "Under GDPR and the Turkish KVKK you can request access to, correction or deletion of your data at any time by contacting us." %}</p>
+  {% endif %}
+  {% if clinic.email %}<p><a href="mailto:{{ clinic.email }}">{{ clinic.email }}</a></p>{% endif %}
+</div></section>
+{% endblock %}
