@@ -157,7 +157,7 @@ def submit_review(request, slug):
     )
     cache.set(rate_key, cache.get(rate_key, 0) + 1, 60 * 60 * 24)
     recipient = clinic.email or settings.LEAD_NOTIFY_EMAIL
-    if recipient:
+    if recipient and settings.EMAIL_ENABLED:
         send_mail(f"[Yorum onayı] {clinic.name} — {review.rating}★", f"{review.author_name}: {review.text}\n\n"
                   f"Onaylamak için: {settings.SITE_URL}/admin/clinics/review/{review.pk}/change/",
                   settings.DEFAULT_FROM_EMAIL, [recipient], fail_silently=True)

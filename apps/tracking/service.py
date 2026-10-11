@@ -529,7 +529,7 @@ def create_lead(request, *, name="", phone="", email="", message="", page="", la
     from apps.persona.mindset import describe
 
     recipient = (clinic.email if clinic and clinic.email else None) or settings.LEAD_NOTIFY_EMAIL
-    if recipient:
+    if recipient and settings.EMAIL_ENABLED:  # başta kapalı — lead admin'de (Lead'ler) toplanır
         s_ = session
         where = ", ".join(filter(None, [getattr(s_, "ip_city", ""), getattr(s_, "ip_region", ""),
                                         getattr(s_, "ip_country", "")])) if s_ else ""

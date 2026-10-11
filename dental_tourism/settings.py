@@ -195,8 +195,12 @@ PERSONA_EXPLORATION_RATE = config("PERSONA_EXPLORATION_RATE", default=0.1, cast=
 PERSONA_MODEL_DIR = BASE_DIR / "ml_models"
 
 # ── Email ────────────────────────────────────────────────────────────────────
+# Başta e-posta YOK: lead formları ve yorumlar yalnızca serverda (admin → Lead'ler / Yorumlar) toplanır.
+# Açmak için .env / Render: EMAIL_ENABLED=True + EMAIL_HOST…
+EMAIL_ENABLED = config("EMAIL_ENABLED", default=False, cast=bool)
 EMAIL_BACKEND = (
-    "django.core.mail.backends.console.EmailBackend" if DEBUG
+    "django.core.mail.backends.dummy.EmailBackend" if not EMAIL_ENABLED
+    else "django.core.mail.backends.console.EmailBackend" if DEBUG
     else "django.core.mail.backends.smtp.EmailBackend"
 )
 EMAIL_HOST = config("EMAIL_HOST", default="localhost")

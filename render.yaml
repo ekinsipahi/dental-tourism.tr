@@ -39,6 +39,10 @@ services:
         value: https://drdevrim.com|root,https://devrimbirikensipahi.com.tr|en
       - key: PARTNER_AGENCY_URL
         value: https://sterragency.com/dental-tourism
+      - key: EMAIL_ENABLED
+        value: "False"
+      - key: PERSONA_UI_ENABLED
+        value: "False"
       - key: BACKGROUND_WORKERS
         value: "2"
       - key: ANTHROPIC_API_KEY
