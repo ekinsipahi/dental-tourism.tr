@@ -19,6 +19,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps.views import index as sitemap_index
 from django.contrib.sitemaps.views import sitemap
+from django.http import HttpResponse
 from django.urls import include, path
 from django.utils.translation import gettext_lazy as _
 
@@ -28,6 +29,8 @@ from apps.core.sitemaps import SITEMAPS
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("robots.txt", core_views.robots_txt, name="robots"),
+    # Render health check — veritabanına dokunmaz, HTTPS yönlendirmesinden muaf (SECURE_REDIRECT_EXEMPT)
+    path("healthz", lambda request: HttpResponse("ok", content_type="text/plain"), name="healthz"),
     path("llms.txt", core_views.llms_txt, name="llms"),
     path("favicon.ico", core_views.favicon, name="favicon"),
     path("apple-touch-icon.png", core_views.apple_touch_icon),

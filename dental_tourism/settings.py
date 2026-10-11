@@ -1,3 +1,4 @@
+import sys
 from pathlib import Path
 
 from decouple import Csv, config
@@ -156,10 +157,16 @@ REST_FRAMEWORK = {
     "DEFAULT_THROTTLE_RATES": {"anon": "200/min"},
 }
 
+# Testler .env'deki DEBUG'dan bağımsız: manifest'siz statik, HTTPS yönlendirmesi yok
+TESTING = len(sys.argv) > 1 and sys.argv[1] == "test"
+if TESTING:
+    STORAGES["staticfiles"] = {"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"}
+
 # ── Security (production) ────────────────────────────────────────────────────
-if not DEBUG:
+if not DEBUG and not TESTING:
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
     SECURE_SSL_REDIRECT = True
+    SECURE_REDIRECT_EXEMPT = [r"^healthz$"]  # Render iç sağlık kontrolü düz HTTP ile gelir
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_HSTS_SECONDS = 60 * 60 * 24 * 30

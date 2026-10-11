@@ -9,7 +9,7 @@ services:
     plan: starter
     buildCommand: ./build.sh
     startCommand: gunicorn dental_tourism.wsgi:application --workers 2 --threads 4 --timeout 60 --access-logfile -
-    healthCheckPath: /robots.txt
+    healthCheckPath: /healthz
     envVars:
       - key: PYTHON_VERSION
         value: 3.12.3
