@@ -62,13 +62,14 @@ class PseoTests(SeededTestCase):
             self.assertEqual(r.status_code, 200, url)
             self.assertIsNone(MONEY.search(_visible(r.content.decode())), url)
 
-    def test_sitemaps_list_pseo_sections(self):
-        idx = self.client.get("/sitemap.xml").content.decode()
-        for section in ("guides", "packages", "prices", "origins"):
-            self.assertIn(f"sitemap-{section}.xml", idx)
-        guides = self.client.get("/sitemap-guides.xml").content.decode()
-        self.assertGreaterEqual(guides.count("<url>"), len(TOPICS) * len(LANGUAGE_META))
-        self.assertIn('hreflang="x-default"', guides)
+    def test_single_sitemap_contains_every_section(self):
+        xml = self.client.get("/sitemap.xml").content.decode()
+        self.assertIn("<urlset", xml)
+        self.assertNotIn("<sitemapindex", xml)                    # indeks değil, tek sitemap
+        for path in ("/guide/", "/packages/", "/prices/", "/dental-holidays-from/", "/treatments/"):
+            self.assertIn(path, xml)
+        self.assertGreaterEqual(xml.count("<url>"), len(TOPICS) * len(LANGUAGE_META))
+        self.assertIn('hreflang="x-default"', xml)
 
     def test_untranslated_topic_language_redirects_to_canonical_slug(self):
         t = SeoTopic.objects.get(key="dental-tourism")

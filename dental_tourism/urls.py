@@ -17,7 +17,6 @@ from django.conf import settings
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.contrib.sitemaps.views import index as sitemap_index
 from django.contrib.sitemaps.views import sitemap
 from django.http import HttpResponse
 from django.urls import include, path
@@ -35,8 +34,9 @@ urlpatterns = [
     path("favicon.ico", core_views.favicon, name="favicon"),
     path("apple-touch-icon.png", core_views.apple_touch_icon),
     path("site.webmanifest", core_views.webmanifest, name="webmanifest"),
-    path("sitemap.xml", sitemap_index, {"sitemaps": SITEMAPS, "sitemap_url_name": "sitemap-section"},
-         name="sitemap-index"),
+    # TEK sitemap: tüm bölümler (sayfalar, tedaviler, rehberler, paketler, fiyat, köken, blog, klinik, hekim)
+    # hreflang alternates + x-default ile tek <urlset> içinde
+    path("sitemap.xml", sitemap, {"sitemaps": SITEMAPS}, name="sitemap-index"),
     path("sitemap-<section>.xml", sitemap, {"sitemaps": SITEMAPS}, name="sitemap-section"),
     path("api/persona/", include("apps.persona.api_urls")),
     path("api/tracking/", include("apps.tracking.urls")),
