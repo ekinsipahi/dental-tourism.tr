@@ -250,18 +250,21 @@ def _create_session(request, session_key: str) -> "VisitorSession":
                   "google_campaign", "google_keyword", "fb_campaign"):
             if not source_data.get(f) and getattr(prev, f, None):
                 source_data[f] = getattr(prev, f)
-    session = VisitorSession.objects.create(
-        session_key   = session_key,
-        visitor_id    = vid,
-        session_count = (prev.session_count + 1) if prev else 1,
-        landing_page  = request.path,
-        referrer_url  = request.META.get("HTTP_REFERER", ""),
-        ip_hash       = _hash_ip(ip) if ip else "",
-        user_agent    = ua[:500],
-        language_code = request.LANGUAGE_CODE if hasattr(request, "LANGUAGE_CODE") else "",
-        **source_data,
-        **device_data,
-    )
+    # Alanlar tek sözlükte birleştirilir: kaynak tespiti de referrer_url döndürebilir (çift anahtar hatası olmasın)
+    fields = {
+        "session_key": session_key,
+        "visitor_id": vid,
+        "session_count": (prev.session_count + 1) if prev else 1,
+        "landing_page": request.path[:500],
+        "referrer_url": request.META.get("HTTP_REFERER", "")[:1000],
+        "ip_hash": _hash_ip(ip) if ip else "",
+        "ip_address": ip or None,
+        "user_agent": ua[:500],
+        "language_code": request.LANGUAGE_CODE if hasattr(request, "LANGUAGE_CODE") else "",
+    }
+    fields.update({k: v for k, v in source_data.items() if v not in (None, "") or k not in fields})
+    fields.update(device_data)
+    session = VisitorSession.objects.create(**fields)
 
     # IP bazlı coğrafya (opsiyonel — harici servis gerekir)
     _enrich_geo_async(session.id, ip)
@@ -275,7 +278,12 @@ def _enrich_geo_async(session_id, ip: str):
     IP'den ülke/şehir bilgisi çek.
     Sınırlı arka plan thread havuzunda çalışır — response'u bloklamaz (Redis/Celery yok).
     """
-    if not ip or ip in ("127.0.0.1", "::1"):
+    import ipaddress
+
+    try:
+        if not ip or not ipaddress.ip_address(ip).is_global:
+            return
+    except ValueError:
         return
     try:
         from apps.localization.dispatch import run_in_background
@@ -293,12 +301,22 @@ def record_event(session, event_type: str, data: dict, page_url: str = ""):
     """
     from .models import TrackingEvent
 
+    data = data if isinstance(data, dict) else {}
     TrackingEvent.objects.create(
         session    = session,
         event_type = event_type,
         data       = data,
         page_url   = page_url[:500],
+        label      = str(data.get("label", ""))[:120],
+        position   = str(data.get("position", ""))[:60],
+        persona    = str(data.get("persona", ""))[:20],
+        stage      = str(data.get("stage", ""))[:20],
+        language   = str(data.get("lang", ""))[:10],
     )
+    # İletişim tıklamasında konum yoksa hemen zenginleştir (kim / nereden)
+    if event_type in (TrackingEvent.PHONE_CLICK, TrackingEvent.WHATSAPP_CLICK, TrackingEvent.FORM_SUBMIT) \
+            and not session.ip_country and session.ip_address:
+        _enrich_geo_async(session.id, session.ip_address)
 
     _update_session_from_event(session, event_type, data)
     cache.delete(f"tracking_session:{session.session_key}")
@@ -475,6 +493,11 @@ def create_lead(request, *, name="", phone="", email="", message="", page="", la
     )
     if session:
         session.mark_lead()
+        # İletişim listesinde görünsün (kim / ne zaman / cihaz / konum) — form da bir iletişim eylemidir
+        record_event(session, "form_submit", {
+            "label": f"Lead #{lead.pk} — {source}", "position": "form", "lead": lead.pk,
+            "persona": persona, "stage": (getattr(request, "persona", None) or {}).get("stage", ""), "lang": language,
+        }, page)
     if request.session.session_key:
         try:
             from apps.persona.engine import record_event as persona_record
@@ -485,9 +508,19 @@ def create_lead(request, *, name="", phone="", email="", message="", page="", la
 
     recipient = (clinic.email if clinic and clinic.email else None) or settings.LEAD_NOTIFY_EMAIL
     if recipient:
+        s_ = session
+        where = ", ".join(filter(None, [getattr(s_, "ip_city", ""), getattr(s_, "ip_region", ""),
+                                        getattr(s_, "ip_country", "")])) if s_ else ""
+        device = " / ".join(filter(None, [getattr(s_, "device_type", ""), getattr(s_, "device_brand", ""),
+                                          getattr(s_, "device_model", ""), getattr(s_, "os_name", ""),
+                                          getattr(s_, "browser_name", "")])) if s_ else ""
         body = (f"Yeni lead #{lead.pk}\nİsim: {name}\nTelefon: {phone}\nE-posta: {email}\n"
                 f"Dil: {language}\nSayfa: {page}\nPersona: {persona}\n"
-                f"Kaynak: {lead.traffic_source} {lead.utm_campaign}\n\nMesaj:\n{message}")
+                f"Kaynak: {lead.traffic_source} {lead.utm_campaign} {getattr(s_, 'google_keyword', '') or getattr(s_, 'utm_term', '') or ''}\n"
+                f"Konum: {where or '-'}  ({getattr(s_, 'ip_org', '') or '-'})\nCihaz: {device or '-'}\n"
+                f"Ziyaret sayısı: {getattr(s_, 'session_count', 1) if s_ else 1} · Telefon tıklaması: "
+                f"{getattr(s_, 'phone_clicks', 0) if s_ else 0} · WhatsApp tıklaması: {getattr(s_, 'whatsapp_clicks', 0) if s_ else 0}\n"
+                f"\nMesaj:\n{message}")
         try:
             send_mail(f"[Lead] {name or phone} — {language.upper()}", body, settings.DEFAULT_FROM_EMAIL,
                       [recipient], fail_silently=True)

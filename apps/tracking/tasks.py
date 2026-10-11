@@ -7,33 +7,55 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-def enrich_geo_task(session_id: str, ip: str):
-    """
-    IP'den ülke/şehir bilgisi çek.
-    ip-api.com (ücretsiz, 45req/dk limiti) veya başka servis.
-    """
+def lookup_ip(ip: str) -> dict:
+    """ipinfo.io (IPINFO_TOKEN) → yedek ip-api.com. Sonuç 1 gün cache'lenir."""
     import requests
-    from .models import VisitorSession
+    from django.conf import settings
+    from django.core.cache import cache
+
+    ck = f"geo:{ip}"
+    hit = cache.get(ck)
+    if hit is not None:
+        return hit
+    out = {}
+    try:
+        token = getattr(settings, "IPINFO_TOKEN", "")
+        r = requests.get(f"https://ipinfo.io/{ip}/json", params={"token": token} if token else None, timeout=4)
+        d = r.json() if r.ok else {}
+        if d.get("country") and not d.get("bogon"):
+            out = {"ip_country": d.get("country", "")[:5], "ip_city": d.get("city", "")[:100],
+                   "ip_region": d.get("region", "")[:100], "ip_postal": d.get("postal", "")[:20],
+                   "ip_org": d.get("org", "")[:200], "ip_timezone": d.get("timezone", "")[:50],
+                   "ip_loc": d.get("loc", "")[:40], "geo_source": "ipinfo"}
+    except Exception as e:  # noqa: BLE001
+        logger.warning("ipinfo failed for %s: %s", ip, e)
+    if not out:
+        try:
+            r = requests.get(f"http://ip-api.com/json/{ip}",
+                             params={"fields": "status,countryCode,regionName,city,zip,isp,org,timezone,lat,lon"}, timeout=4)
+            d = r.json()
+            if d.get("status") == "success":
+                out = {"ip_country": d.get("countryCode", "")[:5], "ip_city": d.get("city", "")[:100],
+                       "ip_region": d.get("regionName", "")[:100], "ip_postal": d.get("zip", "")[:20],
+                       "ip_org": (d.get("org") or d.get("isp") or "")[:200], "ip_timezone": d.get("timezone", "")[:50],
+                       "ip_loc": f"{d.get('lat')},{d.get('lon')}"[:40], "geo_source": "ip-api"}
+        except Exception as e:  # noqa: BLE001
+            logger.warning("ip-api failed for %s: %s", ip, e)
+    cache.set(ck, out, 86400 if out else 600)
+    return out
+
+
+def enrich_geo_task(session_id: str, ip: str):
+    """Oturuma IP konumunu yazar (arka plan thread'inde)."""
     import uuid
 
-    try:
-        session = VisitorSession.objects.get(id=uuid.UUID(session_id))
-    except VisitorSession.DoesNotExist:
-        return
+    from .models import VisitorSession
 
-    try:
-        resp = requests.get(
-            f"http://ip-api.com/json/{ip}?fields=status,country,countryCode,city",
-            timeout=3
-        )
-        data = resp.json()
-        if data.get("status") == "success":
-            session.ip_country = data.get("countryCode", "")[:5]
-            session.ip_city    = data.get("city", "")[:100]
-            session.save(update_fields=["ip_country", "ip_city"])
-            logger.info(f"Geo enriched: {session_id[:8]} → {session.ip_country}/{session.ip_city}")
-    except Exception as e:
-        logger.warning(f"Geo enrichment failed for {ip}: {e}")
+    geo = lookup_ip(ip)
+    if geo:
+        VisitorSession.objects.filter(id=uuid.UUID(str(session_id))).update(**geo)
+        logger.info("Geo enriched: %s → %s/%s (%s)", str(session_id)[:8], geo.get("ip_country"), geo.get("ip_city"),
+                    geo.get("geo_source"))
 
 
 def send_google_conversion(ad_conversion_id: int):

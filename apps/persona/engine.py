@@ -25,6 +25,7 @@ logger = logging.getLogger(__name__)
 CACHE_TTL = 60 * 5
 VISIT_GAP = timedelta(minutes=30)
 SWITCH_CONFIDENCE = 0.45
+STRONG_SWITCH_CONFIDENCE = 0.60   # gösterilen persona'dan başka birine geçiş eşiği (gezinmeyle netleşen niyet)
 CONVERSION_EVENTS = {"whatsapp_click": "whatsapp", "phone_click": "phone", "form_submit": "form"}
 
 DEFAULT_RESULT = {
@@ -67,6 +68,10 @@ def behavior_scores(s: VisitorSession) -> dict:
     if s.total_sessions >= 3:
         sc[PERSONA_READY] += 1.0
         sc[PERSONA_TRUST] += 0.5
+    # Site içi gezinme (fiyat sayfaları, lüks tedaviler, "en iyi klinik" rehberleri… — bkz. pages.py)
+    for p, v in (s.page_scores or {}).items():
+        if p in sc:
+            sc[p] += float(v)
     return sc
 
 
@@ -185,7 +190,12 @@ def get_or_create_persona(request):
     cache_key = f"persona:{key}"
     cached = cache.get(cache_key)
     if cached and not request.GET.get("utm_term"):
-        return cached
+        # Yeni bir sayfa türüne geçtiyse (fiyat sayfası, lüks tedavi…) yeniden hesapla — gezinme persona'yı değiştirir
+        from .pages import REPEAT_CAP, page_signal
+
+        kind, _sig = page_signal(request.path)
+        if not kind or cached.get("_seen", []).count(kind) >= REPEAT_CAP:
+            return cached
 
     now = timezone.now()
     session = VisitorSession.objects.filter(session_key=key).first()
@@ -233,6 +243,9 @@ def get_or_create_persona(request):
         if vid and not session.visitor_id:
             session.visitor_id = vid
 
+    from .pages import apply_page
+
+    apply_page(session, request.path)
     probs = infer(session)
     best = max(probs, key=probs.get)
     session.persona_scores = probs
@@ -244,8 +257,13 @@ def get_or_create_persona(request):
     if exposure is None:
         exposure = _start_exposure(session, probs)
         method = exposure.policy
-    elif (exposure.persona == PERSONA_UNKNOWN and not exposure.converted and best != PERSONA_UNKNOWN
-          and probs[best] >= SWITCH_CONFIDENCE):
+    elif not exposure.converted and best != PERSONA_UNKNOWN and best != exposure.persona and (
+            (exposure.persona == PERSONA_UNKNOWN and probs[best] >= SWITCH_CONFIDENCE)
+            # Site içi gezinme persona'yı net biçimde değiştirdiyse (fiyatçı → lüks sayfalar…) ziyaret başına 1 kez geç
+            or (probs[best] >= STRONG_SWITCH_CONFIDENCE
+                and f"switch:visit{session.total_sessions}" not in (session.pages_seen or []))):
+        if exposure.persona != PERSONA_UNKNOWN:
+            session.pages_seen = [*(session.pages_seen or [])[-29:], f"switch:visit{session.total_sessions}"]
         # Ziyaret varsayılan sayfayla başladı ama güçlü davranış sinyali geldi → bir kez kişiselleştir
         bandit.undo_impression(exposure.segment, exposure.persona)
         exposure.delete()
@@ -256,6 +274,7 @@ def get_or_create_persona(request):
 
     session.save()
     result = _result(session, probs, method)
+    result["_seen"] = list(session.pages_seen or [])
     cache.set(cache_key, result, CACHE_TTL)
     return result
 

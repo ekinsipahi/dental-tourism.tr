@@ -173,6 +173,7 @@ SITE_URL = config("SITE_URL", default="https://dentaltourism.tr").rstrip("/")
 PROFILE_SITES = [(u.split("|")[0].strip().rstrip("/"), (u.split("|") + ["root"])[1].strip())
                  for u in config("PROFILE_SITES", default="").split(",") if u.strip()]
 PARTNER_AGENCY_URL = config("PARTNER_AGENCY_URL", default="")
+IPINFO_TOKEN = config("IPINFO_TOKEN", default="")  # ipinfo.io — iletişim tıklamalarında ülke/şehir/sağlayıcı
 BACKGROUND_WORKERS = config("BACKGROUND_WORKERS", default=2, cast=int)
 BACKGROUND_QUEUE_LIMIT = config("BACKGROUND_QUEUE_LIMIT", default=200, cast=int)
 PRIMARY_CLINIC_SLUG = config("PRIMARY_CLINIC_SLUG", default="")

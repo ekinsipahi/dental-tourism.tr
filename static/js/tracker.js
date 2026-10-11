@@ -51,8 +51,21 @@
     if (navigator.sendBeacon && navigator.sendBeacon(url, new Blob([body], { type: "application/json" }))) return;
     fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: body, keepalive: true, credentials: "same-origin" }).catch(function () {});
   }
+  var D = window.DENTAL || {};
+  var STAGE = document.documentElement.getAttribute("data-stage") || "";
   function track(type, data) {
-    post(EVENT_API, { event_type: type, data: data || {}, page_url: PAGE_URL, page_type: PAGE_TYPE, vid: VID, attr: ATTR });
+    data = data || {};
+    data.persona = data.persona || D.persona || ""; data.stage = data.stage || STAGE; data.lang = data.lang || D.lang || "";
+    post(EVENT_API, { event_type: type, data: data, page_url: PAGE_URL, page_type: PAGE_TYPE, vid: VID, attr: ATTR });
+  }
+  // Butonun sayfadaki yeri (admin'de "nereden tıkladı")
+  var POSITIONS = [[".stage-dock", "stage-dock"], [".wa-float", "wa-float"], [".mobile-menu", "mobile-menu"], [".mega", "mega-menu"],
+    [".site-header", "navbar"], [".site-footer", "footer"], [".side-cta", "sidebar"], [".cta-box", "cta-box"],
+    [".pseo-price", "price-note"], [".rv", "reviews"], [".page-head, .h-hero, .hero, [class*=hero]", "hero"]];
+  function positionOf(el) {
+    for (var i = 0; i < POSITIONS.length; i++) if (el.closest(POSITIONS[i][0])) return POSITIONS[i][1];
+    var sec = el.closest("section[id], [data-track-section]");
+    return sec ? (sec.id || sec.getAttribute("data-track-section")) : "content";
   }
   window.dtTrack = track;
 
@@ -88,11 +101,14 @@
               instagram: "instagram_click", youtube: "youtube_click", before_after: "before_after_interact",
               "lang-switch": "language_switch", treatment: "cta_click", form: "cta_click", faq: "faq_open" };
   document.addEventListener("click", function (e) {
-    var el = e.target.closest("[data-track]");
+    var el = e.target.closest("[data-track], a[href^='tel:'], a[href*='wa.me/'], a[href*='api.whatsapp.com']");
     if (!el) return;
-    var type = el.dataset.track;
+    var href = el.getAttribute("href") || "";
+    var type = el.dataset.track || (href.indexOf("tel:") === 0 ? "phone" : "whatsapp");
     if (type === "faq") { if (!el.open) track("faq_open", { q: (el.textContent || "").trim().slice(0, 80) }); return; }
-    track(MAP[type] || "cta_click", { element: type, text: (el.textContent || "").trim().slice(0, 60), href: el.href || "" });
+    var label = (el.getAttribute("aria-label") || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
+    track(MAP[type] || "cta_click", { element: type, label: label, text: label.slice(0, 60), href: href.slice(0, 200),
+                                      position: positionOf(el), screen: screen.width + "x" + screen.height });
     if (type === "whatsapp") {
       if (window.gtag) gtag("event", "whatsapp_click");
       if (window.fbq) fbq("track", "Contact");

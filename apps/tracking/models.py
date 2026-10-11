@@ -90,6 +90,14 @@ class VisitorSession(models.Model):
     ip_hash        = models.CharField(max_length=64, blank=True)   # SHA256 - GDPR
     ip_country     = models.CharField(max_length=5, blank=True)    # TR, DE, NL...
     ip_city        = models.CharField(max_length=100, blank=True)
+    # ipinfo.io zenginleştirmesi (IPINFO_TOKEN .env) — iletişim tıklamalarında "nereden" bilgisi
+    ip_address     = models.GenericIPAddressField(null=True, blank=True)
+    ip_region      = models.CharField(max_length=100, blank=True)
+    ip_postal      = models.CharField(max_length=20, blank=True)
+    ip_org         = models.CharField(max_length=200, blank=True, help_text="İnternet sağlayıcısı / kurum (ASN)")
+    ip_timezone    = models.CharField(max_length=50, blank=True)
+    ip_loc         = models.CharField(max_length=40, blank=True, help_text="enlem,boylam (yaklaşık)")
+    geo_source     = models.CharField(max_length=20, blank=True)
     user_agent     = models.TextField(blank=True)
     device_type    = models.CharField(max_length=20, blank=True)   # desktop/mobile/tablet
     device_brand   = models.CharField(max_length=50, blank=True)   # Apple, Samsung...
@@ -260,6 +268,12 @@ class TrackingEvent(models.Model):
     timestamp  = models.DateTimeField(auto_now_add=True)
     page_url   = models.CharField(max_length=500, blank=True)
     data       = models.JSONField(default=dict)
+    # Tıklama anının bağlamı (iletişim tıklamaları için): hangi buton, sayfanın neresi, o anki persona / aşama / dil
+    label      = models.CharField(max_length=120, blank=True, help_text="Buton metni")
+    position   = models.CharField(max_length=60, blank=True, help_text="navbar / hero / footer / stage-dock / wa-float…")
+    persona    = models.CharField(max_length=20, blank=True)
+    stage      = models.CharField(max_length=20, blank=True)
+    language   = models.CharField(max_length=10, blank=True)
 
     class Meta:
         ordering = ["-timestamp"]
@@ -270,6 +284,25 @@ class TrackingEvent(models.Model):
 
     def __str__(self):
         return f"{self.event_type} | {self.timestamp.strftime('%H:%M:%S')}"
+
+
+CONTACT_EVENTS = (TrackingEvent.PHONE_CLICK, TrackingEvent.WHATSAPP_CLICK, TrackingEvent.FORM_SUBMIT)
+
+
+class ContactClickManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(event_type__in=CONTACT_EVENTS).select_related("session")
+
+
+class ContactClick(TrackingEvent):
+    """Admin görünümü: telefon / WhatsApp / form — kim, ne zaman, hangi cihazla, nereden."""
+    objects = ContactClickManager()
+
+    class Meta:
+        proxy = True
+        ordering = ["-timestamp"]
+        verbose_name = "İletişim tıklaması"
+        verbose_name_plural = "📞 İletişim tıklamaları (telefon / WhatsApp / form)"
 
 
 # ── Lead ──────────────────────────────────────────────────────────────────────

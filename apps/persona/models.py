@@ -58,6 +58,10 @@ class VisitorSession(models.Model):
     landing_path = models.CharField(max_length=500, blank=True)
     search_query = models.CharField(max_length=300, blank=True, help_text="utm_term / reklam kelimesi")
     intent_scores = models.JSONField(default=dict, blank=True, help_text="Arama niyetinden persona öncülü")
+    page_scores = models.JSONField(default=dict, blank=True,
+                                   help_text="Site içinde gezilen sayfalardan persona kanıtı (fiyat sayfaları → price, "
+                                             "lüks tedaviler / 'en iyi klinik' → premium …)")
+    pages_seen = models.JSONField(default=list, blank=True, help_text="Son gezilen sayfa türleri (en fazla 30)")
 
     total_sessions = models.PositiveIntegerField(default=1)
     total_page_views = models.PositiveIntegerField(default=0)

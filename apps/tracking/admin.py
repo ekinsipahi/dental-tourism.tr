@@ -11,7 +11,7 @@ Admin panelinden:
 from django.contrib import admin
 from django.utils.html import format_html
 from django.urls import reverse
-from .models import VisitorSession, PageView, Lead, WhatsAppMatch, AdConversion
+from .models import AdConversion, ContactClick, Lead, PageView, VisitorSession, WhatsAppMatch
 
 
 @admin.register(VisitorSession)
@@ -40,7 +40,8 @@ class VisitorSessionAdmin(admin.ModelAdmin):
             "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term",
         ]}),
         ("Device & Location", {"fields": [
-            "ip_hash", "ip_country", "ip_city",
+            "visitor_id", "ip_address", "ip_hash", "ip_country", "ip_city", "ip_region", "ip_postal", "ip_org",
+            "ip_timezone", "ip_loc", "geo_source",
             "device_type", "device_brand", "device_model",
             "os_name", "os_version", "browser_name", "browser_version",
             "screen_width", "screen_height", "language_code",
@@ -150,9 +151,27 @@ class VisitorSessionAdmin(admin.ModelAdmin):
 
 @admin.register(Lead)
 class LeadAdmin(admin.ModelAdmin):
+    @admin.display(description="Konum (ipinfo)")
+    def lead_location(self, o):
+        s = o.session
+        cc = (s.ip_country if s else "") or o.ip_country
+        city = ", ".join(filter(None, [(s.ip_city if s else "") or o.ip_city, s.ip_region if s else ""]))
+        return format_html("{} <strong>{}</strong> {}<br><span style='color:#888'>{}</span>", _flag(cc), cc or "?",
+                           city or "—", ((s.ip_org if s else "") or "")[:40])
+
+    @admin.display(description="Cihaz / geçmiş")
+    def lead_device(self, o):
+        s = o.session
+        if not s:
+            return o.device_type or "—"
+        icon = {"mobile": "📱", "tablet": "📲", "desktop": "💻"}.get(s.device_type, "❔")
+        model = " ".join(filter(None, [s.device_brand, s.device_model])) or s.device_type
+        return format_html("{} {} · {} {}<br><span style='color:#888'>{}. ziyaret · 📞{} 💬{}</span>", icon, model,
+                           s.os_name, s.browser_name, s.session_count, s.phone_clicks, s.whatsapp_clicks)
+
     list_display = [
         "name_or_anon", "clinic", "persona", "source_badge", "status_badge",
-        "contact_info", "traffic_info", "device_country",
+        "contact_info", "traffic_info", "lead_location", "lead_device",
         "wa_match_status", "created_at",
     ]
     list_filter  = ["status", "clinic", "source", "traffic_source", "persona", "ip_country", "language", "whatsapp_matched"]
@@ -291,3 +310,124 @@ class PageViewAdmin(admin.ModelAdmin):
 class AdConversionAdmin(admin.ModelAdmin):
     list_display = ["platform", "conversion_name", "conversion_value", "currency", "status", "created_at"]
     list_filter = ["platform", "status"]
+
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# 📞 İletişim tıklamaları — telefon / WhatsApp / form: kim, ne zaman, hangi cihaz, nereden
+# ═════════════════════════════════════════════════════════════════════════════
+def _flag(cc):
+    cc = (cc or "").upper()
+    if len(cc) != 2:
+        return ""
+    return "".join(chr(0x1F1E6 + ord(c) - 65) for c in cc)
+
+
+_TYPE = {"phone_click": ("📞 Telefon", "#2563eb"), "whatsapp_click": ("💬 WhatsApp", "#16a34a"),
+         "form_submit": ("📝 Form", "#9333ea")}
+_SRC = {"google_ads": ("Google Ads", "#1a73e8"), "meta_ads": ("Meta Ads", "#1877f2"),
+        "google_organic": ("Google organik", "#34a853"), "bing_organic": ("Bing", "#00809d"), "social": ("Sosyal", "#e91e63"),
+        "referral": ("Referans", "#ff9800"), "direct": ("Direkt", "#757575"), "email": ("E-posta", "#9c27b0")}
+
+
+@admin.register(ContactClick)
+class ContactClickAdmin(admin.ModelAdmin):
+    list_display = ["when", "action", "button", "visitor", "location", "device", "source", "page", "persona_stage"]
+    list_filter = ["event_type", "session__ip_country", "session__device_type", "session__traffic_source",
+                   "persona", "stage", "language", "position"]
+    search_fields = ["session__visitor_id", "session__session_key", "session__ip_city", "session__ip_region",
+                     "session__ip_org", "session__google_keyword", "session__utm_term", "session__utm_campaign",
+                     "session__gclid", "page_url", "label"]
+    date_hierarchy = "timestamp"
+    list_per_page = 100
+    actions = ["export_csv"]
+
+    def has_add_permission(self, request):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    @admin.display(description="Zaman", ordering="timestamp")
+    def when(self, o):
+        from django.utils import timezone
+
+        t = timezone.localtime(o.timestamp)
+        return format_html("<strong>{}</strong><br><span style='color:#888'>{}</span>", t.strftime("%H:%M:%S"),
+                           t.strftime("%d.%m.%Y"))
+
+    @admin.display(description="Eylem", ordering="event_type")
+    def action(self, o):
+        label, color = _TYPE.get(o.event_type, (o.event_type, "#666"))
+        return format_html('<span style="background:{};color:#fff;padding:2px 8px;border-radius:10px;'
+                           'white-space:nowrap">{}</span>', color, label)
+
+    @admin.display(description="Buton / yer")
+    def button(self, o):
+        return format_html("{}<br><span style='color:#888'>{}</span>", (o.label or "—")[:40], o.position or "")
+
+    @admin.display(description="Ziyaretçi")
+    def visitor(self, o):
+        s = o.session
+        url = reverse("admin:tracking_visitorsession_change", args=[s.pk])
+        vid = (s.visitor_id or s.session_key or "")[:10]
+        return format_html('<a href="{}"><code>{}</code></a><br><span style="color:#888">{}. ziyaret · 📞{} 💬{} 📝{}</span>',
+                           url, vid, s.session_count, s.phone_clicks, s.whatsapp_clicks, s.form_submits)
+
+    @admin.display(description="Konum (ipinfo)", ordering="session__ip_country")
+    def location(self, o):
+        s = o.session
+        place = ", ".join(filter(None, [s.ip_city, s.ip_region])) or "—"
+        return format_html("{} <strong>{}</strong> {}<br><span style='color:#888'>{}</span>", _flag(s.ip_country),
+                           s.ip_country or "?", place, (s.ip_org or "")[:40])
+
+    @admin.display(description="Cihaz", ordering="session__device_type")
+    def device(self, o):
+        s = o.session
+        icon = {"mobile": "📱", "tablet": "📲", "desktop": "💻"}.get(s.device_type, "❔")
+        model = " ".join(filter(None, [s.device_brand, s.device_model])) or s.device_type or "—"
+        sw = f"{s.os_name} {s.os_version}".strip()
+        br = f"{s.browser_name} {s.browser_version}".strip()
+        return format_html("{} {}<br><span style='color:#888'>{} · {}</span>", icon, model, sw or "—", br or "—")
+
+    @admin.display(description="Kaynak", ordering="session__traffic_source")
+    def source(self, o):
+        s = o.session
+        label, color = _SRC.get(s.traffic_source, (s.traffic_source or "?", "#666"))
+        detail = s.google_keyword or s.utm_term or s.google_campaign or s.utm_campaign or (
+            "gclid" if s.gclid else "") or (s.referrer_url or "")[:40]
+        return format_html('<span style="color:{};font-weight:600">{}</span><br><span style="color:#888">{}</span>',
+                           color, label, detail[:50])
+
+    @admin.display(description="Sayfa")
+    def page(self, o):
+        return format_html('<a href="{}" target="_blank">{}</a>', o.page_url, (o.page_url or "—")[:45])
+
+    @admin.display(description="Persona / aşama", ordering="persona")
+    def persona_stage(self, o):
+        return format_html("{}<br><span style='color:#888'>{} · {}</span>", o.persona or "—", o.stage or "",
+                           (o.language or "").upper())
+
+    @admin.action(description="⬇️ CSV olarak indir")
+    def export_csv(self, request, queryset):
+        import csv
+
+        from django.http import HttpResponse
+        from django.utils import timezone
+
+        resp = HttpResponse(content_type="text/csv; charset=utf-8")
+        resp["Content-Disposition"] = 'attachment; filename="iletisim-tiklamalari.csv"'
+        resp.write("\ufeff")
+        w = csv.writer(resp)
+        w.writerow(["zaman", "eylem", "buton", "yer", "ziyaretci_id", "ziyaret_no", "ip", "ulke", "sehir", "bolge",
+                    "saglayici", "cihaz", "marka", "model", "isletim_sistemi", "tarayici", "kaynak", "anahtar_kelime",
+                    "kampanya", "gclid", "sayfa", "persona", "asama", "dil"])
+        for o in queryset.select_related("session"):
+            s = o.session
+            w.writerow([timezone.localtime(o.timestamp).strftime("%Y-%m-%d %H:%M:%S"), o.event_type, o.label, o.position,
+                        s.visitor_id, s.session_count, s.ip_address or "", s.ip_country, s.ip_city, s.ip_region, s.ip_org,
+                        s.device_type, s.device_brand, s.device_model, f"{s.os_name} {s.os_version}".strip(),
+                        f"{s.browser_name} {s.browser_version}".strip(), s.traffic_source,
+                        s.google_keyword or s.utm_term, s.google_campaign or s.utm_campaign, s.gclid or "",
+                        o.page_url, o.persona, o.stage, o.language])
+        return resp

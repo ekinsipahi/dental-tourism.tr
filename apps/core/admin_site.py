@@ -21,7 +21,7 @@ MENU = [
     ("Tedaviler & Fiyatlar", "🦷", [("treatments", "treatment"), ("treatments", "marketprice")]),
     ("Blog", "✍️", [("blog", "blogpost"), ("blog", "blogcategory"), ("blog", "relatedpost")]),
     ("SEO", "📈", [("seo", "keyword"), ("seo", "landingpage"), ("seo", "seotopic"), ("seo", "redirect")]),
-    ("Lead'ler & Dönüşüm", "📥", [("tracking", "lead"), ("tracking", "whatsappmatch"), ("tracking", "visitorsession"),
+    ("Lead'ler & Dönüşüm", "📥", [("tracking", "contactclick"), ("tracking", "lead"), ("tracking", "whatsappmatch"), ("tracking", "visitorsession"),
                                   ("tracking", "pageview"), ("tracking", "adconversion")]),
     ("Kişiselleştirme (Persona ML)", "🧠", [("persona", "personaarmstat"), ("persona", "personaexposure"),
                                            ("persona", "visitorsession"), ("persona", "mlmodelversion")]),
