@@ -602,3 +602,18 @@
 601|Otrzymaj mój plan leczenia
 602|Poznaj swojego dentystę
 603|Leczenie zaplanowane wokół Ciebie
+604|Żadnych gotowych pakietów: plan powstaje tylko dla Ciebie, po tym jak dentysta przeanalizuje Twój przypadek.
+605|Wszystko tutaj jest prawdziwe
+606|Czy leczenie boli?
+607|Leczenie odbywa się w znieczuleniu miejscowym: czujesz nacisk, ale nie ból. Dentysta wyjaśnia każdy etap przed rozpoczęciem, a w każdej chwili możesz poprosić o przerwę.
+608|Czy mój plan leczenia zostanie przygotowany indywidualnie dla mnie?
+609|Tak. Nie sprzedajemy gotowych pakietów: dentysta analizuje Twoje zdjęcia lub RTG, najpierw ratuje zdrowe zęby i planuje tylko to, czego naprawdę potrzebujesz.
+610|Czy opinie i zdjęcia na tej stronie są prawdziwe?
+611|Tak. Nasze opinie są w Google wraz ze źródłem, a zdjęcia przedstawiają naszą klinikę, zespół i pacjentów (za ich zgodą).
+612|Czy mogę umówić prywatną, dyskretną wizytę?
+613|Tak. Wizyty planujemy zgodnie z Twoim harmonogramem, a ten sam dentysta opiekuje się Tobą od pierwszej konsultacji do ostatniej kontroli.
+614|Czy mogę wybrać kształt i kolor nowych zębów?
+615|Tak. Dzięki cyfrowemu projektowi uśmiechu widzisz i akceptujesz kształt oraz kolor, zanim cokolwiek zostanie wykonane — dążymy do naturalnego efektu pasującego do Twojej twarzy.
+616|Przed i po — nasi pacjenci
+617|Każde zdjęcie przedstawia prawdziwego pacjenta naszej kliniki, udostępnione za jego zgodą. Przeciągnij, aby porównać.
+618|Przeciągnij, aby porównać przed i po

@@ -9,9 +9,43 @@ Admin panelinden:
 - Hangi kampanyadan
 """
 from django.contrib import admin
-from django.utils.html import format_html
+from django.utils.html import format_html, format_html_join
 from django.urls import reverse
 from .models import AdConversion, ContactClick, Lead, PageView, VisitorSession, WhatsAppMatch
+
+
+class MindFilter(admin.SimpleListFilter):
+    """Aklındaki: fiyat / lüks / kalite / korku / şüphe … (persona motorunun tıklama anındaki teşhisi)."""
+    title = "aklındaki"
+    parameter_name = "mind"
+
+    def lookups(self, request, model_admin):
+        from apps.persona.mindset import LABELS
+
+        return list(LABELS.items())
+
+    def queryset(self, request, queryset):
+        return queryset.filter(mind=self.value()) if self.value() else queryset
+
+
+def mind_html(mind):
+    """🧠 Ana teşhis + olasılık çubukları + neden (son kanıtlar)."""
+    from apps.persona.mindset import LABELS
+
+    if not mind:
+        return "—"
+    bars = format_html_join("", "<div style='white-space:nowrap'>{} <b>%{}</b></div>",
+                            ((LABELS.get(p, p), round(v * 100)) for p, v in (mind.get("scores") or {}).items()))
+    why = format_html_join("", "<li>{} {}</li>",
+                           ((LABELS.get(w.get("p"), "").split(" ")[0], (w.get("l") or "")[:60])
+                            for w in (mind.get("why") or [])[:5]))
+    level = {"weak": ("zayıf sinyal", "#9e9e9e"), "medium": ("orta", "#f59e0b"), "strong": ("güçlü", "#16a34a")}.get(
+        mind.get("level", ""), ("", "#9e9e9e"))
+    title = mind.get("label", "") if mind.get("level") != "weak" else f"{LABELS['unknown']} ({mind.get('label', '')}?)"
+    return format_html("<strong>{}</strong> <span style='color:{};font-size:11px'>● {} · {} sinyal</span>{}"
+                       "<details><summary style='color:#888;cursor:pointer'>neden?</summary>"
+                       "<ul style='margin:0;padding-left:1rem;color:#555;font-size:11px'>{}</ul></details>",
+                       title, level[1], level[0], mind.get("signals", 0), bars, why)
 
 
 @admin.register(VisitorSession)
@@ -151,6 +185,10 @@ class VisitorSessionAdmin(admin.ModelAdmin):
 
 @admin.register(Lead)
 class LeadAdmin(admin.ModelAdmin):
+    @admin.display(description="🧠 Aklındaki", ordering="mind")
+    def lead_mind(self, o):
+        return mind_html(o.mindset)
+
     @admin.display(description="Konum (ipinfo)")
     def lead_location(self, o):
         s = o.session
@@ -171,10 +209,10 @@ class LeadAdmin(admin.ModelAdmin):
 
     list_display = [
         "name_or_anon", "clinic", "persona", "source_badge", "status_badge",
-        "contact_info", "traffic_info", "lead_location", "lead_device",
+        "contact_info", "lead_mind", "traffic_info", "lead_location", "lead_device",
         "wa_match_status", "created_at",
     ]
-    list_filter  = ["status", "clinic", "source", "traffic_source", "persona", "ip_country", "language", "whatsapp_matched"]
+    list_filter  = ["status", MindFilter, "clinic", "source", "traffic_source", "persona", "ip_country", "language", "whatsapp_matched"]
     search_fields = ["name", "phone", "email", "gclid", "fbclid", "utm_campaign"]
 
     date_hierarchy = "created_at"
@@ -332,8 +370,9 @@ _SRC = {"google_ads": ("Google Ads", "#1a73e8"), "meta_ads": ("Meta Ads", "#1877
 
 @admin.register(ContactClick)
 class ContactClickAdmin(admin.ModelAdmin):
-    list_display = ["when", "action", "button", "visitor", "location", "device", "source", "page", "persona_stage"]
-    list_filter = ["event_type", "session__ip_country", "session__device_type", "session__traffic_source",
+    list_display = ["when", "action", "mind_col", "button", "visitor", "location", "device", "source", "page",
+                    "persona_stage"]
+    list_filter = ["event_type", MindFilter, "session__ip_country", "session__device_type", "session__traffic_source",
                    "persona", "stage", "language", "position"]
     search_fields = ["session__visitor_id", "session__session_key", "session__ip_city", "session__ip_region",
                      "session__ip_org", "session__google_keyword", "session__utm_term", "session__utm_campaign",
@@ -361,6 +400,10 @@ class ContactClickAdmin(admin.ModelAdmin):
         label, color = _TYPE.get(o.event_type, (o.event_type, "#666"))
         return format_html('<span style="background:{};color:#fff;padding:2px 8px;border-radius:10px;'
                            'white-space:nowrap">{}</span>', color, label)
+
+    @admin.display(description="🧠 Aklındaki", ordering="mind")
+    def mind_col(self, o):
+        return mind_html(o.mindset)
 
     @admin.display(description="Buton / yer")
     def button(self, o):
@@ -415,13 +458,15 @@ class ContactClickAdmin(admin.ModelAdmin):
         from django.http import HttpResponse
         from django.utils import timezone
 
+        from apps.persona.mindset import describe
+
         resp = HttpResponse(content_type="text/csv; charset=utf-8")
         resp["Content-Disposition"] = 'attachment; filename="iletisim-tiklamalari.csv"'
         resp.write("\ufeff")
         w = csv.writer(resp)
         w.writerow(["zaman", "eylem", "buton", "yer", "ziyaretci_id", "ziyaret_no", "ip", "ulke", "sehir", "bolge",
                     "saglayici", "cihaz", "marka", "model", "isletim_sistemi", "tarayici", "kaynak", "anahtar_kelime",
-                    "kampanya", "gclid", "sayfa", "persona", "asama", "dil"])
+                    "kampanya", "gclid", "sayfa", "persona", "asama", "dil", "aklindaki", "aklindaki_detay"])
         for o in queryset.select_related("session"):
             s = o.session
             w.writerow([timezone.localtime(o.timestamp).strftime("%Y-%m-%d %H:%M:%S"), o.event_type, o.label, o.position,
@@ -429,5 +474,5 @@ class ContactClickAdmin(admin.ModelAdmin):
                         s.device_type, s.device_brand, s.device_model, f"{s.os_name} {s.os_version}".strip(),
                         f"{s.browser_name} {s.browser_version}".strip(), s.traffic_source,
                         s.google_keyword or s.utm_term, s.google_campaign or s.utm_campaign, s.gclid or "",
-                        o.page_url, o.persona, o.stage, o.language])
+                        o.page_url, o.persona, o.stage, o.language, o.mind, describe(o.mindset)])
         return resp

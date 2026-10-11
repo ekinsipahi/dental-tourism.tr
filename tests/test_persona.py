@@ -83,6 +83,7 @@ class BanditTests(SeededTestCase):
         self.assertGreater(picks.count("trust"), picks.count("price"))
 
 
+@override_settings(PERSONA_UI_ENABLED=True)
 class EndToEndPersonaTests(SeededTestCase):
     def test_visit_creates_exposure_and_whatsapp_click_converts(self):
         self.client.get("/de/?utm_term=zahnimplantate+kosten&gclid=x")

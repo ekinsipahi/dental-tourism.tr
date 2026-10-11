@@ -53,10 +53,40 @@
   }
   var D = window.DENTAL || {};
   var STAGE = document.documentElement.getAttribute("data-stage") || "";
+  /* ── Aklındaki (persona motorunun teşhisi) — aynı cihazda localStorage "dt_mind" ile sürer ──
+     Sunucu her sayfada data-mind basar; SSS açma / sertifika / önce-sonra gibi olaylardan sonra
+     API yeni teşhisi döner → data-mind anında değişir, mind_nudge.html ilgili mesajı gösterir. */
+  var ROOT = document.documentElement, MIND_TTL = 30 * 864e5;
+  function setMind(m, fromServer) {
+    if (!m || m === "unknown") return;
+    var changed = ROOT.getAttribute("data-mind") !== m;
+    ROOT.setAttribute("data-mind", m);
+    try { localStorage.setItem("dt_mind", JSON.stringify({ p: m, t: Date.now() })); } catch (e) {}
+    if (changed || fromServer) document.dispatchEvent(new CustomEvent("dt:mind", { detail: { mind: m, changed: changed } }));
+  }
+  (function initMind() {
+    var server = ROOT.getAttribute("data-mind");
+    if (server && server !== "unknown") { setMind(server, true); return; }
+    try {
+      var saved = JSON.parse(localStorage.getItem("dt_mind") || "null");
+      if (saved && saved.p && Date.now() - saved.t < MIND_TTL) setMind(saved.p, true);
+    } catch (e) {}
+  })();
+  window.dtMind = setMind;
+
+  var MIND_EVENTS = { faq_open: 1, faq_read: 1, cert_click: 1, before_after_interact: 1, video_play: 1, youtube_click: 1 };
   function track(type, data) {
     data = data || {};
     data.persona = data.persona || D.persona || ""; data.stage = data.stage || STAGE; data.lang = data.lang || D.lang || "";
-    post(EVENT_API, { event_type: type, data: data, page_url: PAGE_URL, page_type: PAGE_TYPE, vid: VID, attr: ATTR });
+    var payload = { event_type: type, data: data, page_url: PAGE_URL, page_type: PAGE_TYPE, vid: VID, attr: ATTR };
+    if ((MIND_EVENTS[type] || data.position === "price-note") && !flushed) {  // çıkarken beacon (fetch iptal olabilir)
+      // Yanıtı bekle: persona motoru yeni teşhisi döner
+      fetch(EVENT_API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload),
+                         credentials: "same-origin" })
+        .then(function (r) { return r.json(); }).then(function (j) { if (j && j.mind) setMind(j.mind); }).catch(function () {});
+      return;
+    }
+    post(EVENT_API, payload);
   }
   // Butonun sayfadaki yeri (admin'de "nereden tıkladı")
   var POSITIONS = [[".stage-dock", "stage-dock"], [".wa-float", "wa-float"], [".mobile-menu", "mobile-menu"], [".mega", "mega-menu"],
@@ -105,7 +135,7 @@
     if (!el) return;
     var href = el.getAttribute("href") || "";
     var type = el.dataset.track || (href.indexOf("tel:") === 0 ? "phone" : "whatsapp");
-    if (type === "faq") { if (!el.open) track("faq_open", { q: (el.textContent || "").trim().slice(0, 80) }); return; }
+    if (type === "faq") return;  // SSS: aşağıdaki "toggle" dinleyicisi ölçer (açtı + kaç sn okudu)
     var label = (el.getAttribute("aria-label") || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
     track(MAP[type] || "cta_click", { element: type, label: label, text: label.slice(0, 60), href: href.slice(0, 200),
                                       position: positionOf(el), screen: screen.width + "x" + screen.height });
@@ -114,6 +144,25 @@
       if (window.fbq) fbq("track", "Contact");
     }
   });
+
+  // SSS: açtı (zayıf sinyal) + kaç saniye açık tuttu (asıl sinyal). data-mind-q = sorunun persona etiketi
+  var faqOpen = {};
+  function faqInfo(d) {
+    var s = d.querySelector("summary") || d;
+    return { q: (s.textContent || "").replace(/\s+/g, " ").trim().slice(0, 160), mind: d.getAttribute("data-mind-q") || "" };
+  }
+  function faqClose(q) {
+    var o = faqOpen[q]; if (!o) return;
+    delete faqOpen[q];
+    track("faq_read", { q: q, mind: o.mind, seconds: Math.round((Date.now() - o.t) / 1000) });
+  }
+  document.addEventListener("toggle", function (e) {
+    var d = e.target;
+    if (!d || !d.matches || !d.matches("details[data-track='faq']")) return;
+    var i = faqInfo(d);
+    if (d.open) { if (!faqOpen[i.q]) { faqOpen[i.q] = { t: Date.now(), mind: i.mind }; track("faq_open", { q: i.q, mind: i.mind }); } }
+    else faqClose(i.q);
+  }, true);
 
   // Form başlatma
   document.querySelectorAll("form").forEach(function (f) {
@@ -132,6 +181,7 @@
   var start = Date.now(), flushed = false;
   function flush() {
     if (flushed) return; flushed = true;
+    Object.keys(faqOpen).forEach(faqClose);
     Object.keys(visibleSince).forEach(function (s) { dwell[s] = (dwell[s] || 0) + (Date.now() - visibleSince[s]) / 1000; });
     Object.keys(dwell).forEach(function (s) { if (dwell[s] >= 3) track("section_time", { section: s, seconds: Math.round(dwell[s]) }); });
     var secs = Math.round((Date.now() - start) / 1000);

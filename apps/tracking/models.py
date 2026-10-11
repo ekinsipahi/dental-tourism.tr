@@ -274,6 +274,10 @@ class TrackingEvent(models.Model):
     persona    = models.CharField(max_length=20, blank=True)
     stage      = models.CharField(max_length=20, blank=True)
     language   = models.CharField(max_length=10, blank=True)
+    # Persona motorunun tıklama anındaki teşhisi: "bu kişinin aklında şu an ne var?"
+    mind       = models.CharField(max_length=20, blank=True, db_index=True,
+                                  help_text="Tıklama anında en olası persona (fiyat / lüks / kalite / korku / şüphe …)")
+    mindset    = models.JSONField(default=dict, blank=True, help_text="Olasılıklar + nedenleri (sayfa, SSS, tıklama)")
 
     class Meta:
         ordering = ["-timestamp"]
@@ -343,6 +347,9 @@ class Lead(models.Model):
     treatment    = models.ForeignKey("treatments.Treatment", on_delete=models.SET_NULL, null=True, blank=True,
                                      related_name="leads")
     persona      = models.CharField(max_length=20, blank=True)
+    mind         = models.CharField(max_length=20, blank=True, db_index=True,
+                                    help_text="Form gönderildiğinde persona motorunun teşhisi (aklındaki)")
+    mindset      = models.JSONField(default=dict, blank=True)
     source       = models.CharField(max_length=20, choices=SOURCE_CHOICES)
     status       = models.CharField(max_length=20, choices=STATUS_CHOICES, default=STATUS_NEW)
 

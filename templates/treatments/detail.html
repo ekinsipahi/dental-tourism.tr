@@ -32,7 +32,7 @@
   </article>
 
   <aside class="sticky-side">
-    <div class="side-cta" data-track-section="price">
+    <div class="side-cta" data-track-section="sidebar">
       <h2>{% trans "At a glance" %}</h2>
       <ul class="facts">
         {% if t.stay_days %}<li><span>{% trans "Stay in Istanbul" %}</span><strong>{% blocktrans with d=t.stay_days %}{{ d }} days{% endblocktrans %}</strong></li>{% endif %}
@@ -49,7 +49,7 @@
   </aside>
 </div></section>
 
-{% include "components/faq.html" with faq=t.faq %}
+{% page_faq faq=t.faq %}
 
 {% if reviews %}<section class="section section-alt"><div class="wrap"><h2>{% trans "What patients say" %}</h2>{% include "components/reviews.html" %}</div></section>{% endif %}
 

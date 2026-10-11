@@ -1,10 +1,11 @@
 {% load i18n %}{% if faq %}
-<section class="section" aria-labelledby="faq-h2" data-track-section="faq">
+{# Tek SSS bölümü — her sayfada aynı yer/tasarım. data-mind-q: ortak sorunun persona etiketi (motor sayar). #}
+<section class="section faq-section" aria-labelledby="faq-h2" data-track-section="faq">
   <div class="{{ wrap_class|default:'wrap-narrow' }}">
     <h2 id="faq-h2">{{ faq_title|default:_("Frequently asked questions") }}</h2>
     <div class="faq">
       {% for item in faq %}
-      <details data-track="faq"><summary>{{ item.question }}</summary><div class="answer">{{ item.answer|linebreaksbr }}</div></details>
+      <details data-track="faq"{% if item.mind %} data-mind-q="{{ item.mind }}"{% endif %}><summary>{{ item.question }}</summary><div class="answer">{{ item.answer|linebreaksbr }}</div></details>
       {% endfor %}
     </div>
   </div>

@@ -24,7 +24,7 @@
   <div class="prose" itemprop="articleBody" data-track-section="content">{{ p.content|markdown }}</div>
 
   {% if treatment %}
-  <div class="side-cta" style="margin-top:2.5rem" data-track-section="price">
+  <div class="side-cta" style="margin-top:2.5rem" data-track-section="sidebar">
     <h2>{{ treatment.icon }} {{ treatment.name }}</h2>
     <p class="muted">{{ treatment.short_description|truncatechars:200 }}</p>
     <a class="btn btn-outline btn-sm" href="{{ treatment.object.get_absolute_url }}">{% trans "Prices and details" %} →</a>
@@ -33,7 +33,7 @@
 </div></div>
 </article>
 
-{% include "components/faq.html" with faq=p.faq %}
+{% page_faq faq=p.faq %}
 
 <section class="section" style="padding-top:0"><div class="wrap-narrow">{% include "components/cta.html" %}</div></section>
 

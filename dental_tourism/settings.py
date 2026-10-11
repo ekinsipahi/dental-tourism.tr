@@ -188,6 +188,9 @@ AUTO_TRANSLATE_ON_PUBLISH = config("AUTO_TRANSLATE_ON_PUBLISH", default=True, ca
 # ── Persona ML ───────────────────────────────────────────────────────────────
 PERSONA_ML_MIN_EXPOSURES = config("PERSONA_ML_MIN_EXPOSURES", default=400, cast=int)
 PERSONA_ML_MIN_CONVERSIONS = config("PERSONA_ML_MIN_CONVERSIONS", default=25, cast=int)
+# False → GÖZLEM MODU: motor sayar / teşhis eder / admin'e yazar ama arayüz (renk, hero, mesaj) DEĞİŞMEZ.
+# Önce gerçek konuşmalardan etiket toplanır; sistem kanıtlanınca açılır.
+PERSONA_UI_ENABLED = config("PERSONA_UI_ENABLED", default=False, cast=bool)
 PERSONA_EXPLORATION_RATE = config("PERSONA_EXPLORATION_RATE", default=0.1, cast=float)
 PERSONA_MODEL_DIR = BASE_DIR / "ml_models"
 

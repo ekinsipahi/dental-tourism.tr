@@ -135,4 +135,57 @@
       if (document.activeElement && document.activeElement.closest(".has-mega")) document.activeElement.blur();
     }
   });
+
+  /* ── 7b. Önce / sonra karşılaştırma (.ba) — sürükle; görünür olunca bir kez "ipucu" hareketi ── */
+  Array.prototype.forEach.call(document.querySelectorAll(".ba"), function (ba) {
+    var r = ba.querySelector(".ba-range");
+    if (!r) return;
+    var set = function (v) { ba.style.setProperty("--pos", v + "%"); };
+    r.addEventListener("input", function () { ba.classList.remove("hint"); set(r.value); });
+    if (reduce || !("IntersectionObserver" in window)) return;
+    var bio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        bio.unobserve(ba);
+        ba.classList.add("hint");
+        [[350, 72], [1300, 30], [2250, 50]].forEach(function (s) {
+          setTimeout(function () { if (ba.classList.contains("hint")) { set(s[1]); r.value = s[1]; } }, s[0]);
+        });
+        setTimeout(function () { ba.classList.remove("hint"); }, 3300);
+      });
+    }, { threshold: 0.6 });
+    bio.observe(ba);
+  });
+
+  /* ── 8. Canlı konumlandırma kartı (.mind-nudge) — data-mind'e göre mesaj; SSS/gezinme ile anında değişir ── */
+  var nudge = document.querySelector(".mind-nudge");
+  if (nudge) {
+    var ready = false, timer = null;
+    var dismissed = function (m) { try { return sessionStorage.getItem("dt_nudge_x_" + m); } catch (e) { return null; } };
+    var showFor = function (m, delay) {
+      if (!m || m === "unknown" || dismissed(m) || !nudge.querySelector('.mind-msg[data-for="' + m + '"]')) {
+        nudge.classList.remove("on"); return;
+      }
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        nudge.hidden = false;
+        nudge.classList.remove("on"); void nudge.offsetWidth; nudge.classList.add("on");
+        if (window.dtTrack) window.dtTrack("section_view", { section: "mind-" + m });
+      }, delay);
+    };
+    var current = function () { return doc.getAttribute("data-mind"); };
+    // İlk gösterim: 8 sn sonra ya da sayfanın %35'i okununca (rahatsız etmeden)
+    var arm = function () { if (ready) return; ready = true; showFor(current(), 0); };
+    setTimeout(arm, 8000);
+    window.addEventListener("scroll", function () {
+      var h = document.documentElement.scrollHeight - innerHeight;
+      if (h > 0 && scrollY / h > 0.35) arm();
+    }, { passive: true });
+    // Persona motoru yeni teşhis verdi (ör. "Acıtır mı?" SSS'si → korku): hemen yeni mesaj
+    document.addEventListener("dt:mind", function (e) { if (e.detail && e.detail.changed) { ready = true; showFor(e.detail.mind, 700); } });
+    nudge.querySelector(".mind-x").addEventListener("click", function () {
+      try { sessionStorage.setItem("dt_nudge_x_" + current(), "1"); } catch (e) {}
+      nudge.classList.remove("on");
+    });
+  }
 })();

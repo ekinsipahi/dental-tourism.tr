@@ -602,3 +602,18 @@
 601|Recibir mi plan de tratamiento personal
 602|Conozca a su dentista
 603|Tratamientos planificados para usted
+604|Sin paquetes estándar: su plan se hace solo para usted, después de que el dentista haya examinado su caso.
+605|Aquí todo es real
+606|¿Duele el tratamiento?
+607|El tratamiento se realiza con anestesia local: sentirá presión, pero no dolor. El dentista explica cada paso antes de empezar y puede pedir una pausa en cualquier momento.
+608|¿Mi plan de tratamiento se hará para mí personalmente?
+609|Sí. No vendemos paquetes cerrados: el dentista examina sus fotos o radiografía, conserva primero los dientes sanos y planifica solo lo que realmente necesita.
+610|¿Son reales las reseñas y fotos de este sitio?
+611|Sí. Nuestras reseñas están en Google con su fuente, y las fotos muestran nuestra propia clínica, equipo y pacientes (con su consentimiento).
+612|¿Puedo tener una cita privada y discreta?
+613|Sí. Sus citas se organizan según su agenda, y el mismo dentista le atiende desde la primera consulta hasta el último control.
+614|¿Puedo elegir la forma y el color de mis nuevos dientes?
+615|Sí. Con el diseño digital de sonrisa usted ve y aprueba la forma y el color antes de fabricar nada — buscamos un resultado natural que encaje con su rostro.
+616|Antes y después — nuestros propios pacientes
+617|Cada foto es de un paciente real de nuestra clínica, compartida con su consentimiento. Arrastre para comparar.
+618|Arrastre para comparar antes y después

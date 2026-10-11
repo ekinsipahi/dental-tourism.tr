@@ -29,6 +29,8 @@ def _get_or_create_session(request):
         return None
 
 
+MIND_EVENTS = {"faq_open", "faq_read", "cert_click", "before_after", "before_after_interact", "video_play", "youtube_click"}
+
 @csrf_exempt
 @require_POST
 def collect_event(request):
@@ -82,7 +84,15 @@ def collect_event(request):
         if upd:
             type(session).objects.filter(pk=session.pk).update(**upd)
 
-    resp = JsonResponse({"ok": True})
+    payload = {"ok": True}
+    if event_type in MIND_EVENTS or data.get("position") == "price-note":
+        # Sayfa yenilenmeden konumlandırma: tracker.js bunu localStorage'a (dt_mind) yazar, mesajı anında değiştirir
+        from .service import current_mindset
+
+        m = current_mindset(request.session.session_key)
+        if m:
+            payload["mind"] = m.get("top", "")
+    resp = JsonResponse(payload)
     return visitor.set_cookie(request, resp)  # çerez silinmişse localStorage'daki kimlikle geri yaz
 
 

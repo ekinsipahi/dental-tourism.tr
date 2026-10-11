@@ -115,10 +115,10 @@ LEXICON = {
         ("luks", 2.4), ("unlu", 1.8), ("unluler", 2.2), ("ayricalik", 2.0), ("5 yildiz", 2.0),
     ],
     PERSONA_SKEPTIC: [
-        ("review", 1.6), ("reviews", 1.6), ("experience", 1.4), ("worth it", 1.8), ("is it worth", 1.8),
+        ("review", 1.6), ("experience", 1.4), ("worth it", 1.8), ("is it worth", 1.8),
         ("vs", 1.2), ("versus", 1.2), ("compare", 1.4), ("reddit", 2.0), ("forum", 1.8), ("pros and cons", 1.8),
         ("erfahrung", 1.8), ("bewertung", 1.6), ("vergleich", 1.4), ("lohnt", 1.8),
-        ("ervaring", 1.8), ("review", 1.6), ("avis", 1.6), ("experience", 1.4), ("forum", 1.8),
+        ("ervaring", 1.8), ("avis", 1.6),
         ("recension", 1.6), ("opinion", 1.6), ("opinie", 1.6), ("doswiadcz", 1.8),
         ("отзыв", 1.8), ("опыт", 1.4), ("стоит ли", 1.8), ("відгук", 1.8), ("досвід", 1.4),
         ("تجربة", 1.6), ("تجارب", 1.6), ("تقييم", 1.6), ("erfarenhet", 1.8), ("anmeldelse", 1.6),
@@ -209,6 +209,11 @@ def intent_scores(request) -> dict:
     scores = {}
     for persona, s in score_text(query).items():
         scores[persona] = scores.get(persona, 0) + s
-    for persona, s in score_text(request.path).items():
-        scores[persona] = scores.get(persona, 0) + s * 0.5
+    # URL sözcükleri yalnızca tanınmayan sayfalarda: bilinen sayfa türü (fiyat sayfası, rehber…) zaten
+    # pages.py'de süreye göre sayılıyor — iki kez saymayalım (3 sn bakan kişi "fiyatçı" olmasın)
+    from .pages import page_signal
+
+    if page_signal(request.path)[0] is None:
+        for persona, s in score_text(request.path).items():
+            scores[persona] = scores.get(persona, 0) + s * 0.5
     return {"query": query, "scores": scores}

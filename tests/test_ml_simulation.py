@@ -8,7 +8,7 @@ from apps.persona.simulation import run
 from .base import SeededTestCase
 
 
-@override_settings(PERSONA_EXPLORATION_RATE=0.1)
+@override_settings(PERSONA_EXPLORATION_RATE=0.1, PERSONA_UI_ENABLED=True)
 class PersonaLearningSimulationTests(SeededTestCase):
     def test_bandit_learns_and_ml_trains_with_safety_gate(self):
         with override_settings(PERSONA_MODEL_DIR=tempfile.mkdtemp()):

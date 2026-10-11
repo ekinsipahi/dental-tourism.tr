@@ -1,0 +1,32 @@
+{% load i18n %}
+{# Önce / sonra — gerçek hastalarımız (onaylı). Kaydırıcıyı sürükleyerek karşılaştırma. #}
+<section class="section results" id="results" aria-labelledby="results-h2" data-track-section="before_after">
+  <div class="wrap">
+    <div class="results-head">
+      <span class="eyebrow">{% trans "Real patients, real results" %}</span>
+      <h2 id="results-h2">{% trans "Before & after — our own patients" %}</h2>
+      <p class="lead">{% trans "Every photo is a real patient of our clinic, shared with their consent. Drag to compare." %}</p>
+    </div>
+    <div class="ba-grid">
+      {% for c in cases %}
+      <figure class="ba-card reveal">
+        <div class="ba" style="--pos:50%">
+          <img class="ba-img ba-after" src="{{ c.after }}" alt="{% trans 'After' %} — {{ c.title }}" loading="lazy" decoding="async">
+          <div class="ba-clip"><img class="ba-img ba-before" src="{{ c.before }}" alt="{% trans 'Before' %} — {{ c.title }}" loading="lazy" decoding="async"></div>
+          <span class="ba-tag ba-tag-b">{% trans "BEFORE" %}</span>
+          <span class="ba-tag ba-tag-a">{% trans "AFTER" %}</span>
+          <span class="ba-line" aria-hidden="true"><span class="ba-knob">‹ ›</span></span>
+          <input class="ba-range" type="range" min="0" max="100" value="50" data-track="before_after"
+                 aria-label="{% trans 'Drag to compare before and after' %} — {{ c.title }}">
+        </div>
+        <figcaption>
+          {% if c.treatment %}<a class="ba-badge" href="{{ c.treatment_url }}">{{ c.treatment }}</a>{% endif %}
+          <strong>{{ c.title }}</strong>
+          <p>{{ c.caption }}</p>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+    {% if wa_url %}<p class="results-cta"><a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=16 %} {% trans "Ask a question" %}</a></p>{% endif %}
+  </div>
+</section>

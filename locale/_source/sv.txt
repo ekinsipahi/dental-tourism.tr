@@ -602,3 +602,18 @@
 601|Få min personliga behandlingsplan
 602|Möt din tandläkare
 603|Behandlingar planerade efter dig
+604|Inga standardpaket: din plan görs bara för dig, efter att tandläkaren har granskat ditt fall.
+605|Allt här är äkta
+606|Gör behandlingen ont?
+607|Behandlingen görs med lokalbedövning: du känner tryck men ingen smärta. Tandläkaren förklarar varje steg innan och du kan be om paus när som helst.
+608|Görs min behandlingsplan personligen för mig?
+609|Ja. Vi säljer inga färdiga paket: tandläkaren granskar dina foton eller din röntgenbild, bevarar friska tänder först och planerar bara det du verkligen behöver.
+610|Är recensionerna och bilderna på den här sidan äkta?
+611|Ja. Våra recensioner finns på Google med källa, och bilderna visar vår egen klinik, vårt team och våra patienter (med deras samtycke).
+612|Kan jag få en privat, diskret tid?
+613|Ja. Dina besök planeras efter ditt schema och samma tandläkare tar hand om dig från första konsultationen till sista kontrollen.
+614|Kan jag välja form och färg på mina nya tänder?
+615|Ja. Med digital smile design ser och godkänner du form och färg innan något tillverkas — vi siktar på ett naturligt resultat som passar ditt ansikte.
+616|Före & efter — våra egna patienter
+617|Varje bild visar en riktig patient på vår klinik, publicerad med samtycke. Dra för att jämföra.
+618|Dra för att jämföra före och efter

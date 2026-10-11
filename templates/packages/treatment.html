@@ -41,7 +41,7 @@
 
 {% include "pseo/_proof.html" %}
 {% include "pseo/_photos.html" %}
-{% include "components/faq.html" with faq=faq %}
+{% page_faq faq=faq %}
 {% if reviews %}<section class="section section-alt"><div class="wrap"><h2>{% trans "What patients say" %}</h2>{% include "components/reviews.html" %}</div></section>{% endif %}
 {% if related %}<section class="section"><div class="wrap"><h2>{% trans "Related treatments" %}</h2><div class="grid grid-4">{% for r in related %}{% include "components/treatment_card.html" with t=r %}{% endfor %}</div></div></section>{% endif %}
 {% include "pseo/_links.html" %}

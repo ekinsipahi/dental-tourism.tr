@@ -149,3 +149,154 @@ def review_text(review):
     src = LANGUAGE_META.get(review.language or "", {})
     return {"text": text, "translated": translated, "original": review.text,
             "source_lang": src.get("native", review.language or "")}
+
+
+@register.simple_tag
+def mind_messages():
+    """Persona motorunun teşhisine göre canlı mesajlar (components/mind_nudge.html).
+
+    Hepsi sayfaya gömülür, yalnızca <html data-mind="…"> ile eşleşen görünür; ziyaretçi SSS açtıkça /
+    gezdikçe tracker.js data-mind'i günceller (localStorage dt_mind) ve mesaj sayfa yenilenmeden değişir."""
+    from django.utils.translation import gettext as _
+
+    from apps.seo.common import persona_hook
+
+    extra = {
+        "quality": (_("A treatment planned for you — not a template"),
+                    _("No one-size-fits-all packages: your plan is made only for you, after the dentist has examined your case."),
+                    _("Get my personal treatment plan")),
+        "skeptic": (_("Everything here is real"),
+                    _("Real reviews with their source, named materials and a written plan before you travel."),
+                    _("Ask any question — free")),
+        "price": None, "premium": None, "fear": None, "shame": None, "trust": None, "urgency": None, "ready": None,
+    }
+    buttons = {"price": _("Get a free price quote"), "premium": _("Request a private appointment"),
+               "fear": _("Ask any question — free"), "ready": _("Book now")}
+    out = []
+    for p, custom in extra.items():
+        if custom:
+            title, text, btn = custom
+        else:
+            title, text = persona_hook({"persona": p})
+            btn = buttons.get(p, _("Ask a question"))
+        out.append({"key": p, "title": title, "text": text, "button": btn, "reviews": p in ("skeptic", "trust")})
+    return out
+
+
+def core_faq(clinic=None):
+    """Her sayfanın altındaki ORTAK SSS — her soru bir persona'ya etiketli (data-mind-q).
+
+    Ziyaretçi hangisini açıp kaç saniye okuduysa persona motoru o yöne sayar
+    ("Acıtır mı?" → korku, "Ne kadar tutar?" → fiyat, "Yorumlar gerçek mi?" → şüphe …)."""
+    from django.utils.translation import gettext as _
+
+    years = getattr(clinic, "years_experience", None)
+    items = [
+        ("skeptic", _("Is it safe to get dental treatment in Turkey?"),
+         _("Yes, when you choose a licensed clinic with experienced dentists and certified materials. "
+           "Ask for the dentist's credentials, the brands of implants and crowns, and a written "
+           "treatment plan before you travel.")),
+        ("price", _("How much does dental treatment in Istanbul cost?"),
+         _("Very affordable compared with Western Europe — with the same materials and techniques. "
+           "We do not publish one-size-fits-all prices: call us or send photos on WhatsApp and you "
+           "receive a fixed written quote before treatment starts.")),
+        ("fear", _("Does the treatment hurt?"),
+         _("Treatment is done under local anaesthesia, so you feel pressure but not pain. The dentist explains "
+           "each step before starting, and you can ask for a break at any time.")),
+        ("quality", _("Will my treatment plan be made for me personally?"),
+         _("Yes. We do not sell ready-made packages: the dentist examines your photos or X-ray, saves healthy "
+           "teeth first and plans only what you actually need.")),
+        ("skeptic", _("Are the reviews and photos on this site real?"),
+         _("Yes. Our reviews are on Google with their source, and the photos show our own clinic, team and "
+           "patients (shared with their consent).")),
+        ("premium", _("Can I have a private, discreet appointment?"),
+         _("Yes. Your appointments are planned around your schedule, and the same dentist looks after you from "
+           "the first consultation to the final check.")),
+        ("shame", _("Can I choose the shape and shade of my new teeth?"),
+         _("Yes. With a digital smile design you see and approve the shape and shade before anything is made — "
+           "we aim for a natural result that suits your face.")),
+        ("urgency", _("How long do I need to stay in Istanbul?"),
+         _("It depends on the treatment: fillings, cleaning and composite veneers take 1–3 days, "
+           "crowns and porcelain veneers about 5–7 days, implants usually two visits a few months apart.")),
+        ("trust", _("Do you speak my language?"),
+         _("We communicate with international patients in English and other languages, and you can "
+           "message the dentist directly on WhatsApp before, during and after your treatment.")),
+    ]
+    if years:
+        items.append(("trust", _("How experienced is the dentist?"),
+                      _("Our lead dentist has %(years)s years of clinical experience.") % {"years": years}))
+    return [{"question": q, "answer": a, "mind": m} for m, q, a in items]
+
+
+@register.simple_tag(takes_context=True)
+def page_faq(context, faq=None, faq_title=None, wrap_class=None):
+    """Sayfanın kendi SSS'sini kaydeder; base.html footer'dan önce {% faq_block %} ile tek yerde basar."""
+    request = context.get("request")
+    if request is not None:
+        request._page_faq = (list(faq or []), faq_title, wrap_class)
+    return ""
+
+
+@register.simple_tag(takes_context=True)
+def faq_block(context, faq=None, faq_title=None, wrap_class=None):
+    """Sayfanın SSS'si + ortak SSS tek bölümde, sayfanın altında, her yerde aynı tasarım.
+
+    Sayfa kendi SSS'sini basmadıysa base.html sonda yalnızca ortak SSS'yi basar (bir sayfada bir kez)."""
+    from django.template.loader import render_to_string
+
+    request = context.get("request")
+    if request is not None:
+        if getattr(request, "_faq_done", False):
+            return ""
+        request._faq_done = True
+        if faq is None and getattr(request, "_page_faq", None):
+            faq, faq_title, wrap_class = request._page_faq
+    core = core_faq(context.get("clinic"))
+    tags = {" ".join(str(c["question"]).lower().split()): c["mind"] for c in core}
+    seen, items = set(), []
+    for it in list(faq or []) + core:
+        q = it.get("question") if isinstance(it, dict) else getattr(it, "question", "")
+        a = it.get("answer") if isinstance(it, dict) else getattr(it, "answer", "")
+        key = " ".join(str(q).lower().split())
+        if not q or key in seen:
+            continue
+        seen.add(key)
+        items.append({"question": q, "answer": a, "mind": tags.get(key, "")})
+    return render_to_string("components/faq.html", {"faq": items, "faq_title": faq_title, "wrap_class": wrap_class},
+                            request=request)
+
+
+@register.simple_tag(takes_context=True)
+def results_block(context, limit=None):
+    """Önce / sonra sonuçları — sürüklenebilir karşılaştırma kartları. Her sayfada bir kez:
+    ana sayfada yorumların altında, diğer sayfalarda içeriğin sonunda (SSS'nin üstünde)."""
+    from django.template.loader import render_to_string
+    from django.utils.translation import get_language
+
+    request = context.get("request")
+    if request is not None:
+        if getattr(request, "_results_done", False):
+            return ""
+        request._results_done = True
+    clinic = context.get("clinic")
+    if clinic is None:
+        return ""
+    lang = get_language()
+    qs = clinic.cases.filter(is_published=True, patient_consent=True).select_related("treatment").order_by("order", "pk")
+    cases = []
+    for c in qs[: int(limit) if limit else None]:
+        if not (c.before_src and c.after_src):
+            continue
+        title, caption = c.text_in(lang)
+        tname = ""
+        if c.treatment_id:
+            try:
+                tname = c.treatment.localized(lang).name
+            except Exception:  # noqa: BLE001
+                tname = c.treatment.name
+        cases.append({"before": c.before_src, "after": c.after_src, "title": title, "caption": caption,
+                      "treatment": tname, "treatment_url": c.treatment.get_absolute_url() if c.treatment_id else ""})
+    if not cases:
+        return ""
+    return render_to_string("components/results.html", {"cases": cases, "wa_url": context.get("wa_url"),
+                                                        "clinic": clinic}, request=request)

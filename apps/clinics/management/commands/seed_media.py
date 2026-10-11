@@ -46,13 +46,26 @@ class Command(BaseCommand):
         if devrim and not devrim.photo and not devrim.photo_url:
             devrim.photo_url = static("img/clinic/dr-devrim-sipahi.jpg")
             devrim.save(update_fields=["photo_url"])
-        data = json.loads((Path(settings.BASE_DIR) / "apps/core/data/old_site_content.json").read_text(encoding="utf-8"))
-        for order, name in enumerate(("hazan", "sanem")):
-            caption = data["cases"][name]["en"][:200]
-            if not BeforeAfterCase.objects.filter(clinic=clinic, caption=caption).exists():
-                BeforeAfterCase.objects.create(
-                    clinic=clinic, caption=caption, order=order, is_published=True, patient_consent=True,
-                    before_image_url=static(f"img/clinic/cases/{name}-before.jpg"),
-                    after_image_url=static(f"img/clinic/cases/{name}-after.jpg"))
+        # Önce-sonra vakaları (apps/clinics/case_content.json — 16 dilde başlık + açıklama, sıra: zirkonya → kompozit → Sanem, Hazan)
+        from apps.treatments.models import Treatment
+
+        old = json.loads((Path(settings.BASE_DIR) / "apps/core/data/old_site_content.json").read_text(encoding="utf-8"))
+        cases = json.loads((Path(settings.BASE_DIR) / "apps/clinics/case_content.json").read_text(encoding="utf-8"))
+        for c in cases:
+            key = c["key"]
+            obj = BeforeAfterCase.objects.filter(clinic=clinic, key=key).first()
+            if obj is None and key in old.get("cases", {}):
+                obj = BeforeAfterCase.objects.filter(clinic=clinic, caption__startswith=old["cases"][key]["en"][:60]).first()
+            en = c["text"]["en"]
+            fields = dict(key=key, title=en["title"], caption=en["caption"], translations=c["text"], order=c["order"],
+                          treatment=Treatment.objects.filter(slug=c["treatment"]).first() if c["treatment"] else None,
+                          before_image_url=static(f"img/clinic/cases/{key}-before.jpg"),
+                          after_image_url=static(f"img/clinic/cases/{key}-after.jpg"))
+            if obj is None:
+                BeforeAfterCase.objects.create(clinic=clinic, is_published=True, patient_consent=True, **fields)
                 n += 1
+            else:
+                for f, v in fields.items():
+                    setattr(obj, f, v)
+                obj.save()
         self.stdout.write(self.style.SUCCESS(f"✓ {n} medya kaydı eklendi"))

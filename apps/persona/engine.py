@@ -48,13 +48,14 @@ def behavior_scores(s: VisitorSession) -> dict:
     # Kalite: hekimi, sertifikaları, malzemeyi inceleyen
     sc[PERSONA_QUALITY] += s.doctor_profile_views * 0.9 + s.certification_clicks * 0.5
     # Güvenlik / korku
+    # (SSS artık soru bazında sayılıyor — mindset.apply_faq; genel "SSS açtı" sayacı persona'ya puan vermez)
     sc[PERSONA_FEAR] += s.certification_clicks * 1.5 + min(s.safety_section_time, 180) / 40 \
-        + s.doctor_profile_views * 0.4 + s.faq_interactions * 0.5
+        + s.doctor_profile_views * 0.4
     # Güven
     sc[PERSONA_TRUST] += min(s.video_watch_time, 300) / 60 + s.video_plays * 0.6 \
         + min(s.review_section_time, 240) / 50 + s.testimonial_reads * 0.6
     # Araştırmacı
-    sc[PERSONA_SKEPTIC] += s.faq_interactions * 0.6 + s.blog_reads * 0.7 + min(s.review_section_time, 240) / 80
+    sc[PERSONA_SKEPTIC] += s.blog_reads * 0.7 + min(s.review_section_time, 240) / 80
     if s.max_scroll_depth >= 75:
         sc[PERSONA_SKEPTIC] += 0.6
         sc[PERSONA_TRUST] += 0.4
@@ -75,6 +76,24 @@ def behavior_scores(s: VisitorSession) -> dict:
         if p in sc:
             sc[p] += float(v)
     return sc
+
+
+# Her yeni ziyarette eski kanıt yarıya iner: bir kez fiyat sayfasına bakan kişi sonsuza dek "fiyatçı" kalmaz,
+# bugün "en iyi klinik" rehberlerinde geziyorsa bugünkü davranışı ağır basar.
+DECAY_FIELDS = ("price_section_clicks", "price_section_time", "before_after_views", "before_after_time", "gallery_views",
+                "doctor_profile_views", "certification_clicks", "safety_section_time", "review_section_time",
+                "testimonial_reads", "video_plays", "video_watch_time", "faq_interactions", "blog_reads",
+                "urgency_keyword_hits")
+VISIT_DECAY = 0.5
+
+
+def decay_evidence(s: VisitorSession):
+    for f in DECAY_FIELDS:
+        setattr(s, f, int(getattr(s, f) * VISIT_DECAY))
+    s.page_scores = {p: round(v * VISIT_DECAY, 2) for p, v in (s.page_scores or {}).items() if v * VISIT_DECAY >= 0.05}
+    s.intent_scores = {p: round(v * VISIT_DECAY, 2) for p, v in (s.intent_scores or {}).items()}
+    # Sayfa türü sayacı ziyaret başına: aynı rehbere yarın tekrar bakmak yine kanıt sayılır
+    s.pages_seen = [k for k in (s.pages_seen or []) if k.startswith("switch:")][-5:]
 
 
 def infer(s: VisitorSession) -> dict:
@@ -232,6 +251,7 @@ def get_or_create_persona(request):
             session.visit_started_at = now
             session.last_persona_at_exit = session.shown_persona
             session.shown_persona = PERSONA_UNKNOWN
+            decay_evidence(session)
             ctx = intent_scores(request)
             if ctx["query"]:
                 session.search_query = ctx["query"]
@@ -253,6 +273,15 @@ def get_or_create_persona(request):
     session.persona_scores = probs
     if best != session.assigned_persona:
         session.update_persona(best, probs[best], "rule")
+
+    if not settings.PERSONA_UI_ENABLED:
+        # Gözlem modu: teşhis kaydedilir, arayüz varsayılan kalır, bandit deneyi yapılmaz
+        session.shown_persona = PERSONA_UNKNOWN
+        session.save()
+        result = _result(session, probs, "observe")
+        result["_seen"] = list(session.pages_seen or [])
+        cache.set(cache_key, result, CACHE_TTL)
+        return result
 
     exposure = PersonaExposure.objects.filter(session=session, visit_number=session.total_sessions).first()
     method = exposure.policy if exposure else "bandit"
@@ -311,9 +340,40 @@ def record_event(session_key, event_type, data=None, page_url="", page_type=""):
     BehaviorEvent.objects.create(session=session, event_type=event_type, data=data,
                                  page_url=(page_url or "")[:500], page_type=(page_type or "")[:30])
     _update_aggregates(session, event_type, data, page_type)
+    _count_evidence(session, event_type, data, page_url)
     if event_type in CONVERSION_EVENTS:
         _record_conversion(session, CONVERSION_EVENTS[event_type])
     cache.delete(f"persona:{session_key}")
+
+
+def _count_evidence(session, event_type, data, page_url=""):
+    """Persona motorunun sayacı: sayfa süresi, SSS (açtı / kaç sn okudu), fiyat sorma… → kanıt günlüğü + skor."""
+    from urllib.parse import urlparse
+
+    from .mindset import add_evidence, apply_faq
+    from .pages import apply_dwell
+
+    changed = False
+    if event_type == "faq_open":
+        changed = apply_faq(session, data.get("q", ""), str(data.get("mind", "")))
+    elif event_type == "faq_read":
+        changed = apply_faq(session, data.get("q", ""), str(data.get("mind", "")), seconds=_num(data.get("seconds"), 600))
+    elif event_type == "time_on_page" and page_url:
+        changed = apply_dwell(session, urlparse(page_url).path or "/", _num(data.get("seconds"), 1800))
+    elif event_type in ("whatsapp_click", "phone_click") and data.get("position") == "price-note":
+        add_evidence(session, "click", "Fiyatını sordu (fiyat notu)", {PERSONA_PRICE: 0.8})
+        changed = True
+    elif event_type == "cert_click":
+        add_evidence(session, "click", "Sertifika / garanti inceledi", {PERSONA_FEAR: 1.5, PERSONA_QUALITY: 0.5})
+        changed = True
+    elif event_type == "before_after":
+        add_evidence(session, "view", "Önce-sonra fotoğraflarına baktı", {PERSONA_SHAME: 1.2})
+        changed = True
+    elif event_type == "video_play":
+        add_evidence(session, "view", "Hasta videosu izledi", {PERSONA_TRUST: 0.6})
+        changed = True
+    if changed:
+        session.save(update_fields=["page_scores", "pages_seen", "evidence"])
 
 
 def _num(v, cap=3600):
@@ -358,8 +418,12 @@ def _update_aggregates(s, event_type, data, page_type):
         inc("certification_clicks")
     elif event_type == "whatsapp_click":
         inc("whatsapp_clicks")
+        if data.get("position") == "price-note":  # "Fiyatımı WhatsApp'tan sor" — gerçek fiyat niyeti
+            inc("price_section_clicks")
     elif event_type == "phone_click":
         inc("phone_clicks")
+        if data.get("position") == "price-note":
+            inc("price_section_clicks")
     elif event_type == "cta_click":
         inc("cta_clicks")
     elif event_type == "form_start":

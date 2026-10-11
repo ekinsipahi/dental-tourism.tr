@@ -64,6 +64,8 @@ class VisitorSession(models.Model):
                                    help_text="Site içinde gezilen sayfalardan persona kanıtı (fiyat sayfaları → price, "
                                              "lüks tedaviler / 'en iyi klinik' → premium …)")
     pages_seen = models.JSONField(default=list, blank=True, help_text="Son gezilen sayfa türleri (en fazla 30)")
+    evidence = models.JSONField(default=list, blank=True,
+                                help_text="Kanıt günlüğü: hangi sayfa / SSS / tıklama hangi persona'ya puan verdi (son 40)")
 
     total_sessions = models.PositiveIntegerField(default=1)
     total_page_views = models.PositiveIntegerField(default=0)
@@ -139,7 +141,7 @@ class BehaviorEvent(models.Model):
         ("section_time", "Section dwell time"), ("cta_click", "CTA click"), ("whatsapp_click", "WhatsApp"),
         ("phone_click", "Phone"), ("form_start", "Form start"), ("form_submit", "Form submit"),
         ("video_play", "Video play"), ("video_time", "Video time"), ("gallery_view", "Gallery view"),
-        ("price_hover", "Price hover"), ("review_read", "Review read"), ("faq_open", "FAQ open"),
+        ("price_hover", "Price hover"), ("review_read", "Review read"), ("faq_open", "FAQ open"), ("faq_read", "FAQ read (seconds)"),
         ("click", "Click"), ("bounce", "Bounce"), ("cert_click", "Certification click"),
         ("before_after", "Before/after"), ("urgency_cta", "Urgency CTA"), ("pageview", "Page view"),
     ]

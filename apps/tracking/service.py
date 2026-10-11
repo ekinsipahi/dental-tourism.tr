@@ -294,6 +294,20 @@ def _enrich_geo_async(session_id, ip: str):
         pass
 
 
+def current_mindset(session_key):
+    """Persona motorunun bu oturum için anlık teşhisi (aklındaki: fiyat / lüks / kalite / korku …)."""
+    if not session_key:
+        return {}
+    try:
+        from apps.persona.mindset import snapshot
+        from apps.persona.models import VisitorSession as PersonaSession
+
+        return snapshot(PersonaSession.objects.filter(session_key=session_key).first())
+    except Exception:  # noqa: BLE001
+        logger.exception("mindset snapshot failed")
+        return {}
+
+
 def record_event(session, event_type: str, data: dict, page_url: str = ""):
     """
     Event kaydet ve session aggregate'lerini güncelle.
@@ -302,7 +316,11 @@ def record_event(session, event_type: str, data: dict, page_url: str = ""):
     from .models import TrackingEvent
 
     data = data if isinstance(data, dict) else {}
+    mind = current_mindset(session.session_key) if event_type in (
+        TrackingEvent.PHONE_CLICK, TrackingEvent.WHATSAPP_CLICK, TrackingEvent.FORM_SUBMIT) else {}
     TrackingEvent.objects.create(
+        mind       = mind.get("top", "")[:20],
+        mindset    = mind,
         session    = session,
         event_type = event_type,
         data       = data,
@@ -478,7 +496,9 @@ def create_lead(request, *, name="", phone="", email="", message="", page="", la
     session = getattr(request, "tracking_session", None)
     persona = (getattr(request, "persona", None) or {}).get("persona", "")
     clinic = clinic or Clinic.primary()
+    mind = current_mindset(request.session.session_key)
     lead = Lead.objects.create(
+        mind=mind.get("top", "")[:20], mindset=mind,
         session=session, clinic=clinic, treatment=treatment, persona=persona if persona != "unknown" else "",
         source=source, name=name[:200], phone=phone[:30], email=email[:254], message=message,
         page=page[:500], language=language[:10],
@@ -506,6 +526,8 @@ def create_lead(request, *, name="", phone="", email="", message="", page="", la
         except Exception:  # noqa: BLE001
             logger.exception("persona conversion record failed")
 
+    from apps.persona.mindset import describe
+
     recipient = (clinic.email if clinic and clinic.email else None) or settings.LEAD_NOTIFY_EMAIL
     if recipient:
         s_ = session
@@ -516,6 +538,7 @@ def create_lead(request, *, name="", phone="", email="", message="", page="", la
                                           getattr(s_, "browser_name", "")])) if s_ else ""
         body = (f"Yeni lead #{lead.pk}\nİsim: {name}\nTelefon: {phone}\nE-posta: {email}\n"
                 f"Dil: {language}\nSayfa: {page}\nPersona: {persona}\n"
+                f"Aklındaki: {describe(mind)}\n"
                 f"Kaynak: {lead.traffic_source} {lead.utm_campaign} {getattr(s_, 'google_keyword', '') or getattr(s_, 'utm_term', '') or ''}\n"
                 f"Konum: {where or '-'}  ({getattr(s_, 'ip_org', '') or '-'})\nCihaz: {device or '-'}\n"
                 f"Ziyaret sayısı: {getattr(s_, 'session_count', 1) if s_ else 1} · Telefon tıklaması: "

@@ -1,5 +1,5 @@
 {% load static i18n site_tags %}<!DOCTYPE html>
-<html lang="{{ lang_code }}" dir="{{ lang_dir }}" data-persona="{{ persona.persona|default:'unknown' }}" data-stage="{{ persona.stage|default:'awareness' }}">
+<html lang="{{ lang_code }}" dir="{{ lang_dir }}" data-persona="{{ persona.persona|default:'unknown' }}" data-stage="{{ persona.stage|default:'awareness' }}" data-mind="{{ persona.inferred|default:'unknown' }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,6 +55,8 @@
   <main id="main">
     {% if messages %}<div class="wrap"><ul class="messages">{% for m in messages %}<li>{{ m }}</li>{% endfor %}</ul></div>{% endif %}
     {% block content %}{% endblock %}
+    {% block results %}{% results_block %}{% endblock %}
+    {% block faq %}{% faq_block %}{% endblock %}
   </main>
 
   {% include "components/footer.html" %}
@@ -72,6 +74,7 @@
   </a>
   {% endif %}
 
+  {% if persona_ui and not is_bot %}{% include "components/mind_nudge.html" %}{% endif %}
   {% include "components/consent.html" %}
   <script>window.DENTAL = {persona: "{{ persona.persona|default:'unknown'|escapejs }}", lang: "{{ lang_code|escapejs }}", pageType: "{{ page_type|default:'page'|escapejs }}"};</script>
   {% if not is_bot %}<script src="{% static 'js/tracker.js' %}" defer></script>{% endif %}

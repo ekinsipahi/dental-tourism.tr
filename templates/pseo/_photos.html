@@ -1,15 +1,5 @@
-{% load i18n %}
-{% if cases %}
-<section class="section" data-track-section="cases"><div class="wrap">
-  <h2>{% trans "Real results from our clinic" %}</h2>
-  <p class="muted">{% trans "Published with patient consent. No stock photos, no filters." %}</p>
-  <div class="grid grid-2 pseo-cases">{% for c in cases %}
-    <figure class="card"><div class="pseo-ba"><img src="{{ c.before_src }}" alt="{% trans 'Before treatment' %}" loading="lazy"><img src="{{ c.after_src }}" alt="{% trans 'After treatment' %}" loading="lazy"></div>
-      <div class="pseo-ba-lbl"><span>{% trans "Before" %}</span><span>{% trans "After" %}</span></div>
-      {% if c.caption %}<figcaption class="muted" lang="en">{{ c.caption }}</figcaption>{% endif %}</figure>
-  {% endfor %}</div>
-</div></section>
-{% endif %}
+{% load i18n site_tags %}
+{% results_block %}
 {% if gallery %}
 <section class="section" data-track-section="gallery"><div class="wrap">
   <h2>{% trans "Inside our clinic" %}</h2>

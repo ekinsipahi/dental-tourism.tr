@@ -602,3 +602,18 @@
 601|Primește planul meu de tratament
 602|Cunoaște-ți medicul
 603|Tratamente planificate pentru tine
+604|Fără pachete standard: planul tău este făcut doar pentru tine, după ce medicul îți analizează cazul.
+605|Totul aici este real
+606|Doare tratamentul?
+607|Tratamentul se face sub anestezie locală: simți presiune, dar nu durere. Medicul explică fiecare pas înainte de a începe și poți cere o pauză oricând.
+608|Planul meu de tratament va fi făcut personal pentru mine?
+609|Da. Nu vindem pachete gata făcute: medicul îți analizează fotografiile sau radiografia, păstrează mai întâi dinții sănătoși și planifică doar ce ai cu adevărat nevoie.
+610|Recenziile și fotografiile de pe acest site sunt reale?
+611|Da. Recenziile noastre sunt pe Google, cu sursa lor, iar fotografiile arată propria noastră clinică, echipa și pacienții (cu acordul lor).
+612|Pot avea o programare privată și discretă?
+613|Da. Programările tale sunt stabilite în funcție de agenda ta, iar același medic se ocupă de tine de la prima consultație până la ultimul control.
+614|Pot alege forma și nuanța dinților noi?
+615|Da. Cu designul digital al zâmbetului vezi și aprobi forma și nuanța înainte de a se realiza ceva — urmărim un rezultat natural care se potrivește feței tale.
+616|Înainte și după — pacienții noștri
+617|Fiecare fotografie aparține unui pacient real al clinicii noastre, publicată cu acordul său. Trage pentru a compara.
+618|Trage pentru a compara înainte și după

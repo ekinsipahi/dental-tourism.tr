@@ -602,3 +602,18 @@
 601|Meinen persönlichen Behandlungsplan erhalten
 602|Lernen Sie Ihren Zahnarzt kennen
 603|Behandlungen, die um Sie herum geplant werden
+604|Keine Pauschalpakete: Ihr Plan wird nur für Sie erstellt, nachdem der Zahnarzt Ihren Fall geprüft hat.
+605|Alles hier ist echt
+606|Tut die Behandlung weh?
+607|Die Behandlung erfolgt unter örtlicher Betäubung: Sie spüren Druck, aber keinen Schmerz. Der Zahnarzt erklärt jeden Schritt vorher, und Sie können jederzeit um eine Pause bitten.
+608|Wird mein Behandlungsplan persönlich für mich erstellt?
+609|Ja. Wir verkaufen keine Pauschalpakete: Der Zahnarzt prüft Ihre Fotos oder Ihr Röntgenbild, erhält zuerst gesunde Zähne und plant nur, was Sie wirklich brauchen.
+610|Sind die Bewertungen und Fotos auf dieser Website echt?
+611|Ja. Unsere Bewertungen stehen mit Quelle auf Google, und die Fotos zeigen unsere eigene Klinik, unser Team und unsere Patienten (mit deren Einverständnis).
+612|Kann ich einen privaten, diskreten Termin bekommen?
+613|Ja. Ihre Termine werden nach Ihrem Zeitplan geplant, und derselbe Zahnarzt betreut Sie von der ersten Beratung bis zur letzten Kontrolle.
+614|Kann ich Form und Farbe meiner neuen Zähne wählen?
+615|Ja. Mit einem digitalen Smile Design sehen und bestätigen Sie Form und Farbe, bevor etwas angefertigt wird — wir streben ein natürliches Ergebnis an, das zu Ihrem Gesicht passt.
+616|Vorher & nachher — unsere eigenen Patienten
+617|Jedes Foto zeigt einen echten Patienten unserer Klinik, veröffentlicht mit Einverständnis. Zum Vergleichen ziehen.
+618|Ziehen, um vorher und nachher zu vergleichen

@@ -122,6 +122,7 @@ def site_context(request):
         "nav_treatments": nav_treatments,
         "nav": nav,
         "is_bot": getattr(request, "is_bot", False),
+        "persona_ui": settings.PERSONA_UI_ENABLED,
         "analytics": {
             "gtag": settings.GOOGLE_GTAG_ID,
             "ads": settings.GOOGLE_ADS_CONVERSION,

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-11 10:00+0300\n"
+"POT-Creation-Date: 2026-10-11 13:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -225,7 +225,6 @@ msgid "I would like to request a private appointment."
 msgstr "أرغب في طلب موعد خاص."
 
 #: apps/core/context_processors.py:70
-#| msgid "Personal treatment plan"
 msgid "I would like a personalised treatment plan."
 msgstr "أرغب في خطة علاج مخصصة."
 
@@ -309,6 +308,182 @@ msgstr "للجلسة"
 msgid "per smile"
 msgstr "للابتسامة"
 
+#: apps/core/templatetags/site_tags.py:165 apps/seo/common.py:74
+msgid "A treatment planned for you — not a template"
+msgstr "علاج مخطط لك — وليس قالبًا جاهزًا"
+
+#: apps/core/templatetags/site_tags.py:166
+msgid ""
+"No one-size-fits-all packages: your plan is made only for you, after the "
+"dentist has examined your case."
+msgstr "لا باقات جاهزة: تُعدّ خطتك لك وحدك بعد أن يفحص الطبيب حالتك."
+
+#: apps/core/templatetags/site_tags.py:167
+#: templates/home/sections/hero.html:138
+msgid "Get my personal treatment plan"
+msgstr "احصل على خطة علاجي الشخصية"
+
+#: apps/core/templatetags/site_tags.py:168
+msgid "Everything here is real"
+msgstr "كل شيء هنا حقيقي"
+
+#: apps/core/templatetags/site_tags.py:169 apps/seo/common.py:69
+msgid ""
+"Real reviews with their source, named materials and a written plan before "
+"you travel."
+msgstr "تقييمات حقيقية بمصدرها، ومواد محددة بالاسم، وخطة مكتوبة قبل السفر."
+
+#: apps/core/templatetags/site_tags.py:170
+#: apps/core/templatetags/site_tags.py:174
+#: templates/home/sections/hero.html:177
+msgid "Ask any question — free"
+msgstr "اسأل أي سؤال — مجانًا"
+
+#: apps/core/templatetags/site_tags.py:173
+#: templates/home/sections/hero.html:14
+msgid "Get a free price quote"
+msgstr "احصل على عرض سعر مجاني"
+
+#: apps/core/templatetags/site_tags.py:173
+#: templates/home/sections/hero.html:123
+msgid "Request a private appointment"
+msgstr "اطلب موعدًا خاصًا"
+
+#: apps/core/templatetags/site_tags.py:174 templates/components/navbar.html:73
+#: templates/home/sections/hero.html:148
+msgid "Book now"
+msgstr "احجز الآن"
+
+#: apps/core/templatetags/site_tags.py:181
+#: templates/components/results.html:30 templates/home/sections/hero.html:101
+msgid "Ask a question"
+msgstr "اطرح سؤالًا"
+
+#: apps/core/templatetags/site_tags.py:195 apps/core/views.py:21
+msgid "Is it safe to get dental treatment in Turkey?"
+msgstr "هل علاج الأسنان في تركيا آمن؟"
+
+#: apps/core/templatetags/site_tags.py:196 apps/core/views.py:22
+msgid ""
+"Yes, when you choose a licensed clinic with experienced dentists and "
+"certified materials. Ask for the dentist's credentials, the brands of "
+"implants and crowns, and a written treatment plan before you travel."
+msgstr ""
+"نعم، عندما تختار عيادة مرخّصة بأطباء ذوي خبرة ومواد معتمدة. اطلب قبل السفر "
+"مؤهلات الطبيب وأنواع الزرعات والتيجان وخطة علاج مكتوبة."
+
+#: apps/core/templatetags/site_tags.py:199 apps/core/views.py:25
+msgid "How much does dental treatment in Istanbul cost?"
+msgstr "كم تكلفة علاج الأسنان في إسطنبول؟"
+
+#: apps/core/templatetags/site_tags.py:200 apps/core/views.py:26
+msgid ""
+"Very affordable compared with Western Europe — with the same materials and "
+"techniques. We do not publish one-size-fits-all prices: call us or send "
+"photos on WhatsApp and you receive a fixed written quote before treatment "
+"starts."
+msgstr ""
+"تكلفة مناسبة جداً مقارنة بأوروبا الغربية — بنفس المواد والتقنيات. لا ننشر "
+"أسعاراً موحدة للجميع: اتصل بنا أو أرسل صوراً عبر واتساب وستحصل على سعر ثابت "
+"مكتوب قبل بدء العلاج."
+
+#: apps/core/templatetags/site_tags.py:203
+msgid "Does the treatment hurt?"
+msgstr "هل العلاج مؤلم؟"
+
+#: apps/core/templatetags/site_tags.py:204
+msgid ""
+"Treatment is done under local anaesthesia, so you feel pressure but not "
+"pain. The dentist explains each step before starting, and you can ask for a "
+"break at any time."
+msgstr ""
+"يتم العلاج تحت التخدير الموضعي، فتشعر بضغط دون ألم. يشرح الطبيب كل خطوة قبل "
+"البدء، ويمكنك طلب استراحة في أي وقت."
+
+#: apps/core/templatetags/site_tags.py:206
+msgid "Will my treatment plan be made for me personally?"
+msgstr "هل ستُعدّ خطة علاجي لي شخصيًا؟"
+
+#: apps/core/templatetags/site_tags.py:207
+msgid ""
+"Yes. We do not sell ready-made packages: the dentist examines your photos or"
+" X-ray, saves healthy teeth first and plans only what you actually need."
+msgstr ""
+"نعم. لا نبيع باقات جاهزة: يفحص الطبيب صورك أو الأشعة، ويحافظ أولًا على "
+"الأسنان السليمة، ولا يخطط إلا لما تحتاجه فعلًا."
+
+#: apps/core/templatetags/site_tags.py:209
+msgid "Are the reviews and photos on this site real?"
+msgstr "هل التقييمات والصور على هذا الموقع حقيقية؟"
+
+#: apps/core/templatetags/site_tags.py:210
+msgid ""
+"Yes. Our reviews are on Google with their source, and the photos show our "
+"own clinic, team and patients (shared with their consent)."
+msgstr ""
+"نعم. تقييماتنا موجودة على Google مع مصدرها، والصور تُظهر عيادتنا وفريقنا "
+"ومرضانا (بموافقتهم)."
+
+#: apps/core/templatetags/site_tags.py:212
+msgid "Can I have a private, discreet appointment?"
+msgstr "هل يمكنني الحصول على موعد خاص وسري؟"
+
+#: apps/core/templatetags/site_tags.py:213
+msgid ""
+"Yes. Your appointments are planned around your schedule, and the same "
+"dentist looks after you from the first consultation to the final check."
+msgstr ""
+"نعم. تُنظَّم مواعيدك وفق جدولك، ويتابعك الطبيب نفسه من الاستشارة الأولى حتى "
+"الفحص الأخير."
+
+#: apps/core/templatetags/site_tags.py:215
+msgid "Can I choose the shape and shade of my new teeth?"
+msgstr "هل يمكنني اختيار شكل ولون أسناني الجديدة؟"
+
+#: apps/core/templatetags/site_tags.py:216
+msgid ""
+"Yes. With a digital smile design you see and approve the shape and shade "
+"before anything is made — we aim for a natural result that suits your face."
+msgstr ""
+"نعم. مع التصميم الرقمي للابتسامة ترى الشكل واللون وتوافق عليهما قبل تصنيع أي"
+" شيء — نهدف إلى نتيجة طبيعية تناسب وجهك."
+
+#: apps/core/templatetags/site_tags.py:218 apps/core/views.py:29
+msgid "How long do I need to stay in Istanbul?"
+msgstr "كم يجب أن أبقى في إسطنبول؟"
+
+#: apps/core/templatetags/site_tags.py:219 apps/core/views.py:30
+msgid ""
+"It depends on the treatment: fillings, cleaning and composite veneers take "
+"1–3 days, crowns and porcelain veneers about 5–7 days, implants usually two "
+"visits a few months apart."
+msgstr ""
+"يعتمد ذلك على العلاج: الحشوات والتنظيف والقشور التجميلية من الكومبوزيت "
+"تستغرق 1–3 أيام، والتيجان وقشور البورسلين نحو 5–7 أيام، أما الزراعة فعادةً "
+"زيارتان بينهما بضعة أشهر."
+
+#: apps/core/templatetags/site_tags.py:221 apps/core/views.py:32
+msgid "Do you speak my language?"
+msgstr "هل تتحدثون لغتي؟"
+
+#: apps/core/templatetags/site_tags.py:222 apps/core/views.py:33
+msgid ""
+"We communicate with international patients in English and other languages, "
+"and you can message the dentist directly on WhatsApp before, during and "
+"after your treatment."
+msgstr ""
+"نتواصل مع المرضى الدوليين بالإنجليزية ولغات أخرى، ويمكنك مراسلة الطبيب "
+"مباشرة عبر واتساب قبل العلاج وأثناءه وبعده."
+
+#: apps/core/templatetags/site_tags.py:226 apps/core/views.py:35
+msgid "How experienced is the dentist?"
+msgstr "ما مدى خبرة الطبيب؟"
+
+#: apps/core/templatetags/site_tags.py:227 apps/core/views.py:36
+#, python-format
+msgid "Our lead dentist has %(years)s years of clinical experience."
+msgstr "تتمتع طبيبتنا الرئيسية بخبرة سريرية تمتد %(years)s عامًا."
+
 #: apps/core/urls.py:9
 msgid "about/"
 msgstr "man-nahnu/"
@@ -324,70 +499,6 @@ msgstr "ittasil-bina/shukran/"
 #: apps/core/urls.py:12
 msgid "privacy/"
 msgstr "al-khususiya/"
-
-#: apps/core/views.py:21
-msgid "Is it safe to get dental treatment in Turkey?"
-msgstr "هل علاج الأسنان في تركيا آمن؟"
-
-#: apps/core/views.py:22
-msgid ""
-"Yes, when you choose a licensed clinic with experienced dentists and "
-"certified materials. Ask for the dentist's credentials, the brands of "
-"implants and crowns, and a written treatment plan before you travel."
-msgstr ""
-"نعم، عندما تختار عيادة مرخّصة بأطباء ذوي خبرة ومواد معتمدة. اطلب قبل السفر "
-"مؤهلات الطبيب وأنواع الزرعات والتيجان وخطة علاج مكتوبة."
-
-#: apps/core/views.py:25
-msgid "How much does dental treatment in Istanbul cost?"
-msgstr "كم تكلفة علاج الأسنان في إسطنبول؟"
-
-#: apps/core/views.py:26
-msgid ""
-"Very affordable compared with Western Europe — with the same materials and "
-"techniques. We do not publish one-size-fits-all prices: call us or send "
-"photos on WhatsApp and you receive a fixed written quote before treatment "
-"starts."
-msgstr ""
-"تكلفة مناسبة جداً مقارنة بأوروبا الغربية — بنفس المواد والتقنيات. لا ننشر "
-"أسعاراً موحدة للجميع: اتصل بنا أو أرسل صوراً عبر واتساب وستحصل على سعر ثابت "
-"مكتوب قبل بدء العلاج."
-
-#: apps/core/views.py:29
-msgid "How long do I need to stay in Istanbul?"
-msgstr "كم يجب أن أبقى في إسطنبول؟"
-
-#: apps/core/views.py:30
-msgid ""
-"It depends on the treatment: fillings, cleaning and composite veneers take "
-"1–3 days, crowns and porcelain veneers about 5–7 days, implants usually two "
-"visits a few months apart."
-msgstr ""
-"يعتمد ذلك على العلاج: الحشوات والتنظيف والقشور التجميلية من الكومبوزيت "
-"تستغرق 1–3 أيام، والتيجان وقشور البورسلين نحو 5–7 أيام، أما الزراعة فعادةً "
-"زيارتان بينهما بضعة أشهر."
-
-#: apps/core/views.py:32
-msgid "Do you speak my language?"
-msgstr "هل تتحدثون لغتي؟"
-
-#: apps/core/views.py:33
-msgid ""
-"We communicate with international patients in English and other languages, "
-"and you can message the dentist directly on WhatsApp before, during and "
-"after your treatment."
-msgstr ""
-"نتواصل مع المرضى الدوليين بالإنجليزية ولغات أخرى، ويمكنك مراسلة الطبيب "
-"مباشرة عبر واتساب قبل العلاج وأثناءه وبعده."
-
-#: apps/core/views.py:35
-msgid "How experienced is the dentist?"
-msgstr "ما مدى خبرة الطبيب؟"
-
-#: apps/core/views.py:36
-#, python-format
-msgid "Our lead dentist has %(years)s years of clinical experience."
-msgstr "تتمتع طبيبتنا الرئيسية بخبرة سريرية تمتد %(years)s عامًا."
 
 #: apps/core/views.py:87
 msgid "Dental Tourism Istanbul — Implants, Veneers & Crowns in Turkey"
@@ -451,7 +562,7 @@ msgstr "كيف نعالج بياناتك الشخصية ونحميها (GDPR / K
 msgid "Page not found"
 msgstr "الصفحة غير موجودة"
 
-#: apps/seo/common.py:36 templates/clinics/detail.html:78
+#: apps/seo/common.py:36 templates/clinics/detail.html:75
 #: templates/clinics/doctor.html:26 templates/components/footer.html:49
 #: templates/components/navbar.html:56 templates/components/navbar.html:93
 #: templates/components/reviews.html:16 templates/home/sections/hero.html:180
@@ -476,12 +587,6 @@ msgstr "تخدير موضعي، وطبيب يشرح كل شيء أولاً، و�
 msgid "Check everything before you trust us"
 msgstr "تحقق من كل شيء قبل أن تثق بنا"
 
-#: apps/seo/common.py:69
-msgid ""
-"Real reviews with their source, named materials and a written plan before "
-"you travel."
-msgstr "تقييمات حقيقية بمصدرها، ومواد محددة بالاسم، وخطة مكتوبة قبل السفر."
-
 #: apps/seo/common.py:70
 msgid "Very affordable — and a fixed price in writing"
 msgstr "تكلفة مناسبة جداً — وسعر ثابت مكتوب"
@@ -500,10 +605,6 @@ msgid ""
 "materials, discreet care."
 msgstr ""
 "طبيب خبير واحد مسؤول عن علاجك كاملاً، ومواد ممتازة، ورعاية بخصوصية تامة."
-
-#: apps/seo/common.py:74
-msgid "A treatment planned for you — not a template"
-msgstr "علاج مخطط لك — وليس قالبًا جاهزًا"
 
 #: apps/seo/common.py:75
 msgid ""
@@ -1006,8 +1107,8 @@ msgstr ""
 
 #: templates/about.html:10 templates/base.html:52
 #: templates/clinics/detail.html:36 templates/components/footer.html:18
-#: templates/components/reviews.html:7 templates/home/_stats.html:5
-#: templates/pseo/_hero.html:9
+#: templates/components/mind_nudge.html:12 templates/components/reviews.html:7
+#: templates/home/_stats.html:5 templates/pseo/_hero.html:9
 #, python-format
 msgid "%(n)s Google review"
 msgid_plural "%(n)s Google reviews"
@@ -1023,7 +1124,7 @@ msgstr[5] "%(n)s تقييم على Google"
 msgid "Send a photo — free assessment"
 msgstr "أرسل صورة — تقييم مجاني"
 
-#: templates/about.html:13 templates/base.html:66
+#: templates/about.html:13 templates/base.html:68
 #: templates/components/cta.html:24 templates/pseo/_hero.html:12
 msgid "Call us"
 msgstr "اتصل بنا"
@@ -1087,7 +1188,7 @@ msgstr "انتقل إلى المحتوى"
 msgid "Language suggestion"
 msgstr "اقتراح اللغة"
 
-#: templates/base.html:38
+#: templates/base.html:38 templates/components/mind_nudge.html:5
 msgid "Close"
 msgstr "إغلاق"
 
@@ -1115,12 +1216,12 @@ msgstr "أكثر من %(y)s عامًا من الخبرة"
 msgid "read them on Google"
 msgstr "اقرأها على Google"
 
-#: templates/base.html:64 templates/components/footer.html:42
+#: templates/base.html:66 templates/components/footer.html:42
 #: templates/components/navbar.html:59 templates/components/navbar.html:94
 msgid "Contact"
 msgstr "تواصل معنا"
 
-#: templates/base.html:70 templates/contact.html:13
+#: templates/base.html:72 templates/contact.html:13
 msgid "Chat on WhatsApp"
 msgstr "راسلنا على واتساب"
 
@@ -1283,21 +1384,7 @@ msgstr "التواصل والموقع"
 msgid "Map"
 msgstr "الخريطة"
 
-#: templates/clinics/detail.html:68 templates/components/navbar.html:20
-msgid "Before & after"
-msgstr "قبل وبعد"
-
-#: templates/clinics/detail.html:69 templates/home/sections/hero.html:60
-#: templates/home/sections/hero.html:63 templates/pseo/_photos.html:8
-msgid "Before"
-msgstr "قبل"
-
-#: templates/clinics/detail.html:69 templates/home/sections/hero.html:61
-#: templates/home/sections/hero.html:64 templates/pseo/_photos.html:8
-msgid "After"
-msgstr "بعد"
-
-#: templates/clinics/detail.html:79
+#: templates/clinics/detail.html:76
 #, python-format
 msgid "%(n)s review on dentaltourism.tr"
 msgid_plural "%(n)s reviews on dentaltourism.tr"
@@ -1308,61 +1395,61 @@ msgstr[3] "%(n)s تقييمات على dentaltourism.tr"
 msgstr[4] "%(n)s تقييمًا على dentaltourism.tr"
 msgstr[5] "%(n)s تقييم على dentaltourism.tr"
 
-#: templates/clinics/detail.html:82
+#: templates/clinics/detail.html:79
 msgid "All Google reviews"
 msgstr "جميع تقييمات Google"
 
-#: templates/clinics/detail.html:83
+#: templates/clinics/detail.html:80
 msgid "Review us on Google"
 msgstr "قيّمنا على Google"
 
-#: templates/clinics/detail.html:84
+#: templates/clinics/detail.html:81
 msgid "Write a review"
 msgstr "اكتب تقييمًا"
 
-#: templates/clinics/detail.html:88
+#: templates/clinics/detail.html:85
 msgid "Reviews on dentaltourism.tr"
 msgstr "التقييمات على dentaltourism.tr"
 
-#: templates/clinics/detail.html:89
+#: templates/clinics/detail.html:86
 msgid "Reviews on Google and other platforms"
 msgstr "التقييمات على Google ومنصات أخرى"
 
-#: templates/clinics/detail.html:92
+#: templates/clinics/detail.html:89
 #, python-format
 msgid "Were you treated at %(name)s? Share your experience"
 msgstr "هل تلقيت العلاج في %(name)s؟ شارك تجربتك"
 
-#: templates/clinics/detail.html:93
+#: templates/clinics/detail.html:90
 msgid ""
 "Reviews are checked before publication. Your email address is never shown."
 msgstr "تتم مراجعة التقييمات قبل النشر. لا يظهر بريدك الإلكتروني أبدًا."
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Poor"
 msgstr "ضعيف"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Fair"
 msgstr "مقبول"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Good"
 msgstr "جيد"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Very good"
 msgstr "جيد جداً"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Excellent"
 msgstr "ممتاز"
 
-#: templates/clinics/detail.html:106
+#: templates/clinics/detail.html:103
 msgid "Tap a star"
 msgstr "اضغط على نجمة"
 
-#: templates/clinics/detail.html:111
+#: templates/clinics/detail.html:108
 msgid "Submit review"
 msgstr "إرسال التقييم"
 
@@ -1492,7 +1579,6 @@ msgstr ""
 "النهاية."
 
 #: templates/components/cta.html:13
-#| msgid "Treatment plan and fixed price"
 msgid "Get a treatment plan made for your teeth"
 msgstr "احصل على خطة علاج مصممة لأسنانك"
 
@@ -1527,7 +1613,7 @@ msgstr "أرسل لنا صورة أو أشعة. سترد طبيبتنا بخطة
 msgid "Contact form"
 msgstr "نموذج التواصل"
 
-#: templates/components/faq.html:4 templates/home/sections/faq.html:2
+#: templates/components/faq.html:5 templates/home/sections/faq.html:2
 msgid "Frequently asked questions"
 msgstr "الأسئلة الشائعة"
 
@@ -1557,6 +1643,10 @@ msgstr "القائمة الرئيسية"
 #: templates/components/navbar.html:19 templates/pseo/_price_note.html:3
 msgid "What does it cost?"
 msgstr "كم التكلفة؟"
+
+#: templates/components/navbar.html:20
+msgid "Before & after"
+msgstr "قبل وبعد"
 
 #: templates/components/navbar.html:25 templates/components/navbar.html:84
 msgid "Packages"
@@ -1611,10 +1701,6 @@ msgstr "تغيير اللغة"
 msgid "Get a free quote"
 msgstr "عرض سعر مجاني"
 
-#: templates/components/navbar.html:73 templates/home/sections/hero.html:148
-msgid "Book now"
-msgstr "احجز الآن"
-
 #: templates/components/navbar.html:73
 msgid "Private consultation"
 msgstr "استشارة خاصة"
@@ -1632,6 +1718,45 @@ msgstr "استشارة مجانية"
 #: templates/components/navbar.html:75
 msgid "Menu"
 msgstr "القائمة"
+
+#: templates/components/results.html:6 templates/home/sections/reviews.html:7
+msgid "Real patients, real results"
+msgstr "مرضى حقيقيون ونتائج حقيقية"
+
+#: templates/components/results.html:7
+#| msgid "Before and after results"
+msgid "Before & after — our own patients"
+msgstr "قبل وبعد — مرضانا"
+
+#: templates/components/results.html:8
+msgid ""
+"Every photo is a real patient of our clinic, shared with their consent. Drag"
+" to compare."
+msgstr "كل صورة لمريض حقيقي في عيادتنا، نُشرت بموافقته. اسحب للمقارنة."
+
+#: templates/components/results.html:14 templates/home/sections/hero.html:61
+#: templates/home/sections/hero.html:64
+msgid "After"
+msgstr "بعد"
+
+#: templates/components/results.html:15 templates/home/sections/hero.html:60
+#: templates/home/sections/hero.html:63
+msgid "Before"
+msgstr "قبل"
+
+#: templates/components/results.html:16 templates/home/sections/hero.html:60
+#: templates/home/sections/hero.html:63
+msgid "BEFORE"
+msgstr "قبل"
+
+#: templates/components/results.html:17 templates/home/sections/hero.html:61
+#: templates/home/sections/hero.html:64
+msgid "AFTER"
+msgstr "بعد"
+
+#: templates/components/results.html:20
+msgid "Drag to compare before and after"
+msgstr "اسحب للمقارنة بين قبل وبعد"
 
 #: templates/components/reviews.html:26
 msgid "Verified on our site"
@@ -1787,10 +1912,6 @@ msgstr ""
 msgid "Free assessment — WhatsApp"
 msgstr "تقييم مجاني — واتساب"
 
-#: templates/home/sections/hero.html:14
-msgid "Get a free price quote"
-msgstr "احصل على عرض سعر مجاني"
-
 #: templates/home/sections/hero.html:26
 #, python-format
 msgid "%(years)s+ years — ethical protocol"
@@ -1874,14 +1995,6 @@ msgstr "قبل / بعد"
 msgid "Before and after results"
 msgstr "نتائج قبل وبعد"
 
-#: templates/home/sections/hero.html:60 templates/home/sections/hero.html:63
-msgid "BEFORE"
-msgstr "قبل"
-
-#: templates/home/sections/hero.html:61 templates/home/sections/hero.html:64
-msgid "AFTER"
-msgstr "بعد"
-
 #: templates/home/sections/hero.html:73
 msgid "Limited appointments this month"
 msgstr "مواعيد محدودة هذا الشهر"
@@ -1959,10 +2072,6 @@ msgstr ""
 msgid "See patient reviews"
 msgstr "شاهد تقييمات المرضى"
 
-#: templates/home/sections/hero.html:101
-msgid "Ask a question"
-msgstr "اطرح سؤالًا"
-
 #: templates/home/sections/hero.html:103
 msgid "No commitment. Just answers."
 msgstr "دون التزام. مجرد إجابات."
@@ -1985,17 +2094,11 @@ msgid ""
 "more, nothing less."
 msgstr "عقود من الخبرة والدقة الجمالية. فقط ما تحتاجه — لا أكثر ولا أقل."
 
-#: templates/home/sections/hero.html:123
-msgid "Request a private appointment"
-msgstr "اطلب موعدًا خاصًا"
-
 #: templates/home/sections/hero.html:132
-#| msgid "Evidence-based dentistry"
 msgid "Personalised dentistry"
 msgstr "طب أسنان مخصص"
 
 #: templates/home/sections/hero.html:134
-#| msgid "Safe dental treatment in Istanbul —"
 msgid "Quality dental treatment in Istanbul —"
 msgstr "علاج أسنان عالي الجودة في إسطنبول —"
 
@@ -2013,12 +2116,10 @@ msgstr ""
 "السليمة، ونستخدم مواد ممتازة، ويقوم طبيب واحد ذو خبرة بكل خطوة."
 
 #: templates/home/sections/hero.html:136
-#| msgid "Ask about smile design"
 msgid "Digital smile design"
 msgstr "التصميم الرقمي للابتسامة"
 
 #: templates/home/sections/hero.html:136
-#| msgid "Preparation"
 msgid "Minimal preparation"
 msgstr "أقل قدر من البرد"
 
@@ -2026,13 +2127,7 @@ msgstr "أقل قدر من البرد"
 msgid "One dentist, start to finish"
 msgstr "طبيب واحد من البداية إلى النهاية"
 
-#: templates/home/sections/hero.html:138
-#| msgid "Personal treatment plan"
-msgid "Get my personal treatment plan"
-msgstr "احصل على خطة علاجي الشخصية"
-
 #: templates/home/sections/hero.html:139
-#| msgid "Your dentist"
 msgid "Meet your dentist"
 msgstr "تعرّف على طبيبك"
 
@@ -2080,10 +2175,6 @@ msgid ""
 "transparent answer to every question."
 msgstr ""
 "المواد والمؤهلات وما يحدث إذا حدثت مشكلة — تحصل على إجابة شفافة لكل سؤال."
-
-#: templates/home/sections/hero.html:177
-msgid "Ask any question — free"
-msgstr "اسأل أي سؤال — مجانًا"
 
 #: templates/home/sections/hero.html:181
 msgid "What patients actually say"
@@ -2168,10 +2259,6 @@ msgstr "تجارب المرضى"
 msgid "Their stories — your inspiration"
 msgstr "قصصهم — إلهامك"
 
-#: templates/home/sections/reviews.html:7
-msgid "Real patients, real results"
-msgstr "مرضى حقيقيون ونتائج حقيقية"
-
 #: templates/home/sections/reviews.html:10
 msgid "Videos are published with patients' explicit consent."
 msgstr "تُنشر الفيديوهات بموافقة صريحة من المرضى."
@@ -2189,7 +2276,6 @@ msgid "Signature treatments"
 msgstr "علاجاتنا المميزة"
 
 #: templates/home/sections/treatments.html:6
-#| msgid "Appointments planned around your flights"
 msgid "Treatments planned around you"
 msgstr "علاجات مخططة حولك"
 
@@ -2459,23 +2545,7 @@ msgstr "اعرف المزيد عنا"
 msgid "Transparent by design — check us yourself"
 msgstr "الشفافية مبدؤنا — تحقق بنفسك"
 
-#: templates/pseo/_photos.html:4
-msgid "Real results from our clinic"
-msgstr "نتائج حقيقية من عيادتنا"
-
-#: templates/pseo/_photos.html:5
-msgid "Published with patient consent. No stock photos, no filters."
-msgstr "منشورة بموافقة المرضى. لا صور جاهزة ولا فلاتر."
-
-#: templates/pseo/_photos.html:7
-msgid "Before treatment"
-msgstr "قبل العلاج"
-
-#: templates/pseo/_photos.html:7
-msgid "After treatment"
-msgstr "بعد العلاج"
-
-#: templates/pseo/_photos.html:15
+#: templates/pseo/_photos.html:8
 msgid "Inside our clinic"
 msgstr "داخل عيادتنا"
 
@@ -2742,3 +2812,15 @@ msgid ""
 msgstr ""
 "جميع العلاجات التي نقدمها، مع معلومات صادقة عن الإجراء ومدة الإقامة في "
 "إسطنبول والتكلفة."
+
+#~ msgid "Real results from our clinic"
+#~ msgstr "نتائج حقيقية من عيادتنا"
+
+#~ msgid "Published with patient consent. No stock photos, no filters."
+#~ msgstr "منشورة بموافقة المرضى. لا صور جاهزة ولا فلاتر."
+
+#~ msgid "Before treatment"
+#~ msgstr "قبل العلاج"
+
+#~ msgid "After treatment"
+#~ msgstr "بعد العلاج"

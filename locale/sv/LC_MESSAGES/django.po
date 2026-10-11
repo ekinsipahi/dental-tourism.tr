@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-11 10:00+0300\n"
+"POT-Creation-Date: 2026-10-11 13:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -226,7 +226,6 @@ msgid "I would like to request a private appointment."
 msgstr "Jag vill boka en privat tid."
 
 #: apps/core/context_processors.py:70
-#| msgid "Personal treatment plan"
 msgid "I would like a personalised treatment plan."
 msgstr "Jag vill ha en personlig behandlingsplan."
 
@@ -312,6 +311,189 @@ msgstr "per behandlingstillfälle"
 msgid "per smile"
 msgstr "per leende"
 
+#: apps/core/templatetags/site_tags.py:165 apps/seo/common.py:74
+msgid "A treatment planned for you — not a template"
+msgstr "En behandling planerad för dig — ingen mall"
+
+#: apps/core/templatetags/site_tags.py:166
+msgid ""
+"No one-size-fits-all packages: your plan is made only for you, after the "
+"dentist has examined your case."
+msgstr ""
+"Inga standardpaket: din plan görs bara för dig, efter att tandläkaren har "
+"granskat ditt fall."
+
+#: apps/core/templatetags/site_tags.py:167
+#: templates/home/sections/hero.html:138
+msgid "Get my personal treatment plan"
+msgstr "Få min personliga behandlingsplan"
+
+#: apps/core/templatetags/site_tags.py:168
+msgid "Everything here is real"
+msgstr "Allt här är äkta"
+
+#: apps/core/templatetags/site_tags.py:169 apps/seo/common.py:69
+msgid ""
+"Real reviews with their source, named materials and a written plan before "
+"you travel."
+msgstr ""
+"Riktiga omdömen med källa, namngivna material och en skriftlig plan före "
+"resan."
+
+#: apps/core/templatetags/site_tags.py:170
+#: apps/core/templatetags/site_tags.py:174
+#: templates/home/sections/hero.html:177
+msgid "Ask any question — free"
+msgstr "Ställ vilken fråga som helst — kostnadsfritt"
+
+#: apps/core/templatetags/site_tags.py:173
+#: templates/home/sections/hero.html:14
+msgid "Get a free price quote"
+msgstr "Kostnadsfri prisoffert"
+
+#: apps/core/templatetags/site_tags.py:173
+#: templates/home/sections/hero.html:123
+msgid "Request a private appointment"
+msgstr "Begär en privat tid"
+
+#: apps/core/templatetags/site_tags.py:174 templates/components/navbar.html:73
+#: templates/home/sections/hero.html:148
+msgid "Book now"
+msgstr "Boka nu"
+
+#: apps/core/templatetags/site_tags.py:181
+#: templates/components/results.html:30 templates/home/sections/hero.html:101
+msgid "Ask a question"
+msgstr "Ställ en fråga"
+
+#: apps/core/templatetags/site_tags.py:195 apps/core/views.py:21
+msgid "Is it safe to get dental treatment in Turkey?"
+msgstr "Är det säkert att göra tandbehandling i Turkiet?"
+
+#: apps/core/templatetags/site_tags.py:196 apps/core/views.py:22
+msgid ""
+"Yes, when you choose a licensed clinic with experienced dentists and "
+"certified materials. Ask for the dentist's credentials, the brands of "
+"implants and crowns, and a written treatment plan before you travel."
+msgstr ""
+"Ja, om du väljer en licensierad klinik med erfarna tandläkare och "
+"certifierade material. Fråga innan resan efter tandläkarens kvalifikationer,"
+" märken på implantat och kronor samt en skriftlig behandlingsplan."
+
+#: apps/core/templatetags/site_tags.py:199 apps/core/views.py:25
+msgid "How much does dental treatment in Istanbul cost?"
+msgstr "Vad kostar tandvård i Istanbul?"
+
+#: apps/core/templatetags/site_tags.py:200 apps/core/views.py:26
+msgid ""
+"Very affordable compared with Western Europe — with the same materials and "
+"techniques. We do not publish one-size-fits-all prices: call us or send "
+"photos on WhatsApp and you receive a fixed written quote before treatment "
+"starts."
+msgstr ""
+"Mycket prisvärt jämfört med Västeuropa – med samma material och tekniker. Vi"
+" publicerar inga standardpriser: ring oss eller skicka bilder på WhatsApp så"
+" får du ett skriftligt fast pris innan behandlingen börjar."
+
+#: apps/core/templatetags/site_tags.py:203
+msgid "Does the treatment hurt?"
+msgstr "Gör behandlingen ont?"
+
+#: apps/core/templatetags/site_tags.py:204
+msgid ""
+"Treatment is done under local anaesthesia, so you feel pressure but not "
+"pain. The dentist explains each step before starting, and you can ask for a "
+"break at any time."
+msgstr ""
+"Behandlingen görs med lokalbedövning: du känner tryck men ingen smärta. "
+"Tandläkaren förklarar varje steg innan och du kan be om paus när som helst."
+
+#: apps/core/templatetags/site_tags.py:206
+msgid "Will my treatment plan be made for me personally?"
+msgstr "Görs min behandlingsplan personligen för mig?"
+
+#: apps/core/templatetags/site_tags.py:207
+msgid ""
+"Yes. We do not sell ready-made packages: the dentist examines your photos or"
+" X-ray, saves healthy teeth first and plans only what you actually need."
+msgstr ""
+"Ja. Vi säljer inga färdiga paket: tandläkaren granskar dina foton eller din "
+"röntgenbild, bevarar friska tänder först och planerar bara det du verkligen "
+"behöver."
+
+#: apps/core/templatetags/site_tags.py:209
+msgid "Are the reviews and photos on this site real?"
+msgstr "Är recensionerna och bilderna på den här sidan äkta?"
+
+#: apps/core/templatetags/site_tags.py:210
+msgid ""
+"Yes. Our reviews are on Google with their source, and the photos show our "
+"own clinic, team and patients (shared with their consent)."
+msgstr ""
+"Ja. Våra recensioner finns på Google med källa, och bilderna visar vår egen "
+"klinik, vårt team och våra patienter (med deras samtycke)."
+
+#: apps/core/templatetags/site_tags.py:212
+msgid "Can I have a private, discreet appointment?"
+msgstr "Kan jag få en privat, diskret tid?"
+
+#: apps/core/templatetags/site_tags.py:213
+msgid ""
+"Yes. Your appointments are planned around your schedule, and the same "
+"dentist looks after you from the first consultation to the final check."
+msgstr ""
+"Ja. Dina besök planeras efter ditt schema och samma tandläkare tar hand om "
+"dig från första konsultationen till sista kontrollen."
+
+#: apps/core/templatetags/site_tags.py:215
+msgid "Can I choose the shape and shade of my new teeth?"
+msgstr "Kan jag välja form och färg på mina nya tänder?"
+
+#: apps/core/templatetags/site_tags.py:216
+msgid ""
+"Yes. With a digital smile design you see and approve the shape and shade "
+"before anything is made — we aim for a natural result that suits your face."
+msgstr ""
+"Ja. Med digital smile design ser och godkänner du form och färg innan något "
+"tillverkas — vi siktar på ett naturligt resultat som passar ditt ansikte."
+
+#: apps/core/templatetags/site_tags.py:218 apps/core/views.py:29
+msgid "How long do I need to stay in Istanbul?"
+msgstr "Hur länge behöver jag stanna i Istanbul?"
+
+#: apps/core/templatetags/site_tags.py:219 apps/core/views.py:30
+msgid ""
+"It depends on the treatment: fillings, cleaning and composite veneers take "
+"1–3 days, crowns and porcelain veneers about 5–7 days, implants usually two "
+"visits a few months apart."
+msgstr ""
+"Det beror på behandlingen: fyllningar, tandrengöring och kompositfasader tar"
+" 1–3 dagar, kronor och porslinsfasader cirka 5–7 dagar, implantat oftast två"
+" besök med några månaders mellanrum."
+
+#: apps/core/templatetags/site_tags.py:221 apps/core/views.py:32
+msgid "Do you speak my language?"
+msgstr "Talar ni mitt språk?"
+
+#: apps/core/templatetags/site_tags.py:222 apps/core/views.py:33
+msgid ""
+"We communicate with international patients in English and other languages, "
+"and you can message the dentist directly on WhatsApp before, during and "
+"after your treatment."
+msgstr ""
+"Vi kommunicerar med internationella patienter på engelska och andra språk, "
+"och du kan skriva direkt till tandläkaren på WhatsApp före, under och efter "
+"behandlingen."
+
+#: apps/core/templatetags/site_tags.py:226 apps/core/views.py:35
+msgid "How experienced is the dentist?"
+msgstr "Hur erfaren är tandläkaren?"
+
+#: apps/core/templatetags/site_tags.py:227 apps/core/views.py:36
+#, python-format
+msgid "Our lead dentist has %(years)s years of clinical experience."
+msgstr "Vår ansvariga tandläkare har %(years)s års klinisk erfarenhet."
+
 #: apps/core/urls.py:9
 msgid "about/"
 msgstr "om-oss/"
@@ -327,72 +509,6 @@ msgstr "kontakt/tack/"
 #: apps/core/urls.py:12
 msgid "privacy/"
 msgstr "integritet/"
-
-#: apps/core/views.py:21
-msgid "Is it safe to get dental treatment in Turkey?"
-msgstr "Är det säkert att göra tandbehandling i Turkiet?"
-
-#: apps/core/views.py:22
-msgid ""
-"Yes, when you choose a licensed clinic with experienced dentists and "
-"certified materials. Ask for the dentist's credentials, the brands of "
-"implants and crowns, and a written treatment plan before you travel."
-msgstr ""
-"Ja, om du väljer en licensierad klinik med erfarna tandläkare och "
-"certifierade material. Fråga innan resan efter tandläkarens kvalifikationer,"
-" märken på implantat och kronor samt en skriftlig behandlingsplan."
-
-#: apps/core/views.py:25
-msgid "How much does dental treatment in Istanbul cost?"
-msgstr "Vad kostar tandvård i Istanbul?"
-
-#: apps/core/views.py:26
-msgid ""
-"Very affordable compared with Western Europe — with the same materials and "
-"techniques. We do not publish one-size-fits-all prices: call us or send "
-"photos on WhatsApp and you receive a fixed written quote before treatment "
-"starts."
-msgstr ""
-"Mycket prisvärt jämfört med Västeuropa – med samma material och tekniker. Vi"
-" publicerar inga standardpriser: ring oss eller skicka bilder på WhatsApp så"
-" får du ett skriftligt fast pris innan behandlingen börjar."
-
-#: apps/core/views.py:29
-msgid "How long do I need to stay in Istanbul?"
-msgstr "Hur länge behöver jag stanna i Istanbul?"
-
-#: apps/core/views.py:30
-msgid ""
-"It depends on the treatment: fillings, cleaning and composite veneers take "
-"1–3 days, crowns and porcelain veneers about 5–7 days, implants usually two "
-"visits a few months apart."
-msgstr ""
-"Det beror på behandlingen: fyllningar, tandrengöring och kompositfasader tar"
-" 1–3 dagar, kronor och porslinsfasader cirka 5–7 dagar, implantat oftast två"
-" besök med några månaders mellanrum."
-
-#: apps/core/views.py:32
-msgid "Do you speak my language?"
-msgstr "Talar ni mitt språk?"
-
-#: apps/core/views.py:33
-msgid ""
-"We communicate with international patients in English and other languages, "
-"and you can message the dentist directly on WhatsApp before, during and "
-"after your treatment."
-msgstr ""
-"Vi kommunicerar med internationella patienter på engelska och andra språk, "
-"och du kan skriva direkt till tandläkaren på WhatsApp före, under och efter "
-"behandlingen."
-
-#: apps/core/views.py:35
-msgid "How experienced is the dentist?"
-msgstr "Hur erfaren är tandläkaren?"
-
-#: apps/core/views.py:36
-#, python-format
-msgid "Our lead dentist has %(years)s years of clinical experience."
-msgstr "Vår ansvariga tandläkare har %(years)s års klinisk erfarenhet."
 
 #: apps/core/views.py:87
 msgid "Dental Tourism Istanbul — Implants, Veneers & Crowns in Turkey"
@@ -457,7 +573,7 @@ msgstr "Hur vi behandlar och skyddar dina personuppgifter (GDPR / KVKK)."
 msgid "Page not found"
 msgstr "Sidan hittades inte"
 
-#: apps/seo/common.py:36 templates/clinics/detail.html:78
+#: apps/seo/common.py:36 templates/clinics/detail.html:75
 #: templates/clinics/doctor.html:26 templates/components/footer.html:49
 #: templates/components/navbar.html:56 templates/components/navbar.html:93
 #: templates/components/reviews.html:16 templates/home/sections/hero.html:180
@@ -484,14 +600,6 @@ msgstr ""
 msgid "Check everything before you trust us"
 msgstr "Kontrollera allt innan du litar på oss"
 
-#: apps/seo/common.py:69
-msgid ""
-"Real reviews with their source, named materials and a written plan before "
-"you travel."
-msgstr ""
-"Riktiga omdömen med källa, namngivna material och en skriftlig plan före "
-"resan."
-
 #: apps/seo/common.py:70
 msgid "Very affordable — and a fixed price in writing"
 msgstr "Mycket prisvärt – och ett fast pris skriftligt"
@@ -512,10 +620,6 @@ msgid ""
 msgstr ""
 "En erfaren tandläkare ansvarar för hela behandlingen, förstklassiga "
 "material, diskret omvårdnad."
-
-#: apps/seo/common.py:74
-msgid "A treatment planned for you — not a template"
-msgstr "En behandling planerad för dig — ingen mall"
 
 #: apps/seo/common.py:75
 msgid ""
@@ -1041,8 +1145,8 @@ msgstr ""
 
 #: templates/about.html:10 templates/base.html:52
 #: templates/clinics/detail.html:36 templates/components/footer.html:18
-#: templates/components/reviews.html:7 templates/home/_stats.html:5
-#: templates/pseo/_hero.html:9
+#: templates/components/mind_nudge.html:12 templates/components/reviews.html:7
+#: templates/home/_stats.html:5 templates/pseo/_hero.html:9
 #, python-format
 msgid "%(n)s Google review"
 msgid_plural "%(n)s Google reviews"
@@ -1054,7 +1158,7 @@ msgstr[1] "%(n)s Google-omdömen"
 msgid "Send a photo — free assessment"
 msgstr "Skicka en bild – kostnadsfri bedömning"
 
-#: templates/about.html:13 templates/base.html:66
+#: templates/about.html:13 templates/base.html:68
 #: templates/components/cta.html:24 templates/pseo/_hero.html:12
 msgid "Call us"
 msgstr "Ring oss"
@@ -1119,7 +1223,7 @@ msgstr "Hoppa till innehållet"
 msgid "Language suggestion"
 msgstr "Språkförslag"
 
-#: templates/base.html:38
+#: templates/base.html:38 templates/components/mind_nudge.html:5
 msgid "Close"
 msgstr "Stäng"
 
@@ -1147,12 +1251,12 @@ msgstr "%(y)s+ års erfarenhet"
 msgid "read them on Google"
 msgstr "läs dem på Google"
 
-#: templates/base.html:64 templates/components/footer.html:42
+#: templates/base.html:66 templates/components/footer.html:42
 #: templates/components/navbar.html:59 templates/components/navbar.html:94
 msgid "Contact"
 msgstr "Kontakt"
 
-#: templates/base.html:70 templates/contact.html:13
+#: templates/base.html:72 templates/contact.html:13
 msgid "Chat on WhatsApp"
 msgstr "Chatta på WhatsApp"
 
@@ -1313,82 +1417,68 @@ msgstr "Kontakt och hitta hit"
 msgid "Map"
 msgstr "Karta"
 
-#: templates/clinics/detail.html:68 templates/components/navbar.html:20
-msgid "Before & after"
-msgstr "Före och efter"
-
-#: templates/clinics/detail.html:69 templates/home/sections/hero.html:60
-#: templates/home/sections/hero.html:63 templates/pseo/_photos.html:8
-msgid "Before"
-msgstr "Före"
-
-#: templates/clinics/detail.html:69 templates/home/sections/hero.html:61
-#: templates/home/sections/hero.html:64 templates/pseo/_photos.html:8
-msgid "After"
-msgstr "Efter"
-
-#: templates/clinics/detail.html:79
+#: templates/clinics/detail.html:76
 #, python-format
 msgid "%(n)s review on dentaltourism.tr"
 msgid_plural "%(n)s reviews on dentaltourism.tr"
 msgstr[0] "%(n)s omdöme på dentaltourism.tr"
 msgstr[1] "%(n)s omdömen på dentaltourism.tr"
 
-#: templates/clinics/detail.html:82
+#: templates/clinics/detail.html:79
 msgid "All Google reviews"
 msgstr "Alla Google-omdömen"
 
-#: templates/clinics/detail.html:83
+#: templates/clinics/detail.html:80
 msgid "Review us on Google"
 msgstr "Recensera oss på Google"
 
-#: templates/clinics/detail.html:84
+#: templates/clinics/detail.html:81
 msgid "Write a review"
 msgstr "Skriv ett omdöme"
 
-#: templates/clinics/detail.html:88
+#: templates/clinics/detail.html:85
 msgid "Reviews on dentaltourism.tr"
 msgstr "Omdömen på dentaltourism.tr"
 
-#: templates/clinics/detail.html:89
+#: templates/clinics/detail.html:86
 msgid "Reviews on Google and other platforms"
 msgstr "Omdömen på Google och andra plattformar"
 
-#: templates/clinics/detail.html:92
+#: templates/clinics/detail.html:89
 #, python-format
 msgid "Were you treated at %(name)s? Share your experience"
 msgstr "Har du behandlats på %(name)s? Dela din upplevelse"
 
-#: templates/clinics/detail.html:93
+#: templates/clinics/detail.html:90
 msgid ""
 "Reviews are checked before publication. Your email address is never shown."
 msgstr "Omdömen granskas före publicering. Din e-postadress visas aldrig."
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Poor"
 msgstr "Dåligt"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Fair"
 msgstr "Godkänt"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Good"
 msgstr "Bra"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Very good"
 msgstr "Mycket bra"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Excellent"
 msgstr "Utmärkt"
 
-#: templates/clinics/detail.html:106
+#: templates/clinics/detail.html:103
 msgid "Tap a star"
 msgstr "Tryck på en stjärna"
 
-#: templates/clinics/detail.html:111
+#: templates/clinics/detail.html:108
 msgid "Submit review"
 msgstr "Skicka omdöme"
 
@@ -1516,7 +1606,6 @@ msgstr ""
 " för din vård från början till slut."
 
 #: templates/components/cta.html:13
-#| msgid "Treatment plan and fixed price"
 msgid "Get a treatment plan made for your teeth"
 msgstr "Få en behandlingsplan gjord för dina tänder"
 
@@ -1553,7 +1642,7 @@ msgstr ""
 msgid "Contact form"
 msgstr "Kontaktformulär"
 
-#: templates/components/faq.html:4 templates/home/sections/faq.html:2
+#: templates/components/faq.html:5 templates/home/sections/faq.html:2
 msgid "Frequently asked questions"
 msgstr "Vanliga frågor"
 
@@ -1585,6 +1674,10 @@ msgstr "Huvudmeny"
 #: templates/components/navbar.html:19 templates/pseo/_price_note.html:3
 msgid "What does it cost?"
 msgstr "Vad kostar det?"
+
+#: templates/components/navbar.html:20
+msgid "Before & after"
+msgstr "Före och efter"
 
 #: templates/components/navbar.html:25 templates/components/navbar.html:84
 msgid "Packages"
@@ -1639,10 +1732,6 @@ msgstr "Byt språk"
 msgid "Get a free quote"
 msgstr "Kostnadsfri offert"
 
-#: templates/components/navbar.html:73 templates/home/sections/hero.html:148
-msgid "Book now"
-msgstr "Boka nu"
-
 #: templates/components/navbar.html:73
 msgid "Private consultation"
 msgstr "Privat konsultation"
@@ -1660,6 +1749,47 @@ msgstr "Kostnadsfri konsultation"
 #: templates/components/navbar.html:75
 msgid "Menu"
 msgstr "Meny"
+
+#: templates/components/results.html:6 templates/home/sections/reviews.html:7
+msgid "Real patients, real results"
+msgstr "Riktiga patienter, riktiga resultat"
+
+#: templates/components/results.html:7
+#| msgid "Before and after results"
+msgid "Before & after — our own patients"
+msgstr "Före & efter — våra egna patienter"
+
+#: templates/components/results.html:8
+msgid ""
+"Every photo is a real patient of our clinic, shared with their consent. Drag"
+" to compare."
+msgstr ""
+"Varje bild visar en riktig patient på vår klinik, publicerad med samtycke. "
+"Dra för att jämföra."
+
+#: templates/components/results.html:14 templates/home/sections/hero.html:61
+#: templates/home/sections/hero.html:64
+msgid "After"
+msgstr "Efter"
+
+#: templates/components/results.html:15 templates/home/sections/hero.html:60
+#: templates/home/sections/hero.html:63
+msgid "Before"
+msgstr "Före"
+
+#: templates/components/results.html:16 templates/home/sections/hero.html:60
+#: templates/home/sections/hero.html:63
+msgid "BEFORE"
+msgstr "FÖRE"
+
+#: templates/components/results.html:17 templates/home/sections/hero.html:61
+#: templates/home/sections/hero.html:64
+msgid "AFTER"
+msgstr "EFTER"
+
+#: templates/components/results.html:20
+msgid "Drag to compare before and after"
+msgstr "Dra för att jämföra före och efter"
 
 #: templates/components/reviews.html:26
 msgid "Verified on our site"
@@ -1817,10 +1947,6 @@ msgstr ""
 msgid "Free assessment — WhatsApp"
 msgstr "Kostnadsfri bedömning — WhatsApp"
 
-#: templates/home/sections/hero.html:14
-msgid "Get a free price quote"
-msgstr "Kostnadsfri prisoffert"
-
 #: templates/home/sections/hero.html:26
 #, python-format
 msgid "%(years)s+ years — ethical protocol"
@@ -1905,14 +2031,6 @@ msgstr "Före / efter"
 msgid "Before and after results"
 msgstr "Resultat före och efter"
 
-#: templates/home/sections/hero.html:60 templates/home/sections/hero.html:63
-msgid "BEFORE"
-msgstr "FÖRE"
-
-#: templates/home/sections/hero.html:61 templates/home/sections/hero.html:64
-msgid "AFTER"
-msgstr "EFTER"
-
 #: templates/home/sections/hero.html:73
 msgid "Limited appointments this month"
 msgstr "Begränsat antal tider den här månaden"
@@ -1990,10 +2108,6 @@ msgstr ""
 msgid "See patient reviews"
 msgstr "Se patientomdömen"
 
-#: templates/home/sections/hero.html:101
-msgid "Ask a question"
-msgstr "Ställ en fråga"
-
 #: templates/home/sections/hero.html:103
 msgid "No commitment. Just answers."
 msgstr "Utan förpliktelser. Bara svar."
@@ -2018,17 +2132,11 @@ msgstr ""
 "Decennier av erfarenhet och estetisk precision. Bara det du behöver — varken"
 " mer eller mindre."
 
-#: templates/home/sections/hero.html:123
-msgid "Request a private appointment"
-msgstr "Begär en privat tid"
-
 #: templates/home/sections/hero.html:132
-#| msgid "Evidence-based dentistry"
 msgid "Personalised dentistry"
 msgstr "Personlig tandvård"
 
 #: templates/home/sections/hero.html:134
-#| msgid "Safe dental treatment in Istanbul —"
 msgid "Quality dental treatment in Istanbul —"
 msgstr "Tandvård av hög kvalitet i Istanbul —"
 
@@ -2047,12 +2155,10 @@ msgstr ""
 "tandläkare utför varje steg."
 
 #: templates/home/sections/hero.html:136
-#| msgid "Ask about smile design"
 msgid "Digital smile design"
 msgstr "Digital smile design"
 
 #: templates/home/sections/hero.html:136
-#| msgid "Preparation"
 msgid "Minimal preparation"
 msgstr "Minimal preparation"
 
@@ -2060,13 +2166,7 @@ msgstr "Minimal preparation"
 msgid "One dentist, start to finish"
 msgstr "En tandläkare från början till slut"
 
-#: templates/home/sections/hero.html:138
-#| msgid "Personal treatment plan"
-msgid "Get my personal treatment plan"
-msgstr "Få min personliga behandlingsplan"
-
 #: templates/home/sections/hero.html:139
-#| msgid "Your dentist"
 msgid "Meet your dentist"
 msgstr "Möt din tandläkare"
 
@@ -2117,10 +2217,6 @@ msgid ""
 msgstr ""
 "Material, kvalifikationer, vad som händer om något går fel — du får ett "
 "transparent svar på varje fråga."
-
-#: templates/home/sections/hero.html:177
-msgid "Ask any question — free"
-msgstr "Ställ vilken fråga som helst — kostnadsfritt"
 
 #: templates/home/sections/hero.html:181
 msgid "What patients actually say"
@@ -2210,10 +2306,6 @@ msgstr "Patienters erfarenheter"
 msgid "Their stories — your inspiration"
 msgstr "Deras berättelser — din inspiration"
 
-#: templates/home/sections/reviews.html:7
-msgid "Real patients, real results"
-msgstr "Riktiga patienter, riktiga resultat"
-
 #: templates/home/sections/reviews.html:10
 msgid "Videos are published with patients' explicit consent."
 msgstr "Videorna publiceras med patienternas uttryckliga samtycke."
@@ -2231,7 +2323,6 @@ msgid "Signature treatments"
 msgstr "Våra signaturbehandlingar"
 
 #: templates/home/sections/treatments.html:6
-#| msgid "Appointments planned around your flights"
 msgid "Treatments planned around you"
 msgstr "Behandlingar planerade efter dig"
 
@@ -2503,23 +2594,7 @@ msgstr "Läs mer om oss"
 msgid "Transparent by design — check us yourself"
 msgstr "Transparenta av princip – granska oss själv"
 
-#: templates/pseo/_photos.html:4
-msgid "Real results from our clinic"
-msgstr "Riktiga resultat från vår klinik"
-
-#: templates/pseo/_photos.html:5
-msgid "Published with patient consent. No stock photos, no filters."
-msgstr "Publicerade med patienternas samtycke. Inga stockbilder, inga filter."
-
-#: templates/pseo/_photos.html:7
-msgid "Before treatment"
-msgstr "Före behandlingen"
-
-#: templates/pseo/_photos.html:7
-msgid "After treatment"
-msgstr "Efter behandlingen"
-
-#: templates/pseo/_photos.html:15
+#: templates/pseo/_photos.html:8
 msgid "Inside our clinic"
 msgstr "Inne på vår klinik"
 
@@ -2781,3 +2856,15 @@ msgid ""
 msgstr ""
 "Alla behandlingar vi erbjuder, med ärlig information om förloppet, hur länge"
 " du behöver stanna i Istanbul och vad det kostar."
+
+#~ msgid "Real results from our clinic"
+#~ msgstr "Riktiga resultat från vår klinik"
+
+#~ msgid "Published with patient consent. No stock photos, no filters."
+#~ msgstr "Publicerade med patienternas samtycke. Inga stockbilder, inga filter."
+
+#~ msgid "Before treatment"
+#~ msgstr "Före behandlingen"
+
+#~ msgid "After treatment"
+#~ msgstr "Efter behandlingen"

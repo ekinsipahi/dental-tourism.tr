@@ -39,7 +39,7 @@
     <div class="prose">{{ c.description|markdown }}</div>
 
     {% if offers %}
-    <h2 style="margin-top:2.5rem" data-track-section="price">{% trans "Treatments & prices" %}</h2>
+    <h2 style="margin-top:2.5rem" data-track-section="treatments">{% trans "Treatments & prices" %}</h2>
     <table class="table" style="display:table">
       <thead><tr><th>{% trans "Treatment" %}</th><th class="num">{% trans "Stay" %}</th></tr></thead>
       <tbody>{% for row in offers %}<tr><td><a href="{{ row.t.object.get_absolute_url }}">{{ row.t.icon }} {{ row.t.name }}</a></td><td class="num">{% if row.offer.stay_days %}{% blocktrans with d=row.offer.stay_days %}{{ d }} days{% endblocktrans %}{% else %}—{% endif %}</td></tr>{% endfor %}</tbody>
@@ -63,14 +63,9 @@
   </aside>
 </div></section>
 
-{% if cases %}
-<section class="section section-alt" data-track-section="before_after"><div class="wrap">
-  <h2>{% trans "Before & after" %}</h2>
-  <div class="grid grid-3">{% for case in cases %}<figure class="card" style="margin:0"><div class="grid grid-2" style="gap:.4rem"><img src="{{ case.before_src }}" alt="{% trans 'Before' %} {{ case.caption }}" loading="lazy"><img src="{{ case.after_src }}" alt="{% trans 'After' %} {{ case.caption }}" loading="lazy"></div>{% if case.caption %}<figcaption class="faint" style="margin-top:.6rem">{{ case.caption }}</figcaption>{% endif %}</figure>{% endfor %}</div>
-</div></section>
-{% endif %}
+{% results_block %}
 
-{% include "components/faq.html" with faq=c.faq wrap_class="wrap" %}
+{% page_faq faq=c.faq wrap_class="wrap" %}
 
 <section class="section" id="reviews" aria-labelledby="reviews-h2"><div class="wrap">
   <div class="reviews-head">

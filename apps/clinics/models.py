@@ -309,7 +309,11 @@ class BeforeAfterCase(models.Model):
     before_image_url = models.URLField(max_length=500, blank=True)
     after_image = models.ImageField(upload_to="clinics/cases/", blank=True)
     after_image_url = models.URLField(max_length=500, blank=True)
-    caption = models.CharField(max_length=200, blank=True)
+    key = models.SlugField(max_length=60, blank=True, db_index=True, help_text="Sabit kimlik (seed_media eşlemesi)")
+    title = models.CharField(max_length=120, blank=True, help_text="Kısa başlık — ör. 'Doğal monolitik zirkonya'")
+    caption = models.CharField(max_length=300, blank=True)
+    translations = models.JSONField(default=dict, blank=True,
+                                    help_text='Dil başına {"de": {"title": "…", "caption": "…"}} — boşsa EN/TR metni gösterilir')
     patient_consent = models.BooleanField(default=False, help_text="Hastanın yazılı onayı alındı.")
     is_published = models.BooleanField(default=False)
     order = models.PositiveIntegerField(default=0)
@@ -324,6 +328,12 @@ class BeforeAfterCase(models.Model):
     @property
     def after_src(self):
         return self.after_image.url if self.after_image else self.after_image_url
+
+    def text_in(self, lang):
+        """(başlık, açıklama) — istenen dilde; yoksa İngilizce, o da yoksa ana alanlar."""
+        t = (self.translations or {})
+        loc = t.get(lang) or t.get((lang or "")[:2]) or t.get("en") or {}
+        return loc.get("title") or self.title, loc.get("caption") or self.caption
 
 
 # ── Doctor ──────────────────────────────────────────────────────────────

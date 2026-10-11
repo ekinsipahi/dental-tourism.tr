@@ -602,3 +602,18 @@
 601|Kişisel tedavi planımı al
 602|Hekiminizle tanışın
 603|Size göre planlanan tedaviler
+604|Hazır paket yok: planınız, hekim vakanızı inceledikten sonra yalnızca sizin için hazırlanır.
+605|Burada her şey gerçek
+606|Tedavi acıtır mı?
+607|Tedavi lokal anestezi altında yapılır; baskı hissedersiniz ama ağrı hissetmezsiniz. Hekim başlamadan önce her adımı anlatır ve istediğiniz an ara verebilirsiniz.
+608|Tedavi planım bana özel mi hazırlanacak?
+609|Evet. Hazır paket satmıyoruz: hekim fotoğraflarınızı veya röntgeninizi inceler, önce sağlıklı dişleri korur ve yalnızca gerçekten ihtiyacınız olanı planlar.
+610|Bu sitedeki yorumlar ve fotoğraflar gerçek mi?
+611|Evet. Yorumlarımız kaynağıyla birlikte Google'da; fotoğraflar kendi kliniğimizi, ekibimizi ve hastalarımızı (izinleriyle) gösterir.
+612|Özel ve mahremiyeti korunan bir randevu alabilir miyim?
+613|Evet. Randevularınız programınıza göre planlanır ve ilk muayeneden son kontrole kadar sizinle aynı hekim ilgilenir.
+614|Yeni dişlerimin şeklini ve rengini seçebilir miyim?
+615|Evet. Dijital gülüş tasarımıyla, hiçbir şey üretilmeden önce şekli ve rengi görür ve onaylarsınız — yüzünüze uyan doğal bir sonuç hedefliyoruz.
+616|Önce ve sonra — kendi hastalarımız
+617|Her fotoğraf kliniğimizin gerçek bir hastasına ait ve onayıyla paylaşıldı. Karşılaştırmak için sürükleyin.
+618|Önce ve sonrayı karşılaştırmak için sürükleyin

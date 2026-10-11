@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-11 10:00+0300\n"
+"POT-Creation-Date: 2026-10-11 13:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -228,7 +228,6 @@ msgid "I would like to request a private appointment."
 msgstr "Aș dori să solicit o programare privată."
 
 #: apps/core/context_processors.py:70
-#| msgid "Personal treatment plan"
 msgid "I would like a personalised treatment plan."
 msgstr "Aș dori un plan de tratament personalizat."
 
@@ -314,6 +313,191 @@ msgstr "per ședință"
 msgid "per smile"
 msgstr "per zâmbet"
 
+#: apps/core/templatetags/site_tags.py:165 apps/seo/common.py:74
+msgid "A treatment planned for you — not a template"
+msgstr "Un tratament planificat pentru tine — nu un șablon"
+
+#: apps/core/templatetags/site_tags.py:166
+msgid ""
+"No one-size-fits-all packages: your plan is made only for you, after the "
+"dentist has examined your case."
+msgstr ""
+"Fără pachete standard: planul tău este făcut doar pentru tine, după ce "
+"medicul îți analizează cazul."
+
+#: apps/core/templatetags/site_tags.py:167
+#: templates/home/sections/hero.html:138
+msgid "Get my personal treatment plan"
+msgstr "Primește planul meu de tratament"
+
+#: apps/core/templatetags/site_tags.py:168
+msgid "Everything here is real"
+msgstr "Totul aici este real"
+
+#: apps/core/templatetags/site_tags.py:169 apps/seo/common.py:69
+msgid ""
+"Real reviews with their source, named materials and a written plan before "
+"you travel."
+msgstr ""
+"Recenzii reale cu sursa, materiale numite și un plan scris înainte de "
+"călătorie."
+
+#: apps/core/templatetags/site_tags.py:170
+#: apps/core/templatetags/site_tags.py:174
+#: templates/home/sections/hero.html:177
+msgid "Ask any question — free"
+msgstr "Puneți orice întrebare — gratuit"
+
+#: apps/core/templatetags/site_tags.py:173
+#: templates/home/sections/hero.html:14
+msgid "Get a free price quote"
+msgstr "Ofertă de preț gratuită"
+
+#: apps/core/templatetags/site_tags.py:173
+#: templates/home/sections/hero.html:123
+msgid "Request a private appointment"
+msgstr "Solicitați o programare privată"
+
+#: apps/core/templatetags/site_tags.py:174 templates/components/navbar.html:73
+#: templates/home/sections/hero.html:148
+msgid "Book now"
+msgstr "Programează acum"
+
+#: apps/core/templatetags/site_tags.py:181
+#: templates/components/results.html:30 templates/home/sections/hero.html:101
+msgid "Ask a question"
+msgstr "Puneți o întrebare"
+
+#: apps/core/templatetags/site_tags.py:195 apps/core/views.py:21
+msgid "Is it safe to get dental treatment in Turkey?"
+msgstr "Este sigur să faci un tratament dentar în Turcia?"
+
+#: apps/core/templatetags/site_tags.py:196 apps/core/views.py:22
+msgid ""
+"Yes, when you choose a licensed clinic with experienced dentists and "
+"certified materials. Ask for the dentist's credentials, the brands of "
+"implants and crowns, and a written treatment plan before you travel."
+msgstr ""
+"Da, dacă alegi o clinică autorizată, cu medici cu experiență și materiale "
+"certificate. Înainte de călătorie cere calificările medicului, mărcile "
+"implanturilor și coroanelor și un plan de tratament scris."
+
+#: apps/core/templatetags/site_tags.py:199 apps/core/views.py:25
+msgid "How much does dental treatment in Istanbul cost?"
+msgstr "Cât costă tratamentul dentar în Istanbul?"
+
+#: apps/core/templatetags/site_tags.py:200 apps/core/views.py:26
+msgid ""
+"Very affordable compared with Western Europe — with the same materials and "
+"techniques. We do not publish one-size-fits-all prices: call us or send "
+"photos on WhatsApp and you receive a fixed written quote before treatment "
+"starts."
+msgstr ""
+"Foarte accesibil față de Europa de Vest – cu aceleași materiale și tehnici. "
+"Nu publicăm prețuri unice pentru toți: sună-ne sau trimite fotografii pe "
+"WhatsApp și primești un preț fix în scris înainte de începerea "
+"tratamentului."
+
+#: apps/core/templatetags/site_tags.py:203
+msgid "Does the treatment hurt?"
+msgstr "Doare tratamentul?"
+
+#: apps/core/templatetags/site_tags.py:204
+msgid ""
+"Treatment is done under local anaesthesia, so you feel pressure but not "
+"pain. The dentist explains each step before starting, and you can ask for a "
+"break at any time."
+msgstr ""
+"Tratamentul se face sub anestezie locală: simți presiune, dar nu durere. "
+"Medicul explică fiecare pas înainte de a începe și poți cere o pauză "
+"oricând."
+
+#: apps/core/templatetags/site_tags.py:206
+msgid "Will my treatment plan be made for me personally?"
+msgstr "Planul meu de tratament va fi făcut personal pentru mine?"
+
+#: apps/core/templatetags/site_tags.py:207
+msgid ""
+"Yes. We do not sell ready-made packages: the dentist examines your photos or"
+" X-ray, saves healthy teeth first and plans only what you actually need."
+msgstr ""
+"Da. Nu vindem pachete gata făcute: medicul îți analizează fotografiile sau "
+"radiografia, păstrează mai întâi dinții sănătoși și planifică doar ce ai cu "
+"adevărat nevoie."
+
+#: apps/core/templatetags/site_tags.py:209
+msgid "Are the reviews and photos on this site real?"
+msgstr "Recenziile și fotografiile de pe acest site sunt reale?"
+
+#: apps/core/templatetags/site_tags.py:210
+msgid ""
+"Yes. Our reviews are on Google with their source, and the photos show our "
+"own clinic, team and patients (shared with their consent)."
+msgstr ""
+"Da. Recenziile noastre sunt pe Google, cu sursa lor, iar fotografiile arată "
+"propria noastră clinică, echipa și pacienții (cu acordul lor)."
+
+#: apps/core/templatetags/site_tags.py:212
+msgid "Can I have a private, discreet appointment?"
+msgstr "Pot avea o programare privată și discretă?"
+
+#: apps/core/templatetags/site_tags.py:213
+msgid ""
+"Yes. Your appointments are planned around your schedule, and the same "
+"dentist looks after you from the first consultation to the final check."
+msgstr ""
+"Da. Programările tale sunt stabilite în funcție de agenda ta, iar același "
+"medic se ocupă de tine de la prima consultație până la ultimul control."
+
+#: apps/core/templatetags/site_tags.py:215
+msgid "Can I choose the shape and shade of my new teeth?"
+msgstr "Pot alege forma și nuanța dinților noi?"
+
+#: apps/core/templatetags/site_tags.py:216
+msgid ""
+"Yes. With a digital smile design you see and approve the shape and shade "
+"before anything is made — we aim for a natural result that suits your face."
+msgstr ""
+"Da. Cu designul digital al zâmbetului vezi și aprobi forma și nuanța înainte"
+" de a se realiza ceva — urmărim un rezultat natural care se potrivește feței"
+" tale."
+
+#: apps/core/templatetags/site_tags.py:218 apps/core/views.py:29
+msgid "How long do I need to stay in Istanbul?"
+msgstr "Cât timp trebuie să stau în Istanbul?"
+
+#: apps/core/templatetags/site_tags.py:219 apps/core/views.py:30
+msgid ""
+"It depends on the treatment: fillings, cleaning and composite veneers take "
+"1–3 days, crowns and porcelain veneers about 5–7 days, implants usually two "
+"visits a few months apart."
+msgstr ""
+"Depinde de tratament: plombele, detartrajul și fațetele din compozit durează"
+" 1–3 zile, coroanele și fațetele din porțelan aproximativ 5–7 zile, iar "
+"implanturile de obicei două vizite la câteva luni distanță."
+
+#: apps/core/templatetags/site_tags.py:221 apps/core/views.py:32
+msgid "Do you speak my language?"
+msgstr "Vorbiți limba mea?"
+
+#: apps/core/templatetags/site_tags.py:222 apps/core/views.py:33
+msgid ""
+"We communicate with international patients in English and other languages, "
+"and you can message the dentist directly on WhatsApp before, during and "
+"after your treatment."
+msgstr ""
+"Comunicăm cu pacienții internaționali în engleză și alte limbi, iar înainte,"
+" în timpul și după tratament puteți scrie direct medicului pe WhatsApp."
+
+#: apps/core/templatetags/site_tags.py:226 apps/core/views.py:35
+msgid "How experienced is the dentist?"
+msgstr "Câtă experiență are medicul?"
+
+#: apps/core/templatetags/site_tags.py:227 apps/core/views.py:36
+#, python-format
+msgid "Our lead dentist has %(years)s years of clinical experience."
+msgstr "Medicul nostru principal are %(years)s ani de experiență clinică."
+
 #: apps/core/urls.py:9
 msgid "about/"
 msgstr "despre-noi/"
@@ -329,72 +513,6 @@ msgstr "contact/multumim/"
 #: apps/core/urls.py:12
 msgid "privacy/"
 msgstr "confidentialitate/"
-
-#: apps/core/views.py:21
-msgid "Is it safe to get dental treatment in Turkey?"
-msgstr "Este sigur să faci un tratament dentar în Turcia?"
-
-#: apps/core/views.py:22
-msgid ""
-"Yes, when you choose a licensed clinic with experienced dentists and "
-"certified materials. Ask for the dentist's credentials, the brands of "
-"implants and crowns, and a written treatment plan before you travel."
-msgstr ""
-"Da, dacă alegi o clinică autorizată, cu medici cu experiență și materiale "
-"certificate. Înainte de călătorie cere calificările medicului, mărcile "
-"implanturilor și coroanelor și un plan de tratament scris."
-
-#: apps/core/views.py:25
-msgid "How much does dental treatment in Istanbul cost?"
-msgstr "Cât costă tratamentul dentar în Istanbul?"
-
-#: apps/core/views.py:26
-msgid ""
-"Very affordable compared with Western Europe — with the same materials and "
-"techniques. We do not publish one-size-fits-all prices: call us or send "
-"photos on WhatsApp and you receive a fixed written quote before treatment "
-"starts."
-msgstr ""
-"Foarte accesibil față de Europa de Vest – cu aceleași materiale și tehnici. "
-"Nu publicăm prețuri unice pentru toți: sună-ne sau trimite fotografii pe "
-"WhatsApp și primești un preț fix în scris înainte de începerea "
-"tratamentului."
-
-#: apps/core/views.py:29
-msgid "How long do I need to stay in Istanbul?"
-msgstr "Cât timp trebuie să stau în Istanbul?"
-
-#: apps/core/views.py:30
-msgid ""
-"It depends on the treatment: fillings, cleaning and composite veneers take "
-"1–3 days, crowns and porcelain veneers about 5–7 days, implants usually two "
-"visits a few months apart."
-msgstr ""
-"Depinde de tratament: plombele, detartrajul și fațetele din compozit durează"
-" 1–3 zile, coroanele și fațetele din porțelan aproximativ 5–7 zile, iar "
-"implanturile de obicei două vizite la câteva luni distanță."
-
-#: apps/core/views.py:32
-msgid "Do you speak my language?"
-msgstr "Vorbiți limba mea?"
-
-#: apps/core/views.py:33
-msgid ""
-"We communicate with international patients in English and other languages, "
-"and you can message the dentist directly on WhatsApp before, during and "
-"after your treatment."
-msgstr ""
-"Comunicăm cu pacienții internaționali în engleză și alte limbi, iar înainte,"
-" în timpul și după tratament puteți scrie direct medicului pe WhatsApp."
-
-#: apps/core/views.py:35
-msgid "How experienced is the dentist?"
-msgstr "Câtă experiență are medicul?"
-
-#: apps/core/views.py:36
-#, python-format
-msgid "Our lead dentist has %(years)s years of clinical experience."
-msgstr "Medicul nostru principal are %(years)s ani de experiență clinică."
 
 #: apps/core/views.py:87
 msgid "Dental Tourism Istanbul — Implants, Veneers & Crowns in Turkey"
@@ -461,7 +579,7 @@ msgstr "Cum prelucrăm și protejăm datele dvs. personale (GDPR / KVKK)."
 msgid "Page not found"
 msgstr "Pagina nu a fost găsită"
 
-#: apps/seo/common.py:36 templates/clinics/detail.html:78
+#: apps/seo/common.py:36 templates/clinics/detail.html:75
 #: templates/clinics/doctor.html:26 templates/components/footer.html:49
 #: templates/components/navbar.html:56 templates/components/navbar.html:93
 #: templates/components/reviews.html:16 templates/home/sections/hero.html:180
@@ -488,14 +606,6 @@ msgstr ""
 msgid "Check everything before you trust us"
 msgstr "Verifică totul înainte să ai încredere în noi"
 
-#: apps/seo/common.py:69
-msgid ""
-"Real reviews with their source, named materials and a written plan before "
-"you travel."
-msgstr ""
-"Recenzii reale cu sursa, materiale numite și un plan scris înainte de "
-"călătorie."
-
 #: apps/seo/common.py:70
 msgid "Very affordable — and a fixed price in writing"
 msgstr "Foarte accesibil – și un preț fix în scris"
@@ -516,10 +626,6 @@ msgid ""
 msgstr ""
 "Un singur dentist cu experiență, responsabil de întregul tratament, "
 "materiale premium și îngrijire discretă."
-
-#: apps/seo/common.py:74
-msgid "A treatment planned for you — not a template"
-msgstr "Un tratament planificat pentru tine — nu un șablon"
 
 #: apps/seo/common.py:75
 msgid ""
@@ -1052,8 +1158,8 @@ msgstr ""
 
 #: templates/about.html:10 templates/base.html:52
 #: templates/clinics/detail.html:36 templates/components/footer.html:18
-#: templates/components/reviews.html:7 templates/home/_stats.html:5
-#: templates/pseo/_hero.html:9
+#: templates/components/mind_nudge.html:12 templates/components/reviews.html:7
+#: templates/home/_stats.html:5 templates/pseo/_hero.html:9
 #, python-format
 msgid "%(n)s Google review"
 msgid_plural "%(n)s Google reviews"
@@ -1066,7 +1172,7 @@ msgstr[2] "%(n)s de recenzii Google"
 msgid "Send a photo — free assessment"
 msgstr "Trimite o fotografie – evaluare gratuită"
 
-#: templates/about.html:13 templates/base.html:66
+#: templates/about.html:13 templates/base.html:68
 #: templates/components/cta.html:24 templates/pseo/_hero.html:12
 msgid "Call us"
 msgstr "Sună-ne"
@@ -1130,7 +1236,7 @@ msgstr "Salt la conținut"
 msgid "Language suggestion"
 msgstr "Sugestie de limbă"
 
-#: templates/base.html:38
+#: templates/base.html:38 templates/components/mind_nudge.html:5
 msgid "Close"
 msgstr "Închide"
 
@@ -1160,12 +1266,12 @@ msgstr "%(y)s+ ani de experiență"
 msgid "read them on Google"
 msgstr "citește-le pe Google"
 
-#: templates/base.html:64 templates/components/footer.html:42
+#: templates/base.html:66 templates/components/footer.html:42
 #: templates/components/navbar.html:59 templates/components/navbar.html:94
 msgid "Contact"
 msgstr "Contact"
 
-#: templates/base.html:70 templates/contact.html:13
+#: templates/base.html:72 templates/contact.html:13
 msgid "Chat on WhatsApp"
 msgstr "Scrieți-ne pe WhatsApp"
 
@@ -1328,21 +1434,7 @@ msgstr "Contact și locație"
 msgid "Map"
 msgstr "Hartă"
 
-#: templates/clinics/detail.html:68 templates/components/navbar.html:20
-msgid "Before & after"
-msgstr "Înainte și după"
-
-#: templates/clinics/detail.html:69 templates/home/sections/hero.html:60
-#: templates/home/sections/hero.html:63 templates/pseo/_photos.html:8
-msgid "Before"
-msgstr "Înainte"
-
-#: templates/clinics/detail.html:69 templates/home/sections/hero.html:61
-#: templates/home/sections/hero.html:64 templates/pseo/_photos.html:8
-msgid "After"
-msgstr "După"
-
-#: templates/clinics/detail.html:79
+#: templates/clinics/detail.html:76
 #, python-format
 msgid "%(n)s review on dentaltourism.tr"
 msgid_plural "%(n)s reviews on dentaltourism.tr"
@@ -1350,63 +1442,63 @@ msgstr[0] "%(n)s recenzie pe dentaltourism.tr"
 msgstr[1] "%(n)s recenzii pe dentaltourism.tr"
 msgstr[2] "%(n)s de recenzii pe dentaltourism.tr"
 
-#: templates/clinics/detail.html:82
+#: templates/clinics/detail.html:79
 msgid "All Google reviews"
 msgstr "Toate recenziile Google"
 
-#: templates/clinics/detail.html:83
+#: templates/clinics/detail.html:80
 msgid "Review us on Google"
 msgstr "Lăsați-ne o recenzie pe Google"
 
-#: templates/clinics/detail.html:84
+#: templates/clinics/detail.html:81
 msgid "Write a review"
 msgstr "Scrieți o recenzie"
 
-#: templates/clinics/detail.html:88
+#: templates/clinics/detail.html:85
 msgid "Reviews on dentaltourism.tr"
 msgstr "Recenzii pe dentaltourism.tr"
 
-#: templates/clinics/detail.html:89
+#: templates/clinics/detail.html:86
 msgid "Reviews on Google and other platforms"
 msgstr "Recenzii pe Google și alte platforme"
 
-#: templates/clinics/detail.html:92
+#: templates/clinics/detail.html:89
 #, python-format
 msgid "Were you treated at %(name)s? Share your experience"
 msgstr "Ați fost tratat la %(name)s? Împărtășiți experiența"
 
-#: templates/clinics/detail.html:93
+#: templates/clinics/detail.html:90
 msgid ""
 "Reviews are checked before publication. Your email address is never shown."
 msgstr ""
 "Recenziile sunt verificate înainte de publicare. Adresa de e-mail nu este "
 "afișată niciodată."
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Poor"
 msgstr "Slab"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Fair"
 msgstr "Acceptabil"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Good"
 msgstr "Bun"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Very good"
 msgstr "Foarte bun"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:100
 msgid "Excellent"
 msgstr "Excelent"
 
-#: templates/clinics/detail.html:106
+#: templates/clinics/detail.html:103
 msgid "Tap a star"
 msgstr "Atinge o stea"
 
-#: templates/clinics/detail.html:111
+#: templates/clinics/detail.html:108
 msgid "Submit review"
 msgstr "Trimite recenzia"
 
@@ -1535,7 +1627,6 @@ msgstr ""
 "responsabil de îngrijirea dvs. de la început până la sfârșit."
 
 #: templates/components/cta.html:13
-#| msgid "Treatment plan and fixed price"
 msgid "Get a treatment plan made for your teeth"
 msgstr "Primește un plan de tratament făcut pentru dinții tăi"
 
@@ -1574,7 +1665,7 @@ msgstr ""
 msgid "Contact form"
 msgstr "Formular de contact"
 
-#: templates/components/faq.html:4 templates/home/sections/faq.html:2
+#: templates/components/faq.html:5 templates/home/sections/faq.html:2
 msgid "Frequently asked questions"
 msgstr "Întrebări frecvente"
 
@@ -1606,6 +1697,10 @@ msgstr "Navigare principală"
 #: templates/components/navbar.html:19 templates/pseo/_price_note.html:3
 msgid "What does it cost?"
 msgstr "Cât costă?"
+
+#: templates/components/navbar.html:20
+msgid "Before & after"
+msgstr "Înainte și după"
 
 #: templates/components/navbar.html:25 templates/components/navbar.html:84
 msgid "Packages"
@@ -1660,10 +1755,6 @@ msgstr "Schimbă limba"
 msgid "Get a free quote"
 msgstr "Ofertă gratuită"
 
-#: templates/components/navbar.html:73 templates/home/sections/hero.html:148
-msgid "Book now"
-msgstr "Programează acum"
-
 #: templates/components/navbar.html:73
 msgid "Private consultation"
 msgstr "Consultație privată"
@@ -1681,6 +1772,47 @@ msgstr "Consultație gratuită"
 #: templates/components/navbar.html:75
 msgid "Menu"
 msgstr "Meniu"
+
+#: templates/components/results.html:6 templates/home/sections/reviews.html:7
+msgid "Real patients, real results"
+msgstr "Pacienți reali, rezultate reale"
+
+#: templates/components/results.html:7
+#| msgid "Before and after results"
+msgid "Before & after — our own patients"
+msgstr "Înainte și după — pacienții noștri"
+
+#: templates/components/results.html:8
+msgid ""
+"Every photo is a real patient of our clinic, shared with their consent. Drag"
+" to compare."
+msgstr ""
+"Fiecare fotografie aparține unui pacient real al clinicii noastre, publicată"
+" cu acordul său. Trage pentru a compara."
+
+#: templates/components/results.html:14 templates/home/sections/hero.html:61
+#: templates/home/sections/hero.html:64
+msgid "After"
+msgstr "După"
+
+#: templates/components/results.html:15 templates/home/sections/hero.html:60
+#: templates/home/sections/hero.html:63
+msgid "Before"
+msgstr "Înainte"
+
+#: templates/components/results.html:16 templates/home/sections/hero.html:60
+#: templates/home/sections/hero.html:63
+msgid "BEFORE"
+msgstr "ÎNAINTE"
+
+#: templates/components/results.html:17 templates/home/sections/hero.html:61
+#: templates/home/sections/hero.html:64
+msgid "AFTER"
+msgstr "DUPĂ"
+
+#: templates/components/results.html:20
+msgid "Drag to compare before and after"
+msgstr "Trage pentru a compara înainte și după"
 
 #: templates/components/reviews.html:26
 msgid "Verified on our site"
@@ -1840,10 +1972,6 @@ msgstr ""
 msgid "Free assessment — WhatsApp"
 msgstr "Evaluare gratuită — WhatsApp"
 
-#: templates/home/sections/hero.html:14
-msgid "Get a free price quote"
-msgstr "Ofertă de preț gratuită"
-
 #: templates/home/sections/hero.html:26
 #, python-format
 msgid "%(years)s+ years — ethical protocol"
@@ -1929,14 +2057,6 @@ msgstr "Înainte / după"
 msgid "Before and after results"
 msgstr "Rezultate înainte și după"
 
-#: templates/home/sections/hero.html:60 templates/home/sections/hero.html:63
-msgid "BEFORE"
-msgstr "ÎNAINTE"
-
-#: templates/home/sections/hero.html:61 templates/home/sections/hero.html:64
-msgid "AFTER"
-msgstr "DUPĂ"
-
 #: templates/home/sections/hero.html:73
 msgid "Limited appointments this month"
 msgstr "Programări limitate luna aceasta"
@@ -2014,10 +2134,6 @@ msgstr ""
 msgid "See patient reviews"
 msgstr "Vedeți recenziile pacienților"
 
-#: templates/home/sections/hero.html:101
-msgid "Ask a question"
-msgstr "Puneți o întrebare"
-
 #: templates/home/sections/hero.html:103
 msgid "No commitment. Just answers."
 msgstr "Fără obligații. Doar răspunsuri."
@@ -2042,17 +2158,11 @@ msgstr ""
 "Decenii de experiență și precizie estetică. Doar ce vă trebuie — nimic mai "
 "mult, nimic mai puțin."
 
-#: templates/home/sections/hero.html:123
-msgid "Request a private appointment"
-msgstr "Solicitați o programare privată"
-
 #: templates/home/sections/hero.html:132
-#| msgid "Evidence-based dentistry"
 msgid "Personalised dentistry"
 msgstr "Stomatologie personalizată"
 
 #: templates/home/sections/hero.html:134
-#| msgid "Safe dental treatment in Istanbul —"
 msgid "Quality dental treatment in Istanbul —"
 msgstr "Tratament stomatologic de calitate în Istanbul —"
 
@@ -2071,12 +2181,10 @@ msgstr ""
 "iar un singur medic cu experiență realizează fiecare pas."
 
 #: templates/home/sections/hero.html:136
-#| msgid "Ask about smile design"
 msgid "Digital smile design"
 msgstr "Design digital al zâmbetului"
 
 #: templates/home/sections/hero.html:136
-#| msgid "Preparation"
 msgid "Minimal preparation"
 msgstr "Șlefuire minimă"
 
@@ -2084,13 +2192,7 @@ msgstr "Șlefuire minimă"
 msgid "One dentist, start to finish"
 msgstr "Un singur medic de la început până la sfârșit"
 
-#: templates/home/sections/hero.html:138
-#| msgid "Personal treatment plan"
-msgid "Get my personal treatment plan"
-msgstr "Primește planul meu de tratament"
-
 #: templates/home/sections/hero.html:139
-#| msgid "Your dentist"
 msgid "Meet your dentist"
 msgstr "Cunoaște-ți medicul"
 
@@ -2141,10 +2243,6 @@ msgid ""
 msgstr ""
 "Materiale, calificări, ce se întâmplă dacă apare o problemă — primiți un "
 "răspuns transparent la fiecare întrebare."
-
-#: templates/home/sections/hero.html:177
-msgid "Ask any question — free"
-msgstr "Puneți orice întrebare — gratuit"
 
 #: templates/home/sections/hero.html:181
 msgid "What patients actually say"
@@ -2233,10 +2331,6 @@ msgstr "Experiențele pacienților"
 msgid "Their stories — your inspiration"
 msgstr "Poveștile lor — inspirația dvs."
 
-#: templates/home/sections/reviews.html:7
-msgid "Real patients, real results"
-msgstr "Pacienți reali, rezultate reale"
-
 #: templates/home/sections/reviews.html:10
 msgid "Videos are published with patients' explicit consent."
 msgstr "Videoclipurile sunt publicate cu acordul explicit al pacienților."
@@ -2254,7 +2348,6 @@ msgid "Signature treatments"
 msgstr "Tratamentele noastre de referință"
 
 #: templates/home/sections/treatments.html:6
-#| msgid "Appointments planned around your flights"
 msgid "Treatments planned around you"
 msgstr "Tratamente planificate pentru tine"
 
@@ -2529,24 +2622,7 @@ msgstr "Află mai multe despre noi"
 msgid "Transparent by design — check us yourself"
 msgstr "Transparenți din principiu – verifică-ne singur"
 
-#: templates/pseo/_photos.html:4
-msgid "Real results from our clinic"
-msgstr "Rezultate reale din clinica noastră"
-
-#: templates/pseo/_photos.html:5
-msgid "Published with patient consent. No stock photos, no filters."
-msgstr ""
-"Publicate cu acordul pacienților. Fără fotografii de stoc, fără filtre."
-
-#: templates/pseo/_photos.html:7
-msgid "Before treatment"
-msgstr "Înainte de tratament"
-
-#: templates/pseo/_photos.html:7
-msgid "After treatment"
-msgstr "După tratament"
-
-#: templates/pseo/_photos.html:15
+#: templates/pseo/_photos.html:8
 msgid "Inside our clinic"
 msgstr "În clinica noastră"
 
@@ -2813,3 +2889,16 @@ msgid ""
 msgstr ""
 "Toate tratamentele pe care le oferim, cu informații oneste despre procedură,"
 " cât timp trebuie să stați în Istanbul și cât costă."
+
+#~ msgid "Real results from our clinic"
+#~ msgstr "Rezultate reale din clinica noastră"
+
+#~ msgid "Published with patient consent. No stock photos, no filters."
+#~ msgstr ""
+#~ "Publicate cu acordul pacienților. Fără fotografii de stoc, fără filtre."
+
+#~ msgid "Before treatment"
+#~ msgstr "Înainte de tratament"
+
+#~ msgid "After treatment"
+#~ msgstr "După tratament"

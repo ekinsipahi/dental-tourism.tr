@@ -602,3 +602,18 @@
 601|Mijn persoonlijke behandelplan ontvangen
 602|Maak kennis met uw tandarts
 603|Behandelingen rond u gepland
+604|Geen standaardpakketten: uw plan wordt alleen voor u gemaakt, nadat de tandarts uw situatie heeft bekeken.
+605|Alles hier is echt
+606|Doet de behandeling pijn?
+607|De behandeling gebeurt onder plaatselijke verdoving: u voelt druk, maar geen pijn. De tandarts legt elke stap vooraf uit en u kunt altijd om een pauze vragen.
+608|Wordt mijn behandelplan persoonlijk voor mij gemaakt?
+609|Ja. We verkopen geen standaardpakketten: de tandarts bekijkt uw foto's of röntgenfoto, behoudt eerst gezonde tanden en plant alleen wat u echt nodig heeft.
+610|Zijn de reviews en foto's op deze site echt?
+611|Ja. Onze reviews staan met bron op Google, en de foto's tonen onze eigen kliniek, ons team en onze patiënten (met hun toestemming).
+612|Kan ik een privé, discrete afspraak krijgen?
+613|Ja. Uw afspraken worden rond uw planning ingepland en dezelfde tandarts begeleidt u van het eerste consult tot de laatste controle.
+614|Kan ik de vorm en kleur van mijn nieuwe tanden kiezen?
+615|Ja. Met een digitaal smile design ziet en keurt u vorm en kleur goed voordat er iets gemaakt wordt — we streven naar een natuurlijk resultaat dat bij uw gezicht past.
+616|Voor & na — onze eigen patiënten
+617|Elke foto toont een echte patiënt van onze kliniek, gedeeld met toestemming. Sleep om te vergelijken.
+618|Sleep om voor en na te vergelijken

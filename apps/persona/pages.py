@@ -1,18 +1,20 @@
 """
-Site içi gezinme → persona kanıtı.
+Site içi gezinme → persona kanıtı (SAYAÇ + SÜRE).
 
-Ziyaretçi nerede vakit geçiriyorsa persona'sı o yöne kayar:
-  fiyat sayfaları / paketler                      → price
-  kalite / kişiye özel: zirkonyum, implant, All-on-4, kanal, "en iyi klinik" rehberleri,
-  hekim profili, hakkımızda, garanti & takip         → quality
-  lüks / VIP hissi: Hollywood smile, porselen lamina, gülüş galerisi, paketler,
-  İstanbul rehberi                                  → premium
-  önce-sonra galerisi, estetik tedaviler          → shame (estetik)
-  garanti / takip / cerrahi rehberleri            → fear
-  yorumlar, karşılaştırma, "should I" rehberleri  → skeptic
-  hakkımızda, klinik profili, kanal/dolgu         → trust
-  iletişim, İstanbul rehberi, lokasyonlar         → ready
-Her sayfa türü oturum başına en fazla REPEAT_CAP kez sayılır (aynı sayfayı yenilemek skoru şişirmez).
+Bir sayfa iki aşamada puan verir:
+  1. Açılınca          → sinyalin %25'i (LOAD_SHARE) — sadece tıklayıp çıkan kişi az puan alır
+  2. Çıkarken (süre)    → kalan %75 × min(süre / 60 sn, 1); 5 sn altı = 0 (yanlış tık / geri dönüş)
+Yani 60+ sn okunan "en iyi klinik" rehberi tam puan, 3 sn bakılıp çıkılan neredeyse hiç.
+
+Sayfa grupları:
+  fiyat sayfaları (/prices/…), paketler                         → price
+  "en iyi klinik" rehberleri, hekim profili, hakkımızda           → quality
+  tedavi sayfaları (implant, lamina, zirkonyum…)                  → skeptic (araştırıyor) — tür tercihi DEĞİL
+  garanti / takip / cerrahi rehberleri                            → fear (+ kalite)
+  yorumlar, karşılaştırma, "hangi ülke" rehberleri                → skeptic
+  gülüş galerisi                                                  → shame (estetik)
+  iletişim, İstanbul rehberi, lokasyonlar                         → ready
+Her sayfa türü ziyaret başına en fazla REPEAT_CAP kez sayılır (yenilemek skoru şişirmez).
 Tüm dillerdeki slug'lar çözülür (/de/behandlungen/keramik-veneers/ → porcelain-veneers).
 """
 from django.core.cache import cache
@@ -23,18 +25,21 @@ from .models import (PERSONA_FEAR, PERSONA_PREMIUM, PERSONA_PRICE, PERSONA_QUALI
 
 REPEAT_CAP = 2
 PERSONA_CAP = 6.0
+LOAD_SHARE = 0.25        # sayfa açılınca verilen pay
+DWELL_FULL = 60          # bu kadar saniye okunursa kalan payın tamamı
+DWELL_MIN = 5            # altı = sayılmaz
 
 TREATMENT_SIGNALS = {
-    "porcelain-veneers": {PERSONA_PREMIUM: 0.9, PERSONA_SHAME: 0.6, PERSONA_QUALITY: 0.3},
-    "zirconia-crowns": {PERSONA_QUALITY: 0.9, PERSONA_PREMIUM: 0.3},
-    "all-on-4-implants": {PERSONA_QUALITY: 0.8, PERSONA_PREMIUM: 0.4, PERSONA_FEAR: 0.3},
-    "hollywood-smile": {PERSONA_SHAME: 1.0, PERSONA_PREMIUM: 1.0},
-    "dental-implants": {PERSONA_QUALITY: 0.7, PERSONA_FEAR: 0.4},
-    "composite-veneers": {PERSONA_SHAME: 0.7, PERSONA_PRICE: 0.3},
-    "teeth-whitening": {PERSONA_SHAME: 0.6},
-    "root-canal-treatment": {PERSONA_QUALITY: 0.5, PERSONA_TRUST: 0.4, PERSONA_FEAR: 0.4},
-    "tooth-fillings": {PERSONA_TRUST: 0.4},
-    "teeth-cleaning": {PERSONA_TRUST: 0.4},
+    "porcelain-veneers": {PERSONA_SKEPTIC: 0.5, PERSONA_SHAME: 0.2},
+    "zirconia-crowns": {PERSONA_SKEPTIC: 0.5},
+    "all-on-4-implants": {PERSONA_SKEPTIC: 0.5, PERSONA_FEAR: 0.2},
+    "hollywood-smile": {PERSONA_SKEPTIC: 0.4, PERSONA_SHAME: 0.3, PERSONA_PREMIUM: 0.3},
+    "dental-implants": {PERSONA_SKEPTIC: 0.5, PERSONA_FEAR: 0.2},
+    "composite-veneers": {PERSONA_SKEPTIC: 0.5, PERSONA_SHAME: 0.2},
+    "teeth-whitening": {PERSONA_SKEPTIC: 0.4, PERSONA_SHAME: 0.2},
+    "root-canal-treatment": {PERSONA_SKEPTIC: 0.5, PERSONA_FEAR: 0.2},
+    "tooth-fillings": {PERSONA_SKEPTIC: 0.4},
+    "teeth-cleaning": {PERSONA_SKEPTIC: 0.4},
 }
 
 TOPIC_SIGNALS = {
@@ -115,8 +120,20 @@ def page_signal(path):
     return name, dict(VIEW_SIGNALS.get(name, {}))
 
 
+def _add(session, sig, share):
+    scores = dict(session.page_scores or {})
+    added = {}
+    for p, w in sig.items():
+        v = round(w * share, 3)
+        if v > 0:
+            scores[p] = round(min(PERSONA_CAP, scores.get(p, 0.0) + v), 2)
+            added[p] = v
+    session.page_scores = scores
+    return added
+
+
 def apply_page(session, path):
-    """Oturuma sayfa kanıtını ekler. Değişiklik olduysa True."""
+    """Sayfa açıldı → sinyalin LOAD_SHARE kadarı. Değişiklik olduysa True."""
     kind, sig = page_signal(path)
     if not kind:
         return False
@@ -124,10 +141,28 @@ def apply_page(session, path):
     if seen.count(kind) >= REPEAT_CAP:
         return False
     seen.append(kind)
-    session.pages_seen = seen[-30:]
+    session.pages_seen = seen[-40:]
     if sig:
-        scores = dict(session.page_scores or {})
-        for p, w in sig.items():
-            scores[p] = round(min(PERSONA_CAP, scores.get(p, 0.0) + w), 2)
-        session.page_scores = scores
+        _add(session, sig, LOAD_SHARE)
     return True
+
+
+def apply_dwell(session, path, seconds):
+    """Sayfadan çıkarken: kalan pay × okuma süresi. Kanıt günlüğüne 'sayfa — 45 sn' yazılır."""
+    from .mindset import add_evidence
+
+    kind, sig = page_signal(path)
+    if not kind:
+        return False
+    seconds = max(0, int(seconds or 0))
+    seen = list(session.pages_seen or [])
+    key = f"dwell:{kind}"
+    if seen.count(key) >= REPEAT_CAP:
+        return False
+    seen.append(key)
+    session.pages_seen = seen[-40:]
+    factor = 0.0 if seconds < DWELL_MIN else min(seconds / DWELL_FULL, 1.0)
+    added = _add(session, sig, (1 - LOAD_SHARE) * factor) if sig else {}
+    total = {p: round(v * (LOAD_SHARE + (1 - LOAD_SHARE) * factor), 2) for p, v in sig.items()} if sig else {}
+    add_evidence(session, "page", f"{kind} — {seconds} sn", total or {"unknown": 0})
+    return bool(added) or True

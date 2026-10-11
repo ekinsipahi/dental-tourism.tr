@@ -1,0 +1,428 @@
+[
+ {
+  "key": "zirconia-1",
+  "order": 0,
+  "treatment": "zirconia-crowns",
+  "text": {
+   "en": {
+    "title": "Natural monolithic zirconia",
+    "caption": "Monolithic zirconia with a natural, lifelike look — strong, long-lasting and in harmony with the face."
+   },
+   "tr": {
+    "title": "Doğal monolitik zirkonya",
+    "caption": "Doğal, canlı görünümlü monolitik zirkonya — sağlam, uzun ömürlü ve yüzle uyumlu."
+   },
+   "de": {
+    "title": "Natürliches monolithisches Zirkon",
+    "caption": "Monolithisches Zirkon mit natürlicher, lebendiger Optik — stabil, langlebig und im Einklang mit dem Gesicht."
+   },
+   "nl": {
+    "title": "Natuurlijk monolithisch zirkonia",
+    "caption": "Monolithisch zirkonia met een natuurlijke, levensechte uitstraling — sterk, duurzaam en in harmonie met het gezicht."
+   },
+   "fr": {
+    "title": "Zircone monolithique naturelle",
+    "caption": "Zircone monolithique au rendu naturel et vivant — solide, durable et en harmonie avec le visage."
+   },
+   "it": {
+    "title": "Zirconia monolitica naturale",
+    "caption": "Zirconia monolitica dall'aspetto naturale e vivo — resistente, duratura e in armonia con il viso."
+   },
+   "es": {
+    "title": "Zirconio monolítico natural",
+    "caption": "Zirconio monolítico con un aspecto natural y vivo — resistente, duradero y en armonía con el rostro."
+   },
+   "pl": {
+    "title": "Naturalna cyrkonia monolityczna",
+    "caption": "Cyrkonia monolityczna o naturalnym, żywym wyglądzie — mocna, trwała i harmonijna z twarzą."
+   },
+   "ru": {
+    "title": "Естественный монолитный цирконий",
+    "caption": "Монолитный цирконий с естественным, живым видом — прочный, долговечный и гармоничный с лицом."
+   },
+   "uk": {
+    "title": "Природний монолітний цирконій",
+    "caption": "Монолітний цирконій з природним, живим виглядом — міцний, довговічний і гармонійний з обличчям."
+   },
+   "ar": {
+    "title": "زركونيا مونوليثية طبيعية",
+    "caption": "زركونيا مونوليثية بمظهر طبيعي حيوي — قوية وطويلة العمر ومتناسقة مع الوجه."
+   },
+   "sv": {
+    "title": "Naturlig monolitisk zirkonia",
+    "caption": "Monolitisk zirkonia med ett naturligt, levande utseende — stark, hållbar och i harmoni med ansiktet."
+   },
+   "da": {
+    "title": "Naturlig monolitisk zirkonia",
+    "caption": "Monolitisk zirkonia med et naturligt, levende udseende — stærk, holdbar og i harmoni med ansigtet."
+   },
+   "no": {
+    "title": "Naturlig monolittisk zirkonia",
+    "caption": "Monolittisk zirkonia med et naturlig, levende utseende — sterk, holdbar og i harmoni med ansiktet."
+   },
+   "ro": {
+    "title": "Zirconiu monolitic natural",
+    "caption": "Zirconiu monolitic cu aspect natural și viu — rezistent, durabil și în armonie cu fața."
+   },
+   "az": {
+    "title": "Təbii monolit sirkon",
+    "caption": "Təbii, canlı görünüşlü monolit sirkon — möhkəm, uzunömürlü və üzlə ahəngdar."
+   }
+  }
+ },
+ {
+  "key": "zirconia-2",
+  "order": 1,
+  "treatment": "zirconia-crowns",
+  "text": {
+   "en": {
+    "title": "Natural monolithic zirconia",
+    "caption": "A full smile rebuilt with natural monolithic zirconia — no artificial “white wall” effect."
+   },
+   "tr": {
+    "title": "Doğal monolitik zirkonya",
+    "caption": "Doğal monolitik zirkonya ile yeniden kurulan bir gülüş — yapay “beyaz duvar” etkisi yok."
+   },
+   "de": {
+    "title": "Natürliches monolithisches Zirkon",
+    "caption": "Ein komplettes Lächeln mit natürlichem monolithischem Zirkon — ohne künstlichen „weiße Wand“-Effekt."
+   },
+   "nl": {
+    "title": "Natuurlijk monolithisch zirkonia",
+    "caption": "Een volledige glimlach opnieuw opgebouwd met natuurlijk monolithisch zirkonia — zonder kunstmatig “witte muur”-effect."
+   },
+   "fr": {
+    "title": "Zircone monolithique naturelle",
+    "caption": "Un sourire complet reconstruit en zircone monolithique naturelle — sans effet artificiel de « mur blanc »."
+   },
+   "it": {
+    "title": "Zirconia monolitica naturale",
+    "caption": "Un sorriso completo ricostruito con zirconia monolitica naturale — senza l'effetto artificiale “muro bianco”."
+   },
+   "es": {
+    "title": "Zirconio monolítico natural",
+    "caption": "Una sonrisa completa reconstruida con zirconio monolítico natural — sin el efecto artificial de “pared blanca”."
+   },
+   "pl": {
+    "title": "Naturalna cyrkonia monolityczna",
+    "caption": "Pełny uśmiech odbudowany naturalną cyrkonią monolityczną — bez sztucznego efektu „białej ściany”."
+   },
+   "ru": {
+    "title": "Естественный монолитный цирконий",
+    "caption": "Полностью восстановленная улыбка из естественного монолитного циркония — без искусственного эффекта «белой стены»."
+   },
+   "uk": {
+    "title": "Природний монолітний цирконій",
+    "caption": "Повністю відновлена усмішка з природного монолітного цирконію — без штучного ефекту «білої стіни»."
+   },
+   "ar": {
+    "title": "زركونيا مونوليثية طبيعية",
+    "caption": "ابتسامة كاملة أُعيد بناؤها بزركونيا مونوليثية طبيعية — دون تأثير «الجدار الأبيض» المصطنع."
+   },
+   "sv": {
+    "title": "Naturlig monolitisk zirkonia",
+    "caption": "Ett helt leende återuppbyggt med naturlig monolitisk zirkonia — utan konstgjord ”vit vägg”-effekt."
+   },
+   "da": {
+    "title": "Naturlig monolitisk zirkonia",
+    "caption": "Et helt smil genopbygget med naturlig monolitisk zirkonia — uden kunstig ”hvid væg”-effekt."
+   },
+   "no": {
+    "title": "Naturlig monolittisk zirkonia",
+    "caption": "Et helt smil gjenoppbygd med naturlig monolittisk zirkonia — uten kunstig «hvit vegg»-effekt."
+   },
+   "ro": {
+    "title": "Zirconiu monolitic natural",
+    "caption": "Un zâmbet complet refăcut cu zirconiu monolitic natural — fără efectul artificial de „perete alb”."
+   },
+   "az": {
+    "title": "Təbii monolit sirkon",
+    "caption": "Təbii monolit sirkonla yenidən qurulmuş təbəssüm — süni “ağ divar” effekti yoxdur."
+   }
+  }
+ },
+ {
+  "key": "composite-1",
+  "order": 2,
+  "treatment": "composite-veneers",
+  "text": {
+   "en": {
+    "title": "Composite veneers — no tooth cutting",
+    "caption": "Aesthetic composite veneers, minimally invasive: the teeth were not cut and their natural look was preserved."
+   },
+   "tr": {
+    "title": "Kompozit lamina — dişler kesilmeden",
+    "caption": "Estetik kompozit lamina, minimal invaziv: dişler kesilmedi, doğal görünüm korundu."
+   },
+   "de": {
+    "title": "Komposit-Veneers — ohne Beschleifen",
+    "caption": "Ästhetische Komposit-Veneers, minimalinvasiv: Die Zähne wurden nicht beschliffen, ihr natürliches Aussehen blieb erhalten."
+   },
+   "nl": {
+    "title": "Composiet facings — zonder slijpen",
+    "caption": "Esthetische composiet facings, minimaal invasief: de tanden zijn niet geslepen en hun natuurlijke uitstraling bleef behouden."
+   },
+   "fr": {
+    "title": "Facettes en composite — sans tailler les dents",
+    "caption": "Facettes en composite esthétiques, peu invasives : les dents n'ont pas été taillées et leur aspect naturel a été préservé."
+   },
+   "it": {
+    "title": "Faccette in composito — senza limare i denti",
+    "caption": "Faccette estetiche in composito, mini-invasive: i denti non sono stati limati e il loro aspetto naturale è stato preservato."
+   },
+   "es": {
+    "title": "Carillas de composite — sin tallar los dientes",
+    "caption": "Carillas estéticas de composite, mínimamente invasivas: no se tallaron los dientes y se conservó su aspecto natural."
+   },
+   "pl": {
+    "title": "Licówki kompozytowe — bez szlifowania zębów",
+    "caption": "Estetyczne licówki kompozytowe, małoinwazyjne: zębów nie szlifowano, a ich naturalny wygląd został zachowany."
+   },
+   "ru": {
+    "title": "Композитные виниры — без обточки зубов",
+    "caption": "Эстетичные композитные виниры, минимально инвазивно: зубы не обтачивали, их естественный вид сохранён."
+   },
+   "uk": {
+    "title": "Композитні вініри — без обточування зубів",
+    "caption": "Естетичні композитні вініри, мінімально інвазивно: зуби не обточували, їхній природний вигляд збережено."
+   },
+   "ar": {
+    "title": "قشور الكومبوزيت — دون برد الأسنان",
+    "caption": "قشور كومبوزيت تجميلية بأقل تدخل: لم تُبرد الأسنان وحوفظ على مظهرها الطبيعي."
+   },
+   "sv": {
+    "title": "Kompositfasader — utan att slipa tänderna",
+    "caption": "Estetiska kompositfasader, minimalt invasivt: tänderna slipades inte och deras naturliga utseende bevarades."
+   },
+   "da": {
+    "title": "Kompositfacader — uden at slibe tænderne",
+    "caption": "Æstetiske kompositfacader, minimalt invasivt: tænderne blev ikke slebet, og deres naturlige udseende blev bevaret."
+   },
+   "no": {
+    "title": "Komposittfasetter — uten sliping av tennene",
+    "caption": "Estetiske komposittfasetter, minimalt invasivt: tennene ble ikke slipt, og det naturlige utseendet ble bevart."
+   },
+   "ro": {
+    "title": "Fațete din compozit — fără șlefuirea dinților",
+    "caption": "Fațete estetice din compozit, minim invaziv: dinții nu au fost șlefuiți, iar aspectul lor natural a fost păstrat."
+   },
+   "az": {
+    "title": "Kompozit lamina — dişlər yonulmadan",
+    "caption": "Estetik kompozit lamina, minimal invaziv: dişlər yonulmadı, təbii görünüş qorundu."
+   }
+  }
+ },
+ {
+  "key": "composite-2",
+  "order": 3,
+  "treatment": "composite-veneers",
+  "text": {
+   "en": {
+    "title": "Composite veneers — no tooth cutting",
+    "caption": "Composite veneers without cutting the teeth — the worn edges were rebuilt and the natural shape restored."
+   },
+   "tr": {
+    "title": "Kompozit lamina — dişler kesilmeden",
+    "caption": "Dişler kesilmeden kompozit lamina — aşınmış kenarlar yeniden oluşturuldu, doğal form geri kazandırıldı."
+   },
+   "de": {
+    "title": "Komposit-Veneers — ohne Beschleifen",
+    "caption": "Komposit-Veneers ohne Beschleifen — abgenutzte Kanten wurden aufgebaut und die natürliche Form wiederhergestellt."
+   },
+   "nl": {
+    "title": "Composiet facings — zonder slijpen",
+    "caption": "Composiet facings zonder slijpen — versleten randen zijn opgebouwd en de natuurlijke vorm is hersteld."
+   },
+   "fr": {
+    "title": "Facettes en composite — sans tailler les dents",
+    "caption": "Facettes en composite sans tailler les dents — les bords usés ont été reconstruits et la forme naturelle restaurée."
+   },
+   "it": {
+    "title": "Faccette in composito — senza limare i denti",
+    "caption": "Faccette in composito senza limare i denti — i bordi usurati sono stati ricostruiti e la forma naturale ripristinata."
+   },
+   "es": {
+    "title": "Carillas de composite — sin tallar los dientes",
+    "caption": "Carillas de composite sin tallar los dientes — se reconstruyeron los bordes desgastados y se recuperó la forma natural."
+   },
+   "pl": {
+    "title": "Licówki kompozytowe — bez szlifowania zębów",
+    "caption": "Licówki kompozytowe bez szlifowania zębów — starte brzegi odbudowano, a naturalny kształt przywrócono."
+   },
+   "ru": {
+    "title": "Композитные виниры — без обточки зубов",
+    "caption": "Композитные виниры без обточки зубов — стёртые края восстановлены, естественная форма возвращена."
+   },
+   "uk": {
+    "title": "Композитні вініри — без обточування зубів",
+    "caption": "Композитні вініри без обточування зубів — стерті краї відновлено, природну форму повернуто."
+   },
+   "ar": {
+    "title": "قشور الكومبوزيت — دون برد الأسنان",
+    "caption": "قشور كومبوزيت دون برد الأسنان — أُعيد بناء الحواف المتآكلة واستُعيد الشكل الطبيعي."
+   },
+   "sv": {
+    "title": "Kompositfasader — utan att slipa tänderna",
+    "caption": "Kompositfasader utan att slipa tänderna — slitna kanter byggdes upp och den naturliga formen återställdes."
+   },
+   "da": {
+    "title": "Kompositfacader — uden at slibe tænderne",
+    "caption": "Kompositfacader uden slibning af tænderne — slidte kanter blev genopbygget og den naturlige form genskabt."
+   },
+   "no": {
+    "title": "Komposittfasetter — uten sliping av tennene",
+    "caption": "Komposittfasetter uten sliping av tennene — slitte kanter ble bygget opp og den naturlige formen gjenopprettet."
+   },
+   "ro": {
+    "title": "Fațete din compozit — fără șlefuirea dinților",
+    "caption": "Fațete din compozit fără șlefuirea dinților — marginile uzate au fost refăcute, iar forma naturală a fost redată."
+   },
+   "az": {
+    "title": "Kompozit lamina — dişlər yonulmadan",
+    "caption": "Dişlər yonulmadan kompozit lamina — aşınmış kənarlar bərpa olundu, təbii forma qaytarıldı."
+   }
+  }
+ },
+ {
+  "key": "sanem",
+  "order": 4,
+  "treatment": "composite-veneers",
+  "text": {
+   "en": {
+    "title": "Sanem — composite, no cutting",
+    "caption": "Sanem's teeth were made more aesthetic than before with composite only — without any cutting."
+   },
+   "tr": {
+    "title": "Sanem — kesimsiz kompozit",
+    "caption": "Sanem'in dişleri hiç kesilmeden, sadece kompozit uygulamayla öncekinden daha estetik hale getirildi."
+   },
+   "de": {
+    "title": "Sanem — Komposit, ohne Beschleifen",
+    "caption": "Sanems Zähne wurden ohne jegliches Beschleifen, nur mit Komposit, ästhetischer als zuvor gestaltet."
+   },
+   "nl": {
+    "title": "Sanem — composiet, zonder slijpen",
+    "caption": "Sanems tanden zijn zonder enig slijpen, alleen met composiet, esthetischer gemaakt dan voorheen."
+   },
+   "fr": {
+    "title": "Sanem — composite, sans taille",
+    "caption": "Les dents de Sanem ont été rendues plus esthétiques qu'avant, uniquement avec du composite, sans aucune taille."
+   },
+   "it": {
+    "title": "Sanem — composito, senza limatura",
+    "caption": "I denti di Sanem sono stati resi più estetici di prima solo con il composito, senza alcuna limatura."
+   },
+   "es": {
+    "title": "Sanem — composite, sin tallar",
+    "caption": "Los dientes de Sanem quedaron más estéticos que antes solo con composite, sin ningún tallado."
+   },
+   "pl": {
+    "title": "Sanem — kompozyt, bez szlifowania",
+    "caption": "Zęby Sanem stały się bardziej estetyczne niż wcześniej wyłącznie dzięki kompozytowi — bez żadnego szlifowania."
+   },
+   "ru": {
+    "title": "Санем — композит без обточки",
+    "caption": "Зубы Санем стали эстетичнее, чем раньше, только благодаря композиту — без какой-либо обточки."
+   },
+   "uk": {
+    "title": "Санем — композит без обточування",
+    "caption": "Зуби Санем стали естетичнішими, ніж раніше, лише завдяки композиту — без жодного обточування."
+   },
+   "ar": {
+    "title": "سانم — كومبوزيت دون برد",
+    "caption": "أصبحت أسنان سانم أجمل من قبل بالكومبوزيت فقط — دون أي برد."
+   },
+   "sv": {
+    "title": "Sanem — komposit, utan slipning",
+    "caption": "Sanems tänder blev mer estetiska än tidigare med enbart komposit — helt utan slipning."
+   },
+   "da": {
+    "title": "Sanem — komposit, uden slibning",
+    "caption": "Sanems tænder blev mere æstetiske end før med kun komposit — helt uden slibning."
+   },
+   "no": {
+    "title": "Sanem — kompositt, uten sliping",
+    "caption": "Sanems tenner ble mer estetiske enn før med kun kompositt — helt uten sliping."
+   },
+   "ro": {
+    "title": "Sanem — compozit, fără șlefuire",
+    "caption": "Dinții lui Sanem au devenit mai estetici decât înainte doar cu compozit — fără nicio șlefuire."
+   },
+   "az": {
+    "title": "Sanem — yonulmadan kompozit",
+    "caption": "Sanemin dişləri heç yonulmadan, yalnız kompozitlə əvvəlkindən daha estetik edildi."
+   }
+  }
+ },
+ {
+  "key": "hazan",
+  "order": 5,
+  "treatment": "",
+  "text": {
+   "en": {
+    "title": "Hazan — after a dental trauma",
+    "caption": "After a trauma, Hazan's front tooth had turned pink. We restored it to a better condition than before, without harming the aesthetics of her teeth."
+   },
+   "tr": {
+    "title": "Hazan — travma sonrası",
+    "caption": "Hazan geçirdiği travma sonrası pembeleşmiş ön dişiyle kliniğimize geldi; dişlerinin estetiğini hiç bozmadan eski halinden daha iyi duruma getirdik."
+   },
+   "de": {
+    "title": "Hazan — nach einem Zahntrauma",
+    "caption": "Nach einem Trauma hatte sich Hazans Frontzahn rosa verfärbt. Wir haben ihn in einen besseren Zustand als zuvor gebracht — ohne die Ästhetik ihrer Zähne zu beeinträchtigen."
+   },
+   "nl": {
+    "title": "Hazan — na een tandtrauma",
+    "caption": "Na een trauma was Hazans voortand roze verkleurd. We hebben hem in een betere staat gebracht dan voorheen, zonder de esthetiek van haar tanden aan te tasten."
+   },
+   "fr": {
+    "title": "Hazan — après un traumatisme dentaire",
+    "caption": "Après un traumatisme, la dent de devant de Hazan était devenue rose. Nous l'avons restaurée dans un meilleur état qu'avant, sans altérer l'esthétique de ses dents."
+   },
+   "it": {
+    "title": "Hazan — dopo un trauma dentale",
+    "caption": "Dopo un trauma, il dente anteriore di Hazan era diventato rosa. Lo abbiamo riportato a una condizione migliore di prima, senza compromettere l'estetica dei suoi denti."
+   },
+   "es": {
+    "title": "Hazan — tras un traumatismo dental",
+    "caption": "Tras un traumatismo, el diente frontal de Hazan se había vuelto rosado. Lo devolvimos a un estado mejor que antes, sin perjudicar la estética de sus dientes."
+   },
+   "pl": {
+    "title": "Hazan — po urazie zęba",
+    "caption": "Po urazie przedni ząb Hazan zabarwił się na różowo. Przywróciliśmy go do lepszego stanu niż wcześniej, nie naruszając estetyki jej zębów."
+   },
+   "ru": {
+    "title": "Хазан — после травмы зуба",
+    "caption": "После травмы передний зуб Хазан порозовел. Мы вернули его в лучшее состояние, чем было, не нарушив эстетику её зубов."
+   },
+   "uk": {
+    "title": "Хазан — після травми зуба",
+    "caption": "Після травми передній зуб Хазан порожевів. Ми повернули його в кращий стан, ніж був, не порушивши естетику її зубів."
+   },
+   "ar": {
+    "title": "هازان — بعد إصابة في السن",
+    "caption": "بعد إصابة، تحوّل لون سن هازان الأمامي إلى الوردي. أعدناه إلى حالة أفضل من السابق دون الإضرار بجمال أسنانها."
+   },
+   "sv": {
+    "title": "Hazan — efter ett tandtrauma",
+    "caption": "Efter ett trauma hade Hazans framtand blivit rosa. Vi återställde den till ett bättre skick än tidigare, utan att försämra estetiken i hennes tänder."
+   },
+   "da": {
+    "title": "Hazan — efter et tandtraume",
+    "caption": "Efter et traume var Hazans fortand blevet lyserød. Vi bragte den i bedre stand end før, uden at skade æstetikken i hendes tænder."
+   },
+   "no": {
+    "title": "Hazan — etter et tanntraume",
+    "caption": "Etter et traume hadde Hazans fortann blitt rosa. Vi gjenopprettet den til bedre stand enn før, uten å svekke estetikken i tennene hennes."
+   },
+   "ro": {
+    "title": "Hazan — după un traumatism dentar",
+    "caption": "După un traumatism, dintele frontal al lui Hazan devenise roz. L-am adus într-o stare mai bună decât înainte, fără a afecta estetica dinților ei."
+   },
+   "az": {
+    "title": "Hazan — travmadan sonra",
+    "caption": "Travmadan sonra Hazanın ön dişi çəhrayı rəngə çevrilmişdi. Dişlərinin estetikasını pozmadan onu əvvəlkindən daha yaxşı vəziyyətə gətirdik."
+   }
+  }
+ }
+]

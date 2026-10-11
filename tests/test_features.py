@@ -45,10 +45,14 @@ class ContentBlockTests(SeededTestCase):
 
     def test_section_can_be_hidden_and_reordered(self):
         ContentBlock.objects.filter(key="home-how").update(visible=False)
-        ContentBlock.objects.filter(key="home-faq").update(order=15)  # tedavilerden hemen sonra
+        ContentBlock.objects.filter(key="home-reviews").update(order=5)  # tedavilerden önce
         html = self.client.get("/").content.decode()
         self.assertNotIn('id="how-h2"', html)
-        self.assertLess(html.index('id="faq-h2"'), html.index('id="reviews-h2"'))
+        self.assertLess(html.index('id="reviews-h2"'), html.index('id="treatments-h2"'))
+        # SSS her sayfada aynı yerde: içeriğin sonunda, footer'dan hemen önce, tek bölüm
+        self.assertEqual(html.count('id="faq-h2"'), 1)
+        self.assertLess(html.index('id="faq-h2"'), html.index("site-footer"))
+        self.assertGreater(html.index('id="faq-h2"'), html.index('id="reviews-h2"'))
 
     def test_seo_title_override(self):
         b = ContentBlock.objects.get(key="seo-treatments")
