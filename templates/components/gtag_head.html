@@ -1,0 +1,18 @@
+{% if analytics.gtag and not is_bot %}
+<!-- Google tag (gtag.js) — Consent Mode v2: AB/AEA/UK/İsviçre'de izin gelene kadar çerezsiz ölçüm, diğer ülkelerde tam ölçüm -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var _deny = {ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "denied"};
+  var _allow = {ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted", analytics_storage: "granted"};
+  gtag("consent", "default", Object.assign({}, _deny, {wait_for_update: 500, region: ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","IS","LI","NO","GB","CH"]}));
+  gtag("consent", "default", _allow);
+  try { var _c = localStorage.getItem("dt_consent"); if (_c === "yes") gtag("consent", "update", _allow); else if (_c === "no") gtag("consent", "update", _deny); } catch (e) {}
+  gtag("set", "ads_data_redaction", true);
+  gtag("set", "url_passthrough", true);
+  gtag("js", new Date());
+  gtag("config", "{{ analytics.gtag }}", {page_type: "{{ page_type|default:'page'|escapejs }}", site_language: "{{ lang_code|escapejs }}", funnel_stage: "{{ persona.stage|default:'awareness'|escapejs }}"});
+  {% if analytics.ads %}gtag("config", "{{ analytics.ads }}");{% endif %}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ analytics.gtag }}"></script>
+{% endif %}

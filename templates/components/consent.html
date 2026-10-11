@@ -7,9 +7,8 @@
 (function () {
   var KEY = "dt_consent", box = document.getElementById("consent");
   function load() {
-    {% if analytics.gtag %}var s = document.createElement("script"); s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id={{ analytics.gtag }}"; document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
-    gtag("js", new Date()); gtag("config", "{{ analytics.gtag }}");{% if analytics.ads %} gtag("config", "{{ analytics.ads }}");{% endif %}{% endif %}
+    // Google etiketi <head>'de zaten yüklü (components/gtag_head.html) — burada yalnızca izin güncellenir
+    if (window.gtag) gtag("consent", "update", {ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted", analytics_storage: "granted"});
     {% if analytics.meta_pixel %}!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '{{ analytics.meta_pixel }}'); fbq('track', 'PageView');{% endif %}
   }
@@ -18,7 +17,9 @@
   box && box.addEventListener("click", function (e) {
     var c = e.target.getAttribute("data-consent"); if (!c) return;
     try { localStorage.setItem(KEY, c); } catch (err) {}
-    box.hidden = true; if (c === "yes") load();
+    box.hidden = true;
+    if (c === "yes") load();
+    else if (window.gtag) gtag("consent", "update", {ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "denied"});
   });
 })();
 </script>

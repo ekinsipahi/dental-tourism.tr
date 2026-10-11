@@ -61,6 +61,7 @@
     if (!m || m === "unknown") return;
     var changed = ROOT.getAttribute("data-mind") !== m;
     ROOT.setAttribute("data-mind", m);
+    if (window.gtag) try { gtag("set", "user_properties", { persona_mind: m }); } catch (e) {}
     try { localStorage.setItem("dt_mind", JSON.stringify({ p: m, t: Date.now() })); } catch (e) {}
     if (changed || fromServer) document.dispatchEvent(new CustomEvent("dt:mind", { detail: { mind: m, changed: changed } }));
   }
@@ -74,11 +75,39 @@
   })();
   window.dtMind = setMind;
 
+  /* ── Google Analytics 4 — tracker'ın topladığı her olay GA4'e de gider (gtag <head>'de, Consent Mode v2) ──
+     GA4 → Yönetici → Özel tanımlar'da şu parametreleri "etkinlik kapsamlı boyut" olarak kaydet:
+     button_label, button_position, question, section, faq_topic, persona_mind, page_type, funnel_stage
+     Anahtar etkinlik (key event) yap: phone_click, whatsapp_click, generate_lead, form_start */
+  var GA_NAMES = {
+    phone_click: "phone_click", whatsapp_click: "whatsapp_click", form_start: "form_start", form_submit: "generate_lead",
+    cta_click: "cta_click", maps_click: "maps_click", instagram_click: "instagram_click", youtube_click: "youtube_click",
+    language_switch: "language_switch", scroll_depth: "scroll_depth", faq_open: "faq_open", faq_read: "faq_read",
+    section_view: "section_view", section_time: "section_time", before_after_interact: "before_after_view",
+    video_play: "video_start", video_time: "video_watch", time_on_page: "page_read", chatbot_open: "chat_open"
+  };
+  function ga(type, data) {
+    var name = GA_NAMES[type];
+    if (!name || !window.gtag) return;
+    var p = { page_type: PAGE_TYPE || "", funnel_stage: STAGE, persona_mind: ROOT.getAttribute("data-mind") || "" };
+    if (data.label) p.button_label = String(data.label).slice(0, 100);
+    if (data.position) p.button_position = data.position;
+    if (data.q) p.question = String(data.q).slice(0, 100);
+    if (data.mind) p.faq_topic = data.mind;
+    if (data.section) p.section = data.section;
+    if (data.seconds != null) p.seconds = data.seconds;
+    if (data.depth != null) p.percent_scrolled = data.depth;
+    if (data.href) p.link_url = String(data.href).slice(0, 100);
+    if (type === "time_on_page" || type === "section_time" || type === "faq_read") p.transport_type = "beacon";
+    try { gtag("event", name, p); } catch (e) {}
+  }
+
   var MIND_EVENTS = { faq_open: 1, faq_read: 1, cert_click: 1, before_after_interact: 1, video_play: 1, youtube_click: 1 };
   function track(type, data) {
     data = data || {};
     data.persona = data.persona || D.persona || ""; data.stage = data.stage || STAGE; data.lang = data.lang || D.lang || "";
     var payload = { event_type: type, data: data, page_url: PAGE_URL, page_type: PAGE_TYPE, vid: VID, attr: ATTR };
+    ga(type, data);
     if ((MIND_EVENTS[type] || data.position === "price-note") && !flushed) {  // çıkarken beacon (fetch iptal olabilir)
       // Yanıtı bekle: persona motoru yeni teşhisi döner
       fetch(EVENT_API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload),
@@ -139,10 +168,7 @@
     var label = (el.getAttribute("aria-label") || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
     track(MAP[type] || "cta_click", { element: type, label: label, text: label.slice(0, 60), href: href.slice(0, 200),
                                       position: positionOf(el), screen: screen.width + "x" + screen.height });
-    if (type === "whatsapp") {
-      if (window.gtag) gtag("event", "whatsapp_click");
-      if (window.fbq) fbq("track", "Contact");
-    }
+    if ((type === "whatsapp" || type === "phone") && window.fbq) fbq("track", "Contact");  // GA4: ga() gönderir
   });
 
   // SSS: açtı (zayıf sinyal) + kaç saniye açık tuttu (asıl sinyal). data-mind-q = sorunun persona etiketi

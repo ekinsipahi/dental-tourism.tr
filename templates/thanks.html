@@ -11,4 +11,4 @@
   </div>
 </div></section>
 {% endblock %}
-{% block extra_js %}<script>if (window.gtag) { gtag('event', 'generate_lead'); } if (window.fbq) { fbq('track', 'Lead'); }</script>{% endblock %}
+{% block extra_js %}<script>if (window.gtag) { gtag('event', 'generate_lead', {lead_source: 'contact_form', persona_mind: document.documentElement.getAttribute('data-mind') || ''}); } if (window.fbq) { fbq('track', 'Lead'); }</script>{% endblock %}
