@@ -23,4 +23,6 @@
   {% endfor %}{% else %}<title>{{ site_name }}</title>{% endif %}
   {% if analytics.google_verification %}<meta name="google-site-verification" content="{{ analytics.google_verification }}">{% endif %}
   {% if analytics.bing_verification %}<meta name="msvalidate.01" content="{{ analytics.bing_verification }}">{% endif %}
-  <meta name="theme-color" content="#070d10">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7faf9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#070d10" media="(prefers-color-scheme: dark)">

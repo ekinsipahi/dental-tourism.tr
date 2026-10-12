@@ -29,6 +29,47 @@
   --shadow-brand: 0 8px 30px rgba(16, 185, 129, .25);
   --shadow-wa: 0 8px 30px rgba(37, 211, 102, .35);
   --wrap: 1180px;
+  --header-bg: rgba(7, 13, 16, .82);
+  --glass: rgba(255, 255, 255, .04);
+  --sh: rgba(0, 0, 0, .3);
+  --star: #fbbf24;
+  --warn-tx: #fcd34d;
+  --google-tx: #8ab4f8;
+  color-scheme: dark;
+}
+
+/* ── Açık tema: cihaz açık moddaysa otomatik (düğme yok) ─────────────────── */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7faf9;
+    --bg-alt: #edf4f1;
+    --bg-card: #ffffff;
+    --bg-card-hv: #f2f8f5;
+    --tx: #0e1c18;
+    --tx-muted: #4a5d57;
+    --tx-faint: #74867f;
+    --border: rgba(14, 28, 24, .1);
+    --border-hv: rgba(14, 28, 24, .22);
+    --border-gold: rgba(138, 109, 59, .35);
+    --brand: #059669;
+    --brand-lt: #047857;
+    --brand-dk: #065f46;
+    --gold: #a8833f;
+    --gold-lt: #85662f;
+    --red: #dc2626;
+    --shadow-md: 0 8px 24px rgba(15, 40, 30, .08);
+    --shadow-lg: 0 24px 60px rgba(15, 40, 30, .12);
+    --shadow-brand: 0 8px 26px rgba(5, 150, 105, .22);
+    --header-bg: rgba(247, 250, 249, .86);
+    --glass: rgba(14, 28, 24, .035);
+    --sh: rgba(15, 40, 30, .12);
+    --star: #f59e0b;
+    --warn-tx: #92400e;
+    --google-tx: #1a73e8;
+    color-scheme: light;
+  }
+  /* Fotoğraf / video / koyu degrade üstündeki etiketler koyu zeminde kalır → açık yeşil */
+  .h-vtag, .h-ba-label-after { color: #34d399; }
 }
 
 /* ── Persona temaları (aksan değişiklikleri) ────────────────────────────── */
@@ -73,7 +114,7 @@ p { margin: 0 0 1em; }
 .center .lead { margin-left: auto; margin-right: auto; }
 
 /* ── Header / nav ───────────────────────────────────────────────────────── */
-.site-header { position: sticky; top: 0; z-index: 100; background: rgba(7, 13, 16, .82); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.site-header { position: sticky; top: 0; z-index: 100; background: var(--header-bg); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
 [data-persona="premium"] .site-header { background: rgba(5,5,5,.85); }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 68px; }
 .logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--tx); font-family: var(--ff-display); font-weight: 800; font-size: 1.15rem; }
@@ -126,7 +167,7 @@ p { margin: 0 0 1em; }
 .breadcrumb a:hover { color: var(--tx); }
 .breadcrumb li + li::before { content: "›"; margin-inline-end: .4rem; color: var(--tx-faint); }
 .meta-row { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; color: var(--tx-faint); font-size: .85rem; margin-top: 1rem; }
-.fallback-note { background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.35); color: #fcd34d; padding: .7rem 1rem; border-radius: var(--radius-sm); font-size: .85rem; margin-top: 1rem; }
+.fallback-note { background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.35); color: var(--warn-tx); padding: .7rem 1rem; border-radius: var(--radius-sm); font-size: .85rem; margin-top: 1rem; }
 
 /* ── Grid / cards ───────────────────────────────────────────────────────── */
 .grid { display: grid; gap: 1.2rem; }
@@ -309,7 +350,7 @@ a.card:hover { border-color: var(--border-hv); transform: translateY(-3px); back
 /* ── Yorumlar & profil linkleri ─────────────────────────────────────────── */
 .src-badge { font-size: .68rem; font-weight: 700; padding: .2rem .55rem; border-radius: 999px; background: var(--bg-alt); color: var(--tx-muted); text-decoration: none; border: 1px solid var(--border); white-space: nowrap; }
 .src-badge.src-site { color: var(--brand-lt); border-color: rgba(16,185,129,.35); }
-.src-badge.src-google { color: #8ab4f8; }
+.src-badge.src-google { color: var(--google-tx); }
 .review-reply { margin-top: .4rem; padding: .7rem .9rem; border-inline-start: 3px solid var(--brand); background: var(--bg-alt); border-radius: 0 8px 8px 0; font-size: .85rem; color: var(--tx-muted); }
 .reviews-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.4rem; }
 .social-links { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }

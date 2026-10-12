@@ -117,7 +117,7 @@
 .h-pills { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 2rem; }
 .h-pill {
   display: inline-flex; align-items: center; gap: .38rem;
-  background: rgba(255,255,255,.04); border: 1px solid var(--border);
+  background: var(--glass); border: 1px solid var(--border);
   border-radius: 99px; padding: .28rem .8rem;
   font-size: .73rem; color: var(--tx-muted);
   backdrop-filter: blur(6px); transition: border-color .2s, color .2s, background .2s;
@@ -265,7 +265,7 @@
 .h-ticker-card:hover { border-color: var(--border-hv); }
 .h-ticker-text   { font-size: .8rem; color: var(--tx-muted); font-style: italic; line-height: 1.6; margin-bottom: .7rem; }
 .h-ticker-footer { display: flex; justify-content: space-between; align-items: center; }
-.h-ticker-stars  { color: #fbbf24; font-size: .72rem; }
+.h-ticker-stars  { color: var(--star); font-size: .72rem; }
 .h-ticker-author { font-size: .7rem; font-weight: 600; color: var(--tx); }
 
 /* ── SECTION SHELL ──────────────────────────────────── */
@@ -335,7 +335,7 @@
 /* ── REVIEW CARDS (skeptic panel) ───────────────────── */
 .h-rev-panel { background: var(--bg-alt); padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; gap: .75rem; overflow-y: auto; }
 .h-rev-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.3rem; }
-.h-rev-stars  { color: #fbbf24; font-size: .82rem; margin-bottom: .6rem; }
+.h-rev-stars  { color: var(--star); font-size: .82rem; margin-bottom: .6rem; }
 .h-rev-text   { font-size: .82rem; color: var(--tx-muted); font-style: italic; line-height: 1.75; margin-bottom: .65rem; }
 .h-rev-author { font-size: .75rem; font-weight: 600; color: var(--tx); }
 
@@ -363,7 +363,7 @@
 .h-field { margin-bottom: 1.1rem; }
 .h-label { display: block; font-size: .66rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--tx-muted); margin-bottom: .48rem; }
 .h-input {
-  width: 100%; background: rgba(255,255,255,.045); border: 1px solid var(--border);
+  width: 100%; background: var(--glass); border: 1px solid var(--border);
   border-radius: 8px; padding: .85rem 1.1rem;
   font-size: .92rem; color: var(--tx); outline: none; font-family: var(--ff-body);
   transition: border-color .2s, box-shadow .2s;
