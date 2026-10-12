@@ -42,10 +42,11 @@ class Command(BaseCommand):
         if not clinic.cover_image and not clinic.cover_image_url:
             clinic.cover_image_url = static("img/clinic/cover.jpg")
             clinic.save(update_fields=["cover_image_url"])
-        devrim = Doctor.objects.filter(clinic=clinic, slug="devrim-biriken-sipahi").first()
-        if devrim and not devrim.photo and not devrim.photo_url:
-            devrim.photo_url = static("img/clinic/dr-devrim-sipahi.jpg")
-            devrim.save(update_fields=["photo_url"])
+        for slug, fname in (("devrim-biriken-sipahi", "dr-devrim-sipahi.jpg"), ("ekin-sipahi", "dt-ekin-sipahi.jpg")):
+            doctor = Doctor.objects.filter(clinic=clinic, slug=slug).first()
+            if doctor and not doctor.photo and not doctor.photo_url:
+                doctor.photo_url = static(f"img/clinic/{fname}")
+                doctor.save(update_fields=["photo_url"])
         # Önce-sonra vakaları (apps/clinics/case_content.json — 16 dilde başlık + açıklama, sıra: zirkonya → kompozit → Sanem, Hazan)
         from apps.treatments.models import Treatment
 
