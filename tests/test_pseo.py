@@ -36,7 +36,7 @@ class PseoTests(SeededTestCase):
             self.assertEqual(len(t.live_languages()), len(LANGUAGE_META), t.key)
 
     def test_guide_pages_render_without_prices_with_photo_and_backlinks(self):
-        for lang in ("en", "de", "ar", "tr"):
+        for lang in ("en", "de", "ar", "tr", "bg"):
             for t in SeoTopic.objects.all():
                 with translation.override(lang):
                     url = reverse("guides:detail", kwargs={"slug": t.localized(lang).slug})
@@ -47,9 +47,9 @@ class PseoTests(SeededTestCase):
                 self.assertIsNone(MONEY.search(_visible(html)), url)
                 self.assertIn("https://cdn.example.com/real.jpg", html)
                 self.assertIn("instagram.com/drdevrimbirikensipahi", html)
-                self.assertIn('href="https://drdevrim.com/"', html)  # her dilde ana sayfa
-                old = "https://devrimbirikensipahi.com.tr/" if lang == "tr" else "https://devrimbirikensipahi.com.tr/en/"
-                self.assertIn(old, html)
+                suffix = "" if lang == "tr" else f"{lang}/"  # drdevrim.com: o anki dilin ana sayfası
+                self.assertIn(f'href="https://drdevrim.com/{suffix}"', html)
+                self.assertIn(f"https://devrimbirikensipahi.com.tr/{suffix}", html)
 
     def test_package_and_price_pages(self):
         for name, kwargs in [("packages:index", {}), ("prices:index", {}),
