@@ -761,7 +761,7 @@ Every photo on this page shows a real patient of our clinic, published with cons
 
 - Every patient is examined and treated by the dentist personally
 - Written plans and fixed quotes your clients can trust
-- Coordination of appointments, transfers and accommodation
+- Appointments planned around your clients' travel dates
 - Multilingual communication and aftercare via WhatsApp
 
 ## For patients: do you need a dental tourism agency?
@@ -813,7 +813,7 @@ Stay close to the clinic so that appointments are easy: Şişli, Osmanbey, Nişa
 
 - Metro M2 (Taksim – Osmanbey – Şişli) is the easiest way to reach us
 - Use licensed taxis or ride-hailing apps; agree on the meter
-- From Istanbul Airport: the M11 metro or a pre-booked transfer
+- From Istanbul Airport: the M11 metro, a taxi or a ride-hailing app
 
 ## Istanbul areas to avoid
 

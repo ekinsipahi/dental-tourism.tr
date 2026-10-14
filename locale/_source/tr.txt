@@ -617,3 +617,15 @@
 616|Önce ve sonra — kendi hastalarımız
 617|Her fotoğraf kliniğimizin gerçek bir hastasına ait ve onayıyla paylaşıldı. Karşılaştırmak için sürükleyin.
 618|Önce ve sonrayı karşılaştırmak için sürükleyin
+619|İstanbul'da kişisel değerlendirme, 3D tarama ve muayene, tedavinin kendisi ve evinize döndükten sonra WhatsApp üzerinden takip. Pakete ekstralar eklemek yerine bütçenizi tedavi planınıza yatırıyoruz — daha uygun seçenekler de mevcut.
+620|Kişiye özel paket neden daha avantajlı?
+621|Çünkü ekstralara değil, tedavinize ödeme yapıyorsunuz. Bütçeniz hekimin zamanına, kaliteli malzemeye ve uzun ömürlü bir sonuca gider — daha uygun seçenekler de mevcut. WhatsApp'tan bize sorun.
+622|Gerçek bir teşhise göre hazırlanan Türkiye diş tatili paketleri: değerlendirme, tedavi ve takip. Bütçeniz ekstralara değil tedavinize gider. Kişisel planınızı WhatsApp'tan alın.
+623|Diş tedavisi Hollywood gülüşünden ibaret değildir. Paketiniz gerçek bir teşhise göre hazırlanır — bütçeniz de ekstralara değil, tedavinize gider.
+624|Teşhisinize göre hazırlanan İstanbul %(treatment)s paketi: değerlendirme, tedavi ve takip. Bütçeniz ekstralara değil tedavinize gider. Kişisel planınızı WhatsApp'tan alın.
+625|Biz tedavinize odaklanıyor, partner ajansımızla birlikte çalışıyoruz. Tıbbi kararlar her zaman diş hekiminde kalır.
+626|Randevularınızı seyahat tarihlerinize göre planlıyoruz.
+627|Bütçeniz tedavinize gider
+628|Paket ekstraları yok — bunun yerine tedavi planınıza yatırım yapıyoruz; daha uygun seçenekler de mevcut.
+629|Bütçeniz ekstralara değil, tedavinize gider
+630|Bütçeniz asıl önemli olana, tedavinize gider. Daha uygun seçenekler de mevcut; sormanız yeterli.

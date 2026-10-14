@@ -617,3 +617,15 @@
 616|Przed i po — nasi pacjenci
 617|Każde zdjęcie przedstawia prawdziwego pacjenta naszej kliniki, udostępnione za jego zgodą. Przeciągnij, aby porównać.
 618|Przeciągnij, aby porównać przed i po
+619|Osobista ocena, skan 3D i badanie w Stambule, samo leczenie oraz opieka przez WhatsApp po powrocie do domu. Zamiast doliczać dodatki, inwestujemy Twój budżet w plan leczenia — dostępne są też tańsze opcje.
+620|Dlaczego indywidualny pakiet bardziej się opłaca?
+621|Bo płacisz za leczenie, a nie za dodatki. Twój budżet idzie na czas dentysty, dobre materiały i trwały efekt — dostępne są też tańsze opcje. Zapytaj nas na WhatsApp.
+622|Pakiety leczenia zębów w Turcji oparte na prawdziwej diagnozie: ocena, leczenie i opieka po leczeniu. Twój budżet idzie na leczenie, a nie na dodatki. Otrzymaj indywidualny plan na WhatsApp.
+623|Leczenie zębów to coś więcej niż hollywoodzki uśmiech. Twój pakiet opiera się na prawdziwej diagnozie — a budżet idzie na leczenie, nie na dodatki.
+624|Pakiet %(treatment)s w Stambule oparty na Twojej diagnozie: ocena, leczenie i opieka po leczeniu. Twój budżet idzie na leczenie, a nie na dodatki. Otrzymaj indywidualny plan na WhatsApp.
+625|Skupiamy się na Twoim leczeniu i współpracujemy z naszą agencją partnerską. Decyzje medyczne zawsze należą do dentysty.
+626|Planujemy wizyty pod Twoje terminy podróży.
+627|Twój budżet idzie na leczenie
+628|Bez dodatków w pakiecie — zamiast tego inwestujemy w Twój plan leczenia, a dostępne są też tańsze opcje.
+629|Twój budżet idzie na leczenie, nie na dodatki
+630|Twój budżet idzie tam, gdzie ma znaczenie — na leczenie. Dostępne są też tańsze opcje; wystarczy zapytać.

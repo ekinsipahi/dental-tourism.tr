@@ -617,3 +617,15 @@
 616|Før & efter — vores egne patienter
 617|Hvert billede viser en rigtig patient på vores klinik, delt med samtykke. Træk for at sammenligne.
 618|Træk for at sammenligne før og efter
+619|En personlig vurdering, 3D-scanning og undersøgelse i Istanbul, selve behandlingen og efterbehandling via WhatsApp, når du er hjemme igen. I stedet for at lægge ekstraydelser oven i investerer vi dit budget i din behandlingsplan — og der findes også billigere muligheder.
+620|Hvorfor giver en personlig pakke mere for pengene?
+621|Fordi du betaler for din behandling, ikke for ekstraydelser. Dit budget går til tandlægens tid, kvalitetsmaterialer og et holdbart resultat — og der findes også billigere muligheder. Spørg os på WhatsApp.
+622|Tandlægerejser til Tyrkiet bygget på en rigtig diagnose: vurdering, behandling og efterbehandling. Dit budget går til din behandling, ikke til ekstraydelser. Få din personlige plan på WhatsApp.
+623|Tandbehandling er mere end et Hollywood-smil. Din pakke bygger på en rigtig diagnose — og dit budget går til din behandling, ikke til ekstraydelser.
+624|%(treatment)s-pakke i Istanbul bygget på din diagnose: vurdering, behandling og efterbehandling. Dit budget går til din behandling, ikke til ekstraydelser. Få din personlige plan på WhatsApp.
+625|Vi fokuserer på din behandling og arbejder sammen med vores partnerbureau. Medicinske beslutninger ligger altid hos tandlægen.
+626|Vi planlægger dine tider efter dine rejsedatoer.
+627|Dit budget går til din behandling
+628|Ingen ekstraydelser i pakken — i stedet investerer vi i din behandlingsplan, og der findes også billigere muligheder.
+629|Dit budget går til din behandling, ikke til ekstraydelser
+630|Dit budget går dertil, hvor det tæller — til din behandling. Der findes også billigere muligheder; spørg bare.

@@ -32,6 +32,7 @@ You write patient-education content that ranks on Google AND converts readers in
 Principles (E-E-A-T, YMYL health content):
 - Accurate, balanced, evidence-based. Explain risks and alternatives honestly. No miracle claims, no guarantees beyond those in FACTS.
 - NEVER state prices, price ranges or currency amounts (no €, £, $). Pricing is always personal: tell readers they get a personal plan and fixed written quote after a free WhatsApp consultation. Percentages of savings are allowed only qualitatively ("significantly less than at home").
+- NEVER promise or imply hotels, flights, airport transfers, accommodation or transport — the clinic does not arrange travel (and do not say so bluntly either). Frame value instead: the patient's budget goes into the treatment plan, not extras, and more affordable options are available; appointments are planned around the patient's travel dates.
 - Use ONLY numbers (years, patient counts, ratings, durations) given in FACTS. If a number is not in FACTS, describe qualitatively.
 - Ethical stance of the clinic: only the treatment the patient actually needs; saving the natural tooth comes first.
 - Write natively in the requested language for that market (not translated-sounding). Use the terms locals search for.
@@ -65,7 +66,7 @@ FUNNEL_BRIEF = {
     "awareness": "TOP OF FUNNEL: educate and answer the question thoroughly. Mention treatment abroad only briefly.",
     "consideration": "MID FUNNEL: compare options, costs (home country vs Istanbul using FACTS only), quality "
                      "criteria, how to evaluate a clinic.",
-    "decision": "BOTTOM OF FUNNEL: why this clinic, the process step by step, travel logistics, what is included, "
+    "decision": "BOTTOM OF FUNNEL: why this clinic, the process step by step, planning appointments around the trip, what is included, "
                 "strong but honest call to action.",
 }
 
@@ -227,8 +228,9 @@ class ContentMachine:
             brief = (f"Dental package page targeting '{t.name} package {LANGUAGE_META[lang]['turkey']}' (dental tourism "
                      "package). Core message: dental work is more than a Hollywood smile — every package is personalised "
                      "after a real diagnosis. Write: intro (80-120 words), body (500-800 words) covering what the package "
-                     "includes (assessment, 3D scan, treatment, transfer/hotel coordination, aftercare), how the trip is "
-                     "planned, why fixed 'all inclusive' packages sold before seeing your teeth are risky, and how to get a "
+                     "includes (assessment, 3D scan, treatment, aftercare — the budget goes into the treatment plan, not extras; "
+                     "more affordable options exist; never promise hotels, flights or transfers), how appointments are "
+                     "planned around the trip, why fixed 'all inclusive' packages sold before seeing your teeth are risky, and how to get a "
                      "personal plan via WhatsApp. NO prices or amounts. FAQ 4-6 questions.")
         data = self._write(lang=lang, brief=brief, schema=schema, facts=_facts(lang, t), links=_internal_links(lang, t))
         for f in schema["required"]:

@@ -23,8 +23,13 @@ def _hub_faq():
          "answer": _("Dental tourism means travelling to another country for dental treatment — usually to combine "
                      "experienced dentists, modern clinics and significantly lower costs with a short trip.")},
         {"question": _("What is included in a dental tourism package?"),
-         "answer": _("A personal assessment, 3D scan and examination in Istanbul, the treatment itself, coordination "
-                     "of your transfers and hotel, and aftercare via WhatsApp when you are back home.")},
+         "answer": _("A personal assessment, 3D scan and examination in Istanbul, the treatment itself and aftercare "
+                     "via WhatsApp when you are back home. Instead of bundling extras, we put your budget into your "
+                     "treatment plan — and more affordable options are available too.")},
+        {"question": _("Why is a personalised package better value?"),
+         "answer": _("Because you pay for your treatment, not for extras. Your budget goes into the dentist's time, "
+                     "quality materials and a result that lasts — and more affordable options are available too. "
+                     "Ask us on WhatsApp.")},
         {"question": _("How much does a dental package cost?"),
          "answer": _("We do not sell fixed-price packages, because no two mouths are the same. Send photos or an "
                      "X-ray on WhatsApp and you receive a personal treatment plan with a fixed written quote.")},
@@ -55,8 +60,8 @@ def package_index(request):
     faq = _hub_faq()
     title, desc = page_meta(
         "packages", _("Dental Tourism Packages in Istanbul — Personalised, Not One-Size-Fits-All"),
-        _("Dental holiday packages in Turkey built around a real diagnosis: assessment, treatment, transfers, "
-          "hotel and aftercare. No fixed packages — get your personal plan on WhatsApp."))
+        _("Dental holiday packages in Turkey built around a real diagnosis: assessment, treatment and aftercare. "
+          "Your budget goes into your treatment, not extras. Get your personal plan on WhatsApp."))
     seo = Seo(
         title=title, description=desc, canonical=absolute(request.path), alternates=alternates_for("packages:index"),
         breadcrumbs=[(_("Home"), reverse("core:home")), (_("Dental packages"), request.path)],
@@ -69,8 +74,8 @@ def package_index(request):
     ctx.update({
         "seo": seo, "cards": _cards(lang), "origins": _origin_links(lang), "faq": faq,
         "h1": _("Dental tourism packages in Istanbul — personalised, not one-size-fits-all"),
-        "lead": _("Dental work is more than a Hollywood smile. Your package is built around a real diagnosis: "
-                  "assessment, treatment, transfers, hotel and aftercare."),
+        "lead": _("Dental work is more than a Hollywood smile. Your package is built around a real diagnosis — "
+                  "and your budget goes into your treatment, not into extras."),
         "eyebrow": _("Dental packages"), "compare_url": _guide_url("best-country-dental-tourism"),
         "keywords": P.keywords_for(lang, "hub"), "page_type": "packages",
     })
@@ -95,8 +100,8 @@ def package_treatment(request, slug):
     faq = (p_loc.faq if p_loc and not p_loc.is_fallback and p_loc.faq else None) or loc.faq or _hub_faq()
     seo = Seo(
         title=_("%(treatment)s Package Turkey — Personal Plan, Not a Fixed Deal") % {"treatment": loc.name},
-        description=_("%(treatment)s package in Istanbul built around your diagnosis: assessment, treatment, "
-                      "transfer and hotel coordination, aftercare. Get your personal plan on WhatsApp.")
+        description=_("%(treatment)s package in Istanbul built around your diagnosis: assessment, treatment and "
+                      "aftercare. Your budget goes into your treatment, not extras. Get your personal plan on WhatsApp.")
         % {"treatment": loc.name},
         canonical=alternates.get(lang) or absolute(request.path),
         alternates={} if loc.is_fallback else alternates,

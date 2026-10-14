@@ -617,3 +617,15 @@
 616|Avant / après — nos propres patients
 617|Chaque photo montre un vrai patient de notre clinique, partagée avec son accord. Faites glisser pour comparer.
 618|Faites glisser pour comparer avant et après
+619|Un bilan personnalisé, un scanner 3D et un examen à Istanbul, le traitement lui-même et un suivi sur WhatsApp une fois rentré chez vous. Plutôt que d’ajouter des extras, nous investissons votre budget dans votre plan de traitement — et des options plus abordables existent aussi.
+620|Pourquoi un forfait personnalisé est-il plus avantageux ?
+621|Parce que vous payez votre traitement, pas des extras. Votre budget va dans le temps du dentiste, des matériaux de qualité et un résultat durable — et des options plus abordables existent aussi. Demandez-nous sur WhatsApp.
+622|Forfaits de soins dentaires en Turquie fondés sur un vrai diagnostic : bilan, traitement et suivi. Votre budget va dans votre traitement, pas dans des extras. Recevez votre plan personnalisé sur WhatsApp.
+623|Les soins dentaires, ce n’est pas seulement un sourire hollywoodien. Votre forfait repose sur un vrai diagnostic — et votre budget va dans votre traitement, pas dans des extras.
+624|Forfait %(treatment)s à Istanbul fondé sur votre diagnostic : bilan, traitement et suivi. Votre budget va dans votre traitement, pas dans des extras. Recevez votre plan personnalisé sur WhatsApp.
+625|Nous nous concentrons sur votre traitement et travaillons avec notre agence partenaire. Les décisions médicales restent toujours entre les mains du dentiste.
+626|Nous planifions vos rendez-vous selon vos dates de voyage.
+627|Votre budget va dans votre traitement
+628|Pas d’extras de forfait — nous investissons plutôt dans votre plan de traitement, et des options plus abordables existent aussi.
+629|Votre budget va dans votre traitement, pas dans des extras
+630|Votre budget va là où il compte — dans votre traitement. Des options plus abordables existent aussi ; il suffit de demander.

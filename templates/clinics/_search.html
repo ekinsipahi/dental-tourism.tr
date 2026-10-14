@@ -23,8 +23,6 @@
           <div><label for="cs-r">{{ search_form.min_rating.label }}</label><select id="cs-r" name="min_rating">{% for v, l in search_form.min_rating.field.choices %}<option value="{{ v }}"{% if search_form.min_rating.value == v %} selected{% endif %}>{{ l }}</option>{% endfor %}</select></div>
           <div><label for="cs-s">{{ search_form.sort.label }}</label><select id="cs-s" name="sort">{% for v, l in search_form.sort.field.choices %}<option value="{{ v }}"{% if search_form.sort.value == v %} selected{% endif %}>{{ l }}</option>{% endfor %}</select></div>
           <label class="check"><input type="checkbox" name="verified" value="on"{% if search_form.verified.value %} checked{% endif %}> {{ search_form.verified.label }}</label>
-          <label class="check"><input type="checkbox" name="transfer" value="on"{% if search_form.transfer.value %} checked{% endif %}> {{ search_form.transfer.label }}</label>
-          <label class="check"><input type="checkbox" name="hotel" value="on"{% if search_form.hotel.value %} checked{% endif %}> {{ search_form.hotel.label }}</label>
         </div>
       </details>
     </form>

@@ -24,8 +24,6 @@ class ClinicSearchForm(forms.Form):
     min_rating = forms.ChoiceField(required=False, label=_("Google rating"),
                                    choices=[("", _("Any")), ("4.5", "4.5+ ★"), ("4.8", "4.8+ ★")])
     verified = forms.BooleanField(required=False, label=_("Verified clinics only"))
-    transfer = forms.BooleanField(required=False, label=_("Airport transfer"))
-    hotel = forms.BooleanField(required=False, label=_("Hotel booking help"))
     sort = forms.ChoiceField(required=False, choices=SORT_CHOICES, label=_("Sort by"))
 
     def __init__(self, *args, lang="en", **kwargs):
@@ -66,10 +64,6 @@ def search_clinics(form):
         qs = qs.filter(google_rating__gte=cd["min_rating"])
     if cd.get("verified"):
         qs = qs.filter(is_verified=True)
-    if cd.get("transfer"):
-        qs = qs.filter(offers_airport_transfer=True)
-    if cd.get("hotel"):
-        qs = qs.filter(offers_hotel_booking=True)
 
     qs = qs.distinct()
 

@@ -617,3 +617,15 @@
 616|Voor & na — onze eigen patiënten
 617|Elke foto toont een echte patiënt van onze kliniek, gedeeld met toestemming. Sleep om te vergelijken.
 618|Sleep om voor en na te vergelijken
+619|Een persoonlijke beoordeling, 3D-scan en onderzoek in Istanbul, de behandeling zelf en nazorg via WhatsApp als u weer thuis bent. In plaats van extra's te bundelen, steken we uw budget in uw behandelplan — en er zijn ook voordeligere opties.
+620|Waarom is een persoonlijk pakket voordeliger?
+621|Omdat u betaalt voor uw behandeling, niet voor extra's. Uw budget gaat naar de tijd van de tandarts, kwaliteitsmaterialen en een resultaat dat lang meegaat — en er zijn ook voordeligere opties. Vraag het ons via WhatsApp.
+622|Tandartsvakantie-pakketten in Turkije op basis van een echte diagnose: beoordeling, behandeling en nazorg. Uw budget gaat naar uw behandeling, niet naar extra's. Vraag uw persoonlijke plan aan via WhatsApp.
+623|Tandheelkunde is meer dan een Hollywood-glimlach. Uw pakket is gebaseerd op een echte diagnose — en uw budget gaat naar uw behandeling, niet naar extra's.
+624|%(treatment)s-pakket in Istanbul op basis van uw diagnose: beoordeling, behandeling en nazorg. Uw budget gaat naar uw behandeling, niet naar extra's. Vraag uw persoonlijke plan aan via WhatsApp.
+625|Wij richten ons op uw behandeling en werken samen met ons partnerbureau. Medische beslissingen blijven altijd bij de tandarts.
+626|We plannen uw afspraken rond uw reisdata.
+627|Uw budget gaat naar uw behandeling
+628|Geen pakket-extra's — in plaats daarvan investeren we in uw behandelplan, en er zijn ook voordeligere opties.
+629|Uw budget gaat naar uw behandeling, niet naar extra's
+630|Uw budget gaat naar wat telt — uw behandeling. Er zijn ook voordeligere opties; vraag het gerust.

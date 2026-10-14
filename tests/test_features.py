@@ -80,8 +80,8 @@ class ClinicSearchTests(SeededTestCase):
         self.assertNotIn(">Dr. Dt. Devrim Biriken Sipahi Dental Clinic<", html)
         self.assertIn('content="noindex,follow"', html)  # filtreli sayfa indexlenmez
 
-    def test_language_and_transfer_filters(self):
-        html = self.client.get("/clinics/", {"language": "ru", "transfer": "on"}).content.decode()
+    def test_language_filter(self):
+        html = self.client.get("/clinics/", {"language": "ru"}).content.decode()
         self.assertIn("Bosphorus Dental", html)
         html = self.client.get("/clinics/", {"language": "de"}).content.decode()
         self.assertNotIn("Bosphorus Dental", html)

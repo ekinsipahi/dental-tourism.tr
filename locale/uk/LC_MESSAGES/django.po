@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-11 13:19+0300\n"
+"POT-Creation-Date: 2026-10-14 15:11+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,8 +32,8 @@ msgstr ""
 #: apps/blog/views.py:44 apps/blog/views.py:75 apps/blog/views.py:141
 #: apps/clinics/views.py:39 apps/clinics/views.py:68 apps/clinics/views.py:113
 #: apps/core/views.py:119 apps/seo/common.py:32 apps/seo/guide_views.py:34
-#: apps/seo/guide_views.py:70 apps/seo/package_views.py:62
-#: apps/seo/package_views.py:104 apps/seo/package_views.py:143
+#: apps/seo/guide_views.py:70 apps/seo/package_views.py:67
+#: apps/seo/package_views.py:109 apps/seo/package_views.py:148
 #: apps/seo/views.py:69 apps/seo/views.py:113 apps/seo/views.py:145
 #: apps/treatments/views.py:27 apps/treatments/views.py:88
 #: templates/404.html:8 templates/components/navbar.html:5
@@ -140,28 +140,20 @@ msgstr "Будь-який"
 msgid "Verified clinics only"
 msgstr "Лише перевірені клініки"
 
-#: apps/clinics/search.py:27 templates/clinics/list.html:34
-msgid "Airport transfer"
-msgstr "Трансфер з аеропорту"
-
-#: apps/clinics/search.py:28
-msgid "Hotel booking help"
-msgstr "Допомога з бронюванням готелю"
-
-#: apps/clinics/search.py:29
+#: apps/clinics/search.py:27
 msgid "Sort by"
 msgstr "Сортувати"
 
-#: apps/clinics/search.py:35
+#: apps/clinics/search.py:33
 msgid "All cities"
 msgstr "Усі міста"
 
-#: apps/clinics/search.py:37 templates/components/navbar.html:18
+#: apps/clinics/search.py:35 templates/components/navbar.html:18
 #: templates/components/navbar.html:83
 msgid "All treatments"
 msgstr "Усі види лікування"
 
-#: apps/clinics/search.py:39
+#: apps/clinics/search.py:37
 msgid "Any language"
 msgstr "Будь-яка мова"
 
@@ -571,7 +563,7 @@ msgstr "Як ми обробляємо та захищаємо ваші перс
 msgid "Page not found"
 msgstr "Сторінку не знайдено"
 
-#: apps/seo/common.py:36 templates/clinics/detail.html:75
+#: apps/seo/common.py:36 templates/clinics/detail.html:73
 #: templates/clinics/doctor.html:26 templates/components/footer.html:49
 #: templates/components/navbar.html:56 templates/components/navbar.html:93
 #: templates/components/reviews.html:16 templates/home/sections/hero.html:180
@@ -734,19 +726,40 @@ msgid "What is included in a dental tourism package?"
 msgstr "Що входить у стоматологічний тур?"
 
 #: apps/seo/package_views.py:26
+#| msgid ""
+#| "A personal assessment, 3D scan and examination in Istanbul, the treatment "
+#| "itself, coordination of your transfers and hotel, and aftercare via WhatsApp"
+#| " when you are back home."
 msgid ""
 "A personal assessment, 3D scan and examination in Istanbul, the treatment "
-"itself, coordination of your transfers and hotel, and aftercare via WhatsApp"
-" when you are back home."
+"itself and aftercare via WhatsApp when you are back home. Instead of "
+"bundling extras, we put your budget into your treatment plan — and more "
+"affordable options are available too."
 msgstr ""
-"Особиста оцінка, 3D-знімок і огляд у Стамбулі, саме лікування, організація "
-"трансферів і готелю, а також супровід у WhatsApp після повернення."
+"Персональна оцінка, 3D-сканування та огляд у Стамбулі, саме лікування і "
+"супровід у WhatsApp, коли ви вже вдома. Замість додаткових опцій у пакеті ми"
+" вкладаємо ваш бюджет у план лікування — є й доступніші варіанти."
 
-#: apps/seo/package_views.py:28
+#: apps/seo/package_views.py:29
+#| msgid "What a personalised dental package includes"
+msgid "Why is a personalised package better value?"
+msgstr "Чому персональний пакет вигідніший?"
+
+#: apps/seo/package_views.py:30
+msgid ""
+"Because you pay for your treatment, not for extras. Your budget goes into "
+"the dentist's time, quality materials and a result that lasts — and more "
+"affordable options are available too. Ask us on WhatsApp."
+msgstr ""
+"Бо ви платите за лікування, а не за додаткові опції. Ваш бюджет іде на час "
+"лікаря, якісні матеріали та довговічний результат — є й доступніші варіанти."
+" Запитайте нас у WhatsApp."
+
+#: apps/seo/package_views.py:33
 msgid "How much does a dental package cost?"
 msgstr "Скільки коштує стоматологічний пакет?"
 
-#: apps/seo/package_views.py:29
+#: apps/seo/package_views.py:34
 msgid ""
 "We do not sell fixed-price packages, because no two mouths are the same. "
 "Send photos or an X-ray on WhatsApp and you receive a personal treatment "
@@ -756,11 +769,11 @@ msgstr ""
 "Надішліть фото або знімок у WhatsApp, і ви отримаєте особистий план "
 "лікування з письмовою фіксованою ціною."
 
-#: apps/seo/package_views.py:31
+#: apps/seo/package_views.py:36
 msgid "Is an all-inclusive Hollywood smile package a good idea?"
 msgstr "Чи варто брати пакет «голлівудська усмішка все включено»?"
 
-#: apps/seo/package_views.py:32
+#: apps/seo/package_views.py:37
 msgid ""
 "Only if you actually need it. Packages that sell 20 veneers before anyone "
 "has examined your teeth often remove healthy tooth structure. A real plan "
@@ -770,11 +783,11 @@ msgstr ""
 "огляду, часто позбавляють вас здорових тканин зуба. Справжній план "
 "починається з діагностики."
 
-#: apps/seo/package_views.py:34
+#: apps/seo/package_views.py:39
 msgid "How long does a dental trip to Turkey take?"
 msgstr "Скільки триває стоматологічна поїздка до Туреччини?"
 
-#: apps/seo/package_views.py:35
+#: apps/seo/package_views.py:40
 msgid ""
 "Most treatments take 3–7 days in Istanbul. Implants usually need two short "
 "visits a few months apart; we plan both around your flights."
@@ -783,73 +796,85 @@ msgstr ""
 "потрібні два короткі візити з інтервалом у кілька місяців; обидва ми "
 "плануємо під ваші рейси."
 
-#: apps/seo/package_views.py:57
+#: apps/seo/package_views.py:62
 msgid ""
 "Dental Tourism Packages in Istanbul — Personalised, Not One-Size-Fits-All"
 msgstr "Стоматологічні тури до Стамбула — індивідуально, а не шаблон"
 
-#: apps/seo/package_views.py:58
+#: apps/seo/package_views.py:63
+#| msgid ""
+#| "Dental holiday packages in Turkey built around a real diagnosis: assessment,"
+#| " treatment, transfers, hotel and aftercare. No fixed packages — get your "
+#| "personal plan on WhatsApp."
 msgid ""
 "Dental holiday packages in Turkey built around a real diagnosis: assessment,"
-" treatment, transfers, hotel and aftercare. No fixed packages — get your "
-"personal plan on WhatsApp."
+" treatment and aftercare. Your budget goes into your treatment, not extras. "
+"Get your personal plan on WhatsApp."
 msgstr ""
-"Стоматологічний тур до Туреччини на основі реальної діагностики: огляд, "
-"лікування, трансфери, готель і супровід. Без готових пакетів — ваш особистий"
-" план у WhatsApp."
+"Стоматологічні тури до Туреччини на основі реальної діагностики: оцінка, "
+"лікування та супровід. Ваш бюджет іде на лікування, а не на додаткові опції."
+" Отримайте персональний план у WhatsApp."
 
-#: apps/seo/package_views.py:62 apps/seo/package_views.py:74
-#: apps/seo/package_views.py:104 apps/seo/package_views.py:112
-#: apps/seo/package_views.py:143 apps/seo/package_views.py:152
+#: apps/seo/package_views.py:67 apps/seo/package_views.py:79
+#: apps/seo/package_views.py:109 apps/seo/package_views.py:117
+#: apps/seo/package_views.py:148 apps/seo/package_views.py:157
 #: templates/components/footer.html:36 templates/components/footer.html:37
 #: templates/components/navbar.html:85
 msgid "Dental packages"
 msgstr "Стоматологічні тури"
 
-#: apps/seo/package_views.py:71
+#: apps/seo/package_views.py:76
 msgid ""
 "Dental tourism packages in Istanbul — personalised, not one-size-fits-all"
 msgstr "Стоматологічні тури до Стамбула — індивідуально, а не за шаблоном"
 
-#: apps/seo/package_views.py:72
+#: apps/seo/package_views.py:77
+#| msgid ""
+#| "Dental work is more than a Hollywood smile. Your package is built around a "
+#| "real diagnosis: assessment, treatment, transfers, hotel and aftercare."
 msgid ""
 "Dental work is more than a Hollywood smile. Your package is built around a "
-"real diagnosis: assessment, treatment, transfers, hotel and aftercare."
+"real diagnosis — and your budget goes into your treatment, not into extras."
 msgstr ""
 "Стоматологія — це більше, ніж голлівудська усмішка. Ваш пакет будується на "
-"реальній діагностиці: огляд, лікування, трансфери, готель і супровід."
+"реальній діагностиці, а бюджет іде на лікування, а не на додаткові опції."
 
-#: apps/seo/package_views.py:94
+#: apps/seo/package_views.py:99
 #, python-format
 msgid "%(treatment)s package in Istanbul"
 msgstr "%(treatment)s: пакет у Стамбулі"
 
-#: apps/seo/package_views.py:97
+#: apps/seo/package_views.py:102
 #, python-format
 msgid "%(treatment)s Package Turkey — Personal Plan, Not a Fixed Deal"
 msgstr "%(treatment)s у Туреччині — особистий план, а не готова пропозиція"
 
-#: apps/seo/package_views.py:98
+#: apps/seo/package_views.py:103
 #, python-format
+#| msgid ""
+#| "%(treatment)s package in Istanbul built around your diagnosis: assessment, "
+#| "treatment, transfer and hotel coordination, aftercare. Get your personal "
+#| "plan on WhatsApp."
 msgid ""
 "%(treatment)s package in Istanbul built around your diagnosis: assessment, "
-"treatment, transfer and hotel coordination, aftercare. Get your personal "
-"plan on WhatsApp."
+"treatment and aftercare. Your budget goes into your treatment, not extras. "
+"Get your personal plan on WhatsApp."
 msgstr ""
-"%(treatment)s у Стамбулі за вашою діагностикою: огляд, лікування, трансфер і"
-" готель, супровід. Ваш особистий план у WhatsApp."
+"%(treatment)s: пакет у Стамбулі на основі вашої діагностики — оцінка, "
+"лікування та супровід. Ваш бюджет іде на лікування, а не на додаткові опції."
+" Отримайте персональний план у WhatsApp."
 
-#: apps/seo/package_views.py:132
+#: apps/seo/package_views.py:137
 #, python-format
 msgid "Dental holiday packages from %(country)s to Istanbul"
 msgstr "Лікування зубів у Стамбулі для пацієнтів із країни: %(country)s"
 
-#: apps/seo/package_views.py:138
+#: apps/seo/package_views.py:143
 #, python-format
 msgid "Dental Holiday Packages from %(country)s — Istanbul, Turkey"
 msgstr "Стоматологічний тур із країни %(country)s — Стамбул, Туреччина"
 
-#: apps/seo/package_views.py:139
+#: apps/seo/package_views.py:144
 #, python-format
 msgid ""
 "Planning dental treatment in Turkey from %(country)s? Flight time, how many "
@@ -859,7 +884,7 @@ msgstr ""
 "Плануєте лікування зубів у Туреччині (%(country)s)? Час перельоту, кількість"
 " поїздок, що входить в індивідуальний пакет і супровід удома."
 
-#: apps/seo/package_views.py:150
+#: apps/seo/package_views.py:155
 #, python-format
 msgid ""
 "Planning dental treatment in Istanbul from %(country)s? Flight times, how "
@@ -868,7 +893,7 @@ msgstr ""
 "Плануєте лікування зубів у Стамбулі (%(country)s)? Час перельоту, кількість "
 "поїздок і що входить в індивідуальний пакет."
 
-#: apps/seo/package_views.py:161
+#: apps/seo/package_views.py:166
 msgid ""
 "We plan treatment to keep the number of trips to a minimum — often one "
 "longer stay, with implants scheduled so that the second visit is short."
@@ -876,7 +901,7 @@ msgstr ""
 "Ми плануємо лікування так, щоб поїздок було якомога менше — часто один "
 "довший візит, а імпланти так, щоб другий візит був коротким."
 
-#: apps/seo/package_views.py:163
+#: apps/seo/package_views.py:168
 msgid ""
 "Crowns, veneers and most other treatments need one trip of about a week; "
 "implants usually need two short trips a few months apart."
@@ -885,28 +910,28 @@ msgstr ""
 "приблизно на тиждень; імпланти — зазвичай двох коротких поїздок з інтервалом"
 " у кілька місяців."
 
-#: apps/seo/package_views.py:166
+#: apps/seo/package_views.py:171
 #, python-format
 msgid "How long is the flight from %(country)s to Istanbul?"
 msgstr "Скільки летіти до Стамбула (%(country)s)?"
 
-#: apps/seo/package_views.py:167
+#: apps/seo/package_views.py:172
 #, python-format
 msgid ""
 "About %(hours)s hours, depending on your departure airport and connection."
 msgstr "Близько %(hours)s год, залежно від аеропорту вильоту і пересадки."
 
-#: apps/seo/package_views.py:169
+#: apps/seo/package_views.py:174
 #, python-format
 msgid "How many trips will I need from %(country)s?"
 msgstr "Скільки поїздок знадобиться (%(country)s)?"
 
-#: apps/seo/package_views.py:170
+#: apps/seo/package_views.py:175
 #, python-format
 msgid "What happens when I am back in %(country)s?"
 msgstr "Що буде після повернення додому (%(country)s)?"
 
-#: apps/seo/package_views.py:171
+#: apps/seo/package_views.py:176
 msgid ""
 "Follow-up continues on WhatsApp and email. If needed we coordinate with a "
 "local dentist and guide you by video call — you are never left alone."
@@ -915,11 +940,11 @@ msgstr ""
 " місцевим лікарем і консультуємо через відеозв’язок — ви ніколи не "
 "залишитеся сам на сам."
 
-#: apps/seo/package_views.py:173
+#: apps/seo/package_views.py:178
 msgid "How do I get a price for my dental package?"
 msgstr "Як дізнатися ціну мого стоматологічного пакета?"
 
-#: apps/seo/package_views.py:174
+#: apps/seo/package_views.py:179
 msgid ""
 "Send your photos or X-ray on WhatsApp. After the dentist has reviewed your "
 "case you receive a personal plan with a fixed written quote — we never "
@@ -1093,31 +1118,31 @@ msgstr ""
 msgid "%(treatment)s in Istanbul — Procedure & Personal Plan"
 msgstr "%(treatment)s у Стамбулі — процедура та особистий план"
 
-#: dental_tourism/urls.py:45
+#: dental_tourism/urls.py:50
 msgid "treatments/"
 msgstr "likuvannya/"
 
-#: dental_tourism/urls.py:46
+#: dental_tourism/urls.py:51
 msgid "prices/"
 msgstr "tsiny/"
 
-#: dental_tourism/urls.py:47
+#: dental_tourism/urls.py:52
 msgid "packages/"
 msgstr "pakety/"
 
-#: dental_tourism/urls.py:48
+#: dental_tourism/urls.py:53
 msgid "dental-holidays-from/"
 msgstr "stomatologichnyy-tur-z/"
 
-#: dental_tourism/urls.py:49
+#: dental_tourism/urls.py:54
 msgid "guide/"
 msgstr "gid/"
 
-#: dental_tourism/urls.py:50
+#: dental_tourism/urls.py:55
 msgid "clinics/"
 msgstr "kliniky/"
 
-#: dental_tourism/urls.py:51
+#: dental_tourism/urls.py:56
 msgid "dentists/"
 msgstr "stomatology/"
 
@@ -1143,7 +1168,7 @@ msgstr ""
 "Кожен план починається зі збереження ваших природних зубів, прозорої "
 "діагностики та фіксованої письмової ціни."
 
-#: templates/about.html:10 templates/base.html:52
+#: templates/about.html:10 templates/base.html:53
 #: templates/clinics/detail.html:36 templates/components/footer.html:18
 #: templates/components/mind_nudge.html:12 templates/components/reviews.html:7
 #: templates/home/_stats.html:5 templates/pseo/_hero.html:9
@@ -1159,7 +1184,7 @@ msgstr[2] "%(n)s відгуків Google"
 msgid "Send a photo — free assessment"
 msgstr "Надішліть фото — безкоштовна оцінка"
 
-#: templates/about.html:13 templates/base.html:68
+#: templates/about.html:13 templates/base.html:69
 #: templates/components/cta.html:24 templates/pseo/_hero.html:12
 msgid "Call us"
 msgstr "Зателефонуйте нам"
@@ -1215,48 +1240,48 @@ msgstr "Профіль лікаря"
 msgid "Django site admin"
 msgstr "Адміністрування Django"
 
-#: templates/base.html:31
+#: templates/base.html:32
 msgid "Skip to content"
 msgstr "Перейти до змісту"
 
-#: templates/base.html:34
+#: templates/base.html:35
 msgid "Language suggestion"
 msgstr "Пропозиція мови"
 
-#: templates/base.html:38 templates/components/mind_nudge.html:5
+#: templates/base.html:39 templates/components/mind_nudge.html:5
 msgid "Close"
 msgstr "Закрити"
 
-#: templates/base.html:47
+#: templates/base.html:48
 msgid "Very affordable — with a fixed written quote and no hidden costs."
 msgstr "Дуже доступно — з письмовою фіксованою ціною і без прихованих витрат."
 
-#: templates/base.html:47
+#: templates/base.html:48
 msgid "See personalised dental packages"
 msgstr "Переглянути індивідуальні стоматологічні тури"
 
-#: templates/base.html:49
+#: templates/base.html:50
 msgid ""
 "Short on time? Many treatments are completed within one week in Istanbul."
 msgstr "Мало часу? Багато видів лікування в Стамбулі тривають один тиждень."
 
-#: templates/base.html:52 templates/clinics/list.html:32
+#: templates/base.html:53 templates/clinics/list.html:32
 #: templates/seo/_clinic_offers.html:6
 #, python-format
 msgid "%(y)s+ years experience"
 msgstr "%(y)s+ років досвіду"
 
-#: templates/base.html:52 templates/components/reviews.html:8
+#: templates/base.html:53 templates/components/reviews.html:8
 #: templates/pseo/_hero.html:9
 msgid "read them on Google"
 msgstr "читати в Google"
 
-#: templates/base.html:66 templates/components/footer.html:42
+#: templates/base.html:67 templates/components/footer.html:42
 #: templates/components/navbar.html:59 templates/components/navbar.html:94
 msgid "Contact"
 msgstr "Контакти"
 
-#: templates/base.html:72 templates/contact.html:13
+#: templates/base.html:73 templates/contact.html:13
 msgid "Chat on WhatsApp"
 msgstr "Написати у WhatsApp"
 
@@ -1416,7 +1441,7 @@ msgstr "Контакти та адреса"
 msgid "Map"
 msgstr "Карта"
 
-#: templates/clinics/detail.html:76
+#: templates/clinics/detail.html:74
 #, python-format
 msgid "%(n)s review on dentaltourism.tr"
 msgid_plural "%(n)s reviews on dentaltourism.tr"
@@ -1424,62 +1449,62 @@ msgstr[0] "%(n)s відгук на dentaltourism.tr"
 msgstr[1] "%(n)s відгуки на dentaltourism.tr"
 msgstr[2] "%(n)s відгуків на dentaltourism.tr"
 
-#: templates/clinics/detail.html:79
+#: templates/clinics/detail.html:77
 msgid "All Google reviews"
 msgstr "Усі відгуки Google"
 
-#: templates/clinics/detail.html:80
+#: templates/clinics/detail.html:78
 msgid "Review us on Google"
 msgstr "Залиште відгук у Google"
 
-#: templates/clinics/detail.html:81
+#: templates/clinics/detail.html:79
 msgid "Write a review"
 msgstr "Написати відгук"
 
-#: templates/clinics/detail.html:85
+#: templates/clinics/detail.html:83
 msgid "Reviews on dentaltourism.tr"
 msgstr "Відгуки на dentaltourism.tr"
 
-#: templates/clinics/detail.html:86
+#: templates/clinics/detail.html:84
 msgid "Reviews on Google and other platforms"
 msgstr "Відгуки в Google та на інших платформах"
 
-#: templates/clinics/detail.html:89
+#: templates/clinics/detail.html:87
 #, python-format
 msgid "Were you treated at %(name)s? Share your experience"
 msgstr "Ви лікувалися в %(name)s? Поділіться досвідом"
 
-#: templates/clinics/detail.html:90
+#: templates/clinics/detail.html:88
 msgid ""
 "Reviews are checked before publication. Your email address is never shown."
 msgstr ""
 "Відгуки перевіряються перед публікацією. Ваш e-mail ніколи не показується."
 
-#: templates/clinics/detail.html:100
+#: templates/clinics/detail.html:98
 msgid "Poor"
 msgstr "Погано"
 
-#: templates/clinics/detail.html:100
+#: templates/clinics/detail.html:98
 msgid "Fair"
 msgstr "Задовільно"
 
-#: templates/clinics/detail.html:100
+#: templates/clinics/detail.html:98
 msgid "Good"
 msgstr "Добре"
 
-#: templates/clinics/detail.html:100
+#: templates/clinics/detail.html:98
 msgid "Very good"
 msgstr "Дуже добре"
 
-#: templates/clinics/detail.html:100
+#: templates/clinics/detail.html:98
 msgid "Excellent"
 msgstr "Відмінно"
 
-#: templates/clinics/detail.html:103
+#: templates/clinics/detail.html:101
 msgid "Tap a star"
 msgstr "Натисніть на зірку"
 
-#: templates/clinics/detail.html:108
+#: templates/clinics/detail.html:106
 msgid "Submit review"
 msgstr "Надіслати відгук"
 
@@ -1519,7 +1544,7 @@ msgstr[0] "Знайдено %(n)s клініку"
 msgstr[1] "Знайдено %(n)s клініки"
 msgstr[2] "Знайдено %(n)s клінік"
 
-#: templates/clinics/list.html:14 templates/clinics/list.html:47
+#: templates/clinics/list.html:14 templates/clinics/list.html:46
 msgid "Clear filters"
 msgstr "Скинути фільтри"
 
@@ -1527,11 +1552,11 @@ msgstr "Скинути фільтри"
 msgid "Verified"
 msgstr "Перевірено"
 
-#: templates/clinics/list.html:42
+#: templates/clinics/list.html:41
 msgid "View clinic"
 msgstr "Переглянути клініку"
 
-#: templates/clinics/list.html:47
+#: templates/clinics/list.html:46
 msgid "No clinics match your filters."
 msgstr "Немає клінік, що відповідають фільтрам."
 
@@ -1757,7 +1782,6 @@ msgid "Real patients, real results"
 msgstr "Реальні пацієнти, реальні результати"
 
 #: templates/components/results.html:7
-#| msgid "Before and after results"
 msgid "Before & after — our own patients"
 msgstr "До і після — наші пацієнти"
 
@@ -1875,12 +1899,15 @@ msgid "Dental tourism agency in Turkey: Sterr Agency"
 msgstr "Агентство стоматологічного туризму в Туреччині: Sterr Agency"
 
 #: templates/guides/detail.html:17
+#| msgid ""
+#| "For travel planning, transfers and accommodation we work with our partner "
+#| "agency. Medical decisions always stay with the dentist."
 msgid ""
-"For travel planning, transfers and accommodation we work with our partner "
-"agency. Medical decisions always stay with the dentist."
+"We focus on your treatment and work together with our partner agency. "
+"Medical decisions always stay with the dentist."
 msgstr ""
-"Планування поїздки, трансфери й проживання ми організовуємо разом із "
-"партнерським агентством. Медичні рішення завжди ухвалює лікар."
+"Ми зосереджені на вашому лікуванні та працюємо разом із нашою агенцією-"
+"партнером. Медичні рішення завжди залишаються за стоматологом."
 
 #: templates/guides/detail.html:18
 msgid "Dental tourism with Sterr Agency"
@@ -2285,8 +2312,10 @@ msgid "Travel to Istanbul"
 msgstr "Прилітайте до Стамбула"
 
 #: templates/home/sections/how.html:10
-msgid "We schedule appointments around your flights and help with logistics."
-msgstr "Ми підлаштуємо прийоми під ваші рейси та допоможемо з організацією."
+#| msgid ""
+#| "We schedule appointments around your flights and help with logistics."
+msgid "We schedule your appointments around your travel dates."
+msgstr "Ми плануємо ваші прийоми під дати вашої поїздки."
 
 #: templates/home/sections/how.html:11
 msgid "Treatment & aftercare"
@@ -2352,15 +2381,17 @@ msgid "What a personalised dental package includes"
 msgstr "Що входить в індивідуальний стоматологічний пакет"
 
 #: templates/packages/index.html:11
-msgid "Travel made simple"
-msgstr "Проста поїздка"
+#| msgid "What determines the price of your treatment"
+msgid "Your budget goes into your treatment"
+msgstr "Ваш бюджет іде на лікування"
 
 #: templates/packages/index.html:11
 msgid ""
-"Appointments planned around your flights, help with transfers and a hotel "
-"near the clinic."
+"No package extras — we invest in your treatment plan instead, and more "
+"affordable options are available too."
 msgstr ""
-"Прийоми під ваші рейси, допомога з трансферами і готель поруч із клінікою."
+"Жодних зайвих опцій у пакеті — натомість ми вкладаємо у ваш план лікування, "
+"є й доступніші варіанти."
 
 #: templates/packages/index.html:13
 msgid "Aftercare at home"
@@ -2481,8 +2512,8 @@ msgid "Appointments planned around your flights"
 msgstr "Прийоми під ваші рейси"
 
 #: templates/packages/treatment.html:15
-msgid "Help with airport transfer and a hotel near the clinic"
-msgstr "Допомога з трансфером з аеропорту і готель поруч із клінікою"
+msgid "Your budget goes into your treatment, not into extras"
+msgstr "Ваш бюджет іде на лікування, а не на зайві опції"
 
 #: templates/packages/treatment.html:16
 msgid "Aftercare on WhatsApp when you are back home"
@@ -2596,7 +2627,7 @@ msgstr "Детальніше про нас"
 msgid "Transparent by design — check us yourself"
 msgstr "Прозорість — наш принцип. Перевірте самі"
 
-#: templates/pseo/_photos.html:8
+#: templates/pseo/_photos.html:5
 msgid "Inside our clinic"
 msgstr "У нашій клініці"
 
@@ -2612,7 +2643,15 @@ msgstr ""
 " ви отримаєте письмову фіксовану ціну. Скільки домовилися — стільки й "
 "платите."
 
-#: templates/pseo/_price_note.html:6 templates/seo/treatment_price.html:28
+#: templates/pseo/_price_note.html:5
+msgid ""
+"Your budget goes where it matters — into your treatment. More affordable "
+"options are available too; just ask."
+msgstr ""
+"Ваш бюджет іде туди, де це важливо, — на лікування. Є й доступніші варіанти;"
+" просто запитайте."
+
+#: templates/pseo/_price_note.html:7 templates/seo/treatment_price.html:28
 msgid "Ask for my price on WhatsApp"
 msgstr "Дізнатися ціну у WhatsApp"
 
@@ -2864,6 +2903,24 @@ msgid ""
 msgstr ""
 "Усі види лікування, які ми пропонуємо, — з чесною інформацією про процедуру,"
 " термін перебування в Стамбулі та вартість."
+
+#~ msgid "Airport transfer"
+#~ msgstr "Трансфер з аеропорту"
+
+#~ msgid "Hotel booking help"
+#~ msgstr "Допомога з бронюванням готелю"
+
+#~ msgid "Travel made simple"
+#~ msgstr "Проста поїздка"
+
+#~ msgid ""
+#~ "Appointments planned around your flights, help with transfers and a hotel "
+#~ "near the clinic."
+#~ msgstr ""
+#~ "Прийоми під ваші рейси, допомога з трансферами і готель поруч із клінікою."
+
+#~ msgid "Help with airport transfer and a hotel near the clinic"
+#~ msgstr "Допомога з трансфером з аеропорту і готель поруч із клінікою"
 
 #~ msgid "Real results from our clinic"
 #~ msgstr "Реальні результати нашої клініки"

@@ -31,7 +31,6 @@
           {% if c.google_rating %}<li>⭐ <strong>{{ c.google_rating }}</strong>{% if c.google_review_count %} ({{ c.google_review_count }}){% endif %}</li>{% endif %}
           {% if c.years_experience %}<li>🩺 {% blocktrans with y=c.years_experience %}{{ y }}+ years experience{% endblocktrans %}</li>{% endif %}
           {% if c.languages_spoken %}<li>🗣️ {{ c.languages_spoken|join:", "|upper }}</li>{% endif %}
-          {% if c.offers_airport_transfer %}<li>✈️ {% trans "Airport transfer" %}</li>{% endif %}
           {% if r.doctor %}<li>👩‍⚕️ {{ r.doctor.full_name }}</li>{% endif %}
         </ul>
         {% with thumbs=c.object.gallery_preview %}{% if thumbs|length > 1 %}

@@ -617,3 +617,15 @@
 616|Înainte și după — pacienții noștri
 617|Fiecare fotografie aparține unui pacient real al clinicii noastre, publicată cu acordul său. Trage pentru a compara.
 618|Trage pentru a compara înainte și după
+619|O evaluare personală, scanare 3D și consult în Istanbul, tratamentul propriu-zis și îngrijire ulterioară pe WhatsApp după ce ajungi acasă. În loc să adăugăm extra-uri, investim bugetul tău în planul de tratament — și există și opțiuni mai accesibile.
+620|De ce un pachet personalizat este mai avantajos?
+621|Pentru că plătești pentru tratament, nu pentru extra-uri. Bugetul tău merge în timpul medicului, materiale de calitate și un rezultat durabil — și există și opțiuni mai accesibile. Întreabă-ne pe WhatsApp.
+622|Pachete de turism dentar în Turcia construite pe un diagnostic real: evaluare, tratament și îngrijire ulterioară. Bugetul tău merge în tratament, nu în extra-uri. Primește planul tău personal pe WhatsApp.
+623|Stomatologia înseamnă mai mult decât un zâmbet de Hollywood. Pachetul tău se bazează pe un diagnostic real — iar bugetul tău merge în tratament, nu în extra-uri.
+624|Pachet %(treatment)s în Istanbul construit pe diagnosticul tău: evaluare, tratament și îngrijire ulterioară. Bugetul tău merge în tratament, nu în extra-uri. Primește planul tău personal pe WhatsApp.
+625|Ne concentrăm pe tratamentul tău și colaborăm cu agenția noastră parteneră. Deciziile medicale rămân întotdeauna la medicul dentist.
+626|Îți planificăm programările în funcție de datele călătoriei.
+627|Bugetul tău merge în tratament
+628|Fără extra-uri în pachet — în schimb investim în planul tău de tratament, și există și opțiuni mai accesibile.
+629|Bugetul tău merge în tratament, nu în extra-uri
+630|Bugetul tău merge acolo unde contează — în tratament. Există și opțiuni mai accesibile; întreabă-ne.

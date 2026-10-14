@@ -617,3 +617,15 @@
 616|Antes y después — nuestros propios pacientes
 617|Cada foto es de un paciente real de nuestra clínica, compartida con su consentimiento. Arrastre para comparar.
 618|Arrastre para comparar antes y después
+619|Una valoración personal, escáner 3D y examen en Estambul, el tratamiento en sí y seguimiento por WhatsApp cuando ya estés en casa. En lugar de sumar extras, invertimos tu presupuesto en tu plan de tratamiento, y también hay opciones más económicas.
+620|¿Por qué un paquete personalizado sale más a cuenta?
+621|Porque pagas tu tratamiento, no extras. Tu presupuesto va al tiempo del dentista, a materiales de calidad y a un resultado duradero, y también hay opciones más económicas. Pregúntanos por WhatsApp.
+622|Paquetes de vacaciones dentales en Turquía basados en un diagnóstico real: valoración, tratamiento y seguimiento. Tu presupuesto va a tu tratamiento, no a extras. Recibe tu plan personal por WhatsApp.
+623|La odontología es más que una sonrisa de Hollywood. Tu paquete se basa en un diagnóstico real, y tu presupuesto va a tu tratamiento, no a extras.
+624|Paquete de %(treatment)s en Estambul basado en tu diagnóstico: valoración, tratamiento y seguimiento. Tu presupuesto va a tu tratamiento, no a extras. Recibe tu plan personal por WhatsApp.
+625|Nos centramos en tu tratamiento y trabajamos junto a nuestra agencia colaboradora. Las decisiones médicas siempre quedan en manos del dentista.
+626|Planificamos tus citas según tus fechas de viaje.
+627|Tu presupuesto va a tu tratamiento
+628|Sin extras de paquete: invertimos en tu plan de tratamiento, y también hay opciones más económicas.
+629|Tu presupuesto va a tu tratamiento, no a extras
+630|Tu presupuesto va a lo que importa: tu tratamiento. También hay opciones más económicas; solo pregunta.

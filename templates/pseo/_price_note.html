@@ -2,6 +2,7 @@
 <div class="card pseo-price" data-track-section="price-note">
   <h2>{% trans "What does it cost?" %}</h2>
   <p>{% trans "Our prices are very affordable — but we never publish one-size-fits-all prices, because no two mouths are the same. After the dentist has seen your photos or X-ray, you receive a fixed written quote. What we agree is what you pay." %}</p>
+  <p><strong>{% trans "Your budget goes where it matters — into your treatment. More affordable options are available too; just ask." %}</strong></p>
   <div class="btn-row">
     {% if wa_url %}<a class="btn btn-wa btn-sm" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=15 %} {% trans "Ask for my price on WhatsApp" %}</a>{% endif %}
     {% if clinic.phone %}<a class="btn btn-outline btn-sm" href="{{ tel_url }}" data-track="phone">📞 {{ clinic.phone }}</a>{% endif %}

@@ -617,3 +617,15 @@
 616|Vorher & nachher — unsere eigenen Patienten
 617|Jedes Foto zeigt einen echten Patienten unserer Klinik, veröffentlicht mit Einverständnis. Zum Vergleichen ziehen.
 618|Ziehen, um vorher und nachher zu vergleichen
+619|Persönliche Beurteilung, 3D-Scan und Untersuchung in Istanbul, die Behandlung selbst und Nachsorge per WhatsApp, wenn Sie wieder zu Hause sind. Statt Extras zu bündeln, investieren wir Ihr Budget in Ihren Behandlungsplan — und es gibt auch günstigere Optionen.
+620|Warum ist ein individuelles Paket das bessere Angebot?
+621|Weil Sie für Ihre Behandlung bezahlen, nicht für Extras. Ihr Budget fließt in die Zeit des Zahnarztes, hochwertige Materialien und ein langlebiges Ergebnis — und es gibt auch günstigere Optionen. Fragen Sie uns per WhatsApp.
+622|Zahnurlaub-Pakete in der Türkei auf Basis einer echten Diagnose: Beurteilung, Behandlung und Nachsorge. Ihr Budget fließt in Ihre Behandlung, nicht in Extras. Ihren persönlichen Plan erhalten Sie per WhatsApp.
+623|Zahnbehandlung ist mehr als ein Hollywood-Lächeln. Ihr Paket basiert auf einer echten Diagnose — und Ihr Budget fließt in Ihre Behandlung, nicht in Extras.
+624|%(treatment)s-Paket in Istanbul auf Basis Ihrer Diagnose: Beurteilung, Behandlung und Nachsorge. Ihr Budget fließt in Ihre Behandlung, nicht in Extras. Ihren persönlichen Plan erhalten Sie per WhatsApp.
+625|Wir konzentrieren uns auf Ihre Behandlung und arbeiten mit unserer Partneragentur zusammen. Medizinische Entscheidungen bleiben immer beim Zahnarzt.
+626|Wir planen Ihre Termine passend zu Ihren Reisedaten.
+627|Ihr Budget fließt in Ihre Behandlung
+628|Keine Paket-Extras — stattdessen investieren wir in Ihren Behandlungsplan, und es gibt auch günstigere Optionen.
+629|Ihr Budget fließt in Ihre Behandlung, nicht in Extras
+630|Ihr Budget fließt dorthin, wo es zählt — in Ihre Behandlung. Es gibt auch günstigere Optionen; fragen Sie einfach.
