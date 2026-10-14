@@ -123,12 +123,15 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ── Cache / Session ──────────────────────────────────────────────────────────
 # Redis YOK: veritabanı cache'i (tüm gunicorn işçileri arasında paylaşılır).
 # Kurulumda bir kez: python manage.py createcachetable
+# KEY_PREFIX = commit → her deploy temiz önbellekle başlar (sitemap/llms.txt yeni dil ve sayfaları hemen görür).
+# Oturumlar cached_db: önbellekte bulunamazsa DB'den okunur, kimse oturumdan düşmez.
 CACHES = {"default": {"BACKEND": "django.core.cache.backends.db.DatabaseCache", "LOCATION": "django_cache",
+                      "KEY_PREFIX": config("RENDER_GIT_COMMIT", default="")[:12],
                       "OPTIONS": {"MAX_ENTRIES": 20000}}}
 SESSION_ENGINE = "django.contrib.sessions.backends.cached_db"
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 90  # 90 gün
 
-# ── i18n — 16 dil ────────────────────────────────────────────────────────────
+# ── i18n — 17 dil ────────────────────────────────────────────────────────────
 LANGUAGE_CODE = config("DEFAULT_LANGUAGE", default="en")
 TIME_ZONE = "Europe/Istanbul"
 USE_I18N = True

@@ -47,7 +47,7 @@ class Command(BaseCommand):
             if doctor and not doctor.photo and not doctor.photo_url:
                 doctor.photo_url = static(f"img/clinic/{fname}")
                 doctor.save(update_fields=["photo_url"])
-        # Önce-sonra vakaları (apps/clinics/case_content.json — 16 dilde başlık + açıklama, sıra: zirkonya → kompozit → Sanem, Hazan)
+        # Önce-sonra vakaları (apps/clinics/case_content.json — 17 dilde başlık + açıklama, sıra: zirkonya → kompozit → Sanem, Hazan)
         from apps.treatments.models import Treatment
 
         old = json.loads((Path(settings.BASE_DIR) / "apps/core/data/old_site_content.json").read_text(encoding="utf-8"))

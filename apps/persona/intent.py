@@ -3,7 +3,7 @@ Arama niyeti → persona öncülü (cold start).
 
 Ziyaretçi henüz hiçbir şey yapmadan, geldiği reklam kelimesi (utm_term / Google Ads
 keyword), organik landing URL'si ve referrer sorgusundan persona tahmini yapılır.
-Sözlük 16 dili kapsar; eşleşmeler ağırlıklı skor üretir.
+Sözlük 17 dili kapsar; eşleşmeler ağırlıklı skor üretir.
 """
 import re
 import unicodedata
@@ -34,6 +34,7 @@ LEXICON = {
         ("cena", 1.6), ("koszt", 1.6), ("tanio", 2.0), ("tani", 2.0),
         ("цена", 1.6), ("стоимост", 1.6), ("дешев", 2.0), ("сколько стоит", 1.8),
         ("ціна", 1.6), ("вартість", 1.6), ("дешев", 2.0),
+        ("евтин", 2.0), ("колко струва", 1.8), ("цени", 1.6), ("разход", 1.4),
         ("سعر", 1.6), ("اسعار", 1.6), ("تكلفة", 1.6), ("رخيص", 2.0), ("كم سعر", 1.8),
         ("pris", 1.6), ("billig", 2.0), ("kostnad", 1.6), ("koster", 1.6), ("pret", 1.6), ("ieftin", 2.0),
         ("qiymet", 1.6), ("ucuz", 2.0), ("fiyat", 1.6), ("ucret", 1.6),
@@ -49,6 +50,7 @@ LEXICON = {
         ("bezpiecz", 2.0), ("ryzyko", 2.0), ("powiklan", 2.0),
         ("безопас", 2.0), ("риск", 2.0), ("осложнен", 2.0), ("опасн", 2.0),
         ("безпеч", 2.0), ("ризик", 2.0), ("ускладн", 2.0),
+        ("рисков", 2.0), ("усложнен", 2.0), ("опасно", 2.0),
         ("امان", 2.0), ("مخاطر", 2.0), ("خطر", 2.0), ("مضاعفات", 2.0),
         ("saker", 2.0), ("sikker", 2.0), ("farlig", 2.0), ("sigur", 2.0), ("riscuri", 2.0),
         ("tehlukesiz", 2.0), ("guvenli", 2.0), ("risk", 2.0), ("tehlike", 2.0),
@@ -60,6 +62,7 @@ LEXICON = {
         ("glimlach", 1.5), ("facings", 1.4), ("sourire", 1.5), ("facette", 1.4),
         ("sorriso", 1.5), ("faccette", 1.4), ("sonrisa", 1.5), ("carillas", 1.4),
         ("usmiech", 1.5), ("licowki", 1.4), ("улыбк", 1.5), ("винир", 1.4), ("посмішк", 1.5),
+        ("усмивк", 1.5), ("фасет", 1.4), ("холивуд", 2.0),
         ("ابتسامة", 1.5), ("هوليود", 2.0), ("قشور", 1.4), ("leende", 1.5), ("smil", 1.5),
         ("zambet", 1.5), ("fatete", 1.4), ("gulus", 1.5), ("gulus tasarimi", 2.2), ("lamina", 1.4),
     ],
@@ -70,7 +73,8 @@ LEXICON = {
         ("snel", 1.6), ("spoed", 2.5), ("bruiloft", 2.5), ("rapide", 1.6), ("urgence", 2.5), ("mariage", 2.5),
         ("veloc", 1.6), ("urgenz", 2.5), ("matrimonio", 2.5), ("rapido", 1.6), ("urgencia", 2.5), ("boda", 2.5),
         ("szybk", 1.6), ("pilne", 2.5), ("slub", 2.5), ("быстр", 1.6), ("срочн", 2.5), ("свадьб", 2.5),
-        ("швидк", 1.6), ("терміново", 2.5), ("весілл", 2.5), ("سريع", 1.6), ("عاجل", 2.5), ("زفاف", 2.5),
+        ("швидк", 1.6), ("терміново", 2.5), ("весілл", 2.5),
+        ("бърз", 1.6), ("спешн", 2.5), ("сватб", 2.5), ("سريع", 1.6), ("عاجل", 2.5), ("زفاف", 2.5),
         ("snabb", 1.6), ("akut", 2.5), ("hurtig", 1.6), ("rask", 1.6), ("rapid", 1.6), ("urgent", 2.5),
         ("tecili", 2.5), ("hizli", 1.6), ("acil", 2.5), ("dugun", 2.5),
     ],
@@ -93,6 +97,7 @@ LEXICON = {
         ("mejor", 1.4), ("a medida", 2.0), ("personalizad", 2.0), ("duradero", 1.8),
         ("najlepsz", 1.4), ("indywidualn", 2.0), ("naturaln", 1.6), ("trwal", 1.8), ("doswiadczon", 1.6),
         ("лучш", 1.4), ("индивидуальн", 2.0), ("естественн", 1.6), ("долговечн", 2.0), ("опытн", 1.6),
+        ("наи добр", 1.4), ("индивидуал", 2.0), ("естествен", 1.6), ("дълготра", 2.0), ("опитен", 1.6),
         ("кращ", 1.4), ("індивідуальн", 2.0), ("природн", 1.6), ("довговічн", 2.0), ("досвідчен", 1.6),
         ("افضل", 1.4), ("مخصص", 2.0), ("طبيعي", 1.6), ("خبرة", 1.6),
         ("bast", 1.4), ("bedste", 1.4), ("skraddarsy", 2.0), ("individuel", 1.6), ("holdbar", 1.8), ("hallbar", 1.8),
@@ -109,7 +114,7 @@ LEXICON = {
         ("luxe", 2.4), ("exclusief", 2.2), ("exclusif", 2.2), ("haut de gamme", 2.2),
         ("lusso", 2.4), ("esclusiv", 2.2), ("lujo", 2.4), ("exclusiva", 2.2), ("famosos", 2.0),
         ("luksus", 2.4), ("ekskluzyw", 2.2), ("premium klinik", 2.0),
-        ("премиум", 2.2), ("люкс", 2.4), ("элитн", 2.2), ("vip клиник", 2.4), ("преміум", 2.2), ("елітн", 2.2),
+        ("премиум", 2.2), ("люкс", 2.4), ("элитн", 2.2), ("луксоз", 2.4), ("елитн", 2.2), ("vip клиник", 2.4), ("преміум", 2.2), ("елітн", 2.2),
         ("فاخر", 2.4), ("فخم", 2.4), ("المشاهير", 2.2), ("حصري", 2.2),
         ("lyx", 2.4), ("lux", 2.0),
         ("luks", 2.4), ("unlu", 1.8), ("unluler", 2.2), ("ayricalik", 2.0), ("5 yildiz", 2.0),
@@ -120,7 +125,7 @@ LEXICON = {
         ("erfahrung", 1.8), ("bewertung", 1.6), ("vergleich", 1.4), ("lohnt", 1.8),
         ("ervaring", 1.8), ("avis", 1.6),
         ("recension", 1.6), ("opinion", 1.6), ("opinie", 1.6), ("doswiadcz", 1.8),
-        ("отзыв", 1.8), ("опыт", 1.4), ("стоит ли", 1.8), ("відгук", 1.8), ("досвід", 1.4),
+        ("отзыв", 1.8), ("опыт", 1.4), ("стоит ли", 1.8), ("мнения", 1.6), ("струва ли си", 1.8), ("відгук", 1.8), ("досвід", 1.4),
         ("تجربة", 1.6), ("تجارب", 1.6), ("تقييم", 1.6), ("erfarenhet", 1.8), ("anmeldelse", 1.6),
         ("erfaring", 1.8), ("pareri", 1.6), ("rey", 1.2), ("yorum", 1.6), ("deneyim", 1.6),
     ],
@@ -129,12 +134,12 @@ LEXICON = {
         ("dental work", 1.2), ("teeth done", 1.2), ("dental care", 1.0), ("dental treatment", 1.0),
         ("get my teeth", 1.2), ("zahnbehandlung", 1.0), ("zahne machen", 1.2), ("tandheelkundige zorg", 1.0),
         ("tanden laten", 1.2), ("soins dentaires", 1.0), ("cure dentali", 1.0), ("tratamiento dental", 1.0),
-        ("leczenie zebow", 1.0), ("лечение зубов", 1.0), ("лікування зубів", 1.0), ("علاج الاسنان", 1.0),
+        ("leczenie zebow", 1.0), ("лечение зубов", 1.0), ("лікування зубів", 1.0), ("лечение на зъби", 1.0), ("علاج الاسنان", 1.0),
         ("tandvard", 1.0), ("tandbehandling", 1.0), ("tannbehandling", 1.0), ("tratament dentar", 1.0),
         ("dis mualicesi", 1.0), ("dis tedavisi", 1.0), ("dis yaptirmak", 1.2),
         ("dentist istanbul", 1.0), ("clinic", 0.6), ("doctor", 0.8), ("trusted", 2.0), ("reliable", 2.0),
         ("recommend", 1.8), ("vertrauen", 2.0), ("seriös", 2.0), ("serios", 2.0), ("betrouwbaar", 2.0),
-        ("fiable", 2.0), ("affidabile", 2.0), ("confiable", 2.0), ("zaufan", 2.0), ("надежн", 2.0),
+        ("fiable", 2.0), ("affidabile", 2.0), ("confiable", 2.0), ("zaufan", 2.0), ("надежн", 2.0), ("надежд", 1.2), ("препоръч", 1.8),
         ("надійн", 2.0), ("موثوق", 2.0), ("palitlig", 2.0), ("palidelig", 2.0), ("de incredere", 2.0),
         ("etibarli", 2.0), ("guvenilir", 2.0),
     ],

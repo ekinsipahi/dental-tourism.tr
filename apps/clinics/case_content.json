@@ -64,6 +64,10 @@
     "title": "Zirconiu monolitic natural",
     "caption": "Zirconiu monolitic cu aspect natural și viu — rezistent, durabil și în armonie cu fața."
    },
+   "bg": {
+    "title": "Естествен монолитен цирконий",
+    "caption": "Монолитен цирконий с естествен, жив вид — здрав, дълготраен и в хармония с лицето."
+   },
    "az": {
     "title": "Təbii monolit sirkon",
     "caption": "Təbii, canlı görünüşlü monolit sirkon — möhkəm, uzunömürlü və üzlə ahəngdar."
@@ -134,6 +138,10 @@
    "ro": {
     "title": "Zirconiu monolitic natural",
     "caption": "Un zâmbet complet refăcut cu zirconiu monolitic natural — fără efectul artificial de „perete alb”."
+   },
+   "bg": {
+    "title": "Естествен монолитен цирконий",
+    "caption": "Цяла усмивка, възстановена с естествен монолитен цирконий — без изкуствения ефект на „бяла стена“."
    },
    "az": {
     "title": "Təbii monolit sirkon",
@@ -206,6 +214,10 @@
     "title": "Fațete din compozit — fără șlefuirea dinților",
     "caption": "Fațete estetice din compozit, minim invaziv: dinții nu au fost șlefuiți, iar aspectul lor natural a fost păstrat."
    },
+   "bg": {
+    "title": "Композитни фасети — без изпиляване",
+    "caption": "Естетични композитни фасети, минимално инвазивно: зъбите не бяха изпилени и естественият им вид беше запазен."
+   },
    "az": {
     "title": "Kompozit lamina — dişlər yonulmadan",
     "caption": "Estetik kompozit lamina, minimal invaziv: dişlər yonulmadı, təbii görünüş qorundu."
@@ -276,6 +288,10 @@
    "ro": {
     "title": "Fațete din compozit — fără șlefuirea dinților",
     "caption": "Fațete din compozit fără șlefuirea dinților — marginile uzate au fost refăcute, iar forma naturală a fost redată."
+   },
+   "bg": {
+    "title": "Композитни фасети — без изпиляване",
+    "caption": "Композитни фасети без изпиляване на зъбите — износените ръбове бяха изградени отново и естествената форма беше възстановена."
    },
    "az": {
     "title": "Kompozit lamina — dişlər yonulmadan",
@@ -348,6 +364,10 @@
     "title": "Sanem — compozit, fără șlefuire",
     "caption": "Dinții lui Sanem au devenit mai estetici decât înainte doar cu compozit — fără nicio șlefuire."
    },
+   "bg": {
+    "title": "Санем — композит, без изпиляване",
+    "caption": "Зъбите на Санем станаха по-естетични от преди само с композит — без никакво изпиляване."
+   },
    "az": {
     "title": "Sanem — yonulmadan kompozit",
     "caption": "Sanemin dişləri heç yonulmadan, yalnız kompozitlə əvvəlkindən daha estetik edildi."
@@ -418,6 +438,10 @@
    "ro": {
     "title": "Hazan — după un traumatism dentar",
     "caption": "După un traumatism, dintele frontal al lui Hazan devenise roz. L-am adus într-o stare mai bună decât înainte, fără a afecta estetica dinților ei."
+   },
+   "bg": {
+    "title": "Хазан — след дентална травма",
+    "caption": "След травма предният зъб на Хазан беше порозовял. Възстановихме го в по-добро състояние от преди, без да нарушим естетиката на зъбите ѝ."
    },
    "az": {
     "title": "Hazan — travmadan sonra",

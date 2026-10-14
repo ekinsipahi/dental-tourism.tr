@@ -1,7 +1,7 @@
 """
 Diş turizmi PAKET sayfaları için veri — programatik SEO.
 
-Sayfa tipleri (hepsi 16 dilde, hepsi sitemap'te, hiçbirinde fiyat yok):
+Sayfa tipleri (hepsi 17 dilde, hepsi sitemap'te, hiçbirinde fiyat yok):
   hub        /packages/                                   dental tourism packages
   treatment  /packages/<tedavi>/                          <tedavi> package in Istanbul
   origin     /dental-holidays-from/<ülke>/                dental holiday packages from <ülke>
@@ -46,6 +46,7 @@ ORIGINS = {
     "NO": {"hours": 3.5, "cities": ["Oslo", "Bergen"]},
     "RO": {"hours": 1.5, "cities": ["București", "Cluj-Napoca"]},
     "MD": {"hours": 1.5, "cities": ["Chișinău"]},
+    "BG": {"hours": 1.5, "cities": ["София", "Пловдив", "Варна", "Бургас"]},
     "AZ": {"hours": 3, "cities": ["Bakı"]},
     "TR": {"hours": 0, "cities": ["İstanbul", "Ankara", "İzmir"]},
 }
@@ -54,6 +55,8 @@ ORIGINS = {
 DESTINATIONS = ["MX", "TH", "VN", "ID", "HU", "HR", "AL", "IN", "CR", "PH"]
 
 NON_LATIN_SLUG_FROM_EN = {"ar"}
+# Otomatik transliterasyonu kötü olan ülke slug'ları: {dil: {ülke: slug}}
+COUNTRY_SLUG_OVERRIDES = {"bg": {"BG": "bulgaria"}}
 
 
 def origin_codes(lang):
@@ -69,6 +72,8 @@ def country_name(code, lang):
 
 
 def country_slug(code, lang):
+    if code in COUNTRY_SLUG_OVERRIDES.get(lang, {}):
+        return COUNTRY_SLUG_OVERRIDES[lang][code]
     name = country_name(code, "en" if lang in NON_LATIN_SLUG_FROM_EN else lang)
     return slugify(name)
 
@@ -166,6 +171,11 @@ PACKAGE_KEYWORDS = {
            "treatment": ["pachet {t} turcia", "{t} istanbul all inclusive"],
            "origin": ["turism dentar turcia din {c}", "dentist istanbul din {city}"],
            "compare": ["dentist ungaria sau turcia"]},
+    "bg": {"hub": ["дентален туризъм турция пакет", "лечение на зъби в турция пакет", "дентална почивка турция",
+                   "какво е дентален туризъм"],
+           "treatment": ["{t} турция пакет", "{t} истанбул пакет"],
+           "origin": ["лечение на зъби в турция от {c}", "зъболекар истанбул от {city}"],
+           "compare": ["зъби в турция или унгария", "дентален туризъм сравнение"]},
     "az": {"hub": ["türkiyədə diş müalicəsi paketi", "diş turizmi türkiyə", "diş turizmi nədir"],
            "treatment": ["{t} türkiyə paketi", "{t} istanbul paket"],
            "origin": ["{c}dan türkiyəyə diş müalicəsi", "bakıdan istanbula diş müalicəsi"],

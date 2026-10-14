@@ -146,7 +146,7 @@ class Redirect(models.Model):
 
 class SeoTopic(TranslatableModel):
     """
-    Programatik SEO konu sayfası — /guide/<slug>/ (16 dilde, dile özel slug).
+    Programatik SEO konu sayfası — /guide/<slug>/ (17 dilde, dile özel slug).
     Kaynak: apps/seo/topics.py (+ apps/seo/topic_content/<dil>.json), `python manage.py seed_topics` ile yüklenir;
     sonrasında her şey admin'den düzenlenebilir. FİYAT RAKAMI YAZILMAZ.
     """

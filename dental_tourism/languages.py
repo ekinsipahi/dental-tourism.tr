@@ -1,7 +1,7 @@
 """
 Dil konfigürasyonu — tek kaynak.
 
-Türkiye'ye diş turizmi için gelen ana pazarlar baz alınarak 16 dil seçildi.
+Türkiye'ye diş turizmi için gelen ana pazarlar baz alınarak 17 dil seçildi.
 Yeni dil eklemek için:
   1. Aşağıya bir satır ekleyin
   2. python manage.py makemessages -l <kod> && python manage.py translate_ui --lang <kod>
@@ -61,6 +61,9 @@ LANGUAGE_META = {
     "ro": {"name": "Romanian", "native": "Română", "flag": "🇷🇴", "dir": "ltr", "hreflang": "ro",
            "markets": ["RO", "MD"], "currency": "EUR", "symbol": "€",
            "compare_country": "România", "turkey": "Turcia", "istanbul": "Istanbul"},
+    "bg": {"name": "Bulgarian", "native": "Български", "flag": "🇧🇬", "dir": "ltr", "hreflang": "bg",
+           "markets": ["BG"], "currency": "EUR", "symbol": "€",
+           "compare_country": "България", "turkey": "Турция", "istanbul": "Истанбул"},
     "az": {"name": "Azerbaijani", "native": "Azərbaycanca", "flag": "🇦🇿", "dir": "ltr", "hreflang": "az",
            "markets": ["AZ"], "currency": "AZN", "symbol": "₼",
            "compare_country": "Azərbaycan", "turkey": "Türkiyə", "istanbul": "İstanbul"},

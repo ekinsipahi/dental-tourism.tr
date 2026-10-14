@@ -1,4 +1,4 @@
-"""Konu (rehber) sayfaları — /guide/<slug>/ , 16 dilde (SeoTopic)."""
+"""Konu (rehber) sayfaları — /guide/<slug>/ , 17 dilde (SeoTopic)."""
 from django.http import Http404
 from django.shortcuts import redirect, render
 from django.urls import reverse

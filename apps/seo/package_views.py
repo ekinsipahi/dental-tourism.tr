@@ -1,4 +1,4 @@
-"""Diş turizmi paket sayfaları (programatik SEO, 16 dil, fiyatsız)."""
+"""Diş turizmi paket sayfaları (programatik SEO, 17 dil, fiyatsız)."""
 from django.http import Http404
 from django.shortcuts import redirect, render
 from django.urls import reverse

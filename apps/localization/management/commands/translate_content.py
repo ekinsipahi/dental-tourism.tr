@@ -16,7 +16,7 @@ from apps.localization.service import languages_needing_work, translate_object
 
 
 class Command(BaseCommand):
-    help = "Kayıtlı tüm içerik modellerini AI ile 16 dile çevirir"
+    help = "Kayıtlı tüm içerik modellerini AI ile 17 dile çevirir"
 
     def add_arguments(self, parser):
         parser.add_argument("--model", default="", help="app_label.model (örn. blog.blogpost)")

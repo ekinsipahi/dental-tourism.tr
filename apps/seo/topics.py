@@ -1,6 +1,6 @@
 """
 Konu (topic) sayfaları — kullanıcının keyword listelerinden üretilen programatik SEO sayfaları.
-URL: /<dil>/<guide segmenti>/<dile özel slug>/  (EN: /guide/<slug>/)   — 16 dil, hepsi sitemap'te, FİYAT RAKAMI YOK.
+URL: /<dil>/<guide segmenti>/<dile özel slug>/  (EN: /guide/<slug>/)   — 17 dil, hepsi sitemap'te, FİYAT RAKAMI YOK.
 
 İçerik kaynağı:
   * EN (kaynak)          → bu dosyadaki "en" sözlüğü
@@ -30,7 +30,7 @@ TOPICS = {
                   "fr": "tourisme-dentaire", "it": "turismo-dentale", "es": "turismo-dental",
                   "pl": "turystyka-dentystyczna", "ru": "stomatologicheskiy-turizm", "uk": "stomatologichnyy-turyzm",
                   "ar": "al-siyaha-al-ilajiya-lil-asnan", "sv": "tandturism", "da": "tandturisme", "no": "tannturisme",
-                  "ro": "turism-dentar", "az": "dis-turizmi", "tr": "dis-turizmi-rehberi"},
+                  "ro": "turism-dentar", "bg": "dentalen-turizam", "az": "dis-turizmi", "tr": "dis-turizmi-rehberi"},
         "en": {
             "h1": "Dental tourism: the honest guide for 2026",
             "lead": "Dental tourism means travelling abroad for dental treatment. Done well, it gives you an experienced "
@@ -88,7 +88,7 @@ Turkey — and Istanbul in particular — offers all three, which is why it is o
             "uk": ["стоматологічний туризм", "лікування зубів за кордоном"],
             "ar": ["السياحة العلاجية للأسنان", "علاج الأسنان في الخارج"],
             "sv": ["tandturism", "tandvård utomlands"], "da": ["tandturisme", "tandlæge i udlandet"],
-            "no": ["tannturisme", "tannlege i utlandet"], "ro": ["turism dentar", "dentist in strainatate"],
+            "no": ["tannturisme", "tannlege i utlandet"], "ro": ["turism dentar", "dentist in strainatate"], "bg": ["дентален туризъм", "лечение на зъби в чужбина", "зъболекар в чужбина"],
             "az": ["diş turizmi", "xaricdə diş müalicəsi"], "tr": ["diş turizmi", "sağlık turizmi diş"],
         },
     },
@@ -99,7 +99,7 @@ Turkey — and Istanbul in particular — offers all three, which is why it is o
                   "fr": "soins-dentaires-turquie", "it": "cure-dentali-turchia", "es": "tratamiento-dental-turquia",
                   "pl": "leczenie-zebow-turcja", "ru": "lechenie-zubov-v-turcii", "uk": "likuvannya-zubiv-turechchyna",
                   "ar": "ilaj-al-asnan-fi-turkiya", "sv": "tandvard-turkiet", "da": "tandbehandling-tyrkiet",
-                  "no": "tannbehandling-tyrkia", "ro": "tratament-dentar-turcia", "az": "turkiyede-dis-mualicesi",
+                  "no": "tannbehandling-tyrkia", "ro": "tratament-dentar-turcia", "bg": "dentalno-lechenie-v-turtsiya", "az": "turkiyede-dis-mualicesi",
                   "tr": "turkiye-dis-klinigi"},
         "en": {
             "h1": "Dental care in Turkey — a dental clinic chosen for quality",
@@ -150,7 +150,7 @@ We save natural teeth first, explain every option openly and give you a fixed wr
             "uk": ["лікування зубів у туреччині", "стоматологія туреччина"],
             "ar": ["علاج الأسنان في تركيا", "عيادة أسنان في تركيا", "طبيب أسنان في تركيا"],
             "sv": ["tandvård turkiet", "tandklinik turkiet"], "da": ["tandbehandling tyrkiet", "tandklinik tyrkiet"],
-            "no": ["tannbehandling tyrkia", "tannklinikk tyrkia"], "ro": ["tratament dentar turcia", "clinica dentara turcia"],
+            "no": ["tannbehandling tyrkia", "tannklinikk tyrkia"], "ro": ["tratament dentar turcia", "clinica dentara turcia"], "bg": ["лечение на зъби в турция", "зъболекар в турция", "дентална клиника турция"],
             "az": ["türkiyədə diş müalicəsi", "türkiyədə diş klinikası"],
             "tr": ["türkiye diş kliniği", "yabancı hastalar için diş kliniği", "diş turizmi türkiye"],
         },
@@ -164,7 +164,7 @@ We save natural teeth first, explain every option openly and give you a fixed wr
                   "pl": "najlepsza-klinika-stomatologiczna-stambul", "ru": "luchshaya-stomatologiya-stambula",
                   "uk": "krashcha-stomatologiya-stambula", "ar": "afdal-iyadat-asnan-fi-istanbul",
                   "sv": "basta-tandklinik-istanbul", "da": "bedste-tandklinik-istanbul", "no": "beste-tannklinikk-istanbul",
-                  "ro": "cea-mai-buna-clinica-dentara-istanbul", "az": "istanbulda-en-yaxsi-dis-klinikasi",
+                  "ro": "cea-mai-buna-clinica-dentara-istanbul", "bg": "nay-dobrata-dentalna-klinika-v-istanbul", "az": "istanbulda-en-yaxsi-dis-klinikasi",
                   "tr": "istanbul-en-iyi-dis-klinigi"},
         "en": {
             "h1": "Best dental clinic in Istanbul? Reviews, questions to ask and our approach",
@@ -215,7 +215,7 @@ Read reviews on several platforms, including critical ones on Reddit. Look for d
             "ru": ["лучшая стоматология стамбула", "лучший стоматолог стамбул отзывы"],
             "uk": ["краща стоматологія стамбула"], "ar": ["أفضل عيادة أسنان في إسطنبول", "أفضل طبيب أسنان في إسطنبول"],
             "sv": ["bästa tandklinik istanbul"], "da": ["bedste tandklinik istanbul"], "no": ["beste tannklinikk istanbul"],
-            "ro": ["cea mai buna clinica dentara istanbul"], "az": ["istanbulda ən yaxşı diş klinikası"],
+            "ro": ["cea mai buna clinica dentara istanbul"], "bg": ["най-добрата дентална клиника в истанбул", "добър зъболекар истанбул мнения"], "az": ["istanbulda ən yaxşı diş klinikası"],
             "tr": ["istanbul en iyi diş kliniği", "şişli en iyi diş hekimi", "istanbul diş kliniği yorumlar"],
         },
     },
@@ -228,7 +228,7 @@ Read reviews on several platforms, including critical ones on Reddit. Look for d
                   "pl": "najlepsza-klinika-stomatologiczna-turcja-opinie", "ru": "luchshaya-stomatologiya-turcii-otzyvy",
                   "uk": "krashcha-stomatologiya-turechchyny-vidguky", "ar": "afdal-iyadat-asnan-turkiya-taqyimat",
                   "sv": "basta-tandklinik-turkiet-omdomen", "da": "bedste-tandklinik-tyrkiet-anmeldelser",
-                  "no": "beste-tannklinikk-tyrkia-omtaler", "ro": "cea-mai-buna-clinica-dentara-turcia-pareri",
+                  "no": "beste-tannklinikk-tyrkia-omtaler", "ro": "cea-mai-buna-clinica-dentara-turcia-pareri", "bg": "nay-dobrata-dentalna-klinika-v-turtsiya-otzivi",
                   "az": "turkiyede-en-yaxsi-dis-klinikasi-reyler", "tr": "turkiye-en-iyi-dis-klinigi-yorumlar"},
         "en": {
             "h1": "Best dental clinic in Turkey 2026? How to choose — and real patient reviews",
@@ -278,7 +278,7 @@ A luxury waiting room does not make a better dentist. What you should expect fro
             "sv": ["bästa tandklinik turkiet", "tandläkare turkiet omdömen"],
             "da": ["bedste tandklinik tyrkiet", "tandlæge tyrkiet anmeldelser"],
             "no": ["beste tannklinikk tyrkia", "tannlege tyrkia omtaler"],
-            "ro": ["cea mai buna clinica dentara turcia", "dentist turcia pareri"],
+            "ro": ["cea mai buna clinica dentara turcia", "dentist turcia pareri"], "bg": ["най-добрата дентална клиника в турция", "зъболекар турция мнения", "зъби в турция отзиви"],
             "az": ["türkiyədə ən yaxşı diş klinikası", "diş klinikası rəylər"],
             "tr": ["dental clinic turkey yorumlar", "aesthetic dental turkey clinic yorumlar",
                    "en iyi diş kliniği yorumlar", "şişli diş hekimi yorumlar"],
@@ -291,7 +291,7 @@ A luxury waiting room does not make a better dentist. What you should expect fro
                   "fr": "clinique-dentaire-istanbul", "it": "clinica-dentale-istanbul", "es": "clinica-dental-estambul",
                   "pl": "klinika-stomatologiczna-stambul", "ru": "stomatologiya-stambul", "uk": "stomatologiya-v-stambuli",
                   "ar": "iyadat-asnan-istanbul", "sv": "tandklinik-istanbul", "da": "tandklinik-istanbul",
-                  "no": "tannklinikk-istanbul", "ro": "clinica-dentara-istanbul", "az": "istanbul-dis-klinikasi",
+                  "no": "tannklinikk-istanbul", "ro": "clinica-dentara-istanbul", "bg": "dentalna-klinika-istanbul", "az": "istanbul-dis-klinikasi",
                   "tr": "istanbul-dis-klinigi-sisli"},
         "en": {
             "h1": "Dental clinic in Istanbul, Turkey — Şişli, near Taksim",
@@ -331,7 +331,7 @@ We are a dentist-led clinic: Dr. Dt. Devrim Biriken Sipahi examines and treats y
             "pl": ["klinika stomatologiczna stambuł", "dentysta stambuł"], "ru": ["стоматология стамбул", "стоматолог стамбул"],
             "uk": ["стоматологія стамбул"], "ar": ["عيادة أسنان في إسطنبول", "عيادة أسنان تقسيم"],
             "sv": ["tandklinik istanbul"], "da": ["tandklinik istanbul"], "no": ["tannklinikk istanbul"],
-            "ro": ["clinica dentara istanbul"], "az": ["istanbul diş klinikası"],
+            "ro": ["clinica dentara istanbul"], "bg": ["дентална клиника истанбул", "зъболекар истанбул"], "az": ["istanbul diş klinikası"],
             "tr": ["şişli diş kliniği", "taksim diş kliniği", "osmanbey diş hekimi", "zeytinburnu diş kliniği",
                    "hafta sonu açık diş hekimi şişli"],
         },
@@ -344,7 +344,7 @@ We are a dentist-led clinic: Dr. Dt. Devrim Biriken Sipahi examines and treats y
                   "pl": "dentysta-antalya-side-alanya", "ru": "stomatologiya-antalya-sajd-alanya",
                   "uk": "stomatologiya-antaliya-alaniya", "ar": "tabib-asnan-antalya",
                   "sv": "tandlakare-antalya-side-alanya", "da": "tandlaege-antalya-side-alanya",
-                  "no": "tannlege-antalya-side-alanya", "ro": "dentist-antalya-side-alanya",
+                  "no": "tannlege-antalya-side-alanya", "ro": "dentist-antalya-side-alanya", "bg": "zabolekar-antalya-side-alanya",
                   "az": "antalya-dis-mualicesi", "tr": "antalya-tatilinde-dis-tedavisi"},
         "en": {
             "h1": "Dental care in Antalya, Side, Belek or Alanya? A short flight to Istanbul",
@@ -383,7 +383,7 @@ Dental implants and other surgery need a careful 3D plan and a follow-up check. 
             "it": ["dentista antalya", "dentista alanya"], "es": ["dentista antalya", "dentista alanya"],
             "pl": ["dentysta antalya", "dentysta alanya"], "ru": ["стоматология анталия", "стоматолог алания", "стоматология сиде"],
             "uk": ["стоматологія анталія"], "ar": ["طبيب أسنان في أنطاليا"], "sv": ["tandläkare antalya"],
-            "da": ["tandlæge antalya"], "no": ["tannlege antalya"], "ro": ["dentist antalya"], "az": ["antalya diş klinikası"],
+            "da": ["tandlæge antalya"], "no": ["tannlege antalya"], "ro": ["dentist antalya"], "bg": ["зъболекар анталия", "зъболекар алания", "зъболекар сиде"], "az": ["antalya diş klinikası"],
             "tr": ["antalya diş kliniği", "alanya diş hekimi", "side diş kliniği"],
         },
     },
@@ -395,7 +395,7 @@ Dental implants and other surgery need a careful 3D plan and a follow-up check. 
                   "pl": "dentysta-bodrum-marmaris-izmir", "ru": "stomatologiya-bodrum-marmaris-izmir",
                   "uk": "stomatologiya-bodrum-marmarys-izmir", "ar": "tabib-asnan-bodrum-marmaris-izmir",
                   "sv": "tandlakare-bodrum-marmaris-izmir", "da": "tandlaege-bodrum-marmaris-izmir",
-                  "no": "tannlege-bodrum-marmaris-izmir", "ro": "dentist-bodrum-marmaris-izmir",
+                  "no": "tannlege-bodrum-marmaris-izmir", "ro": "dentist-bodrum-marmaris-izmir", "bg": "zabolekar-bodrum-marmaris-izmir",
                   "az": "bodrum-marmaris-izmir-dis-mualicesi", "tr": "bodrum-marmaris-izmir-kusadasi-dis-tedavisi"},
         "en": {
             "h1": "Dental clinic in Bodrum, Marmaris, Izmir or Kuşadası? Combine your holiday with Istanbul",
@@ -432,7 +432,7 @@ If you decide to be treated locally, use the same checklist: a named dentist, a 
             "it": ["dentista bodrum"], "es": ["dentista bodrum"], "pl": ["dentysta marmaris", "dentysta bodrum"],
             "ru": ["стоматология мармарис", "стоматология бодрум", "стоматология измир"], "uk": ["стоматологія мармарис"],
             "ar": ["طبيب أسنان بودروم", "طبيب أسنان إزمير"], "sv": ["tandläkare marmaris"], "da": ["tandlæge marmaris"],
-            "no": ["tannlege marmaris"], "ro": ["dentist bodrum"], "az": ["izmir diş klinikası"],
+            "no": ["tannlege marmaris"], "ro": ["dentist bodrum"], "bg": ["зъболекар бодрум", "зъболекар мармарис", "зъболекар измир"], "az": ["izmir diş klinikası"],
             "tr": ["marmaris diş kliniği", "bodrum diş kliniği", "izmir en iyi diş kliniği", "kuşadası diş kliniği"],
         },
     },
@@ -443,7 +443,7 @@ If you decide to be treated locally, use the same checklist: a named dentist, a 
                   "es": "dentista-ankara-o-estambul", "pl": "dentysta-ankara-czy-stambul", "ru": "stomatologiya-ankara-ili-stambul",
                   "uk": "stomatologiya-ankara-chy-stambul", "ar": "tabib-asnan-ankara", "sv": "tandlakare-ankara-eller-istanbul",
                   "da": "tandlaege-ankara-eller-istanbul", "no": "tannlege-ankara-eller-istanbul",
-                  "ro": "dentist-ankara-sau-istanbul", "az": "ankara-ve-istanbul-dis-mualicesi",
+                  "ro": "dentist-ankara-sau-istanbul", "bg": "zabolekar-ankara-ili-istanbul", "az": "ankara-ve-istanbul-dis-mualicesi",
                   "tr": "ankaradan-istanbula-dis-tedavisi"},
         "en": {
             "h1": "Dental clinic in Ankara or Istanbul? What to consider",
@@ -470,7 +470,7 @@ We do not have a clinic in Ankara. Patients from Ankara choose us for our ethica
             "en": ["dental clinic in ankara"], "de": ["zahnarzt ankara"], "nl": ["tandarts ankara"], "fr": ["dentiste ankara"],
             "it": ["dentista ankara"], "es": ["dentista ankara"], "pl": ["dentysta ankara"], "ru": ["стоматология анкара"],
             "uk": ["стоматологія анкара"], "ar": ["طبيب أسنان أنقرة"], "sv": ["tandläkare ankara"], "da": ["tandlæge ankara"],
-            "no": ["tannlege ankara"], "ro": ["dentist ankara"], "az": ["ankara diş klinikası"],
+            "no": ["tannlege ankara"], "ro": ["dentist ankara"], "bg": ["зъболекар анкара"], "az": ["ankara diş klinikası"],
             "tr": ["ankara diş kliniği", "ankaradan istanbula diş tedavisi"],
         },
     },
@@ -483,7 +483,7 @@ We do not have a clinic in Ankara. Patients from Ankara choose us for our ethica
                   "pl": "najlepszy-kraj-turystyka-dentystyczna", "ru": "luchshaya-strana-dlya-lecheniya-zubov",
                   "uk": "krashcha-krayina-dlya-likuvannya-zubiv", "ar": "afdal-dawla-lil-siyaha-al-ilajiya-lil-asnan",
                   "sv": "basta-landet-for-tandturism", "da": "bedste-land-til-tandturisme", "no": "beste-land-for-tannturisme",
-                  "ro": "cea-mai-buna-tara-turism-dentar", "az": "dis-turizmi-ucun-en-yaxsi-olke",
+                  "ro": "cea-mai-buna-tara-turism-dentar", "bg": "nay-dobrata-strana-za-dentalen-turizam", "az": "dis-turizmi-ucun-en-yaxsi-olke",
                   "tr": "dis-turizmi-icin-en-iyi-ulke"},
         "en": {
             "h1": "Best country for dental tourism in 2026: Turkey vs Mexico, Thailand, Hungary and more",
@@ -550,7 +550,7 @@ Discussions about the best dental tourism countries on Reddit agree on one thing
             "sv": ["bästa landet för tandvård", "tandvård ungern eller turkiet"],
             "da": ["bedste land til tandbehandling", "tandlæge ungarn eller tyrkiet"],
             "no": ["beste land for tannbehandling", "tannlege ungarn eller tyrkia"],
-            "ro": ["cea mai bună țară pentru turism dentar", "dentist ungaria sau turcia"],
+            "ro": ["cea mai bună țară pentru turism dentar", "dentist ungaria sau turcia"], "bg": ["най-добрата страна за дентален туризъм", "зъби в турция или унгария"],
             "az": ["diş turizmi üçün ən yaxşı ölkə"], "tr": ["diş turizmi için en iyi ülke", "türkiye macaristan diş karşılaştırma"],
         },
     },
@@ -562,7 +562,7 @@ Discussions about the best dental tourism countries on Reddit agree on one thing
                   "it": "rifarsi-i-denti-in-turchia", "es": "arreglarse-los-dientes-en-turquia",
                   "pl": "leczenie-zebow-w-turcji-poradnik", "ru": "sdelat-zuby-v-turcii", "uk": "zrobyty-zuby-v-turechchyni",
                   "ar": "tarkib-al-asnan-fi-turkiya", "sv": "fixa-tanderna-i-turkiet", "da": "faa-lavet-taender-i-tyrkiet",
-                  "no": "fikse-tennene-i-tyrkia", "ro": "sa-iti-faci-dintii-in-turcia", "az": "turkiyede-dis-etdirmek",
+                  "no": "fikse-tennene-i-tyrkia", "ro": "sa-iti-faci-dintii-in-turcia", "bg": "zabi-v-turtsiya", "az": "turkiyede-dis-etdirmek",
                   "tr": "turkiyede-dis-yaptirmak-rehber"},
         "en": {
             "h1": "Getting your teeth done in Turkey — an honest guide",
@@ -608,7 +608,7 @@ Standard travel insurance usually does not cover planned dental treatment; ask y
             "pl": ["zrobić zęby w turcji"], "ru": ["сделать зубы в турции", "лечение зубов в турции страховка"],
             "uk": ["зробити зуби в туреччині"], "ar": ["تركيب الأسنان في تركيا", "أين أعمل أسناني في تركيا"],
             "sv": ["fixa tänderna i turkiet"], "da": ["få lavet tænder i tyrkiet"], "no": ["fikse tennene i tyrkia"],
-            "ro": ["sa-ti faci dintii in turcia"], "az": ["türkiyədə diş etdirmək"],
+            "ro": ["sa-ti faci dintii in turcia"], "bg": ["правене на зъби в турция", "зъби в турция"], "az": ["türkiyədə diş etdirmək"],
             "tr": ["türkiyede diş yaptırmak", "yurt dışından türkiyeye diş tedavisi"],
         },
     },
@@ -620,7 +620,7 @@ Standard travel insurance usually does not cover planned dental treatment; ask y
                   "pl": "chirurgia-stomatologiczna-turcja", "ru": "hirurgicheskaya-stomatologiya-turciya",
                   "uk": "khirurgichna-stomatologiya-turechchyna", "ar": "jirahat-al-asnan-fi-turkiya",
                   "sv": "tandkirurgi-turkiet", "da": "tandkirurgi-tyrkiet", "no": "tannkirurgi-tyrkia",
-                  "ro": "chirurgie-dentara-turcia", "az": "turkiyede-dis-cerrahiyyesi", "tr": "agiz-dis-cerrahisi-istanbul"},
+                  "ro": "chirurgie-dentara-turcia", "bg": "dentalna-hirurgiya-turtsiya", "az": "turkiyede-dis-cerrahiyyesi", "tr": "agiz-dis-cerrahisi-istanbul"},
         "en": {
             "h1": "Dental surgery in Turkey — implants, extractions and wisdom teeth",
             "lead": "Implant placement, extractions and wisdom tooth removal are minor surgical procedures done under local "
@@ -653,7 +653,7 @@ Dental surgery in Turkey is very affordable compared with Western Europe. The co
             "fr": ["chirurgie dentaire turquie"], "it": ["chirurgia dentale turchia"], "es": ["cirugía dental turquía"],
             "pl": ["chirurgia stomatologiczna turcja"], "ru": ["хирургическая стоматология турция"],
             "uk": ["хірургічна стоматологія туреччина"], "ar": ["جراحة الأسنان في تركيا"], "sv": ["tandkirurgi turkiet"],
-            "da": ["tandkirurgi tyrkiet"], "no": ["tannkirurgi tyrkia"], "ro": ["chirurgie dentara turcia"],
+            "da": ["tandkirurgi tyrkiet"], "no": ["tannkirurgi tyrkia"], "ro": ["chirurgie dentara turcia"], "bg": ["дентална хирургия турция", "вадене на мъдрец турция"],
             "az": ["türkiyədə diş cərrahiyyəsi"], "tr": ["ağız diş cerrahisi istanbul", "yirmilik diş çekimi şişli"],
         },
     },
@@ -666,7 +666,7 @@ Dental surgery in Turkey is very affordable compared with Western Europe. The co
                   "pl": "gwarancja-opieka-leczenie-zebow-turcja", "ru": "garantiya-lechenie-zubov-turciya",
                   "uk": "garantiya-likuvannya-zubiv-turechchyna", "ar": "daman-wa-mutabaat-ilaj-al-asnan",
                   "sv": "garanti-eftervard-tandvard-turkiet", "da": "garanti-efterbehandling-tyrkiet",
-                  "no": "garanti-oppfolging-tannbehandling-tyrkia", "ro": "garantie-tratament-dentar-turcia",
+                  "no": "garanti-oppfolging-tannbehandling-tyrkia", "ro": "garantie-tratament-dentar-turcia", "bg": "garantsiya-dentalno-lechenie-turtsiya",
                   "az": "dis-mualicesi-zemanet", "tr": "dis-tedavisi-garanti-takip"},
         "en": {
             "h1": "Guarantee, aftercare and payment for dental treatment in Turkey",
@@ -700,7 +700,7 @@ We accept cash and credit card. Your quote is fixed — the price agreed at the 
             "pl": ["leczenie zębów turcja gwarancja"], "ru": ["лечение зубов турция гарантия"],
             "uk": ["лікування зубів туреччина гарантія"], "ar": ["ضمان علاج الأسنان في تركيا"],
             "sv": ["tandvård turkiet garanti"], "da": ["tandbehandling tyrkiet garanti"], "no": ["tannbehandling tyrkia garanti"],
-            "ro": ["tratament dentar turcia garantie"], "az": ["diş müalicəsi zəmanət"], "tr": ["diş tedavisi garanti", "implant garantisi"],
+            "ro": ["tratament dentar turcia garantie"], "bg": ["лечение на зъби турция гаранция"], "az": ["diş müalicəsi zəmanət"], "tr": ["diş tedavisi garanti", "implant garantisi"],
         },
     },
     "smile-gallery": {
@@ -709,7 +709,7 @@ We accept cash and credit card. Your quote is fixed — the price agreed at the 
                   "fr": "avant-apres-sourire", "it": "prima-e-dopo-denti", "es": "antes-y-despues-dientes",
                   "pl": "przed-i-po-zeby", "ru": "do-i-posle-zuby", "uk": "do-i-pislya-zuby", "ar": "qabl-wa-bad-al-asnan",
                   "sv": "fore-och-efter-tander", "da": "foer-og-efter-taender", "no": "for-og-etter-tenner",
-                  "ro": "inainte-si-dupa-dinti", "az": "evvel-ve-sonra-disler", "tr": "once-sonra-gulus-galerisi"},
+                  "ro": "inainte-si-dupa-dinti", "bg": "predi-i-sled-zabi", "az": "evvel-ve-sonra-disler", "tr": "once-sonra-gulus-galerisi"},
         "en": {
             "h1": "Before and after — smile gallery and teeth shade guide",
             "lead": "Real results from our clinic, published with patient consent — and how we choose a natural tooth shade "
@@ -736,7 +736,7 @@ Every photo on this page shows a real patient of our clinic, published with cons
             "fr": ["dents avant après turquie"], "it": ["denti prima e dopo turchia"], "es": ["dientes antes y después turquía"],
             "pl": ["zęby przed i po turcja"], "ru": ["зубы до и после турция"], "uk": ["зуби до і після туреччина"],
             "ar": ["الأسنان قبل وبعد تركيا"], "sv": ["tänder före och efter turkiet"], "da": ["tænder før og efter tyrkiet"],
-            "no": ["tenner før og etter tyrkia"], "ro": ["dinti inainte si dupa turcia"], "az": ["dişlər əvvəl və sonra"],
+            "no": ["tenner før og etter tyrkia"], "ro": ["dinti inainte si dupa turcia"], "bg": ["зъби преди и след турция"], "az": ["dişlər əvvəl və sonra"],
             "tr": ["diş önce sonra", "gülüş tasarımı önce sonra", "diş renk skalası"],
         },
     },
@@ -749,7 +749,7 @@ Every photo on this page shows a real patient of our clinic, published with cons
                   "pl": "agencja-turystyki-dentystycznej-partner", "ru": "agentstvo-stomatologicheskogo-turizma",
                   "uk": "agentstvo-stomatologichnogo-turyzmu", "ar": "wakala-al-siyaha-al-ilajiya-lil-asnan",
                   "sv": "tandturism-byra-partner", "da": "tandturisme-bureau-partner", "no": "tannturisme-byra-partner",
-                  "ro": "agentie-turism-dentar-partener", "az": "dis-turizmi-agentliyi", "tr": "dis-turizmi-acentesi-is-birligi"},
+                  "ro": "agentie-turism-dentar-partener", "bg": "agentsiya-za-dentalen-turizam", "az": "dis-turizmi-agentliyi", "tr": "dis-turizmi-acentesi-is-birligi"},
         "en": {
             "h1": "Dental tourism agency in Turkey? Work directly with our clinic",
             "lead": "Agencies and facilitators: partner with a dentist-led clinic in Istanbul that values honest treatment "
@@ -783,7 +783,7 @@ Call us or message us on WhatsApp — tell us whether you are a patient or an ag
             "es": ["agencia turismo dental turquía"], "pl": ["agencja turystyki dentystycznej"],
             "ru": ["агентство стоматологического туризма"], "uk": ["агентство стоматологічного туризму"],
             "ar": ["وكالة السياحة العلاجية للأسنان في تركيا"], "sv": ["tandturism byrå"], "da": ["tandturisme bureau"],
-            "no": ["tannturisme byrå"], "ro": ["agenție turism dentar"], "az": ["diş turizmi agentliyi"],
+            "no": ["tannturisme byrå"], "ro": ["agenție turism dentar"], "bg": ["агенция за дентален туризъм"], "az": ["diş turizmi agentliyi"],
             "tr": ["diş turizmi acentesi", "sağlık turizmi acentesi iş birliği"],
         },
     },
@@ -796,7 +796,7 @@ Call us or message us on WhatsApp — tell us whether you are a patient or an ag
                   "pl": "przewodnik-stambul-dla-pacjentow", "ru": "putevoditel-stambul-dlya-patsientov",
                   "uk": "putivnyk-stambul-dlya-patsiyentiv", "ar": "dalil-istanbul-li-mardaa-al-asnan",
                   "sv": "istanbul-guide-for-tandpatienter", "da": "istanbul-guide-til-tandpatienter",
-                  "no": "istanbul-guide-for-tannpasienter", "ro": "ghid-istanbul-pacienti-dentari",
+                  "no": "istanbul-guide-for-tannpasienter", "ro": "ghid-istanbul-pacienti-dentari", "bg": "patevoditel-istanbul-za-dentalni-patsienti",
                   "az": "dis-xestereri-ucun-istanbul-beledcisi", "tr": "dis-hastalari-icin-istanbul-rehberi"},
         "en": {
             "h1": "Istanbul guide for dental patients: where to stay and areas to avoid",
@@ -838,7 +838,7 @@ After implants or surgery, plan a quiet day: avoid alcohol, hot baths and intens
             "fr": ["quartiers à éviter istanbul"], "it": ["zone da evitare istanbul"], "es": ["zonas a evitar en estambul"],
             "pl": ["stambuł niebezpieczne dzielnice"], "ru": ["опасные районы стамбула"], "uk": ["небезпечні райони стамбула"],
             "ar": ["مناطق يجب تجنبها في إسطنبول"], "sv": ["istanbul områden att undvika"], "da": ["istanbul områder at undgå"],
-            "no": ["istanbul områder å unngå"], "ro": ["zone de evitat istanbul"], "az": ["istanbulda təhlükəli rayonlar"],
+            "no": ["istanbul områder å unngå"], "ro": ["zone de evitat istanbul"], "bg": ["опасни квартали в истанбул", "къде да отседна в истанбул"], "az": ["istanbulda təhlükəli rayonlar"],
             "tr": ["istanbul'da kalınacak yerler diş tedavisi"],
         },
     },
@@ -860,7 +860,7 @@ PRICE_KEYWORDS = {
         "pl": ["ceny dentysta turcja", "leczenie zębów turcja koszt"], "ru": ["цены на стоматологию в турции", "сколько стоят зубы в турции"],
         "uk": ["ціни стоматологія туреччина"], "ar": ["أسعار علاج الأسنان في تركيا", "كم تكلفة الأسنان في تركيا"],
         "sv": ["tandläkare turkiet priser"], "da": ["tandlæge tyrkiet priser"], "no": ["tannlege tyrkia priser"],
-        "ro": ["preturi dentist turcia"], "az": ["türkiyədə diş qiymətləri"], "tr": ["diş tedavisi fiyatları istanbul", "şişli diş fiyatları"],
+        "ro": ["preturi dentist turcia"], "bg": ["цени на зъболекар в турция", "колко струват зъбите в турция", "лечение на зъби турция цена"], "az": ["türkiyədə diş qiymətləri"], "tr": ["diş tedavisi fiyatları istanbul", "şişli diş fiyatları"],
     },
     # tedavi slug'ı (EN) → İngilizce keyword'ler; diğer dillerde "treatment_pattern"
     "treatment": {
@@ -878,7 +878,7 @@ PRICE_KEYWORDS = {
         "en": "{t} price turkey", "de": "{t} türkei kosten", "nl": "{t} turkije prijs", "fr": "{t} turquie prix",
         "it": "{t} turchia prezzo", "es": "{t} turquía precio", "pl": "{t} turcja cena", "ru": "{t} в турции цена",
         "uk": "{t} туреччина ціна", "ar": "سعر {t} في تركيا", "sv": "{t} turkiet pris", "da": "{t} tyrkiet pris",
-        "no": "{t} tyrkia pris", "ro": "{t} turcia pret", "az": "{t} türkiyə qiymət", "tr": "{t} fiyatları istanbul",
+        "no": "{t} tyrkia pris", "ro": "{t} turcia pret", "bg": "{t} турция цена", "az": "{t} türkiyə qiymət", "tr": "{t} fiyatları istanbul",
     },
 }
 

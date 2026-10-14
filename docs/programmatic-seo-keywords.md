@@ -26,6 +26,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandturisme/ | Tandturisme: den ærlige guide til 2026 | tandturisme, tandlæge i udlandet |
 | no | https://dentaltourism.tr/no/guide/tannturisme/ | Tannturisme: den ærlige guiden for 2026 | tannturisme, tannlege i utlandet |
 | ro | https://dentaltourism.tr/ro/ghid/turism-dentar/ | Turism dentar: ghidul onest pentru 2026 | turism dentar, dentist in strainatate |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/dentalen-turizam/ | Дентален туризъм: честното ръководство за 2026 г. | дентален туризъм, лечение на зъби в чужбина, зъболекар в чужбина |
 | az | https://dentaltourism.tr/az/beledci/dis-turizmi/ | Diş turizmi: 2026 üçün dürüst bələdçi | diş turizmi, xaricdə diş müalicəsi |
 | tr | https://dentaltourism.tr/tr/rehber/dis-turizmi-rehberi/ | Diş turizmi: 2026 için dürüst rehber | diş turizmi, sağlık turizmi diş |
 
@@ -47,6 +48,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandbehandling-tyrkiet/ | Tandbehandling i Tyrkiet – en tandklinik valgt for kvalitet | tandbehandling tyrkiet, tandklinik tyrkiet |
 | no | https://dentaltourism.tr/no/guide/tannbehandling-tyrkia/ | Tannbehandling i Tyrkia – en tannklinikk valgt for kvalitet | tannbehandling tyrkia, tannklinikk tyrkia |
 | ro | https://dentaltourism.tr/ro/ghid/tratament-dentar-turcia/ | Tratament dentar în Turcia – o clinică stomatologică aleasă pentru calitate | tratament dentar turcia, clinica dentara turcia |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/dentalno-lechenie-v-turtsiya/ | Дентално лечение в Турция — клиника, избрана заради качеството | лечение на зъби в турция, зъболекар в турция, дентална клиника турция |
 | az | https://dentaltourism.tr/az/beledci/turkiyede-dis-mualicesi/ | Türkiyədə diş müalicəsi — keyfiyyətə görə seçilən diş klinikası | türkiyədə diş müalicəsi, türkiyədə diş klinikası |
 | tr | https://dentaltourism.tr/tr/rehber/turkiye-dis-klinigi/ | Türkiye'de diş tedavisi — kalite için seçilen bir diş kliniği | türkiye diş kliniği, yabancı hastalar için diş kliniği, diş turizmi türkiye |
 
@@ -68,6 +70,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/bedste-tandklinik-istanbul/ | Bedste tandklinik i Istanbul? Anmeldelser, de rigtige spørgsmål og vores tilgang | bedste tandklinik istanbul |
 | no | https://dentaltourism.tr/no/guide/beste-tannklinikk-istanbul/ | Beste tannklinikk i Istanbul? Omtaler, de riktige spørsmålene og vår tilnærming | beste tannklinikk istanbul |
 | ro | https://dentaltourism.tr/ro/ghid/cea-mai-buna-clinica-dentara-istanbul/ | Cea mai bună clinică dentară din Istanbul? Recenzii, întrebările potrivite și abordarea noastră | cea mai buna clinica dentara istanbul |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/nay-dobrata-dentalna-klinika-v-istanbul/ | Най-добрата дентална клиника в Истанбул? Отзиви, въпроси и нашият подход | най-добрата дентална клиника в истанбул, добър зъболекар истанбул мнения |
 | az | https://dentaltourism.tr/az/beledci/istanbulda-en-yaxsi-dis-klinikasi/ | İstanbulda ən yaxşı diş klinikası? Rəylər, düzgün suallar və bizim yanaşmamız | istanbulda ən yaxşı diş klinikası |
 | tr | https://dentaltourism.tr/tr/rehber/istanbul-en-iyi-dis-klinigi/ | İstanbul'un en iyi diş kliniği hangisi? Yorumlar, sorulması gereken sorular ve yaklaşımımız | istanbul en iyi diş kliniği, şişli en iyi diş hekimi, istanbul diş kliniği yorumlar |
 
@@ -89,6 +92,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/bedste-tandklinik-tyrkiet-anmeldelser/ | Bedste tandklinik i Tyrkiet 2026? Sådan vælger du – og ægte patientanmeldelser | bedste tandklinik tyrkiet, tandlæge tyrkiet anmeldelser |
 | no | https://dentaltourism.tr/no/guide/beste-tannklinikk-tyrkia-omtaler/ | Beste tannklinikk i Tyrkia 2026? Slik velger du – og ekte pasientomtaler | beste tannklinikk tyrkia, tannlege tyrkia omtaler |
 | ro | https://dentaltourism.tr/ro/ghid/cea-mai-buna-clinica-dentara-turcia-pareri/ | Cea mai bună clinică dentară din Turcia 2026? Cum alegi – și recenzii reale de la pacienți | cea mai buna clinica dentara turcia, dentist turcia pareri |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/nay-dobrata-dentalna-klinika-v-turtsiya-otzivi/ | Най-добрата дентална клиника в Турция 2026? Как да изберете — и реални отзиви | най-добрата дентална клиника в турция, зъболекар турция мнения, зъби в турция отзиви |
 | az | https://dentaltourism.tr/az/beledci/turkiyede-en-yaxsi-dis-klinikasi-reyler/ | Türkiyədə ən yaxşı diş klinikası 2026? Necə seçməli — və real pasiyent rəyləri | türkiyədə ən yaxşı diş klinikası, diş klinikası rəylər |
 | tr | https://dentaltourism.tr/tr/rehber/turkiye-en-iyi-dis-klinigi-yorumlar/ | Türkiye'nin en iyi diş kliniği 2026? Nasıl seçilir — ve gerçek hasta yorumları | dental clinic turkey yorumlar, aesthetic dental turkey clinic yorumlar, en iyi diş kliniği yorumlar, şişli diş hekimi yorumlar |
 
@@ -110,6 +114,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandklinik-istanbul/ | Tandklinik i Istanbul, Tyrkiet – Şişli, tæt på Taksim | tandklinik istanbul |
 | no | https://dentaltourism.tr/no/guide/tannklinikk-istanbul/ | Tannklinikk i Istanbul, Tyrkia – Şişli, nær Taksim | tannklinikk istanbul |
 | ro | https://dentaltourism.tr/ro/ghid/clinica-dentara-istanbul/ | Clinică stomatologică în Istanbul, Turcia – Şişli, lângă Taksim | clinica dentara istanbul |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/dentalna-klinika-istanbul/ | Дентална клиника в Истанбул, Турция — Шишли, близо до Таксим | дентална клиника истанбул, зъболекар истанбул |
 | az | https://dentaltourism.tr/az/beledci/istanbul-dis-klinikasi/ | İstanbulda diş klinikası — Şişli, Taksimə yaxın | istanbul diş klinikası |
 | tr | https://dentaltourism.tr/tr/rehber/istanbul-dis-klinigi-sisli/ | İstanbul Şişli diş kliniği — Osmanbey, Taksim'e bir durak | şişli diş kliniği, taksim diş kliniği, osmanbey diş hekimi, zeytinburnu diş kliniği, hafta sonu açık diş hekimi şişli |
 
@@ -131,6 +136,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandlaege-antalya-side-alanya/ | Tandlæge i Antalya, Side, Belek eller Alanya? En kort flyvning til Istanbul | tandlæge antalya |
 | no | https://dentaltourism.tr/no/guide/tannlege-antalya-side-alanya/ | Tannlege i Antalya, Side, Belek eller Alanya? En kort flytur til Istanbul | tannlege antalya |
 | ro | https://dentaltourism.tr/ro/ghid/dentist-antalya-side-alanya/ | Dentist în Antalya, Side, Belek sau Alanya? Un zbor scurt până la Istanbul | dentist antalya |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/zabolekar-antalya-side-alanya/ | Зъболекар в Анталия, Сиде, Белек или Алания? Кратък полет до Истанбул | зъболекар анталия, зъболекар алания, зъболекар сиде |
 | az | https://dentaltourism.tr/az/beledci/antalya-dis-mualicesi/ | Antalya, Side, Belek və ya Alanyada stomatoloq? İstanbula qısa uçuş | antalya diş klinikası |
 | tr | https://dentaltourism.tr/tr/rehber/antalya-tatilinde-dis-tedavisi/ | Antalya, Side, Belek veya Alanya'da diş tedavisi mi? İstanbul'a kısa bir uçuş | antalya diş kliniği, alanya diş hekimi, side diş kliniği |
 
@@ -152,6 +158,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandlaege-bodrum-marmaris-izmir/ | Tandlæge i Bodrum, Marmaris, Izmir eller Kuşadası? Kombiner ferien med Istanbul | tandlæge marmaris |
 | no | https://dentaltourism.tr/no/guide/tannlege-bodrum-marmaris-izmir/ | Tannlege i Bodrum, Marmaris, Izmir eller Kuşadası? Kombiner ferien med Istanbul | tannlege marmaris |
 | ro | https://dentaltourism.tr/ro/ghid/dentist-bodrum-marmaris-izmir/ | Dentist în Bodrum, Marmaris, Izmir sau Kuşadası? Combină vacanța cu Istanbulul | dentist bodrum |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/zabolekar-bodrum-marmaris-izmir/ | Зъболекар в Бодрум, Мармарис, Измир или Кушадасъ? Съчетайте почивката с Истанбул | зъболекар бодрум, зъболекар мармарис, зъболекар измир |
 | az | https://dentaltourism.tr/az/beledci/bodrum-marmaris-izmir-dis-mualicesi/ | Bodrum, Marmaris, İzmir və ya Kuşadasıda stomatoloq? İstirahəti İstanbulla birləşdirin | izmir diş klinikası |
 | tr | https://dentaltourism.tr/tr/rehber/bodrum-marmaris-izmir-kusadasi-dis-tedavisi/ | Bodrum, Marmaris, İzmir veya Kuşadası'nda diş kliniği mi? Tatilinizi İstanbul'la birleştirin | marmaris diş kliniği, bodrum diş kliniği, izmir en iyi diş kliniği, kuşadası diş kliniği |
 
@@ -173,6 +180,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandlaege-ankara-eller-istanbul/ | Tandlæge i Ankara eller Istanbul? Det skal du overveje | tandlæge ankara |
 | no | https://dentaltourism.tr/no/guide/tannlege-ankara-eller-istanbul/ | Tannlege i Ankara eller Istanbul? Dette bør du vurdere | tannlege ankara |
 | ro | https://dentaltourism.tr/ro/ghid/dentist-ankara-sau-istanbul/ | Dentist în Ankara sau în Istanbul? La ce să fii atent | dentist ankara |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/zabolekar-ankara-ili-istanbul/ | Дентална клиника в Анкара или Истанбул? Какво да имате предвид | зъболекар анкара |
 | az | https://dentaltourism.tr/az/beledci/ankara-ve-istanbul-dis-mualicesi/ | Ankarada, yoxsa İstanbulda stomatoloq? Nəyə diqqət etməli | ankara diş klinikası |
 | tr | https://dentaltourism.tr/tr/rehber/ankaradan-istanbula-dis-tedavisi/ | Ankara'da mı, İstanbul'da mı diş tedavisi? Nelere dikkat etmeli | ankara diş kliniği, ankaradan istanbula diş tedavisi |
 
@@ -194,6 +202,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/bedste-land-til-tandturisme/ | Bedste land til tandturisme i 2026: Tyrkiet, Ungarn, Mexico, Thailand og flere | bedste land til tandbehandling, tandlæge ungarn eller tyrkiet |
 | no | https://dentaltourism.tr/no/guide/beste-land-for-tannturisme/ | Beste land for tannturisme i 2026: Tyrkia, Ungarn, Mexico, Thailand og flere | beste land for tannbehandling, tannlege ungarn eller tyrkia |
 | ro | https://dentaltourism.tr/ro/ghid/cea-mai-buna-tara-turism-dentar/ | Cea mai bună țară pentru turism dentar în 2026: Turcia, Ungaria, Mexic, Thailanda și altele | cea mai bună țară pentru turism dentar, dentist ungaria sau turcia |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/nay-dobrata-strana-za-dentalen-turizam/ | Най-добрата страна за дентален туризъм през 2026 г.: Турция срещу Мексико, Тайланд, Унгария и други | най-добрата страна за дентален туризъм, зъби в турция или унгария |
 | az | https://dentaltourism.tr/az/beledci/dis-turizmi-ucun-en-yaxsi-olke/ | 2026-cı ildə diş turizmi üçün ən yaxşı ölkə: Türkiyə, Macarıstan, Meksika, Tayland və digərləri | diş turizmi üçün ən yaxşı ölkə |
 | tr | https://dentaltourism.tr/tr/rehber/dis-turizmi-icin-en-iyi-ulke/ | 2026'da diş turizmi için en iyi ülke: Türkiye, Macaristan, Meksika, Tayland ve diğerleri | diş turizmi için en iyi ülke, türkiye macaristan diş karşılaştırma |
 
@@ -215,6 +224,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/faa-lavet-taender-i-tyrkiet/ | Få lavet tænder i Tyrkiet – en ærlig guide | få lavet tænder i tyrkiet |
 | no | https://dentaltourism.tr/no/guide/fikse-tennene-i-tyrkia/ | Fikse tennene i Tyrkia – en ærlig guide | fikse tennene i tyrkia |
 | ro | https://dentaltourism.tr/ro/ghid/sa-iti-faci-dintii-in-turcia/ | Să-ți faci dinții în Turcia – un ghid onest | sa-ti faci dintii in turcia |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/zabi-v-turtsiya/ | Да си направите зъбите в Турция — честно ръководство | правене на зъби в турция, зъби в турция |
 | az | https://dentaltourism.tr/az/beledci/turkiyede-dis-etdirmek/ | Türkiyədə diş etdirmək — dürüst bələdçi | türkiyədə diş etdirmək |
 | tr | https://dentaltourism.tr/tr/rehber/turkiyede-dis-yaptirmak-rehber/ | Türkiye'de diş yaptırmak — dürüst bir rehber | türkiyede diş yaptırmak, yurt dışından türkiyeye diş tedavisi |
 
@@ -236,6 +246,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandkirurgi-tyrkiet/ | Tandkirurgi i Tyrkiet – implantater, udtrækninger og visdomstænder | tandkirurgi tyrkiet |
 | no | https://dentaltourism.tr/no/guide/tannkirurgi-tyrkia/ | Tannkirurgi i Tyrkia – implantater, trekking og visdomstenner | tannkirurgi tyrkia |
 | ro | https://dentaltourism.tr/ro/ghid/chirurgie-dentara-turcia/ | Chirurgie dentară în Turcia – implanturi, extracții și măsele de minte | chirurgie dentara turcia |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/dentalna-hirurgiya-turtsiya/ | Дентална хирургия в Турция — импланти, екстракции и мъдреци | дентална хирургия турция, вадене на мъдрец турция |
 | az | https://dentaltourism.tr/az/beledci/turkiyede-dis-cerrahiyyesi/ | Türkiyədə diş cərrahiyyəsi — implantlar, çəkim və ağıl dişləri | türkiyədə diş cərrahiyyəsi |
 | tr | https://dentaltourism.tr/tr/rehber/agiz-dis-cerrahisi-istanbul/ | İstanbul'da ağız ve diş cerrahisi — implant, diş çekimi ve yirmilik dişler | ağız diş cerrahisi istanbul, yirmilik diş çekimi şişli |
 
@@ -257,6 +268,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/garanti-efterbehandling-tyrkiet/ | Garanti, efterbehandling og betaling ved tandbehandling i Tyrkiet | tandbehandling tyrkiet garanti |
 | no | https://dentaltourism.tr/no/guide/garanti-oppfolging-tannbehandling-tyrkia/ | Garanti, oppfølging og betaling ved tannbehandling i Tyrkia | tannbehandling tyrkia garanti |
 | ro | https://dentaltourism.tr/ro/ghid/garantie-tratament-dentar-turcia/ | Garanție, îngrijire ulterioară și plată pentru tratamentul dentar în Turcia | tratament dentar turcia garantie |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/garantsiya-dentalno-lechenie-turtsiya/ | Гаранция, последваща грижа и плащане за дентално лечение в Турция | лечение на зъби турция гаранция |
 | az | https://dentaltourism.tr/az/beledci/dis-mualicesi-zemanet/ | Türkiyədə diş müalicəsi üçün zəmanət, sonrakı nəzarət və ödəniş | diş müalicəsi zəmanət |
 | tr | https://dentaltourism.tr/tr/rehber/dis-tedavisi-garanti-takip/ | Diş tedavisinde garanti, takip ve ödeme | diş tedavisi garanti, implant garantisi |
 
@@ -278,6 +290,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/foer-og-efter-taender/ | Før og efter – smilgalleri og guide til tandfarver | tænder før og efter tyrkiet |
 | no | https://dentaltourism.tr/no/guide/for-og-etter-tenner/ | Før og etter – smilgalleri og guide til tannfarger | tenner før og etter tyrkia |
 | ro | https://dentaltourism.tr/ro/ghid/inainte-si-dupa-dinti/ | Înainte și după – galerie de zâmbete și ghid al nuanțelor dinților | dinti inainte si dupa turcia |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/predi-i-sled-zabi/ | Преди и след — галерия на усмивки и ръководство за цвета на зъбите | зъби преди и след турция |
 | az | https://dentaltourism.tr/az/beledci/evvel-ve-sonra-disler/ | Əvvəl və sonra — təbəssüm qalereyası və diş rəngləri bələdçisi | dişlər əvvəl və sonra |
 | tr | https://dentaltourism.tr/tr/rehber/once-sonra-gulus-galerisi/ | Öncesi ve sonrası — gülüş galerisi ve diş rengi rehberi | diş önce sonra, gülüş tasarımı önce sonra, diş renk skalası |
 
@@ -299,6 +312,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandturisme-bureau-partner/ | Tandturisme-bureau i Tyrkiet? Samarbejd direkte med vores klinik | tandturisme bureau |
 | no | https://dentaltourism.tr/no/guide/tannturisme-byra-partner/ | Tannturismebyrå for Tyrkia? Samarbeid direkte med klinikken vår | tannturisme byrå |
 | ro | https://dentaltourism.tr/ro/ghid/agentie-turism-dentar-partener/ | Agenție de turism dentar în Turcia? Lucrează direct cu clinica noastră | agenție turism dentar |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/agentsiya-za-dentalen-turizam/ | Агенция за дентален туризъм в Турция? Работете директно с нашата клиника | агенция за дентален туризъм |
 | az | https://dentaltourism.tr/az/beledci/dis-turizmi-agentliyi/ | Türkiyədə diş turizmi agentliyi? Birbaşa klinikamızla işləyin | diş turizmi agentliyi |
 | tr | https://dentaltourism.tr/tr/rehber/dis-turizmi-acentesi-is-birligi/ | Diş turizmi acentesi misiniz? Doğrudan kliniğimizle çalışın | diş turizmi acentesi, sağlık turizmi acentesi iş birliği |
 
@@ -320,6 +334,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/istanbul-guide-til-tandpatienter/ | Istanbul for tandpatienter: hvor du skal bo, og hvilke områder du skal undgå | istanbul områder at undgå |
 | no | https://dentaltourism.tr/no/guide/istanbul-guide-for-tannpasienter/ | Istanbul for tannpasienter: hvor du bør bo og hvilke områder du bør unngå | istanbul områder å unngå |
 | ro | https://dentaltourism.tr/ro/ghid/ghid-istanbul-pacienti-dentari/ | Istanbul pentru pacienții dentari: unde să stai și ce zone să eviți | zone de evitat istanbul |
+| bg | https://dentaltourism.tr/bg/rakovodstvo/patevoditel-istanbul-za-dentalni-patsienti/ | Пътеводител за Истанбул за дентални пациенти: къде да отседнете и кои квартали да избягвате | опасни квартали в истанбул, къде да отседна в истанбул |
 | az | https://dentaltourism.tr/az/beledci/dis-xestereri-ucun-istanbul-beledcisi/ | Diş pasiyentləri üçün İstanbul: harada qalmalı və hansı rayonlardan qaçmalı | istanbulda təhlükəli rayonlar |
 | tr | https://dentaltourism.tr/tr/rehber/dis-hastalari-icin-istanbul-rehberi/ | Diş tedavisi için İstanbul'a gelenlere rehber: nerede kalınır, nerelerden uzak durulur | istanbul'da kalınacak yerler diş tedavisi |
 
@@ -341,10 +356,11 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/priser/ | tandlæge tyrkiet priser |
 | no | https://dentaltourism.tr/no/priser/ | tannlege tyrkia priser |
 | ro | https://dentaltourism.tr/ro/preturi/ | preturi dentist turcia |
+| bg | https://dentaltourism.tr/bg/tseni/ | цени на зъболекар в турция, колко струват зъбите в турция, лечение на зъби турция цена |
 | az | https://dentaltourism.tr/az/qiymetler/ | türkiyədə diş qiymətləri |
 | tr | https://dentaltourism.tr/tr/fiyatlar/ | diş tedavisi fiyatları istanbul, şişli diş fiyatları |
 
-**Tedavi fiyat sayfaları** (`/<dil>/<prices>/<tedavi-slug>/`, 10 tedavi × 16 dil). Her dilde kalıp: `en: {t} price turkey`, `de: {t} türkei kosten`, `nl: {t} turkije prijs`, `fr: {t} turquie prix`, `it: {t} turchia prezzo`, `es: {t} turquía precio`, `pl: {t} turcja cena`, `ru: {t} в турции цена`, `uk: {t} туреччина ціна`, `ar: سعر {t} في تركيا`, `sv: {t} turkiet pris`, `da: {t} tyrkiet pris`, `no: {t} tyrkia pris`, `ro: {t} turcia pret`, `az: {t} türkiyə qiymət`, `tr: {t} fiyatları istanbul`
+**Tedavi fiyat sayfaları** (`/<dil>/<prices>/<tedavi-slug>/`, 10 tedavi × 16 dil). Her dilde kalıp: `en: {t} price turkey`, `de: {t} türkei kosten`, `nl: {t} turkije prijs`, `fr: {t} turquie prix`, `it: {t} turchia prezzo`, `es: {t} turquía precio`, `pl: {t} turcja cena`, `ru: {t} в турции цена`, `uk: {t} туреччина ціна`, `ar: سعر {t} في تركيا`, `sv: {t} turkiet pris`, `da: {t} tyrkiet pris`, `no: {t} tyrkia pris`, `ro: {t} turcia pret`, `bg: {t} турция цена`, `az: {t} türkiyə qiymət`, `tr: {t} fiyatları istanbul`
 
 - `dental-implants` (EN ek): price of dental implants in turkey, price dental implants turkey, dental implants price list turkey, dental implants turkey price list, full dental implants price turkey, full mouth dental implants turkey price reddit, dental implant cost turkey reddit, dental implants turkey antalya price
 - `porcelain-veneers` (EN ek): dental veneers price in turkey
@@ -371,10 +387,11 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/pakker/ | tandlægerejse tyrkiet pakke, tandbehandling tyrkiet pakkerejse, hvad er tandturisme |
 | no | https://dentaltourism.tr/no/pakker/ | tannlegereise tyrkia pakke, tannbehandling tyrkia pakkereise, hva er tannturisme |
 | ro | https://dentaltourism.tr/ro/pachete/ | pachet stomatologic turcia, turism dentar turcia pachete, ce este turismul dentar |
+| bg | https://dentaltourism.tr/bg/paketi/ | дентален туризъм турция пакет, лечение на зъби в турция пакет, дентална почивка турция, какво е дентален туризъм |
 | az | https://dentaltourism.tr/az/paketler/ | türkiyədə diş müalicəsi paketi, diş turizmi türkiyə, diş turizmi nədir |
 | tr | https://dentaltourism.tr/tr/paketler/ | diş turizmi paketleri, diş tedavisi tatil paketi, yurt dışından gelen hastalar için diş paketi, diş turizmi nedir |
 
-**Tedavi paketleri** `/<dil>/<packages>/<tedavi-slug>/` — kalıplar: en: {t} package turkey, {t} package istanbul, {t} holiday package, {t} all inclusive turkey; de: {t} türkei paket, {t} istanbul komplettpaket, {t} zahnurlaub türkei; nl: {t} turkije pakket, {t} istanbul all inclusive, {t} tandartsreis; fr: forfait {t} turquie, {t} istanbul tout compris, séjour {t} turquie; it: pacchetto {t} turchia, {t} istanbul tutto incluso, vacanza {t} turchia; es: paquete {t} turquía, {t} estambul todo incluido, viaje {t} turquía; pl: {t} turcja pakiet, {t} stambuł all inclusive; ru: {t} в турции пакет, {t} стамбул тур; uk: {t} туреччина пакет, {t} стамбул тур; ar: باقة {t} في تركيا, {t} في إسطنبول شامل; sv: {t} turkiet paket, {t} istanbul paketresa; da: {t} tyrkiet pakke, {t} istanbul pakkerejse; no: {t} tyrkia pakke, {t} istanbul pakkereise; ro: pachet {t} turcia, {t} istanbul all inclusive; az: {t} türkiyə paketi, {t} istanbul paket; tr: {t} paketi istanbul, {t} tatil paketi
+**Tedavi paketleri** `/<dil>/<packages>/<tedavi-slug>/` — kalıplar: en: {t} package turkey, {t} package istanbul, {t} holiday package, {t} all inclusive turkey; de: {t} türkei paket, {t} istanbul komplettpaket, {t} zahnurlaub türkei; nl: {t} turkije pakket, {t} istanbul all inclusive, {t} tandartsreis; fr: forfait {t} turquie, {t} istanbul tout compris, séjour {t} turquie; it: pacchetto {t} turchia, {t} istanbul tutto incluso, vacanza {t} turchia; es: paquete {t} turquía, {t} estambul todo incluido, viaje {t} turquía; pl: {t} turcja pakiet, {t} stambuł all inclusive; ru: {t} в турции пакет, {t} стамбул тур; uk: {t} туреччина пакет, {t} стамбул тур; ar: باقة {t} في تركيا, {t} في إسطنبول شامل; sv: {t} turkiet paket, {t} istanbul paketresa; da: {t} tyrkiet pakke, {t} istanbul pakkerejse; no: {t} tyrkia pakke, {t} istanbul pakkereise; ro: pachet {t} turcia, {t} istanbul all inclusive; bg: {t} турция пакет, {t} истанбул пакет; az: {t} türkiyə paketi, {t} istanbul paket; tr: {t} paketi istanbul, {t} tatil paketi
 
 Ek (EN, "best … clinic in Istanbul" bölümü):
 - `dental-implants`: best dental clinic in turkey for implants, best dental clinic in istanbul for implants, best dental implant clinic istanbul, best dental implant clinic in istanbul turkey, best dental implant tourism *(20 hacim, PD 6)*, best medical tourism for dental implants, best place for dental tourism implants, dental tourism implants turkey, medical tourism dental implants turkey
@@ -420,24 +437,25 @@ Ek (EN, "best … clinic in Istanbul" bölümü):
 | no | https://dentaltourism.tr/no/tannreise-fra/norge/ | tannlegereise tyrkia fra norge, tannlege istanbul fra oslo, tannlege istanbul fra bergen |
 | ro | https://dentaltourism.tr/ro/vacante-dentare-din/romania/ | turism dentar turcia din românia, dentist istanbul din bucurești, dentist istanbul din cluj-napoca |
 | ro | https://dentaltourism.tr/ro/vacante-dentare-din/republica-moldova/ | turism dentar turcia din republica moldova, dentist istanbul din chișinău |
+| bg | https://dentaltourism.tr/bg/dentalen-turizam-ot/bulgaria/ | лечение на зъби в турция от българия, зъболекар истанбул от софия, зъболекар истанбул от пловдив, зъболекар истанбул от варна |
 | az | https://dentaltourism.tr/az/dis-seferi/az-rbaycan/ | azərbaycandan türkiyəyə diş müalicəsi, bakıdan istanbula diş müalicəsi |
 | tr | https://dentaltourism.tr/tr/dis-tatili/almanya/ | almanya türkiye diş tedavisi, berlin istanbul diş tedavisi, frankfurt istanbul diş tedavisi, münchen istanbul diş tedavisi |
 | tr | https://dentaltourism.tr/tr/dis-tatili/hollanda/ | hollanda türkiye diş tedavisi, amsterdam istanbul diş tedavisi, rotterdam istanbul diş tedavisi, eindhoven istanbul diş tedavisi |
 
 ## 4. Tedavi sayfaları — `/<dil>/<treatments>/<slug>/` (16 dil)
 
-| Tedavi | en | de | nl | fr | it | es | pl | ru | uk | ar | sv | da | no | ro | az | tr |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| dental-implants | dental-implants | zahnimplantate | tandimplantaten | implants-dentaires | impianti-dentali | implantes-dentales | implanty-zebow | zubnye-implanty | zubni-implanty | zirat-al-asnan | tandimplantat | tandimplantater | tannimplantater | implanturi-dentare | dis-implantlari | implant-tedavisi |
-| porcelain-veneers | porcelain-veneers | keramik-veneers | porseleinen-facings | facettes-ceramique | faccette-in-ceramica | carillas-de-porcelana | licowki-porcelanowe | keramicheskie-viniry | keramichni-viniry | qushur-al-porselain | porslinsfasader | porcelaensfacader | porselensfasetter | fatete-din-ceramica | cini-vinirler | porselen-lamina |
-| zirconia-crowns | zirconia-crowns | zirkonkronen | zirkonia-kronen | couronnes-zircone | corone-in-zirconia | coronas-de-zirconio | korony-cyrkonowe | cirkonievye-koronki | cyrkonievi-koronky | tijan-al-zirkon | zirkoniakronor | zirkoniakroner | zirkoniakroner | coroane-din-zirconiu | sirkonium-taclar | zirkonyum-kaplama |
-| all-on-4-implants | all-on-4-implants | all-on-4-implantate | all-on-4-implantaten | implants-all-on-4 | impianti-all-on-4 | implantes-all-on-4 | implanty-all-on-4 | implantaciya-all-on-4 | implantaciya-all-on-4 | zirat-all-on-4 | all-on-4-implantat | all-on-4-implantater | all-on-4-implantater | implanturi-all-on-4 | all-on-4-implantasiyasi | all-on-4-implant |
-| root-canal-treatment | root-canal-treatment | wurzelbehandlung | wortelkanaalbehandeling | traitement-de-canal | devitalizzazione | endodoncia | leczenie-kanalowe | lechenie-kanalov | likuvannya-kanaliv | ilaj-asab-al-asnan | rotfyllning | rodbehandling | rotfylling | tratament-de-canal | kanal-mualicesi | kanal-tedavisi |
-| composite-veneers | composite-veneers | komposit-veneers | composiet-facings | facettes-composite | faccette-in-composito | carillas-de-composite | licowki-kompozytowe | kompozitnye-viniry | kompozytni-viniry | finir-al-komposit | kompositfasader | kompositfacader | komposittfasetter | fatete-din-compozit | kompozit-vinirler | kompozit-lamina-bonding |
-| teeth-cleaning | teeth-cleaning | professionelle-zahnreinigung | gebitsreiniging | detartrage | pulizia-dei-denti | limpieza-dental | higienizacja-zebow | professionalnaya-chistka-zubov | profesijna-chystka-zubiv | tanzif-al-asnan | tandrengoring | tandrensning | tannrens | igienizare-dentara | dis-temizliyi | dis-tasi-temizligi |
-| tooth-fillings | tooth-fillings | zahnfuellungen | tandvullingen | plombages-composite | otturazioni | empastes | wypelnienia-zebow | plombirovanie-zubov | plombuvannya-zubiv | hashwat-al-asnan | tandlagning | tandfyldninger | tannfyllinger | plombe-dentare | dis-plomblari | dis-dolgusu |
-| teeth-whitening | teeth-whitening | bleaching | tanden-bleken | blanchiment-dentaire | sbiancamento-dentale | blanqueamiento-dental | wybielanie-zebow | otbelivanie-zubov | vidbilyuvannya-zubiv | tabyid-al-asnan | tandblekning | tandblegning | tannbleking | albire-dentara | dis-agartma | dis-beyazlatma |
-| hollywood-smile | hollywood-smile | hollywood-smile-tuerkei | hollywood-smile-turkije | sourire-hollywoodien | hollywood-smile-turchia | sonrisa-de-hollywood | hollywoodzki-usmiech | gollivudskaya-ulybka | gollivudska-usmishka | ibtisamat-hollywood | hollywood-leende | hollywood-smil | hollywood-smil | zambet-de-hollywood | hollywood-tebessumu | gulus-tasarimi-hollywood-smile |
+| Tedavi | en | de | nl | fr | it | es | pl | ru | uk | ar | sv | da | no | ro | bg | az | tr |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| dental-implants | dental-implants | zahnimplantate | tandimplantaten | implants-dentaires | impianti-dentali | implantes-dentales | implanty-zebow | zubnye-implanty | zubni-implanty | zirat-al-asnan | tandimplantat | tandimplantater | tannimplantater | implanturi-dentare | zabni-implanti | dis-implantlari | implant-tedavisi |
+| porcelain-veneers | porcelain-veneers | keramik-veneers | porseleinen-facings | facettes-ceramique | faccette-in-ceramica | carillas-de-porcelana | licowki-porcelanowe | keramicheskie-viniry | keramichni-viniry | qushur-al-porselain | porslinsfasader | porcelaensfacader | porselensfasetter | fatete-din-ceramica | portselanovi-faseti | cini-vinirler | porselen-lamina |
+| zirconia-crowns | zirconia-crowns | zirkonkronen | zirkonia-kronen | couronnes-zircone | corone-in-zirconia | coronas-de-zirconio | korony-cyrkonowe | cirkonievye-koronki | cyrkonievi-koronky | tijan-al-zirkon | zirkoniakronor | zirkoniakroner | zirkoniakroner | coroane-din-zirconiu | tsirkonievi-koronki | sirkonium-taclar | zirkonyum-kaplama |
+| all-on-4-implants | all-on-4-implants | all-on-4-implantate | all-on-4-implantaten | implants-all-on-4 | impianti-all-on-4 | implantes-all-on-4 | implanty-all-on-4 | implantaciya-all-on-4 | implantaciya-all-on-4 | zirat-all-on-4 | all-on-4-implantat | all-on-4-implantater | all-on-4-implantater | implanturi-all-on-4 | implanti-all-on-4 | all-on-4-implantasiyasi | all-on-4-implant |
+| root-canal-treatment | root-canal-treatment | wurzelbehandlung | wortelkanaalbehandeling | traitement-de-canal | devitalizzazione | endodoncia | leczenie-kanalowe | lechenie-kanalov | likuvannya-kanaliv | ilaj-asab-al-asnan | rotfyllning | rodbehandling | rotfylling | tratament-de-canal | korenovo-lechenie | kanal-mualicesi | kanal-tedavisi |
+| composite-veneers | composite-veneers | komposit-veneers | composiet-facings | facettes-composite | faccette-in-composito | carillas-de-composite | licowki-kompozytowe | kompozitnye-viniry | kompozytni-viniry | finir-al-komposit | kompositfasader | kompositfacader | komposittfasetter | fatete-din-compozit | kompozitni-faseti | kompozit-vinirler | kompozit-lamina-bonding |
+| teeth-cleaning | teeth-cleaning | professionelle-zahnreinigung | gebitsreiniging | detartrage | pulizia-dei-denti | limpieza-dental | higienizacja-zebow | professionalnaya-chistka-zubov | profesijna-chystka-zubiv | tanzif-al-asnan | tandrengoring | tandrensning | tannrens | igienizare-dentara | profesionalno-pochistvane-na-zabi | dis-temizliyi | dis-tasi-temizligi |
+| tooth-fillings | tooth-fillings | zahnfuellungen | tandvullingen | plombages-composite | otturazioni | empastes | wypelnienia-zebow | plombirovanie-zubov | plombuvannya-zubiv | hashwat-al-asnan | tandlagning | tandfyldninger | tannfyllinger | plombe-dentare | zabni-plombi | dis-plomblari | dis-dolgusu |
+| teeth-whitening | teeth-whitening | bleaching | tanden-bleken | blanchiment-dentaire | sbiancamento-dentale | blanqueamiento-dental | wybielanie-zebow | otbelivanie-zubov | vidbilyuvannya-zubiv | tabyid-al-asnan | tandblekning | tandblegning | tannbleking | albire-dentara | izbelvane-na-zabi | dis-agartma | dis-beyazlatma |
+| hollywood-smile | hollywood-smile | hollywood-smile-tuerkei | hollywood-smile-turkije | sourire-hollywoodien | hollywood-smile-turchia | sonrisa-de-hollywood | hollywoodzki-usmiech | gollivudskaya-ulybka | gollivudska-usmishka | ibtisamat-hollywood | hollywood-leende | hollywood-smil | hollywood-smil | zambet-de-hollywood | holivudska-usmivka | hollywood-tebessumu | gulus-tasarimi-hollywood-smile |
 
 ## 5. Bilinçli olarak HEDEFLENMEYENLER
 

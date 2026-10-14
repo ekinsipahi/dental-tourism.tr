@@ -107,7 +107,9 @@ class Command(BaseCommand):
                     n_tr += 1
         self.stdout.write(self.style.SUCCESS(f"✓ {n_new} yeni konu, {n_tr} çeviri yazıldı"))
         if not no_keywords:
-            self.stdout.write(self.style.SUCCESS(f"✓ {self._keywords()} keyword hedef URL'siyle güncellendi"))
+            with transaction.atomic():  # yüzlerce upsert tek commit'te (uzak DB'de / yavaş diskte çok daha hızlı)
+                n_kw = self._keywords()
+            self.stdout.write(self.style.SUCCESS(f"✓ {n_kw} keyword hedef URL'siyle güncellendi"))
 
     # ── Keyword tablosu ───────────────────────────────────────────────────
     def _upsert(self, term, lang, url, page_type, intent="commercial", primary=False, treatment=None):

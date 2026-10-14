@@ -2,7 +2,7 @@
 Başlangıç verisi — idempotent (tekrar çalıştırmak güvenli, mevcut kayıtları ezmez).
 
     python manage.py seed_data
-    python manage.py seed_data --keywords   # 16 dil keyword matrisini de oluştur
+    python manage.py seed_data --keywords   # 17 dil keyword matrisini de oluştur
 """
 from decimal import Decimal
 

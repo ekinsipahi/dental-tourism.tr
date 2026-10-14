@@ -1,5 +1,5 @@
 """
-16 dil için tedavi isimleri ve anahtar kelime kalıpları.
+17 dil için tedavi isimleri ve anahtar kelime kalıpları.
 
 TREATMENT_NAMES   : Hastaların o dilde aradığı tedavi adları (seed + keyword matrisi)
 TREATMENT_SLUGS   : Latin olmayan alfabeler için elle seçilmiş URL slug'ları
@@ -46,6 +46,9 @@ TREATMENT_NAMES = {
     "ro": ["Implanturi dentare", "Fațete dentare din porțelan", "Coroane din zirconiu", "Implanturi All-on-4",
            "Tratament de canal", "Fațete din compozit", "Detartraj", "Plombe dentare", "Albire dentară",
            "Hollywood Smile"],
+    "bg": ["Зъбни импланти", "Порцеланови фасети", "Циркониеви коронки", "Импланти All-on-4", "Кореново лечение",
+           "Композитни фасети", "Професионално почистване на зъби", "Зъбни пломби", "Избелване на зъби",
+           "Холивудска усмивка"],
     "az": ["Diş implantları", "Çini vinirlər", "Sirkon taclar", "All-on-4 implantasiya", "Kanal müalicəsi",
            "Kompozit vinirlər", "Diş daşlarının təmizlənməsi", "Diş plombları", "Dişlərin ağardılması",
            "Hollivud təbəssümü"],
@@ -63,17 +66,20 @@ TREATMENT_SLUGS = {
     "uk": ["zubni-implanty", "keramichni-viniry", "cyrkonievi-koronky", "implantaciya-all-on-4",
            "likuvannya-kanaliv", "kompozytni-viniry", "profesijna-chystka-zubiv", "plombuvannya-zubiv",
            "vidbilyuvannya-zubiv", "gollivudska-usmishka"],
+    "bg": ["zabni-implanti", "portselanovi-faseti", "tsirkonievi-koronki", "implanti-all-on-4", "korenovo-lechenie",
+           "kompozitni-faseti", "profesionalno-pochistvane-na-zabi", "zabni-plombi", "izbelvane-na-zabi",
+           "holivudska-usmivka"],
 }
 
 CITY_SLUGS = {"ar": {"istanbul": "istanbul"}, "ru": {"istanbul": "stambul"}, "uk": {"istanbul": "stambul"},
-              "es": {"istanbul": "estambul"}, "pl": {"istanbul": "stambul"}}
+              "es": {"istanbul": "estambul"}, "pl": {"istanbul": "stambul"}, "bg": {"istanbul": "istanbul"}}
 
 # Okuyucunun ülkesi (karşılaştırma aramaları için) — o dilde
 HOME_TERMS = {
     "en": ["uk", "ireland", "usa"], "de": ["deutschland", "österreich", "schweiz"], "nl": ["nederland", "belgië"],
     "fr": ["france", "belgique"], "it": ["italia"], "es": ["españa"], "pl": ["polska"], "ru": ["россия"],
     "uk": ["україна"], "ar": ["السعودية", "الإمارات"], "sv": ["sverige"], "da": ["danmark"], "no": ["norge"],
-    "ro": ["românia"], "az": ["azərbaycan"], "tr": ["almanya", "avrupa"],
+    "ro": ["românia"], "bg": ["българия"], "az": ["azərbaycan"], "tr": ["almanya", "avrupa"],
 }
 
 I, C, T = "informational", "commercial", "transactional"
@@ -233,6 +239,17 @@ KEYWORD_PATTERNS = {
         ("{t} {country} pareri", C, "consideration", "skeptic", "blog"),
         ("{t} {country} riscuri", I, "awareness", "fear", "blog"),
         ("cea mai buna clinica dentara {city} {t}", T, "decision", "quality", "treatment_city"),
+    ],
+    "bg": [
+        ("{t} {country}", C, "consideration", "", "treatment"),
+        ("{t} {city}", C, "consideration", "", "treatment_city"),
+        ("{t} {country} цена", C, "consideration", "price", "treatment_price"),
+        ("{t} {city} цени", C, "consideration", "price", "treatment_price"),
+        ("колко струват {t} в турция", C, "consideration", "price", "treatment_price"),
+        ("{t} {country} мнения", C, "consideration", "skeptic", "blog"),
+        ("{t} в турция рискове", I, "awareness", "fear", "blog"),
+        ("най-добрата дентална клиника {city} {t}", T, "decision", "quality", "treatment_city"),
+        ("{t} {country} пакет", T, "decision", "ready", "treatment"),
     ],
     "az": [
         ("{t} {country}", C, "consideration", "", "treatment"),

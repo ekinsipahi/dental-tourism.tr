@@ -191,7 +191,7 @@ def llms_txt(request):
     clinic = Clinic.primary()
     lines = [f"# {settings.SITE_NAME}", "",
              "> Dental tourism in Istanbul, Turkey: implants, veneers, crowns and full-mouth restorations "
-             "for international patients, in 16 languages.", ""]
+             f"for international patients, in {len(settings.LANGUAGES)} languages.", ""]
     if clinic:
         lines += [f"- Clinic: {clinic.name}, {clinic.address}", f"- Phone/WhatsApp: {clinic.phone}", ""]
     lines += ["## Main pages"]
