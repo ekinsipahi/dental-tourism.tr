@@ -13,6 +13,7 @@
       <div class="h-cta-row au4">
         <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-price" "button_text" _("Get a free price quote") %}</a>
         {% if clinic %}<a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone" class="h-btn-phone">{{ clinic.phone }}</a>{% endif %}
+        {% include "components/wa_call.html" with cls="h-btn-phone h-btn-wacall" note=1 %}
       </div>
     </div>
   </div>
@@ -35,6 +36,7 @@
       <div class="h-cta-row au4">
         <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-fear" "button_text" _("Ask your question") %}</a>
         {% if clinic %}<a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone" class="h-btn-phone">{{ clinic.phone }}</a>{% endif %}
+        {% include "components/wa_call.html" with cls="h-btn-phone h-btn-wacall" note=1 %}
       </div>
     </div>
   </div>
@@ -202,6 +204,7 @@
       <div class="h-cta-row au5">
         <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-default" "button_text" _("Free assessment — WhatsApp") %}</a>
         {% if clinic %}<a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone" class="h-btn-phone">{{ clinic.phone }}</a>{% endif %}
+        {% include "components/wa_call.html" with cls="h-btn-phone h-btn-wacall" note=1 %}
       </div>
     </div>
   </div>

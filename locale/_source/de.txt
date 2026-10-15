@@ -629,3 +629,6 @@
 628|Keine Paket-Extras — stattdessen investieren wir in Ihren Behandlungsplan, und es gibt auch günstigere Optionen.
 629|Ihr Budget fließt in Ihre Behandlung, nicht in Extras
 630|Ihr Budget fließt dorthin, wo es zählt — in Ihre Behandlung. Es gibt auch günstigere Optionen; fragen Sie einfach.
+631|Hallo, ich würde gern per WhatsApp-Anruf mit Ihnen sprechen.
+632|Per WhatsApp anrufen
+633|Anrufe beantworten wir über WhatsApp — rufen Sie uns dort per Sprach- oder Videoanruf an oder schreiben Sie uns.

@@ -629,3 +629,6 @@
 628|Paket ekstraları yok — bunun yerine tedavi planınıza yatırım yapıyoruz; daha uygun seçenekler de mevcut.
 629|Bütçeniz ekstralara değil, tedavinize gider
 630|Bütçeniz asıl önemli olana, tedavinize gider. Daha uygun seçenekler de mevcut; sormanız yeterli.
+631|Merhaba, sizinle WhatsApp üzerinden sesli görüşmek istiyorum.
+632|WhatsApp'tan arayın
+633|Aramaları WhatsApp üzerinden yanıtlıyoruz — bize oradan sesli ya da görüntülü arayın veya mesaj yazın.

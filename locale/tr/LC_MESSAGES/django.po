@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-14 15:11+0300\n"
+"POT-Creation-Date: 2026-10-16 01:02+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,7 +79,7 @@ msgid "Rating"
 msgstr "Puan"
 
 #: apps/clinics/forms.py:17 apps/clinics/search.py:22
-#: templates/clinics/detail.html:44 templates/home/sections/hero.html:81
+#: templates/clinics/detail.html:45 templates/home/sections/hero.html:83
 #: templates/treatments/detail.html:6
 msgid "Treatment"
 msgstr "Tedavi"
@@ -237,6 +237,10 @@ msgstr "Daha fazla bilgi almak istiyorum."
 msgid "Hello, I would like a free consultation."
 msgstr "Merhaba, ücretsiz değerlendirme almak istiyorum."
 
+#: apps/core/context_processors.py:101
+msgid "Hello, I would like to talk to you on a WhatsApp call."
+msgstr "Merhaba, sizinle WhatsApp üzerinden sesli görüşmek istiyorum."
+
 #: apps/core/forms.py:8
 msgid "Full name"
 msgstr "Ad soyad"
@@ -316,7 +320,7 @@ msgstr ""
 "için hazırlanır."
 
 #: apps/core/templatetags/site_tags.py:167
-#: templates/home/sections/hero.html:138
+#: templates/home/sections/hero.html:140
 msgid "Get my personal treatment plan"
 msgstr "Kişisel tedavi planımı al"
 
@@ -334,7 +338,7 @@ msgstr ""
 
 #: apps/core/templatetags/site_tags.py:170
 #: apps/core/templatetags/site_tags.py:174
-#: templates/home/sections/hero.html:177
+#: templates/home/sections/hero.html:179
 msgid "Ask any question — free"
 msgstr "Her şeyi sorun — ücretsiz"
 
@@ -344,17 +348,17 @@ msgid "Get a free price quote"
 msgstr "Ücretsiz fiyat teklifi al"
 
 #: apps/core/templatetags/site_tags.py:173
-#: templates/home/sections/hero.html:123
+#: templates/home/sections/hero.html:125
 msgid "Request a private appointment"
 msgstr "Özel randevu talep et"
 
 #: apps/core/templatetags/site_tags.py:174 templates/components/navbar.html:73
-#: templates/home/sections/hero.html:148
+#: templates/home/sections/hero.html:150
 msgid "Book now"
 msgstr "Hemen randevu al"
 
 #: apps/core/templatetags/site_tags.py:181
-#: templates/components/results.html:30 templates/home/sections/hero.html:101
+#: templates/components/results.html:30 templates/home/sections/hero.html:103
 msgid "Ask a question"
 msgstr "Soru sor"
 
@@ -530,7 +534,7 @@ msgstr ""
 "deneyim, şeffaf teşhis ve sadece gerçekten ihtiyacınız olan tedavi."
 
 #: apps/core/views.py:119 apps/seo/common.py:33
-#: templates/components/footer.html:48 templates/components/navbar.html:55
+#: templates/components/footer.html:50 templates/components/navbar.html:55
 msgid "About us"
 msgstr "Hakkımızda"
 
@@ -566,10 +570,10 @@ msgstr "Kişisel verilerinizi nasıl işlediğimiz ve koruduğumuz (KVKK / GDPR)
 msgid "Page not found"
 msgstr "Sayfa bulunamadı"
 
-#: apps/seo/common.py:36 templates/clinics/detail.html:73
-#: templates/clinics/doctor.html:26 templates/components/footer.html:49
+#: apps/seo/common.py:36 templates/clinics/detail.html:74
+#: templates/clinics/doctor.html:26 templates/components/footer.html:51
 #: templates/components/navbar.html:56 templates/components/navbar.html:93
-#: templates/components/reviews.html:16 templates/home/sections/hero.html:180
+#: templates/components/reviews.html:16 templates/home/sections/hero.html:182
 msgid "Patient reviews"
 msgstr "Hasta yorumları"
 
@@ -688,7 +692,7 @@ msgstr ""
 "seyahat, garanti ve takip — İstanbul'daki bir diş hekiminden."
 
 #: apps/seo/guide_views.py:34 apps/seo/guide_views.py:70
-#: templates/components/footer.html:31 templates/components/navbar.html:41
+#: templates/components/footer.html:32 templates/components/navbar.html:41
 #: templates/components/navbar.html:87
 msgid "Guides"
 msgstr "Rehberler"
@@ -728,10 +732,6 @@ msgid "What is included in a dental tourism package?"
 msgstr "Diş turizmi paketine neler dahildir?"
 
 #: apps/seo/package_views.py:26
-#| msgid ""
-#| "A personal assessment, 3D scan and examination in Istanbul, the treatment "
-#| "itself, coordination of your transfers and hotel, and aftercare via WhatsApp"
-#| " when you are back home."
 msgid ""
 "A personal assessment, 3D scan and examination in Istanbul, the treatment "
 "itself and aftercare via WhatsApp when you are back home. Instead of "
@@ -744,7 +744,6 @@ msgstr ""
 "seçenekler de mevcut."
 
 #: apps/seo/package_views.py:29
-#| msgid "What a personalised dental package includes"
 msgid "Why is a personalised package better value?"
 msgstr "Kişiye özel paket neden daha avantajlı?"
 
@@ -804,10 +803,6 @@ msgid ""
 msgstr "İstanbul Diş Turizmi Paketleri — Kişiye Özel, Hazır Paket Değil"
 
 #: apps/seo/package_views.py:63
-#| msgid ""
-#| "Dental holiday packages in Turkey built around a real diagnosis: assessment,"
-#| " treatment, transfers, hotel and aftercare. No fixed packages — get your "
-#| "personal plan on WhatsApp."
 msgid ""
 "Dental holiday packages in Turkey built around a real diagnosis: assessment,"
 " treatment and aftercare. Your budget goes into your treatment, not extras. "
@@ -820,7 +815,7 @@ msgstr ""
 #: apps/seo/package_views.py:67 apps/seo/package_views.py:79
 #: apps/seo/package_views.py:109 apps/seo/package_views.py:117
 #: apps/seo/package_views.py:148 apps/seo/package_views.py:157
-#: templates/components/footer.html:36 templates/components/footer.html:37
+#: templates/components/footer.html:37 templates/components/footer.html:38
 #: templates/components/navbar.html:85
 msgid "Dental packages"
 msgstr "Diş paketleri"
@@ -831,9 +826,6 @@ msgid ""
 msgstr "İstanbul'da diş turizmi paketleri — kişiye özel, hazır paket değil"
 
 #: apps/seo/package_views.py:77
-#| msgid ""
-#| "Dental work is more than a Hollywood smile. Your package is built around a "
-#| "real diagnosis: assessment, treatment, transfers, hotel and aftercare."
 msgid ""
 "Dental work is more than a Hollywood smile. Your package is built around a "
 "real diagnosis — and your budget goes into your treatment, not into extras."
@@ -853,10 +845,6 @@ msgstr "%(treatment)s Paketi İstanbul — Hazır Teklif Değil, Kişisel Plan"
 
 #: apps/seo/package_views.py:103
 #, python-format
-#| msgid ""
-#| "%(treatment)s package in Istanbul built around your diagnosis: assessment, "
-#| "treatment, transfer and hotel coordination, aftercare. Get your personal "
-#| "plan on WhatsApp."
 msgid ""
 "%(treatment)s package in Istanbul built around your diagnosis: assessment, "
 "treatment and aftercare. Your budget goes into your treatment, not extras. "
@@ -977,7 +965,7 @@ msgstr ""
 
 #: apps/seo/views.py:69 apps/treatments/views.py:27
 #: apps/treatments/views.py:88 templates/404.html:8
-#: templates/components/footer.html:26 templates/components/navbar.html:10
+#: templates/components/footer.html:27 templates/components/navbar.html:10
 #: templates/components/navbar.html:81 templates/treatments/list.html:6
 msgid "Treatments"
 msgstr "Tedaviler"
@@ -1052,7 +1040,7 @@ msgstr ""
 "uygun diş tedavisi. Arayın veya WhatsApp'tan yazın."
 
 #: apps/seo/views.py:113 apps/seo/views.py:116 apps/seo/views.py:145
-#: apps/seo/views.py:151 templates/components/footer.html:28
+#: apps/seo/views.py:151 templates/components/footer.html:29
 #: templates/components/navbar.html:51 templates/components/navbar.html:91
 msgid "Prices"
 msgstr "Fiyatlar"
@@ -1168,7 +1156,7 @@ msgstr ""
 " teşhisle ve yazılı sabit bir fiyatla başlar."
 
 #: templates/about.html:10 templates/base.html:53
-#: templates/clinics/detail.html:36 templates/components/footer.html:18
+#: templates/clinics/detail.html:37 templates/components/footer.html:19
 #: templates/components/mind_nudge.html:12 templates/components/reviews.html:7
 #: templates/home/_stats.html:5 templates/pseo/_hero.html:9
 #, python-format
@@ -1187,16 +1175,16 @@ msgstr "Fotoğraf gönderin — ücretsiz değerlendirme"
 msgid "Call us"
 msgstr "Bizi arayın"
 
-#: templates/about.html:19 templates/clinics/detail.html:34
+#: templates/about.html:20 templates/clinics/detail.html:35
 #: templates/home/_stats.html:3
 msgid "Years experience"
 msgstr "Yıllık deneyim"
 
-#: templates/about.html:27 templates/packages/index.html:9
+#: templates/about.html:28 templates/packages/index.html:9
 msgid "Diagnosis first"
 msgstr "Önce teşhis"
 
-#: templates/about.html:27 templates/packages/index.html:9
+#: templates/about.html:28 templates/packages/index.html:9
 msgid ""
 "Examination, X-ray and 3D scan by the dentist — the plan follows the "
 "diagnosis, not a price list."
@@ -1204,11 +1192,11 @@ msgstr ""
 "Hekim tarafından muayene, röntgen ve 3D tomografi — plan fiyat listesini "
 "değil, teşhisi takip eder."
 
-#: templates/about.html:28 templates/packages/index.html:10
+#: templates/about.html:29 templates/packages/index.html:10
 msgid "Only the treatment you need"
 msgstr "Sadece ihtiyacınız olan tedavi"
 
-#: templates/about.html:28 templates/packages/index.html:10
+#: templates/about.html:29 templates/packages/index.html:10
 msgid ""
 "We save natural teeth first. No unnecessary crowns, no healthy enamel ground"
 " away."
@@ -1216,21 +1204,21 @@ msgstr ""
 "Önce kendi dişlerinizi koruruz. Gereksiz kaplama yok, sağlıklı mine "
 "kesilmez."
 
-#: templates/about.html:29 templates/home/sections/hero.html:12
-#: templates/home/sections/hero.html:32 templates/home/sections/hero.html:198
+#: templates/about.html:30 templates/home/sections/hero.html:12
+#: templates/home/sections/hero.html:33 templates/home/sections/hero.html:200
 #: templates/packages/index.html:12
 msgid "Fixed written quote"
 msgstr "Yazılı sabit fiyat"
 
-#: templates/about.html:29 templates/packages/index.html:12
+#: templates/about.html:30 templates/packages/index.html:12
 msgid "Very affordable, and what we agree in writing is what you pay."
 msgstr "Oldukça uygun — ve yazılı anlaştığımız fiyatı ödersiniz."
 
-#: templates/about.html:44
+#: templates/about.html:45
 msgid "Your dentist"
 msgstr "Diş hekiminiz"
 
-#: templates/about.html:49 templates/pseo/_proof.html:14
+#: templates/about.html:50 templates/pseo/_proof.html:14
 msgid "Read the dentist's profile"
 msgstr "Hekim profilini okuyun"
 
@@ -1275,12 +1263,12 @@ msgstr "%(y)s+ yıl deneyim"
 msgid "read them on Google"
 msgstr "Google'da okuyun"
 
-#: templates/base.html:67 templates/components/footer.html:42
+#: templates/base.html:67 templates/components/footer.html:43
 #: templates/components/navbar.html:59 templates/components/navbar.html:94
 msgid "Contact"
 msgstr "İletişim"
 
-#: templates/base.html:73 templates/contact.html:13
+#: templates/base.html:74 templates/contact.html:13
 msgid "Chat on WhatsApp"
 msgstr "WhatsApp'tan yazın"
 
@@ -1395,7 +1383,7 @@ msgid ""
 msgstr ""
 "Bu sayfa henüz sizin dilinizde mevcut değil — orijinal sürüm gösteriliyor."
 
-#: templates/clinics/detail.html:11 templates/home/sections/hero.html:95
+#: templates/clinics/detail.html:11 templates/home/sections/hero.html:97
 #, python-format
 msgid "%(n)s review"
 msgid_plural "%(n)s reviews"
@@ -1406,104 +1394,104 @@ msgstr[1] "%(n)s yorum"
 msgid "Profiles"
 msgstr "Profiller"
 
-#: templates/clinics/detail.html:35 templates/home/_stats.html:4
+#: templates/clinics/detail.html:36 templates/home/_stats.html:4
 msgid "Patients treated"
 msgstr "Tedavi edilen hasta"
 
-#: templates/clinics/detail.html:37 templates/clinics/doctor.html:20
-#: templates/components/footer.html:54
+#: templates/clinics/detail.html:38 templates/clinics/doctor.html:20
+#: templates/components/footer.html:56
 msgid "Languages"
 msgstr "Diller"
 
-#: templates/clinics/detail.html:42
+#: templates/clinics/detail.html:43
 msgid "Treatments & prices"
 msgstr "Tedaviler ve fiyatlar"
 
-#: templates/clinics/detail.html:44
+#: templates/clinics/detail.html:45
 msgid "Stay"
 msgstr "Kalış"
 
-#: templates/clinics/detail.html:45 templates/seo/_clinic_offers.html:9
+#: templates/clinics/detail.html:46 templates/seo/_clinic_offers.html:9
 #: templates/treatments/detail.html:38
 #, python-format
 msgid "%(d)s days"
 msgstr "%(d)s gün"
 
-#: templates/clinics/detail.html:50
+#: templates/clinics/detail.html:51
 msgid "Dentists"
 msgstr "Diş hekimleri"
 
-#: templates/clinics/detail.html:56
+#: templates/clinics/detail.html:57
 msgid "Contact & location"
 msgstr "İletişim ve konum"
 
-#: templates/clinics/detail.html:60 templates/contact.html:16
+#: templates/clinics/detail.html:61 templates/contact.html:16
 msgid "Map"
 msgstr "Harita"
 
-#: templates/clinics/detail.html:74
+#: templates/clinics/detail.html:75
 #, python-format
 msgid "%(n)s review on dentaltourism.tr"
 msgid_plural "%(n)s reviews on dentaltourism.tr"
 msgstr[0] "dentaltourism.tr'de %(n)s yorum"
 msgstr[1] "dentaltourism.tr'de %(n)s yorum"
 
-#: templates/clinics/detail.html:77
+#: templates/clinics/detail.html:78
 msgid "All Google reviews"
 msgstr "Tüm Google yorumları"
 
-#: templates/clinics/detail.html:78
+#: templates/clinics/detail.html:79
 msgid "Review us on Google"
 msgstr "Bizi Google'da değerlendirin"
 
-#: templates/clinics/detail.html:79
+#: templates/clinics/detail.html:80
 msgid "Write a review"
 msgstr "Yorum yaz"
 
-#: templates/clinics/detail.html:83
+#: templates/clinics/detail.html:84
 msgid "Reviews on dentaltourism.tr"
 msgstr "dentaltourism.tr yorumları"
 
-#: templates/clinics/detail.html:84
+#: templates/clinics/detail.html:85
 msgid "Reviews on Google and other platforms"
 msgstr "Google ve diğer platformlardaki yorumlar"
 
-#: templates/clinics/detail.html:87
+#: templates/clinics/detail.html:88
 #, python-format
 msgid "Were you treated at %(name)s? Share your experience"
 msgstr "%(name)s kliniğinde tedavi oldunuz mu? Deneyiminizi paylaşın"
 
-#: templates/clinics/detail.html:88
+#: templates/clinics/detail.html:89
 msgid ""
 "Reviews are checked before publication. Your email address is never shown."
 msgstr ""
 "Yorumlar yayından önce kontrol edilir. E-posta adresiniz asla gösterilmez."
 
-#: templates/clinics/detail.html:98
+#: templates/clinics/detail.html:99
 msgid "Poor"
 msgstr "Kötü"
 
-#: templates/clinics/detail.html:98
+#: templates/clinics/detail.html:99
 msgid "Fair"
 msgstr "Orta"
 
-#: templates/clinics/detail.html:98
+#: templates/clinics/detail.html:99
 msgid "Good"
 msgstr "İyi"
 
-#: templates/clinics/detail.html:98
+#: templates/clinics/detail.html:99
 msgid "Very good"
 msgstr "Çok iyi"
 
-#: templates/clinics/detail.html:98
+#: templates/clinics/detail.html:99
 msgid "Excellent"
 msgstr "Mükemmel"
 
-#: templates/clinics/detail.html:101
+#: templates/clinics/detail.html:102
 msgid "Tap a star"
 msgstr "Bir yıldıza dokunun"
 
-#: templates/clinics/detail.html:106
+#: templates/clinics/detail.html:107
 msgid "Submit review"
 msgstr "Yorumu gönder"
 
@@ -1570,7 +1558,7 @@ msgstr ""
 "Reklamlarımızı ölçmek ve siteyi geliştirmek için çerez kullanıyoruz. "
 "Analitik çerezleri kabul edebilir veya reddedebilirsiniz."
 
-#: templates/components/consent.html:3 templates/components/footer.html:50
+#: templates/components/consent.html:3 templates/components/footer.html:52
 msgid "Privacy policy"
 msgstr "Gizlilik politikası"
 
@@ -1642,7 +1630,7 @@ msgstr ""
 "Bir fotoğraf ya da röntgen gönderin. Hekim vakanızı bizzat inceler ve hangi "
 "seçeneğin en uzun ömürlü olduğunu — ve nedenini — açıklar."
 
-#: templates/components/cta.html:16 templates/home/sections/hero.html:86
+#: templates/components/cta.html:16 templates/home/sections/hero.html:88
 msgid "Check this week's availability"
 msgstr "Bu haftaki uygun randevulara bakın"
 
@@ -1664,7 +1652,7 @@ msgstr ""
 "Bize bir fotoğraf veya röntgen gönderin. Hekimimiz dürüst bir tedavi planı "
 "ve sabit fiyatla yanıt verir."
 
-#: templates/components/cta.html:25
+#: templates/components/cta.html:26
 msgid "Contact form"
 msgstr "İletişim formu"
 
@@ -1672,14 +1660,14 @@ msgstr "İletişim formu"
 msgid "Frequently asked questions"
 msgstr "Sıkça sorulan sorular"
 
-#: templates/components/footer.html:7 templates/pseo/_hero.html:14
+#: templates/components/footer.html:7 templates/pseo/_hero.html:15
 msgid ""
 "No obligation · reply from the dentist, not a call centre · open 7 days a "
 "week"
 msgstr ""
 "Yükümlülük yok · çağrı merkezi değil, hekim cevaplar · haftanın 7 günü açık"
 
-#: templates/components/footer.html:17
+#: templates/components/footer.html:18
 msgid ""
 "Ethical dental treatment in Istanbul for international patients — "
 "transparent diagnosis, fixed prices, direct contact with your dentist."
@@ -1687,7 +1675,7 @@ msgstr ""
 "Yabancı hastalar için İstanbul'da etik diş tedavisi — şeffaf teşhis, sabit "
 "fiyatlar, hekiminizle doğrudan iletişim."
 
-#: templates/components/footer.html:38 templates/packages/index.html:25
+#: templates/components/footer.html:39 templates/packages/index.html:25
 #, python-format
 msgid "From %(c)s"
 msgstr "%(c)s'dan"
@@ -1720,7 +1708,7 @@ msgstr "Tedaviye göre diş paketleri"
 msgid "%(name)s package"
 msgstr "%(name)s paketi"
 
-#: templates/components/navbar.html:33 templates/packages/treatment.html:38
+#: templates/components/navbar.html:33 templates/packages/treatment.html:39
 msgid "Travelling from"
 msgstr "Nereden geliyorsunuz"
 
@@ -1791,23 +1779,23 @@ msgstr ""
 "Her fotoğraf kliniğimizin gerçek bir hastasına ait ve onayıyla paylaşıldı. "
 "Karşılaştırmak için sürükleyin."
 
-#: templates/components/results.html:14 templates/home/sections/hero.html:61
-#: templates/home/sections/hero.html:64
+#: templates/components/results.html:14 templates/home/sections/hero.html:63
+#: templates/home/sections/hero.html:66
 msgid "After"
 msgstr "Sonra"
 
-#: templates/components/results.html:15 templates/home/sections/hero.html:60
-#: templates/home/sections/hero.html:63
+#: templates/components/results.html:15 templates/home/sections/hero.html:62
+#: templates/home/sections/hero.html:65
 msgid "Before"
 msgstr "Önce"
 
-#: templates/components/results.html:16 templates/home/sections/hero.html:60
-#: templates/home/sections/hero.html:63
+#: templates/components/results.html:16 templates/home/sections/hero.html:62
+#: templates/home/sections/hero.html:65
 msgid "BEFORE"
 msgstr "ÖNCE"
 
-#: templates/components/results.html:17 templates/home/sections/hero.html:61
-#: templates/home/sections/hero.html:64
+#: templates/components/results.html:17 templates/home/sections/hero.html:63
+#: templates/home/sections/hero.html:66
 msgid "AFTER"
 msgstr "SONRA"
 
@@ -1842,10 +1830,22 @@ msgstr "İstanbul'da %(d)s gün"
 msgid "Details"
 msgstr "Detaylar"
 
-#: templates/components/videos.html:5 templates/home/sections/hero.html:109
+#: templates/components/videos.html:5 templates/home/sections/hero.html:111
 #, python-format
 msgid "%(name)s — patient video review"
 msgstr "%(name)s — hasta video yorumu"
+
+#: templates/components/wa_call.html:1
+#| msgid "Chat on WhatsApp"
+msgid "Call us on WhatsApp"
+msgstr "WhatsApp'tan arayın"
+
+#: templates/components/wa_call.html:1
+msgid ""
+"We answer calls on WhatsApp — call or message us there, voice or video."
+msgstr ""
+"Aramaları WhatsApp üzerinden yanıtlıyoruz — bize oradan sesli ya da "
+"görüntülü arayın veya mesaj yazın."
 
 #: templates/contact.html:7
 msgid "Get your free treatment plan"
@@ -1896,9 +1896,6 @@ msgid "Dental tourism agency in Turkey: Sterr Agency"
 msgstr "Türkiye'de diş turizmi acentesi: Sterr Agency"
 
 #: templates/guides/detail.html:17
-#| msgid ""
-#| "For travel planning, transfers and accommodation we work with our partner "
-#| "agency. Medical decisions always stay with the dentist."
 msgid ""
 "We focus on your treatment and work together with our partner agency. "
 "Medical decisions always stay with the dentist."
@@ -1947,10 +1944,10 @@ msgstr "Daha hızlı yanıt için hekime doğrudan yazın:"
 msgid "Very affordable · fixed written quote"
 msgstr "Oldukça uygun · yazılı sabit fiyat"
 
-#: templates/home/sections/hero.html:9 templates/home/sections/hero.html:27
-#: templates/home/sections/hero.html:49 templates/home/sections/hero.html:96
-#: templates/home/sections/hero.html:133 templates/home/sections/hero.html:153
-#: templates/home/sections/hero.html:171
+#: templates/home/sections/hero.html:9 templates/home/sections/hero.html:28
+#: templates/home/sections/hero.html:51 templates/home/sections/hero.html:98
+#: templates/home/sections/hero.html:135 templates/home/sections/hero.html:155
+#: templates/home/sections/hero.html:173
 msgid "Dental tourism Turkey — Istanbul"
 msgstr "Diş turizmi Türkiye — İstanbul"
 
@@ -1970,28 +1967,28 @@ msgstr ""
 "Kendi ülkenizdeki fiyatın çok küçük bir kısmı. CE sertifikalı malzemeler, "
 "aynı teknik. Gizli maliyet yok — size verdiğimiz fiyat ödediğiniz fiyattır."
 
-#: templates/home/sections/hero.html:12 templates/home/sections/hero.html:203
+#: templates/home/sections/hero.html:12 templates/home/sections/hero.html:205
 msgid "Free assessment — WhatsApp"
 msgstr "Ücretsiz değerlendirme — WhatsApp"
 
-#: templates/home/sections/hero.html:26
+#: templates/home/sections/hero.html:27
 #, python-format
 msgid "%(years)s+ years — ethical protocol"
 msgstr "%(years)s+ yıl — etik protokol"
 
-#: templates/home/sections/hero.html:26
+#: templates/home/sections/hero.html:27
 msgid "Ethical protocol"
 msgstr "Etik protokol"
 
-#: templates/home/sections/hero.html:28
+#: templates/home/sections/hero.html:29
 msgid "Safe dental treatment in Istanbul —"
 msgstr "İstanbul'da güvenli diş tedavisi —"
 
-#: templates/home/sections/hero.html:28
+#: templates/home/sections/hero.html:29
 msgid "and you will feel it."
 msgstr "ve bunu hissedeceksiniz."
 
-#: templates/home/sections/hero.html:29
+#: templates/home/sections/hero.html:30
 msgid ""
 "The most valuable thing experience has taught us: good medicine means "
 "knowing when to say no. No unnecessary procedures. Transparent diagnosis. "
@@ -2000,43 +1997,43 @@ msgstr ""
 "Deneyimin bize öğrettiği en değerli şey: iyi hekimlik, ne zaman hayır "
 "diyeceğini bilmektir. Gereksiz işlem yok. Şeffaf teşhis. Sabit fiyat."
 
-#: templates/home/sections/hero.html:31 templates/home/sections/hero.html:196
+#: templates/home/sections/hero.html:32 templates/home/sections/hero.html:198
 msgid "No unnecessary treatment"
 msgstr "Gereksiz tedavi yok"
 
-#: templates/home/sections/hero.html:31
+#: templates/home/sections/hero.html:32
 msgid "Saving your natural tooth always comes first"
 msgstr "Doğal dişinizi korumak her zaman önce gelir"
 
-#: templates/home/sections/hero.html:32
+#: templates/home/sections/hero.html:33
 msgid "What we quote is what you pay"
 msgstr "Ne teklif edersek onu ödersiniz"
 
-#: templates/home/sections/hero.html:33
+#: templates/home/sections/hero.html:34
 msgid "One dentist, full responsibility"
 msgstr "Tek hekim, tam sorumluluk"
 
-#: templates/home/sections/hero.html:33
+#: templates/home/sections/hero.html:34
 msgid "The same dentist from consultation to aftercare"
 msgstr "Muayeneden tedavi sonrasına kadar aynı hekim"
 
-#: templates/home/sections/hero.html:36
+#: templates/home/sections/hero.html:37
 msgid "Ask your question"
 msgstr "Sorunuzu sorun"
 
-#: templates/home/sections/hero.html:48
+#: templates/home/sections/hero.html:50
 msgid "Minimally invasive — natural results"
 msgstr "Minimal invaziv — doğal sonuçlar"
 
-#: templates/home/sections/hero.html:50
+#: templates/home/sections/hero.html:52
 msgid "Smile design in Istanbul —"
 msgstr "İstanbul'da gülüş tasarımı —"
 
-#: templates/home/sections/hero.html:50
+#: templates/home/sections/hero.html:52
 msgid "smile like yourself again."
 msgstr "yeniden kendiniz gibi gülümseyin."
 
-#: templates/home/sections/hero.html:51
+#: templates/home/sections/hero.html:53
 msgid ""
 "A natural smile that is truly yours, with as little tooth preparation as "
 "possible. Our goal is not only a beautiful result, but a healthy and lasting"
@@ -2045,31 +2042,31 @@ msgstr ""
 "Mümkün olduğunca az diş aşındırmayla, gerçekten size ait doğal bir gülüş. "
 "Hedefimiz sadece güzel değil, sağlıklı ve kalıcı bir sonuç."
 
-#: templates/home/sections/hero.html:53
+#: templates/home/sections/hero.html:55
 msgid "Ask about smile design"
 msgstr "Gülüş tasarımını sorun"
 
-#: templates/home/sections/hero.html:54
+#: templates/home/sections/hero.html:56
 msgid "Before / after"
 msgstr "Önce / sonra"
 
-#: templates/home/sections/hero.html:58
+#: templates/home/sections/hero.html:60
 msgid "Before and after results"
 msgstr "Önce ve sonra sonuçları"
 
-#: templates/home/sections/hero.html:73
+#: templates/home/sections/hero.html:75
 msgid "Limited appointments this month"
 msgstr "Bu ay sınırlı randevu"
 
-#: templates/home/sections/hero.html:74
+#: templates/home/sections/hero.html:76
 msgid "A new smile in Istanbul —"
 msgstr "İstanbul'da yeni bir gülüş —"
 
-#: templates/home/sections/hero.html:74
+#: templates/home/sections/hero.html:76
 msgid "in about a week."
 msgstr "yaklaşık bir haftada."
 
-#: templates/home/sections/hero.html:75
+#: templates/home/sections/hero.html:77
 msgid ""
 "Wedding, holiday or job interview? Arrive on Monday, fly home smiling on "
 "Friday — for crowns, veneers and many other treatments."
@@ -2077,52 +2074,52 @@ msgstr ""
 "Düğün, tatil ya da iş görüşmesi mi? Pazartesi gelin, cuma gülümseyerek dönün"
 " — kaplama, lamina ve birçok tedavi için."
 
-#: templates/home/sections/hero.html:76
+#: templates/home/sections/hero.html:78
 msgid "Treatment timeline"
 msgstr "Tedavi takvimi"
 
-#: templates/home/sections/hero.html:77
+#: templates/home/sections/hero.html:79
 msgid "Mon"
 msgstr "Pzt"
 
-#: templates/home/sections/hero.html:77
+#: templates/home/sections/hero.html:79
 msgid "Arrival & exam"
 msgstr "Varış ve muayene"
 
-#: templates/home/sections/hero.html:79
+#: templates/home/sections/hero.html:81
 msgid "Tue"
 msgstr "Sal"
 
-#: templates/home/sections/hero.html:79
+#: templates/home/sections/hero.html:81
 msgid "Preparation"
 msgstr "Hazırlık"
 
-#: templates/home/sections/hero.html:81
+#: templates/home/sections/hero.html:83
 msgid "Wed–Thu"
 msgstr "Çar–Per"
 
-#: templates/home/sections/hero.html:83
+#: templates/home/sections/hero.html:85
 msgid "Fri"
 msgstr "Cum"
 
-#: templates/home/sections/hero.html:83
+#: templates/home/sections/hero.html:85
 msgid "Final fitting — fly home"
 msgstr "Son prova — dönüş uçuşu"
 
-#: templates/home/sections/hero.html:95
+#: templates/home/sections/hero.html:97
 #, python-format
 msgid "%(n)s+ patients"
 msgstr "%(n)s+ hasta"
 
-#: templates/home/sections/hero.html:97
+#: templates/home/sections/hero.html:99
 msgid "Dental tourism in Istanbul —"
 msgstr "İstanbul'da diş turizmi —"
 
-#: templates/home/sections/hero.html:97
+#: templates/home/sections/hero.html:99
 msgid "trusted by thousands."
 msgstr "binlerce kişi bize güveniyor."
 
-#: templates/home/sections/hero.html:98
+#: templates/home/sections/hero.html:100
 msgid ""
 "Don't trust us blindly — watch our patients' real stories first. Ask "
 "anything. No pressure, no rush."
@@ -2130,27 +2127,27 @@ msgstr ""
 "Bize körü körüne güvenmeyin — önce hastalarımızın gerçek hikayelerini "
 "izleyin. Her şeyi sorun. Baskı yok, acele yok."
 
-#: templates/home/sections/hero.html:100
+#: templates/home/sections/hero.html:102
 msgid "See patient reviews"
 msgstr "Hasta yorumlarını gör"
 
-#: templates/home/sections/hero.html:103
+#: templates/home/sections/hero.html:105
 msgid "No commitment. Just answers."
 msgstr "Yükümlülük yok. Sadece yanıtlar."
 
-#: templates/home/sections/hero.html:120
+#: templates/home/sections/hero.html:122
 msgid "Private clinic"
 msgstr "Özel klinik"
 
-#: templates/home/sections/hero.html:121
+#: templates/home/sections/hero.html:123
 msgid "Premium dental clinic in Istanbul —"
 msgstr "İstanbul'da premium diş kliniği —"
 
-#: templates/home/sections/hero.html:121
+#: templates/home/sections/hero.html:123
 msgid "dentistry as an art."
 msgstr "sanat olarak diş hekimliği."
 
-#: templates/home/sections/hero.html:122
+#: templates/home/sections/hero.html:124
 msgid ""
 "Decades of experience and aesthetic precision. Only what you need — nothing "
 "more, nothing less."
@@ -2158,19 +2155,19 @@ msgstr ""
 "Onlarca yıllık deneyim ve estetik hassasiyet. Sadece ihtiyacınız olan — ne "
 "fazlası, ne eksiği."
 
-#: templates/home/sections/hero.html:132
+#: templates/home/sections/hero.html:134
 msgid "Personalised dentistry"
 msgstr "Kişiye özel diş hekimliği"
 
-#: templates/home/sections/hero.html:134
+#: templates/home/sections/hero.html:136
 msgid "Quality dental treatment in Istanbul —"
 msgstr "İstanbul'da kaliteli diş tedavisi —"
 
-#: templates/home/sections/hero.html:134
+#: templates/home/sections/hero.html:136
 msgid "planned only for you."
 msgstr "yalnızca sizin için planlanır."
 
-#: templates/home/sections/hero.html:135
+#: templates/home/sections/hero.html:137
 msgid ""
 "Every plan starts with a careful examination and a digital smile design. We "
 "save healthy teeth first, use premium materials, and one experienced dentist"
@@ -2180,39 +2177,39 @@ msgstr ""
 "sağlıklı dişleri koruruz, premium malzeme kullanırız ve her adımı aynı "
 "deneyimli hekim yapar."
 
-#: templates/home/sections/hero.html:136
+#: templates/home/sections/hero.html:138
 msgid "Digital smile design"
 msgstr "Dijital gülüş tasarımı"
 
-#: templates/home/sections/hero.html:136
+#: templates/home/sections/hero.html:138
 msgid "Minimal preparation"
 msgstr "Minimum aşındırma"
 
-#: templates/home/sections/hero.html:136
+#: templates/home/sections/hero.html:138
 msgid "One dentist, start to finish"
 msgstr "Başından sonuna tek hekim"
 
-#: templates/home/sections/hero.html:139
+#: templates/home/sections/hero.html:141
 msgid "Meet your dentist"
 msgstr "Hekiminizle tanışın"
 
-#: templates/home/sections/hero.html:148
+#: templates/home/sections/hero.html:150
 msgid "Appointments available this week"
 msgstr "Bu hafta uygun randevular var"
 
-#: templates/home/sections/hero.html:152
+#: templates/home/sections/hero.html:154
 msgid "We're ready when you are"
 msgstr "Siz hazır olduğunuzda biz hazırız"
 
-#: templates/home/sections/hero.html:154
+#: templates/home/sections/hero.html:156
 msgid "Book your dental treatment in Istanbul —"
 msgstr "İstanbul'da diş tedavinizi planlayın —"
 
-#: templates/home/sections/hero.html:154
+#: templates/home/sections/hero.html:156
 msgid "are you ready?"
 msgstr "hazır mısınız?"
 
-#: templates/home/sections/hero.html:155
+#: templates/home/sections/hero.html:157
 msgid ""
 "Free evaluation, personal treatment plan, fixed price. Reply within 24 "
 "hours."
@@ -2220,23 +2217,23 @@ msgstr ""
 "Ücretsiz değerlendirme, kişisel tedavi planı, sabit fiyat. 24 saat içinde "
 "yanıt."
 
-#: templates/home/sections/hero.html:158
+#: templates/home/sections/hero.html:160
 msgid "Book an appointment"
 msgstr "Randevu al"
 
-#: templates/home/sections/hero.html:170
+#: templates/home/sections/hero.html:172
 msgid "Evidence-based dentistry"
 msgstr "Kanıta dayalı diş hekimliği"
 
-#: templates/home/sections/hero.html:172
+#: templates/home/sections/hero.html:174
 msgid "Is dental treatment in Turkey safe?"
 msgstr "Türkiye'de diş tedavisi güvenli mi?"
 
-#: templates/home/sections/hero.html:172
+#: templates/home/sections/hero.html:174
 msgid "We answer everything."
 msgstr "Her şeyi yanıtlıyoruz."
 
-#: templates/home/sections/hero.html:173
+#: templates/home/sections/hero.html:175
 msgid ""
 "Materials, qualifications, what happens if something goes wrong — you get a "
 "transparent answer to every question."
@@ -2244,23 +2241,23 @@ msgstr ""
 "Malzemeler, yetkinlikler, bir sorun çıkarsa ne olur — her soruya şeffaf bir "
 "yanıt alırsınız."
 
-#: templates/home/sections/hero.html:181
+#: templates/home/sections/hero.html:183
 msgid "What patients actually say"
 msgstr "Hastalar gerçekten ne diyor"
 
-#: templates/home/sections/hero.html:192
+#: templates/home/sections/hero.html:194
 msgid "Dental tourism Turkey"
 msgstr "Diş turizmi Türkiye"
 
-#: templates/home/sections/hero.html:193
+#: templates/home/sections/hero.html:195
 msgid "Dental treatment in Istanbul —"
 msgstr "İstanbul'da diş tedavisi —"
 
-#: templates/home/sections/hero.html:193
+#: templates/home/sections/hero.html:195
 msgid "only what your teeth actually need."
 msgstr "sadece dişlerinizin gerçekten ihtiyacı olan."
 
-#: templates/home/sections/hero.html:194
+#: templates/home/sections/hero.html:196
 msgid ""
 "Good medicine means knowing when to say no. Ethical protocol, transparent "
 "diagnosis and one dentist responsible for your care — with direct WhatsApp "
@@ -2270,11 +2267,11 @@ msgstr ""
 "teşhis ve tedavinizden sorumlu tek bir hekim — çağrı merkezi değil, doğrudan"
 " WhatsApp iletişimi."
 
-#: templates/home/sections/hero.html:197
+#: templates/home/sections/hero.html:199
 msgid "Transparent diagnosis"
 msgstr "Şeffaf teşhis"
 
-#: templates/home/sections/hero.html:199
+#: templates/home/sections/hero.html:201
 msgid "One dentist — full responsibility"
 msgstr "Tek hekim — tam sorumluluk"
 
@@ -2308,8 +2305,6 @@ msgid "Travel to Istanbul"
 msgstr "İstanbul'a gelin"
 
 #: templates/home/sections/how.html:10
-#| msgid ""
-#| "We schedule appointments around your flights and help with logistics."
 msgid "We schedule your appointments around your travel dates."
 msgstr "Randevularınızı seyahat tarihlerinize göre planlıyoruz."
 
@@ -2376,7 +2371,6 @@ msgid "What a personalised dental package includes"
 msgstr "Kişiye özel diş paketine neler dahil"
 
 #: templates/packages/index.html:11
-#| msgid "What determines the price of your treatment"
 msgid "Your budget goes into your treatment"
 msgstr "Bütçeniz tedavinize gider"
 
@@ -2564,13 +2558,13 @@ msgstr "%(name)s hakkında her şey"
 msgid "%(name)s cost in Turkey"
 msgstr "%(name)s fiyatları"
 
-#: templates/packages/treatment.html:45 templates/seo/treatment_city.html:29
+#: templates/packages/treatment.html:46 templates/seo/treatment_city.html:29
 #: templates/treatments/detail.html:54
 msgid "What patients say"
 msgstr "Hastalar ne diyor"
 
-#: templates/packages/treatment.html:46 templates/seo/treatment_city.html:31
-#: templates/seo/treatment_price.html:36 templates/treatments/detail.html:65
+#: templates/packages/treatment.html:47 templates/seo/treatment_city.html:31
+#: templates/seo/treatment_price.html:37 templates/treatments/detail.html:65
 msgid "Related treatments"
 msgstr "İlgili tedaviler"
 
@@ -2611,7 +2605,7 @@ msgstr ""
 "KVKK ve GDPR kapsamında, bizimle iletişime geçerek dilediğiniz zaman "
 "verilerinize erişim, düzeltme veya silme talep edebilirsiniz."
 
-#: templates/pseo/_hero.html:16
+#: templates/pseo/_hero.html:17
 msgid "Real photo from our clinic in Şişli, Istanbul"
 msgstr "Şişli, İstanbul'daki kliniğimizden gerçek fotoğraf"
 

@@ -629,3 +629,6 @@
 628|Sin extras de paquete: invertimos en tu plan de tratamiento, y también hay opciones más económicas.
 629|Tu presupuesto va a tu tratamiento, no a extras
 630|Tu presupuesto va a lo que importa: tu tratamiento. También hay opciones más económicas; solo pregunta.
+631|Hola, me gustaría hablar con ustedes por una llamada de WhatsApp.
+632|Llámanos por WhatsApp
+633|Atendemos las llamadas por WhatsApp — llámanos o escríbenos allí, por voz o videollamada.

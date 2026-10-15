@@ -294,3 +294,11 @@ a.card:hover, .card.value:hover, .team-card:hover { transform: translateY(-4px);
 .results-cta { text-align: center; margin-top: 2rem; }
 [dir="rtl"] .ba-tag-b { left: auto; right: .8rem; } [dir="rtl"] .ba-tag-a { right: auto; left: .8rem; }
 @media (max-width: 760px) { .ba-grid { grid-template-columns: 1fr; } .ba-knob { width: 38px; height: 38px; } }
+
+/* WhatsApp'tan arama: normal telefon aramalarına cevap verilemediği için telefonun yanında */
+.wa-call-note { flex-basis: 100%; width: 100%; margin: .35rem 0 0; font-size: .8rem; color: var(--tx-muted); }
+.btn-row, .h-cta-row { flex-wrap: wrap; }
+.h-btn-phone.h-btn-wacall { color: #16a34a; font-weight: 700; }
+.h-btn-phone.h-btn-wacall:hover { color: #15803d; }
+.wa-call-link { color: #25d366; font-weight: 600; text-decoration: none; }
+.wa-call-link:hover { text-decoration: underline; }

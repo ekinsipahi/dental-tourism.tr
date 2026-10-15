@@ -26,6 +26,7 @@
       <p class="muted">{{ hook_text }}</p>
       {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my personal plan" %}</a>{% endif %}
       {% if clinic.phone %}<a class="btn btn-outline" style="width:100%;margin-top:.6rem" href="{{ tel_url }}" data-track="phone">📞 {{ clinic.phone }}</a>{% endif %}
+      {% include "components/wa_call.html" with style="width:100%;margin-top:.6rem" note=1 %}
     </div>
     {% if gallery %}<img src="{{ gallery.0.src }}" alt="{{ gallery.0.alt }}" loading="lazy" style="border-radius:var(--radius);margin-top:1rem" width="400" height="300">{% endif %}
   </aside>

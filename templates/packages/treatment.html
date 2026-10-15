@@ -34,6 +34,7 @@
       <h2>{{ hook_title }}</h2><p class="muted">{{ hook_text }}</p>
       {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my personal plan" %}</a>{% endif %}
       {% if clinic.phone %}<a class="btn btn-outline" style="width:100%;margin-top:.6rem" href="{{ tel_url }}" data-track="phone">📞 {{ clinic.phone }}</a>{% endif %}
+      {% include "components/wa_call.html" with style="width:100%;margin-top:.6rem" note=1 %}
     </div>
     {% if origins %}<div class="side-cta"><h2>{% trans "Travelling from" %}</h2><ul class="facts">{% for o in origins %}<li><a href="{{ o.url }}">{{ o.code|flag }} {{ o.name }}</a></li>{% endfor %}</ul></div>{% endif %}
   </aside>

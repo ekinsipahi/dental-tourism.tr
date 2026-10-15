@@ -9,6 +9,7 @@
       <div class="btn-row">
         {% if wa_url %}<a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} WhatsApp</a>{% endif %}
         {% if clinic.phone %}<a href="tel:{{ clinic.phone|cut:' ' }}" class="btn btn-outline" data-track="phone">📞 {{ clinic.phone }}</a>{% endif %}
+        {% include "components/wa_call.html" with note=1 %}
       </div>
     </div>
     <div class="footer-grid">
@@ -43,6 +44,7 @@
         {% if clinic %}<address style="font-style:normal"><ul>
           {% if wa_url %}<li><a href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">💬 WhatsApp</a></li>{% endif %}
           <li><a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone">📞 {{ clinic.phone }}</a></li>
+          {% if wa_call_url %}<li>{% include "components/wa_call.html" with cls="wa-call-link" %}</li>{% endif %}
           {% if clinic.email %}<li><a href="mailto:{{ clinic.email }}">✉️ {{ clinic.email }}</a></li>{% endif %}
           <li class="muted">📍 {{ clinic.address }}</li>
           <li><a href="{% url 'core:about' %}">{% trans "About us" %}</a></li>

@@ -22,6 +22,7 @@
   <div class="btn-row">
     {% if wa_url %}<a href="{{ wa_url }}" class="btn btn-lg" style="background:#fff;color:#065f46" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=18 %} WhatsApp</a>{% endif %}
     {% if clinic.phone %}<a href="tel:{{ clinic.phone|cut:' ' }}" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.5)" data-track="phone">📞 {% trans "Call us" %}</a>{% endif %}
+    {% include "components/wa_call.html" with cls="btn btn-lg" style="background:#fff;color:#065f46" note=1 %}
     <a href="{% url 'core:contact' %}" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.5)" data-track="cta">{% trans "Contact form" %}</a>
   </div>
 </div>

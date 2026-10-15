@@ -12,7 +12,7 @@
   <aside class="sticky-side">
     {% if wa_url %}<div class="side-cta"><h2>💬 WhatsApp</h2><p class="muted">{% trans "Fastest reply — usually within 30 minutes during clinic hours." %}</p><a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Chat on WhatsApp" %}</a></div>{% endif %}
     {% if clinic %}<div class="side-cta"><h2>📍 {% trans "Clinic" %}</h2>
-      <address style="font-style:normal" class="muted">{{ clinic.name }}<br>{{ clinic.address }}<br><a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone">{{ clinic.phone }}</a>{% if clinic.email %}<br><a href="mailto:{{ clinic.email }}">{{ clinic.email }}</a>{% endif %}</address>
+      <address style="font-style:normal" class="muted">{{ clinic.name }}<br>{{ clinic.address }}<br><a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone">{{ clinic.phone }}</a><br>{% include "components/wa_call.html" with cls="wa-call-link" note=1 %}{% if clinic.email %}<br><a href="mailto:{{ clinic.email }}">{{ clinic.email }}</a>{% endif %}</address>
       {% if clinic.maps_embed_url %}<iframe src="{{ clinic.maps_embed_url }}" title="{% trans 'Map' %}" style="width:100%;height:220px;border:0;border-radius:10px;margin-top:1rem" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>{% endif %}
     </div>{% endif %}
     <div class="side-cta"><h2>✅ {% trans "Why is it free?" %}</h2><ul class="check-list"><li>{% trans "No commitment required" %}</li><li>{% trans "Treatment plan and fixed price" %}</li><li>{% trans "Reply within 24 hours" %}</li></ul></div>

@@ -6,5 +6,6 @@
   <div class="btn-row">
     {% if wa_url %}<a class="btn btn-wa btn-sm" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=15 %} {% trans "Ask for my price on WhatsApp" %}</a>{% endif %}
     {% if clinic.phone %}<a class="btn btn-outline btn-sm" href="{{ tel_url }}" data-track="phone">📞 {{ clinic.phone }}</a>{% endif %}
+    {% include "components/wa_call.html" with cls="btn btn-wa btn-sm" note=1 %}
   </div>
 </div>

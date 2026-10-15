@@ -629,3 +629,6 @@
 628|Pas d’extras de forfait — nous investissons plutôt dans votre plan de traitement, et des options plus abordables existent aussi.
 629|Votre budget va dans votre traitement, pas dans des extras
 630|Votre budget va là où il compte — dans votre traitement. Des options plus abordables existent aussi ; il suffit de demander.
+631|Bonjour, je souhaiterais vous parler par appel WhatsApp.
+632|Appelez-nous sur WhatsApp
+633|Nous répondons aux appels sur WhatsApp — appelez-nous ou écrivez-nous là-bas, en audio ou en vidéo.

@@ -629,3 +629,6 @@
 628|Inga paketextras — i stället satsar vi på din behandlingsplan, och det finns även mer prisvärda alternativ.
 629|Din budget går till din behandling, inte till extras
 630|Din budget går dit den gör nytta — till din behandling. Det finns även mer prisvärda alternativ; fråga bara.
+631|Hej, jag skulle vilja prata med er via ett WhatsApp-samtal.
+632|Ring oss på WhatsApp
+633|Vi svarar på samtal via WhatsApp — ring oss där (röst eller video) eller skicka ett meddelande.

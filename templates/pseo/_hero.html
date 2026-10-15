@@ -10,6 +10,7 @@
     <div class="btn-row" style="margin-top:1.4rem">
       {% if wa_url %}<a class="btn btn-wa" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} {% trans "Send a photo — free assessment" %}</a>{% endif %}
       {% if clinic.phone %}<a class="btn btn-outline" href="{{ tel_url }}" data-track="phone">📞 {% trans "Call us" %} {{ clinic.phone }}</a>{% endif %}
+      {% include "components/wa_call.html" with note=1 %}
     </div>
     <p class="faint pseo-micro">{% trans "No obligation · reply from the dentist, not a call centre · open 7 days a week" %}</p>
   </div>

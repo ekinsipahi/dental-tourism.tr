@@ -629,3 +629,6 @@
 628|Geen pakket-extra's — in plaats daarvan investeren we in uw behandelplan, en er zijn ook voordeligere opties.
 629|Uw budget gaat naar uw behandeling, niet naar extra's
 630|Uw budget gaat naar wat telt — uw behandeling. Er zijn ook voordeligere opties; vraag het gerust.
+631|Hallo, ik wil u graag spreken via een WhatsApp-gesprek.
+632|Bel ons via WhatsApp
+633|We beantwoorden oproepen via WhatsApp — bel ons daar (spraak of video) of stuur een bericht.

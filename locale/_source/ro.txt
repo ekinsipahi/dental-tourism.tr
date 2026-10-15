@@ -629,3 +629,6 @@
 628|Fără extra-uri în pachet — în schimb investim în planul tău de tratament, și există și opțiuni mai accesibile.
 629|Bugetul tău merge în tratament, nu în extra-uri
 630|Bugetul tău merge acolo unde contează — în tratament. Există și opțiuni mai accesibile; întreabă-ne.
+631|Bună ziua, aș dori să vorbim printr-un apel WhatsApp.
+632|Sună-ne pe WhatsApp
+633|Răspundem la apeluri pe WhatsApp — sună-ne acolo (audio sau video) sau scrie-ne un mesaj.

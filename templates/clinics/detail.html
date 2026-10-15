@@ -15,6 +15,7 @@
   <div class="btn-row" style="margin-top:1.5rem">
     <a class="btn btn-wa" href="{{ c.whatsapp_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} WhatsApp</a>
     <a class="btn btn-outline" href="tel:{{ c.phone|cut:' ' }}" data-track="phone">📞 {{ c.phone }}</a>
+    {% if c.is_primary %}{% include "components/wa_call.html" with note=1 %}{% endif %}
   </div>
 </div></header>
 

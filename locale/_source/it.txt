@@ -629,3 +629,6 @@
 628|Nessun extra nel pacchetto — investiamo invece nel tuo piano di cura, e ci sono anche opzioni più economiche.
 629|Il tuo budget va nel trattamento, non negli extra
 630|Il tuo budget va dove conta davvero — nel tuo trattamento. Ci sono anche opzioni più economiche; basta chiedere.
+631|Salve, vorrei parlarvi con una chiamata WhatsApp.
+632|Chiamaci su WhatsApp
+633|Rispondiamo alle chiamate su WhatsApp — chiamaci o scrivici lì, in voce o in video.

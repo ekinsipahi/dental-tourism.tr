@@ -96,6 +96,9 @@ def site_context(request):
         clinic = None
     whatsapp = clinic.whatsapp if clinic else ""
     wa_url = f"https://wa.me/{whatsapp}?text={build_wa_message(request, lang, clinic)}" if whatsapp else ""
+    # Normal telefon aramalarına cevap verilemiyor → aramalar WhatsApp üzerinden (sesli/görüntülü)
+    wa_call_url = (f"https://wa.me/{whatsapp}?text="
+                   + urllib.parse.quote(str(_("Hello, I would like to talk to you on a WhatsApp call.")))) if whatsapp else ""
 
     try:
         nav_treatments = _nav_treatments(lang)
@@ -119,6 +122,7 @@ def site_context(request):
         "lang_dir": meta["dir"],
         "clinic": clinic,
         "wa_url": wa_url,
+        "wa_call_url": wa_call_url,
         "nav_treatments": nav_treatments,
         "nav": nav,
         "is_bot": getattr(request, "is_bot", False),

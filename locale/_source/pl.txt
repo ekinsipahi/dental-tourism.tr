@@ -629,3 +629,6 @@
 628|Bez dodatków w pakiecie — zamiast tego inwestujemy w Twój plan leczenia, a dostępne są też tańsze opcje.
 629|Twój budżet idzie na leczenie, nie na dodatki
 630|Twój budżet idzie tam, gdzie ma znaczenie — na leczenie. Dostępne są też tańsze opcje; wystarczy zapytać.
+631|Dzień dobry, chciałbym/chciałabym porozmawiać przez połączenie WhatsApp.
+632|Zadzwoń do nas przez WhatsApp
+633|Połączenia odbieramy przez WhatsApp — zadzwoń tam (głosowo lub wideo) albo napisz wiadomość.

@@ -629,3 +629,6 @@
 628|Paketdə əlavələr yoxdur — bunun əvəzinə müalicə planınıza investisiya edirik, daha sərfəli seçimlər də mövcuddur.
 629|Büdcəniz əlavələrə deyil, müalicənizə gedir
 630|Büdcəniz əsl vacib olana — müalicənizə gedir. Daha sərfəli seçimlər də mövcuddur; sadəcə soruşun.
+631|Salam, sizinlə WhatsApp zəngi ilə danışmaq istəyirəm.
+632|WhatsApp-dan zəng edin
+633|Zənglərə WhatsApp üzərindən cavab veririk — bizə oradan səsli və ya görüntülü zəng edin, ya da yazın.
