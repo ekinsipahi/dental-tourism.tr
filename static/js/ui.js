@@ -36,7 +36,9 @@
   function countUp(el) {
     var target = parseFloat(el.getAttribute("data-count"));
     if (isNaN(target)) return;
-    var dec = parseInt(el.getAttribute("data-decimals") || "0", 10);
+    var raw = String(el.getAttribute("data-count")), attr = el.getAttribute("data-decimals");
+    // Ondalık sayısı verilmediyse değerden anla: 4.9 → 1 basamak (eskiden "4" görünüyordu)
+    var dec = attr !== null ? parseInt(attr, 10) : ((raw.split(".")[1] || "").replace(/0+$/, "").length);
     var fmt = function (v) { return v.toLocaleString(document.documentElement.lang || undefined, { minimumFractionDigits: dec, maximumFractionDigits: dec }); };
     if (reduce) { el.textContent = fmt(target); return; }
     var start = null, dur = 1400;
