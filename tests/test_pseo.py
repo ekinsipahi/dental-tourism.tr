@@ -62,11 +62,29 @@ class PseoTests(SeededTestCase):
             self.assertEqual(r.status_code, 200, url)
             self.assertIsNone(MONEY.search(_visible(r.content.decode())), url)
 
+    def test_area_pages_in_every_language(self):
+        from apps.seo.area_data import AREAS
+
+        for lang in LANGUAGE_META:
+            with translation.override(lang):
+                urls = [reverse("areas:index")] + [reverse("areas:detail", kwargs={"area": k}) for k in AREAS]
+            for url in urls:
+                r = self.client.get(url)
+                self.assertEqual(r.status_code, 200, url)
+                html = r.content.decode()
+                self.assertEqual(html.count("<h1"), 1, url)
+                self.assertIsNone(MONEY.search(_visible(html)), url)
+                self.assertIn("https://cdn.example.com/real.jpg", html)  # her sayfada gerçek fotoğraf
+        with translation.override("tr"):
+            self.assertEqual(reverse("areas:detail", kwargs={"area": "nisantasi"}), "/tr/dis-klinigi/nisantasi/")
+        self.assertIn("Taksim", self.client.get("/dental-clinic/taksim/").content.decode())
+        self.assertEqual(self.client.get("/dental-clinic/kadikoy/").status_code, 404)
+
     def test_single_sitemap_contains_every_section(self):
         xml = self.client.get("/sitemap.xml").content.decode()
         self.assertIn("<urlset", xml)
         self.assertNotIn("<sitemapindex", xml)                    # indeks değil, tek sitemap
-        for path in ("/guide/", "/packages/", "/prices/", "/dental-holidays-from/", "/treatments/"):
+        for path in ("/guide/", "/packages/", "/prices/", "/dental-holidays-from/", "/treatments/", "/dental-clinic/taksim/"):
             self.assertIn(path, xml)
         self.assertGreaterEqual(xml.count("<url>"), len(TOPICS) * len(LANGUAGE_META))
         self.assertIn('hreflang="x-default"', xml)

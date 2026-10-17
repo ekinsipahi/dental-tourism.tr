@@ -46,10 +46,12 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument("--overwrite", action="store_true")
+        parser.add_argument("--keys", default="", help="yalnızca bu konular (virgülle) — ör. --overwrite --keys dental-clinic-istanbul")
         parser.add_argument("--report", action="store_true")
         parser.add_argument("--no-keywords", action="store_true")
 
-    def handle(self, overwrite=False, report=False, no_keywords=False, **o):
+    def handle(self, overwrite=False, report=False, no_keywords=False, keys="", **o):
+        only = {k.strip() for k in keys.split(",") if k.strip()}
         content = {}
         for lang in LANGUAGE_META:
             f = CONTENT_DIR / f"{lang}.json"
@@ -63,6 +65,8 @@ class Command(BaseCommand):
         with transaction.atomic():
             n_new = n_tr = 0
             for key, data in TOPICS.items():
+                if only and key not in only:
+                    continue
                 en = data["en"]
                 topic = SeoTopic.objects.filter(key=key).first()
                 fields = {"group": data["group"], "kind": data["kind"], "order": data["order"],

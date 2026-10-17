@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+{% include "pseo/_hero.html" %}
+
+<section class="section"><div class="wrap">
+  <div class="grid grid-4 area-grid">{% for a in areas %}
+    <a class="card" href="{{ a.url }}"><h3>📍 {{ a.name }}</h3><p class="faint">{% blocktrans with km=a.km %}about {{ km }} km{% endblocktrans %}</p></a>{% endfor %}
+  </div>
+  <p class="faint" style="margin-top:1rem">{% blocktrans with km=station_km %}Nearest metro station: Şişli-Mecidiyeköy (M2, M7), about {{ km }} km from the clinic.{% endblocktrans %}
+    {% trans "From Istanbul Airport: M11 metro to Gayrettepe, then one stop on the M2 to Şişli-Mecidiyeköy." %}</p>
+</div></section>
+
+<section class="section section-alt"><div class="wrap prose">
+  <h2>{% trans "A family clinic with an ethical approach" %}</h2>
+  <p>{% trans "Dr. Dt. Devrim Biriken Sipahi has worked as a dentist in Istanbul for more than 35 years. Her son, Dt. Ekin Sipahi, is also a dentist and works with her at the clinic. Every treatment starts with an accurate diagnosis; we recommend only what you need and keep healthy teeth healthy." %}</p>
+</div></section>
+<section class="section"><div class="wrap">
+  <h2>{% trans "Treatments at our clinic" %}</h2>
+  <div class="grid grid-4">{% for t in treatments %}<a class="card" href="{{ t.url }}"><h3>{{ t.icon }} {{ t.name }}</h3></a>{% endfor %}</div>
+</div></section>
+{% include "pseo/_proof.html" %}
+{% include "pseo/_photos.html" %}
+{% include "pseo/_links.html" %}
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

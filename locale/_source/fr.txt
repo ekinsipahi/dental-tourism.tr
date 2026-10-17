@@ -632,3 +632,40 @@
 631|Bonjour, je souhaiterais vous parler par appel WhatsApp.
 632|Appelez-nous sur WhatsApp
 633|Nous répondons aux appels sur WhatsApp — appelez-nous ou écrivez-nous là-bas, en audio ou en vidéo.
+634|cabinet-dentaire/
+635|Métro
+636|À pied : environ %(min)s minutes
+637|En taxi : environ %(min)s minutes, selon la circulation
+638|Comment venir au cabinet depuis %(area)s ?
+639|Station de métro la plus proche : Şişli-Mecidiyeköy (M2, M7), à environ %(km)s km du cabinet.
+640|Le cabinet est-il ouvert le week-end ?
+641|Oui. Notre cabinet à Şişli est ouvert 7 jours sur 7, samedi et dimanche compris.
+642|Soignez-vous les expatriés et les visiteurs séjournant à Istanbul ?
+643|Oui. Beaucoup de nos patients sont des expatriés ou des visiteurs à Istanbul. Envoyez une photo ou une radio sur WhatsApp et la dentiste vous répondra avec vos options.
+644|Combien coûte un traitement ?
+645|Cabinet dentaire près de %(area)s, Istanbul
+646|Dentiste près de %(area)s, Istanbul — cabinet familial à Şişli
+647|Vous cherchez un dentiste près de %(area)s ? Notre cabinet dentaire familial à Şişli est à environ %(km)s km. D'abord le diagnostic, uniquement le traitement nécessaire. Ouvert 7 jours sur 7.
+648|Notre cabinet dentaire familial à Şişli est à environ %(km)s km de %(area)s. Le Dr Dt. Devrim Biriken Sipahi et son fils Dt. Ekin Sipahi examinent et soignent chaque patient personnellement.
+649|Cabinet dentaire à %(area)s, Istanbul
+650|Cabinet dentaire à %(area)s, Istanbul — dentistes en famille, ouvert 7 j/7
+651|Cabinet dentaire familial à %(area)s, Istanbul. D'abord le diagnostic, uniquement le traitement nécessaire. Ouvert 7 jours sur 7 — envoyez une photo sur WhatsApp.
+652|Notre cabinet dentaire familial se trouve à %(area)s, Istanbul. Le Dr Dt. Devrim Biriken Sipahi et son fils Dt. Ekin Sipahi examinent et soignent chaque patient personnellement.
+653|Cabinet dentaire par quartier
+654|Un cabinet dentaire près de chez vous à Istanbul : Şişli, Nişantaşı, Taksim, Levent et plus
+655|Cabinet dentaire près de Şişli, Nişantaşı, Taksim, Levent et Beşiktaş — Istanbul
+656|Notre cabinet dentaire familial est à Şişli, Istanbul. Découvrez comment venir depuis Nişantaşı, Taksim, Beşiktaş, Levent, Maslak et d'autres quartiers — ouvert 7 jours sur 7.
+657|Notre cabinet dentaire familial est à Şişli, près de Nişantaşı, Mecidiyeköy et de la ligne de métro M2. Choisissez votre quartier pour voir la distance et le trajet le plus simple.
+658|Comment venir depuis %(area)s
+659|Depuis l'aéroport d'Istanbul : métro M11 jusqu'à Gayrettepe, puis une station en M2 jusqu'à Şişli-Mecidiyeköy.
+660|Itinéraire depuis %(area)s
+661|Pour les patients qui vivent, travaillent ou séjournent autour de %(places)s.
+662|Un cabinet familial à l'approche éthique
+663|Le Dr Dt. Devrim Biriken Sipahi exerce comme dentiste à Istanbul depuis plus de 35 ans. Son fils, Dt. Ekin Sipahi, est lui aussi dentiste et travaille avec elle au cabinet. Chaque traitement commence par un diagnostic précis ; nous ne recommandons que ce dont vous avez besoin et préservons les dents saines.
+664|Distance
+665|environ %(km)s km
+666|En taxi
+667|%(min)s min
+668|Soins proposés au cabinet
+669|Autres quartiers proches du cabinet
+670|Nos patients en vidéo

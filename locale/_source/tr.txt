@@ -632,3 +632,40 @@
 631|Merhaba, sizinle WhatsApp üzerinden sesli görüşmek istiyorum.
 632|WhatsApp'tan arayın
 633|Aramaları WhatsApp üzerinden yanıtlıyoruz — bize oradan sesli ya da görüntülü arayın veya mesaj yazın.
+634|dis-klinigi/
+635|Metro
+636|Yürüyerek: yaklaşık %(min)s dakika
+637|Taksiyle: trafiğe bağlı olarak yaklaşık %(min)s dakika
+638|%(area)s semtinden kliniğe nasıl gelirim?
+639|En yakın metro istasyonu: Şişli-Mecidiyeköy (M2, M7), kliniğe yaklaşık %(km)s km.
+640|Klinik hafta sonu açık mı?
+641|Evet. Şişli'deki kliniğimiz cumartesi ve pazar dahil haftanın 7 günü açık.
+642|İstanbul'da yaşayan yabancıları ve şehirdeki ziyaretçileri tedavi ediyor musunuz?
+643|Evet. Hastalarımızın önemli bir kısmı İstanbul'da yaşayan yabancılar ya da şehri ziyaret edenler. WhatsApp'tan bir fotoğraf veya röntgen gönderin, diş hekimi size seçeneklerinizi yazsın.
+644|Tedavi ne kadar tutar?
+645|%(area)s yakınında diş kliniği, İstanbul
+646|%(area)s yakınında diş hekimi, İstanbul — Şişli'de aile diş kliniği
+647|%(area)s yakınında diş hekimi mi arıyorsunuz? Şişli'deki aile diş kliniğimiz yaklaşık %(km)s km uzaklıkta. Önce teşhis, yalnızca ihtiyacınız olan tedavi. Haftanın 7 günü açık.
+648|Şişli'deki aile diş kliniğimiz %(area)s semtine yaklaşık %(km)s km uzaklıkta. Dr. Dt. Devrim Biriken Sipahi ve oğlu Dt. Ekin Sipahi her hastayı bizzat muayene eder ve tedavi eder.
+649|%(area)s Diş Kliniği, İstanbul
+650|%(area)s Diş Kliniği, İstanbul — Aile Diş Hekimleri, Haftanın 7 Günü Açık
+651|%(area)s, İstanbul'da aile diş kliniği. Önce teşhis, yalnızca ihtiyacınız olan tedavi. Haftanın 7 günü açık — WhatsApp'tan fotoğraf gönderin.
+652|Aile diş kliniğimiz %(area)s, İstanbul'da. Dr. Dt. Devrim Biriken Sipahi ve oğlu Dt. Ekin Sipahi her hastayı bizzat muayene eder ve tedavi eder.
+653|Semtlere göre diş kliniği
+654|İstanbul'da size yakın diş kliniği: Şişli, Nişantaşı, Taksim, Levent ve daha fazlası
+655|Şişli, Nişantaşı, Taksim, Levent ve Beşiktaş Yakınında Diş Kliniği — İstanbul
+656|Aile diş kliniğimiz Şişli, İstanbul'da. Nişantaşı, Taksim, Beşiktaş, Levent, Maslak ve diğer semtlerden bize nasıl ulaşacağınızı görün — haftanın 7 günü açık.
+657|Aile diş kliniğimiz Şişli'de; Nişantaşı'na, Mecidiyeköy'e ve M2 metro hattına yakın. Mesafeyi ve en kolay ulaşım yolunu görmek için semtinizi seçin.
+658|%(area)s semtinden buraya nasıl gelinir
+659|İstanbul Havalimanı'ndan: M11 metrosuyla Gayrettepe'ye, oradan M2 ile bir durak Şişli-Mecidiyeköy'e.
+660|%(area)s semtinden yol tarifi al
+661|%(places)s çevresinde yaşayan, çalışan veya konaklayan hastalar için.
+662|Etik yaklaşımlı bir aile kliniği
+663|Dr. Dt. Devrim Biriken Sipahi 35 yılı aşkın süredir İstanbul'da diş hekimliği yapıyor. Oğlu Dt. Ekin Sipahi de diş hekimi ve klinikte onunla birlikte çalışıyor. Her tedavi doğru teşhisle başlar; yalnızca ihtiyacınız olanı önerir, sağlıklı dişleri korumaya özen gösteririz.
+664|Mesafe
+665|yaklaşık %(km)s km
+666|Taksiyle
+667|%(min)s dk
+668|Kliniğimizdeki tedaviler
+669|Kliniğimize yakın diğer semtler
+670|Hastalarımız videoda

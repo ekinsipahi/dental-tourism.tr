@@ -632,3 +632,40 @@
 631|Hej, jeg vil gerne tale med jer via et WhatsApp-opkald.
 632|Ring til os på WhatsApp
 633|Vi besvarer opkald på WhatsApp — ring til os der (tale eller video) eller send en besked.
+634|tandklinik/
+635|Metro
+636|Til fods: ca. %(min)s minutter
+637|Med taxa: ca. %(min)s minutter afhængigt af trafikken
+638|Hvordan kommer jeg til klinikken fra %(area)s?
+639|Nærmeste metrostation: Şişli-Mecidiyeköy (M2, M7), ca. %(km)s km fra klinikken.
+640|Har klinikken åbent i weekenden?
+641|Ja. Vores klinik i Şişli har åbent alle 7 dage om ugen, også lørdag og søndag.
+642|Behandler I expats og besøgende, der bor i Istanbul?
+643|Ja. Mange af vores patienter er expats eller besøgende i Istanbul. Send et foto eller et røntgenbillede på WhatsApp, så svarer tandlægen med dine muligheder.
+644|Hvad koster behandlingen?
+645|Tandklinik nær %(area)s, Istanbul
+646|Tandlæge nær %(area)s, Istanbul — familieklinik i Şişli
+647|Leder du efter en tandlæge nær %(area)s? Vores familietandklinik i Şişli ligger ca. %(km)s km væk. Først diagnose, kun den behandling, du har brug for. Åbent 7 dage om ugen.
+648|Vores familietandklinik i Şişli ligger ca. %(km)s km fra %(area)s. Dr. Dt. Devrim Biriken Sipahi og hendes søn Dt. Ekin Sipahi undersøger og behandler hver patient personligt.
+649|Tandklinik i %(area)s, Istanbul
+650|Tandklinik i %(area)s, Istanbul — familietandlæger, åbent 7 dage
+651|Familietandklinik i %(area)s, Istanbul. Først diagnose, kun den behandling, du har brug for. Åbent 7 dage om ugen — send et foto på WhatsApp.
+652|Vores familietandklinik ligger i %(area)s, Istanbul. Dr. Dt. Devrim Biriken Sipahi og hendes søn Dt. Ekin Sipahi undersøger og behandler hver patient personligt.
+653|Tandklinik efter bydel
+654|Tandklinik nær dig i Istanbul: Şişli, Nişantaşı, Taksim, Levent og flere
+655|Tandklinik nær Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul
+656|Vores familietandklinik ligger i Şişli, Istanbul. Se, hvordan du kommer hertil fra Nişantaşı, Taksim, Beşiktaş, Levent, Maslak og andre bydele — åbent 7 dage om ugen.
+657|Vores familietandklinik ligger i Şişli, tæt på Nişantaşı, Mecidiyeköy og metrolinje M2. Vælg din bydel for at se afstanden og den nemmeste vej hertil.
+658|Sådan kommer du hertil fra %(area)s
+659|Fra Istanbul Lufthavn: metro M11 til Gayrettepe og derefter én station med M2 til Şişli-Mecidiyeköy.
+660|Rutevejledning fra %(area)s
+661|For patienter, der bor, arbejder eller opholder sig omkring %(places)s.
+662|En familieklinik med en etisk tilgang
+663|Dr. Dt. Devrim Biriken Sipahi har arbejdet som tandlæge i Istanbul i mere end 35 år. Hendes søn, Dt. Ekin Sipahi, er også tandlæge og arbejder sammen med hende på klinikken. Hver behandling begynder med en grundig diagnose; vi anbefaler kun det, du har brug for, og bevarer sunde tænder.
+664|Afstand
+665|ca. %(km)s km
+666|Med taxa
+667|%(min)s min.
+668|Behandlinger på vores klinik
+669|Andre bydele nær vores klinik
+670|Vores patienter på video

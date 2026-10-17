@@ -632,3 +632,40 @@
 631|Hallo, ich würde gern per WhatsApp-Anruf mit Ihnen sprechen.
 632|Per WhatsApp anrufen
 633|Anrufe beantworten wir über WhatsApp — rufen Sie uns dort per Sprach- oder Videoanruf an oder schreiben Sie uns.
+634|zahnklinik/
+635|U-Bahn
+636|Zu Fuß: etwa %(min)s Minuten
+637|Mit dem Taxi: etwa %(min)s Minuten, je nach Verkehr
+638|Wie komme ich von %(area)s zur Praxis?
+639|Nächste U-Bahn-Station: Şişli-Mecidiyeköy (M2, M7), etwa %(km)s km von der Praxis entfernt.
+640|Ist die Praxis am Wochenende geöffnet?
+641|Ja. Unsere Praxis in Şişli ist 7 Tage die Woche geöffnet, auch samstags und sonntags.
+642|Behandeln Sie Expats und Besucher, die in Istanbul wohnen?
+643|Ja. Viele unserer Patienten sind Expats oder Besucher in Istanbul. Schicken Sie ein Foto oder Röntgenbild per WhatsApp, und die Zahnärztin antwortet Ihnen mit Ihren Möglichkeiten.
+644|Was kostet die Behandlung?
+645|Zahnklinik nahe %(area)s, Istanbul
+646|Zahnarzt nahe %(area)s, Istanbul — Familienpraxis in Şişli
+647|Sie suchen einen Zahnarzt nahe %(area)s? Unsere familiengeführte Zahnpraxis in Şişli ist etwa %(km)s km entfernt. Zuerst die Diagnose, nur die Behandlung, die Sie brauchen. 7 Tage die Woche geöffnet.
+648|Unsere familiengeführte Zahnpraxis in Şişli liegt etwa %(km)s km von %(area)s entfernt. Dr. Dt. Devrim Biriken Sipahi und ihr Sohn Dt. Ekin Sipahi untersuchen und behandeln jeden Patienten persönlich.
+649|Zahnklinik in %(area)s, Istanbul
+650|Zahnklinik in %(area)s, Istanbul — Familienpraxis, 7 Tage geöffnet
+651|Familiengeführte Zahnpraxis in %(area)s, Istanbul. Zuerst die Diagnose, nur die Behandlung, die Sie brauchen. 7 Tage die Woche geöffnet — Foto per WhatsApp senden.
+652|Unsere familiengeführte Zahnpraxis befindet sich in %(area)s, Istanbul. Dr. Dt. Devrim Biriken Sipahi und ihr Sohn Dt. Ekin Sipahi untersuchen und behandeln jeden Patienten persönlich.
+653|Zahnklinik nach Stadtteil
+654|Zahnklinik in Ihrer Nähe in Istanbul: Şişli, Nişantaşı, Taksim, Levent und mehr
+655|Zahnklinik nahe Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul
+656|Unsere familiengeführte Zahnpraxis liegt in Şişli, Istanbul. So erreichen Sie uns aus Nişantaşı, Taksim, Beşiktaş, Levent, Maslak und anderen Stadtteilen — 7 Tage die Woche geöffnet.
+657|Unsere familiengeführte Zahnpraxis liegt in Şişli, nahe Nişantaşı, Mecidiyeköy und der U-Bahn-Linie M2. Wählen Sie Ihren Stadtteil, um Entfernung und den einfachsten Weg zu uns zu sehen.
+658|So kommen Sie von %(area)s zu uns
+659|Vom Flughafen Istanbul: mit der M11 bis Gayrettepe, dann eine Station mit der M2 bis Şişli-Mecidiyeköy.
+660|Route ab %(area)s anzeigen
+661|Für Patienten, die rund um %(places)s wohnen, arbeiten oder übernachten.
+662|Eine Familienpraxis mit ethischem Ansatz
+663|Dr. Dt. Devrim Biriken Sipahi arbeitet seit mehr als 35 Jahren als Zahnärztin in Istanbul. Ihr Sohn, Dt. Ekin Sipahi, ist ebenfalls Zahnarzt und arbeitet mit ihr in der Praxis. Jede Behandlung beginnt mit einer genauen Diagnose; wir empfehlen nur, was Sie brauchen, und erhalten gesunde Zähne.
+664|Entfernung
+665|etwa %(km)s km
+666|Mit dem Taxi
+667|%(min)s Min.
+668|Behandlungen in unserer Praxis
+669|Weitere Stadtteile in der Nähe unserer Praxis
+670|Unsere Patienten im Video

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load i18n site_tags %}
+{% block content %}
+{% include "pseo/_hero.html" %}
+
+<section class="section"><div class="wrap layout-side">
+  <article class="prose">
+    <h2>{% blocktrans with area=area_name %}How to get here from {{ area }}{% endblocktrans %}</h2>
+    <ul>{% for r in routes %}<li>{{ r }}</li>{% endfor %}
+      <li>{% blocktrans with km=station_km %}Nearest metro station: Şişli-Mecidiyeköy (M2, M7), about {{ km }} km from the clinic.{% endblocktrans %}</li>
+      <li>{% trans "From Istanbul Airport: M11 metro to Gayrettepe, then one stop on the M2 to Şişli-Mecidiyeköy." %}</li>
+    </ul>
+    <p><a class="btn btn-outline" href="{{ directions_url }}" target="_blank" rel="noopener" data-track="maps">📍 {% blocktrans with area=area_name %}Get directions from {{ area }}{% endblocktrans %}</a></p>
+    {% if places %}<p>{% blocktrans %}For patients who live, work or stay around {{ places }}.{% endblocktrans %}</p>{% endif %}
+    {% if inline_photo %}<figure class="area-photo"><img src="{{ inline_photo.src }}" alt="{{ inline_photo.alt }}" loading="lazy" width="720" height="480"><figcaption>{% trans "Real photo from our clinic in Şişli, Istanbul" %}</figcaption></figure>{% endif %}
+    <h2>{% trans "A family clinic with an ethical approach" %}</h2>
+    <p>{% trans "Dr. Dt. Devrim Biriken Sipahi has worked as a dentist in Istanbul for more than 35 years. Her son, Dt. Ekin Sipahi, is also a dentist and works with her at the clinic. Every treatment starts with an accurate diagnosis; we recommend only what you need and keep healthy teeth healthy." %}</p>
+    {% include "pseo/_price_note.html" %}
+  </article>
+  <aside class="sticky-side">
+    <div class="side-cta"><h2>{% trans "At a glance" %}</h2><ul class="facts">
+      {% if near %}<li><span>{% trans "Distance" %}</span><strong>{% blocktrans %}about {{ km }} km{% endblocktrans %}</strong></li>{% endif %}
+      <li><span>{% trans "By taxi" %}</span><strong>{% blocktrans with min=taxi %}{{ min }} min{% endblocktrans %}</strong></li>
+      <li><span>{% trans "Clinic" %}</span><strong>Şişli, {{ lang_meta.istanbul }}</strong></li>
+      <li><span>{% trans "Open" %}</span><strong>{% trans "7 days a week" %}</strong></li>
+    </ul>
+    {% if clinic.address %}<p class="faint" style="margin-top:.8rem">{{ clinic.address }}</p>{% endif %}
+    {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my personal plan" %}</a>{% endif %}
+    {% include "components/wa_call.html" with style="width:100%;margin-top:.6rem" %}</div>
+  </aside>
+</div></section>
+
+<section class="section section-alt"><div class="wrap">
+  <h2>{% trans "Treatments at our clinic" %}</h2>
+  <div class="grid grid-4">{% for t in treatments %}<a class="card" href="{{ t.url }}"><h3>{{ t.icon }} {{ t.name }}</h3></a>{% endfor %}</div>
+</div></section>
+{% include "pseo/_proof.html" %}
+{% include "pseo/_photos.html" %}
+{% page_faq faq=faq %}
+<section class="section"><div class="wrap">
+  <h2>{% trans "Other districts near our clinic" %}</h2>
+  <div class="chips">{% for a in areas %}<a class="chip" href="{{ a.url }}">📍 {{ a.name }}</a>{% endfor %}</div>
+</div></section>
+{% include "pseo/_links.html" %}
+<section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
+{% endblock %}

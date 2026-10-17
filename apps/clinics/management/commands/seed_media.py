@@ -8,6 +8,7 @@ verilebilir (ya da kalıcı bir depolama — S3/Supabase Storage — bağlanabil
   python manage.py seed_media
 """
 import json
+import re
 from pathlib import Path
 
 from django.conf import settings
@@ -24,6 +25,8 @@ GALLERY = [  # (dosya, tür, alt, slider'da göster)
     ("devrim-slide3.jpg", "team", "Dr. Dt. Devrim Biriken Sipahi, dentist in Istanbul", True),
     ("devrim-slide4.jpg", "team", "Dr. Dt. Devrim Biriken Sipahi at work, Istanbul", True),
     ("devrim3.jpg", "room", "Dr. Devrim Biriken Sipahi examining a patient, Şişli Istanbul", True),
+    ("treatment-room.jpg", "equipment", "Treatment room and dental chair at our clinic in Şişli, Istanbul", False),
+    ("waiting-lounge.jpg", "interior", "Waiting lounge of our dental clinic in Şişli, Istanbul", False),
 ]
 
 
@@ -35,8 +38,20 @@ class Command(BaseCommand):
         n = 0
         for i, (fname, kind, alt, hero) in enumerate(GALLERY):
             url = static(f"img/clinic/gallery/{fname}")
-            if not ClinicImage.objects.filter(clinic=clinic, image_url=url).exists() and \
-                    not ClinicImage.objects.filter(clinic=clinic, image__endswith=fname).exists():
+            if ClinicImage.objects.filter(clinic=clinic, image__endswith=fname).exists():
+                continue
+            # static() ortama göre hash'li ya da hash'siz döner (foo.jpg / foo.1a2b3c4d5e6f.jpg) → dosya adıyla eşleştir,
+            # aynı fotoğrafın çift kaydını sil (sayfalarda aynı foto iki kez görünüyordu)
+            stem, ext = fname.rsplit(".", 1)
+            same = [im for im in ClinicImage.objects.filter(clinic=clinic, image_url__contains=f"/gallery/{stem}.")
+                    if re.search(rf"/gallery/{re.escape(stem)}(\.[0-9a-f]{{12}})?\.{ext}$", im.image_url)]
+            if same:
+                keep = same[0]
+                if keep.image_url != url:
+                    keep.image_url = url
+                    keep.save(update_fields=["image_url"])
+                ClinicImage.objects.filter(pk__in=[im.pk for im in same[1:]]).delete()
+            else:
                 ClinicImage.objects.create(clinic=clinic, image_url=url, alt=alt, kind=kind, show_in_hero=hero, order=i)
                 n += 1
         if not clinic.cover_image and not clinic.cover_image_url:

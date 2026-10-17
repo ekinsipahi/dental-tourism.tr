@@ -182,6 +182,23 @@ class VisitorSession(models.Model):
         if self.session_count > 1: score += 10
         return min(score, 100)
 
+    @property
+    def tz_country(self):
+        """Tarayıcı saat diliminden ülke (timezone_name, tracker.js gönderir)."""
+        from .geo import tz_country
+
+        return tz_country(self.timezone_name)
+
+    @property
+    def via_proxy(self):
+        """IP ülkesi tarayıcı saat dilimiyle çelişiyor → proxy / VPN (ör. Zscaler) arkasında."""
+        tc = self.tz_country
+        return bool(tc and self.ip_country and tc != self.ip_country)
+
+    @property
+    def real_country(self):
+        return self.tz_country if self.via_proxy else self.ip_country
+
     def mark_lead(self):
         if not self.is_lead:
             self.is_lead = True

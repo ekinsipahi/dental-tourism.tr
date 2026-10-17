@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-16 01:02+0300\n"
+"POT-Creation-Date: 2026-10-16 23:14+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,8 @@ msgstr ""
 
 #: apps/blog/views.py:44 apps/blog/views.py:75 apps/blog/views.py:141
 #: apps/clinics/views.py:39 apps/clinics/views.py:68 apps/clinics/views.py:113
-#: apps/core/views.py:119 apps/seo/common.py:32 apps/seo/guide_views.py:34
+#: apps/core/views.py:119 apps/seo/area_views.py:105
+#: apps/seo/area_views.py:128 apps/seo/common.py:32 apps/seo/guide_views.py:34
 #: apps/seo/guide_views.py:70 apps/seo/package_views.py:67
 #: apps/seo/package_views.py:109 apps/seo/package_views.py:148
 #: apps/seo/views.py:69 apps/seo/views.py:113 apps/seo/views.py:145
@@ -572,6 +573,183 @@ msgstr "Как обработваме и защитаваме личните в�
 msgid "Page not found"
 msgstr "Страницата не е намерена"
 
+#: apps/seo/area_views.py:41
+msgid "Metro"
+msgstr "Метро"
+
+#: apps/seo/area_views.py:45
+#, python-format
+msgid "On foot: about %(min)s minutes"
+msgstr "Пеша: около %(min)s минути"
+
+#: apps/seo/area_views.py:46
+#, python-format
+msgid "By taxi: about %(min)s minutes, depending on traffic"
+msgstr "С такси: около %(min)s минути в зависимост от трафика"
+
+#: apps/seo/area_views.py:58
+#, python-format
+msgid "How do I get to the clinic from %(area)s?"
+msgstr "Как да стигна до клиниката от %(area)s?"
+
+#: apps/seo/area_views.py:60 templates/areas/detail.html:10
+#: templates/areas/index.html:10
+#, python-format
+msgid ""
+"Nearest metro station: Şişli-Mecidiyeköy (M2, M7), about %(km)s km from the "
+"clinic."
+msgstr ""
+"Най-близка метростанция: Şişli-Mecidiyeköy (M2, M7), на около %(km)s км от "
+"клиниката."
+
+#: apps/seo/area_views.py:61
+msgid "Is the clinic open at weekends?"
+msgstr "Работи ли клиниката през уикенда?"
+
+#: apps/seo/area_views.py:62
+msgid ""
+"Yes. Our clinic in Şişli is open 7 days a week, including Saturday and "
+"Sunday."
+msgstr ""
+"Да. Клиниката ни в Шишли работи 7 дни в седмицата, включително събота и "
+"неделя."
+
+#: apps/seo/area_views.py:63
+#| msgid "How long do I need to stay in Istanbul?"
+msgid "Do you treat expats and visitors staying in Istanbul?"
+msgstr "Лекувате ли чужденци и гости, които живеят в Истанбул?"
+
+#: apps/seo/area_views.py:64
+msgid ""
+"Yes. Many of our patients are expats or visitors staying in Istanbul. Send a"
+" photo or an X-ray on WhatsApp and the dentist will reply with your options."
+msgstr ""
+"Да. Много от пациентите ни са чужденци или гости на Истанбул. Изпратете "
+"снимка или рентгенова снимка в WhatsApp и зъболекарят ще ви отговори с "
+"вашите възможности."
+
+#: apps/seo/area_views.py:66
+#| msgid "How much does dental treatment in Turkey cost?"
+msgid "How much does treatment cost?"
+msgstr "Колко струва лечението?"
+
+#: apps/seo/area_views.py:67 apps/seo/package_views.py:179
+msgid ""
+"Send your photos or X-ray on WhatsApp. After the dentist has reviewed your "
+"case you receive a personal plan with a fixed written quote — we never "
+"publish one-size-fits-all prices."
+msgstr ""
+"Изпратете снимките или рентгеновата си снимка в WhatsApp. След като "
+"зъболекарят прегледа случая ви, получавате личен план с фиксирана писмена "
+"оферта — никога не публикуваме еднакви цени за всички."
+
+#: apps/seo/area_views.py:82
+#, python-format
+#| msgid "Premium dental clinic in Istanbul —"
+msgid "Dental clinic near %(area)s, Istanbul"
+msgstr "Дентална клиника близо до %(area)s, Истанбул"
+
+#: apps/seo/area_views.py:83
+#, python-format
+msgid "Dentist near %(area)s, Istanbul — Family Dental Clinic in Şişli"
+msgstr "Зъболекар близо до %(area)s, Истанбул — семейна клиника в Шишли"
+
+#: apps/seo/area_views.py:84
+#, python-format
+msgid ""
+"Looking for a dentist near %(area)s? Our family dental clinic in Şişli is "
+"about %(km)s km away. Diagnosis first, only the treatment you need. Open 7 "
+"days a week."
+msgstr ""
+"Търсите зъболекар близо до %(area)s? Семейната ни дентална клиника в Шишли е"
+" на около %(km)s км. Първо диагноза, само лечението, от което имате нужда. "
+"Работим 7 дни в седмицата."
+
+#: apps/seo/area_views.py:86
+#, python-format
+msgid ""
+"Our family dental clinic in Şişli is about %(km)s km from %(area)s. Dr. Dt. "
+"Devrim Biriken Sipahi and her son Dt. Ekin Sipahi examine and treat every "
+"patient personally."
+msgstr ""
+"Семейната ни дентална клиника в Шишли е на около %(km)s км от %(area)s. Д-р "
+"Devrim Biriken Sipahi и синът ѝ, зъболекарят Ekin Sipahi, лично преглеждат и"
+" лекуват всеки пациент."
+
+#: apps/seo/area_views.py:89
+#, python-format
+#| msgid "Premium dental clinic in Istanbul —"
+msgid "Dental clinic in %(area)s, Istanbul"
+msgstr "Дентална клиника в %(area)s, Истанбул"
+
+#: apps/seo/area_views.py:90
+#, python-format
+msgid "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
+msgstr ""
+"Дентална клиника в %(area)s, Истанбул — семейни зъболекари, 7 дни в "
+"седмицата"
+
+#: apps/seo/area_views.py:91
+#, python-format
+msgid ""
+"Family dental clinic in %(area)s, Istanbul. Diagnosis first and only the "
+"treatment you need. Open 7 days a week — send a photo on WhatsApp."
+msgstr ""
+"Семейна дентална клиника в %(area)s, Истанбул. Първо диагноза, само "
+"лечението, от което имате нужда. Работим 7 дни в седмицата — изпратете "
+"снимка в WhatsApp."
+
+#: apps/seo/area_views.py:93
+#, python-format
+msgid ""
+"Our family dental clinic is in %(area)s, Istanbul. Dr. Dt. Devrim Biriken "
+"Sipahi and her son Dt. Ekin Sipahi examine and treat every patient "
+"personally."
+msgstr ""
+"Семейната ни дентална клиника е в %(area)s, Истанбул. Д-р Devrim Biriken "
+"Sipahi и синът ѝ, зъболекарят Ekin Sipahi, лично преглеждат и лекуват всеки "
+"пациент."
+
+#: apps/seo/area_views.py:105 apps/seo/area_views.py:109
+#: apps/seo/area_views.py:128 apps/seo/area_views.py:135
+msgid "Dental clinic by district"
+msgstr "Дентална клиника по квартали"
+
+#: apps/seo/area_views.py:122
+msgid ""
+"Dental clinic near you in Istanbul: Şişli, Nişantaşı, Taksim, Levent and "
+"more"
+msgstr ""
+"Дентална клиника близо до вас в Истанбул: Шишли, Нишанташъ, Таксим, Левент и"
+" други"
+
+#: apps/seo/area_views.py:124
+msgid ""
+"Dental Clinic near Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul"
+msgstr ""
+"Дентална клиника близо до Шишли, Нишанташъ, Таксим, Левент и Бешикташ — "
+"Истанбул"
+
+#: apps/seo/area_views.py:125
+msgid ""
+"Our family dental clinic is in Şişli, Istanbul. See how to reach us from "
+"Nişantaşı, Taksim, Beşiktaş, Levent, Maslak and other districts — open 7 "
+"days a week."
+msgstr ""
+"Семейната ни дентална клиника е в Шишли, Истанбул. Вижте как да стигнете до "
+"нас от Нишанташъ, Таксим, Бешикташ, Левент, Маслак и други квартали — "
+"работим 7 дни в седмицата."
+
+#: apps/seo/area_views.py:136
+msgid ""
+"Our family dental clinic is in Şişli, close to Nişantaşı, Mecidiyeköy and "
+"the M2 metro line. Choose your district to see the distance and the easiest "
+"way to reach us."
+msgstr ""
+"Семейната ни дентална клиника е в Шишли, близо до Нишанташъ, Меджидиекьой и "
+"метролиния M2. Изберете квартала си, за да видите разстоянието и най-лесния "
+"път."
+
 #: apps/seo/common.py:36 templates/clinics/detail.html:74
 #: templates/clinics/doctor.html:26 templates/components/footer.html:51
 #: templates/components/navbar.html:56 templates/components/navbar.html:93
@@ -944,16 +1122,6 @@ msgstr ""
 msgid "How do I get a price for my dental package?"
 msgstr "Как да получа цена за денталния си пакет?"
 
-#: apps/seo/package_views.py:179
-msgid ""
-"Send your photos or X-ray on WhatsApp. After the dentist has reviewed your "
-"case you receive a personal plan with a fixed written quote — we never "
-"publish one-size-fits-all prices."
-msgstr ""
-"Изпратете снимките или рентгеновата си снимка в WhatsApp. След като "
-"зъболекарят прегледа случая ви, получавате личен план с фиксирана писмена "
-"оферта — никога не публикуваме еднакви цени за всички."
-
 #: apps/seo/views.py:57
 #, python-format
 msgid "%(treatment)s in %(city)s"
@@ -1141,10 +1309,15 @@ msgid "guide/"
 msgstr "rakovodstvo/"
 
 #: dental_tourism/urls.py:55
+#| msgid "clinics/"
+msgid "dental-clinic/"
+msgstr "dentalna-klinika/"
+
+#: dental_tourism/urls.py:56
 msgid "clinics/"
 msgstr "kliniki/"
 
-#: dental_tourism/urls.py:56
+#: dental_tourism/urls.py:57
 msgid "dentists/"
 msgstr "zabolekari/"
 
@@ -1240,6 +1413,102 @@ msgstr "Вижте профила на зъболекаря"
 #: templates/admin/base_site.html:3
 msgid "Django site admin"
 msgstr "Администрация на сайта"
+
+#: templates/areas/detail.html:8
+#, python-format
+msgid "How to get here from %(area)s"
+msgstr "Как да стигнете от %(area)s"
+
+#: templates/areas/detail.html:11 templates/areas/index.html:11
+msgid ""
+"From Istanbul Airport: M11 metro to Gayrettepe, then one stop on the M2 to "
+"Şişli-Mecidiyeköy."
+msgstr ""
+"От летище Истанбул: метро M11 до Gayrettepe, след това една спирка с M2 до "
+"Şişli-Mecidiyeköy."
+
+#: templates/areas/detail.html:13
+#, python-format
+#| msgid "Patients from %(c)s"
+msgid "Get directions from %(area)s"
+msgstr "Маршрут от %(area)s"
+
+#: templates/areas/detail.html:14
+#, python-format
+msgid "For patients who live, work or stay around %(places)s."
+msgstr "За пациенти, които живеят, работят или отсядат около %(places)s."
+
+#: templates/areas/detail.html:15 templates/pseo/_hero.html:17
+msgid "Real photo from our clinic in Şişli, Istanbul"
+msgstr "Истинска снимка от нашата клиника в Шишли, Истанбул"
+
+#: templates/areas/detail.html:16 templates/areas/index.html:15
+msgid "A family clinic with an ethical approach"
+msgstr "Семейна клиника с етичен подход"
+
+#: templates/areas/detail.html:17 templates/areas/index.html:16
+msgid ""
+"Dr. Dt. Devrim Biriken Sipahi has worked as a dentist in Istanbul for more "
+"than 35 years. Her son, Dt. Ekin Sipahi, is also a dentist and works with "
+"her at the clinic. Every treatment starts with an accurate diagnosis; we "
+"recommend only what you need and keep healthy teeth healthy."
+msgstr ""
+"Д-р Devrim Biriken Sipahi работи като зъболекар в Истанбул повече от 35 "
+"години. Синът ѝ, Ekin Sipahi, също е зъболекар и работи заедно с нея в "
+"клиниката. Всяко лечение започва с точна диагноза; препоръчваме само това, "
+"от което имате нужда, и запазваме здравите зъби."
+
+#: templates/areas/detail.html:21 templates/packages/origin.html:24
+#: templates/treatments/detail.html:36
+msgid "At a glance"
+msgstr "С един поглед"
+
+#: templates/areas/detail.html:22
+msgid "Distance"
+msgstr "Разстояние"
+
+#: templates/areas/detail.html:22 templates/areas/index.html:8
+#, python-format
+msgid "about %(km)s km"
+msgstr "около %(km)s км"
+
+#: templates/areas/detail.html:23
+msgid "By taxi"
+msgstr "С такси"
+
+#: templates/areas/detail.html:23
+#, python-format
+#| msgid "%(n)s min read"
+msgid "%(min)s min"
+msgstr "%(min)s мин"
+
+#: templates/areas/detail.html:24 templates/contact.html:14
+#: templates/packages/origin.html:26
+msgid "Clinic"
+msgstr "Клиника"
+
+#: templates/areas/detail.html:25 templates/packages/origin.html:27
+msgid "Open"
+msgstr "Отворено"
+
+#: templates/areas/detail.html:25 templates/packages/origin.html:27
+msgid "7 days a week"
+msgstr "7 дни в седмицата"
+
+#: templates/areas/detail.html:28 templates/guides/detail.html:27
+#: templates/packages/origin.html:29 templates/packages/treatment.html:35
+#: templates/treatments/detail.html:42
+msgid "Ask for my personal plan"
+msgstr "Поискайте личния си план"
+
+#: templates/areas/detail.html:34 templates/areas/index.html:19
+#| msgid "Treatments & prices"
+msgid "Treatments at our clinic"
+msgstr "Лечения в нашата клиника"
+
+#: templates/areas/detail.html:41
+msgid "Other districts near our clinic"
+msgstr "Други квартали близо до клиниката"
 
 #: templates/base.html:32
 msgid "Skip to content"
@@ -1855,7 +2124,6 @@ msgid "%(name)s — patient video review"
 msgstr "%(name)s — видео отзив на пациент"
 
 #: templates/components/wa_call.html:1
-#| msgid "Chat on WhatsApp"
 msgid "Call us on WhatsApp"
 msgstr "Обадете ни се в WhatsApp"
 
@@ -1882,10 +2150,6 @@ msgstr ""
 msgid "Fastest reply — usually within 30 minutes during clinic hours."
 msgstr ""
 "Най-бърз отговор — обикновено до 30 минути в работното време на клиниката."
-
-#: templates/contact.html:14 templates/packages/origin.html:26
-msgid "Clinic"
-msgstr "Клиника"
 
 #: templates/contact.html:18
 msgid "Why is it free?"
@@ -1926,11 +2190,6 @@ msgstr ""
 #: templates/guides/detail.html:18
 msgid "Dental tourism with Sterr Agency"
 msgstr "Дентален туризъм със Sterr Agency"
-
-#: templates/guides/detail.html:27 templates/packages/origin.html:29
-#: templates/packages/treatment.html:35 templates/treatments/detail.html:42
-msgid "Ask for my personal plan"
-msgstr "Поискайте личния си план"
 
 #: templates/home/sections/contact.html:7
 msgid "Free initial evaluation"
@@ -2483,21 +2742,9 @@ msgstr ""
 "започваме с диагноза, първо запазваме здравите зъби и препоръчваме само "
 "лечението, от което наистина имате нужда."
 
-#: templates/packages/origin.html:24 templates/treatments/detail.html:36
-msgid "At a glance"
-msgstr "С един поглед"
-
 #: templates/packages/origin.html:25
 msgid "Flight time"
 msgstr "Продължителност на полета"
-
-#: templates/packages/origin.html:27
-msgid "Open"
-msgstr "Отворено"
-
-#: templates/packages/origin.html:27
-msgid "7 days a week"
-msgstr "7 дни в седмицата"
 
 #: templates/packages/origin.html:40
 #, python-format
@@ -2626,10 +2873,6 @@ msgstr ""
 "Съгласно GDPR и турския закон KVKK можете по всяко време да поискате достъп,"
 " корекция или изтриване на данните си, като се свържете с нас."
 
-#: templates/pseo/_hero.html:17
-msgid "Real photo from our clinic in Şişli, Istanbul"
-msgstr "Истинска снимка от нашата клиника в Шишли, Истанбул"
-
 #: templates/pseo/_links.html:3
 msgid "Learn more about us"
 msgstr "Научете повече за нас"
@@ -2641,6 +2884,11 @@ msgstr "Прозрачни по принцип — проверете ни са�
 #: templates/pseo/_photos.html:5
 msgid "Inside our clinic"
 msgstr "В нашата клиника"
+
+#: templates/pseo/_photos.html:11
+#| msgid "All patient videos"
+msgid "Our patients on video"
+msgstr "Нашите пациенти във видео"
 
 #: templates/pseo/_price_note.html:4
 msgid ""

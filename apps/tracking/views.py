@@ -127,7 +127,19 @@ def collect_pageview(request):
                 referrer = body.get("referrer", "")[:500],
             )
             session.page_views += 1
-            session.save(update_fields=["page_views","last_seen"])
+            fields = ["page_views", "last_seen"]
+            # Tarayıcı saat dilimi + ekran: IP proxy/VPN'den geçse de gerçek ülkeyi gösterir (geo.py)
+            from .geo import is_valid_tz
+
+            if is_valid_tz(body.get("tz")) and body["tz"] != session.timezone_name:
+                session.timezone_name = body["tz"]
+                fields.append("timezone_name")
+            for key, f in (("sw", "screen_width"), ("sh", "screen_height")):
+                v = body.get(key)
+                if isinstance(v, int) and 0 < v < 32768 and not getattr(session, f):
+                    setattr(session, f, v)
+                    fields.append(f)
+            session.save(update_fields=fields)
     except Exception as e:
         logger.error(f"collect_pageview: {e}")
 

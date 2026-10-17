@@ -327,3 +327,23 @@ class ResultsAndFaqEverywhereTests(SeededTestCase):
         self.assertLess(html.index('id="reviews-h2"'), html.index('id="results"'))   # ana sayfada yorumların altında
         de = self.client.get("/de/").content.decode()
         self.assertIn("Natürliches monolithisches Zirkon", de)
+
+
+class BrowserTimezoneTests(SeededTestCase):
+    def test_proxy_ip_country_is_overridden_by_browser_timezone(self):
+        from apps.tracking.models import VisitorSession as TrackingSession
+
+        c = Client(HTTP_USER_AGENT=BROWSER_UA)
+        c.get("/")
+        r = c.post("/api/tracking/pageview/", data=json.dumps({"url": "/", "tz": "Europe/Istanbul", "sw": 1920, "sh": 1080}),
+                   content_type="application/json")
+        self.assertEqual(r.status_code, 200)
+        s = TrackingSession.objects.get(session_key=c.session.session_key)
+        self.assertEqual((s.timezone_name, s.screen_width), ("Europe/Istanbul", 1920))
+        s.ip_country, s.ip_org = "US", "AS22616 ZSCALER, INC."  # Zscaler proxy'si
+        self.assertTrue(s.via_proxy)
+        self.assertEqual(s.real_country, "TR")
+        s.ip_country = "TR"
+        self.assertFalse(s.via_proxy)
+        c.post("/api/tracking/pageview/", data=json.dumps({"url": "/", "tz": "Not/AZone"}), content_type="application/json")
+        self.assertEqual(TrackingSession.objects.get(pk=s.pk).timezone_name, "Europe/Istanbul")

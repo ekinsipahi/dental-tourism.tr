@@ -464,7 +464,7 @@ def match_whatsapp(wa_phone: str, wa_message: str, received_at=None) -> dict:
         utm_campaign   = best.utm_campaign,
         utm_source     = best.utm_source,
         device_type    = best.device_type,
-        ip_country     = best.ip_country,
+        ip_country     = best.real_country,
         ip_city        = best.ip_city,
         whatsapp_matched           = True,
         whatsapp_match_confidence  = confidence,
@@ -508,7 +508,7 @@ def create_lead(request, *, name="", phone="", email="", message="", page="", la
         utm_campaign=session.utm_campaign if session else "",
         utm_source=session.utm_source if session else "",
         device_type=session.device_type if session else "",
-        ip_country=session.ip_country if session else "",
+        ip_country=session.real_country if session else "",
         ip_city=session.ip_city if session else "",
     )
     if session:
@@ -532,7 +532,7 @@ def create_lead(request, *, name="", phone="", email="", message="", page="", la
     if recipient and settings.EMAIL_ENABLED:  # başta kapalı — lead admin'de (Lead'ler) toplanır
         s_ = session
         where = ", ".join(filter(None, [getattr(s_, "ip_city", ""), getattr(s_, "ip_region", ""),
-                                        getattr(s_, "ip_country", "")])) if s_ else ""
+                                        getattr(s_, "real_country", "")])) if s_ else ""
         device = " / ".join(filter(None, [getattr(s_, "device_type", ""), getattr(s_, "device_brand", ""),
                                           getattr(s_, "device_model", ""), getattr(s_, "os_name", ""),
                                           getattr(s_, "browser_name", "")])) if s_ else ""

@@ -295,18 +295,16 @@ A luxury waiting room does not make a better dentist. What you should expect fro
                   "tr": "istanbul-dis-klinigi-sisli"},
         "en": {
             "h1": "Dental clinic in Istanbul, Turkey — Şişli, near Taksim",
-            "lead": "Our dental clinic is in central Şişli (Osmanbey), one metro stop from Taksim. Easy to reach from "
-                    "every district of Istanbul — and open 7 days a week.",
+            "lead": "Our dental clinic is in central Şişli, close to Nişantaşı and Mecidiyeköy and a short ride from Taksim. Easy to reach from every district of Istanbul — and open 7 days a week.",
             "meta_title": "Dental Clinic in Istanbul — Şişli, near Taksim, Open 7 Days",
-            "meta_description": "Dental clinic in Istanbul, Turkey: Şişli/Osmanbey, one metro stop from Taksim, open 7 days "
-                                "a week. Experienced dentist, very affordable treatment, WhatsApp consultation.",
+            "meta_description": "Dental clinic in Istanbul, Turkey: central Şişli, close to Taksim and Nişantaşı, open 7 days a week. Experienced dentist, very affordable treatment, WhatsApp consultation.",
             "body": """## How to reach us in Istanbul
 
-Osmanbey metro station (M2) is a few minutes' walk away. From Taksim it is one stop; from Zeytinburnu, Beşiktaş or Kadıköy you can reach us by metro, tram or ferry.
+The nearest metro station is Şişli-Mecidiyeköy (M2 and M7), about 900 metres from the clinic. From Taksim it is two stops on the M2; from Zeytinburnu, Beşiktaş or Kadıköy you can reach us by metro, tram, metrobus or ferry.
 
-- Taksim → Osmanbey: one metro stop
-- Nişantaşı and Mecidiyeköy: walking distance
-- Istanbul Airport: about 45–60 minutes by car or metro
+- Taksim → Şişli-Mecidiyeköy: two metro stops (M2)
+- Mecidiyeköy: about 15 minutes on foot; Nişantaşı: about 2 km
+- Istanbul Airport: M11 metro to Gayrettepe, then one stop on the M2 — or about 45–60 minutes by car
 
 ## Dental tourism in Istanbul
 
@@ -316,14 +314,14 @@ Istanbul has direct flights to more destinations than almost any other city. Pat
 
 We are a dentist-led clinic: Dr. Dt. Devrim Biriken Sipahi examines and treats you personally. Prices are very affordable and always fixed in writing before treatment — ask by phone or on WhatsApp.""",
             "faq": [
-                ["Where is the clinic in Istanbul?", "Abide-i Hürriyet Caddesi No:148, Floor 4, Flat 11, Şişli — near "
-                 "Osmanbey metro."],
+                ["Where is the clinic in Istanbul?", "Abide-i Hürriyet Caddesi No:148, Floor 4, Flat 11, Şişli — about 900 "
+                 "metres from Şişli-Mecidiyeköy metro station."],
                 ["Are you open at weekends?", "Yes, we are open 7 days a week, including Saturday and Sunday."],
-                ["Is the clinic near Taksim?", "Yes — Osmanbey is one metro stop from Taksim."],
+                ["Is the clinic near Taksim?", "Yes — Taksim is two stops away on the M2 metro, or about 10–20 minutes by taxi."],
             ],
         },
         "keywords": {
-            "en": ["dental clinic in turkey istanbul", "dental tourism istanbul turkey", "dental clinic taksim",
+            "en": ["dental clinic in turkey istanbul", "dental clinics in istanbul", "dentist in istanbul prices", "dental tourism istanbul turkey", "dental clinic taksim",
                    "turkey dental clinic zeytinburnu", "istanbul dental clinic turkey trustpilot", "dentist istanbul"],
             "de": ["zahnklinik istanbul", "zahnarzt istanbul", "zahnarzt istanbul taksim"],
             "nl": ["tandarts istanbul", "tandartskliniek istanbul"], "fr": ["clinique dentaire istanbul", "dentiste istanbul"],
@@ -811,7 +809,7 @@ Stay close to the clinic so that appointments are easy: Şişli, Osmanbey, Nişa
 
 ## Getting around
 
-- Metro M2 (Taksim – Osmanbey – Şişli) is the easiest way to reach us
+- Metro M2 (Taksim – Osmanbey – Şişli-Mecidiyeköy) is the easiest way to reach us
 - Use licensed taxis or ride-hailing apps; agree on the meter
 - From Istanbul Airport: the M11 metro, a taxi or a ride-hailing app
 
@@ -904,6 +902,8 @@ NOT_TARGETED = {
     "Dental dışı": "saç ekimi, estetik/cilt, hastane/genel tıp, diş hekimliği fakülteleri, dental tourism crm",
     "Alakasız (G11)": "sargodha, dar es salaam, dental market turkiye, dental clinic 34",
     "Ortodonti": "dental braces price in turkey — klinik ortodonti (tel) yapmıyor",
+    "Taksim listesi — rakip markalar": "citydent dental clinic dentist istanbul taksim, globaldent istanbul taksim dental clinic, taksim park dental clinic",
+    "Taksim listesi — alakasız": "taxim o / taxim-o 200 (antibiyotik), dental terms in turkish, turkey teeth meaning, dental clinic telefon",
 }
 
 

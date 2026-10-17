@@ -223,6 +223,22 @@ class OriginSitemap(I18nSitemap):
         return reverse("origins:detail", kwargs={"country": country_slug(item, get_language())})
 
 
+class AreaSitemap(I18nSitemap):
+    """Semt sayfaları (dental clinic şişli / taksim / nişantaşı …) + hub — 17 dil."""
+    changefreq = "monthly"
+    priority = 0.8
+
+    def items(self):
+        from apps.seo.area_data import ordered_keys
+
+        return [""] + ordered_keys()
+
+    def location(self, item):
+        if not item:
+            return reverse("areas:index")
+        return reverse("areas:detail", kwargs={"area": item})
+
+
 class GuideSitemap(TranslatableSitemap):
     changefreq = "monthly"
     priority = 0.8
@@ -245,6 +261,7 @@ SITEMAPS = {
     "packages": PackageSitemap,
     "prices": PriceSitemap,
     "origins": OriginSitemap,
+    "areas": AreaSitemap,
     "guides": GuideSitemap,
     "landing": LandingPageSitemap,
     "clinics": ClinicSitemap,

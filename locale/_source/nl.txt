@@ -632,3 +632,40 @@
 631|Hallo, ik wil u graag spreken via een WhatsApp-gesprek.
 632|Bel ons via WhatsApp
 633|We beantwoorden oproepen via WhatsApp — bel ons daar (spraak of video) of stuur een bericht.
+634|tandartspraktijk/
+635|Metro
+636|Te voet: ongeveer %(min)s minuten
+637|Met de taxi: ongeveer %(min)s minuten, afhankelijk van het verkeer
+638|Hoe kom ik vanuit %(area)s naar de praktijk?
+639|Dichtstbijzijnde metrostation: Şişli-Mecidiyeköy (M2, M7), ongeveer %(km)s km van de praktijk.
+640|Is de praktijk in het weekend open?
+641|Ja. Onze praktijk in Şişli is 7 dagen per week open, ook op zaterdag en zondag.
+642|Behandelen jullie expats en bezoekers die in Istanbul verblijven?
+643|Ja. Veel van onze patiënten zijn expats of bezoekers in Istanbul. Stuur een foto of röntgenfoto via WhatsApp en de tandarts antwoordt met uw mogelijkheden.
+644|Wat kost een behandeling?
+645|Tandartspraktijk bij %(area)s, Istanbul
+646|Tandarts bij %(area)s, Istanbul — familiepraktijk in Şişli
+647|Op zoek naar een tandarts bij %(area)s? Onze familiepraktijk in Şişli ligt op ongeveer %(km)s km. Eerst de diagnose, alleen de behandeling die u nodig hebt. 7 dagen per week open.
+648|Onze tandheelkundige familiepraktijk in Şişli ligt op ongeveer %(km)s km van %(area)s. Dr. Dt. Devrim Biriken Sipahi en haar zoon Dt. Ekin Sipahi onderzoeken en behandelen elke patiënt persoonlijk.
+649|Tandartspraktijk in %(area)s, Istanbul
+650|Tandartspraktijk in %(area)s, Istanbul — familiepraktijk, 7 dagen open
+651|Tandheelkundige familiepraktijk in %(area)s, Istanbul. Eerst de diagnose, alleen de behandeling die u nodig hebt. 7 dagen per week open — stuur een foto via WhatsApp.
+652|Onze tandheelkundige familiepraktijk is in %(area)s, Istanbul. Dr. Dt. Devrim Biriken Sipahi en haar zoon Dt. Ekin Sipahi onderzoeken en behandelen elke patiënt persoonlijk.
+653|Tandartspraktijk per wijk
+654|Tandartspraktijk bij u in de buurt in Istanbul: Şişli, Nişantaşı, Taksim, Levent en meer
+655|Tandartspraktijk bij Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul
+656|Onze tandheelkundige familiepraktijk is in Şişli, Istanbul. Bekijk hoe u ons bereikt vanuit Nişantaşı, Taksim, Beşiktaş, Levent, Maslak en andere wijken — 7 dagen per week open.
+657|Onze tandheelkundige familiepraktijk is in Şişli, dicht bij Nişantaşı, Mecidiyeköy en metrolijn M2. Kies uw wijk om de afstand en de makkelijkste route te zien.
+658|Zo komt u hier vanuit %(area)s
+659|Vanaf Istanbul Airport: metro M11 naar Gayrettepe, daarna één halte met de M2 naar Şişli-Mecidiyeköy.
+660|Route vanuit %(area)s
+661|Voor patiënten die rond %(places)s wonen, werken of verblijven.
+662|Een familiepraktijk met een ethische aanpak
+663|Dr. Dt. Devrim Biriken Sipahi werkt al meer dan 35 jaar als tandarts in Istanbul. Haar zoon, Dt. Ekin Sipahi, is ook tandarts en werkt met haar in de praktijk. Elke behandeling begint met een juiste diagnose; we adviseren alleen wat u nodig hebt en houden gezonde tanden gezond.
+664|Afstand
+665|ongeveer %(km)s km
+666|Met de taxi
+667|%(min)s min
+668|Behandelingen in onze praktijk
+669|Andere wijken bij onze praktijk
+670|Onze patiënten op video

@@ -128,7 +128,11 @@
   }
   window.dtTrack = track;
 
-  post(PAGEVIEW_API, { url: location.href, title: document.title, referrer: document.referrer, vid: VID, attr: ATTR });
+  // tz: tarayıcı saat dilimi — IP proxy/VPN'den (Zscaler vb.) geçse bile gerçek ülkeyi verir
+  var TZ = "";
+  try { TZ = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+  post(PAGEVIEW_API, { url: location.href, title: document.title, referrer: document.referrer, vid: VID, attr: ATTR,
+                       tz: TZ, sw: screen.width, sh: screen.height });
 
   // Scroll derinliği
   var fired = {};

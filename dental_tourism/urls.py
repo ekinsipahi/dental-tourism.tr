@@ -52,6 +52,7 @@ urlpatterns += i18n_patterns(
     path(_("packages/"), include("apps.seo.package_urls")),
     path(_("dental-holidays-from/"), include("apps.seo.origin_urls")),
     path(_("guide/"), include("apps.seo.guide_urls")),
+    path(_("dental-clinic/"), include("apps.seo.area_urls")),
     path(_("clinics/"), include("apps.clinics.urls")),
     path(_("dentists/"), include("apps.clinics.doctor_urls")),
     path("blog/", include("apps.blog.urls")),

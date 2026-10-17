@@ -9,6 +9,8 @@ Tüm programatik SEO sayfalarının ortak bileşenleri:
                           etik kayıptan kaçınma (sağlıklı dişi kaybetme), bilişsel kolaylık (3 adım),
                           persona'ya göre ana mesaj. Sahte aciliyet / sahte kıtlık KULLANILMAZ.
 """
+import re
+
 from django.conf import settings
 from django.urls import reverse
 from django.utils.translation import gettext as _
@@ -52,7 +54,12 @@ def real_photos(clinic, n=6, offset=0):
     """Galeriden n gerçek fotoğraf; offset ile her sayfada farklı bir kapak seçilir."""
     if not clinic:
         return []
-    imgs = list(clinic.images.all())
+    imgs, seen = [], set()
+    for im in clinic.images.all():  # aynı dosyanın hash'li / hash'siz çift kaydı tek sayılır
+        key = re.sub(r"\.[0-9a-f]{12}(\.\w+)$", r"\1", (im.src or "").rsplit("/", 1)[-1])
+        if key and key not in seen:
+            seen.add(key)
+            imgs.append(im)
     if not imgs:
         return []
     k = offset % len(imgs)
@@ -112,6 +119,9 @@ def pseo_context(request, *, offset=0, show_cases=False, photos=6):
                               .order_by("-rating", "-created_at")[:3]) if clinic else [],
         "tel_url": "tel:" + "".join(ch for ch in (clinic.phone if clinic else "") if ch.isdigit() or ch == "+"),
     }
+    if clinic:  # hasta video yorumları (YouTube Shorts kapakları) — her pSEO sayfasında fotoğraf + video
+        ctx["videos"] = list(Review.objects.filter(is_published=True, clinic=clinic).exclude(video_id="")
+                             .select_related("treatment")[:4])
     if show_cases and clinic:
         ctx["cases"] = list(BeforeAfterCase.objects.filter(clinic=clinic, is_published=True, patient_consent=True)[:6])
     return ctx

@@ -632,3 +632,40 @@
 631|Salve, vorrei parlarvi con una chiamata WhatsApp.
 632|Chiamaci su WhatsApp
 633|Rispondiamo alle chiamate su WhatsApp — chiamaci o scrivici lì, in voce o in video.
+634|studio-dentistico/
+635|Metro
+636|A piedi: circa %(min)s minuti
+637|In taxi: circa %(min)s minuti, a seconda del traffico
+638|Come arrivo allo studio da %(area)s?
+639|Stazione della metro più vicina: Şişli-Mecidiyeköy (M2, M7), a circa %(km)s km dallo studio.
+640|Lo studio è aperto nel fine settimana?
+641|Sì. Il nostro studio a Şişli è aperto 7 giorni su 7, sabato e domenica compresi.
+642|Curate expat e visitatori che soggiornano a Istanbul?
+643|Sì. Molti dei nostri pazienti sono expat o visitatori a Istanbul. Inviate una foto o una radiografia su WhatsApp e la dentista vi risponderà con le vostre opzioni.
+644|Quanto costa il trattamento?
+645|Studio dentistico vicino a %(area)s, Istanbul
+646|Dentista vicino a %(area)s, Istanbul — studio di famiglia a Şişli
+647|Cercate un dentista vicino a %(area)s? Il nostro studio dentistico di famiglia a Şişli è a circa %(km)s km. Prima la diagnosi, solo il trattamento che vi serve. Aperto 7 giorni su 7.
+648|Il nostro studio dentistico di famiglia a Şişli è a circa %(km)s km da %(area)s. La Dott.ssa Dt. Devrim Biriken Sipahi e suo figlio Dt. Ekin Sipahi visitano e curano personalmente ogni paziente.
+649|Studio dentistico a %(area)s, Istanbul
+650|Studio dentistico a %(area)s, Istanbul — dentisti di famiglia, aperto 7 giorni
+651|Studio dentistico di famiglia a %(area)s, Istanbul. Prima la diagnosi, solo il trattamento che vi serve. Aperto 7 giorni su 7 — inviate una foto su WhatsApp.
+652|Il nostro studio dentistico di famiglia è a %(area)s, Istanbul. La Dott.ssa Dt. Devrim Biriken Sipahi e suo figlio Dt. Ekin Sipahi visitano e curano personalmente ogni paziente.
+653|Studio dentistico per quartiere
+654|Uno studio dentistico vicino a voi a Istanbul: Şişli, Nişantaşı, Taksim, Levent e altri
+655|Studio dentistico vicino a Şişli, Nişantaşı, Taksim, Levent e Beşiktaş — Istanbul
+656|Il nostro studio dentistico di famiglia è a Şişli, Istanbul. Scoprite come raggiungerci da Nişantaşı, Taksim, Beşiktaş, Levent, Maslak e altri quartieri — aperto 7 giorni su 7.
+657|Il nostro studio dentistico di famiglia è a Şişli, vicino a Nişantaşı, Mecidiyeköy e alla linea metro M2. Scegliete il vostro quartiere per vedere la distanza e il percorso più semplice.
+658|Come arrivare da %(area)s
+659|Dall'aeroporto di Istanbul: metro M11 fino a Gayrettepe, poi una fermata con la M2 fino a Şişli-Mecidiyeköy.
+660|Indicazioni da %(area)s
+661|Per i pazienti che vivono, lavorano o soggiornano intorno a %(places)s.
+662|Uno studio di famiglia con un approccio etico
+663|La Dott.ssa Dt. Devrim Biriken Sipahi lavora come dentista a Istanbul da oltre 35 anni. Suo figlio, Dt. Ekin Sipahi, è anche lui dentista e lavora con lei nello studio. Ogni trattamento inizia con una diagnosi accurata; consigliamo solo ciò che vi serve e manteniamo sani i denti sani.
+664|Distanza
+665|circa %(km)s km
+666|In taxi
+667|%(min)s min
+668|Trattamenti nel nostro studio
+669|Altri quartieri vicino allo studio
+670|I nostri pazienti in video

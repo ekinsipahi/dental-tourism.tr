@@ -183,6 +183,16 @@ class VisitorSessionAdmin(admin.ModelAdmin):
     total_time_display.short_description = "Time"
 
 
+
+def _location_html(s):
+    """IP konumu; IP tarayıcı saat dilimiyle çelişiyorsa (proxy / VPN) saat dilimindeki ülke + uyarı."""
+    if s.via_proxy:
+        return format_html("{} <strong>{}</strong> {}<br><span style='color:#b45309'>🛡 proxy/VPN — IP: {} {}</span>",
+                           _flag(s.real_country), s.real_country, s.timezone_name, s.ip_country, (s.ip_org or "")[:30])
+    place = ", ".join(filter(None, [s.ip_city, s.ip_region])) or "—"
+    return format_html("{} <strong>{}</strong> {}<br><span style='color:#888'>{}</span>", _flag(s.ip_country),
+                       s.ip_country or "?", place, (s.ip_org or "")[:40])
+
 @admin.register(Lead)
 class LeadAdmin(admin.ModelAdmin):
     @admin.display(description="🧠 Aklındaki", ordering="mind")
@@ -192,10 +202,9 @@ class LeadAdmin(admin.ModelAdmin):
     @admin.display(description="Konum (ipinfo)")
     def lead_location(self, o):
         s = o.session
-        cc = (s.ip_country if s else "") or o.ip_country
-        city = ", ".join(filter(None, [(s.ip_city if s else "") or o.ip_city, s.ip_region if s else ""]))
-        return format_html("{} <strong>{}</strong> {}<br><span style='color:#888'>{}</span>", _flag(cc), cc or "?",
-                           city or "—", ((s.ip_org if s else "") or "")[:40])
+        if s:
+            return _location_html(s)
+        return format_html("{} <strong>{}</strong> {}", _flag(o.ip_country), o.ip_country or "?", o.ip_city or "—")
 
     @admin.display(description="Cihaz / geçmiş")
     def lead_device(self, o):
@@ -419,10 +428,7 @@ class ContactClickAdmin(admin.ModelAdmin):
 
     @admin.display(description="Konum (ipinfo)", ordering="session__ip_country")
     def location(self, o):
-        s = o.session
-        place = ", ".join(filter(None, [s.ip_city, s.ip_region])) or "—"
-        return format_html("{} <strong>{}</strong> {}<br><span style='color:#888'>{}</span>", _flag(s.ip_country),
-                           s.ip_country or "?", place, (s.ip_org or "")[:40])
+        return _location_html(o.session)
 
     @admin.display(description="Cihaz", ordering="session__device_type")
     def device(self, o):

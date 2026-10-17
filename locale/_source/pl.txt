@@ -632,3 +632,40 @@
 631|Dzień dobry, chciałbym/chciałabym porozmawiać przez połączenie WhatsApp.
 632|Zadzwoń do nas przez WhatsApp
 633|Połączenia odbieramy przez WhatsApp — zadzwoń tam (głosowo lub wideo) albo napisz wiadomość.
+634|gabinet-stomatologiczny/
+635|Metro
+636|Pieszo: około %(min)s minut
+637|Taksówką: około %(min)s minut, zależnie od ruchu
+638|Jak dojechać do gabinetu z dzielnicy %(area)s?
+639|Najbliższa stacja metra: Şişli-Mecidiyeköy (M2, M7), około %(km)s km od gabinetu.
+640|Czy gabinet jest otwarty w weekendy?
+641|Tak. Nasz gabinet w Şişli jest otwarty 7 dni w tygodniu, także w soboty i niedziele.
+642|Czy leczycie ekspatów i osoby przebywające w Stambule?
+643|Tak. Wielu naszych pacjentów to ekspaci lub osoby odwiedzające Stambuł. Wyślij zdjęcie lub zdjęcie RTG na WhatsApp, a dentystka odpowie, jakie masz możliwości.
+644|Ile kosztuje leczenie?
+645|Gabinet stomatologiczny w pobliżu dzielnicy %(area)s, Stambuł
+646|Dentysta w pobliżu dzielnicy %(area)s, Stambuł — rodzinny gabinet w Şişli
+647|Szukasz dentysty w pobliżu dzielnicy %(area)s? Nasz rodzinny gabinet stomatologiczny w Şişli jest oddalony o około %(km)s km. Najpierw diagnoza, tylko potrzebne leczenie. Otwarte 7 dni w tygodniu.
+648|Nasz rodzinny gabinet stomatologiczny w Şişli znajduje się około %(km)s km od dzielnicy %(area)s. Dr Dt. Devrim Biriken Sipahi i jej syn Dt. Ekin Sipahi osobiście badają i leczą każdego pacjenta.
+649|Gabinet stomatologiczny w dzielnicy %(area)s, Stambuł
+650|Gabinet stomatologiczny w dzielnicy %(area)s, Stambuł — rodzinni dentyści, otwarte 7 dni
+651|Rodzinny gabinet stomatologiczny w dzielnicy %(area)s, Stambuł. Najpierw diagnoza, tylko potrzebne leczenie. Otwarte 7 dni w tygodniu — wyślij zdjęcie na WhatsApp.
+652|Nasz rodzinny gabinet stomatologiczny znajduje się w dzielnicy %(area)s, Stambuł. Dr Dt. Devrim Biriken Sipahi i jej syn Dt. Ekin Sipahi osobiście badają i leczą każdego pacjenta.
+653|Gabinet stomatologiczny według dzielnicy
+654|Gabinet stomatologiczny blisko Ciebie w Stambule: Şişli, Nişantaşı, Taksim, Levent i inne
+655|Gabinet stomatologiczny blisko Şişli, Nişantaşı, Taksim, Levent i Beşiktaş — Stambuł
+656|Nasz rodzinny gabinet stomatologiczny jest w Şişli w Stambule. Zobacz, jak do nas dotrzeć z Nişantaşı, Taksim, Beşiktaş, Levent, Maslak i innych dzielnic — otwarte 7 dni w tygodniu.
+657|Nasz rodzinny gabinet stomatologiczny jest w Şişli, blisko Nişantaşı, Mecidiyeköy i linii metra M2. Wybierz swoją dzielnicę, aby zobaczyć odległość i najprostszą drogę.
+658|Jak dojechać z dzielnicy %(area)s
+659|Z lotniska w Stambule: metrem M11 do Gayrettepe, potem jedną stację linią M2 do Şişli-Mecidiyeköy.
+660|Wyznacz trasę z dzielnicy %(area)s
+661|Dla pacjentów, którzy mieszkają, pracują lub nocują w okolicy: %(places)s.
+662|Rodzinny gabinet z etycznym podejściem
+663|Dr Dt. Devrim Biriken Sipahi pracuje jako dentystka w Stambule od ponad 35 lat. Jej syn, Dt. Ekin Sipahi, również jest dentystą i pracuje z nią w gabinecie. Każde leczenie zaczyna się od dokładnej diagnozy; zalecamy tylko to, czego potrzebujesz, i dbamy o zdrowe zęby.
+664|Odległość
+665|około %(km)s km
+666|Taksówką
+667|%(min)s min
+668|Leczenie w naszym gabinecie
+669|Inne dzielnice w pobliżu gabinetu
+670|Nasi pacjenci na wideo

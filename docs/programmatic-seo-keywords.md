@@ -26,7 +26,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandturisme/ | Tandturisme: den ærlige guide til 2026 | tandturisme, tandlæge i udlandet |
 | no | https://dentaltourism.tr/no/guide/tannturisme/ | Tannturisme: den ærlige guiden for 2026 | tannturisme, tannlege i utlandet |
 | ro | https://dentaltourism.tr/ro/ghid/turism-dentar/ | Turism dentar: ghidul onest pentru 2026 | turism dentar, dentist in strainatate |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/dentalen-turizam/ | Дентален туризъм: честното ръководство за 2026 г. | дентален туризъм, лечение на зъби в чужбина, зъболекар в чужбина |
 | az | https://dentaltourism.tr/az/beledci/dis-turizmi/ | Diş turizmi: 2026 üçün dürüst bələdçi | diş turizmi, xaricdə diş müalicəsi |
 | tr | https://dentaltourism.tr/tr/rehber/dis-turizmi-rehberi/ | Diş turizmi: 2026 için dürüst rehber | diş turizmi, sağlık turizmi diş |
 
@@ -48,7 +47,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandbehandling-tyrkiet/ | Tandbehandling i Tyrkiet – en tandklinik valgt for kvalitet | tandbehandling tyrkiet, tandklinik tyrkiet |
 | no | https://dentaltourism.tr/no/guide/tannbehandling-tyrkia/ | Tannbehandling i Tyrkia – en tannklinikk valgt for kvalitet | tannbehandling tyrkia, tannklinikk tyrkia |
 | ro | https://dentaltourism.tr/ro/ghid/tratament-dentar-turcia/ | Tratament dentar în Turcia – o clinică stomatologică aleasă pentru calitate | tratament dentar turcia, clinica dentara turcia |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/dentalno-lechenie-v-turtsiya/ | Дентално лечение в Турция — клиника, избрана заради качеството | лечение на зъби в турция, зъболекар в турция, дентална клиника турция |
 | az | https://dentaltourism.tr/az/beledci/turkiyede-dis-mualicesi/ | Türkiyədə diş müalicəsi — keyfiyyətə görə seçilən diş klinikası | türkiyədə diş müalicəsi, türkiyədə diş klinikası |
 | tr | https://dentaltourism.tr/tr/rehber/turkiye-dis-klinigi/ | Türkiye'de diş tedavisi — kalite için seçilen bir diş kliniği | türkiye diş kliniği, yabancı hastalar için diş kliniği, diş turizmi türkiye |
 
@@ -70,7 +68,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/bedste-tandklinik-istanbul/ | Bedste tandklinik i Istanbul? Anmeldelser, de rigtige spørgsmål og vores tilgang | bedste tandklinik istanbul |
 | no | https://dentaltourism.tr/no/guide/beste-tannklinikk-istanbul/ | Beste tannklinikk i Istanbul? Omtaler, de riktige spørsmålene og vår tilnærming | beste tannklinikk istanbul |
 | ro | https://dentaltourism.tr/ro/ghid/cea-mai-buna-clinica-dentara-istanbul/ | Cea mai bună clinică dentară din Istanbul? Recenzii, întrebările potrivite și abordarea noastră | cea mai buna clinica dentara istanbul |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/nay-dobrata-dentalna-klinika-v-istanbul/ | Най-добрата дентална клиника в Истанбул? Отзиви, въпроси и нашият подход | най-добрата дентална клиника в истанбул, добър зъболекар истанбул мнения |
 | az | https://dentaltourism.tr/az/beledci/istanbulda-en-yaxsi-dis-klinikasi/ | İstanbulda ən yaxşı diş klinikası? Rəylər, düzgün suallar və bizim yanaşmamız | istanbulda ən yaxşı diş klinikası |
 | tr | https://dentaltourism.tr/tr/rehber/istanbul-en-iyi-dis-klinigi/ | İstanbul'un en iyi diş kliniği hangisi? Yorumlar, sorulması gereken sorular ve yaklaşımımız | istanbul en iyi diş kliniği, şişli en iyi diş hekimi, istanbul diş kliniği yorumlar |
 
@@ -92,7 +89,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/bedste-tandklinik-tyrkiet-anmeldelser/ | Bedste tandklinik i Tyrkiet 2026? Sådan vælger du – og ægte patientanmeldelser | bedste tandklinik tyrkiet, tandlæge tyrkiet anmeldelser |
 | no | https://dentaltourism.tr/no/guide/beste-tannklinikk-tyrkia-omtaler/ | Beste tannklinikk i Tyrkia 2026? Slik velger du – og ekte pasientomtaler | beste tannklinikk tyrkia, tannlege tyrkia omtaler |
 | ro | https://dentaltourism.tr/ro/ghid/cea-mai-buna-clinica-dentara-turcia-pareri/ | Cea mai bună clinică dentară din Turcia 2026? Cum alegi – și recenzii reale de la pacienți | cea mai buna clinica dentara turcia, dentist turcia pareri |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/nay-dobrata-dentalna-klinika-v-turtsiya-otzivi/ | Най-добрата дентална клиника в Турция 2026? Как да изберете — и реални отзиви | най-добрата дентална клиника в турция, зъболекар турция мнения, зъби в турция отзиви |
 | az | https://dentaltourism.tr/az/beledci/turkiyede-en-yaxsi-dis-klinikasi-reyler/ | Türkiyədə ən yaxşı diş klinikası 2026? Necə seçməli — və real pasiyent rəyləri | türkiyədə ən yaxşı diş klinikası, diş klinikası rəylər |
 | tr | https://dentaltourism.tr/tr/rehber/turkiye-en-iyi-dis-klinigi-yorumlar/ | Türkiye'nin en iyi diş kliniği 2026? Nasıl seçilir — ve gerçek hasta yorumları | dental clinic turkey yorumlar, aesthetic dental turkey clinic yorumlar, en iyi diş kliniği yorumlar, şişli diş hekimi yorumlar |
 
@@ -100,7 +96,7 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 
 | Dil | URL | H1 | Keyword'ler |
 |---|---|---|---|
-| en | https://dentaltourism.tr/guide/dental-clinic-istanbul/ | Dental clinic in Istanbul, Turkey — Şişli, near Taksim | dental clinic in turkey istanbul *($16.99 CPC)*, dental tourism istanbul turkey, dental clinic taksim, turkey dental clinic zeytinburnu, istanbul dental clinic turkey trustpilot, dentist istanbul |
+| en | https://dentaltourism.tr/guide/dental-clinic-istanbul/ | Dental clinic in Istanbul, Turkey — Şişli, near Taksim | dental clinic in turkey istanbul *($16.99 CPC)*, dental clinics in istanbul, dentist in istanbul prices, dental tourism istanbul turkey, dental clinic taksim, turkey dental clinic zeytinburnu, istanbul dental clinic turkey trustpilot, dentist istanbul |
 | de | https://dentaltourism.tr/de/ratgeber/zahnklinik-istanbul/ | Zahnklinik in Istanbul, Türkei – Şişli, nahe Taksim | zahnklinik istanbul, zahnarzt istanbul, zahnarzt istanbul taksim |
 | nl | https://dentaltourism.tr/nl/gids/tandartskliniek-istanbul/ | Tandartskliniek in Istanbul, Turkije – Şişli, bij Taksim | tandarts istanbul, tandartskliniek istanbul |
 | fr | https://dentaltourism.tr/fr/guide/clinique-dentaire-istanbul/ | Clinique dentaire à Istanbul, Turquie – Şişli, près de Taksim | clinique dentaire istanbul, dentiste istanbul |
@@ -114,7 +110,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandklinik-istanbul/ | Tandklinik i Istanbul, Tyrkiet – Şişli, tæt på Taksim | tandklinik istanbul |
 | no | https://dentaltourism.tr/no/guide/tannklinikk-istanbul/ | Tannklinikk i Istanbul, Tyrkia – Şişli, nær Taksim | tannklinikk istanbul |
 | ro | https://dentaltourism.tr/ro/ghid/clinica-dentara-istanbul/ | Clinică stomatologică în Istanbul, Turcia – Şişli, lângă Taksim | clinica dentara istanbul |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/dentalna-klinika-istanbul/ | Дентална клиника в Истанбул, Турция — Шишли, близо до Таксим | дентална клиника истанбул, зъболекар истанбул |
 | az | https://dentaltourism.tr/az/beledci/istanbul-dis-klinikasi/ | İstanbulda diş klinikası — Şişli, Taksimə yaxın | istanbul diş klinikası |
 | tr | https://dentaltourism.tr/tr/rehber/istanbul-dis-klinigi-sisli/ | İstanbul Şişli diş kliniği — Osmanbey, Taksim'e bir durak | şişli diş kliniği, taksim diş kliniği, osmanbey diş hekimi, zeytinburnu diş kliniği, hafta sonu açık diş hekimi şişli |
 
@@ -136,7 +131,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandlaege-antalya-side-alanya/ | Tandlæge i Antalya, Side, Belek eller Alanya? En kort flyvning til Istanbul | tandlæge antalya |
 | no | https://dentaltourism.tr/no/guide/tannlege-antalya-side-alanya/ | Tannlege i Antalya, Side, Belek eller Alanya? En kort flytur til Istanbul | tannlege antalya |
 | ro | https://dentaltourism.tr/ro/ghid/dentist-antalya-side-alanya/ | Dentist în Antalya, Side, Belek sau Alanya? Un zbor scurt până la Istanbul | dentist antalya |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/zabolekar-antalya-side-alanya/ | Зъболекар в Анталия, Сиде, Белек или Алания? Кратък полет до Истанбул | зъболекар анталия, зъболекар алания, зъболекар сиде |
 | az | https://dentaltourism.tr/az/beledci/antalya-dis-mualicesi/ | Antalya, Side, Belek və ya Alanyada stomatoloq? İstanbula qısa uçuş | antalya diş klinikası |
 | tr | https://dentaltourism.tr/tr/rehber/antalya-tatilinde-dis-tedavisi/ | Antalya, Side, Belek veya Alanya'da diş tedavisi mi? İstanbul'a kısa bir uçuş | antalya diş kliniği, alanya diş hekimi, side diş kliniği |
 
@@ -158,7 +152,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandlaege-bodrum-marmaris-izmir/ | Tandlæge i Bodrum, Marmaris, Izmir eller Kuşadası? Kombiner ferien med Istanbul | tandlæge marmaris |
 | no | https://dentaltourism.tr/no/guide/tannlege-bodrum-marmaris-izmir/ | Tannlege i Bodrum, Marmaris, Izmir eller Kuşadası? Kombiner ferien med Istanbul | tannlege marmaris |
 | ro | https://dentaltourism.tr/ro/ghid/dentist-bodrum-marmaris-izmir/ | Dentist în Bodrum, Marmaris, Izmir sau Kuşadası? Combină vacanța cu Istanbulul | dentist bodrum |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/zabolekar-bodrum-marmaris-izmir/ | Зъболекар в Бодрум, Мармарис, Измир или Кушадасъ? Съчетайте почивката с Истанбул | зъболекар бодрум, зъболекар мармарис, зъболекар измир |
 | az | https://dentaltourism.tr/az/beledci/bodrum-marmaris-izmir-dis-mualicesi/ | Bodrum, Marmaris, İzmir və ya Kuşadasıda stomatoloq? İstirahəti İstanbulla birləşdirin | izmir diş klinikası |
 | tr | https://dentaltourism.tr/tr/rehber/bodrum-marmaris-izmir-kusadasi-dis-tedavisi/ | Bodrum, Marmaris, İzmir veya Kuşadası'nda diş kliniği mi? Tatilinizi İstanbul'la birleştirin | marmaris diş kliniği, bodrum diş kliniği, izmir en iyi diş kliniği, kuşadası diş kliniği |
 
@@ -180,7 +173,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandlaege-ankara-eller-istanbul/ | Tandlæge i Ankara eller Istanbul? Det skal du overveje | tandlæge ankara |
 | no | https://dentaltourism.tr/no/guide/tannlege-ankara-eller-istanbul/ | Tannlege i Ankara eller Istanbul? Dette bør du vurdere | tannlege ankara |
 | ro | https://dentaltourism.tr/ro/ghid/dentist-ankara-sau-istanbul/ | Dentist în Ankara sau în Istanbul? La ce să fii atent | dentist ankara |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/zabolekar-ankara-ili-istanbul/ | Дентална клиника в Анкара или Истанбул? Какво да имате предвид | зъболекар анкара |
 | az | https://dentaltourism.tr/az/beledci/ankara-ve-istanbul-dis-mualicesi/ | Ankarada, yoxsa İstanbulda stomatoloq? Nəyə diqqət etməli | ankara diş klinikası |
 | tr | https://dentaltourism.tr/tr/rehber/ankaradan-istanbula-dis-tedavisi/ | Ankara'da mı, İstanbul'da mı diş tedavisi? Nelere dikkat etmeli | ankara diş kliniği, ankaradan istanbula diş tedavisi |
 
@@ -202,7 +194,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/bedste-land-til-tandturisme/ | Bedste land til tandturisme i 2026: Tyrkiet, Ungarn, Mexico, Thailand og flere | bedste land til tandbehandling, tandlæge ungarn eller tyrkiet |
 | no | https://dentaltourism.tr/no/guide/beste-land-for-tannturisme/ | Beste land for tannturisme i 2026: Tyrkia, Ungarn, Mexico, Thailand og flere | beste land for tannbehandling, tannlege ungarn eller tyrkia |
 | ro | https://dentaltourism.tr/ro/ghid/cea-mai-buna-tara-turism-dentar/ | Cea mai bună țară pentru turism dentar în 2026: Turcia, Ungaria, Mexic, Thailanda și altele | cea mai bună țară pentru turism dentar, dentist ungaria sau turcia |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/nay-dobrata-strana-za-dentalen-turizam/ | Най-добрата страна за дентален туризъм през 2026 г.: Турция срещу Мексико, Тайланд, Унгария и други | най-добрата страна за дентален туризъм, зъби в турция или унгария |
 | az | https://dentaltourism.tr/az/beledci/dis-turizmi-ucun-en-yaxsi-olke/ | 2026-cı ildə diş turizmi üçün ən yaxşı ölkə: Türkiyə, Macarıstan, Meksika, Tayland və digərləri | diş turizmi üçün ən yaxşı ölkə |
 | tr | https://dentaltourism.tr/tr/rehber/dis-turizmi-icin-en-iyi-ulke/ | 2026'da diş turizmi için en iyi ülke: Türkiye, Macaristan, Meksika, Tayland ve diğerleri | diş turizmi için en iyi ülke, türkiye macaristan diş karşılaştırma |
 
@@ -224,7 +215,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/faa-lavet-taender-i-tyrkiet/ | Få lavet tænder i Tyrkiet – en ærlig guide | få lavet tænder i tyrkiet |
 | no | https://dentaltourism.tr/no/guide/fikse-tennene-i-tyrkia/ | Fikse tennene i Tyrkia – en ærlig guide | fikse tennene i tyrkia |
 | ro | https://dentaltourism.tr/ro/ghid/sa-iti-faci-dintii-in-turcia/ | Să-ți faci dinții în Turcia – un ghid onest | sa-ti faci dintii in turcia |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/zabi-v-turtsiya/ | Да си направите зъбите в Турция — честно ръководство | правене на зъби в турция, зъби в турция |
 | az | https://dentaltourism.tr/az/beledci/turkiyede-dis-etdirmek/ | Türkiyədə diş etdirmək — dürüst bələdçi | türkiyədə diş etdirmək |
 | tr | https://dentaltourism.tr/tr/rehber/turkiyede-dis-yaptirmak-rehber/ | Türkiye'de diş yaptırmak — dürüst bir rehber | türkiyede diş yaptırmak, yurt dışından türkiyeye diş tedavisi |
 
@@ -246,7 +236,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandkirurgi-tyrkiet/ | Tandkirurgi i Tyrkiet – implantater, udtrækninger og visdomstænder | tandkirurgi tyrkiet |
 | no | https://dentaltourism.tr/no/guide/tannkirurgi-tyrkia/ | Tannkirurgi i Tyrkia – implantater, trekking og visdomstenner | tannkirurgi tyrkia |
 | ro | https://dentaltourism.tr/ro/ghid/chirurgie-dentara-turcia/ | Chirurgie dentară în Turcia – implanturi, extracții și măsele de minte | chirurgie dentara turcia |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/dentalna-hirurgiya-turtsiya/ | Дентална хирургия в Турция — импланти, екстракции и мъдреци | дентална хирургия турция, вадене на мъдрец турция |
 | az | https://dentaltourism.tr/az/beledci/turkiyede-dis-cerrahiyyesi/ | Türkiyədə diş cərrahiyyəsi — implantlar, çəkim və ağıl dişləri | türkiyədə diş cərrahiyyəsi |
 | tr | https://dentaltourism.tr/tr/rehber/agiz-dis-cerrahisi-istanbul/ | İstanbul'da ağız ve diş cerrahisi — implant, diş çekimi ve yirmilik dişler | ağız diş cerrahisi istanbul, yirmilik diş çekimi şişli |
 
@@ -268,7 +257,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/garanti-efterbehandling-tyrkiet/ | Garanti, efterbehandling og betaling ved tandbehandling i Tyrkiet | tandbehandling tyrkiet garanti |
 | no | https://dentaltourism.tr/no/guide/garanti-oppfolging-tannbehandling-tyrkia/ | Garanti, oppfølging og betaling ved tannbehandling i Tyrkia | tannbehandling tyrkia garanti |
 | ro | https://dentaltourism.tr/ro/ghid/garantie-tratament-dentar-turcia/ | Garanție, îngrijire ulterioară și plată pentru tratamentul dentar în Turcia | tratament dentar turcia garantie |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/garantsiya-dentalno-lechenie-turtsiya/ | Гаранция, последваща грижа и плащане за дентално лечение в Турция | лечение на зъби турция гаранция |
 | az | https://dentaltourism.tr/az/beledci/dis-mualicesi-zemanet/ | Türkiyədə diş müalicəsi üçün zəmanət, sonrakı nəzarət və ödəniş | diş müalicəsi zəmanət |
 | tr | https://dentaltourism.tr/tr/rehber/dis-tedavisi-garanti-takip/ | Diş tedavisinde garanti, takip ve ödeme | diş tedavisi garanti, implant garantisi |
 
@@ -290,7 +278,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/foer-og-efter-taender/ | Før og efter – smilgalleri og guide til tandfarver | tænder før og efter tyrkiet |
 | no | https://dentaltourism.tr/no/guide/for-og-etter-tenner/ | Før og etter – smilgalleri og guide til tannfarger | tenner før og etter tyrkia |
 | ro | https://dentaltourism.tr/ro/ghid/inainte-si-dupa-dinti/ | Înainte și după – galerie de zâmbete și ghid al nuanțelor dinților | dinti inainte si dupa turcia |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/predi-i-sled-zabi/ | Преди и след — галерия на усмивки и ръководство за цвета на зъбите | зъби преди и след турция |
 | az | https://dentaltourism.tr/az/beledci/evvel-ve-sonra-disler/ | Əvvəl və sonra — təbəssüm qalereyası və diş rəngləri bələdçisi | dişlər əvvəl və sonra |
 | tr | https://dentaltourism.tr/tr/rehber/once-sonra-gulus-galerisi/ | Öncesi ve sonrası — gülüş galerisi ve diş rengi rehberi | diş önce sonra, gülüş tasarımı önce sonra, diş renk skalası |
 
@@ -312,7 +299,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/tandturisme-bureau-partner/ | Tandturisme-bureau i Tyrkiet? Samarbejd direkte med vores klinik | tandturisme bureau |
 | no | https://dentaltourism.tr/no/guide/tannturisme-byra-partner/ | Tannturismebyrå for Tyrkia? Samarbeid direkte med klinikken vår | tannturisme byrå |
 | ro | https://dentaltourism.tr/ro/ghid/agentie-turism-dentar-partener/ | Agenție de turism dentar în Turcia? Lucrează direct cu clinica noastră | agenție turism dentar |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/agentsiya-za-dentalen-turizam/ | Агенция за дентален туризъм в Турция? Работете директно с нашата клиника | агенция за дентален туризъм |
 | az | https://dentaltourism.tr/az/beledci/dis-turizmi-agentliyi/ | Türkiyədə diş turizmi agentliyi? Birbaşa klinikamızla işləyin | diş turizmi agentliyi |
 | tr | https://dentaltourism.tr/tr/rehber/dis-turizmi-acentesi-is-birligi/ | Diş turizmi acentesi misiniz? Doğrudan kliniğimizle çalışın | diş turizmi acentesi, sağlık turizmi acentesi iş birliği |
 
@@ -334,7 +320,6 @@ Kurallar: sayfalarda **fiyat rakamı yok** ("oldukça uygun, telefon/WhatsApp'ta
 | da | https://dentaltourism.tr/da/guide/istanbul-guide-til-tandpatienter/ | Istanbul for tandpatienter: hvor du skal bo, og hvilke områder du skal undgå | istanbul områder at undgå |
 | no | https://dentaltourism.tr/no/guide/istanbul-guide-for-tannpasienter/ | Istanbul for tannpasienter: hvor du bør bo og hvilke områder du bør unngå | istanbul områder å unngå |
 | ro | https://dentaltourism.tr/ro/ghid/ghid-istanbul-pacienti-dentari/ | Istanbul pentru pacienții dentari: unde să stai și ce zone să eviți | zone de evitat istanbul |
-| bg | https://dentaltourism.tr/bg/rakovodstvo/patevoditel-istanbul-za-dentalni-patsienti/ | Пътеводител за Истанбул за дентални пациенти: къде да отседнете и кои квартали да избягвате | опасни квартали в истанбул, къде да отседна в истанбул |
 | az | https://dentaltourism.tr/az/beledci/dis-xestereri-ucun-istanbul-beledcisi/ | Diş pasiyentləri üçün İstanbul: harada qalmalı və hansı rayonlardan qaçmalı | istanbulda təhlükəli rayonlar |
 | tr | https://dentaltourism.tr/tr/rehber/dis-hastalari-icin-istanbul-rehberi/ | Diş tedavisi için İstanbul'a gelenlere rehber: nerede kalınır, nerelerden uzak durulur | istanbul'da kalınacak yerler diş tedavisi |
 
@@ -442,20 +427,248 @@ Ek (EN, "best … clinic in Istanbul" bölümü):
 | tr | https://dentaltourism.tr/tr/dis-tatili/almanya/ | almanya türkiye diş tedavisi, berlin istanbul diş tedavisi, frankfurt istanbul diş tedavisi, münchen istanbul diş tedavisi |
 | tr | https://dentaltourism.tr/tr/dis-tatili/hollanda/ | hollanda türkiye diş tedavisi, amsterdam istanbul diş tedavisi, rotterdam istanbul diş tedavisi, eindhoven istanbul diş tedavisi |
 
+### Semt sayfaları — `/<dil>/<dental-clinic>/<semt>/` (klinik Şişli'de; diğerleri "near")
+
+Hub keyword'leri: en: dental clinics in istanbul, dentist near me istanbul, dentist in istanbul, dental clinic istanbul european side; tr: şişli diş kliniği, yakınımdaki diş kliniği istanbul, avrupa yakası diş kliniği
+
+| Dil | URL | Keyword'ler |
+|---|---|---|
+| en | https://dentaltourism.tr/dental-clinic/sisli/ | dental clinic şişli, dental clinic sisli, dentist şişli, dentist in şişli, dental clinic near şişli, şişli dentist, dental şişli, teeth whitening şişli, dental implant şişli |
+| en | https://dentaltourism.tr/dental-clinic/osmanbey/ | dental clinic osmanbey, dentist osmanbey, dentist in osmanbey, dental clinic near osmanbey, osmanbey dentist, dental osmanbey, teeth whitening osmanbey, dental implant osmanbey |
+| en | https://dentaltourism.tr/dental-clinic/nisantasi/ | dental clinic nişantaşı, dental clinic nisantasi, dentist nişantaşı, dentist in nişantaşı, dental clinic near nişantaşı, nişantaşı dentist, dental nişantaşı, teeth whitening nişantaşı, dental implant nişantaşı |
+| en | https://dentaltourism.tr/dental-clinic/taksim/ | dental clinic taksim, dentist taksim, dentist in taksim, dental clinic near taksim, taksim dentist, dental taksim, teeth whitening taksim, dental implant taksim |
+| en | https://dentaltourism.tr/dental-clinic/mecidiyekoy/ | dental clinic mecidiyeköy, dental clinic mecidiyekoy, dentist mecidiyeköy, dentist in mecidiyeköy, dental clinic near mecidiyeköy, mecidiyeköy dentist, dental mecidiyeköy, teeth whitening mecidiyeköy, dental implant mecidiyeköy |
+| en | https://dentaltourism.tr/dental-clinic/gayrettepe/ | dental clinic gayrettepe, dentist gayrettepe, dentist in gayrettepe, dental clinic near gayrettepe, gayrettepe dentist, dental gayrettepe, teeth whitening gayrettepe, dental implant gayrettepe |
+| en | https://dentaltourism.tr/dental-clinic/kagithane/ | dental clinic kağıthane, dental clinic kagithane, dentist kağıthane, dentist in kağıthane, dental clinic near kağıthane, kağıthane dentist, dental kağıthane, teeth whitening kağıthane, dental implant kağıthane |
+| en | https://dentaltourism.tr/dental-clinic/besiktas/ | dental clinic beşiktaş, dental clinic besiktas, dentist beşiktaş, dentist in beşiktaş, dental clinic near beşiktaş, beşiktaş dentist, dental beşiktaş, teeth whitening beşiktaş, dental implant beşiktaş |
+| en | https://dentaltourism.tr/dental-clinic/ortakoy/ | dental clinic ortaköy, dental clinic ortakoy, dentist ortaköy, dentist in ortaköy, dental clinic near ortaköy, ortaköy dentist, dental ortaköy, teeth whitening ortaköy, dental implant ortaköy |
+| en | https://dentaltourism.tr/dental-clinic/levent/ | dental clinic levent, dentist levent, dentist in levent, dental clinic near levent, levent dentist, dental levent, teeth whitening levent, dental implant levent |
+| en | https://dentaltourism.tr/dental-clinic/4-levent/ | dental clinic 4. levent, dentist 4. levent, dentist in 4. levent, dental clinic near 4. levent, 4. levent dentist, dental 4. levent, teeth whitening 4. levent, dental implant 4. levent |
+| en | https://dentaltourism.tr/dental-clinic/etiler/ | dental clinic etiler, dentist etiler, dentist in etiler, dental clinic near etiler, etiler dentist, dental etiler, teeth whitening etiler, dental implant etiler |
+| en | https://dentaltourism.tr/dental-clinic/maslak/ | dental clinic maslak, dentist maslak, dentist in maslak, dental clinic near maslak, maslak dentist, dental maslak, teeth whitening maslak, dental implant maslak |
+| de | https://dentaltourism.tr/de/zahnklinik/sisli/ | zahnarzt şişli, zahnarzt sisli, zahnklinik şişli, zahnarzt şişli istanbul, bleaching şişli |
+| de | https://dentaltourism.tr/de/zahnklinik/osmanbey/ | zahnarzt osmanbey, zahnklinik osmanbey, zahnarzt osmanbey istanbul, bleaching osmanbey |
+| de | https://dentaltourism.tr/de/zahnklinik/nisantasi/ | zahnarzt nişantaşı, zahnarzt nisantasi, zahnklinik nişantaşı, zahnarzt nişantaşı istanbul, bleaching nişantaşı |
+| de | https://dentaltourism.tr/de/zahnklinik/taksim/ | zahnarzt taksim, zahnklinik taksim, zahnarzt taksim istanbul, bleaching taksim |
+| de | https://dentaltourism.tr/de/zahnklinik/mecidiyekoy/ | zahnarzt mecidiyeköy, zahnarzt mecidiyekoy, zahnklinik mecidiyeköy, zahnarzt mecidiyeköy istanbul, bleaching mecidiyeköy |
+| de | https://dentaltourism.tr/de/zahnklinik/gayrettepe/ | zahnarzt gayrettepe, zahnklinik gayrettepe, zahnarzt gayrettepe istanbul, bleaching gayrettepe |
+| de | https://dentaltourism.tr/de/zahnklinik/kagithane/ | zahnarzt kağıthane, zahnarzt kagithane, zahnklinik kağıthane, zahnarzt kağıthane istanbul, bleaching kağıthane |
+| de | https://dentaltourism.tr/de/zahnklinik/besiktas/ | zahnarzt beşiktaş, zahnarzt besiktas, zahnklinik beşiktaş, zahnarzt beşiktaş istanbul, bleaching beşiktaş |
+| de | https://dentaltourism.tr/de/zahnklinik/ortakoy/ | zahnarzt ortaköy, zahnarzt ortakoy, zahnklinik ortaköy, zahnarzt ortaköy istanbul, bleaching ortaköy |
+| de | https://dentaltourism.tr/de/zahnklinik/levent/ | zahnarzt levent, zahnklinik levent, zahnarzt levent istanbul, bleaching levent |
+| de | https://dentaltourism.tr/de/zahnklinik/4-levent/ | zahnarzt 4. levent, zahnklinik 4. levent, zahnarzt 4. levent istanbul, bleaching 4. levent |
+| de | https://dentaltourism.tr/de/zahnklinik/etiler/ | zahnarzt etiler, zahnklinik etiler, zahnarzt etiler istanbul, bleaching etiler |
+| de | https://dentaltourism.tr/de/zahnklinik/maslak/ | zahnarzt maslak, zahnklinik maslak, zahnarzt maslak istanbul, bleaching maslak |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/sisli/ | tandarts şişli, tandarts sisli, tandartskliniek şişli, tandarts şişli istanbul |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/osmanbey/ | tandarts osmanbey, tandartskliniek osmanbey, tandarts osmanbey istanbul |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/nisantasi/ | tandarts nişantaşı, tandarts nisantasi, tandartskliniek nişantaşı, tandarts nişantaşı istanbul |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/taksim/ | tandarts taksim, tandartskliniek taksim, tandarts taksim istanbul |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/mecidiyekoy/ | tandarts mecidiyeköy, tandarts mecidiyekoy, tandartskliniek mecidiyeköy, tandarts mecidiyeköy istanbul |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/gayrettepe/ | tandarts gayrettepe, tandartskliniek gayrettepe, tandarts gayrettepe istanbul |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/kagithane/ | tandarts kağıthane, tandarts kagithane, tandartskliniek kağıthane, tandarts kağıthane istanbul |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/besiktas/ | tandarts beşiktaş, tandarts besiktas, tandartskliniek beşiktaş, tandarts beşiktaş istanbul |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/ortakoy/ | tandarts ortaköy, tandarts ortakoy, tandartskliniek ortaköy, tandarts ortaköy istanbul |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/levent/ | tandarts levent, tandartskliniek levent, tandarts levent istanbul |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/4-levent/ | tandarts 4. levent, tandartskliniek 4. levent, tandarts 4. levent istanbul |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/etiler/ | tandarts etiler, tandartskliniek etiler, tandarts etiler istanbul |
+| nl | https://dentaltourism.tr/nl/tandartspraktijk/maslak/ | tandarts maslak, tandartskliniek maslak, tandarts maslak istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/sisli/ | dentiste şişli, dentiste sisli, clinique dentaire şişli, dentiste şişli istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/osmanbey/ | dentiste osmanbey, clinique dentaire osmanbey, dentiste osmanbey istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/nisantasi/ | dentiste nişantaşı, dentiste nisantasi, clinique dentaire nişantaşı, dentiste nişantaşı istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/taksim/ | dentiste taksim, clinique dentaire taksim, dentiste taksim istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/mecidiyekoy/ | dentiste mecidiyeköy, dentiste mecidiyekoy, clinique dentaire mecidiyeköy, dentiste mecidiyeköy istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/gayrettepe/ | dentiste gayrettepe, clinique dentaire gayrettepe, dentiste gayrettepe istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/kagithane/ | dentiste kağıthane, dentiste kagithane, clinique dentaire kağıthane, dentiste kağıthane istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/besiktas/ | dentiste beşiktaş, dentiste besiktas, clinique dentaire beşiktaş, dentiste beşiktaş istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/ortakoy/ | dentiste ortaköy, dentiste ortakoy, clinique dentaire ortaköy, dentiste ortaköy istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/levent/ | dentiste levent, clinique dentaire levent, dentiste levent istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/4-levent/ | dentiste 4. levent, clinique dentaire 4. levent, dentiste 4. levent istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/etiler/ | dentiste etiler, clinique dentaire etiler, dentiste etiler istanbul |
+| fr | https://dentaltourism.tr/fr/cabinet-dentaire/maslak/ | dentiste maslak, clinique dentaire maslak, dentiste maslak istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/sisli/ | dentista şişli, dentista sisli, clinica dentale şişli, dentista şişli istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/osmanbey/ | dentista osmanbey, clinica dentale osmanbey, dentista osmanbey istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/nisantasi/ | dentista nişantaşı, dentista nisantasi, clinica dentale nişantaşı, dentista nişantaşı istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/taksim/ | dentista taksim, clinica dentale taksim, dentista taksim istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/mecidiyekoy/ | dentista mecidiyeköy, dentista mecidiyekoy, clinica dentale mecidiyeköy, dentista mecidiyeköy istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/gayrettepe/ | dentista gayrettepe, clinica dentale gayrettepe, dentista gayrettepe istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/kagithane/ | dentista kağıthane, dentista kagithane, clinica dentale kağıthane, dentista kağıthane istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/besiktas/ | dentista beşiktaş, dentista besiktas, clinica dentale beşiktaş, dentista beşiktaş istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/ortakoy/ | dentista ortaköy, dentista ortakoy, clinica dentale ortaköy, dentista ortaköy istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/levent/ | dentista levent, clinica dentale levent, dentista levent istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/4-levent/ | dentista 4. levent, clinica dentale 4. levent, dentista 4. levent istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/etiler/ | dentista etiler, clinica dentale etiler, dentista etiler istanbul |
+| it | https://dentaltourism.tr/it/studio-dentistico/maslak/ | dentista maslak, clinica dentale maslak, dentista maslak istanbul |
+| es | https://dentaltourism.tr/es/clinica-dental/sisli/ | dentista şişli, dentista sisli, clínica dental şişli, dentista şişli estambul |
+| es | https://dentaltourism.tr/es/clinica-dental/osmanbey/ | dentista osmanbey, clínica dental osmanbey, dentista osmanbey estambul |
+| es | https://dentaltourism.tr/es/clinica-dental/nisantasi/ | dentista nişantaşı, dentista nisantasi, clínica dental nişantaşı, dentista nişantaşı estambul |
+| es | https://dentaltourism.tr/es/clinica-dental/taksim/ | dentista taksim, clínica dental taksim, dentista taksim estambul |
+| es | https://dentaltourism.tr/es/clinica-dental/mecidiyekoy/ | dentista mecidiyeköy, dentista mecidiyekoy, clínica dental mecidiyeköy, dentista mecidiyeköy estambul |
+| es | https://dentaltourism.tr/es/clinica-dental/gayrettepe/ | dentista gayrettepe, clínica dental gayrettepe, dentista gayrettepe estambul |
+| es | https://dentaltourism.tr/es/clinica-dental/kagithane/ | dentista kağıthane, dentista kagithane, clínica dental kağıthane, dentista kağıthane estambul |
+| es | https://dentaltourism.tr/es/clinica-dental/besiktas/ | dentista beşiktaş, dentista besiktas, clínica dental beşiktaş, dentista beşiktaş estambul |
+| es | https://dentaltourism.tr/es/clinica-dental/ortakoy/ | dentista ortaköy, dentista ortakoy, clínica dental ortaköy, dentista ortaköy estambul |
+| es | https://dentaltourism.tr/es/clinica-dental/levent/ | dentista levent, clínica dental levent, dentista levent estambul |
+| es | https://dentaltourism.tr/es/clinica-dental/4-levent/ | dentista 4. levent, clínica dental 4. levent, dentista 4. levent estambul |
+| es | https://dentaltourism.tr/es/clinica-dental/etiler/ | dentista etiler, clínica dental etiler, dentista etiler estambul |
+| es | https://dentaltourism.tr/es/clinica-dental/maslak/ | dentista maslak, clínica dental maslak, dentista maslak estambul |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/sisli/ | dentysta şişli, dentysta sisli, klinika stomatologiczna şişli, dentysta şişli stambuł |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/osmanbey/ | dentysta osmanbey, klinika stomatologiczna osmanbey, dentysta osmanbey stambuł |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/nisantasi/ | dentysta nişantaşı, dentysta nisantasi, klinika stomatologiczna nişantaşı, dentysta nişantaşı stambuł |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/taksim/ | dentysta taksim, klinika stomatologiczna taksim, dentysta taksim stambuł |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/mecidiyekoy/ | dentysta mecidiyeköy, dentysta mecidiyekoy, klinika stomatologiczna mecidiyeköy, dentysta mecidiyeköy stambuł |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/gayrettepe/ | dentysta gayrettepe, klinika stomatologiczna gayrettepe, dentysta gayrettepe stambuł |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/kagithane/ | dentysta kağıthane, dentysta kagithane, klinika stomatologiczna kağıthane, dentysta kağıthane stambuł |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/besiktas/ | dentysta beşiktaş, dentysta besiktas, klinika stomatologiczna beşiktaş, dentysta beşiktaş stambuł |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/ortakoy/ | dentysta ortaköy, dentysta ortakoy, klinika stomatologiczna ortaköy, dentysta ortaköy stambuł |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/levent/ | dentysta levent, klinika stomatologiczna levent, dentysta levent stambuł |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/4-levent/ | dentysta 4. levent, klinika stomatologiczna 4. levent, dentysta 4. levent stambuł |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/etiler/ | dentysta etiler, klinika stomatologiczna etiler, dentysta etiler stambuł |
+| pl | https://dentaltourism.tr/pl/gabinet-stomatologiczny/maslak/ | dentysta maslak, klinika stomatologiczna maslak, dentysta maslak stambuł |
+| ru | https://dentaltourism.tr/ru/stomatologiya/sisli/ | стоматология шишли, стоматолог шишли, зубной врач шишли, стоматология шишли стамбул |
+| ru | https://dentaltourism.tr/ru/stomatologiya/osmanbey/ | стоматология османбей, стоматолог османбей, зубной врач османбей, стоматология османбей стамбул |
+| ru | https://dentaltourism.tr/ru/stomatologiya/nisantasi/ | стоматология нишанташи, стоматолог нишанташи, зубной врач нишанташи, стоматология нишанташи стамбул |
+| ru | https://dentaltourism.tr/ru/stomatologiya/taksim/ | стоматология таксим, стоматолог таксим, зубной врач таксим, стоматология таксим стамбул |
+| ru | https://dentaltourism.tr/ru/stomatologiya/mecidiyekoy/ | стоматология меджидиекёй, стоматолог меджидиекёй, зубной врач меджидиекёй, стоматология меджидиекёй стамбул |
+| ru | https://dentaltourism.tr/ru/stomatologiya/gayrettepe/ | стоматология гайреттепе, стоматолог гайреттепе, зубной врач гайреттепе, стоматология гайреттепе стамбул |
+| ru | https://dentaltourism.tr/ru/stomatologiya/kagithane/ | стоматология кягытхане, стоматолог кягытхане, зубной врач кягытхане, стоматология кягытхане стамбул |
+| ru | https://dentaltourism.tr/ru/stomatologiya/besiktas/ | стоматология бешикташ, стоматолог бешикташ, зубной врач бешикташ, стоматология бешикташ стамбул |
+| ru | https://dentaltourism.tr/ru/stomatologiya/ortakoy/ | стоматология ортакёй, стоматолог ортакёй, зубной врач ортакёй, стоматология ортакёй стамбул |
+| ru | https://dentaltourism.tr/ru/stomatologiya/levent/ | стоматология левент, стоматолог левент, зубной врач левент, стоматология левент стамбул |
+| ru | https://dentaltourism.tr/ru/stomatologiya/4-levent/ | стоматология 4-й левент, стоматолог 4-й левент, зубной врач 4-й левент, стоматология 4-й левент стамбул |
+| ru | https://dentaltourism.tr/ru/stomatologiya/etiler/ | стоматология этилер, стоматолог этилер, зубной врач этилер, стоматология этилер стамбул |
+| ru | https://dentaltourism.tr/ru/stomatologiya/maslak/ | стоматология маслак, стоматолог маслак, зубной врач маслак, стоматология маслак стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/sisli/ | стоматологія шишлі, стоматолог шишлі, стоматологія шишлі стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/osmanbey/ | стоматологія османбей, стоматолог османбей, стоматологія османбей стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/nisantasi/ | стоматологія нішанташи, стоматолог нішанташи, стоматологія нішанташи стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/taksim/ | стоматологія таксим, стоматолог таксим, стоматологія таксим стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/mecidiyekoy/ | стоматологія меджидієкьой, стоматолог меджидієкьой, стоматологія меджидієкьой стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/gayrettepe/ | стоматологія гайреттепе, стоматолог гайреттепе, стоматологія гайреттепе стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/kagithane/ | стоматологія кягитхане, стоматолог кягитхане, стоматологія кягитхане стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/besiktas/ | стоматологія бешикташ, стоматолог бешикташ, стоматологія бешикташ стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/ortakoy/ | стоматологія ортакьой, стоматолог ортакьой, стоматологія ортакьой стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/levent/ | стоматологія левент, стоматолог левент, стоматологія левент стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/4-levent/ | стоматологія 4-й левент, стоматолог 4-й левент, стоматологія 4-й левент стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/etiler/ | стоматологія етілер, стоматолог етілер, стоматологія етілер стамбул |
+| uk | https://dentaltourism.tr/uk/stomatolohiya/maslak/ | стоматологія маслак, стоматолог маслак, стоматологія маслак стамбул |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/sisli/ | عيادة أسنان شيشلي, طبيب أسنان شيشلي, عيادة أسنان في شيشلي إسطنبول |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/osmanbey/ | عيادة أسنان عثمان باي, طبيب أسنان عثمان باي, عيادة أسنان في عثمان باي إسطنبول |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/nisantasi/ | عيادة أسنان نيشانتاشي, طبيب أسنان نيشانتاشي, عيادة أسنان في نيشانتاشي إسطنبول |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/taksim/ | عيادة أسنان تقسيم, طبيب أسنان تقسيم, عيادة أسنان في تقسيم إسطنبول |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/mecidiyekoy/ | عيادة أسنان مجيدية كوي, طبيب أسنان مجيدية كوي, عيادة أسنان في مجيدية كوي إسطنبول |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/gayrettepe/ | عيادة أسنان غايرت تبه, طبيب أسنان غايرت تبه, عيادة أسنان في غايرت تبه إسطنبول |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/kagithane/ | عيادة أسنان كاغيتهانه, طبيب أسنان كاغيتهانه, عيادة أسنان في كاغيتهانه إسطنبول |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/besiktas/ | عيادة أسنان بشكتاش, طبيب أسنان بشكتاش, عيادة أسنان في بشكتاش إسطنبول |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/ortakoy/ | عيادة أسنان أورتاكوي, طبيب أسنان أورتاكوي, عيادة أسنان في أورتاكوي إسطنبول |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/levent/ | عيادة أسنان ليفنت, طبيب أسنان ليفنت, عيادة أسنان في ليفنت إسطنبول |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/4-levent/ | عيادة أسنان ليفنت 4, طبيب أسنان ليفنت 4, عيادة أسنان في ليفنت 4 إسطنبول |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/etiler/ | عيادة أسنان إتيلر, طبيب أسنان إتيلر, عيادة أسنان في إتيلر إسطنبول |
+| ar | https://dentaltourism.tr/ar/iyadat-asnan/maslak/ | عيادة أسنان مسلك, طبيب أسنان مسلك, عيادة أسنان في مسلك إسطنبول |
+| sv | https://dentaltourism.tr/sv/tandklinik/sisli/ | tandläkare şişli, tandläkare sisli, tandklinik şişli, tandläkare şişli istanbul |
+| sv | https://dentaltourism.tr/sv/tandklinik/osmanbey/ | tandläkare osmanbey, tandklinik osmanbey, tandläkare osmanbey istanbul |
+| sv | https://dentaltourism.tr/sv/tandklinik/nisantasi/ | tandläkare nişantaşı, tandläkare nisantasi, tandklinik nişantaşı, tandläkare nişantaşı istanbul |
+| sv | https://dentaltourism.tr/sv/tandklinik/taksim/ | tandläkare taksim, tandklinik taksim, tandläkare taksim istanbul |
+| sv | https://dentaltourism.tr/sv/tandklinik/mecidiyekoy/ | tandläkare mecidiyeköy, tandläkare mecidiyekoy, tandklinik mecidiyeköy, tandläkare mecidiyeköy istanbul |
+| sv | https://dentaltourism.tr/sv/tandklinik/gayrettepe/ | tandläkare gayrettepe, tandklinik gayrettepe, tandläkare gayrettepe istanbul |
+| sv | https://dentaltourism.tr/sv/tandklinik/kagithane/ | tandläkare kağıthane, tandläkare kagithane, tandklinik kağıthane, tandläkare kağıthane istanbul |
+| sv | https://dentaltourism.tr/sv/tandklinik/besiktas/ | tandläkare beşiktaş, tandläkare besiktas, tandklinik beşiktaş, tandläkare beşiktaş istanbul |
+| sv | https://dentaltourism.tr/sv/tandklinik/ortakoy/ | tandläkare ortaköy, tandläkare ortakoy, tandklinik ortaköy, tandläkare ortaköy istanbul |
+| sv | https://dentaltourism.tr/sv/tandklinik/levent/ | tandläkare levent, tandklinik levent, tandläkare levent istanbul |
+| sv | https://dentaltourism.tr/sv/tandklinik/4-levent/ | tandläkare 4. levent, tandklinik 4. levent, tandläkare 4. levent istanbul |
+| sv | https://dentaltourism.tr/sv/tandklinik/etiler/ | tandläkare etiler, tandklinik etiler, tandläkare etiler istanbul |
+| sv | https://dentaltourism.tr/sv/tandklinik/maslak/ | tandläkare maslak, tandklinik maslak, tandläkare maslak istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/sisli/ | tandlæge şişli, tandlæge sisli, tandklinik şişli, tandlæge şişli istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/osmanbey/ | tandlæge osmanbey, tandklinik osmanbey, tandlæge osmanbey istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/nisantasi/ | tandlæge nişantaşı, tandlæge nisantasi, tandklinik nişantaşı, tandlæge nişantaşı istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/taksim/ | tandlæge taksim, tandklinik taksim, tandlæge taksim istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/mecidiyekoy/ | tandlæge mecidiyeköy, tandlæge mecidiyekoy, tandklinik mecidiyeköy, tandlæge mecidiyeköy istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/gayrettepe/ | tandlæge gayrettepe, tandklinik gayrettepe, tandlæge gayrettepe istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/kagithane/ | tandlæge kağıthane, tandlæge kagithane, tandklinik kağıthane, tandlæge kağıthane istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/besiktas/ | tandlæge beşiktaş, tandlæge besiktas, tandklinik beşiktaş, tandlæge beşiktaş istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/ortakoy/ | tandlæge ortaköy, tandlæge ortakoy, tandklinik ortaköy, tandlæge ortaköy istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/levent/ | tandlæge levent, tandklinik levent, tandlæge levent istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/4-levent/ | tandlæge 4. levent, tandklinik 4. levent, tandlæge 4. levent istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/etiler/ | tandlæge etiler, tandklinik etiler, tandlæge etiler istanbul |
+| da | https://dentaltourism.tr/da/tandklinik/maslak/ | tandlæge maslak, tandklinik maslak, tandlæge maslak istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/sisli/ | tannlege şişli, tannlege sisli, tannklinikk şişli, tannlege şişli istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/osmanbey/ | tannlege osmanbey, tannklinikk osmanbey, tannlege osmanbey istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/nisantasi/ | tannlege nişantaşı, tannlege nisantasi, tannklinikk nişantaşı, tannlege nişantaşı istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/taksim/ | tannlege taksim, tannklinikk taksim, tannlege taksim istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/mecidiyekoy/ | tannlege mecidiyeköy, tannlege mecidiyekoy, tannklinikk mecidiyeköy, tannlege mecidiyeköy istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/gayrettepe/ | tannlege gayrettepe, tannklinikk gayrettepe, tannlege gayrettepe istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/kagithane/ | tannlege kağıthane, tannlege kagithane, tannklinikk kağıthane, tannlege kağıthane istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/besiktas/ | tannlege beşiktaş, tannlege besiktas, tannklinikk beşiktaş, tannlege beşiktaş istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/ortakoy/ | tannlege ortaköy, tannlege ortakoy, tannklinikk ortaköy, tannlege ortaköy istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/levent/ | tannlege levent, tannklinikk levent, tannlege levent istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/4-levent/ | tannlege 4. levent, tannklinikk 4. levent, tannlege 4. levent istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/etiler/ | tannlege etiler, tannklinikk etiler, tannlege etiler istanbul |
+| no | https://dentaltourism.tr/no/tannklinikk/maslak/ | tannlege maslak, tannklinikk maslak, tannlege maslak istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/sisli/ | dentist şişli, dentist sisli, clinică stomatologică şişli, dentist şişli istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/osmanbey/ | dentist osmanbey, clinică stomatologică osmanbey, dentist osmanbey istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/nisantasi/ | dentist nişantaşı, dentist nisantasi, clinică stomatologică nişantaşı, dentist nişantaşı istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/taksim/ | dentist taksim, clinică stomatologică taksim, dentist taksim istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/mecidiyekoy/ | dentist mecidiyeköy, dentist mecidiyekoy, clinică stomatologică mecidiyeköy, dentist mecidiyeköy istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/gayrettepe/ | dentist gayrettepe, clinică stomatologică gayrettepe, dentist gayrettepe istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/kagithane/ | dentist kağıthane, dentist kagithane, clinică stomatologică kağıthane, dentist kağıthane istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/besiktas/ | dentist beşiktaş, dentist besiktas, clinică stomatologică beşiktaş, dentist beşiktaş istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/ortakoy/ | dentist ortaköy, dentist ortakoy, clinică stomatologică ortaköy, dentist ortaköy istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/levent/ | dentist levent, clinică stomatologică levent, dentist levent istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/4-levent/ | dentist 4. levent, clinică stomatologică 4. levent, dentist 4. levent istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/etiler/ | dentist etiler, clinică stomatologică etiler, dentist etiler istanbul |
+| ro | https://dentaltourism.tr/ro/cabinet-stomatologic/maslak/ | dentist maslak, clinică stomatologică maslak, dentist maslak istanbul |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/sisli/ | зъболекар шишли, дентална клиника шишли, зъболекар шишли истанбул |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/osmanbey/ | зъболекар османбей, дентална клиника османбей, зъболекар османбей истанбул |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/nisantasi/ | зъболекар нишанташъ, дентална клиника нишанташъ, зъболекар нишанташъ истанбул |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/taksim/ | зъболекар таксим, дентална клиника таксим, зъболекар таксим истанбул |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/mecidiyekoy/ | зъболекар меджидиекьой, дентална клиника меджидиекьой, зъболекар меджидиекьой истанбул |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/gayrettepe/ | зъболекар гайретепе, дентална клиника гайретепе, зъболекар гайретепе истанбул |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/kagithane/ | зъболекар кяатхане, дентална клиника кяатхане, зъболекар кяатхане истанбул |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/besiktas/ | зъболекар бешикташ, дентална клиника бешикташ, зъболекар бешикташ истанбул |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/ortakoy/ | зъболекар ортакьой, дентална клиника ортакьой, зъболекар ортакьой истанбул |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/levent/ | зъболекар левент, дентална клиника левент, зъболекар левент истанбул |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/4-levent/ | зъболекар 4-ти левент, дентална клиника 4-ти левент, зъболекар 4-ти левент истанбул |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/etiler/ | зъболекар етилер, дентална клиника етилер, зъболекар етилер истанбул |
+| bg | https://dentaltourism.tr/bg/dentalna-klinika/maslak/ | зъболекар маслак, дентална клиника маслак, зъболекар маслак истанбул |
+| az | https://dentaltourism.tr/az/dis-klinikasi/sisli/ | şişli diş klinikası, sisli diş klinikası, şişli diş həkimi, şişli stomatoloq |
+| az | https://dentaltourism.tr/az/dis-klinikasi/osmanbey/ | osmanbey diş klinikası, osmanbey diş həkimi, osmanbey stomatoloq |
+| az | https://dentaltourism.tr/az/dis-klinikasi/nisantasi/ | nişantaşı diş klinikası, nisantasi diş klinikası, nişantaşı diş həkimi, nişantaşı stomatoloq |
+| az | https://dentaltourism.tr/az/dis-klinikasi/taksim/ | taksim diş klinikası, taksim diş həkimi, taksim stomatoloq |
+| az | https://dentaltourism.tr/az/dis-klinikasi/mecidiyekoy/ | mecidiyeköy diş klinikası, mecidiyekoy diş klinikası, mecidiyeköy diş həkimi, mecidiyeköy stomatoloq |
+| az | https://dentaltourism.tr/az/dis-klinikasi/gayrettepe/ | gayrettepe diş klinikası, gayrettepe diş həkimi, gayrettepe stomatoloq |
+| az | https://dentaltourism.tr/az/dis-klinikasi/kagithane/ | kağıthane diş klinikası, kagithane diş klinikası, kağıthane diş həkimi, kağıthane stomatoloq |
+| az | https://dentaltourism.tr/az/dis-klinikasi/besiktas/ | beşiktaş diş klinikası, besiktas diş klinikası, beşiktaş diş həkimi, beşiktaş stomatoloq |
+| az | https://dentaltourism.tr/az/dis-klinikasi/ortakoy/ | ortaköy diş klinikası, ortakoy diş klinikası, ortaköy diş həkimi, ortaköy stomatoloq |
+| az | https://dentaltourism.tr/az/dis-klinikasi/levent/ | levent diş klinikası, levent diş həkimi, levent stomatoloq |
+| az | https://dentaltourism.tr/az/dis-klinikasi/4-levent/ | 4. levent diş klinikası, 4. levent diş həkimi, 4. levent stomatoloq |
+| az | https://dentaltourism.tr/az/dis-klinikasi/etiler/ | etiler diş klinikası, etiler diş həkimi, etiler stomatoloq |
+| az | https://dentaltourism.tr/az/dis-klinikasi/maslak/ | maslak diş klinikası, maslak diş həkimi, maslak stomatoloq |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/sisli/ | şişli diş kliniği, sisli diş kliniği, şişli diş hekimi, şişli dişçi, şişli diş doktoru, şişli implant, şişli diş beyazlatma, şişli ağız ve diş sağlığı |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/osmanbey/ | osmanbey diş kliniği, osmanbey diş hekimi, osmanbey dişçi, osmanbey diş doktoru, osmanbey implant, osmanbey diş beyazlatma, osmanbey ağız ve diş sağlığı |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/nisantasi/ | nişantaşı diş kliniği, nisantasi diş kliniği, nişantaşı diş hekimi, nişantaşı dişçi, nişantaşı diş doktoru, nişantaşı implant, nişantaşı diş beyazlatma, nişantaşı ağız ve diş sağlığı |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/taksim/ | taksim diş kliniği, taksim diş hekimi, taksim dişçi, taksim diş doktoru, taksim implant, taksim diş beyazlatma, taksim ağız ve diş sağlığı |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/mecidiyekoy/ | mecidiyeköy diş kliniği, mecidiyekoy diş kliniği, mecidiyeköy diş hekimi, mecidiyeköy dişçi, mecidiyeköy diş doktoru, mecidiyeköy implant, mecidiyeköy diş beyazlatma, mecidiyeköy ağız ve diş sağlığı |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/gayrettepe/ | gayrettepe diş kliniği, gayrettepe diş hekimi, gayrettepe dişçi, gayrettepe diş doktoru, gayrettepe implant, gayrettepe diş beyazlatma, gayrettepe ağız ve diş sağlığı |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/kagithane/ | kağıthane diş kliniği, kagithane diş kliniği, kağıthane diş hekimi, kağıthane dişçi, kağıthane diş doktoru, kağıthane implant, kağıthane diş beyazlatma, kağıthane ağız ve diş sağlığı |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/besiktas/ | beşiktaş diş kliniği, besiktas diş kliniği, beşiktaş diş hekimi, beşiktaş dişçi, beşiktaş diş doktoru, beşiktaş implant, beşiktaş diş beyazlatma, beşiktaş ağız ve diş sağlığı |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/ortakoy/ | ortaköy diş kliniği, ortakoy diş kliniği, ortaköy diş hekimi, ortaköy dişçi, ortaköy diş doktoru, ortaköy implant, ortaköy diş beyazlatma, ortaköy ağız ve diş sağlığı |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/levent/ | levent diş kliniği, levent diş hekimi, levent dişçi, levent diş doktoru, levent implant, levent diş beyazlatma, levent ağız ve diş sağlığı |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/4-levent/ | 4. levent diş kliniği, 4. levent diş hekimi, 4. levent dişçi, 4. levent diş doktoru, 4. levent implant, 4. levent diş beyazlatma, 4. levent ağız ve diş sağlığı |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/etiler/ | etiler diş kliniği, etiler diş hekimi, etiler dişçi, etiler diş doktoru, etiler implant, etiler diş beyazlatma, etiler ağız ve diş sağlığı |
+| tr | https://dentaltourism.tr/tr/dis-klinigi/maslak/ | maslak diş kliniği, maslak diş hekimi, maslak dişçi, maslak diş doktoru, maslak implant, maslak diş beyazlatma, maslak ağız ve diş sağlığı |
+
 ## 4. Tedavi sayfaları — `/<dil>/<treatments>/<slug>/` (16 dil)
 
 | Tedavi | en | de | nl | fr | it | es | pl | ru | uk | ar | sv | da | no | ro | bg | az | tr |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| dental-implants | dental-implants | zahnimplantate | tandimplantaten | implants-dentaires | impianti-dentali | implantes-dentales | implanty-zebow | zubnye-implanty | zubni-implanty | zirat-al-asnan | tandimplantat | tandimplantater | tannimplantater | implanturi-dentare | zabni-implanti | dis-implantlari | implant-tedavisi |
-| porcelain-veneers | porcelain-veneers | keramik-veneers | porseleinen-facings | facettes-ceramique | faccette-in-ceramica | carillas-de-porcelana | licowki-porcelanowe | keramicheskie-viniry | keramichni-viniry | qushur-al-porselain | porslinsfasader | porcelaensfacader | porselensfasetter | fatete-din-ceramica | portselanovi-faseti | cini-vinirler | porselen-lamina |
-| zirconia-crowns | zirconia-crowns | zirkonkronen | zirkonia-kronen | couronnes-zircone | corone-in-zirconia | coronas-de-zirconio | korony-cyrkonowe | cirkonievye-koronki | cyrkonievi-koronky | tijan-al-zirkon | zirkoniakronor | zirkoniakroner | zirkoniakroner | coroane-din-zirconiu | tsirkonievi-koronki | sirkonium-taclar | zirkonyum-kaplama |
-| all-on-4-implants | all-on-4-implants | all-on-4-implantate | all-on-4-implantaten | implants-all-on-4 | impianti-all-on-4 | implantes-all-on-4 | implanty-all-on-4 | implantaciya-all-on-4 | implantaciya-all-on-4 | zirat-all-on-4 | all-on-4-implantat | all-on-4-implantater | all-on-4-implantater | implanturi-all-on-4 | implanti-all-on-4 | all-on-4-implantasiyasi | all-on-4-implant |
-| root-canal-treatment | root-canal-treatment | wurzelbehandlung | wortelkanaalbehandeling | traitement-de-canal | devitalizzazione | endodoncia | leczenie-kanalowe | lechenie-kanalov | likuvannya-kanaliv | ilaj-asab-al-asnan | rotfyllning | rodbehandling | rotfylling | tratament-de-canal | korenovo-lechenie | kanal-mualicesi | kanal-tedavisi |
-| composite-veneers | composite-veneers | komposit-veneers | composiet-facings | facettes-composite | faccette-in-composito | carillas-de-composite | licowki-kompozytowe | kompozitnye-viniry | kompozytni-viniry | finir-al-komposit | kompositfasader | kompositfacader | komposittfasetter | fatete-din-compozit | kompozitni-faseti | kompozit-vinirler | kompozit-lamina-bonding |
-| teeth-cleaning | teeth-cleaning | professionelle-zahnreinigung | gebitsreiniging | detartrage | pulizia-dei-denti | limpieza-dental | higienizacja-zebow | professionalnaya-chistka-zubov | profesijna-chystka-zubiv | tanzif-al-asnan | tandrengoring | tandrensning | tannrens | igienizare-dentara | profesionalno-pochistvane-na-zabi | dis-temizliyi | dis-tasi-temizligi |
-| tooth-fillings | tooth-fillings | zahnfuellungen | tandvullingen | plombages-composite | otturazioni | empastes | wypelnienia-zebow | plombirovanie-zubov | plombuvannya-zubiv | hashwat-al-asnan | tandlagning | tandfyldninger | tannfyllinger | plombe-dentare | zabni-plombi | dis-plomblari | dis-dolgusu |
-| teeth-whitening | teeth-whitening | bleaching | tanden-bleken | blanchiment-dentaire | sbiancamento-dentale | blanqueamiento-dental | wybielanie-zebow | otbelivanie-zubov | vidbilyuvannya-zubiv | tabyid-al-asnan | tandblekning | tandblegning | tannbleking | albire-dentara | izbelvane-na-zabi | dis-agartma | dis-beyazlatma |
-| hollywood-smile | hollywood-smile | hollywood-smile-tuerkei | hollywood-smile-turkije | sourire-hollywoodien | hollywood-smile-turchia | sonrisa-de-hollywood | hollywoodzki-usmiech | gollivudskaya-ulybka | gollivudska-usmishka | ibtisamat-hollywood | hollywood-leende | hollywood-smil | hollywood-smil | zambet-de-hollywood | holivudska-usmivka | hollywood-tebessumu | gulus-tasarimi-hollywood-smile |
+| dental-implants | dental-implants | zahnimplantate | tandimplantaten | implants-dentaires | impianti-dentali | implantes-dentales | implanty-zebow | zubnye-implanty | zubni-implanty | zirat-al-asnan | tandimplantat | tandimplantater | tannimplantater | implanturi-dentare | — | dis-implantlari | implant-tedavisi |
+| porcelain-veneers | porcelain-veneers | keramik-veneers | porseleinen-facings | facettes-ceramique | faccette-in-ceramica | carillas-de-porcelana | licowki-porcelanowe | keramicheskie-viniry | keramichni-viniry | qushur-al-porselain | porslinsfasader | porcelaensfacader | porselensfasetter | fatete-din-ceramica | — | cini-vinirler | porselen-lamina |
+| zirconia-crowns | zirconia-crowns | zirkonkronen | zirkonia-kronen | couronnes-zircone | corone-in-zirconia | coronas-de-zirconio | korony-cyrkonowe | cirkonievye-koronki | cyrkonievi-koronky | tijan-al-zirkon | zirkoniakronor | zirkoniakroner | zirkoniakroner | coroane-din-zirconiu | — | sirkonium-taclar | zirkonyum-kaplama |
+| all-on-4-implants | all-on-4-implants | all-on-4-implantate | all-on-4-implantaten | implants-all-on-4 | impianti-all-on-4 | implantes-all-on-4 | implanty-all-on-4 | implantaciya-all-on-4 | implantaciya-all-on-4 | zirat-all-on-4 | all-on-4-implantat | all-on-4-implantater | all-on-4-implantater | implanturi-all-on-4 | — | all-on-4-implantasiyasi | all-on-4-implant |
+| root-canal-treatment | root-canal-treatment | wurzelbehandlung | wortelkanaalbehandeling | traitement-de-canal | devitalizzazione | endodoncia | leczenie-kanalowe | lechenie-kanalov | likuvannya-kanaliv | ilaj-asab-al-asnan | rotfyllning | rodbehandling | rotfylling | tratament-de-canal | — | kanal-mualicesi | kanal-tedavisi |
+| composite-veneers | composite-veneers | komposit-veneers | composiet-facings | facettes-composite | faccette-in-composito | carillas-de-composite | licowki-kompozytowe | kompozitnye-viniry | kompozytni-viniry | finir-al-komposit | kompositfasader | kompositfacader | komposittfasetter | fatete-din-compozit | — | kompozit-vinirler | kompozit-lamina-bonding |
+| teeth-cleaning | teeth-cleaning | professionelle-zahnreinigung | gebitsreiniging | detartrage | pulizia-dei-denti | limpieza-dental | higienizacja-zebow | professionalnaya-chistka-zubov | profesijna-chystka-zubiv | tanzif-al-asnan | tandrengoring | tandrensning | tannrens | igienizare-dentara | — | dis-temizliyi | dis-tasi-temizligi |
+| tooth-fillings | tooth-fillings | zahnfuellungen | tandvullingen | plombages-composite | otturazioni | empastes | wypelnienia-zebow | plombirovanie-zubov | plombuvannya-zubiv | hashwat-al-asnan | tandlagning | tandfyldninger | tannfyllinger | plombe-dentare | — | dis-plomblari | dis-dolgusu |
+| teeth-whitening | teeth-whitening | bleaching | tanden-bleken | blanchiment-dentaire | sbiancamento-dentale | blanqueamiento-dental | wybielanie-zebow | otbelivanie-zubov | vidbilyuvannya-zubiv | tabyid-al-asnan | tandblekning | tandblegning | tannbleking | albire-dentara | — | dis-agartma | dis-beyazlatma |
+| hollywood-smile | hollywood-smile | hollywood-smile-tuerkei | hollywood-smile-turkije | sourire-hollywoodien | hollywood-smile-turchia | sonrisa-de-hollywood | hollywoodzki-usmiech | gollivudskaya-ulybka | gollivudska-usmishka | ibtisamat-hollywood | hollywood-leende | hollywood-smil | hollywood-smil | zambet-de-hollywood | — | hollywood-tebessumu | gulus-tasarimi-hollywood-smile |
 
 ## 5. Bilinçli olarak HEDEFLENMEYENLER
 
@@ -467,3 +680,5 @@ Ek (EN, "best … clinic in Istanbul" bölümü):
 - **Dental dışı**: saç ekimi, estetik/cilt, hastane/genel tıp, diş hekimliği fakülteleri, dental tourism crm
 - **Alakasız (G11)**: sargodha, dar es salaam, dental market turkiye, dental clinic 34
 - **Ortodonti**: dental braces price in turkey — klinik ortodonti (tel) yapmıyor
+- **Taksim listesi — rakip markalar**: citydent dental clinic dentist istanbul taksim, globaldent istanbul taksim dental clinic, taksim park dental clinic
+- **Taksim listesi — alakasız**: taxim o / taxim-o 200 (antibiyotik), dental terms in turkish, turkey teeth meaning, dental clinic telefon

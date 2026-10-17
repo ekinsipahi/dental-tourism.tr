@@ -35,6 +35,10 @@
 {% include "pseo/_proof.html" %}
 {% include "pseo/_photos.html" %}
 {% page_faq faq=faq %}
+{% if areas %}<section class="section"><div class="wrap">
+  <h2><a href="{{ areas_hub }}">{% trans "Dental clinic by district" %}</a></h2>
+  <div class="chips">{% for a in areas %}<a class="chip" href="{{ a.url }}">📍 {{ a.name }}</a>{% endfor %}</div>
+</div></section>{% endif %}
 {% include "pseo/_related.html" %}
 {% include "pseo/_links.html" %}
 <section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>

@@ -78,6 +78,10 @@ def guide_detail(request, slug):
     from django.conf import settings
 
     ctx["partner_url"] = settings.PARTNER_AGENCY_URL if topic.key == "dental-tourism-agency" else ""
+    if topic.key in ("dental-clinic-istanbul", "best-dental-clinic-istanbul", "istanbul-guide"):
+        from .area_views import _area_links  # İstanbul rehberlerinden semt sayfalarına iç link
+
+        ctx["areas"], ctx["areas_hub"] = _area_links(lang), reverse("areas:index")
     ctx.update({"seo": seo, "topic": topic, "t": loc, "h1": loc.h1, "lead": loc.lead, "faq": faq,
                 "eyebrow": _("Guide"), "related_guides": _guide_links(lang, exclude=topic.pk)[:8],
                 "page_type": f"guide_{topic.kind}"})

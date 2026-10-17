@@ -632,3 +632,40 @@
 631|Hola, me gustaría hablar con ustedes por una llamada de WhatsApp.
 632|Llámanos por WhatsApp
 633|Atendemos las llamadas por WhatsApp — llámanos o escríbenos allí, por voz o videollamada.
+634|clinica-dental/
+635|Metro
+636|A pie: unos %(min)s minutos
+637|En taxi: unos %(min)s minutos, según el tráfico
+638|¿Cómo llego a la clínica desde %(area)s?
+639|Estación de metro más cercana: Şişli-Mecidiyeköy (M2, M7), a unos %(km)s km de la clínica.
+640|¿La clínica abre los fines de semana?
+641|Sí. Nuestra clínica en Şişli abre los 7 días de la semana, sábado y domingo incluidos.
+642|¿Atienden a expatriados y visitantes que se alojan en Estambul?
+643|Sí. Muchos de nuestros pacientes son expatriados o visitantes en Estambul. Envíe una foto o una radiografía por WhatsApp y la dentista le responderá con sus opciones.
+644|¿Cuánto cuesta el tratamiento?
+645|Clínica dental cerca de %(area)s, Estambul
+646|Dentista cerca de %(area)s, Estambul — clínica familiar en Şişli
+647|¿Busca un dentista cerca de %(area)s? Nuestra clínica dental familiar en Şişli está a unos %(km)s km. Primero el diagnóstico, solo el tratamiento que necesita. Abierta los 7 días de la semana.
+648|Nuestra clínica dental familiar en Şişli está a unos %(km)s km de %(area)s. La Dra. Dt. Devrim Biriken Sipahi y su hijo Dt. Ekin Sipahi examinan y tratan personalmente a cada paciente.
+649|Clínica dental en %(area)s, Estambul
+650|Clínica dental en %(area)s, Estambul — dentistas en familia, abierta 7 días
+651|Clínica dental familiar en %(area)s, Estambul. Primero el diagnóstico, solo el tratamiento que necesita. Abierta los 7 días — envíe una foto por WhatsApp.
+652|Nuestra clínica dental familiar está en %(area)s, Estambul. La Dra. Dt. Devrim Biriken Sipahi y su hijo Dt. Ekin Sipahi examinan y tratan personalmente a cada paciente.
+653|Clínica dental por barrio
+654|Clínica dental cerca de usted en Estambul: Şişli, Nişantaşı, Taksim, Levent y más
+655|Clínica dental cerca de Şişli, Nişantaşı, Taksim, Levent y Beşiktaş — Estambul
+656|Nuestra clínica dental familiar está en Şişli, Estambul. Vea cómo llegar desde Nişantaşı, Taksim, Beşiktaş, Levent, Maslak y otros barrios — abierta los 7 días de la semana.
+657|Nuestra clínica dental familiar está en Şişli, cerca de Nişantaşı, Mecidiyeköy y la línea de metro M2. Elija su barrio para ver la distancia y la forma más fácil de llegar.
+658|Cómo llegar desde %(area)s
+659|Desde el aeropuerto de Estambul: metro M11 hasta Gayrettepe y luego una parada en la M2 hasta Şişli-Mecidiyeköy.
+660|Cómo llegar desde %(area)s en el mapa
+661|Para pacientes que viven, trabajan o se alojan cerca de %(places)s.
+662|Una clínica familiar con un enfoque ético
+663|La Dra. Dt. Devrim Biriken Sipahi trabaja como dentista en Estambul desde hace más de 35 años. Su hijo, Dt. Ekin Sipahi, también es dentista y trabaja con ella en la clínica. Cada tratamiento empieza con un diagnóstico preciso; recomendamos solo lo que necesita y conservamos los dientes sanos.
+664|Distancia
+665|unos %(km)s km
+666|En taxi
+667|%(min)s min
+668|Tratamientos en nuestra clínica
+669|Otros barrios cerca de nuestra clínica
+670|Nuestros pacientes en vídeo

@@ -91,6 +91,17 @@ class Command(BaseCommand):
                 kws = P.keywords_for(lang, "origin", country=P.country_name(code, lang), cities=P.ORIGINS[code]["cities"])
                 w(f"| {lang} | {site}{url} | {', '.join(kws)} |")
 
+        from apps.seo import area_data as A
+
+        w("\n### Semt sayfaları — `/<dil>/<dental-clinic>/<semt>/` (klinik Şişli'de; diğerleri \"near\")\n")
+        w("Hub keyword'leri: " + "; ".join(f"{lg}: {', '.join(v)}" for lg, v in A.HUB_KEYWORDS.items()))
+        w("\n| Dil | URL | Keyword'ler |\n|---|---|---|")
+        for lang in LANGUAGE_META:
+            for key in A.ordered_keys():
+                with translation.override(lang):
+                    url = reverse("areas:detail", kwargs={"area": key})
+                w(f"| {lang} | {site}{url} | {', '.join(A.keywords_for(lang, key))} |")
+
         w("\n## 4. Tedavi sayfaları — `/<dil>/<treatments>/<slug>/` (16 dil)\n")
         w("| Tedavi | " + " | ".join(LANGUAGE_META) + " |\n|---|" + "---|" * len(LANGUAGE_META))
         for t in Treatment.objects.filter(is_active=True):

@@ -383,6 +383,9 @@ a.card:hover { border-color: var(--border-hv); transform: translateY(-3px); back
 .pseo-loss { margin-top: 1rem; font-size: .9rem; color: var(--gold-lt); }
 .pseo-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .8rem; }
 .pseo-gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-sm); }
+.area-photo { margin: 1.4rem 0; }
+.area-photo img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: var(--radius-sm); }
+.area-photo figcaption { font-size: .8rem; color: var(--tx-faint); margin-top: .35rem; }
 .pseo-ba { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem; }
 .pseo-ba img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-sm); }
 .pseo-ba-lbl { display: grid; grid-template-columns: 1fr 1fr; text-align: center; font-size: .75rem; color: var(--tx-faint); margin: .3rem 0 .5rem; }
