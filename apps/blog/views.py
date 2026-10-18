@@ -33,9 +33,9 @@ def blog_list(request):
     page = Paginator(with_translations(qs, lang), PER_PAGE).get_page(request.GET.get("page"))
     posts = localize_list(page.object_list, lang, fallback=False)
     canonical = absolute(request.path + (f"?page={page.number}" if page.number > 1 else ""))
-    _meta_blog = page_meta("blog", _("Dental Tourism Blog — Guides, Costs & Patient Advice"),
-                           _("Honest guides about dental treatment in Turkey: implant and veneer costs, safety, "
-                      "recovery and how to choose a dentist in Istanbul."))
+    _meta_blog = page_meta("blog", _("Dental Tourism Blog 2026 — Honest Advice from Dentists"),
+                           _("Implant and veneer costs, safety, recovery and choosing a dentist in Istanbul — practical, "
+                             "honest advice from dentists with 35+ years' experience."))
     seo = Seo(
         title=_meta_blog[0],
         description=_meta_blog[1],

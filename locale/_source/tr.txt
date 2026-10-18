@@ -669,3 +669,33 @@
 668|Kliniğimizdeki tedaviler
 669|Kliniğimize yakın diğer semtler
 670|Hastalarımız videoda
+671|Diş Turizmi Blogu 2026 — Diş Hekimlerinden Dürüst Tavsiyeler
+672|İmplant ve lamina maliyetleri, güvenlik, iyileşme ve İstanbul'da diş hekimi seçimi — 35+ yıllık deneyime sahip diş hekimlerinden pratik, dürüst tavsiyeler.
+673|İstanbul Diş Kliniği — Şişli, ★%(rating)s, Haftanın 7 Günü Açık
+674|Şişli'de hekimlerin yönettiği aile diş kliniği: 35+ yıllık deneyim, %(count)s Google yorumunda ★ %(rating)s, konuşulan diller ve gerçek hasta hikâyeleri.
+675|İstanbul Diş Kliniği ★%(rating)s — Aile Diş Hekimleri, 35+ Yıl
+676|İstanbul'da implant, lamina ve kron: 35+ yıllık deneyimli anne-oğul diş hekimi ekibi. Google'da ★ %(rating)s. WhatsApp'tan ücretsiz değerlendirme.
+677|Hakkımızda — Dr. Devrim Sipahi ve Dt. Ekin Sipahi, Aile Hekimleri
+678|Şişli, İstanbul'da aile diş kliniği: 35+ yıllık deneyim, önce teşhis, yalnızca ihtiyacınız olan tedavi. Sizi tedavi edecek diş hekimleriyle tanışın.
+679|WhatsApp'tan Ücretsiz Diş Değerlendirmesi — Diş Hekimi Yanıtlar
+680|Fotoğraf veya röntgen gönderin, yazılı sabit teklifli kişisel planınızı alın — çağrı merkezi değil, diş hekimi yanıtlar. Haftanın 7 günü açık.
+681|%(area)s Yakınında Diş Hekimi ★%(rating)s — Aile Kliniği, 7 Gün Açık
+682|%(area)s yakınında diş hekimi: Şişli'deki aile kliniğimiz %(km)s km uzaklıkta, 7 gün açık. 35+ yıl deneyim, Google'da ★ %(rating)s. WhatsApp'tan ücretsiz değerlendirme.
+683|%(area)s Diş Hekimi ★%(rating)s — Aile Kliniği, Haftanın 7 Günü Açık
+684|%(area)s, İstanbul'da aile diş kliniği: 35+ yıllık deneyim, Google'da ★ %(rating)s, haftanın 7 günü açık. WhatsApp'tan ücretsiz değerlendirme.
+685|Şişli, Nişantaşı, Taksim ve Levent Yakınında Diş Hekimi ★%(rating)s
+686|Şişli, İstanbul'da aile diş kliniği: 35+ yıl, Google'da ★ %(rating)s, 7 gün açık. Nişantaşı, Taksim, Beşiktaş, Levent ve diğer semtlerden mesafe ve yol tarifi.
+687|Diş Turizmi Rehberleri 2026 — Türkiye ve İstanbul, Diş Hekimlerinden
+688|Klinik seçimi, yorumlar, güvenlik, seyahat, garanti ve tedavi sonrası takip — İstanbul'daki diş hekimlerinin yazdığı dürüst Türkiye diş tedavisi rehberleri.
+689|İstanbul Diş Tedavisi Paketleri 2026 — Röntgeninize Göre Planlanır
+690|Herkese aynı paket yok: İstanbul'daki diş paketiniz fotoğraf veya röntgeninize göre planlanır; yazılı sabit teklif ve dönüşte takip dahil.
+691|%(treatment)s Paketi İstanbul — Röntgeninize Göre Planlanır
+692|İstanbul'da %(treatment)s paketi: muayene, tedavi ve takip vakanıza ve seyahat tarihlerinize göre planlanır. Yazılı sabit teklif, ücretsiz değerlendirme.
+693|%(country)s → İstanbul Diş Tedavisi — 2026 Rehberi
+694|%(country)s ülkesinden diş tedavisi için mi geliyorsunuz? Uçuş süresi, kaç seyahat gerektiği, adil bir paketin neleri içerdiği ve dönüşte takibin nasıl işlediği.
+695|Türkiye Diş Fiyatları 2026 — Fiyatı Gerçekte Ne Belirler?
+696|Neden tek bir fiyat listesi her ağza uymaz, adil bir teklif neleri içerir ve diş hekiminden yazılı sabit fiyat nasıl alınır — WhatsApp'tan ücretsiz.
+697|%(treatment)s Fiyatı Türkiye 2026 — Yazılı Sabit Teklif
+698|İstanbul'da %(treatment)s: fiyatı ne belirler, adil bir teklif neleri içerir ve diş hekiminden yazılı sabit teklif nasıl alınır — WhatsApp'tan ücretsiz.
+699|İstanbul'da Diş Tedavileri 2026 — İmplant, Lamina, Kron
+700|İstanbul'da implant, lamina, zirkonyum kron, All-on-4, kanal tedavisi ve beyazlatma — nasıl yapılır, ne kadar kalırsınız, kime uygundur. Ücretsiz değerlendirme.

@@ -669,3 +669,33 @@
 668|Behandlinger på klinikken vår
 669|Andre bydeler nær klinikken vår
 670|Pasientene våre på video
+671|Blogg om Tannturisme 2026 — Ærlige Råd fra Tannleger
+672|Pris på implantater og fasetter, sikkerhet, tilheling og valg av tannlege i Istanbul — praktiske, ærlige råd fra tannleger med over 35 års erfaring.
+673|Vår Tannklinikk i Istanbul — Şişli, ★%(rating)s, Åpent 7 Dager
+674|Tannlegeledet familieklinikk i Şişli, Istanbul: 35+ års erfaring, ★ %(rating)s fra %(count)s Google-anmeldelser, språk og ekte pasienthistorier.
+675|Tannlege Istanbul ★%(rating)s — Familietannleger, 35+ År
+676|Implantater, fasetter og kroner i Istanbul fra et tannlegeteam av mor og sønn med 35+ års erfaring. ★ %(rating)s på Google. Gratis vurdering på WhatsApp.
+677|Om oss — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Familietannleger
+678|Familietannklinikk i Şişli, Istanbul: 35+ års erfaring, diagnose først og bare den behandlingen du trenger. Møt tannlegene som behandler deg.
+679|Gratis Tannvurdering på WhatsApp — Tannlegen Svarer
+680|Send et bilde eller røntgenbilde og få en personlig plan med fast skriftlig tilbud — tannlegen svarer, ikke et kundesenter. Åpent 7 dager i uken.
+681|Tannlege nær %(area)s ★%(rating)s — Familieklinikk, 7 Dager
+682|Tannlege nær %(area)s: familieklinikken vår i Şişli ligger %(km)s km unna, åpent 7 dager. 35+ års erfaring, ★ %(rating)s på Google. Gratis vurdering på WhatsApp.
+683|Tannlege i %(area)s ★%(rating)s — Familieklinikk, Åpent 7 Dager
+684|Familietannklinikk i %(area)s, Istanbul: 35+ års erfaring, ★ %(rating)s på Google, åpent 7 dager i uken. Gratis vurdering på WhatsApp.
+685|Tannlege nær Şişli, Nişantaşı, Taksim & Levent ★%(rating)s
+686|Familieklinikk i Şişli, Istanbul: 35+ år, ★ %(rating)s på Google, åpent 7 dager. Avstand og vei fra Nişantaşı, Taksim, Beşiktaş, Levent og flere.
+687|Guider om Tannturisme 2026 — Tyrkia & Istanbul
+688|Velge klinikk, anmeldelser, sikkerhet, reise, garanti og oppfølging — ærlige guider om tannbehandling i Tyrkia, skrevet av tannleger i Istanbul.
+689|Tannlegereise Istanbul 2026 — Planlagt etter Ditt Røntgen
+690|Ingen standardpakke: tannbehandlingen din i Istanbul planlegges ut fra bildene eller røntgenbildet ditt, med fast skriftlig tilbud og oppfølging hjemme.
+691|%(treatment)s Pakke Istanbul — Planlagt etter Ditt Røntgen
+692|%(treatment)s-pakke i Istanbul: undersøkelse, behandling og oppfølging planlagt etter ditt tilfelle og reisedatoer. Fast skriftlig tilbud, gratis vurdering.
+693|Tannbehandling i Istanbul fra %(country)s — Guide 2026
+694|Reiser du fra %(country)s for tannbehandling? Flytid, hvor mange reiser som trengs, hva en rettferdig pakke inneholder og hvordan oppfølgingen fungerer hjemme.
+695|Tannlegepriser Tyrkia 2026 — Hva Bestemmer Egentlig Prisen?
+696|Hvorfor én prisliste ikke passer alle munner, hva et rettferdig tilbud inneholder og hvordan du får en fast skriftlig pris fra tannlegen — gratis på WhatsApp.
+697|%(treatment)s Pris Tyrkia 2026 — Fast Skriftlig Tilbud
+698|%(treatment)s i Istanbul: hva som bestemmer prisen, hva et rettferdig tilbud inneholder og hvordan du får et fast skriftlig tilbud fra tannlegen.
+699|Tannbehandlinger i Istanbul 2026 — Implantater, Fasetter, Kroner
+700|Implantater, fasetter, zirkoniakroner, All-on-4, rotfylling og tannbleking i Istanbul — hvordan det foregår, hvor lenge du blir og hvem det passer for. Gratis vurdering.

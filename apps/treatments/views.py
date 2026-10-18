@@ -5,7 +5,7 @@ from django.utils.translation import get_language, gettext as _
 
 from apps.blog.models import BlogPost
 from apps.clinics.models import Review
-from apps.core.seo import Seo, absolute, alternates_for, faq_schema, page_meta, reverse_in
+from apps.core.seo import Seo, absolute, alternates_for, faq_schema, fill_proof, page_meta, reverse_in
 from apps.localization.models import localize_list, with_translations
 from apps.localization.resolve import language_slugs, resolve_slug
 
@@ -16,9 +16,9 @@ from .services import offers_for, related_treatments
 def treatment_list(request):
     lang = get_language()
     items = [{"loc": loc} for loc in localize_list(with_translations(Treatment.objects.filter(is_active=True), lang), lang)]
-    _meta_treatments = page_meta("treatments", _("Dental Treatments in Istanbul — Prices & Information"),
-                           _("All dental treatments for international patients in Istanbul: implants, veneers, crowns, "
-                      "All-on-4, root canal and more. Transparent prices and stay durations."))
+    _meta_treatments = page_meta("treatments", _("Dental Treatments in Istanbul 2026 — Implants, Veneers, Crowns"),
+                           _("Implants, veneers, zirconia crowns, All-on-4, root canal and whitening in Istanbul — how "
+                             "each works, how long you stay and who it suits. Free assessment."))
     seo = Seo(
         title=_meta_treatments[0],
         description=_meta_treatments[1],
@@ -77,8 +77,8 @@ def treatment_detail(request, slug):
     }
 
     seo = Seo(
-        title=loc.meta_title or _("%(treatment)s in Istanbul — Procedure & Personal Plan") % {"treatment": loc.name},
-        description=loc.meta_description or loc.short_description,
+        title=fill_proof(loc.meta_title) or _("%(treatment)s in Istanbul — Procedure & Personal Plan") % {"treatment": loc.name},
+        description=fill_proof(loc.meta_description) or loc.short_description,
         canonical=canonical,
         alternates=alternates,
         robots="noindex,follow" if loc.is_fallback else "index,follow,max-image-preview:large",

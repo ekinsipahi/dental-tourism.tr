@@ -669,3 +669,33 @@
 668|Tratamente în clinica noastră
 669|Alte cartiere aproape de clinica noastră
 670|Pacienții noștri în video
+671|Blog Turism Dentar 2026 — Sfaturi Oneste de la Medici Stomatologi
+672|Costul implanturilor și fațetelor, siguranță, vindecare și alegerea unui dentist în Istanbul — sfaturi oneste de la medici cu peste 35 de ani de experiență.
+673|Clinica Noastră Stomatologică din Istanbul — Şişli, ★%(rating)s, 7 Zile
+674|Clinică de familie condusă de medici în Şişli, Istanbul: 35+ ani de experiență, ★ %(rating)s din %(count)s recenzii Google, limbi vorbite și povești reale.
+675|Dentist Istanbul ★%(rating)s — Medici de Familie, 35+ Ani
+676|Implanturi, fațete și coroane în Istanbul de la o echipă mamă-fiu de medici stomatologi cu 35+ ani de experiență. ★ %(rating)s pe Google. Evaluare gratuită pe WhatsApp.
+677|Despre noi — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Medici Stomatologi
+678|Clinică stomatologică de familie în Şişli, Istanbul: 35+ ani de experiență, mai întâi diagnosticul, doar tratamentul necesar. Cunoașteți medicii care vă vor trata.
+679|Evaluare Dentară Gratuită pe WhatsApp — Răspunde Medicul
+680|Trimiteți o fotografie sau o radiografie și primiți un plan personal cu ofertă fixă scrisă — răspunde medicul, nu un call center. Deschis 7 zile din 7.
+681|Dentist lângă %(area)s ★%(rating)s — Clinică de Familie, 7 Zile
+682|Dentist lângă %(area)s: clinica noastră de familie din Şişli e la %(km)s km, deschisă 7 zile. 35+ ani de experiență, ★ %(rating)s pe Google. Evaluare gratuită pe WhatsApp.
+683|Dentist în %(area)s ★%(rating)s — Clinică de Familie, 7 Zile
+684|Clinică stomatologică de familie în %(area)s, Istanbul: 35+ ani de experiență, ★ %(rating)s pe Google, deschis 7 zile din 7. Evaluare gratuită pe WhatsApp.
+685|Dentist lângă Şişli, Nişantaşı, Taksim și Levent ★%(rating)s
+686|Clinică de familie în Şişli, Istanbul: 35+ ani, ★ %(rating)s pe Google, deschis 7 zile. Distanța și traseul din Nişantaşı, Taksim, Beşiktaş, Levent și altele.
+687|Ghiduri Turism Dentar 2026 — Turcia și Istanbul
+688|Alegerea clinicii, recenzii, siguranță, călătorie, garanție și control — ghiduri oneste despre tratamentul dentar în Turcia, scrise de medici din Istanbul.
+689|Vacanță Dentară Istanbul 2026 — Planificată după Radiografie
+690|Fără pachete la fel pentru toți: tratamentul în Istanbul se planifică după fotografii sau radiografie, cu ofertă fixă scrisă și control după întoarcere.
+691|Pachet %(treatment)s Istanbul — Planificat după Radiografie
+692|Pachet %(treatment)s în Istanbul: consult, tratament și control planificate după cazul și datele dumneavoastră de călătorie. Ofertă fixă scrisă, evaluare gratuită.
+693|Tratament Dentar în Istanbul din %(country)s — Ghid 2026
+694|Veniți din %(country)s pentru tratament dentar? Durata zborului, câte călătorii sunt necesare, ce include un pachet corect și cum funcționează controlul acasă.
+695|Prețuri Dentist Turcia 2026 — Ce Decide Cu Adevărat Costul
+696|De ce o listă de prețuri nu se potrivește oricui, ce include o ofertă corectă și cum obțineți un preț fix scris de la medic — gratuit pe WhatsApp.
+697|Preț %(treatment)s Turcia 2026 — Ofertă Fixă Scrisă
+698|%(treatment)s în Istanbul: ce decide prețul, ce include o ofertă corectă și cum obțineți o ofertă fixă scrisă de la medic — gratuit pe WhatsApp.
+699|Tratamente Dentare în Istanbul 2026 — Implanturi, Fațete, Coroane
+700|Implanturi, fațete, coroane din zirconiu, All-on-4, tratament de canal și albire în Istanbul — cum decurg, cât stați și pentru cine sunt. Evaluare gratuită.

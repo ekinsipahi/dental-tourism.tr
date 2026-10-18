@@ -4,7 +4,7 @@ from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.utils.translation import get_language, gettext as _
 
-from apps.core.seo import Seo, absolute, alternates_for, faq_schema, page_meta, reverse_in
+from apps.core.seo import Seo, absolute, alternates_for, faq_schema, fill_proof, page_meta, reverse_in
 from apps.localization.models import localize_list, with_translations
 from apps.localization.resolve import language_slugs, resolve_slug
 
@@ -27,9 +27,9 @@ def _guide_links(lang, exclude=None):
 def guide_index(request):
     lang = get_language()
     guides = _guide_links(lang)
-    title, desc = page_meta("guides", _("Dental Tourism Guides — Turkey & Istanbul"),
-                            _("Honest guides about dental treatment in Turkey: choosing a clinic, reviews, travel, "
-                              "guarantee and aftercare — from a dentist in Istanbul."))
+    title, desc = page_meta("guides", _("Dental Tourism Guides 2026 — Turkey & Istanbul, by Dentists"),
+                            _("Choosing a clinic, reviews, safety, travel, guarantee and aftercare — honest guides to "
+                              "dental treatment in Turkey, written by dentists in Istanbul."))
     seo = Seo(title=title, description=desc, canonical=absolute(request.path), alternates=alternates_for("guides:index"),
               breadcrumbs=[(_("Home"), reverse("core:home")), (_("Guides"), request.path)],
               schema=[{"@context": "https://schema.org", "@type": "ItemList", "name": title,
@@ -59,7 +59,7 @@ def guide_detail(request, slug):
     if topic.image_id:
         ctx["hero_photo"] = topic.image
     seo = Seo(
-        title=loc.meta_title or loc.h1, description=loc.meta_description or loc.lead,
+        title=fill_proof(loc.meta_title) or loc.h1, description=fill_proof(loc.meta_description) or loc.lead,
         canonical=alternates.get(lang) or absolute(request.path),
         alternates=alternates if indexable else {},
         robots="index,follow,max-image-preview:large" if indexable else "noindex,follow",

@@ -59,9 +59,9 @@ def package_index(request):
     lang = get_language()
     faq = _hub_faq()
     title, desc = page_meta(
-        "packages", _("Dental Tourism Packages in Istanbul — Personalised, Not One-Size-Fits-All"),
-        _("Dental holiday packages in Turkey built around a real diagnosis: assessment, treatment and aftercare. "
-          "Your budget goes into your treatment, not extras. Get your personal plan on WhatsApp."))
+        "packages", _("Dental Holiday Packages Istanbul 2026 — Planned on Your X-ray"),
+        _("No one-size-fits-all deal: your dental package in Istanbul is planned from your photos or X-ray, with a "
+          "fixed written quote and aftercare at home."))
     seo = Seo(
         title=title, description=desc, canonical=absolute(request.path), alternates=alternates_for("packages:index"),
         breadcrumbs=[(_("Home"), reverse("core:home")), (_("Dental packages"), request.path)],
@@ -99,10 +99,9 @@ def package_treatment(request, slug):
     h1 = _("%(treatment)s package in Istanbul") % {"treatment": loc.name}
     faq = (p_loc.faq if p_loc and not p_loc.is_fallback and p_loc.faq else None) or loc.faq or _hub_faq()
     seo = Seo(
-        title=_("%(treatment)s Package Turkey — Personal Plan, Not a Fixed Deal") % {"treatment": loc.name},
-        description=_("%(treatment)s package in Istanbul built around your diagnosis: assessment, treatment and "
-                      "aftercare. Your budget goes into your treatment, not extras. Get your personal plan on WhatsApp.")
-        % {"treatment": loc.name},
+        title=_("%(treatment)s Package Istanbul — Planned on Your X-ray") % {"treatment": loc.name},
+        description=_("%(treatment)s package in Istanbul: examination, treatment and aftercare planned around your case "
+                      "and travel dates. Fixed written quote, free WhatsApp assessment.") % {"treatment": loc.name},
         canonical=alternates.get(lang) or absolute(request.path),
         alternates={} if loc.is_fallback else alternates,
         robots="noindex,follow" if loc.is_fallback else "index,follow,max-image-preview:large",
@@ -140,9 +139,9 @@ def package_origin(request, country):
     reviews = Review.objects.filter(is_published=True, country_code=code, clinic__in=Clinic.objects.published()) \
         .exclude(text="")[:6]
     seo = Seo(
-        title=_("Dental Holiday Packages from %(country)s — Istanbul, Turkey") % {"country": name},
-        description=_("Planning dental treatment in Turkey from %(country)s? Flight time, how many trips you need, "
-                      "what a personalised dental package includes and aftercare at home.") % {"country": name},
+        title=_("%(country)s to Istanbul for Dental Treatment — 2026 Guide") % {"country": name},
+        description=_("Travelling from %(country)s for dental treatment? Flight time, how many trips you need, what a "
+                      "fair package includes and how aftercare works at home.") % {"country": name},
         canonical=alternates.get(lang) or absolute(request.path),
         alternates=alternates,
         breadcrumbs=[(_("Home"), reverse("core:home")), (_("Dental packages"), reverse("packages:index")),

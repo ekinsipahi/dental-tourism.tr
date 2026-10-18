@@ -228,6 +228,26 @@ def localized_language_links(alternates, current):
     return links
 
 
+def proof():
+    """Meta title/description'larda kullanılan GERÇEK kanıtlar: Google puanı ve yorum sayısı (veritabanından)."""
+    try:
+        from apps.clinics.models import Clinic
+
+        c = Clinic.primary()
+    except Exception:  # noqa: BLE001
+        c = None
+    r = c.google_rating if c and c.google_rating else None
+    return {"rating": format(r, "g") if r else "4.9", "count": (c.google_review_count if c and c.google_review_count else 100)}
+
+
+def fill_proof(text):
+    """İçerikteki {rating} / {count} yer tutucularını güncel Google puanıyla doldurur (meta title/description)."""
+    if not text or "{" not in text:
+        return text
+    p = proof()
+    return text.replace("{rating}", p["rating"]).replace("{count}", str(p["count"]))
+
+
 def page_meta(key, title, description=""):
     """Statik sayfaların SEO title/description'ı admin'den değiştirilebilir:
     Content blocks → key = "seo-<sayfa>" (title = meta title, subtitle = meta description).

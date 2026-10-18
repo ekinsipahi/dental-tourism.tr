@@ -105,9 +105,9 @@ def price_index(request):
     from apps.core.seo import alternates_for
 
     title, desc = page_meta(
-        "prices", _("Dental Prices in Turkey 2026 — Affordable, Personal Quote"),
-        _("How much do teeth cost in Turkey? Very affordable dental treatment in Istanbul with a fixed written "
-          "quote. Call or WhatsApp for your personal price."))
+        "prices", _("Dental Prices in Turkey 2026 — What Really Decides the Cost"),
+        _("Why one price list can't fit every mouth, what a fair quote includes and how to get a fixed written price "
+          "from the dentist — free on WhatsApp."))
     faq = _price_faq()
     seo = Seo(title=title, description=desc, canonical=absolute(request.path), alternates=alternates_for("prices:index"),
               breadcrumbs=[(_("Home"), reverse("core:home")), (_("Prices"), request.path)],
@@ -136,9 +136,9 @@ def treatment_price(request, slug):
     h1 = _("%(treatment)s cost in Turkey — affordable, with a fixed quote") % {"treatment": t_loc.name}
     faq = (t_loc.faq or []) + _price_faq()[2:]
     seo = Seo(
-        title=_("%(treatment)s Price in Turkey 2026 — Personal Quote") % {"treatment": t_loc.name},
-        description=_("How much does %(treatment)s cost in Turkey? Very affordable in Istanbul, with a fixed written "
-                      "quote after the dentist sees your case. Call or WhatsApp.") % {"treatment": t_loc.name},
+        title=_("%(treatment)s Cost in Turkey 2026 — Fixed Written Quote") % {"treatment": t_loc.name},
+        description=_("%(treatment)s in Istanbul: what decides the cost, what a fair quote includes and how to get a "
+                      "fixed written quote from the dentist — free on WhatsApp.") % {"treatment": t_loc.name},
         canonical=alternates.get(lang) or absolute(request.path),
         alternates=alternates if indexable else {},
         robots="index,follow" if indexable else "noindex,follow",

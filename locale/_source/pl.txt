@@ -669,3 +669,33 @@
 668|Leczenie w naszym gabinecie
 669|Inne dzielnice w pobliżu gabinetu
 670|Nasi pacjenci na wideo
+671|Blog o Turystyce Dentystycznej 2026 — Szczere Porady Dentystów
+672|Koszty implantów i licówek, bezpieczeństwo, gojenie i wybór dentysty w Stambule — praktyczne, szczere porady dentystów z ponad 35-letnim doświadczeniem.
+673|Nasz Gabinet Stomatologiczny w Stambule — Şişli, ★%(rating)s, 7 Dni
+674|Rodzinny gabinet prowadzony przez dentystów w Şişli w Stambule: 35+ lat doświadczenia, ★ %(rating)s z %(count)s opinii Google, języki i prawdziwe historie.
+675|Dentysta Stambuł ★%(rating)s — Rodzinni Dentyści, 35+ Lat
+676|Implanty, licówki i korony w Stambule od zespołu dentystów matka-syn z 35+ letnim doświadczeniem. ★ %(rating)s w Google. Bezpłatna ocena na WhatsApp.
+677|O nas — Dr Devrim Sipahi i Dt. Ekin Sipahi, Rodzinni Dentyści
+678|Rodzinny gabinet stomatologiczny w Şişli w Stambule: 35+ lat doświadczenia, najpierw diagnoza, tylko potrzebne leczenie. Poznaj dentystów, którzy będą Cię leczyć.
+679|Bezpłatna Ocena Stomatologiczna na WhatsApp — Odpowiada Dentysta
+680|Wyślij zdjęcie lub RTG i otrzymaj osobisty plan ze stałą pisemną wyceną — odpowiada dentysta, nie call center. Otwarte 7 dni w tygodniu.
+681|Dentysta w pobliżu: %(area)s ★%(rating)s — Gabinet Rodzinny, 7 Dni
+682|Dentysta w pobliżu dzielnicy %(area)s: nasz rodzinny gabinet w Şişli jest %(km)s km dalej, otwarty 7 dni. 35+ lat doświadczenia, ★ %(rating)s w Google. Bezpłatna ocena.
+683|Dentysta %(area)s ★%(rating)s — Gabinet Rodzinny, Otwarte 7 Dni
+684|Rodzinny gabinet stomatologiczny w dzielnicy %(area)s, Stambuł: 35+ lat doświadczenia, ★ %(rating)s w Google, otwarte 7 dni w tygodniu. Bezpłatna ocena na WhatsApp.
+685|Dentysta blisko Şişli, Nişantaşı, Taksim i Levent ★%(rating)s
+686|Rodzinny gabinet w Şişli w Stambule: 35+ lat, ★ %(rating)s w Google, otwarte 7 dni. Odległość i trasa z Nişantaşı, Taksim, Beşiktaş, Levent i innych dzielnic.
+687|Poradniki Turystyki Dentystycznej 2026 — Turcja i Stambuł
+688|Wybór kliniki, opinie, bezpieczeństwo, podróż, gwarancja i opieka po leczeniu — szczere poradniki o leczeniu zębów w Turcji, napisane przez dentystów ze Stambułu.
+689|Wakacje Dentystyczne Stambuł 2026 — Plan na Podstawie RTG
+690|Bez pakietów dla wszystkich: leczenie w Stambule planujemy na podstawie zdjęć lub RTG, ze stałą pisemną wyceną i opieką po powrocie do domu.
+691|Pakiet %(treatment)s Stambuł — Plan na Podstawie Twojego RTG
+692|Pakiet %(treatment)s w Stambule: badanie, leczenie i opieka zaplanowane pod Twój przypadek i daty podróży. Stała pisemna wycena, bezpłatna ocena na WhatsApp.
+693|Leczenie Zębów w Stambule z kraju: %(country)s — Poradnik 2026
+694|Przylatujesz na leczenie zębów z kraju: %(country)s? Czas lotu, ile podróży potrzeba, co zawiera uczciwy pakiet i jak działa opieka po powrocie do domu.
+695|Ceny Dentysty w Turcji 2026 — Co Naprawdę Decyduje o Koszcie
+696|Dlaczego jeden cennik nie pasuje do każdego, co zawiera uczciwa wycena i jak dostać stałą pisemną cenę od dentysty — bezpłatnie na WhatsApp.
+697|%(treatment)s Cena Turcja 2026 — Stała Pisemna Wycena
+698|%(treatment)s w Stambule: co decyduje o cenie, co zawiera uczciwa wycena i jak dostać stałą pisemną wycenę od dentysty — bezpłatnie na WhatsApp.
+699|Leczenie Zębów w Stambule 2026 — Implanty, Licówki, Korony
+700|Implanty, licówki, korony z cyrkonu, All-on-4, leczenie kanałowe i wybielanie w Stambule — jak to działa, ile zostać i dla kogo. Bezpłatna ocena.

@@ -669,3 +669,33 @@
 668|Tratamientos en nuestra clínica
 669|Otros barrios cerca de nuestra clínica
 670|Nuestros pacientes en vídeo
+671|Blog de Turismo Dental 2026 — Consejos Honestos de Dentistas
+672|Coste de implantes y carillas, seguridad, recuperación y cómo elegir dentista en Estambul — consejos prácticos y honestos de dentistas con más de 35 años de experiencia.
+673|Nuestra Clínica Dental en Estambul — Şişli, ★%(rating)s, Abierta 7 Días
+674|Clínica familiar dirigida por dentistas en Şişli, Estambul: 35+ años de experiencia, ★ %(rating)s en %(count)s reseñas de Google, idiomas y casos reales.
+675|Dentista en Estambul ★%(rating)s — Dentistas en Familia, 35+ Años
+676|Implantes, carillas y coronas en Estambul con un equipo madre-hijo de dentistas y 35+ años de experiencia. ★ %(rating)s en Google. Valoración gratis por WhatsApp.
+677|Quiénes somos — Dra. Devrim Sipahi y Dt. Ekin Sipahi, Dentistas
+678|Clínica dental familiar en Şişli, Estambul: 35+ años de experiencia, primero el diagnóstico, solo el tratamiento necesario. Conozca a los dentistas que le tratarán.
+679|Valoración Dental Gratis por WhatsApp — Responde el Dentista
+680|Envíe una foto o radiografía y reciba un plan personal con presupuesto fijo por escrito — responde el dentista, no un call center. Abierta los 7 días.
+681|Dentista cerca de %(area)s ★%(rating)s — Clínica Familiar, 7 Días
+682|Dentista cerca de %(area)s: nuestra clínica familiar en Şişli está a %(km)s km, abierta 7 días. 35+ años de experiencia, ★ %(rating)s en Google. Valoración gratis por WhatsApp.
+683|Dentista en %(area)s ★%(rating)s — Clínica Familiar, Abierta 7 Días
+684|Clínica dental familiar en %(area)s, Estambul: 35+ años de experiencia, ★ %(rating)s en Google, abierta los 7 días de la semana. Valoración gratis por WhatsApp.
+685|Dentista cerca de Şişli, Nişantaşı, Taksim y Levent ★%(rating)s
+686|Clínica familiar en Şişli, Estambul: 35+ años, ★ %(rating)s en Google, abierta 7 días. Distancia y ruta desde Nişantaşı, Taksim, Beşiktaş, Levent y más.
+687|Guías de Turismo Dental 2026 — Turquía y Estambul
+688|Elegir clínica, reseñas, seguridad, viaje, garantía y seguimiento — guías honestas sobre tratamiento dental en Turquía, escritas por dentistas en Estambul.
+689|Viaje Dental a Estambul 2026 — Planificado con su Radiografía
+690|Sin paquetes iguales para todos: su tratamiento en Estambul se planifica con sus fotos o radiografía, con presupuesto fijo por escrito y seguimiento en casa.
+691|Paquete %(treatment)s Estambul — Según su Radiografía
+692|Paquete de %(treatment)s en Estambul: revisión, tratamiento y seguimiento planificados según su caso y sus fechas de viaje. Presupuesto fijo, valoración gratis.
+693|Tratamiento Dental en Estambul desde %(country)s — Guía 2026
+694|¿Viaja desde %(country)s para tratarse los dientes? Tiempo de vuelo, cuántos viajes necesita, qué incluye un paquete justo y cómo funciona el seguimiento en casa.
+695|Precios Dentista Turquía 2026 — Qué Decide Realmente el Coste
+696|Por qué una lista de precios no sirve para todas las bocas, qué incluye un presupuesto justo y cómo obtener un precio fijo por escrito del dentista.
+697|Precio %(treatment)s Turquía 2026 — Presupuesto Fijo
+698|%(treatment)s en Estambul: qué decide el precio, qué incluye un presupuesto justo y cómo obtener un presupuesto fijo por escrito del dentista.
+699|Tratamientos Dentales Estambul 2026 — Implantes, Carillas, Coronas
+700|Implantes, carillas, coronas de zirconio, All-on-4, endodoncia y blanqueamiento en Estambul — cómo funciona, cuánto quedarse y para quién. Valoración gratis.

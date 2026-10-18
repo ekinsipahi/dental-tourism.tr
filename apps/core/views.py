@@ -12,7 +12,7 @@ from apps.localization.models import localize_list, with_translations
 from apps.treatments.models import Treatment
 
 from .forms import ContactForm
-from .seo import page_meta, Seo, absolute, alternates_for, clinic_schema, faq_schema, organization_schema, website_schema
+from .seo import page_meta, Seo, absolute, alternates_for, clinic_schema, faq_schema, organization_schema, proof, website_schema
 
 
 def _home_faq(clinic):
@@ -84,9 +84,9 @@ def home(request):
     slides = list(clinic.images.filter(show_in_hero=True)[:5]) if clinic else []
     cases = list(clinic.cases.filter(is_published=True, patient_consent=True)[:2]) if clinic else []
 
-    _meta_home = page_meta("home", _("Dental Tourism Istanbul — Implants, Veneers & Crowns in Turkey"),
-                           _("Ethical dental treatment in Istanbul with an experienced dentist. Implants, veneers, "
-                      "zirconia crowns — very affordable, fixed written quote. Free WhatsApp consultation."))
+    _meta_home = page_meta("home", _("Dental Tourism Istanbul ★%(rating)s — Family Dentists, 35+ Years") % proof(),
+                           _("Implants, veneers and crowns in Istanbul from a mother-and-son dentist team with 35+ "
+                             "years' experience. ★ %(rating)s on Google. Free assessment on WhatsApp.") % proof())
     seo = Seo(
         title=_meta_home[0],
         description=_meta_home[1],
@@ -108,9 +108,9 @@ def about(request):
 
     clinic = Clinic.primary()
     doctors = list(clinic.doctors.filter(is_active=True)) if clinic else []
-    _meta_about = page_meta("about", _("About Us — Ethical Dental Care in Istanbul"),
-                           _("Meet the dentist and the clinic behind dentaltourism.tr: decades of clinical experience, "
-                      "transparent diagnosis and only the treatment you actually need."))
+    _meta_about = page_meta("about", _("About Us — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Family Dentists"),
+                           _("A family dental clinic in Şişli, Istanbul: 35+ years' experience, diagnosis first and only "
+                             "the treatment you need. Meet the dentists who will treat you."))
     seo = Seo(
         title=_meta_about[0],
         description=_meta_about[1],
@@ -142,9 +142,9 @@ def contact(request):
         messages.error(request, _("Please check the form and try again."))
     else:
         form = ContactForm()
-    _meta_contact = page_meta("contact", _("Free Consultation — Contact Our Dentist in Istanbul"),
-                           _("Send your X-ray or photos and get a free treatment plan and fixed price quote. "
-                      "Reply within 24 hours. WhatsApp, phone or form."))
+    _meta_contact = page_meta("contact", _("Free Dental Assessment on WhatsApp — Answered by the Dentist"),
+                           _("Send a photo or X-ray and receive a personal plan with a fixed written quote — answered by "
+                             "the dentist, not a call centre. Open 7 days a week."))
     seo = Seo(
         title=_meta_contact[0],
         description=_meta_contact[1],

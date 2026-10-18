@@ -7,7 +7,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.utils.translation import get_language, gettext as _
 
-from apps.core.seo import Seo, absolute, clinic_schema, faq_schema, reverse_in
+from apps.core.seo import Seo, absolute, clinic_schema, faq_schema, proof, reverse_in
 from apps.localization.models import localize_list, with_translations
 from apps.treatments.models import Treatment
 
@@ -80,16 +80,16 @@ def area_detail(request, area):
     alternates = {lg: absolute(reverse_in(lg, "areas:detail", {"area": area})) for lg in LANGS}
     if near:
         h1 = _("Dental clinic near %(area)s, Istanbul") % {"area": name}
-        title = _("Dentist near %(area)s, Istanbul — Family Dental Clinic in Şişli") % {"area": name}
-        desc = _("Looking for a dentist near %(area)s? Our family dental clinic in Şişli is about %(km)s km away. "
-                 "Diagnosis first, only the treatment you need. Open 7 days a week.") % {"area": name, "km": km}
+        title = _("Dentist near %(area)s ★%(rating)s — Family Clinic, Open 7 Days") % {"area": name, **proof()}
+        desc = _("Dentist near %(area)s: our family clinic in Şişli is %(km)s km away, open 7 days. 35+ years' "
+                 "experience, ★ %(rating)s on Google. Free WhatsApp assessment.") % {"area": name, "km": km, **proof()}
         lead = _("Our family dental clinic in Şişli is about %(km)s km from %(area)s. Dr. Dt. Devrim Biriken Sipahi "
                  "and her son Dt. Ekin Sipahi examine and treat every patient personally.") % {"area": name, "km": km}
     else:
         h1 = _("Dental clinic in %(area)s, Istanbul") % {"area": name}
-        title = _("Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days") % {"area": name}
-        desc = _("Family dental clinic in %(area)s, Istanbul. Diagnosis first and only the treatment you need. "
-                 "Open 7 days a week — send a photo on WhatsApp.") % {"area": name}
+        title = _("Dentist in %(area)s ★%(rating)s — Family Clinic, Open 7 Days") % {"area": name, **proof()}
+        desc = _("Family dental clinic in %(area)s, Istanbul: 35+ years' experience, ★ %(rating)s on Google, open 7 "
+                 "days a week. Free assessment on WhatsApp.") % {"area": name, **proof()}
         lead = _("Our family dental clinic is in %(area)s, Istanbul. Dr. Dt. Devrim Biriken Sipahi and her son "
                  "Dt. Ekin Sipahi examine and treat every patient personally.") % {"area": name}
     routes = _routes(area)
@@ -121,9 +121,9 @@ def area_index(request):
     alternates = {lg: absolute(reverse_in(lg, "areas:index")) for lg in LANGS}
     h1 = _("Dental clinic near you in Istanbul: Şişli, Nişantaşı, Taksim, Levent and more")
     seo = Seo(
-        title=_("Dental Clinic near Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul"),
-        description=_("Our family dental clinic is in Şişli, Istanbul. See how to reach us from Nişantaşı, Taksim, "
-                      "Beşiktaş, Levent, Maslak and other districts — open 7 days a week."),
+        title=_("Dentist near Şişli, Nişantaşı, Taksim & Levent ★%(rating)s") % proof(),
+        description=_("Family dental clinic in Şişli, Istanbul: 35+ years, ★ %(rating)s on Google, open 7 days. Distance "
+                      "and route from Nişantaşı, Taksim, Beşiktaş, Levent and more.") % proof(),
         canonical=alternates.get(lang) or absolute(request.path), alternates=alternates,
         breadcrumbs=[(_("Home"), reverse("core:home")), (_("Dental clinic by district"), request.path)],
     )

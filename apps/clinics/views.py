@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.urls import reverse
 from django.utils.translation import get_language, gettext as _
 
-from apps.core.seo import Seo, absolute, alternates_for, clinic_schema, faq_schema, page_meta
+from apps.core.seo import Seo, absolute, alternates_for, clinic_schema, faq_schema, fill_proof, page_meta, proof
 from apps.localization.models import localize_list, with_translations
 
 from .models import Clinic, Doctor, Review
@@ -26,9 +26,9 @@ def clinic_list(request):
     rows = [{"c": clinic.localized(lang), "offer": offer, "min_price": min_price,
              "doctor": next(iter(clinic.doctors.all()), None)} for clinic, offer, min_price in page.object_list]
     filtered = bool(request.GET)
-    _meta_clinics = page_meta("clinics", _("Dental Clinics in Istanbul for International Patients"),
-                           _("Verified dental clinics in Turkey: dentists' experience, languages spoken, prices and "
-                      "patient reviews. Free consultation."))
+    _meta_clinics = page_meta("clinics", _("Our Dental Clinic in Istanbul — Şişli, ★%(rating)s, Open 7 Days") % proof(),
+                           _("Dentist-led family clinic in Şişli, Istanbul: 35+ years' experience, ★ %(rating)s from "
+                             "%(count)s Google reviews, languages spoken and real patient stories.") % proof())
     seo = Seo(
         title=_meta_clinics[0],
         description=_meta_clinics[1],
@@ -58,9 +58,9 @@ def clinic_detail(request, slug):
     from .forms import ReviewForm
 
     seo = Seo(
-        title=loc.meta_title or _("%(clinic)s — Dental Clinic in %(city)s") % {"clinic": clinic.name,
+        title=fill_proof(loc.meta_title) or _("%(clinic)s — Dental Clinic in %(city)s") % {"clinic": clinic.name,
                                                                           "city": clinic.city.localized(lang).name},
-        description=loc.meta_description or loc.short_description,
+        description=fill_proof(loc.meta_description) or loc.short_description,
         canonical=_clinic_alternates(clinic).get(lang) or absolute(request.path),
         alternates=_clinic_alternates(clinic),
         robots="noindex,follow" if loc.is_fallback else "index,follow,max-image-preview:large",
@@ -102,9 +102,9 @@ def doctor_detail(request, slug):
         "image": absolute(doctor.photo_src) if doctor.photo_src else None,
     }
     seo = Seo(
-        title=loc.meta_title or _("%(doctor)s — Dentist in %(city)s") % {"doctor": doctor.full_name,
+        title=fill_proof(loc.meta_title) or _("%(doctor)s — Dentist in %(city)s") % {"doctor": doctor.full_name,
                                                                      "city": doctor.clinic.city.localized(lang).name},
-        description=loc.meta_description or (loc.bio or "")[:160],
+        description=fill_proof(loc.meta_description) or (loc.bio or "")[:160],
         canonical=alternates.get(lang) or absolute(request.path),
         alternates=alternates,
         og_type="profile",

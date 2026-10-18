@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-16 23:14+0300\n"
+"POT-Creation-Date: 2026-10-18 08:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,23 +18,26 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: apps/blog/views.py:36
-msgid "Dental Tourism Blog — Guides, Costs & Patient Advice"
-msgstr "Blogg om tandturism — guider, kostnader och patientråd"
+#| msgid "Dental Tourism Blog — Guides, Costs & Patient Advice"
+msgid "Dental Tourism Blog 2026 — Honest Advice from Dentists"
+msgstr "Blogg om Tandturism 2026 — Ärliga Råd från Tandläkare"
 
 #: apps/blog/views.py:37
 msgid ""
-"Honest guides about dental treatment in Turkey: implant and veneer costs, "
-"safety, recovery and how to choose a dentist in Istanbul."
+"Implant and veneer costs, safety, recovery and choosing a dentist in "
+"Istanbul — practical, honest advice from dentists with 35+ years' "
+"experience."
 msgstr ""
-"Ärliga guider om tandvård i Turkiet: priser på implantat och fasader, "
-"säkerhet, läkning och hur du väljer tandläkare i Istanbul."
+"Kostnad för implantat och skalfasader, säkerhet, läkning och val av "
+"tandläkare i Istanbul — praktiska, ärliga råd från tandläkare med över 35 "
+"års erfarenhet."
 
 #: apps/blog/views.py:44 apps/blog/views.py:75 apps/blog/views.py:141
 #: apps/clinics/views.py:39 apps/clinics/views.py:68 apps/clinics/views.py:113
 #: apps/core/views.py:119 apps/seo/area_views.py:105
-#: apps/seo/area_views.py:128 apps/seo/common.py:32 apps/seo/guide_views.py:34
+#: apps/seo/area_views.py:128 apps/seo/common.py:34 apps/seo/guide_views.py:34
 #: apps/seo/guide_views.py:70 apps/seo/package_views.py:67
-#: apps/seo/package_views.py:109 apps/seo/package_views.py:148
+#: apps/seo/package_views.py:108 apps/seo/package_views.py:147
 #: apps/seo/views.py:69 apps/seo/views.py:113 apps/seo/views.py:145
 #: apps/treatments/views.py:27 apps/treatments/views.py:88
 #: templates/404.html:8 templates/components/navbar.html:5
@@ -160,16 +163,22 @@ msgid "Any language"
 msgstr "Valfritt språk"
 
 #: apps/clinics/views.py:29
-msgid "Dental Clinics in Istanbul for International Patients"
-msgstr "Tandkliniker i Istanbul för internationella patienter"
+#, python-format
+#| msgid ""
+#| "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
+msgid "Our Dental Clinic in Istanbul — Şişli, ★%(rating)s, Open 7 Days"
+msgstr "Vår Tandklinik i Istanbul — Şişli, ★%(rating)s, Öppet 7 Dagar"
 
 #: apps/clinics/views.py:30
+#, python-format
 msgid ""
-"Verified dental clinics in Turkey: dentists' experience, languages spoken, "
-"prices and patient reviews. Free consultation."
+"Dentist-led family clinic in Şişli, Istanbul: 35+ years' experience, ★ "
+"%(rating)s from %(count)s Google reviews, languages spoken and real patient "
+"stories."
 msgstr ""
-"Granskade tandkliniker i Turkiet: tandläkarnas erfarenhet, språk, priser och"
-" patientomdömen. Kostnadsfri konsultation."
+"Tandläkarledd familjeklinik i Şişli, Istanbul: 35+ års erfarenhet, ★ "
+"%(rating)s från %(count)s Google-omdömen, språk och riktiga "
+"patientberättelser."
 
 #: apps/clinics/views.py:39 apps/clinics/views.py:68
 #: templates/clinics/list.html:6 templates/components/navbar.html:58
@@ -308,7 +317,7 @@ msgstr "per behandlingstillfälle"
 msgid "per smile"
 msgstr "per leende"
 
-#: apps/core/templatetags/site_tags.py:165 apps/seo/common.py:74
+#: apps/core/templatetags/site_tags.py:165 apps/seo/common.py:81
 msgid "A treatment planned for you — not a template"
 msgstr "En behandling planerad för dig — ingen mall"
 
@@ -329,7 +338,7 @@ msgstr "Få min personliga behandlingsplan"
 msgid "Everything here is real"
 msgstr "Allt här är äkta"
 
-#: apps/core/templatetags/site_tags.py:169 apps/seo/common.py:69
+#: apps/core/templatetags/site_tags.py:169 apps/seo/common.py:76
 msgid ""
 "Real reviews with their source, named materials and a written plan before "
 "you travel."
@@ -508,32 +517,39 @@ msgid "privacy/"
 msgstr "integritet/"
 
 #: apps/core/views.py:87
-msgid "Dental Tourism Istanbul — Implants, Veneers & Crowns in Turkey"
-msgstr "Tandvård i Istanbul — implantat, fasader och kronor i Turkiet"
+#, python-format
+#| msgid ""
+#| "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
+msgid "Dental Tourism Istanbul ★%(rating)s — Family Dentists, 35+ Years"
+msgstr "Tandläkare Istanbul ★%(rating)s — Familjetandläkare, 35+ År"
 
 #: apps/core/views.py:88
+#, python-format
 msgid ""
-"Ethical dental treatment in Istanbul with an experienced dentist. Implants, "
-"veneers, zirconia crowns — very affordable, fixed written quote. Free "
-"WhatsApp consultation."
+"Implants, veneers and crowns in Istanbul from a mother-and-son dentist team "
+"with 35+ years' experience. ★ %(rating)s on Google. Free assessment on "
+"WhatsApp."
 msgstr ""
-"Etisk tandvård i Istanbul hos en erfaren tandläkare. Implantat, skalfasader,"
-" zirkoniakronor – mycket prisvärt, skriftligt fast pris. Kostnadsfri "
-"rådgivning på WhatsApp."
+"Implantat, skalfasader och kronor i Istanbul från ett tandläkarteam av mor "
+"och son med 35+ års erfarenhet. ★ %(rating)s på Google. Gratis bedömning via"
+" WhatsApp."
 
 #: apps/core/views.py:111
-msgid "About Us — Ethical Dental Care in Istanbul"
-msgstr "Om oss — etisk tandvård i Istanbul"
+msgid "About Us — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Family Dentists"
+msgstr "Om oss — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Familjetandläkare"
 
 #: apps/core/views.py:112
+#| msgid ""
+#| "Family dental clinic in %(area)s, Istanbul. Diagnosis first and only the "
+#| "treatment you need. Open 7 days a week — send a photo on WhatsApp."
 msgid ""
-"Meet the dentist and the clinic behind dentaltourism.tr: decades of clinical"
-" experience, transparent diagnosis and only the treatment you actually need."
+"A family dental clinic in Şişli, Istanbul: 35+ years' experience, diagnosis "
+"first and only the treatment you need. Meet the dentists who will treat you."
 msgstr ""
-"Möt tandläkaren och kliniken bakom dentaltourism.tr: decenniers erfarenhet, "
-"transparent diagnos och bara den behandling du verkligen behöver."
+"Familjetandklinik i Şişli, Istanbul: 35+ års erfarenhet, diagnos först och "
+"bara den behandling du behöver. Möt tandläkarna som behandlar dig."
 
-#: apps/core/views.py:119 apps/seo/common.py:33
+#: apps/core/views.py:119 apps/seo/common.py:35
 #: templates/components/footer.html:50 templates/components/navbar.html:55
 msgid "About us"
 msgstr "Om oss"
@@ -543,16 +559,22 @@ msgid "Please check the form and try again."
 msgstr "Kontrollera formuläret och försök igen."
 
 #: apps/core/views.py:145
-msgid "Free Consultation — Contact Our Dentist in Istanbul"
-msgstr "Kostnadsfri konsultation — kontakta vår tandläkare i Istanbul"
+#| msgid "Free assessment on WhatsApp"
+msgid "Free Dental Assessment on WhatsApp — Answered by the Dentist"
+msgstr "Gratis Tandbedömning via WhatsApp — Tandläkaren Svarar"
 
 #: apps/core/views.py:146
+#| msgid ""
+#| "Send your photos or X-ray on WhatsApp. After the dentist has reviewed your "
+#| "case you receive a personal plan with a fixed written quote — we never "
+#| "publish one-size-fits-all prices."
 msgid ""
-"Send your X-ray or photos and get a free treatment plan and fixed price "
-"quote. Reply within 24 hours. WhatsApp, phone or form."
+"Send a photo or X-ray and receive a personal plan with a fixed written quote"
+" — answered by the dentist, not a call centre. Open 7 days a week."
 msgstr ""
-"Skicka din röntgenbild eller foton och få en kostnadsfri behandlingsplan och"
-" fast prisoffert. Svar inom 24 timmar. WhatsApp, telefon eller formulär."
+"Skicka ett foto eller en röntgenbild och få en personlig plan med fast "
+"skriftlig offert — tandläkaren svarar, inte ett callcenter. Öppet 7 dagar i "
+"veckan."
 
 #: apps/core/views.py:158
 msgid "Thank you — we will contact you shortly"
@@ -612,7 +634,6 @@ msgstr ""
 "söndag."
 
 #: apps/seo/area_views.py:63
-#| msgid "How long do I need to stay in Istanbul?"
 msgid "Do you treat expats and visitors staying in Istanbul?"
 msgstr "Behandlar ni expats och besökare som bor i Istanbul?"
 
@@ -626,11 +647,10 @@ msgstr ""
 "alternativ."
 
 #: apps/seo/area_views.py:66
-#| msgid "How much does dental treatment in Turkey cost?"
 msgid "How much does treatment cost?"
 msgstr "Vad kostar behandlingen?"
 
-#: apps/seo/area_views.py:67 apps/seo/package_views.py:179
+#: apps/seo/area_views.py:67 apps/seo/package_views.py:178
 msgid ""
 "Send your photos or X-ray on WhatsApp. After the dentist has reviewed your "
 "case you receive a personal plan with a fixed written quote — we never "
@@ -642,25 +662,26 @@ msgstr ""
 
 #: apps/seo/area_views.py:82
 #, python-format
-#| msgid "Premium dental clinic in Istanbul —"
 msgid "Dental clinic near %(area)s, Istanbul"
 msgstr "Tandklinik nära %(area)s, Istanbul"
 
 #: apps/seo/area_views.py:83
 #, python-format
-msgid "Dentist near %(area)s, Istanbul — Family Dental Clinic in Şişli"
-msgstr "Tandläkare nära %(area)s, Istanbul — familjeklinik i Şişli"
+#| msgid ""
+#| "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
+msgid "Dentist near %(area)s ★%(rating)s — Family Clinic, Open 7 Days"
+msgstr "Tandläkare nära %(area)s ★%(rating)s — Familjeklinik, 7 Dagar"
 
 #: apps/seo/area_views.py:84
 #, python-format
 msgid ""
-"Looking for a dentist near %(area)s? Our family dental clinic in Şişli is "
-"about %(km)s km away. Diagnosis first, only the treatment you need. Open 7 "
-"days a week."
+"Dentist near %(area)s: our family clinic in Şişli is %(km)s km away, open 7 "
+"days. 35+ years' experience, ★ %(rating)s on Google. Free WhatsApp "
+"assessment."
 msgstr ""
-"Letar du efter en tandläkare nära %(area)s? Vår familjetandklinik i Şişli "
-"ligger cirka %(km)s km bort. Först diagnos, bara den behandling du behöver. "
-"Öppet 7 dagar i veckan."
+"Tandläkare nära %(area)s: vår familjeklinik i Şişli ligger %(km)s km bort, "
+"öppet 7 dagar. 35+ års erfarenhet, ★ %(rating)s på Google. Gratis bedömning "
+"via WhatsApp."
 
 #: apps/seo/area_views.py:86
 #, python-format
@@ -675,23 +696,27 @@ msgstr ""
 
 #: apps/seo/area_views.py:89
 #, python-format
-#| msgid "Premium dental clinic in Istanbul —"
 msgid "Dental clinic in %(area)s, Istanbul"
 msgstr "Tandklinik i %(area)s, Istanbul"
 
 #: apps/seo/area_views.py:90
 #, python-format
-msgid "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
-msgstr "Tandklinik i %(area)s, Istanbul — familjetandläkare, öppet 7 dagar"
+#| msgid ""
+#| "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
+msgid "Dentist in %(area)s ★%(rating)s — Family Clinic, Open 7 Days"
+msgstr "Tandläkare i %(area)s ★%(rating)s — Familjeklinik, Öppet 7 Dagar"
 
 #: apps/seo/area_views.py:91
 #, python-format
+#| msgid ""
+#| "Family dental clinic in %(area)s, Istanbul. Diagnosis first and only the "
+#| "treatment you need. Open 7 days a week — send a photo on WhatsApp."
 msgid ""
-"Family dental clinic in %(area)s, Istanbul. Diagnosis first and only the "
-"treatment you need. Open 7 days a week — send a photo on WhatsApp."
+"Family dental clinic in %(area)s, Istanbul: 35+ years' experience, ★ "
+"%(rating)s on Google, open 7 days a week. Free assessment on WhatsApp."
 msgstr ""
-"Familjetandklinik i %(area)s, Istanbul. Först diagnos, bara den behandling "
-"du behöver. Öppet 7 dagar i veckan — skicka ett foto på WhatsApp."
+"Familjetandklinik i %(area)s, Istanbul: 35+ års erfarenhet, ★ %(rating)s på "
+"Google, öppet 7 dagar i veckan. Gratis bedömning via WhatsApp."
 
 #: apps/seo/area_views.py:93
 #, python-format
@@ -706,6 +731,7 @@ msgstr ""
 
 #: apps/seo/area_views.py:105 apps/seo/area_views.py:109
 #: apps/seo/area_views.py:128 apps/seo/area_views.py:135
+#: templates/guides/detail.html:39
 msgid "Dental clinic by district"
 msgstr "Tandklinik per stadsdel"
 
@@ -717,20 +743,25 @@ msgstr ""
 "Tandklinik nära dig i Istanbul: Şişli, Nişantaşı, Taksim, Levent och fler"
 
 #: apps/seo/area_views.py:124
-msgid ""
-"Dental Clinic near Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul"
-msgstr ""
-"Tandklinik nära Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul"
+#, python-format
+#| msgid ""
+#| "Dental Clinic near Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul"
+msgid "Dentist near Şişli, Nişantaşı, Taksim & Levent ★%(rating)s"
+msgstr "Tandläkare nära Şişli, Nişantaşı, Taksim & Levent ★%(rating)s"
 
 #: apps/seo/area_views.py:125
+#, python-format
+#| msgid ""
+#| "Our family dental clinic is in Şişli, Istanbul. See how to reach us from "
+#| "Nişantaşı, Taksim, Beşiktaş, Levent, Maslak and other districts — open 7 "
+#| "days a week."
 msgid ""
-"Our family dental clinic is in Şişli, Istanbul. See how to reach us from "
-"Nişantaşı, Taksim, Beşiktaş, Levent, Maslak and other districts — open 7 "
-"days a week."
+"Family dental clinic in Şişli, Istanbul: 35+ years, ★ %(rating)s on Google, "
+"open 7 days. Distance and route from Nişantaşı, Taksim, Beşiktaş, Levent and"
+" more."
 msgstr ""
-"Vår familjetandklinik ligger i Şişli, Istanbul. Se hur du når oss från "
-"Nişantaşı, Taksim, Beşiktaş, Levent, Maslak och andra stadsdelar — öppet 7 "
-"dagar i veckan."
+"Familjeklinik i Şişli, Istanbul: 35+ år, ★ %(rating)s på Google, öppet 7 "
+"dagar. Avstånd och väg från Nişantaşı, Taksim, Beşiktaş, Levent och fler."
 
 #: apps/seo/area_views.py:136
 msgid ""
@@ -742,22 +773,22 @@ msgstr ""
 "tunnelbanelinjen M2. Välj din stadsdel för att se avståndet och den enklaste"
 " vägen hit."
 
-#: apps/seo/common.py:36 templates/clinics/detail.html:74
+#: apps/seo/common.py:38 templates/clinics/detail.html:74
 #: templates/clinics/doctor.html:26 templates/components/footer.html:51
 #: templates/components/navbar.html:56 templates/components/navbar.html:93
 #: templates/components/reviews.html:16 templates/home/sections/hero.html:182
 msgid "Patient reviews"
 msgstr "Patientomdömen"
 
-#: apps/seo/common.py:42
+#: apps/seo/common.py:44
 msgid "Google reviews"
 msgstr "Google-omdömen"
 
-#: apps/seo/common.py:66
+#: apps/seo/common.py:73
 msgid "Calm, pain-free and explained step by step"
 msgstr "Lugnt, smärtfritt och förklarat steg för steg"
 
-#: apps/seo/common.py:67
+#: apps/seo/common.py:74
 msgid ""
 "Local anaesthesia, a dentist who explains everything first, and no decision "
 "under pressure."
@@ -765,24 +796,24 @@ msgstr ""
 "Lokalbedövning, en tandläkare som förklarar allt först och inga beslut under"
 " press."
 
-#: apps/seo/common.py:68
+#: apps/seo/common.py:75
 msgid "Check everything before you trust us"
 msgstr "Kontrollera allt innan du litar på oss"
 
-#: apps/seo/common.py:70
+#: apps/seo/common.py:77
 msgid "Very affordable — and a fixed price in writing"
 msgstr "Mycket prisvärt – och ett fast pris skriftligt"
 
-#: apps/seo/common.py:71
+#: apps/seo/common.py:78
 msgid "No hidden costs. Call or message us and receive your personal quote."
 msgstr ""
 "Inga dolda kostnader. Ring eller skriv till oss och få ditt personliga pris."
 
-#: apps/seo/common.py:72
+#: apps/seo/common.py:79
 msgid "Time with your dentist, not with a sales team"
 msgstr "Tid med din tandläkare, inte med ett säljteam"
 
-#: apps/seo/common.py:73
+#: apps/seo/common.py:80
 msgid ""
 "One experienced dentist responsible for your whole treatment, premium "
 "materials, discreet care."
@@ -790,7 +821,7 @@ msgstr ""
 "En erfaren tandläkare ansvarar för hela behandlingen, förstklassiga "
 "material, diskret omvårdnad."
 
-#: apps/seo/common.py:75
+#: apps/seo/common.py:82
 msgid ""
 "Digital smile design, minimal preparation and one experienced dentist for "
 "every step. Healthy tooth tissue is saved first."
@@ -798,11 +829,11 @@ msgstr ""
 "Digital smile design, minimal preparation och en erfaren tandläkare i varje "
 "steg. Frisk tandvävnad bevaras först."
 
-#: apps/seo/common.py:76
+#: apps/seo/common.py:83
 msgid "No judgement — only solutions"
 msgstr "Inga pekpinnar – bara lösningar"
 
-#: apps/seo/common.py:77
+#: apps/seo/common.py:84
 msgid ""
 "Whatever the state of your teeth, we have seen it before. We start with what"
 " can be saved."
@@ -810,40 +841,40 @@ msgstr ""
 "Oavsett hur dina tänder ser ut har vi sett det förut. Vi börjar med det som "
 "går att rädda."
 
-#: apps/seo/common.py:78
+#: apps/seo/common.py:85
 msgid "A dentist-led clinic you can check"
 msgstr "En tandläkarledd klinik som du kan granska"
 
-#: apps/seo/common.py:79
+#: apps/seo/common.py:86
 msgid "Qualifications, reviews and real photos — all on this page."
 msgstr "Kvalifikationer, omdömen och riktiga bilder – allt på den här sidan."
 
-#: apps/seo/common.py:80
+#: apps/seo/common.py:87
 msgid "Open 7 days a week in central Istanbul"
 msgstr "Öppet 7 dagar i veckan mitt i Istanbul"
 
-#: apps/seo/common.py:81
+#: apps/seo/common.py:88
 msgid ""
 "Tell us your travel dates; we plan the appointments around your flights."
 msgstr "Berätta dina resdatum; vi planerar tiderna efter dina flyg."
 
-#: apps/seo/common.py:82
+#: apps/seo/common.py:89
 msgid "Plan your visit in one message"
 msgstr "Planera ditt besök med ett meddelande"
 
-#: apps/seo/common.py:83
+#: apps/seo/common.py:90
 msgid ""
 "Send your photos and travel dates on WhatsApp — we reply with your personal "
 "plan."
 msgstr ""
 "Skicka bilder och resdatum på WhatsApp – vi svarar med din personliga plan."
 
-#: apps/seo/common.py:85 templates/components/footer.html:6
+#: apps/seo/common.py:92 templates/components/footer.html:6
 #: templates/packages/origin.html:19
 msgid "Dental work is more than a Hollywood smile"
 msgstr "Tandvård är mer än ett Hollywood-leende"
 
-#: apps/seo/common.py:86
+#: apps/seo/common.py:93
 msgid ""
 "We save healthy teeth first and plan a real treatment made only for you."
 msgstr ""
@@ -851,16 +882,20 @@ msgstr ""
 "dig."
 
 #: apps/seo/guide_views.py:30
-msgid "Dental Tourism Guides — Turkey & Istanbul"
-msgstr "Guider om tandturism – Turkiet & Istanbul"
+#| msgid "Dental Tourism Guides — Turkey & Istanbul"
+msgid "Dental Tourism Guides 2026 — Turkey & Istanbul, by Dentists"
+msgstr "Guider om Tandturism 2026 — Turkiet & Istanbul"
 
 #: apps/seo/guide_views.py:31
+#| msgid ""
+#| "Honest guides about dental treatment in Turkey: choosing a clinic, reviews, "
+#| "travel, guarantee and aftercare — from a dentist in Istanbul."
 msgid ""
-"Honest guides about dental treatment in Turkey: choosing a clinic, reviews, "
-"travel, guarantee and aftercare — from a dentist in Istanbul."
+"Choosing a clinic, reviews, safety, travel, guarantee and aftercare — honest"
+" guides to dental treatment in Turkey, written by dentists in Istanbul."
 msgstr ""
-"Ärliga guider om tandvård i Turkiet: välja klinik, omdömen, resa, garanti "
-"och eftervård – från en tandläkare i Istanbul."
+"Välja klinik, omdömen, säkerhet, resa, garanti och eftervård — ärliga guider"
+" om tandvård i Turkiet, skrivna av tandläkare i Istanbul."
 
 #: apps/seo/guide_views.py:34 apps/seo/guide_views.py:70
 #: templates/components/footer.html:32 templates/components/navbar.html:41
@@ -880,7 +915,7 @@ msgstr ""
 "Allt du behöver för att bestämma dig tryggt – skrivet av en tandläkare, utan"
 " säljsnack."
 
-#: apps/seo/guide_views.py:82
+#: apps/seo/guide_views.py:86
 msgid "Guide"
 msgstr "Guide"
 
@@ -969,23 +1004,20 @@ msgstr ""
 " korta besök med några månaders mellanrum; vi planerar båda efter dina flyg."
 
 #: apps/seo/package_views.py:62
-msgid ""
-"Dental Tourism Packages in Istanbul — Personalised, Not One-Size-Fits-All"
-msgstr "Tandresor till Istanbul – personliga, inte standardpaket"
+msgid "Dental Holiday Packages Istanbul 2026 — Planned on Your X-ray"
+msgstr "Tandvårdsresa Istanbul 2026 — Planerad efter Din Röntgen"
 
 #: apps/seo/package_views.py:63
 msgid ""
-"Dental holiday packages in Turkey built around a real diagnosis: assessment,"
-" treatment and aftercare. Your budget goes into your treatment, not extras. "
-"Get your personal plan on WhatsApp."
+"No one-size-fits-all deal: your dental package in Istanbul is planned from "
+"your photos or X-ray, with a fixed written quote and aftercare at home."
 msgstr ""
-"Tandvårdsresor till Turkiet byggda på en riktig diagnos: bedömning, "
-"behandling och eftervård. Din budget går till din behandling, inte till "
-"extras. Få din personliga plan på WhatsApp."
+"Inget standardpaket: din tandvård i Istanbul planeras efter dina foton eller"
+" röntgen, med fast skriftlig offert och eftervård hemma."
 
 #: apps/seo/package_views.py:67 apps/seo/package_views.py:79
-#: apps/seo/package_views.py:109 apps/seo/package_views.py:117
-#: apps/seo/package_views.py:148 apps/seo/package_views.py:157
+#: apps/seo/package_views.py:108 apps/seo/package_views.py:116
+#: apps/seo/package_views.py:147 apps/seo/package_views.py:156
 #: templates/components/footer.html:37 templates/components/footer.html:38
 #: templates/components/navbar.html:85
 msgid "Dental packages"
@@ -1011,42 +1043,45 @@ msgstr "%(treatment)s – paket i Istanbul"
 
 #: apps/seo/package_views.py:102
 #, python-format
-msgid "%(treatment)s Package Turkey — Personal Plan, Not a Fixed Deal"
-msgstr ""
-"%(treatment)s paket Turkiet – personlig plan, inget färdigt erbjudande"
+#| msgid "%(treatment)s package in Istanbul"
+msgid "%(treatment)s Package Istanbul — Planned on Your X-ray"
+msgstr "%(treatment)s Paket Istanbul — Planerat efter Din Röntgen"
 
 #: apps/seo/package_views.py:103
 #, python-format
 msgid ""
-"%(treatment)s package in Istanbul built around your diagnosis: assessment, "
-"treatment and aftercare. Your budget goes into your treatment, not extras. "
-"Get your personal plan on WhatsApp."
+"%(treatment)s package in Istanbul: examination, treatment and aftercare "
+"planned around your case and travel dates. Fixed written quote, free "
+"WhatsApp assessment."
 msgstr ""
-"%(treatment)s-paket i Istanbul byggt på din diagnos: bedömning, behandling "
-"och eftervård. Din budget går till din behandling, inte till extras. Få din "
-"personliga plan på WhatsApp."
+"%(treatment)s-paket i Istanbul: undersökning, behandling och eftervård "
+"planerade efter ditt fall och dina resdatum. Fast offert, gratis bedömning."
 
-#: apps/seo/package_views.py:137
+#: apps/seo/package_views.py:136
 #, python-format
 msgid "Dental holiday packages from %(country)s to Istanbul"
 msgstr "Tandresor från %(country)s till Istanbul"
 
+#: apps/seo/package_views.py:142
+#, python-format
+msgid "%(country)s to Istanbul for Dental Treatment — 2026 Guide"
+msgstr "Tandvård i Istanbul från %(country)s — Guide 2026"
+
 #: apps/seo/package_views.py:143
 #, python-format
-msgid "Dental Holiday Packages from %(country)s — Istanbul, Turkey"
-msgstr "Tandresor från %(country)s – Istanbul, Turkiet"
-
-#: apps/seo/package_views.py:144
-#, python-format
+#| msgid ""
+#| "Planning dental treatment in Turkey from %(country)s? Flight time, how many "
+#| "trips you need, what a personalised dental package includes and aftercare at"
+#| " home."
 msgid ""
-"Planning dental treatment in Turkey from %(country)s? Flight time, how many "
-"trips you need, what a personalised dental package includes and aftercare at"
-" home."
+"Travelling from %(country)s for dental treatment? Flight time, how many "
+"trips you need, what a fair package includes and how aftercare works at "
+"home."
 msgstr ""
-"Planerar du tandvård i Turkiet från %(country)s? Flygtid, antal resor, vad "
-"ett personligt paket innehåller och eftervård hemma."
+"Reser du från %(country)s för tandvård? Flygtid, hur många resor som behövs,"
+" vad ett rättvist paket innehåller och hur eftervården fungerar hemma."
 
-#: apps/seo/package_views.py:155
+#: apps/seo/package_views.py:154
 #, python-format
 msgid ""
 "Planning dental treatment in Istanbul from %(country)s? Flight times, how "
@@ -1055,7 +1090,7 @@ msgstr ""
 "Planerar du tandvård i Istanbul från %(country)s? Flygtider, antal resor och"
 " vad ett personligt paket innehåller."
 
-#: apps/seo/package_views.py:166
+#: apps/seo/package_views.py:165
 msgid ""
 "We plan treatment to keep the number of trips to a minimum — often one "
 "longer stay, with implants scheduled so that the second visit is short."
@@ -1063,7 +1098,7 @@ msgstr ""
 "Vi planerar behandlingen för så få resor som möjligt – ofta en längre "
 "vistelse, med implantat planerade så att det andra besöket blir kort."
 
-#: apps/seo/package_views.py:168
+#: apps/seo/package_views.py:167
 msgid ""
 "Crowns, veneers and most other treatments need one trip of about a week; "
 "implants usually need two short trips a few months apart."
@@ -1072,28 +1107,28 @@ msgstr ""
 "ungefär en vecka; implantat oftast två korta resor med några månaders "
 "mellanrum."
 
-#: apps/seo/package_views.py:171
+#: apps/seo/package_views.py:170
 #, python-format
 msgid "How long is the flight from %(country)s to Istanbul?"
 msgstr "Hur lång är flygresan från %(country)s till Istanbul?"
 
-#: apps/seo/package_views.py:172
+#: apps/seo/package_views.py:171
 #, python-format
 msgid ""
 "About %(hours)s hours, depending on your departure airport and connection."
 msgstr "Cirka %(hours)s timmar, beroende på avreseflygplats och anslutning."
 
-#: apps/seo/package_views.py:174
+#: apps/seo/package_views.py:173
 #, python-format
 msgid "How many trips will I need from %(country)s?"
 msgstr "Hur många resor behöver jag från %(country)s?"
 
-#: apps/seo/package_views.py:175
+#: apps/seo/package_views.py:174
 #, python-format
 msgid "What happens when I am back in %(country)s?"
 msgstr "Vad händer när jag är tillbaka i %(country)s?"
 
-#: apps/seo/package_views.py:176
+#: apps/seo/package_views.py:175
 msgid ""
 "Follow-up continues on WhatsApp and email. If needed we coordinate with a "
 "local dentist and guide you by video call — you are never left alone."
@@ -1102,7 +1137,7 @@ msgstr ""
 "en lokal tandläkare och vägleder dig via videosamtal – du lämnas aldrig "
 "ensam."
 
-#: apps/seo/package_views.py:178
+#: apps/seo/package_views.py:177
 msgid "How do I get a price for my dental package?"
 msgstr "Hur får jag ett pris för mitt tandpaket?"
 
@@ -1190,17 +1225,18 @@ msgstr ""
 "– inga dolda kostnader."
 
 #: apps/seo/views.py:108
-msgid "Dental Prices in Turkey 2026 — Affordable, Personal Quote"
-msgstr "Tandläkare Turkiet priser 2026 – prisvärt, personligt pris"
+#| msgid "Dental Prices in Turkey 2026 — Affordable, Personal Quote"
+msgid "Dental Prices in Turkey 2026 — What Really Decides the Cost"
+msgstr "Tandläkarpriser Turkiet 2026 — Vad som Verkligen Styr Kostnaden"
 
 #: apps/seo/views.py:109
 msgid ""
-"How much do teeth cost in Turkey? Very affordable dental treatment in "
-"Istanbul with a fixed written quote. Call or WhatsApp for your personal "
-"price."
+"Why one price list can't fit every mouth, what a fair quote includes and how"
+" to get a fixed written price from the dentist — free on WhatsApp."
 msgstr ""
-"Vad kostar tänder i Turkiet? Mycket prisvärd tandvård i Istanbul med "
-"skriftligt fast pris. Ring eller skriv på WhatsApp."
+"Varför en prislista inte passar alla munnar, vad en rättvis offert "
+"innehåller och hur du får ett fast skriftligt pris av tandläkaren — gratis "
+"via WhatsApp."
 
 #: apps/seo/views.py:113 apps/seo/views.py:116 apps/seo/views.py:145
 #: apps/seo/views.py:151 templates/components/footer.html:29
@@ -1227,19 +1263,19 @@ msgstr "%(treatment)s pris i Turkiet – prisvärt, med fast pris"
 
 #: apps/seo/views.py:139
 #, python-format
-msgid "%(treatment)s Price in Turkey 2026 — Personal Quote"
-msgstr "%(treatment)s pris Turkiet 2026 – personligt pris"
+#| msgid "%(treatment)s Price in Turkey 2026 — Personal Quote"
+msgid "%(treatment)s Cost in Turkey 2026 — Fixed Written Quote"
+msgstr "%(treatment)s Pris Turkiet 2026 — Fast Skriftlig Offert"
 
 #: apps/seo/views.py:140
 #, python-format
 msgid ""
-"How much does %(treatment)s cost in Turkey? Very affordable in Istanbul, "
-"with a fixed written quote after the dentist sees your case. Call or "
-"WhatsApp."
+"%(treatment)s in Istanbul: what decides the cost, what a fair quote includes"
+" and how to get a fixed written quote from the dentist — free on WhatsApp."
 msgstr ""
-"Vad kostar %(treatment)s i Turkiet? Mycket prisvärt i Istanbul, med "
-"skriftligt fast pris när tandläkaren har sett ditt fall. Ring eller "
-"WhatsApp."
+"%(treatment)s i Istanbul: vad som styr priset, vad en rättvis offert "
+"innehåller och hur du får en fast skriftlig offert av tandläkaren — gratis "
+"via WhatsApp."
 
 #: apps/seo/views.py:152
 #, python-format
@@ -1251,18 +1287,20 @@ msgstr ""
 "ditt personliga pris via telefon eller WhatsApp."
 
 #: apps/treatments/views.py:19
-msgid "Dental Treatments in Istanbul — Prices & Information"
-msgstr "Tandvård i Istanbul — priser och information"
+#| msgid ""
+#| "Dental Tourism Istanbul — Implants, Veneers & Crowns in Turkey"
+msgid "Dental Treatments in Istanbul 2026 — Implants, Veneers, Crowns"
+msgstr "Tandbehandlingar i Istanbul 2026 — Implantat, Skalfasader, Kronor"
 
 #: apps/treatments/views.py:20
 msgid ""
-"All dental treatments for international patients in Istanbul: implants, "
-"veneers, crowns, All-on-4, root canal and more. Transparent prices and stay "
-"durations."
+"Implants, veneers, zirconia crowns, All-on-4, root canal and whitening in "
+"Istanbul — how each works, how long you stay and who it suits. Free "
+"assessment."
 msgstr ""
-"Alla tandbehandlingar för internationella patienter i Istanbul: implantat, "
-"fasader, kronor, All-on-4, rotfyllning och mer. Tydliga priser och "
-"vistelsetider."
+"Implantat, skalfasader, zirkoniakronor, All-on-4, rotbehandling och blekning"
+" i Istanbul — hur det går till, hur länge du stannar och för vem. Gratis "
+"bedömning."
 
 #: apps/treatments/views.py:80
 #, python-format
@@ -1290,7 +1328,6 @@ msgid "guide/"
 msgstr "guide/"
 
 #: dental_tourism/urls.py:55
-#| msgid "clinics/"
 msgid "dental-clinic/"
 msgstr "tandklinik/"
 
@@ -1411,7 +1448,6 @@ msgstr ""
 
 #: templates/areas/detail.html:13
 #, python-format
-#| msgid "Patients from %(c)s"
 msgid "Get directions from %(area)s"
 msgstr "Vägbeskrivning från %(area)s"
 
@@ -1460,7 +1496,6 @@ msgstr "Med taxi"
 
 #: templates/areas/detail.html:23
 #, python-format
-#| msgid "%(n)s min read"
 msgid "%(min)s min"
 msgstr "%(min)s min"
 
@@ -1484,12 +1519,10 @@ msgid "Ask for my personal plan"
 msgstr "Be om min personliga plan"
 
 #: templates/areas/detail.html:34 templates/areas/index.html:19
-#| msgid "Treatments & prices"
 msgid "Treatments at our clinic"
 msgstr "Behandlingar på vår klinik"
 
 #: templates/areas/detail.html:41
-#| msgid "Real results from our clinic"
 msgid "Other districts near our clinic"
 msgstr "Andra stadsdelar nära vår klinik"
 
@@ -2864,7 +2897,6 @@ msgid "Inside our clinic"
 msgstr "Inne på vår klinik"
 
 #: templates/pseo/_photos.html:11
-#| msgid "All patient videos"
 msgid "Our patients on video"
 msgstr "Våra patienter på video"
 
@@ -3134,6 +3166,128 @@ msgid ""
 msgstr ""
 "Alla behandlingar vi erbjuder, med ärlig information om förloppet, hur länge"
 " du behöver stanna i Istanbul och vad det kostar."
+
+#~ msgid ""
+#~ "Honest guides about dental treatment in Turkey: implant and veneer costs, "
+#~ "safety, recovery and how to choose a dentist in Istanbul."
+#~ msgstr ""
+#~ "Ärliga guider om tandvård i Turkiet: priser på implantat och fasader, "
+#~ "säkerhet, läkning och hur du väljer tandläkare i Istanbul."
+
+#~ msgid "Dental Clinics in Istanbul for International Patients"
+#~ msgstr "Tandkliniker i Istanbul för internationella patienter"
+
+#~ msgid ""
+#~ "Verified dental clinics in Turkey: dentists' experience, languages spoken, "
+#~ "prices and patient reviews. Free consultation."
+#~ msgstr ""
+#~ "Granskade tandkliniker i Turkiet: tandläkarnas erfarenhet, språk, priser och"
+#~ " patientomdömen. Kostnadsfri konsultation."
+
+#~ msgid ""
+#~ "Ethical dental treatment in Istanbul with an experienced dentist. Implants, "
+#~ "veneers, zirconia crowns — very affordable, fixed written quote. Free "
+#~ "WhatsApp consultation."
+#~ msgstr ""
+#~ "Etisk tandvård i Istanbul hos en erfaren tandläkare. Implantat, skalfasader,"
+#~ " zirkoniakronor – mycket prisvärt, skriftligt fast pris. Kostnadsfri "
+#~ "rådgivning på WhatsApp."
+
+#~ msgid "About Us — Ethical Dental Care in Istanbul"
+#~ msgstr "Om oss — etisk tandvård i Istanbul"
+
+#~ msgid ""
+#~ "Meet the dentist and the clinic behind dentaltourism.tr: decades of clinical"
+#~ " experience, transparent diagnosis and only the treatment you actually need."
+#~ msgstr ""
+#~ "Möt tandläkaren och kliniken bakom dentaltourism.tr: decenniers erfarenhet, "
+#~ "transparent diagnos och bara den behandling du verkligen behöver."
+
+#~ msgid "Free Consultation — Contact Our Dentist in Istanbul"
+#~ msgstr "Kostnadsfri konsultation — kontakta vår tandläkare i Istanbul"
+
+#~ msgid ""
+#~ "Send your X-ray or photos and get a free treatment plan and fixed price "
+#~ "quote. Reply within 24 hours. WhatsApp, phone or form."
+#~ msgstr ""
+#~ "Skicka din röntgenbild eller foton och få en kostnadsfri behandlingsplan och"
+#~ " fast prisoffert. Svar inom 24 timmar. WhatsApp, telefon eller formulär."
+
+#, python-format
+#~ msgid "Dentist near %(area)s, Istanbul — Family Dental Clinic in Şişli"
+#~ msgstr "Tandläkare nära %(area)s, Istanbul — familjeklinik i Şişli"
+
+#, python-format
+#~ msgid ""
+#~ "Looking for a dentist near %(area)s? Our family dental clinic in Şişli is "
+#~ "about %(km)s km away. Diagnosis first, only the treatment you need. Open 7 "
+#~ "days a week."
+#~ msgstr ""
+#~ "Letar du efter en tandläkare nära %(area)s? Vår familjetandklinik i Şişli "
+#~ "ligger cirka %(km)s km bort. Först diagnos, bara den behandling du behöver. "
+#~ "Öppet 7 dagar i veckan."
+
+#~ msgid ""
+#~ "Dental Tourism Packages in Istanbul — Personalised, Not One-Size-Fits-All"
+#~ msgstr "Tandresor till Istanbul – personliga, inte standardpaket"
+
+#~ msgid ""
+#~ "Dental holiday packages in Turkey built around a real diagnosis: assessment,"
+#~ " treatment and aftercare. Your budget goes into your treatment, not extras. "
+#~ "Get your personal plan on WhatsApp."
+#~ msgstr ""
+#~ "Tandvårdsresor till Turkiet byggda på en riktig diagnos: bedömning, "
+#~ "behandling och eftervård. Din budget går till din behandling, inte till "
+#~ "extras. Få din personliga plan på WhatsApp."
+
+#, python-format
+#~ msgid "%(treatment)s Package Turkey — Personal Plan, Not a Fixed Deal"
+#~ msgstr ""
+#~ "%(treatment)s paket Turkiet – personlig plan, inget färdigt erbjudande"
+
+#, python-format
+#~ msgid ""
+#~ "%(treatment)s package in Istanbul built around your diagnosis: assessment, "
+#~ "treatment and aftercare. Your budget goes into your treatment, not extras. "
+#~ "Get your personal plan on WhatsApp."
+#~ msgstr ""
+#~ "%(treatment)s-paket i Istanbul byggt på din diagnos: bedömning, behandling "
+#~ "och eftervård. Din budget går till din behandling, inte till extras. Få din "
+#~ "personliga plan på WhatsApp."
+
+#, python-format
+#~ msgid "Dental Holiday Packages from %(country)s — Istanbul, Turkey"
+#~ msgstr "Tandresor från %(country)s – Istanbul, Turkiet"
+
+#~ msgid ""
+#~ "How much do teeth cost in Turkey? Very affordable dental treatment in "
+#~ "Istanbul with a fixed written quote. Call or WhatsApp for your personal "
+#~ "price."
+#~ msgstr ""
+#~ "Vad kostar tänder i Turkiet? Mycket prisvärd tandvård i Istanbul med "
+#~ "skriftligt fast pris. Ring eller skriv på WhatsApp."
+
+#, python-format
+#~ msgid ""
+#~ "How much does %(treatment)s cost in Turkey? Very affordable in Istanbul, "
+#~ "with a fixed written quote after the dentist sees your case. Call or "
+#~ "WhatsApp."
+#~ msgstr ""
+#~ "Vad kostar %(treatment)s i Turkiet? Mycket prisvärt i Istanbul, med "
+#~ "skriftligt fast pris när tandläkaren har sett ditt fall. Ring eller "
+#~ "WhatsApp."
+
+#~ msgid "Dental Treatments in Istanbul — Prices & Information"
+#~ msgstr "Tandvård i Istanbul — priser och information"
+
+#~ msgid ""
+#~ "All dental treatments for international patients in Istanbul: implants, "
+#~ "veneers, crowns, All-on-4, root canal and more. Transparent prices and stay "
+#~ "durations."
+#~ msgstr ""
+#~ "Alla tandbehandlingar för internationella patienter i Istanbul: implantat, "
+#~ "fasader, kronor, All-on-4, rotfyllning och mer. Tydliga priser och "
+#~ "vistelsetider."
 
 #~ msgid "Airport transfer"
 #~ msgstr "Flygplatstransfer"

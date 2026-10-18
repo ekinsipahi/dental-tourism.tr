@@ -1,0 +1,212 @@
+{
+ "clinic": {
+  "en": {
+   "meta_title": "Dr. Devrim Sipahi Dental Clinic, Şişli ★{rating} — 35+ Years",
+   "meta_description": "Family dental clinic in Şişli, Istanbul: Dr. Dt. Devrim Biriken Sipahi and Dt. Ekin Sipahi. 35+ years, open 7 days incl. weekends, ★ {rating} from {count} Google reviews."
+  },
+  "tr": {
+   "meta_title": "Dr. Devrim Sipahi Diş Kliniği, Şişli ★{rating} — 35+ Yıl",
+   "meta_description": "Şişli, İstanbul'da aile diş kliniği: Dr. Dt. Devrim Biriken Sipahi ve Dt. Ekin Sipahi. 35+ yıl, hafta sonu dahil 7 gün açık, {count} Google yorumunda ★ {rating}."
+  },
+  "de": {
+   "meta_title": "Zahnklinik Dr. Devrim Sipahi, Şişli ★{rating} — 35+ Jahre",
+   "meta_description": "Familienpraxis in Şişli, Istanbul: Dr. Dt. Devrim Biriken Sipahi und Dt. Ekin Sipahi. 35+ Jahre, 7 Tage geöffnet, ★ {rating} aus {count} Google-Bewertungen."
+  },
+  "nl": {
+   "meta_title": "Tandartskliniek Dr. Devrim Sipahi, Şişli ★{rating} — 35+ Jaar",
+   "meta_description": "Familiepraktijk in Şişli, Istanbul: Dr. Dt. Devrim Biriken Sipahi en Dt. Ekin Sipahi. 35+ jaar, 7 dagen open incl. weekend, ★ {rating} uit {count} Google-reviews."
+  },
+  "fr": {
+   "meta_title": "Cabinet Dentaire Dr Devrim Sipahi, Şişli ★{rating} — 35 Ans",
+   "meta_description": "Cabinet dentaire familial à Şişli, Istanbul : Dr Dt. Devrim Biriken Sipahi et Dt. Ekin Sipahi. 35 ans d'expérience, ouvert 7 j/7, ★ {rating} sur {count} avis Google."
+  },
+  "it": {
+   "meta_title": "Studio Dentistico Dr. Devrim Sipahi, Şişli ★{rating} — 35+ Anni",
+   "meta_description": "Studio dentistico di famiglia a Şişli, Istanbul: Dr. Dt. Devrim Biriken Sipahi e Dt. Ekin Sipahi. 35+ anni, aperto 7/7, ★ {rating} su {count} recensioni Google."
+  },
+  "es": {
+   "meta_title": "Clínica Dental Dra. Devrim Sipahi, Şişli ★{rating} — 35+ Años",
+   "meta_description": "Clínica dental familiar en Şişli, Estambul: Dra. Dt. Devrim Biriken Sipahi y Dt. Ekin Sipahi. 35+ años, abierta 7 días, ★ {rating} en {count} reseñas de Google."
+  },
+  "pl": {
+   "meta_title": "Gabinet Dr Devrim Sipahi, Şişli ★{rating} — 35+ Lat Doświadczenia",
+   "meta_description": "Rodzinny gabinet stomatologiczny w Şişli, Stambuł: Dr Dt. Devrim Biriken Sipahi i Dt. Ekin Sipahi. 35+ lat, otwarte 7 dni, ★ {rating} z {count} opinii Google."
+  },
+  "ru": {
+   "meta_title": "Стоматология д-ра Devrim Sipahi, Шишли ★{rating} — 35+ лет",
+   "meta_description": "Семейная стоматология в Шишли, Стамбул: д-р Devrim Biriken Sipahi и Ekin Sipahi. Опыт 35+ лет, 7 дней в неделю, включая выходные, ★ {rating} по {count} отзывам Google."
+  },
+  "uk": {
+   "meta_title": "Стоматологія д-ра Devrim Sipahi, Шишлі ★{rating} — 35+ років",
+   "meta_description": "Сімейна стоматологія в Шишлі, Стамбул: д-р Devrim Biriken Sipahi та Ekin Sipahi. Досвід 35+ років, 7 днів на тиждень, ★ {rating} за {count} відгуками Google."
+  },
+  "ar": {
+   "meta_title": "عيادة د. Devrim Sipahi للأسنان، شيشلي ★{rating} — خبرة 35+ عامًا",
+   "meta_description": "عيادة أسنان عائلية في شيشلي، إسطنبول: د. Devrim Biriken Sipahi وEkin Sipahi. خبرة 35+ عامًا، مفتوحة 7 أيام بما فيها العطلة، ★ {rating} من {count} تقييمًا على Google."
+  },
+  "sv": {
+   "meta_title": "Tandklinik Dr. Devrim Sipahi, Şişli ★{rating} — 35+ År",
+   "meta_description": "Familjetandklinik i Şişli, Istanbul: Dr. Dt. Devrim Biriken Sipahi och Dt. Ekin Sipahi. 35+ år, öppet 7 dagar inkl. helger, ★ {rating} från {count} Google-omdömen."
+  },
+  "da": {
+   "meta_title": "Tandklinik Dr. Devrim Sipahi, Şişli ★{rating} — 35+ År",
+   "meta_description": "Familietandklinik i Şişli, Istanbul: Dr. Dt. Devrim Biriken Sipahi og Dt. Ekin Sipahi. 35+ år, åbent 7 dage inkl. weekender, ★ {rating} fra {count} Google-anmeldelser."
+  },
+  "no": {
+   "meta_title": "Tannklinikk Dr. Devrim Sipahi, Şişli ★{rating} — 35+ År",
+   "meta_description": "Familietannklinikk i Şişli, Istanbul: Dr. Dt. Devrim Biriken Sipahi og Dt. Ekin Sipahi. 35+ år, åpent 7 dager inkl. helger, ★ {rating} fra {count} Google-anmeldelser."
+  },
+  "ro": {
+   "meta_title": "Clinica Dentară Dr. Devrim Sipahi, Şişli ★{rating} — 35+ Ani",
+   "meta_description": "Clinică stomatologică de familie în Şişli, Istanbul: Dr. Dt. Devrim Biriken Sipahi și Dt. Ekin Sipahi. 35+ ani, deschis 7 zile, ★ {rating} din {count} recenzii Google."
+  },
+  "bg": {
+   "meta_title": "Дентална клиника д-р Devrim Sipahi, Шишли ★{rating} — 35+ години",
+   "meta_description": "Семейна дентална клиника в Шишли, Истанбул: д-р Devrim Biriken Sipahi и Ekin Sipahi. 35+ години, 7 дни в седмицата, ★ {rating} от {count} отзива в Google."
+  },
+  "az": {
+   "meta_title": "Dr. Devrim Sipahi Diş Klinikası, Şişli ★{rating} — 35+ İl",
+   "meta_description": "Şişli, İstanbulda ailə diş klinikası: Dr. Dt. Devrim Biriken Sipahi və Dt. Ekin Sipahi. 35+ il, həftəsonu daxil 7 gün açıq, {count} Google rəyində ★ {rating}."
+  }
+ },
+ "devrim-biriken-sipahi": {
+  "en": {
+   "meta_title": "Dr. Dt. Devrim Biriken Sipahi — Dentist in Şişli, 35+ Years",
+   "meta_description": "Dentist in Istanbul for 35+ years: Ankara University graduate, trained in oral and maxillofacial radiology at Marmara University. Treats every patient personally."
+  },
+  "tr": {
+   "meta_title": "Dr. Dt. Devrim Biriken Sipahi — Şişli Diş Hekimi, 35+ Yıl",
+   "meta_description": "35 yılı aşkın süredir İstanbul'da diş hekimi: Ankara Üniversitesi mezunu, Marmara Üniversitesi'nde ağız, diş ve çene radyolojisi eğitimi."
+  },
+  "de": {
+   "meta_title": "Dr. Dt. Devrim Biriken Sipahi — Zahnärztin in Şişli, 35+ Jahre",
+   "meta_description": "Seit über 35 Jahren Zahnärztin in Istanbul: Absolventin der Universität Ankara, Ausbildung in Mund-Kiefer-Radiologie an der Marmara-Universität."
+  },
+  "nl": {
+   "meta_title": "Dr. Dt. Devrim Biriken Sipahi — Tandarts in Şişli, 35+ Jaar",
+   "meta_description": "Al 35+ jaar tandarts in Istanbul: afgestudeerd aan de Universiteit van Ankara, opgeleid in kaakradiologie aan de Marmara Universiteit. Behandelt elke patiënt zelf."
+  },
+  "fr": {
+   "meta_title": "Dr Dt. Devrim Biriken Sipahi — Dentiste à Şişli, 35 Ans",
+   "meta_description": "Dentiste à Istanbul depuis plus de 35 ans : diplômée de l'Université d'Ankara, formée en radiologie bucco-maxillo-faciale à l'Université de Marmara."
+  },
+  "it": {
+   "meta_title": "Dott.ssa Dt. Devrim Biriken Sipahi — Dentista a Şişli, 35+ Anni",
+   "meta_description": "Dentista a Istanbul da oltre 35 anni: laureata all'Università di Ankara, formata in radiologia odontostomatologica all'Università di Marmara."
+  },
+  "es": {
+   "meta_title": "Dra. Dt. Devrim Biriken Sipahi — Dentista en Şişli, 35+ Años",
+   "meta_description": "Dentista en Estambul desde hace más de 35 años: licenciada por la Universidad de Ankara, formada en radiología oral y maxilofacial en la Universidad de Mármara."
+  },
+  "pl": {
+   "meta_title": "Dr Dt. Devrim Biriken Sipahi — Dentystka w Şişli, 35+ Lat",
+   "meta_description": "Dentystka w Stambule od ponad 35 lat: absolwentka Uniwersytetu w Ankarze, szkolenie z radiologii szczękowo-twarzowej na Uniwersytecie Marmara."
+  },
+  "ru": {
+   "meta_title": "Д-р Devrim Biriken Sipahi — стоматолог в Шишли, 35+ лет",
+   "meta_description": "Стоматолог в Стамбуле более 35 лет: выпускница Университета Анкары, специализация в челюстно-лицевой радиологии в Университете Мармара. Лично лечит каждого пациента."
+  },
+  "uk": {
+   "meta_title": "Д-р Devrim Biriken Sipahi — стоматолог у Шишлі, 35+ років",
+   "meta_description": "Стоматолог у Стамбулі понад 35 років: випускниця Університету Анкари, спеціалізація в щелепно-лицевій радіології в Університеті Мармара."
+  },
+  "ar": {
+   "meta_title": "د. Devrim Biriken Sipahi — طبيبة أسنان في شيشلي، 35+ عامًا",
+   "meta_description": "طبيبة أسنان في إسطنبول منذ أكثر من 35 عامًا: خريجة جامعة أنقرة، متخصصة في أشعة الفم والوجه والفكين من جامعة مرمرة. تعالج كل مريض بنفسها."
+  },
+  "sv": {
+   "meta_title": "Dr. Dt. Devrim Biriken Sipahi — Tandläkare i Şişli, 35+ År",
+   "meta_description": "Tandläkare i Istanbul i över 35 år: utbildad vid Ankara universitet, vidareutbildad i oral och maxillofacial radiologi vid Marmara universitet."
+  },
+  "da": {
+   "meta_title": "Dr. Dt. Devrim Biriken Sipahi — Tandlæge i Şişli, 35+ År",
+   "meta_description": "Tandlæge i Istanbul i over 35 år: uddannet ved Ankara Universitet, videreuddannet i oral og maxillofacial radiologi ved Marmara Universitet."
+  },
+  "no": {
+   "meta_title": "Dr. Dt. Devrim Biriken Sipahi — Tannlege i Şişli, 35+ År",
+   "meta_description": "Tannlege i Istanbul i over 35 år: utdannet ved Ankara universitet, videreutdannet i oral og maxillofacial radiologi ved Marmara universitet."
+  },
+  "ro": {
+   "meta_title": "Dr. Dt. Devrim Biriken Sipahi — Medic Stomatolog în Şişli, 35+ Ani",
+   "meta_description": "Medic stomatolog în Istanbul de peste 35 de ani: absolventă a Universității din Ankara, pregătită în radiologie oro-maxilo-facială la Universitatea Marmara."
+  },
+  "bg": {
+   "meta_title": "Д-р Devrim Biriken Sipahi — зъболекар в Шишли, 35+ години",
+   "meta_description": "Зъболекар в Истанбул повече от 35 години: завършила Университета в Анкара, специализация по лицево-челюстна рентгенология в Университета Мармара."
+  },
+  "az": {
+   "meta_title": "Dr. Dt. Devrim Biriken Sipahi — Şişlidə Diş Həkimi, 35+ İl",
+   "meta_description": "35 ildən çoxdur İstanbulda diş həkimi: Ankara Universitetinin məzunu, Marmara Universitetində ağız-çənə radiologiyası təhsili. Hər pasiyenti şəxsən müalicə edir."
+  }
+ },
+ "ekin-sipahi": {
+  "en": {
+   "meta_title": "Dt. Ekin Sipahi — Dentist in Şişli, Istanbul (Family Clinic)",
+   "meta_description": "Dt. Ekin Sipahi works with his mother, Dr. Dt. Devrim Biriken Sipahi, at their family dental clinic in Şişli — diagnosis first and only the treatment you need."
+  },
+  "tr": {
+   "meta_title": "Dt. Ekin Sipahi — Şişli Diş Hekimi, İstanbul (Aile Kliniği)",
+   "meta_description": "Dt. Ekin Sipahi, annesi Dr. Dt. Devrim Biriken Sipahi ile Şişli'deki aile diş kliniğinde çalışıyor — önce teşhis, yalnızca ihtiyacınız olan tedavi."
+  },
+  "de": {
+   "meta_title": "Dt. Ekin Sipahi — Zahnarzt in Şişli, Istanbul (Familienpraxis)",
+   "meta_description": "Dt. Ekin Sipahi arbeitet mit seiner Mutter, Dr. Dt. Devrim Biriken Sipahi, in der Familienpraxis in Şişli, Istanbul — zuerst die Diagnose, nur die nötige Behandlung."
+  },
+  "nl": {
+   "meta_title": "Dt. Ekin Sipahi — Tandarts in Şişli, Istanbul (Familiepraktijk)",
+   "meta_description": "Dt. Ekin Sipahi werkt met zijn moeder, Dr. Dt. Devrim Biriken Sipahi, in hun familiepraktijk in Şişli — eerst de diagnose, alleen de behandeling die u nodig hebt."
+  },
+  "fr": {
+   "meta_title": "Dt. Ekin Sipahi — Dentiste à Şişli, Istanbul (Cabinet Familial)",
+   "meta_description": "Dt. Ekin Sipahi travaille avec sa mère, le Dr Dt. Devrim Biriken Sipahi, dans leur cabinet familial à Şişli — diagnostic d'abord, uniquement le traitement nécessaire."
+  },
+  "it": {
+   "meta_title": "Dt. Ekin Sipahi — Dentista a Şişli, Istanbul (Studio di Famiglia)",
+   "meta_description": "Dt. Ekin Sipahi lavora con sua madre, la Dott.ssa Dt. Devrim Biriken Sipahi, nello studio di famiglia a Şişli — prima la diagnosi, solo il trattamento necessario."
+  },
+  "es": {
+   "meta_title": "Dt. Ekin Sipahi — Dentista en Şişli, Estambul (Clínica Familiar)",
+   "meta_description": "Dt. Ekin Sipahi trabaja con su madre, la Dra. Dt. Devrim Biriken Sipahi, en su clínica dental familiar de Şişli, Estambul — primero el diagnóstico, solo lo necesario."
+  },
+  "pl": {
+   "meta_title": "Dt. Ekin Sipahi — Dentysta w Şişli, Stambuł (Gabinet Rodzinny)",
+   "meta_description": "Dt. Ekin Sipahi pracuje z mamą, Dr Dt. Devrim Biriken Sipahi, w rodzinnym gabinecie w Şişli w Stambule — najpierw diagnoza, tylko potrzebne leczenie."
+  },
+  "ru": {
+   "meta_title": "Ekin Sipahi — стоматолог в Шишли, Стамбул (семейная клиника)",
+   "meta_description": "Стоматолог Ekin Sipahi работает вместе с мамой, д-ром Devrim Biriken Sipahi, в семейной клинике в Шишли, Стамбул: сначала диагностика, только нужное лечение."
+  },
+  "uk": {
+   "meta_title": "Ekin Sipahi — стоматолог у Шишлі, Стамбул (сімейна клініка)",
+   "meta_description": "Стоматолог Ekin Sipahi працює разом із мамою, д-ром Devrim Biriken Sipahi, у сімейній клініці в Шишлі, Стамбул: спершу діагностика, лише потрібне лікування."
+  },
+  "ar": {
+   "meta_title": "Ekin Sipahi — طبيب أسنان في شيشلي، إسطنبول (عيادة عائلية)",
+   "meta_description": "يعمل طبيب الأسنان Ekin Sipahi مع والدته د. Devrim Biriken Sipahi في عيادتهما العائلية في شيشلي، إسطنبول — التشخيص أولاً والعلاج الذي تحتاجه فقط."
+  },
+  "sv": {
+   "meta_title": "Dt. Ekin Sipahi — Tandläkare i Şişli, Istanbul (Familjeklinik)",
+   "meta_description": "Dt. Ekin Sipahi arbetar med sin mamma, Dr. Dt. Devrim Biriken Sipahi, på deras familjetandklinik i Şişli — diagnos först och bara den behandling du behöver."
+  },
+  "da": {
+   "meta_title": "Dt. Ekin Sipahi — Tandlæge i Şişli, Istanbul (Familieklinik)",
+   "meta_description": "Dt. Ekin Sipahi arbejder med sin mor, Dr. Dt. Devrim Biriken Sipahi, på deres familietandklinik i Şişli — diagnose først og kun den behandling, du har brug for."
+  },
+  "no": {
+   "meta_title": "Dt. Ekin Sipahi — Tannlege i Şişli, Istanbul (Familieklinikk)",
+   "meta_description": "Dt. Ekin Sipahi jobber med moren sin, Dr. Dt. Devrim Biriken Sipahi, på familietannklinikken i Şişli, Istanbul — diagnose først og bare den behandlingen du trenger."
+  },
+  "ro": {
+   "meta_title": "Dt. Ekin Sipahi — Medic Stomatolog în Şişli, Istanbul (Familie)",
+   "meta_description": "Dt. Ekin Sipahi lucrează alături de mama sa, Dr. Dt. Devrim Biriken Sipahi, în clinica de familie din Şişli — mai întâi diagnosticul, doar tratamentul necesar."
+  },
+  "bg": {
+   "meta_title": "Ekin Sipahi — зъболекар в Шишли, Истанбул (семейна клиника)",
+   "meta_description": "Зъболекарят Ekin Sipahi работи с майка си, д-р Devrim Biriken Sipahi, в семейната им клиника в Шишли, Истанбул — първо диагноза, само нужното лечение."
+  },
+  "az": {
+   "meta_title": "Dt. Ekin Sipahi — Şişlidə Diş Həkimi, İstanbul (Ailə Klinikası)",
+   "meta_description": "Dt. Ekin Sipahi anası Dr. Dt. Devrim Biriken Sipahi ilə Şişlidəki ailə diş klinikasında işləyir — əvvəlcə diaqnoz, yalnız lazım olan müalicə."
+  }
+ }
+}

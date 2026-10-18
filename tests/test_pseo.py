@@ -45,6 +45,7 @@ class PseoTests(SeededTestCase):
                 html = r.content.decode()
                 self.assertEqual(html.count("<h1"), 1, url)
                 self.assertIsNone(MONEY.search(_visible(html)), url)
+                self.assertNotIn("{rating}", html, url)  # meta'daki yer tutucu Google puanıyla dolmalı
                 self.assertIn("https://cdn.example.com/real.jpg", html)
                 self.assertIn("instagram.com/drdevrimbirikensipahi", html)
                 suffix = "" if lang == "tr" else f"{lang}/"  # drdevrim.com: o anki dilin ana sayfası
@@ -75,6 +76,7 @@ class PseoTests(SeededTestCase):
                 self.assertEqual(html.count("<h1"), 1, url)
                 self.assertIsNone(MONEY.search(_visible(html)), url)
                 self.assertIn("https://cdn.example.com/real.jpg", html)  # her sayfada gerçek fotoğraf
+                self.assertNotIn("%(", re.search(r"<title>(.*?)</title>", html, re.S).group(1), url)
         with translation.override("tr"):
             self.assertEqual(reverse("areas:detail", kwargs={"area": "nisantasi"}), "/tr/dis-klinigi/nisantasi/")
         self.assertIn("Taksim", self.client.get("/dental-clinic/taksim/").content.decode())

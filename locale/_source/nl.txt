@@ -669,3 +669,33 @@
 668|Behandelingen in onze praktijk
 669|Andere wijken bij onze praktijk
 670|Onze patiënten op video
+671|Tandheelkundig Toerisme Blog 2026 — Eerlijk Advies van Tandartsen
+672|Kosten van implantaten en facings, veiligheid, herstel en een tandarts kiezen in Istanbul — praktisch, eerlijk advies van tandartsen met 35+ jaar ervaring.
+673|Onze Tandartspraktijk in Istanbul — Şişli, ★%(rating)s, 7 Dagen Open
+674|Familiepraktijk in Şişli, Istanbul, geleid door tandartsen: 35+ jaar ervaring, ★ %(rating)s uit %(count)s Google-reviews, gesproken talen en echte patiëntverhalen.
+675|Tandarts Istanbul ★%(rating)s — Familiepraktijk, 35+ Jaar Ervaring
+676|Implantaten, facings en kronen in Istanbul door een moeder-zoon tandartsteam met 35+ jaar ervaring. ★ %(rating)s op Google. Gratis beoordeling via WhatsApp.
+677|Over ons — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Familietandartsen
+678|Tandheelkundige familiepraktijk in Şişli, Istanbul: 35+ jaar ervaring, eerst de diagnose, alleen de behandeling die u nodig hebt. Maak kennis met uw tandartsen.
+679|Gratis Tandartsbeoordeling via WhatsApp — Antwoord van de Tandarts
+680|Stuur een foto of röntgenfoto en ontvang een persoonlijk plan met een vaste schriftelijke offerte — antwoord van de tandarts, geen callcenter. 7 dagen open.
+681|Tandarts bij %(area)s ★%(rating)s — Familiepraktijk, 7 Dagen Open
+682|Tandarts bij %(area)s: onze familiepraktijk in Şişli ligt op %(km)s km, 7 dagen open. 35+ jaar ervaring, ★ %(rating)s op Google. Gratis beoordeling via WhatsApp.
+683|Tandarts in %(area)s ★%(rating)s — Familiepraktijk, 7 Dagen Open
+684|Tandheelkundige familiepraktijk in %(area)s, Istanbul: 35+ jaar ervaring, ★ %(rating)s op Google, 7 dagen per week open. Gratis beoordeling via WhatsApp.
+685|Tandarts bij Şişli, Nişantaşı, Taksim & Levent ★%(rating)s
+686|Familiepraktijk in Şişli, Istanbul: 35+ jaar, ★ %(rating)s op Google, 7 dagen open. Afstand en route vanuit Nişantaşı, Taksim, Beşiktaş, Levent en meer.
+687|Gidsen Tandheelkundig Toerisme 2026 — Turkije & Istanbul
+688|Een kliniek kiezen, reviews, veiligheid, reis, garantie en nazorg — eerlijke gidsen over tandheelkundige behandeling in Turkije, geschreven door tandartsen in Istanbul.
+689|Tandartsvakantie Istanbul 2026 — Gepland op Uw Röntgenfoto
+690|Geen standaardpakket: uw tandheelkundig pakket in Istanbul wordt gepland op basis van foto's of röntgenfoto, met vaste schriftelijke offerte en nazorg thuis.
+691|%(treatment)s Pakket Istanbul — Gepland op Uw Röntgenfoto
+692|%(treatment)s-pakket in Istanbul: onderzoek, behandeling en nazorg gepland rond uw situatie en reisdata. Vaste offerte, gratis beoordeling.
+693|Vanuit %(country)s naar Istanbul voor de Tandarts — Gids 2026
+694|Vanuit %(country)s naar Istanbul voor tandheelkundige zorg? Vluchttijd, hoeveel reizen nodig zijn, wat een eerlijk pakket bevat en hoe nazorg thuis werkt.
+695|Tandarts Prijzen Turkije 2026 — Wat de Kosten Echt Bepaalt
+696|Waarom één prijslijst niet voor elke mond past, wat een eerlijke offerte bevat en hoe u een vaste schriftelijke prijs van de tandarts krijgt — gratis via WhatsApp.
+697|%(treatment)s Kosten Turkije 2026 — Vaste Offerte
+698|%(treatment)s in Istanbul: wat de kosten bepaalt, wat een eerlijke offerte bevat en hoe u een vaste schriftelijke offerte van de tandarts krijgt.
+699|Tandheelkundige Behandelingen Istanbul 2026 — Implantaten, Facings
+700|Implantaten, facings, zirkonia kronen, All-on-4, wortelkanaalbehandeling en bleken in Istanbul — hoe het werkt, hoe lang u blijft en voor wie. Gratis beoordeling.

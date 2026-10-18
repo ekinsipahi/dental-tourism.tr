@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-16 23:14+0300\n"
+"POT-Creation-Date: 2026-10-18 08:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,24 +18,26 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: apps/blog/views.py:36
-msgid "Dental Tourism Blog — Guides, Costs & Patient Advice"
-msgstr "Blog tourisme dentaire — guides, coûts et conseils aux patients"
+#| msgid "Dental Tourism Blog — Guides, Costs & Patient Advice"
+msgid "Dental Tourism Blog 2026 — Honest Advice from Dentists"
+msgstr "Blog Tourisme Dentaire 2026 — Conseils Honnêtes de Dentistes"
 
 #: apps/blog/views.py:37
 msgid ""
-"Honest guides about dental treatment in Turkey: implant and veneer costs, "
-"safety, recovery and how to choose a dentist in Istanbul."
+"Implant and veneer costs, safety, recovery and choosing a dentist in "
+"Istanbul — practical, honest advice from dentists with 35+ years' "
+"experience."
 msgstr ""
-"Des guides honnêtes sur les soins dentaires en Turquie : prix des implants "
-"et facettes, sécurité, récupération et comment choisir un dentiste à "
-"Istanbul."
+"Coût des implants et facettes, sécurité, guérison et choix d'un dentiste à "
+"Istanbul — des conseils pratiques et honnêtes de dentistes avec plus de 35 "
+"ans d'expérience."
 
 #: apps/blog/views.py:44 apps/blog/views.py:75 apps/blog/views.py:141
 #: apps/clinics/views.py:39 apps/clinics/views.py:68 apps/clinics/views.py:113
 #: apps/core/views.py:119 apps/seo/area_views.py:105
-#: apps/seo/area_views.py:128 apps/seo/common.py:32 apps/seo/guide_views.py:34
+#: apps/seo/area_views.py:128 apps/seo/common.py:34 apps/seo/guide_views.py:34
 #: apps/seo/guide_views.py:70 apps/seo/package_views.py:67
-#: apps/seo/package_views.py:109 apps/seo/package_views.py:148
+#: apps/seo/package_views.py:108 apps/seo/package_views.py:147
 #: apps/seo/views.py:69 apps/seo/views.py:113 apps/seo/views.py:145
 #: apps/treatments/views.py:27 apps/treatments/views.py:88
 #: templates/404.html:8 templates/components/navbar.html:5
@@ -161,16 +163,22 @@ msgid "Any language"
 msgstr "Toutes les langues"
 
 #: apps/clinics/views.py:29
-msgid "Dental Clinics in Istanbul for International Patients"
-msgstr "Cliniques dentaires à Istanbul pour patients internationaux"
+#, python-format
+#| msgid ""
+#| "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
+msgid "Our Dental Clinic in Istanbul — Şişli, ★%(rating)s, Open 7 Days"
+msgstr "Notre Cabinet Dentaire à Istanbul — Şişli, ★%(rating)s, Ouvert 7 j/7"
 
 #: apps/clinics/views.py:30
+#, python-format
 msgid ""
-"Verified dental clinics in Turkey: dentists' experience, languages spoken, "
-"prices and patient reviews. Free consultation."
+"Dentist-led family clinic in Şişli, Istanbul: 35+ years' experience, ★ "
+"%(rating)s from %(count)s Google reviews, languages spoken and real patient "
+"stories."
 msgstr ""
-"Cliniques dentaires vérifiées en Turquie : expérience des dentistes, langues"
-" parlées, prix et avis de patients. Consultation gratuite."
+"Cabinet familial dirigé par des dentistes à Şişli, Istanbul : 35 ans "
+"d'expérience, ★ %(rating)s sur %(count)s avis Google, langues parlées et "
+"vrais témoignages."
 
 #: apps/clinics/views.py:39 apps/clinics/views.py:68
 #: templates/clinics/list.html:6 templates/components/navbar.html:58
@@ -311,7 +319,7 @@ msgstr "par séance"
 msgid "per smile"
 msgstr "par sourire"
 
-#: apps/core/templatetags/site_tags.py:165 apps/seo/common.py:74
+#: apps/core/templatetags/site_tags.py:165 apps/seo/common.py:81
 msgid "A treatment planned for you — not a template"
 msgstr "Un traitement conçu pour vous — pas un modèle"
 
@@ -332,7 +340,7 @@ msgstr "Obtenir mon plan de traitement personnel"
 msgid "Everything here is real"
 msgstr "Tout ici est réel"
 
-#: apps/core/templatetags/site_tags.py:169 apps/seo/common.py:69
+#: apps/core/templatetags/site_tags.py:169 apps/seo/common.py:76
 msgid ""
 "Real reviews with their source, named materials and a written plan before "
 "you travel."
@@ -515,34 +523,40 @@ msgid "privacy/"
 msgstr "confidentialite/"
 
 #: apps/core/views.py:87
-msgid "Dental Tourism Istanbul — Implants, Veneers & Crowns in Turkey"
-msgstr ""
-"Soins dentaires à Istanbul — implants, facettes et couronnes en Turquie"
+#, python-format
+#| msgid ""
+#| "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
+msgid "Dental Tourism Istanbul ★%(rating)s — Family Dentists, 35+ Years"
+msgstr "Dentiste Istanbul ★%(rating)s — Dentistes en Famille, 35+ Ans"
 
 #: apps/core/views.py:88
+#, python-format
 msgid ""
-"Ethical dental treatment in Istanbul with an experienced dentist. Implants, "
-"veneers, zirconia crowns — very affordable, fixed written quote. Free "
-"WhatsApp consultation."
+"Implants, veneers and crowns in Istanbul from a mother-and-son dentist team "
+"with 35+ years' experience. ★ %(rating)s on Google. Free assessment on "
+"WhatsApp."
 msgstr ""
-"Soins dentaires éthiques à Istanbul avec un dentiste expérimenté. Implants, "
-"facettes, couronnes zircone – très abordable, devis écrit fixe. Consultation"
-" gratuite sur WhatsApp."
+"Implants, facettes et couronnes à Istanbul par une équipe mère-fils de "
+"dentistes, 35 ans d'expérience. ★ %(rating)s sur Google. Évaluation gratuite"
+" sur WhatsApp."
 
 #: apps/core/views.py:111
-msgid "About Us — Ethical Dental Care in Istanbul"
-msgstr "À propos — dentisterie éthique à Istanbul"
+msgid "About Us — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Family Dentists"
+msgstr "Qui sommes-nous — Dr Devrim Sipahi & Dt. Ekin Sipahi, Dentistes"
 
 #: apps/core/views.py:112
+#| msgid ""
+#| "Family dental clinic in %(area)s, Istanbul. Diagnosis first and only the "
+#| "treatment you need. Open 7 days a week — send a photo on WhatsApp."
 msgid ""
-"Meet the dentist and the clinic behind dentaltourism.tr: decades of clinical"
-" experience, transparent diagnosis and only the treatment you actually need."
+"A family dental clinic in Şişli, Istanbul: 35+ years' experience, diagnosis "
+"first and only the treatment you need. Meet the dentists who will treat you."
 msgstr ""
-"Découvrez la dentiste et la clinique derrière dentaltourism.tr : des "
-"décennies d'expérience, un diagnostic transparent et uniquement le "
-"traitement dont vous avez vraiment besoin."
+"Cabinet dentaire familial à Şişli, Istanbul : 35 ans d'expérience, "
+"diagnostic d'abord, uniquement le traitement nécessaire. Rencontrez les "
+"dentistes qui vous soigneront."
 
-#: apps/core/views.py:119 apps/seo/common.py:33
+#: apps/core/views.py:119 apps/seo/common.py:35
 #: templates/components/footer.html:50 templates/components/navbar.html:55
 msgid "About us"
 msgstr "À propos"
@@ -552,17 +566,21 @@ msgid "Please check the form and try again."
 msgstr "Veuillez vérifier le formulaire et réessayer."
 
 #: apps/core/views.py:145
-msgid "Free Consultation — Contact Our Dentist in Istanbul"
-msgstr "Consultation gratuite — contactez notre dentiste à Istanbul"
+#| msgid "Free assessment on WhatsApp"
+msgid "Free Dental Assessment on WhatsApp — Answered by the Dentist"
+msgstr "Évaluation Dentaire Gratuite sur WhatsApp — Réponse du Dentiste"
 
 #: apps/core/views.py:146
+#| msgid ""
+#| "Send your photos or X-ray on WhatsApp. After the dentist has reviewed your "
+#| "case you receive a personal plan with a fixed written quote — we never "
+#| "publish one-size-fits-all prices."
 msgid ""
-"Send your X-ray or photos and get a free treatment plan and fixed price "
-"quote. Reply within 24 hours. WhatsApp, phone or form."
+"Send a photo or X-ray and receive a personal plan with a fixed written quote"
+" — answered by the dentist, not a call centre. Open 7 days a week."
 msgstr ""
-"Envoyez votre radio ou vos photos et recevez gratuitement un plan de "
-"traitement et un devis fixe. Réponse sous 24 heures. WhatsApp, téléphone ou "
-"formulaire."
+"Envoyez une photo ou une radio et recevez un plan personnel avec devis écrit"
+" fixe — réponse du dentiste, pas d'un centre d'appels. Ouvert 7 jours sur 7."
 
 #: apps/core/views.py:158
 msgid "Thank you — we will contact you shortly"
@@ -623,7 +641,6 @@ msgstr ""
 "compris."
 
 #: apps/seo/area_views.py:63
-#| msgid "How long do I need to stay in Istanbul?"
 msgid "Do you treat expats and visitors staying in Istanbul?"
 msgstr "Soignez-vous les expatriés et les visiteurs séjournant à Istanbul ?"
 
@@ -637,11 +654,10 @@ msgstr ""
 "répondra avec vos options."
 
 #: apps/seo/area_views.py:66
-#| msgid "How much does dental treatment in Turkey cost?"
 msgid "How much does treatment cost?"
 msgstr "Combien coûte un traitement ?"
 
-#: apps/seo/area_views.py:67 apps/seo/package_views.py:179
+#: apps/seo/area_views.py:67 apps/seo/package_views.py:178
 msgid ""
 "Send your photos or X-ray on WhatsApp. After the dentist has reviewed your "
 "case you receive a personal plan with a fixed written quote — we never "
@@ -653,25 +669,26 @@ msgstr ""
 
 #: apps/seo/area_views.py:82
 #, python-format
-#| msgid "Premium dental clinic in Istanbul —"
 msgid "Dental clinic near %(area)s, Istanbul"
 msgstr "Cabinet dentaire près de %(area)s, Istanbul"
 
 #: apps/seo/area_views.py:83
 #, python-format
-msgid "Dentist near %(area)s, Istanbul — Family Dental Clinic in Şişli"
-msgstr "Dentiste près de %(area)s, Istanbul — cabinet familial à Şişli"
+#| msgid ""
+#| "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
+msgid "Dentist near %(area)s ★%(rating)s — Family Clinic, Open 7 Days"
+msgstr "Dentiste près de %(area)s ★%(rating)s — Cabinet Familial, 7 j/7"
 
 #: apps/seo/area_views.py:84
 #, python-format
 msgid ""
-"Looking for a dentist near %(area)s? Our family dental clinic in Şişli is "
-"about %(km)s km away. Diagnosis first, only the treatment you need. Open 7 "
-"days a week."
+"Dentist near %(area)s: our family clinic in Şişli is %(km)s km away, open 7 "
+"days. 35+ years' experience, ★ %(rating)s on Google. Free WhatsApp "
+"assessment."
 msgstr ""
-"Vous cherchez un dentiste près de %(area)s ? Notre cabinet dentaire familial"
-" à Şişli est à environ %(km)s km. D'abord le diagnostic, uniquement le "
-"traitement nécessaire. Ouvert 7 jours sur 7."
+"Dentiste près de %(area)s : notre cabinet familial à Şişli est à %(km)s km, "
+"ouvert 7 j/7. 35 ans d'expérience, ★ %(rating)s sur Google. Évaluation "
+"gratuite sur WhatsApp."
 
 #: apps/seo/area_views.py:86
 #, python-format
@@ -686,25 +703,28 @@ msgstr ""
 
 #: apps/seo/area_views.py:89
 #, python-format
-#| msgid "Premium dental clinic in Istanbul —"
 msgid "Dental clinic in %(area)s, Istanbul"
 msgstr "Cabinet dentaire à %(area)s, Istanbul"
 
 #: apps/seo/area_views.py:90
 #, python-format
-msgid "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
-msgstr ""
-"Cabinet dentaire à %(area)s, Istanbul — dentistes en famille, ouvert 7 j/7"
+#| msgid ""
+#| "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
+msgid "Dentist in %(area)s ★%(rating)s — Family Clinic, Open 7 Days"
+msgstr "Dentiste à %(area)s ★%(rating)s — Cabinet Familial, Ouvert 7 j/7"
 
 #: apps/seo/area_views.py:91
 #, python-format
+#| msgid ""
+#| "Family dental clinic in %(area)s, Istanbul. Diagnosis first and only the "
+#| "treatment you need. Open 7 days a week — send a photo on WhatsApp."
 msgid ""
-"Family dental clinic in %(area)s, Istanbul. Diagnosis first and only the "
-"treatment you need. Open 7 days a week — send a photo on WhatsApp."
+"Family dental clinic in %(area)s, Istanbul: 35+ years' experience, ★ "
+"%(rating)s on Google, open 7 days a week. Free assessment on WhatsApp."
 msgstr ""
-"Cabinet dentaire familial à %(area)s, Istanbul. D'abord le diagnostic, "
-"uniquement le traitement nécessaire. Ouvert 7 jours sur 7 — envoyez une "
-"photo sur WhatsApp."
+"Cabinet dentaire familial à %(area)s, Istanbul : 35 ans d'expérience, ★ "
+"%(rating)s sur Google, ouvert 7 jours sur 7. Évaluation gratuite sur "
+"WhatsApp."
 
 #: apps/seo/area_views.py:93
 #, python-format
@@ -719,6 +739,7 @@ msgstr ""
 
 #: apps/seo/area_views.py:105 apps/seo/area_views.py:109
 #: apps/seo/area_views.py:128 apps/seo/area_views.py:135
+#: templates/guides/detail.html:39
 msgid "Dental clinic by district"
 msgstr "Cabinet dentaire par quartier"
 
@@ -731,21 +752,26 @@ msgstr ""
 " Levent et plus"
 
 #: apps/seo/area_views.py:124
-msgid ""
-"Dental Clinic near Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul"
-msgstr ""
-"Cabinet dentaire près de Şişli, Nişantaşı, Taksim, Levent et Beşiktaş — "
-"Istanbul"
+#, python-format
+#| msgid ""
+#| "Dental Clinic near Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul"
+msgid "Dentist near Şişli, Nişantaşı, Taksim & Levent ★%(rating)s"
+msgstr "Dentiste près de Şişli, Nişantaşı, Taksim & Levent ★%(rating)s"
 
 #: apps/seo/area_views.py:125
+#, python-format
+#| msgid ""
+#| "Our family dental clinic is in Şişli, Istanbul. See how to reach us from "
+#| "Nişantaşı, Taksim, Beşiktaş, Levent, Maslak and other districts — open 7 "
+#| "days a week."
 msgid ""
-"Our family dental clinic is in Şişli, Istanbul. See how to reach us from "
-"Nişantaşı, Taksim, Beşiktaş, Levent, Maslak and other districts — open 7 "
-"days a week."
+"Family dental clinic in Şişli, Istanbul: 35+ years, ★ %(rating)s on Google, "
+"open 7 days. Distance and route from Nişantaşı, Taksim, Beşiktaş, Levent and"
+" more."
 msgstr ""
-"Notre cabinet dentaire familial est à Şişli, Istanbul. Découvrez comment "
-"venir depuis Nişantaşı, Taksim, Beşiktaş, Levent, Maslak et d'autres "
-"quartiers — ouvert 7 jours sur 7."
+"Cabinet familial à Şişli, Istanbul : 35 ans, ★ %(rating)s sur Google, ouvert"
+" 7 j/7. Distance et trajet depuis Nişantaşı, Taksim, Beşiktaş, Levent et "
+"plus."
 
 #: apps/seo/area_views.py:136
 msgid ""
@@ -757,22 +783,22 @@ msgstr ""
 "et de la ligne de métro M2. Choisissez votre quartier pour voir la distance "
 "et le trajet le plus simple."
 
-#: apps/seo/common.py:36 templates/clinics/detail.html:74
+#: apps/seo/common.py:38 templates/clinics/detail.html:74
 #: templates/clinics/doctor.html:26 templates/components/footer.html:51
 #: templates/components/navbar.html:56 templates/components/navbar.html:93
 #: templates/components/reviews.html:16 templates/home/sections/hero.html:182
 msgid "Patient reviews"
 msgstr "Avis de patients"
 
-#: apps/seo/common.py:42
+#: apps/seo/common.py:44
 msgid "Google reviews"
 msgstr "Avis Google"
 
-#: apps/seo/common.py:66
+#: apps/seo/common.py:73
 msgid "Calm, pain-free and explained step by step"
 msgstr "Calme, sans douleur et expliqué étape par étape"
 
-#: apps/seo/common.py:67
+#: apps/seo/common.py:74
 msgid ""
 "Local anaesthesia, a dentist who explains everything first, and no decision "
 "under pressure."
@@ -780,25 +806,25 @@ msgstr ""
 "Anesthésie locale, un dentiste qui explique tout d’abord, et aucune décision"
 " sous pression."
 
-#: apps/seo/common.py:68
+#: apps/seo/common.py:75
 msgid "Check everything before you trust us"
 msgstr "Vérifiez tout avant de nous faire confiance"
 
-#: apps/seo/common.py:70
+#: apps/seo/common.py:77
 msgid "Very affordable — and a fixed price in writing"
 msgstr "Très abordable – et un prix fixe par écrit"
 
-#: apps/seo/common.py:71
+#: apps/seo/common.py:78
 msgid "No hidden costs. Call or message us and receive your personal quote."
 msgstr ""
 "Aucun coût caché. Appelez-nous ou écrivez-nous et recevez votre devis "
 "personnel."
 
-#: apps/seo/common.py:72
+#: apps/seo/common.py:79
 msgid "Time with your dentist, not with a sales team"
 msgstr "Du temps avec votre dentiste, pas avec une équipe commerciale"
 
-#: apps/seo/common.py:73
+#: apps/seo/common.py:80
 msgid ""
 "One experienced dentist responsible for your whole treatment, premium "
 "materials, discreet care."
@@ -806,7 +832,7 @@ msgstr ""
 "Un dentiste expérimenté responsable de tout votre traitement, des matériaux "
 "haut de gamme, des soins discrets."
 
-#: apps/seo/common.py:75
+#: apps/seo/common.py:82
 msgid ""
 "Digital smile design, minimal preparation and one experienced dentist for "
 "every step. Healthy tooth tissue is saved first."
@@ -814,11 +840,11 @@ msgstr ""
 "Digital smile design, préparation minimale et un dentiste expérimenté à "
 "chaque étape. Les tissus dentaires sains sont préservés en priorité."
 
-#: apps/seo/common.py:76
+#: apps/seo/common.py:83
 msgid "No judgement — only solutions"
 msgstr "Aucun jugement – seulement des solutions"
 
-#: apps/seo/common.py:77
+#: apps/seo/common.py:84
 msgid ""
 "Whatever the state of your teeth, we have seen it before. We start with what"
 " can be saved."
@@ -826,30 +852,30 @@ msgstr ""
 "Quel que soit l’état de vos dents, nous l’avons déjà vu. Nous commençons par"
 " ce qui peut être sauvé."
 
-#: apps/seo/common.py:78
+#: apps/seo/common.py:85
 msgid "A dentist-led clinic you can check"
 msgstr "Une clinique dirigée par un dentiste, que vous pouvez vérifier"
 
-#: apps/seo/common.py:79
+#: apps/seo/common.py:86
 msgid "Qualifications, reviews and real photos — all on this page."
 msgstr "Qualifications, avis et vraies photos – tout est sur cette page."
 
-#: apps/seo/common.py:80
+#: apps/seo/common.py:87
 msgid "Open 7 days a week in central Istanbul"
 msgstr "Ouvert 7 jours sur 7 au cœur d’Istanbul"
 
-#: apps/seo/common.py:81
+#: apps/seo/common.py:88
 msgid ""
 "Tell us your travel dates; we plan the appointments around your flights."
 msgstr ""
 "Indiquez-nous vos dates de voyage ; nous organisons les rendez-vous selon "
 "vos vols."
 
-#: apps/seo/common.py:82
+#: apps/seo/common.py:89
 msgid "Plan your visit in one message"
 msgstr "Planifiez votre visite en un message"
 
-#: apps/seo/common.py:83
+#: apps/seo/common.py:90
 msgid ""
 "Send your photos and travel dates on WhatsApp — we reply with your personal "
 "plan."
@@ -857,12 +883,12 @@ msgstr ""
 "Envoyez vos photos et vos dates sur WhatsApp – nous vous répondons avec "
 "votre plan personnel."
 
-#: apps/seo/common.py:85 templates/components/footer.html:6
+#: apps/seo/common.py:92 templates/components/footer.html:6
 #: templates/packages/origin.html:19
 msgid "Dental work is more than a Hollywood smile"
 msgstr "Les soins dentaires ne se résument pas à un sourire hollywoodien"
 
-#: apps/seo/common.py:86
+#: apps/seo/common.py:93
 msgid ""
 "We save healthy teeth first and plan a real treatment made only for you."
 msgstr ""
@@ -870,16 +896,21 @@ msgstr ""
 "fait pour vous seul."
 
 #: apps/seo/guide_views.py:30
-msgid "Dental Tourism Guides — Turkey & Istanbul"
-msgstr "Guides du tourisme dentaire – Turquie & Istanbul"
+#| msgid "Dental Tourism Guides — Turkey & Istanbul"
+msgid "Dental Tourism Guides 2026 — Turkey & Istanbul, by Dentists"
+msgstr "Guides Tourisme Dentaire 2026 — Turquie & Istanbul"
 
 #: apps/seo/guide_views.py:31
+#| msgid ""
+#| "Honest guides about dental treatment in Turkey: choosing a clinic, reviews, "
+#| "travel, guarantee and aftercare — from a dentist in Istanbul."
 msgid ""
-"Honest guides about dental treatment in Turkey: choosing a clinic, reviews, "
-"travel, guarantee and aftercare — from a dentist in Istanbul."
+"Choosing a clinic, reviews, safety, travel, guarantee and aftercare — honest"
+" guides to dental treatment in Turkey, written by dentists in Istanbul."
 msgstr ""
-"Des guides honnêtes sur les soins dentaires en Turquie : choisir une "
-"clinique, avis, voyage, garantie et suivi – par un dentiste d’Istanbul."
+"Choisir une clinique, avis, sécurité, voyage, garantie et suivi — des guides"
+" honnêtes sur les soins dentaires en Turquie, écrits par des dentistes à "
+"Istanbul."
 
 #: apps/seo/guide_views.py:34 apps/seo/guide_views.py:70
 #: templates/components/footer.html:32 templates/components/navbar.html:41
@@ -899,7 +930,7 @@ msgstr ""
 "Tout ce qu’il faut pour décider en confiance – écrit par un dentiste, sans "
 "discours commercial."
 
-#: apps/seo/guide_views.py:82
+#: apps/seo/guide_views.py:86
 msgid "Guide"
 msgstr "Guide"
 
@@ -990,23 +1021,20 @@ msgstr ""
 "nous organisons les deux selon vos vols."
 
 #: apps/seo/package_views.py:62
-msgid ""
-"Dental Tourism Packages in Istanbul — Personalised, Not One-Size-Fits-All"
-msgstr "Séjour dentaire à Istanbul – personnalisé, pas de forfait standard"
+msgid "Dental Holiday Packages Istanbul 2026 — Planned on Your X-ray"
+msgstr "Séjour Dentaire Istanbul 2026 — Planifié selon Votre Radio"
 
 #: apps/seo/package_views.py:63
 msgid ""
-"Dental holiday packages in Turkey built around a real diagnosis: assessment,"
-" treatment and aftercare. Your budget goes into your treatment, not extras. "
-"Get your personal plan on WhatsApp."
+"No one-size-fits-all deal: your dental package in Istanbul is planned from "
+"your photos or X-ray, with a fixed written quote and aftercare at home."
 msgstr ""
-"Forfaits de soins dentaires en Turquie fondés sur un vrai diagnostic : "
-"bilan, traitement et suivi. Votre budget va dans votre traitement, pas dans "
-"des extras. Recevez votre plan personnalisé sur WhatsApp."
+"Pas de forfait standard : vos soins à Istanbul sont planifiés à partir de "
+"vos photos ou radio, avec un devis écrit fixe et un suivi à la maison."
 
 #: apps/seo/package_views.py:67 apps/seo/package_views.py:79
-#: apps/seo/package_views.py:109 apps/seo/package_views.py:117
-#: apps/seo/package_views.py:148 apps/seo/package_views.py:157
+#: apps/seo/package_views.py:108 apps/seo/package_views.py:116
+#: apps/seo/package_views.py:147 apps/seo/package_views.py:156
 #: templates/components/footer.html:37 templates/components/footer.html:38
 #: templates/components/navbar.html:85
 msgid "Dental packages"
@@ -1034,42 +1062,47 @@ msgstr "Forfait %(treatment)s à Istanbul"
 
 #: apps/seo/package_views.py:102
 #, python-format
-msgid "%(treatment)s Package Turkey — Personal Plan, Not a Fixed Deal"
-msgstr "Forfait %(treatment)s Turquie – plan personnel, pas d’offre figée"
+#| msgid "%(treatment)s package in Istanbul"
+msgid "%(treatment)s Package Istanbul — Planned on Your X-ray"
+msgstr "Forfait %(treatment)s Istanbul — Planifié selon Votre Radio"
 
 #: apps/seo/package_views.py:103
 #, python-format
 msgid ""
-"%(treatment)s package in Istanbul built around your diagnosis: assessment, "
-"treatment and aftercare. Your budget goes into your treatment, not extras. "
-"Get your personal plan on WhatsApp."
+"%(treatment)s package in Istanbul: examination, treatment and aftercare "
+"planned around your case and travel dates. Fixed written quote, free "
+"WhatsApp assessment."
 msgstr ""
-"Forfait %(treatment)s à Istanbul fondé sur votre diagnostic : bilan, "
-"traitement et suivi. Votre budget va dans votre traitement, pas dans des "
-"extras. Recevez votre plan personnalisé sur WhatsApp."
+"Forfait %(treatment)s à Istanbul : examen, traitement et suivi planifiés "
+"selon votre cas et vos dates de voyage. Devis écrit fixe, évaluation "
+"gratuite."
 
-#: apps/seo/package_views.py:137
+#: apps/seo/package_views.py:136
 #, python-format
 msgid "Dental holiday packages from %(country)s to Istanbul"
 msgstr "Séjour dentaire depuis %(country)s vers Istanbul"
 
+#: apps/seo/package_views.py:142
+#, python-format
+msgid "%(country)s to Istanbul for Dental Treatment — 2026 Guide"
+msgstr "Soins Dentaires à Istanbul depuis %(country)s — Guide 2026"
+
 #: apps/seo/package_views.py:143
 #, python-format
-msgid "Dental Holiday Packages from %(country)s — Istanbul, Turkey"
-msgstr "Séjour dentaire depuis %(country)s – Istanbul, Turquie"
-
-#: apps/seo/package_views.py:144
-#, python-format
+#| msgid ""
+#| "Planning dental treatment in Turkey from %(country)s? Flight time, how many "
+#| "trips you need, what a personalised dental package includes and aftercare at"
+#| " home."
 msgid ""
-"Planning dental treatment in Turkey from %(country)s? Flight time, how many "
-"trips you need, what a personalised dental package includes and aftercare at"
-" home."
+"Travelling from %(country)s for dental treatment? Flight time, how many "
+"trips you need, what a fair package includes and how aftercare works at "
+"home."
 msgstr ""
-"Vous préparez des soins dentaires en Turquie depuis %(country)s ? Durée du "
-"vol, nombre de voyages, contenu d’un forfait personnalisé et suivi à "
-"domicile."
+"Vous venez de %(country)s pour des soins dentaires ? Durée de vol, nombre de"
+" voyages, ce que comprend un forfait honnête et comment fonctionne le suivi "
+"à la maison."
 
-#: apps/seo/package_views.py:155
+#: apps/seo/package_views.py:154
 #, python-format
 msgid ""
 "Planning dental treatment in Istanbul from %(country)s? Flight times, how "
@@ -1078,7 +1111,7 @@ msgstr ""
 "Vous préparez des soins dentaires à Istanbul depuis %(country)s ? Durée des "
 "vols, nombre de voyages et contenu d’un forfait personnalisé."
 
-#: apps/seo/package_views.py:166
+#: apps/seo/package_views.py:165
 msgid ""
 "We plan treatment to keep the number of trips to a minimum — often one "
 "longer stay, with implants scheduled so that the second visit is short."
@@ -1087,7 +1120,7 @@ msgstr ""
 " souvent un séjour plus long, avec des implants programmés pour que la "
 "deuxième visite soit courte."
 
-#: apps/seo/package_views.py:168
+#: apps/seo/package_views.py:167
 msgid ""
 "Crowns, veneers and most other treatments need one trip of about a week; "
 "implants usually need two short trips a few months apart."
@@ -1096,12 +1129,12 @@ msgstr ""
 " d’environ une semaine ; les implants, généralement deux courts voyages à "
 "quelques mois d’intervalle."
 
-#: apps/seo/package_views.py:171
+#: apps/seo/package_views.py:170
 #, python-format
 msgid "How long is the flight from %(country)s to Istanbul?"
 msgstr "Combien de temps dure le vol entre %(country)s et Istanbul ?"
 
-#: apps/seo/package_views.py:172
+#: apps/seo/package_views.py:171
 #, python-format
 msgid ""
 "About %(hours)s hours, depending on your departure airport and connection."
@@ -1109,17 +1142,17 @@ msgstr ""
 "Environ %(hours)s heures, selon votre aéroport de départ et votre "
 "correspondance."
 
-#: apps/seo/package_views.py:174
+#: apps/seo/package_views.py:173
 #, python-format
 msgid "How many trips will I need from %(country)s?"
 msgstr "Combien de voyages faudra-t-il depuis %(country)s ?"
 
-#: apps/seo/package_views.py:175
+#: apps/seo/package_views.py:174
 #, python-format
 msgid "What happens when I am back in %(country)s?"
 msgstr "Que se passe-t-il une fois rentré en %(country)s ?"
 
-#: apps/seo/package_views.py:176
+#: apps/seo/package_views.py:175
 msgid ""
 "Follow-up continues on WhatsApp and email. If needed we coordinate with a "
 "local dentist and guide you by video call — you are never left alone."
@@ -1128,7 +1161,7 @@ msgstr ""
 "coordonnons avec un dentiste local et vous accompagnons par appel vidéo – "
 "vous n’êtes jamais seul."
 
-#: apps/seo/package_views.py:178
+#: apps/seo/package_views.py:177
 msgid "How do I get a price for my dental package?"
 msgstr "Comment obtenir un prix pour mon forfait dentaire ?"
 
@@ -1218,17 +1251,17 @@ msgstr ""
 "payez – aucun coût caché."
 
 #: apps/seo/views.py:108
-msgid "Dental Prices in Turkey 2026 — Affordable, Personal Quote"
-msgstr "Prix dentiste Turquie 2026 – abordable, devis personnel"
+#| msgid "Dental Prices in Turkey 2026 — Affordable, Personal Quote"
+msgid "Dental Prices in Turkey 2026 — What Really Decides the Cost"
+msgstr "Prix Dentiste Turquie 2026 — Ce Qui Détermine Vraiment le Coût"
 
 #: apps/seo/views.py:109
 msgid ""
-"How much do teeth cost in Turkey? Very affordable dental treatment in "
-"Istanbul with a fixed written quote. Call or WhatsApp for your personal "
-"price."
+"Why one price list can't fit every mouth, what a fair quote includes and how"
+" to get a fixed written price from the dentist — free on WhatsApp."
 msgstr ""
-"Combien coûtent les dents en Turquie ? Soins dentaires très abordables à "
-"Istanbul avec devis écrit fixe. Appelez ou écrivez sur WhatsApp."
+"Pourquoi une liste de prix ne convient pas à toutes les bouches, ce que "
+"contient un devis honnête et comment obtenir un prix écrit fixe du dentiste."
 
 #: apps/seo/views.py:113 apps/seo/views.py:116 apps/seo/views.py:145
 #: apps/seo/views.py:151 templates/components/footer.html:29
@@ -1256,18 +1289,19 @@ msgstr "Prix %(treatment)s en Turquie – abordable, avec devis fixe"
 
 #: apps/seo/views.py:139
 #, python-format
-msgid "%(treatment)s Price in Turkey 2026 — Personal Quote"
-msgstr "%(treatment)s prix Turquie 2026 – devis personnel"
+#| msgid "%(treatment)s Price in Turkey 2026 — Personal Quote"
+msgid "%(treatment)s Cost in Turkey 2026 — Fixed Written Quote"
+msgstr "Prix %(treatment)s Turquie 2026 — Devis Écrit Fixe"
 
 #: apps/seo/views.py:140
 #, python-format
 msgid ""
-"How much does %(treatment)s cost in Turkey? Very affordable in Istanbul, "
-"with a fixed written quote after the dentist sees your case. Call or "
-"WhatsApp."
+"%(treatment)s in Istanbul: what decides the cost, what a fair quote includes"
+" and how to get a fixed written quote from the dentist — free on WhatsApp."
 msgstr ""
-"Combien coûte %(treatment)s en Turquie ? Très abordable à Istanbul, avec un "
-"devis écrit fixe après examen de votre cas. Appel ou WhatsApp."
+"%(treatment)s à Istanbul : ce qui détermine le prix, ce que contient un "
+"devis honnête et comment obtenir un devis écrit fixe du dentiste — gratuit "
+"sur WhatsApp."
 
 #: apps/seo/views.py:152
 #, python-format
@@ -1279,18 +1313,20 @@ msgstr ""
 "obtenir votre devis personnel par téléphone ou WhatsApp."
 
 #: apps/treatments/views.py:19
-msgid "Dental Treatments in Istanbul — Prices & Information"
-msgstr "Soins dentaires à Istanbul — prix et informations"
+#| msgid ""
+#| "Dental Tourism Istanbul — Implants, Veneers & Crowns in Turkey"
+msgid "Dental Treatments in Istanbul 2026 — Implants, Veneers, Crowns"
+msgstr "Soins Dentaires à Istanbul 2026 — Implants, Facettes, Couronnes"
 
 #: apps/treatments/views.py:20
 msgid ""
-"All dental treatments for international patients in Istanbul: implants, "
-"veneers, crowns, All-on-4, root canal and more. Transparent prices and stay "
-"durations."
+"Implants, veneers, zirconia crowns, All-on-4, root canal and whitening in "
+"Istanbul — how each works, how long you stay and who it suits. Free "
+"assessment."
 msgstr ""
-"Tous les soins dentaires pour patients internationaux à Istanbul : implants,"
-" facettes, couronnes, All-on-4, traitement de canal et plus. Prix et durées "
-"de séjour transparents."
+"Implants, facettes, couronnes zircone, All-on-4, dévitalisation et "
+"blanchiment à Istanbul — déroulement, durée du séjour et pour qui. "
+"Évaluation gratuite."
 
 #: apps/treatments/views.py:80
 #, python-format
@@ -1318,7 +1354,6 @@ msgid "guide/"
 msgstr "guide/"
 
 #: dental_tourism/urls.py:55
-#| msgid "clinics/"
 msgid "dental-clinic/"
 msgstr "cabinet-dentaire/"
 
@@ -1439,7 +1474,6 @@ msgstr ""
 
 #: templates/areas/detail.html:13
 #, python-format
-#| msgid "Patients from %(c)s"
 msgid "Get directions from %(area)s"
 msgstr "Itinéraire depuis %(area)s"
 
@@ -1491,7 +1525,6 @@ msgstr "En taxi"
 
 #: templates/areas/detail.html:23
 #, python-format
-#| msgid "%(n)s min read"
 msgid "%(min)s min"
 msgstr "%(min)s min"
 
@@ -1515,12 +1548,10 @@ msgid "Ask for my personal plan"
 msgstr "Demander mon plan personnel"
 
 #: templates/areas/detail.html:34 templates/areas/index.html:19
-#| msgid "Treatments & prices"
 msgid "Treatments at our clinic"
 msgstr "Soins proposés au cabinet"
 
 #: templates/areas/detail.html:41
-#| msgid "Real results from our clinic"
 msgid "Other districts near our clinic"
 msgstr "Autres quartiers proches du cabinet"
 
@@ -2912,7 +2943,6 @@ msgid "Inside our clinic"
 msgstr "Dans notre clinique"
 
 #: templates/pseo/_photos.html:11
-#| msgid "All patient videos"
 msgid "Our patients on video"
 msgstr "Nos patients en vidéo"
 
@@ -3190,6 +3220,129 @@ msgid ""
 msgstr ""
 "Tous les soins que nous proposons, avec des informations honnêtes sur le "
 "déroulement, la durée du séjour à Istanbul et le coût."
+
+#~ msgid ""
+#~ "Honest guides about dental treatment in Turkey: implant and veneer costs, "
+#~ "safety, recovery and how to choose a dentist in Istanbul."
+#~ msgstr ""
+#~ "Des guides honnêtes sur les soins dentaires en Turquie : prix des implants "
+#~ "et facettes, sécurité, récupération et comment choisir un dentiste à "
+#~ "Istanbul."
+
+#~ msgid "Dental Clinics in Istanbul for International Patients"
+#~ msgstr "Cliniques dentaires à Istanbul pour patients internationaux"
+
+#~ msgid ""
+#~ "Verified dental clinics in Turkey: dentists' experience, languages spoken, "
+#~ "prices and patient reviews. Free consultation."
+#~ msgstr ""
+#~ "Cliniques dentaires vérifiées en Turquie : expérience des dentistes, langues"
+#~ " parlées, prix et avis de patients. Consultation gratuite."
+
+#~ msgid ""
+#~ "Ethical dental treatment in Istanbul with an experienced dentist. Implants, "
+#~ "veneers, zirconia crowns — very affordable, fixed written quote. Free "
+#~ "WhatsApp consultation."
+#~ msgstr ""
+#~ "Soins dentaires éthiques à Istanbul avec un dentiste expérimenté. Implants, "
+#~ "facettes, couronnes zircone – très abordable, devis écrit fixe. Consultation"
+#~ " gratuite sur WhatsApp."
+
+#~ msgid "About Us — Ethical Dental Care in Istanbul"
+#~ msgstr "À propos — dentisterie éthique à Istanbul"
+
+#~ msgid ""
+#~ "Meet the dentist and the clinic behind dentaltourism.tr: decades of clinical"
+#~ " experience, transparent diagnosis and only the treatment you actually need."
+#~ msgstr ""
+#~ "Découvrez la dentiste et la clinique derrière dentaltourism.tr : des "
+#~ "décennies d'expérience, un diagnostic transparent et uniquement le "
+#~ "traitement dont vous avez vraiment besoin."
+
+#~ msgid "Free Consultation — Contact Our Dentist in Istanbul"
+#~ msgstr "Consultation gratuite — contactez notre dentiste à Istanbul"
+
+#~ msgid ""
+#~ "Send your X-ray or photos and get a free treatment plan and fixed price "
+#~ "quote. Reply within 24 hours. WhatsApp, phone or form."
+#~ msgstr ""
+#~ "Envoyez votre radio ou vos photos et recevez gratuitement un plan de "
+#~ "traitement et un devis fixe. Réponse sous 24 heures. WhatsApp, téléphone ou "
+#~ "formulaire."
+
+#, python-format
+#~ msgid "Dentist near %(area)s, Istanbul — Family Dental Clinic in Şişli"
+#~ msgstr "Dentiste près de %(area)s, Istanbul — cabinet familial à Şişli"
+
+#, python-format
+#~ msgid ""
+#~ "Looking for a dentist near %(area)s? Our family dental clinic in Şişli is "
+#~ "about %(km)s km away. Diagnosis first, only the treatment you need. Open 7 "
+#~ "days a week."
+#~ msgstr ""
+#~ "Vous cherchez un dentiste près de %(area)s ? Notre cabinet dentaire familial"
+#~ " à Şişli est à environ %(km)s km. D'abord le diagnostic, uniquement le "
+#~ "traitement nécessaire. Ouvert 7 jours sur 7."
+
+#~ msgid ""
+#~ "Dental Tourism Packages in Istanbul — Personalised, Not One-Size-Fits-All"
+#~ msgstr "Séjour dentaire à Istanbul – personnalisé, pas de forfait standard"
+
+#~ msgid ""
+#~ "Dental holiday packages in Turkey built around a real diagnosis: assessment,"
+#~ " treatment and aftercare. Your budget goes into your treatment, not extras. "
+#~ "Get your personal plan on WhatsApp."
+#~ msgstr ""
+#~ "Forfaits de soins dentaires en Turquie fondés sur un vrai diagnostic : "
+#~ "bilan, traitement et suivi. Votre budget va dans votre traitement, pas dans "
+#~ "des extras. Recevez votre plan personnalisé sur WhatsApp."
+
+#, python-format
+#~ msgid "%(treatment)s Package Turkey — Personal Plan, Not a Fixed Deal"
+#~ msgstr "Forfait %(treatment)s Turquie – plan personnel, pas d’offre figée"
+
+#, python-format
+#~ msgid ""
+#~ "%(treatment)s package in Istanbul built around your diagnosis: assessment, "
+#~ "treatment and aftercare. Your budget goes into your treatment, not extras. "
+#~ "Get your personal plan on WhatsApp."
+#~ msgstr ""
+#~ "Forfait %(treatment)s à Istanbul fondé sur votre diagnostic : bilan, "
+#~ "traitement et suivi. Votre budget va dans votre traitement, pas dans des "
+#~ "extras. Recevez votre plan personnalisé sur WhatsApp."
+
+#, python-format
+#~ msgid "Dental Holiday Packages from %(country)s — Istanbul, Turkey"
+#~ msgstr "Séjour dentaire depuis %(country)s – Istanbul, Turquie"
+
+#~ msgid ""
+#~ "How much do teeth cost in Turkey? Very affordable dental treatment in "
+#~ "Istanbul with a fixed written quote. Call or WhatsApp for your personal "
+#~ "price."
+#~ msgstr ""
+#~ "Combien coûtent les dents en Turquie ? Soins dentaires très abordables à "
+#~ "Istanbul avec devis écrit fixe. Appelez ou écrivez sur WhatsApp."
+
+#, python-format
+#~ msgid ""
+#~ "How much does %(treatment)s cost in Turkey? Very affordable in Istanbul, "
+#~ "with a fixed written quote after the dentist sees your case. Call or "
+#~ "WhatsApp."
+#~ msgstr ""
+#~ "Combien coûte %(treatment)s en Turquie ? Très abordable à Istanbul, avec un "
+#~ "devis écrit fixe après examen de votre cas. Appel ou WhatsApp."
+
+#~ msgid "Dental Treatments in Istanbul — Prices & Information"
+#~ msgstr "Soins dentaires à Istanbul — prix et informations"
+
+#~ msgid ""
+#~ "All dental treatments for international patients in Istanbul: implants, "
+#~ "veneers, crowns, All-on-4, root canal and more. Transparent prices and stay "
+#~ "durations."
+#~ msgstr ""
+#~ "Tous les soins dentaires pour patients internationaux à Istanbul : implants,"
+#~ " facettes, couronnes, All-on-4, traitement de canal et plus. Prix et durées "
+#~ "de séjour transparents."
 
 #~ msgid "Airport transfer"
 #~ msgstr "Transfert aéroport"

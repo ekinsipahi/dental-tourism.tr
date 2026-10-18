@@ -669,3 +669,33 @@
 668|Behandlungen in unserer Praxis
 669|Weitere Stadtteile in der Nähe unserer Praxis
 670|Unsere Patienten im Video
+671|Zahntourismus-Blog 2026 — Ehrliche Tipps von Zahnärzten
+672|Kosten für Implantate und Veneers, Sicherheit, Heilung und Zahnarztwahl in Istanbul — praktische, ehrliche Tipps von Zahnärzten mit über 35 Jahren Erfahrung.
+673|Unsere Zahnklinik in Istanbul — Şişli, ★%(rating)s, 7 Tage geöffnet
+674|Zahnärztlich geführte Familienpraxis in Şişli, Istanbul: 35+ Jahre Erfahrung, ★ %(rating)s aus %(count)s Google-Bewertungen, Sprachen und echte Patientenstimmen.
+675|Zahnbehandlung Istanbul ★%(rating)s — Familienpraxis, 35+ Jahre
+676|Implantate, Veneers und Kronen in Istanbul vom Mutter-Sohn-Zahnarztteam mit 35+ Jahren Erfahrung. ★ %(rating)s bei Google. Kostenlose Einschätzung per WhatsApp.
+677|Über uns — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Familienpraxis
+678|Familiengeführte Zahnpraxis in Şişli, Istanbul: 35+ Jahre Erfahrung, zuerst die Diagnose, nur die nötige Behandlung. Lernen Sie Ihre Zahnärzte kennen.
+679|Kostenlose Zahn-Einschätzung per WhatsApp — Antwort vom Zahnarzt
+680|Foto oder Röntgenbild senden und persönlichen Plan mit schriftlichem Festpreis erhalten — Antwort vom Zahnarzt, nicht vom Callcenter. 7 Tage geöffnet.
+681|Zahnarzt nahe %(area)s ★%(rating)s — Familienpraxis, 7 Tage offen
+682|Zahnarzt nahe %(area)s: unsere Familienpraxis in Şişli ist %(km)s km entfernt, 7 Tage geöffnet. 35+ Jahre Erfahrung, ★ %(rating)s bei Google. Gratis-Einschätzung per WhatsApp.
+683|Zahnarzt in %(area)s ★%(rating)s — Familienpraxis, 7 Tage offen
+684|Familiengeführte Zahnpraxis in %(area)s, Istanbul: 35+ Jahre Erfahrung, ★ %(rating)s bei Google, 7 Tage die Woche geöffnet. Kostenlose Einschätzung per WhatsApp.
+685|Zahnarzt nahe Şişli, Nişantaşı, Taksim & Levent ★%(rating)s
+686|Familienpraxis in Şişli, Istanbul: 35+ Jahre, ★ %(rating)s bei Google, 7 Tage geöffnet. Entfernung und Weg aus Nişantaşı, Taksim, Beşiktaş, Levent und mehr.
+687|Ratgeber Zahntourismus 2026 — Türkei & Istanbul, von Zahnärzten
+688|Klinikwahl, Bewertungen, Sicherheit, Reise, Garantie und Nachsorge — ehrliche Ratgeber zur Zahnbehandlung in der Türkei, geschrieben von Zahnärzten in Istanbul.
+689|Zahnurlaub Istanbul 2026 — Ihr Paket, geplant nach Röntgenbild
+690|Kein Einheitspaket: Ihre Zahnbehandlung in Istanbul wird nach Fotos oder Röntgenbild geplant, mit schriftlichem Festpreis und Nachsorge zu Hause.
+691|%(treatment)s Paket Istanbul — geplant nach Ihrem Röntgenbild
+692|%(treatment)s-Paket in Istanbul: Untersuchung, Behandlung und Nachsorge nach Befund und Reisedaten geplant. Schriftlicher Festpreis, Gratis-Einschätzung.
+693|Zahnbehandlung Istanbul aus %(country)s — Ratgeber 2026
+694|Aus %(country)s zur Zahnbehandlung nach Istanbul? Flugzeit, wie viele Reisen nötig sind, was ein faires Paket enthält und wie die Nachsorge zu Hause läuft.
+695|Zahnarzt Preise Türkei 2026 — was die Kosten wirklich bestimmt
+696|Warum eine Preisliste nicht für jeden Mund passt, was ein faires Angebot enthält und wie Sie einen schriftlichen Festpreis vom Zahnarzt bekommen — gratis per WhatsApp.
+697|%(treatment)s Kosten Türkei 2026 — schriftlicher Festpreis
+698|%(treatment)s in Istanbul: was die Kosten bestimmt, was ein faires Angebot enthält und wie Sie einen schriftlichen Festpreis vom Zahnarzt bekommen.
+699|Zahnbehandlungen in Istanbul 2026 — Implantate, Veneers, Kronen
+700|Implantate, Veneers, Zirkonkronen, All-on-4, Wurzelbehandlung und Bleaching in Istanbul — Ablauf, Aufenthaltsdauer und für wen es passt. Kostenlose Einschätzung.

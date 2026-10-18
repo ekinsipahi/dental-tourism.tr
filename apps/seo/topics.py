@@ -36,9 +36,8 @@ TOPICS = {
             "lead": "Dental tourism means travelling abroad for dental treatment. Done well, it gives you an experienced "
                     "dentist, modern care and very affordable treatment. Done badly, it costs you healthy teeth. Here is "
                     "how to get it right.",
-            "meta_title": "Dental Tourism 2026: Honest Guide from a Dentist in Istanbul",
-            "meta_description": "What is dental tourism, where is the best place for it and how to choose a dentist abroad. "
-                                "An honest guide from a dental clinic in Istanbul, Turkey.",
+            "meta_title": "Dental Tourism 2026: Honest Guide from a Dentist (35+ Years)",
+            "meta_description": "Is dental tourism worth it? Where to go, what to check and which mistakes cost healthy teeth — straight answers from dentists in Istanbul, ★ {rating} on Google.",
             "body": """## What is dental tourism?
 
 Dental tourism (also called dental medical tourism or dental health tourism) means combining a trip abroad with dental treatment. Patients travel because treatment at home is expensive, waiting lists are long, or they want a dentist with more time for them.
@@ -105,9 +104,8 @@ Turkey — and Istanbul in particular — offers all three, which is why it is o
             "h1": "Dental care in Turkey — a dental clinic chosen for quality",
             "lead": "Dental tourism in Turkey is more than a cheap smile. At our dental clinic in Istanbul you get an "
                     "experienced dentist, a real diagnosis and a treatment plan made only for you.",
-            "meta_title": "Dental Care in Turkey — Dental Clinic in Istanbul",
-            "meta_description": "Dental care in Turkey with an experienced dentist in Istanbul: real diagnosis, written "
-                                "plan, very affordable treatment. Call or WhatsApp for your personal quote.",
+            "meta_title": "Dental Care in Turkey 2026 — Dentist-Led Clinic, ★{rating}",
+            "meta_description": "Dental treatment in Turkey without the sales team: examination by the dentist, a written plan and fixed quote, open 7 days in Istanbul. Free WhatsApp assessment.",
             "body": """## Why patients choose a dental clinic in Turkey
 
 Turkey combines experienced dentists, modern clinics and very affordable treatment. Many of our patients come from the UK, Germany and the Netherlands and fly home after about a week.
@@ -170,9 +168,8 @@ We save natural teeth first, explain every option openly and give you a fixed wr
             "h1": "Best dental clinic in Istanbul? Reviews, questions to ask and our approach",
             "lead": "Searching for the best dental clinic in Istanbul, Turkey? Read the reviews — and ask the questions "
                     "that separate a good dentist from a sales team.",
-            "meta_title": "Best Dental Clinic in Istanbul 2026 — Reviews & How to Choose",
-            "meta_description": "How to find the best dental clinic in Istanbul: real reviews, questions to ask, red "
-                                "flags. Dental clinic in Şişli with transparent plans and very affordable treatment.",
+            "meta_title": "Best Dental Clinic in Istanbul 2026 — Reviews & Red Flags",
+            "meta_description": "How to choose the best dental clinic in Istanbul: questions to ask, red flags to avoid and real Google reviews (★ {rating}) — from a family clinic in Şişli.",
             "body": """## What "best" should mean
 
 The best dentist clinic in Istanbul is not the one with the biggest advertising budget. It is the one where an experienced dentist examines you, explains your options and keeps healthy teeth healthy.
@@ -234,9 +231,8 @@ Read reviews on several platforms, including critical ones on Reddit. Look for d
             "h1": "Best dental clinic in Turkey 2026? How to choose — and real patient reviews",
             "lead": "Top, luxury, VIP — every clinic says it is the best. Here is how to judge a dental clinic in Turkey "
                     "yourself, the red flags of the worst ones, and what our patients really say.",
-            "meta_title": "Best Dental Clinic in Turkey 2026 — Reviews & Red Flags",
-            "meta_description": "Top, luxury or VIP dental clinic in Turkey? How to judge quality, red flags of the worst "
-                                "clinics, and real reviews from Google and Trustpilot.",
+            "meta_title": "Best Dental Clinic in Turkey 2026 — How to Spot the Worst",
+            "meta_description": "Top, luxury or VIP dental clinic in Turkey? What really signals quality, the red flags of bad clinics and how to read reviews — a dentist's honest checklist.",
             "body": """## How to recognise a good dental clinic in Turkey
 
 - A named dentist who examines you and is responsible for the whole plan
@@ -296,8 +292,8 @@ A luxury waiting room does not make a better dentist. What you should expect fro
         "en": {
             "h1": "Dental clinic in Istanbul, Turkey — Şişli, near Taksim",
             "lead": "Our dental clinic is in central Şişli, close to Nişantaşı and Mecidiyeköy and a short ride from Taksim. Easy to reach from every district of Istanbul — and open 7 days a week.",
-            "meta_title": "Dental Clinic in Istanbul — Şişli, near Taksim, Open 7 Days",
-            "meta_description": "Dental clinic in Istanbul, Turkey: central Şişli, close to Taksim and Nişantaşı, open 7 days a week. Experienced dentist, very affordable treatment, WhatsApp consultation.",
+            "meta_title": "Dental Clinic in Istanbul ★{rating} — Şişli, Near Taksim, 7 Days",
+            "meta_description": "Family dental clinic in central Şişli, two metro stops from Taksim, open 7 days a week. 35+ years' experience, fixed written quotes. Free assessment on WhatsApp.",
             "body": """## How to reach us in Istanbul
 
 The nearest metro station is Şişli-Mecidiyeköy (M2 and M7), about 900 metres from the clinic. From Taksim it is two stops on the M2; from Zeytinburnu, Beşiktaş or Kadıköy you can reach us by metro, tram, metrobus or ferry.
@@ -348,9 +344,8 @@ We are a dentist-led clinic: Dr. Dt. Devrim Biriken Sipahi examines and treats y
             "h1": "Dental care in Antalya, Side, Belek or Alanya? A short flight to Istanbul",
             "lead": "Holidaying on the Turkish Riviera? Our clinic is in Istanbul — about 1 hour 15 minutes by plane from "
                     "Antalya. Many patients combine a beach holiday with a few days of treatment in Istanbul.",
-            "meta_title": "Dental Care Antalya, Side, Alanya — or Istanbul?",
-            "meta_description": "Dental clinic in Antalya, Side, Belek or Alanya? Combine your holiday with treatment by "
-                                "an experienced dentist in Istanbul — 75 minutes by plane.",
+            "meta_title": "Dentist in Antalya, Side or Alanya — or 75 Minutes to Istanbul?",
+            "meta_description": "On holiday in Antalya, Side, Belek or Alanya? Compare treatment there with a 75-minute flight to an experienced family dentist in Istanbul, open 7 days.",
             "body": """## Honest note: our clinic is in Istanbul
 
 We do not have a branch in Antalya, Side, Belek or Alanya. If you prefer to be treated where you stay, choose a licensed clinic and check the dentist's qualifications. If you want an experienced dentist with a transparent plan, a domestic flight to Istanbul is quick and inexpensive.
@@ -399,9 +394,8 @@ Dental implants and other surgery need a careful 3D plan and a follow-up check. 
             "h1": "Dental clinic in Bodrum, Marmaris, Izmir or Kuşadası? Combine your holiday with Istanbul",
             "lead": "Bodrum, Dalaman and Izmir airports have frequent flights to Istanbul — about 1 hour 10 minutes. Plan "
                     "your treatment with an experienced Istanbul dentist before or after your Aegean holiday.",
-            "meta_title": "Dental Clinic Bodrum, Marmaris, Izmir, Kuşadası — or Istanbul?",
-            "meta_description": "Looking for the best dental clinic in Izmir, Kuşadası, Bodrum or Marmaris? Combine your "
-                                "Aegean holiday with treatment in Istanbul — about 70 minutes by plane.",
+            "meta_title": "Dentist in Bodrum, Marmaris, Izmir or Kuşadası — or Istanbul?",
+            "meta_description": "Holidaying on the Aegean coast? How to combine Bodrum, Marmaris, Izmir or Kuşadası with dental treatment in Istanbul — about 70 minutes by plane.",
             "body": """## Honest note: our clinic is in Istanbul
 
 We do not have a branch in Bodrum, Marmaris, Izmir or Kuşadası. We help you plan treatment in Istanbul so that it fits around your holiday, with aftercare on WhatsApp when you are back home.
@@ -447,9 +441,8 @@ If you decide to be treated locally, use the same checklist: a named dentist, a 
             "h1": "Dental clinic in Ankara or Istanbul? What to consider",
             "lead": "From Ankara, Istanbul is about 1 hour by plane or 4–5 hours by high-speed train. Our dentist graduated "
                     "from Ankara University Faculty of Dentistry and practises in Istanbul.",
-            "meta_title": "Dental Clinic in Ankara or Istanbul? What to Consider",
-            "meta_description": "Choosing a dental clinic in Ankara or Istanbul: travel times, how to plan treatment and "
-                                "why patients from Ankara choose our dentist in Şişli, Istanbul.",
+            "meta_title": "Dental Clinic in Ankara or Istanbul? An Honest Comparison",
+            "meta_description": "Living in Ankara and comparing dentists? Travel times, how many visits you need and why patients choose a family clinic in Şişli, Istanbul. Open 7 days.",
             "body": """## Honest note: our clinic is in Istanbul
 
 We do not have a clinic in Ankara. Patients from Ankara choose us for our ethical, tooth-saving approach and transparent planning.
@@ -488,9 +481,8 @@ We do not have a clinic in Ankara. Patients from Ankara choose us for our ethica
             "lead": "Mexico, Thailand, Vietnam, Bali, Hungary, Croatia, Albania, India, Costa Rica, the Philippines or "
                     "Turkey? An honest comparison of the top dental tourism destinations — and why the dentist matters more "
                     "than the country.",
-            "meta_title": "Best Country for Dental Tourism 2026 — Top 10 Destinations",
-            "meta_description": "Best country for dental tourism in Europe, from the US or Australia: Turkey, Hungary, "
-                                "Mexico, Thailand, Vietnam, Bali and more compared honestly.",
+            "meta_title": "Best Country for Dental Tourism 2026 — Top 10 Compared",
+            "meta_description": "Turkey, Hungary, Mexico, Thailand, Vietnam, Bali and more compared honestly: flight times, quality checks and what to watch out for. Written by dentists.",
             "body": """## Top 10 dental tourism destinations
 
 - **Turkey (Istanbul, Antalya)** — short flights from Europe, the UK and the Middle East; experienced dentists; very affordable
@@ -566,9 +558,8 @@ Discussions about the best dental tourism countries on Reddit agree on one thing
             "h1": "Getting your teeth done in Turkey — an honest guide",
             "lead": "Should you get your teeth done in Turkey, and where? The questions to ask, how the process works, "
                     "insurance and payment — explained by a dentist.",
-            "meta_title": "Getting Teeth Done in Turkey: Where, How & Should You?",
-            "meta_description": "Where to get teeth done in Turkey, how the process works, dental travel insurance and "
-                                "payment options — an honest guide from a dentist in Istanbul.",
+            "meta_title": "Getting Teeth Done in Turkey: Worth It? A Dentist Answers",
+            "meta_description": "Thinking of getting your teeth done in Turkey? Where to go, how the process works, insurance and payment — and when it's not the right choice for you.",
             "body": """## Should I get my teeth done in Turkey?
 
 It is a good choice if you pick an experienced dentist, accept a treatment plan based on a real diagnosis and allow enough time. It is a bad choice if you buy a fixed "teeth package" before anyone has seen your teeth. Dental work is more than a Hollywood smile.
@@ -623,9 +614,8 @@ Standard travel insurance usually does not cover planned dental treatment; ask y
             "h1": "Dental surgery in Turkey — implants, extractions and wisdom teeth",
             "lead": "Implant placement, extractions and wisdom tooth removal are minor surgical procedures done under local "
                     "anaesthesia. We plan every operation with 3D imaging (CBCT) — and an implant is always the last resort.",
-            "meta_title": "Dental Surgery in Turkey — Implants & Extractions, Istanbul",
-            "meta_description": "Dental surgery in Turkey: implant placement, extractions and wisdom teeth with 3D "
-                                "planning in Istanbul. Very affordable — call or WhatsApp for your quote.",
+            "meta_title": "Dental Surgery in Turkey — Implants & Wisdom Teeth, 3D-Planned",
+            "meta_description": "Implant placement, extractions and wisdom teeth in Istanbul, planned with 3D imaging by a dentist trained in oral and maxillofacial radiology. Free assessment.",
             "body": """## Which dental surgery do we perform?
 
 - Dental implant placement with 3D planning
@@ -670,9 +660,8 @@ Dental surgery in Turkey is very affordable compared with Western Europe. The co
             "h1": "Guarantee, aftercare and payment for dental treatment in Turkey",
             "lead": "What happens after you fly home matters as much as the treatment. Here is how our written guarantee, "
                     "aftercare and payment work.",
-            "meta_title": "Dental Treatment Turkey: Guarantee, Aftercare & Payment",
-            "meta_description": "Written guarantee, aftercare at home and payment options for dental treatment in Istanbul. "
-                                "Fixed quotes, no hidden costs.",
+            "meta_title": "Dental Treatment in Turkey: Guarantee & Aftercare Explained",
+            "meta_description": "What a written dental guarantee should cover, how aftercare works once you're home and how payment is handled — with fixed quotes and no hidden costs.",
             "body": """## Written guarantee
 
 You receive a written treatment plan and the guarantee information for your treatment before it starts. If there is a technical problem with our work, we fix it.
@@ -712,9 +701,8 @@ We accept cash and credit card. Your quote is fixed — the price agreed at the 
             "h1": "Before and after — smile gallery and teeth shade guide",
             "lead": "Real results from our clinic, published with patient consent — and how we choose a natural tooth shade "
                     "instead of a one-size-fits-all bright white.",
-            "meta_title": "Before and After Smile Gallery — Teeth Shade Guide",
-            "meta_description": "Real before-and-after results from our dental clinic in Istanbul, and how to choose a "
-                                "natural tooth shade with the VITA shade guide.",
+            "meta_title": "Before & After Teeth — Real Patients in Istanbul (Gallery)",
+            "meta_description": "Real before-and-after results from our clinic in Şişli, shared with patient consent — plus how to choose a natural tooth shade with the VITA guide.",
             "body": """## Teeth shades: choosing a natural colour
 
 We match the shade using the VITA shade guide: A (reddish-brown), B (reddish-yellow), C (grey) and D (reddish-grey), from light (1) to dark (4), plus extra-bright bleach shades. A natural smile usually sits close to your own eyes and skin tone — not at the brightest shade on the chart.
@@ -752,9 +740,8 @@ Every photo on this page shows a real patient of our clinic, published with cons
             "h1": "Dental tourism agency in Turkey? Work directly with our clinic",
             "lead": "Agencies and facilitators: partner with a dentist-led clinic in Istanbul that values honest treatment "
                     "plans over volume. Patients: you can also contact us directly — no agency needed.",
-            "meta_title": "Dental Tourism Agency Turkey — Partner with Our Clinic",
-            "meta_description": "Dental tourism agencies and facilitators: partner with a transparent, dentist-led clinic "
-                                "in Istanbul. Patients can also contact us directly.",
+            "meta_title": "Dental Tourism Agency Turkey — Partner with a Dentist-Led Clinic",
+            "meta_description": "Agencies and facilitators: work with a transparent family clinic in Istanbul — named materials, written plans and direct dentist contact for your patients.",
             "body": """## For agencies and facilitators
 
 - Every patient is examined and treated by the dentist personally
@@ -800,9 +787,8 @@ Call us or message us on WhatsApp — tell us whether you are a patient or an ag
             "h1": "Istanbul guide for dental patients: where to stay and areas to avoid",
             "lead": "Coming to Istanbul for dental treatment? Where to stay near the clinic, how to get around, and which "
                     "areas to avoid at night.",
-            "meta_title": "Istanbul for Dental Patients: Where to Stay, Areas to Avoid",
-            "meta_description": "Where to stay in Istanbul during dental treatment, how to get around and Istanbul areas to "
-                                "avoid at night — practical tips from our clinic in Şişli.",
+            "meta_title": "Istanbul for Dental Patients: Where to Stay & Areas to Avoid",
+            "meta_description": "Where to stay near our clinic in Şişli, how to get around and which Istanbul areas to avoid at night — practical tips from dentists who live and work here.",
             "body": """## Where to stay
 
 Stay close to the clinic so that appointments are easy: Şişli, Osmanbey, Nişantaşı, Pangaltı and Harbiye are safe, central and within walking distance or one metro stop. Taksim and Beşiktaş are also well connected.

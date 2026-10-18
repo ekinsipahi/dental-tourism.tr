@@ -669,3 +669,33 @@
 668|Trattamenti nel nostro studio
 669|Altri quartieri vicino allo studio
 670|I nostri pazienti in video
+671|Blog Turismo Dentale 2026 — Consigli Onesti dai Dentisti
+672|Costi di impianti e faccette, sicurezza, guarigione e come scegliere un dentista a Istanbul — consigli pratici e onesti da dentisti con oltre 35 anni di esperienza.
+673|Il Nostro Studio Dentistico a Istanbul — Şişli, ★%(rating)s, Aperto 7/7
+674|Studio di famiglia guidato da dentisti a Şişli, Istanbul: 35+ anni di esperienza, ★ %(rating)s su %(count)s recensioni Google, lingue parlate e storie vere.
+675|Dentista Istanbul ★%(rating)s — Dentisti di Famiglia, 35+ Anni
+676|Impianti, faccette e corone a Istanbul da un team di dentisti madre e figlio con 35+ anni di esperienza. ★ %(rating)s su Google. Valutazione gratuita su WhatsApp.
+677|Chi siamo — Dott.ssa Devrim Sipahi & Dt. Ekin Sipahi, Dentisti
+678|Studio dentistico di famiglia a Şişli, Istanbul: 35+ anni di esperienza, prima la diagnosi, solo il trattamento necessario. Conoscete i dentisti che vi cureranno.
+679|Valutazione Dentale Gratuita su WhatsApp — Risponde il Dentista
+680|Inviate una foto o una radiografia e ricevete un piano personale con preventivo scritto fisso — risponde il dentista, non un call center. Aperto 7 giorni su 7.
+681|Dentista vicino a %(area)s ★%(rating)s — Studio di Famiglia, 7/7
+682|Dentista vicino a %(area)s: il nostro studio di famiglia a Şişli è a %(km)s km, aperto 7/7. 35+ anni di esperienza, ★ %(rating)s su Google. Valutazione gratuita su WhatsApp.
+683|Dentista a %(area)s ★%(rating)s — Studio di Famiglia, Aperto 7/7
+684|Studio dentistico di famiglia a %(area)s, Istanbul: 35+ anni di esperienza, ★ %(rating)s su Google, aperto 7 giorni su 7. Valutazione gratuita su WhatsApp.
+685|Dentista vicino a Şişli, Nişantaşı, Taksim e Levent ★%(rating)s
+686|Studio di famiglia a Şişli, Istanbul: 35+ anni, ★ %(rating)s su Google, aperto 7/7. Distanza e percorso da Nişantaşı, Taksim, Beşiktaş, Levent e altri quartieri.
+687|Guide al Turismo Dentale 2026 — Turchia & Istanbul
+688|Scegliere una clinica, recensioni, sicurezza, viaggio, garanzia e controlli — guide oneste alle cure dentali in Turchia, scritte da dentisti a Istanbul.
+689|Vacanza Dentale Istanbul 2026 — Pianificata sulla Vostra Lastra
+690|Nessun pacchetto uguale per tutti: le vostre cure a Istanbul sono pianificate da foto o radiografia, con preventivo scritto fisso e controlli a casa.
+691|Pacchetto %(treatment)s Istanbul — Su Misura della Vostra Lastra
+692|Pacchetto %(treatment)s a Istanbul: visita, trattamento e controlli pianificati sul vostro caso e sul viaggio. Preventivo scritto fisso, valutazione gratuita.
+693|Cure Dentali a Istanbul da %(country)s — Guida 2026
+694|Venite da %(country)s per cure dentali? Durata del volo, quanti viaggi servono, cosa include un pacchetto onesto e come funzionano i controlli a casa.
+695|Prezzi Dentista Turchia 2026 — Cosa Decide Davvero il Costo
+696|Perché un listino non va bene per ogni bocca, cosa include un preventivo onesto e come ottenere un prezzo scritto fisso dal dentista — gratis su WhatsApp.
+697|Prezzo %(treatment)s Turchia 2026 — Preventivo Scritto Fisso
+698|%(treatment)s a Istanbul: cosa decide il prezzo, cosa include un preventivo onesto e come ottenere un preventivo scritto fisso dal dentista — gratis su WhatsApp.
+699|Cure Dentali a Istanbul 2026 — Impianti, Faccette, Corone
+700|Impianti, faccette, corone in zirconia, All-on-4, devitalizzazione e sbiancamento a Istanbul — come funziona, quanto restare e per chi. Valutazione gratuita.
