@@ -147,6 +147,8 @@ def treatment_price(request, slug):
     )
     ctx = pseo_context(request, offset=t.pk + 3, show_cases=t.slug in {"composite-veneers", "hollywood-smile",
                                                                         "porcelain-veneers", "teeth-whitening"})
+    if t_loc.image_src:
+        ctx["hero_photo"] = {"src": t_loc.image_src, "alt": t_loc.image_alt or t_loc.name}
     ctx.update({
         "seo": seo, "t": t_loc, "h1": h1, "faq": faq, "eyebrow": _("Prices"),
         "lead": _("What affects the price of %(treatment)s, what is included — and how to get your personal quote "

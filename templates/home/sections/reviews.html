@@ -6,7 +6,6 @@
     <span class="eyebrow">{% cblock "home-reviews" "eyebrow" _("Patient experiences") %}</span>
     <h2 id="reviews-h2" style="font-size:clamp(1.8rem,4vw,2.6rem)">{% if persona.persona == "shame" %}{% trans "Their stories — your inspiration" %}{% else %}{% cblock "home-reviews" "title" _("Real patients, real results") %}{% endif %}</h2>
     {% include "components/videos.html" %}
-    {% include "components/instagram_cta.html" %}
     <div style="margin-top:1.5rem">{% include "components/reviews.html" with reviews=reviews|slice:":6" show_clinic=multi_clinic %}</div>
     <p class="faint" style="margin-top:1rem">{% cblock "home-reviews" "subtitle" _("Videos are published with patients' explicit consent.") %}{% if clinic.youtube_url %} <a href="{{ clinic.youtube_url }}" target="_blank" rel="noopener" data-track="youtube">{% trans "All patient videos" %} →</a>{% endif %}</p>
   </div>

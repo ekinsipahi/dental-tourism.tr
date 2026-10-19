@@ -1,6 +1,7 @@
 {% load i18n site_tags %}
 <a class="card" href="{{ t.object.get_absolute_url }}" data-track="treatment">
-  <div class="card-icon" aria-hidden="true">{{ t.icon }}</div>
+  {% if t.image_src %}<div class="card-img"><img src="{{ t.image_src }}" alt="{{ t.image_alt|default:t.name }}" loading="lazy" width="480" height="270"></div>
+  {% else %}<div class="card-icon" aria-hidden="true">{{ t.icon }}</div>{% endif %}
   <{{ heading|default:"h3" }}>{{ t.name }}</{{ heading|default:"h3" }}>
   <p>{{ t.short_description|truncatechars:150 }}</p>
   <div class="card-foot">

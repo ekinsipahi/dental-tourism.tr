@@ -70,6 +70,12 @@
     {% include "components/wa_call.html" %}
   </div>
   {% endif %}
+  {% if clinic.instagram %}
+  <a href="https://www.instagram.com/{{ clinic.instagram }}/" class="ig-float" data-track="instagram" target="_blank" rel="noopener"
+     aria-label="{% trans 'Hear our patients on Instagram' %}" title="{% trans 'Hear our patients on Instagram' %}">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="#fff" stroke="none"/></svg>
+  </a>
+  {% endif %}
   {% if wa_url %}
   <a href="{{ wa_url }}" class="wa-float" data-track="whatsapp" target="_blank" rel="noopener" aria-label="{% trans 'Chat on WhatsApp' %}">
     {% include "components/wa-icon.html" with size=28 color="#fff" %}

@@ -156,6 +156,8 @@ p { margin: 0 0 1em; }
 .btn-row { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }
 .wa-float { position: fixed; bottom: 22px; inset-inline-end: 22px; z-index: 300; width: 58px; height: 58px; border-radius: 50%; background: var(--wa); display: grid; place-items: center; box-shadow: var(--shadow-wa); transition: transform .2s; }
 .wa-float:hover { transform: scale(1.07); }
+.ig-float { position: fixed; bottom: 92px; inset-inline-end: 26px; z-index: 300; width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); box-shadow: 0 6px 18px rgba(214, 36, 159, .35); transition: transform .2s; }
+.ig-float:hover { transform: scale(1.07); }
 [data-persona="ready"] .wa-float, [data-persona="urgency"] .wa-float { animation: pulse-wa 2.4s ease-in-out infinite; }
 @keyframes pulse-wa { 0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,.5); } 50% { box-shadow: 0 0 0 14px rgba(37,211,102,0); } }
 
@@ -383,11 +385,6 @@ a.card:hover { border-color: var(--border-hv); transform: translateY(-3px); back
 .pseo-loss { margin-top: 1rem; font-size: .9rem; color: var(--gold-lt); }
 .pseo-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .8rem; }
 .pseo-gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-sm); }
-.ig-cta-row { margin: 1.2rem 0 0; text-align: center; }
-.btn-ig { display: inline-flex; align-items: center; gap: .55rem; padding: .8rem 1.4rem; border-radius: 999px; color: #fff !important; font-weight: 700; text-decoration: none; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); box-shadow: 0 6px 18px rgba(204, 35, 102, .28); transition: transform .2s, box-shadow .2s; }
-.btn-ig:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(204, 35, 102, .38); }
-.btn-ig small { font-weight: 500; opacity: .9; }
-@media (max-width: 480px) { .btn-ig { flex-wrap: wrap; justify-content: center; } }
 .save-first { margin: 2rem 0; padding: 1.2rem 1.4rem; border-left: 4px solid var(--brand, #0f766e); background: var(--bg-alt, #f1f7f6); border-radius: var(--radius-sm); }
 .save-first h2 { font-size: 1.15rem; margin: 0 0 .5rem; }
 .save-first p { margin: 0 0 .6rem; }

@@ -17,6 +17,20 @@ from django.templatetags.static import static
 
 from apps.clinics.models import BeforeAfterCase, Clinic, ClinicImage, Doctor
 
+# Tedavi kartları / sayfaları için kliniğin ve hekimlerin GERÇEK fotoğrafları (tedavi anahtarı → dosya, alt metni)
+TREATMENT_IMAGES = {
+    "root-canal": ("gallery/devrim-slide1.jpg", "Dr. Devrim Sipahi treating a patient at our clinic in Şişli, Istanbul"),
+    "tooth-filling": ("gallery/devrim-slide2.jpg", "Dental treatment at our clinic in Şişli, Istanbul"),
+    "teeth-cleaning": ("gallery/devrim3.jpg", "Dr. Devrim Biriken Sipahi examining a patient, Şişli Istanbul"),
+    "composite-veneers": ("gallery/devrim-contact.jpg", "Dr. Devrim Sipahi at work in the treatment room, Şişli Istanbul"),
+    "teeth-whitening": ("dt-ekin-sipahi.jpg", "Dt. Ekin Sipahi, dentist at our family clinic in Şişli, Istanbul"),
+    "zirconia-crowns": ("gallery/treatment-room.jpg", "Treatment room and dental chair at our clinic in Şişli, Istanbul"),
+    "porcelain-veneers": ("gallery/devrim-slide3.jpg", "Dr. Dt. Devrim Biriken Sipahi, dentist in Istanbul"),
+    "hollywood-smile": ("cover.jpg", "Dr. Dt. Devrim Biriken Sipahi at our clinic in Şişli, Istanbul"),
+    "dental-implants": ("gallery/IMG_0543.jpg", "Dr. Devrim Sipahi and Dt. Ekin Sipahi performing implant surgery together"),
+    "all-on-4": ("dr-devrim-sipahi.jpg", "Dr. Dt. Devrim Biriken Sipahi, 35+ years of experience, Şişli Istanbul"),
+}
+
 GALLERY = [  # (dosya, tür, alt, slider'da göster)
     ("devrim-slide1.jpg", "room", "Dr. Devrim Sipahi treating a patient, dental clinic Şişli Istanbul", True),
     ("devrim-slide2.jpg", "room", "Dental treatment at our clinic in Şişli, Istanbul", True),
@@ -53,6 +67,14 @@ class Command(BaseCommand):
                 ClinicImage.objects.filter(pk__in=[im.pk for im in same[1:]]).delete()
             else:
                 ClinicImage.objects.create(clinic=clinic, image_url=url, alt=alt, kind=kind, show_in_hero=hero, order=i)
+                n += 1
+        from apps.treatments.models import Treatment as _T
+
+        for t in _T.objects.filter(key__in=TREATMENT_IMAGES):
+            if not t.image and not t.image_url:
+                fname, alt = TREATMENT_IMAGES[t.key]
+                t.image_url, t.image_alt = static(f"img/clinic/{fname}"), alt
+                t.save(update_fields=["image_url", "image_alt"])
                 n += 1
         if not clinic.cover_image and not clinic.cover_image_url:
             clinic.cover_image_url = static("img/clinic/cover.jpg")
