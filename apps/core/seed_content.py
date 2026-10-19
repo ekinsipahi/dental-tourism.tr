@@ -2,7 +2,7 @@
 
 TREATMENTS = [
     {
-        "key": "dental-implants", "category": "implant", "icon": "🦷", "order": 1,
+        "key": "dental-implants", "category": "implant", "icon": "🦷", "order": 9,
         "price": (500, 700), "unit": "per implant", "stay": "5-7", "visits": 2, "duration": "1-2 hours per implant",
         "name": "Dental Implants",
         "short": "A titanium root and a natural-looking crown that permanently replace a missing tooth. "
@@ -30,7 +30,7 @@ As with any surgery there can be swelling, bruising or — rarely — infection 
         ],
     },
     {
-        "key": "porcelain-veneers", "category": "cosmetic", "icon": "✨", "order": 2,
+        "key": "porcelain-veneers", "category": "cosmetic", "icon": "✨", "order": 7,
         "price": (180, None), "unit": "per tooth", "stay": "5-7", "visits": 1, "duration": "2 appointments",
         "name": "Porcelain Veneers",
         "short": "Thin porcelain shells bonded to the front of the teeth to correct colour, shape and small gaps — "
@@ -56,7 +56,7 @@ Well-made porcelain veneers can last 10–15 years with good hygiene, a night gu
         ],
     },
     {
-        "key": "zirconia-crowns", "category": "restorative", "icon": "👑", "order": 3,
+        "key": "zirconia-crowns", "category": "restorative", "icon": "👑", "order": 6,
         "price": (150, None), "unit": "per crown", "stay": "5-7", "visits": 1, "duration": "2-3 appointments",
         "name": "Zirconia Crowns",
         "short": "Strong, metal-free crowns that protect weakened teeth and look natural — the most durable "
@@ -78,7 +78,7 @@ The tooth is prepared and scanned, a temporary crown is fitted, and the final zi
         ],
     },
     {
-        "key": "all-on-4", "category": "implant", "icon": "💎", "order": 4,
+        "key": "all-on-4", "category": "implant", "icon": "💎", "order": 10,
         "price": (4500, None), "unit": "per arch", "stay": "5-7", "visits": 2, "duration": "1 day surgery",
         "name": "All-on-4 Implants",
         "short": "A complete fixed set of teeth on four (or six) implants per jaw — for patients who have lost "
@@ -100,7 +100,7 @@ Visit 1: extractions if needed, implant placement and a fixed temporary bridge w
         ],
     },
     {
-        "key": "root-canal", "category": "general", "icon": "🔬", "order": 5,
+        "key": "root-canal", "category": "general", "icon": "🔬", "order": 1,
         "price": (None, None), "unit": "per tooth", "stay": "1-3", "visits": 1, "duration": "1-2 appointments",
         "name": "Root Canal Treatment",
         "short": "Saves an infected or badly inflamed tooth instead of extracting it. Most teeth can be saved — "
@@ -121,7 +121,7 @@ A treated back tooth usually needs a crown to protect it from breaking.""",
         ],
     },
     {
-        "key": "composite-veneers", "category": "cosmetic", "icon": "😁", "order": 6,
+        "key": "composite-veneers", "category": "cosmetic", "icon": "😁", "order": 4,
         "price": (None, None), "unit": "per tooth", "stay": "1-3", "visits": 1, "duration": "1 session",
         "name": "Composite Veneers",
         "short": "Smile makeover with tooth-coloured composite, sculpted directly on the teeth — usually without "
@@ -139,7 +139,7 @@ They are faster and more affordable than porcelain and fully reversible, but the
         ],
     },
     {
-        "key": "teeth-cleaning", "category": "general", "icon": "🪥", "order": 7,
+        "key": "teeth-cleaning", "category": "general", "icon": "🪥", "order": 3,
         "price": (None, None), "unit": "per session", "stay": "1", "visits": 1, "duration": "30-45 minutes",
         "name": "Teeth Cleaning",
         "short": "Professional scaling and polishing that removes tartar and stains — the basis of healthy gums.",
@@ -151,7 +151,7 @@ Tartar cannot be removed with a toothbrush. Left in place it causes gum inflamma
         "faq": [],
     },
     {
-        "key": "tooth-filling", "category": "general", "icon": "🦴", "order": 8,
+        "key": "tooth-filling", "category": "general", "icon": "🦴", "order": 2,
         "price": (None, None), "unit": "per tooth", "stay": "1", "visits": 1, "duration": "30-60 minutes",
         "name": "Tooth Fillings",
         "short": "Aesthetic composite fillings that restore decayed teeth. Done correctly, they last for many years.",
@@ -163,7 +163,7 @@ Decay is removed and the tooth is rebuilt with tooth-coloured composite that bon
         "faq": [],
     },
     {
-        "key": "teeth-whitening", "category": "cosmetic", "icon": "💡", "order": 9,
+        "key": "teeth-whitening", "category": "cosmetic", "icon": "💡", "order": 5,
         "price": (None, None), "unit": "per session", "stay": "1", "visits": 1, "duration": "60-90 minutes",
         "name": "Teeth Whitening",
         "short": "In-office whitening that lightens natural teeth by several shades in a single visit.",
@@ -175,7 +175,7 @@ A professional whitening gel is applied to the teeth while the gums are protecte
         "faq": [],
     },
     {
-        "key": "hollywood-smile", "category": "cosmetic", "icon": "🌟", "order": 10,
+        "key": "hollywood-smile", "category": "cosmetic", "icon": "🌟", "order": 8,
         "price": (None, None), "unit": "per smile", "stay": "5-7", "visits": 1, "duration": "about 1 week",
         "name": "Hollywood Smile",
         "short": "A complete smile makeover planned digitally — with veneers or crowns designed to suit your "

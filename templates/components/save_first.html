@@ -1,0 +1,5 @@
+{% load i18n %}{% if show %}<aside class="save-first" data-track-section="save_first">
+  <h2>🦷 {% trans "Can your own tooth be saved first?" %}</h2>
+  <p>{% trans "Before any implant, crown or veneer, the dentist checks whether your natural tooth can be kept — with a root canal treatment, a filling or composite bonding. A healthy tooth, once lost, never grows back." %}</p>
+  {% if root_canal_url %}<a href="{{ root_canal_url }}">{% trans "How root canal treatment saves a tooth" %} →</a>{% endif %}
+</aside>{% endif %}

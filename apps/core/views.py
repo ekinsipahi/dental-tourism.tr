@@ -85,8 +85,8 @@ def home(request):
     cases = list(clinic.cases.filter(is_published=True, patient_consent=True)[:2]) if clinic else []
 
     _meta_home = page_meta("home", _("Dental Tourism Istanbul ★%(rating)s — Family Dentists, 35+ Years") % proof(),
-                           _("Implants, veneers and crowns in Istanbul from a mother-and-son dentist team with 35+ "
-                             "years' experience. ★ %(rating)s on Google. Free assessment on WhatsApp.") % proof())
+                           _("We save your natural teeth first: root canals, fillings, minimal-prep veneers — implants only if a "
+                             "tooth can't be saved. 35+ years, ★ %(rating)s on Google.") % proof())
     seo = Seo(
         title=_meta_home[0],
         description=_meta_home[1],

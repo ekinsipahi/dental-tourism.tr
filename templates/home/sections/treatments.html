@@ -4,8 +4,8 @@
   <div class="wrap">
     <div class="center" style="margin-bottom:2.5rem">
       <span class="eyebrow">{% if persona.persona == "price" %}💰 {% trans "Best value treatments" %}{% elif persona.persona == "premium" %}{% trans "Signature treatments" %}{% elif persona.persona == "quality" %}{% trans "Treatments planned around you" %}{% elif persona.persona == "shame" %}✨ {% trans "Natural smile treatments" %}{% else %}{% cblock "home-treatments" "eyebrow" _("What we do") %}{% endif %}</span>
-      <h2 id="treatments-h2" style="font-size:clamp(1.8rem,4vw,2.6rem)">{% cblock "home-treatments" "title" _("Dental treatments in Istanbul — and why we do them") %}</h2>
-      <p class="lead">{% cblock "home-treatments" "subtitle" _("Our ethical protocol means we only recommend what you actually need. No upselling, no unnecessary procedures.") %}</p>
+      <h2 id="treatments-h2" style="font-size:clamp(1.8rem,4vw,2.6rem)">{% cblock "home-treatments" "title" _("Save first, replace only when needed") %}</h2>
+      <p class="lead">{% cblock "home-treatments" "subtitle" _("Our ethical protocol: we try to keep your natural teeth. Root canal treatment, fillings and composite come before implants, crowns and veneers — no upselling, no unnecessary procedures.") %}</p>
     </div>
     <div class="grid grid-4">
       {% for t in treatments %}{% include "components/treatment_card.html" with t=t heading="h3" %}{% endfor %}

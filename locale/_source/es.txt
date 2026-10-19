@@ -699,3 +699,15 @@
 698|%(treatment)s en Estambul: qué decide el precio, qué incluye un presupuesto justo y cómo obtener un presupuesto fijo por escrito del dentista.
 699|Tratamientos Dentales Estambul 2026 — Implantes, Carillas, Coronas
 700|Implantes, carillas, coronas de zirconio, All-on-4, endodoncia y blanqueamiento en Estambul — cómo funciona, cuánto quedarse y para quién. Valoración gratis.
+701|Primero salvamos sus dientes: endodoncias, empastes, carillas con mínimo tallado — implantes solo si el diente no se salva. 35+ años, ★ %(rating)s en Google.
+702|¿Se puede salvar primero su propio diente?
+703|Antes de cualquier implante, corona o carilla, la dentista comprueba si su diente natural se puede conservar — con una endodoncia, un empaste o composite. Un diente sano perdido nunca vuelve a crecer.
+704|Cómo una endodoncia salva un diente
+705|Tratamiento dental asequible en Estambul —
+706|primero salvamos sus propios dientes.
+707|Salvar un diente suele costar mucho menos que sustituirlo. Materiales con certificado CE, presupuesto fijo por escrito y sin costes ocultos — el precio que le damos es el que paga.
+708|primero salvamos sus dientes naturales.
+709|Un diente sano perdido nunca vuelve a crecer. Por eso primero tratamos y reparamos sus propios dientes — endodoncia antes que extracción, empaste antes que corona, composite antes que carillas — y solo recomendamos un implante si un diente de verdad no se puede salvar.
+710|Dientes naturales salvados primero
+711|Primero salvar, sustituir solo si hace falta
+712|Nuestro protocolo ético: intentamos conservar sus dientes naturales. Endodoncia, empastes y composite van antes que implantes, coronas y carillas — sin ventas forzadas ni tratamientos innecesarios.

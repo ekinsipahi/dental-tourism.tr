@@ -7,8 +7,8 @@
     <div class="h-hero-inner">
       <div class="h-badge h-badge--red au1">✓ {% trans "Very affordable · fixed written quote" %}</div>
       <p class="h-eyebrow au1">{% cblock "home-hero-eyebrow" "title" _("Dental tourism Turkey — Istanbul") %}</p>
-      <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-price" "title" _("Affordable dental implants in Istanbul —") %} <em>{% cblock "home-hero-price" "subtitle" _("same quality.") %}</em></h1>
-      <p class="h-lead au3">{% cblock "home-hero-price" "body" _("A fraction of the price at home. CE-certified materials, identical technique. No hidden costs — the price we quote is the price you pay.") %}</p>
+      <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-price" "title" _("Affordable dental treatment in Istanbul —") %} <em>{% cblock "home-hero-price" "subtitle" _("your own teeth saved first.") %}</em></h1>
+      <p class="h-lead au3">{% cblock "home-hero-price" "body" _("Saving a tooth usually costs far less than replacing it. CE-certified materials, a fixed written quote and no hidden costs — the price we quote is the price you pay.") %}</p>
       <ul class="h-pills au3" style="list-style:none;padding:0"><li class="h-pill">✓ {% trans "Personal treatment plan" %}</li><li class="h-pill">✓ {% trans "Fixed written quote" %}</li><li class="h-pill">✓ {% trans "Free assessment — WhatsApp" %}</li></ul>
       <div class="h-cta-row au4">
         <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-price" "button_text" _("Get a free price quote") %}</a>
@@ -192,11 +192,11 @@
     <div class="h-hero-inner">
       {% if clinic %}<div class="h-badge au1"><span class="h-dot"></span>{{ clinic.city.localized.name }}, {{ clinic.district }}{% if clinic.neighborhood %} — {{ clinic.neighborhood }}{% endif %}</div>{% endif %}
       <p class="h-eyebrow au1">{% cblock "home-hero-default" "eyebrow" _("Dental tourism Turkey") %}</p>
-      <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-default" "title" _("Dental treatment in Istanbul —") %} <em>{% cblock "home-hero-default" "subtitle" _("only what your teeth actually need.") %}</em></h1>
-      <p class="h-lead au3">{% cblock "home-hero-default" "body" _("Good medicine means knowing when to say no. Ethical protocol, transparent diagnosis and one dentist responsible for your care — with direct WhatsApp contact, not a call centre.") %}</p>
+      <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-default" "title" _("Dental treatment in Istanbul —") %} <em>{% cblock "home-hero-default" "subtitle" _("we save your natural teeth first.") %}</em></h1>
+      <p class="h-lead au3">{% cblock "home-hero-default" "body" _("A healthy tooth, once lost, never grows back. So we treat and repair your own teeth first — root canal before extraction, filling before crown, composite before veneers — and recommend an implant only when a tooth truly can't be saved.") %}</p>
       <ul class="h-pills au3" style="list-style:none;padding:0">
+        <li class="h-pill">✓ {% trans "Natural teeth saved first" %}</li>
         <li class="h-pill">✓ {% trans "No unnecessary treatment" %}</li>
-        <li class="h-pill">✓ {% trans "Transparent diagnosis" %}</li>
         <li class="h-pill">✓ {% trans "Fixed written quote" %}</li>
         <li class="h-pill">✓ {% trans "One dentist — full responsibility" %}</li>
       </ul>

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-18 08:19+0300\n"
+"POT-Creation-Date: 2026-10-19 13:41+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: apps/blog/views.py:36
-#| msgid "Dental Tourism Blog — Guides, Costs & Patient Advice"
 msgid "Dental Tourism Blog 2026 — Honest Advice from Dentists"
 msgstr "Diş Turizmi Bloqu 2026 — Diş Həkimlərindən Dürüst Məsləhətlər"
 
@@ -163,8 +162,6 @@ msgstr "İstənilən dil"
 
 #: apps/clinics/views.py:29
 #, python-format
-#| msgid ""
-#| "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
 msgid "Our Dental Clinic in Istanbul — Şişli, ★%(rating)s, Open 7 Days"
 msgstr "İstanbulda Diş Klinikamız — Şişli, ★%(rating)s, Həftənin 7 Günü Açıq"
 
@@ -516,29 +513,29 @@ msgstr "mexfilik/"
 
 #: apps/core/views.py:87
 #, python-format
-#| msgid ""
-#| "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
 msgid "Dental Tourism Istanbul ★%(rating)s — Family Dentists, 35+ Years"
 msgstr "İstanbul Diş Klinikası ★%(rating)s — Ailə Diş Həkimləri, 35+ İl"
 
 #: apps/core/views.py:88
 #, python-format
+#| msgid ""
+#| "We save your natural teeth first: root canals, fillings and minimal-prep "
+#| "veneers — implants only when a tooth can't be saved. Family dentists, 35+ "
+#| "years, ★ %(rating)s on Google."
 msgid ""
-"Implants, veneers and crowns in Istanbul from a mother-and-son dentist team "
-"with 35+ years' experience. ★ %(rating)s on Google. Free assessment on "
-"WhatsApp."
+"We save your natural teeth first: root canals, fillings, minimal-prep "
+"veneers — implants only if a tooth can't be saved. 35+ years, ★ %(rating)s "
+"on Google."
 msgstr ""
-"İstanbulda implant, laminat və tac: 35+ il təcrübəli ana-oğul diş həkimi "
-"komandası. Google-da ★ %(rating)s. WhatsApp-da pulsuz qiymətləndirmə."
+"Əvvəlcə təbii dişlərinizi xilas edirik: kanal müalicəsi, plomb, minimal "
+"yonmalı vinir — implant yalnız diş xilas edilə bilmədikdə. 35+ il, ★ "
+"%(rating)s."
 
 #: apps/core/views.py:111
 msgid "About Us — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Family Dentists"
 msgstr "Haqqımızda — Dr. Devrim Sipahi və Dt. Ekin Sipahi, Ailə Həkimləri"
 
 #: apps/core/views.py:112
-#| msgid ""
-#| "Family dental clinic in %(area)s, Istanbul. Diagnosis first and only the "
-#| "treatment you need. Open 7 days a week — send a photo on WhatsApp."
 msgid ""
 "A family dental clinic in Şişli, Istanbul: 35+ years' experience, diagnosis "
 "first and only the treatment you need. Meet the dentists who will treat you."
@@ -556,15 +553,10 @@ msgid "Please check the form and try again."
 msgstr "Formu yoxlayıb yenidən cəhd edin."
 
 #: apps/core/views.py:145
-#| msgid "Free assessment on WhatsApp"
 msgid "Free Dental Assessment on WhatsApp — Answered by the Dentist"
 msgstr "WhatsApp-da Pulsuz Diş Qiymətləndirməsi — Diş Həkimi Cavablayır"
 
 #: apps/core/views.py:146
-#| msgid ""
-#| "Send your photos or X-ray on WhatsApp. After the dentist has reviewed your "
-#| "case you receive a personal plan with a fixed written quote — we never "
-#| "publish one-size-fits-all prices."
 msgid ""
 "Send a photo or X-ray and receive a personal plan with a fixed written quote"
 " — answered by the dentist, not a call centre. Open 7 days a week."
@@ -664,8 +656,6 @@ msgstr "%(area)s yaxınlığında diş klinikası, İstanbul"
 
 #: apps/seo/area_views.py:83
 #, python-format
-#| msgid ""
-#| "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
 msgid "Dentist near %(area)s ★%(rating)s — Family Clinic, Open 7 Days"
 msgstr "%(area)s Yaxınlığında Diş Həkimi ★%(rating)s — Ailə Klinikası, 7 Gün"
 
@@ -698,17 +688,12 @@ msgstr "%(area)s diş klinikası, İstanbul"
 
 #: apps/seo/area_views.py:90
 #, python-format
-#| msgid ""
-#| "Dental Clinic in %(area)s, Istanbul — Family Dentists, Open 7 Days"
 msgid "Dentist in %(area)s ★%(rating)s — Family Clinic, Open 7 Days"
 msgstr ""
 "%(area)s Diş Həkimi ★%(rating)s — Ailə Klinikası, Həftənin 7 Günü Açıq"
 
 #: apps/seo/area_views.py:91
 #, python-format
-#| msgid ""
-#| "Family dental clinic in %(area)s, Istanbul. Diagnosis first and only the "
-#| "treatment you need. Open 7 days a week — send a photo on WhatsApp."
 msgid ""
 "Family dental clinic in %(area)s, Istanbul: 35+ years' experience, ★ "
 "%(rating)s on Google, open 7 days a week. Free assessment on WhatsApp."
@@ -742,18 +727,12 @@ msgstr ""
 
 #: apps/seo/area_views.py:124
 #, python-format
-#| msgid ""
-#| "Dental Clinic near Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul"
 msgid "Dentist near Şişli, Nişantaşı, Taksim & Levent ★%(rating)s"
 msgstr ""
 "Şişli, Nişantaşı, Taksim və Levent Yaxınlığında Diş Həkimi ★%(rating)s"
 
 #: apps/seo/area_views.py:125
 #, python-format
-#| msgid ""
-#| "Our family dental clinic is in Şişli, Istanbul. See how to reach us from "
-#| "Nişantaşı, Taksim, Beşiktaş, Levent, Maslak and other districts — open 7 "
-#| "days a week."
 msgid ""
 "Family dental clinic in Şişli, Istanbul: 35+ years, ★ %(rating)s on Google, "
 "open 7 days. Distance and route from Nişantaşı, Taksim, Beşiktaş, Levent and"
@@ -882,14 +861,10 @@ msgstr ""
 "planlaşdırırıq."
 
 #: apps/seo/guide_views.py:30
-#| msgid "Dental Tourism Guides — Turkey & Istanbul"
 msgid "Dental Tourism Guides 2026 — Turkey & Istanbul, by Dentists"
 msgstr "Diş Turizmi Bələdçiləri 2026 — Türkiyə və İstanbul"
 
 #: apps/seo/guide_views.py:31
-#| msgid ""
-#| "Honest guides about dental treatment in Turkey: choosing a clinic, reviews, "
-#| "travel, guarantee and aftercare — from a dentist in Istanbul."
 msgid ""
 "Choosing a clinic, reviews, safety, travel, guarantee and aftercare — honest"
 " guides to dental treatment in Turkey, written by dentists in Istanbul."
@@ -1043,7 +1018,6 @@ msgstr "İstanbulda %(treatment)s paketi"
 
 #: apps/seo/package_views.py:102
 #, python-format
-#| msgid "%(treatment)s package in Istanbul"
 msgid "%(treatment)s Package Istanbul — Planned on Your X-ray"
 msgstr "%(treatment)s Paketi İstanbul — Rentgeninizə Görə Plan"
 
@@ -1070,10 +1044,6 @@ msgstr "%(country)s → İstanbul Diş Müalicəsi — 2026 Bələdçisi"
 
 #: apps/seo/package_views.py:143
 #, python-format
-#| msgid ""
-#| "Planning dental treatment in Turkey from %(country)s? Flight time, how many "
-#| "trips you need, what a personalised dental package includes and aftercare at"
-#| " home."
 msgid ""
 "Travelling from %(country)s for dental treatment? Flight time, how many "
 "trips you need, what a fair package includes and how aftercare works at "
@@ -1224,7 +1194,6 @@ msgstr ""
 "xərc yoxdur."
 
 #: apps/seo/views.py:108
-#| msgid "Dental Prices in Turkey 2026 — Affordable, Personal Quote"
 msgid "Dental Prices in Turkey 2026 — What Really Decides the Cost"
 msgstr "Türkiyədə Diş Qiymətləri 2026 — Qiyməti Əslində Nə Müəyyən Edir?"
 
@@ -1261,7 +1230,6 @@ msgstr "Türkiyədə %(treatment)s qiyməti — münasib, sabit qiymətlə"
 
 #: apps/seo/views.py:139
 #, python-format
-#| msgid "%(treatment)s Price in Turkey 2026 — Personal Quote"
 msgid "%(treatment)s Cost in Turkey 2026 — Fixed Written Quote"
 msgstr "%(treatment)s Qiyməti Türkiyə 2026 — Yazılı Sabit Təklif"
 
@@ -1285,8 +1253,6 @@ msgstr ""
 "telefonla və ya WhatsApp-da necə almaq olar."
 
 #: apps/treatments/views.py:19
-#| msgid ""
-#| "Dental Tourism Istanbul — Implants, Veneers & Crowns in Turkey"
 msgid "Dental Treatments in Istanbul 2026 — Implants, Veneers, Crowns"
 msgstr "İstanbulda Diş Müalicələri 2026 — İmplant, Laminat, Tac"
 
@@ -1473,7 +1439,7 @@ msgstr ""
 "tövsiyə edir, sağlam dişləri qoruyuruq."
 
 #: templates/areas/detail.html:21 templates/packages/origin.html:24
-#: templates/treatments/detail.html:36
+#: templates/treatments/detail.html:37
 msgid "At a glance"
 msgstr "Qısa məlumat"
 
@@ -1509,8 +1475,8 @@ msgid "7 days a week"
 msgstr "Həftənin 7 günü"
 
 #: templates/areas/detail.html:28 templates/guides/detail.html:27
-#: templates/packages/origin.html:29 templates/packages/treatment.html:35
-#: templates/treatments/detail.html:42
+#: templates/packages/origin.html:29 templates/packages/treatment.html:36
+#: templates/treatments/detail.html:43
 msgid "Ask for my personal plan"
 msgstr "Şəxsi planımı istə"
 
@@ -1708,7 +1674,7 @@ msgid "Stay"
 msgstr "Qalma"
 
 #: templates/clinics/detail.html:46 templates/seo/_clinic_offers.html:9
-#: templates/treatments/detail.html:38
+#: templates/treatments/detail.html:39
 #, python-format
 msgid "%(d)s days"
 msgstr "%(d)s gün"
@@ -1998,12 +1964,12 @@ msgstr "Müalicəyə görə diş paketləri"
 
 #: templates/components/navbar.html:30 templates/packages/index.html:20
 #: templates/packages/origin.html:35 templates/seo/treatment_city.html:15
-#: templates/seo/treatment_price.html:23 templates/treatments/detail.html:16
+#: templates/seo/treatment_price.html:24 templates/treatments/detail.html:16
 #, python-format
 msgid "%(name)s package"
 msgstr "%(name)s paketi"
 
-#: templates/components/navbar.html:33 templates/packages/treatment.html:39
+#: templates/components/navbar.html:33 templates/packages/treatment.html:40
 msgid "Travelling from"
 msgstr "Haradan gəlirsiniz"
 
@@ -2114,6 +2080,24 @@ msgstr "Təsdiqlənmiş pasiyent"
 #: templates/components/reviews.html:32
 msgid "Reply from the clinic"
 msgstr "Klinikanın cavabı"
+
+#: templates/components/save_first.html:2
+msgid "Can your own tooth be saved first?"
+msgstr "Əvvəlcə öz dişiniz xilas edilə bilərmi?"
+
+#: templates/components/save_first.html:3
+msgid ""
+"Before any implant, crown or veneer, the dentist checks whether your natural"
+" tooth can be kept — with a root canal treatment, a filling or composite "
+"bonding. A healthy tooth, once lost, never grows back."
+msgstr ""
+"Hər hansı implant, tac və ya vinirdən əvvəl həkim təbii dişinizin qorunub-"
+"qorunmayacağını yoxlayır — kanal müalicəsi, plomb və ya kompozit ilə. Sağlam"
+" diş bir dəfə itirilsə, bir daha bitmir."
+
+#: templates/components/save_first.html:4
+msgid "How root canal treatment saves a tooth"
+msgstr "Kanal müalicəsi dişi necə xilas edir"
 
 #: templates/components/treatment_card.html:7
 #: templates/seo/treatment_city.html:10 templates/treatments/detail.html:10
@@ -2237,20 +2221,22 @@ msgid "Dental tourism Turkey — Istanbul"
 msgstr "Diş turizmi Türkiyə — İstanbul"
 
 #: templates/home/sections/hero.html:10
-msgid "Affordable dental implants in Istanbul —"
-msgstr "İstanbulda münasib qiymətə diş implantı —"
+msgid "Affordable dental treatment in Istanbul —"
+msgstr "İstanbulda sərfəli diş müalicəsi —"
 
 #: templates/home/sections/hero.html:10
-msgid "same quality."
-msgstr "eyni keyfiyyət."
+msgid "your own teeth saved first."
+msgstr "əvvəlcə öz dişləriniz xilas edilir."
 
 #: templates/home/sections/hero.html:11
 msgid ""
-"A fraction of the price at home. CE-certified materials, identical "
-"technique. No hidden costs — the price we quote is the price you pay."
+"Saving a tooth usually costs far less than replacing it. CE-certified "
+"materials, a fixed written quote and no hidden costs — the price we quote is"
+" the price you pay."
 msgstr ""
-"Öz ölkənizdəki qiymətin kiçik bir hissəsi. CE sertifikatlı materiallar, eyni"
-" texnika. Gizli xərc yoxdur — dediyimiz qiymət ödədiyiniz qiymətdir."
+"Dişi xilas etmək adətən onu əvəz etməkdən çox daha ucuzdur. CE sertifikatlı "
+"materiallar, yazılı sabit təklif və gizli xərc yoxdur — dediyimiz qiymət "
+"ödədiyiniz qiymətdir."
 
 #: templates/home/sections/hero.html:12 templates/home/sections/hero.html:205
 msgid "Free assessment — WhatsApp"
@@ -2282,7 +2268,7 @@ msgstr ""
 "Təcrübənin bizə öyrətdiyi ən dəyərli şey: yaxşı tibb nə vaxt «yox» deməyi "
 "bilməkdir. Lazımsız prosedur yoxdur. Şəffaf diaqnoz. Sabit qiymət."
 
-#: templates/home/sections/hero.html:32 templates/home/sections/hero.html:198
+#: templates/home/sections/hero.html:32 templates/home/sections/hero.html:199
 msgid "No unnecessary treatment"
 msgstr "Lazımsız müalicə yoxdur"
 
@@ -2539,22 +2525,24 @@ msgid "Dental treatment in Istanbul —"
 msgstr "İstanbulda diş müalicəsi —"
 
 #: templates/home/sections/hero.html:195
-msgid "only what your teeth actually need."
-msgstr "yalnız dişlərinizin həqiqətən ehtiyacı olan."
+msgid "we save your natural teeth first."
+msgstr "əvvəlcə təbii dişlərinizi xilas edirik."
 
 #: templates/home/sections/hero.html:196
 msgid ""
-"Good medicine means knowing when to say no. Ethical protocol, transparent "
-"diagnosis and one dentist responsible for your care — with direct WhatsApp "
-"contact, not a call centre."
+"A healthy tooth, once lost, never grows back. So we treat and repair your "
+"own teeth first — root canal before extraction, filling before crown, "
+"composite before veneers — and recommend an implant only when a tooth truly "
+"can't be saved."
 msgstr ""
-"Yaxşı tibb nə vaxt «yox» deməyi bilməkdir. Etik protokol, şəffaf diaqnoz və "
-"müalicənizə cavabdeh bir həkim — zəng mərkəzi deyil, birbaşa WhatsApp "
-"əlaqəsi."
+"Sağlam diş bir dəfə itirilsə, bir daha bitmir. Buna görə əvvəlcə öz "
+"dişlərinizi müalicə edib bərpa edirik — çəkimdən əvvəl kanal müalicəsi, "
+"tacdan əvvəl plomb, vinirdən əvvəl kompozit — və implantı yalnız diş "
+"həqiqətən xilas edilə bilmədikdə tövsiyə edirik."
 
-#: templates/home/sections/hero.html:199
-msgid "Transparent diagnosis"
-msgstr "Şəffaf diaqnoz"
+#: templates/home/sections/hero.html:198
+msgid "Natural teeth saved first"
+msgstr "Əvvəlcə təbii dişlər xilas edilir"
 
 #: templates/home/sections/hero.html:201
 msgid "One dentist — full responsibility"
@@ -2641,16 +2629,18 @@ msgid "What we do"
 msgstr "Nə edirik"
 
 #: templates/home/sections/treatments.html:7
-msgid "Dental treatments in Istanbul — and why we do them"
-msgstr "İstanbulda diş müalicələri — və niyə edirik"
+msgid "Save first, replace only when needed"
+msgstr "Əvvəlcə xilas et, yalnız lazım olduqda əvəz et"
 
 #: templates/home/sections/treatments.html:8
 msgid ""
-"Our ethical protocol means we only recommend what you actually need. No "
-"upselling, no unnecessary procedures."
+"Our ethical protocol: we try to keep your natural teeth. Root canal "
+"treatment, fillings and composite come before implants, crowns and veneers —"
+" no upselling, no unnecessary procedures."
 msgstr ""
-"Etik protokolumuz o deməkdir ki, yalnız həqiqətən ehtiyacınız olanı tövsiyə "
-"edirik. Əlavə satış yox, lazımsız prosedur yox."
+"Etik protokolumuz: təbii dişlərinizi qorumağa çalışırıq. Kanal müalicəsi, "
+"plomb və kompozit implant, tac və vinirlərdən əvvəl gəlir — artıq satış "
+"yoxdur, lazımsız prosedur yoxdur."
 
 #: templates/packages/index.html:7
 msgid "What a personalised dental package includes"
@@ -2823,23 +2813,23 @@ msgstr ""
 msgid "Never accept a plan before anyone has examined your teeth"
 msgstr "Dişləriniz müayinə olunmadan heç bir planı qəbul etməyin"
 
-#: templates/packages/treatment.html:30 templates/seo/treatment_price.html:23
+#: templates/packages/treatment.html:31 templates/seo/treatment_price.html:24
 #, python-format
 msgid "Everything about %(name)s"
 msgstr "%(name)s haqqında hər şey"
 
-#: templates/packages/treatment.html:30
+#: templates/packages/treatment.html:31
 #, python-format
 msgid "%(name)s cost in Turkey"
 msgstr "Türkiyədə %(name)s qiyməti"
 
-#: templates/packages/treatment.html:46 templates/seo/treatment_city.html:29
-#: templates/treatments/detail.html:54
+#: templates/packages/treatment.html:47 templates/seo/treatment_city.html:29
+#: templates/treatments/detail.html:55
 msgid "What patients say"
 msgstr "Pasiyentlər nə deyir"
 
-#: templates/packages/treatment.html:47 templates/seo/treatment_city.html:31
-#: templates/seo/treatment_price.html:37 templates/treatments/detail.html:65
+#: templates/packages/treatment.html:48 templates/seo/treatment_city.html:31
+#: templates/seo/treatment_price.html:38 templates/treatments/detail.html:66
 msgid "Related treatments"
 msgstr "Əlaqəli müalicələr"
 
@@ -2917,7 +2907,7 @@ msgstr ""
 "Büdcəniz əsl vacib olana — müalicənizə gedir. Daha sərfəli seçimlər də "
 "mövcuddur; sadəcə soruşun."
 
-#: templates/pseo/_price_note.html:7 templates/seo/treatment_price.html:28
+#: templates/pseo/_price_note.html:7 templates/seo/treatment_price.html:29
 msgid "Ask for my price on WhatsApp"
 msgstr "Qiymətimi WhatsApp-da soruş"
 
@@ -3048,48 +3038,48 @@ msgstr "%(c)s — %(t)s klinikaları"
 msgid "No clinic offers this treatment in this city yet."
 msgstr "Bu şəhərdə hələ bu müalicəni təklif edən klinika yoxdur."
 
-#: templates/seo/treatment_price.html:8
+#: templates/seo/treatment_price.html:9
 #, python-format
 msgid "What affects the price of %(name)s"
 msgstr "%(name)s qiymətinə nə təsir edir"
 
-#: templates/seo/treatment_price.html:10
+#: templates/seo/treatment_price.html:11
 msgid "Your diagnosis: how many teeth and their condition"
 msgstr "Diaqnozunuz: neçə diş və hansı vəziyyətdə"
 
-#: templates/seo/treatment_price.html:11
+#: templates/seo/treatment_price.html:12
 msgid "The brand and type of materials"
 msgstr "Materialların markası və növü"
 
-#: templates/seo/treatment_price.html:12
+#: templates/seo/treatment_price.html:13
 msgid "Whether preparatory treatment is needed"
 msgstr "Hazırlıq müalicəsinin lazım olub-olmadığı"
 
-#: templates/seo/treatment_price.html:13
+#: templates/seo/treatment_price.html:14
 msgid "The number of visits to Istanbul"
 msgstr "İstanbula səfərlərin sayı"
 
-#: templates/seo/treatment_price.html:15
+#: templates/seo/treatment_price.html:16
 msgid "Included in your quote"
 msgstr "Təklifə daxildir"
 
-#: templates/seo/treatment_price.html:17
+#: templates/seo/treatment_price.html:18
 msgid "Examination, X-ray and 3D scan"
 msgstr "Müayinə, rentgen və 3D skan"
 
-#: templates/seo/treatment_price.html:18
+#: templates/seo/treatment_price.html:19
 msgid "Treatment by the dentist personally"
 msgstr "Həkim tərəfindən şəxsən müalicə"
 
-#: templates/seo/treatment_price.html:19
+#: templates/seo/treatment_price.html:20
 msgid "Written guarantee information"
 msgstr "Yazılı zəmanət məlumatı"
 
-#: templates/seo/treatment_price.html:20
+#: templates/seo/treatment_price.html:21
 msgid "Aftercare on WhatsApp"
 msgstr "WhatsApp-da nəzarət"
 
-#: templates/seo/treatment_price.html:22
+#: templates/seo/treatment_price.html:23
 msgid ""
 "Dental work is more than a Hollywood smile. We recommend only what you "
 "really need — that is also the most affordable plan."
@@ -3125,32 +3115,32 @@ msgid_plural "%(n)s visits"
 msgstr[0] "%(n)s səfər"
 msgstr[1] "%(n)s səfər"
 
-#: templates/treatments/detail.html:29
+#: templates/treatments/detail.html:30
 #, python-format
 msgid "%(name)s by city"
 msgstr "Şəhərlər üzrə %(name)s"
 
-#: templates/treatments/detail.html:38
+#: templates/treatments/detail.html:39
 msgid "Stay in Istanbul"
 msgstr "İstanbulda qalma"
 
-#: templates/treatments/detail.html:39
+#: templates/treatments/detail.html:40
 msgid "Visits"
 msgstr "Səfərlər"
 
-#: templates/treatments/detail.html:40
+#: templates/treatments/detail.html:41
 msgid "Anaesthesia"
 msgstr "Anesteziya"
 
-#: templates/treatments/detail.html:40
+#: templates/treatments/detail.html:41
 msgid "Local"
 msgstr "Yerli"
 
-#: templates/treatments/detail.html:45
+#: templates/treatments/detail.html:46
 msgid "Clinics offering this treatment"
 msgstr "Bu müalicəni təklif edən klinikalar"
 
-#: templates/treatments/detail.html:58
+#: templates/treatments/detail.html:59
 msgid "Guides about this treatment"
 msgstr "Bu müalicə haqqında bələdçilər"
 
@@ -3165,6 +3155,46 @@ msgid ""
 msgstr ""
 "Təklif etdiyimiz bütün müalicələr — prosedur, İstanbulda qalma müddəti və "
 "qiymət haqqında dürüst məlumatla."
+
+#, python-format
+#~ msgid ""
+#~ "Implants, veneers and crowns in Istanbul from a mother-and-son dentist team "
+#~ "with 35+ years' experience. ★ %(rating)s on Google. Free assessment on "
+#~ "WhatsApp."
+#~ msgstr ""
+#~ "İstanbulda implant, laminat və tac: 35+ il təcrübəli ana-oğul diş həkimi "
+#~ "komandası. Google-da ★ %(rating)s. WhatsApp-da pulsuz qiymətləndirmə."
+
+#~ msgid "Affordable dental implants in Istanbul —"
+#~ msgstr "İstanbulda münasib qiymətə diş implantı —"
+
+#~ msgid "same quality."
+#~ msgstr "eyni keyfiyyət."
+
+#~ msgid "only what your teeth actually need."
+#~ msgstr "yalnız dişlərinizin həqiqətən ehtiyacı olan."
+
+#~ msgid ""
+#~ "Good medicine means knowing when to say no. Ethical protocol, transparent "
+#~ "diagnosis and one dentist responsible for your care — with direct WhatsApp "
+#~ "contact, not a call centre."
+#~ msgstr ""
+#~ "Yaxşı tibb nə vaxt «yox» deməyi bilməkdir. Etik protokol, şəffaf diaqnoz və "
+#~ "müalicənizə cavabdeh bir həkim — zəng mərkəzi deyil, birbaşa WhatsApp "
+#~ "əlaqəsi."
+
+#~ msgid "Transparent diagnosis"
+#~ msgstr "Şəffaf diaqnoz"
+
+#~ msgid "Dental treatments in Istanbul — and why we do them"
+#~ msgstr "İstanbulda diş müalicələri — və niyə edirik"
+
+#~ msgid ""
+#~ "Our ethical protocol means we only recommend what you actually need. No "
+#~ "upselling, no unnecessary procedures."
+#~ msgstr ""
+#~ "Etik protokolumuz o deməkdir ki, yalnız həqiqətən ehtiyacınız olanı tövsiyə "
+#~ "edirik. Əlavə satış yox, lazımsız prosedur yox."
 
 #~ msgid ""
 #~ "Honest guides about dental treatment in Turkey: implant and veneer costs, "

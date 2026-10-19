@@ -699,3 +699,15 @@
 698|%(treatment)s w Stambule: co decyduje o cenie, co zawiera uczciwa wycena i jak dostać stałą pisemną wycenę od dentysty — bezpłatnie na WhatsApp.
 699|Leczenie Zębów w Stambule 2026 — Implanty, Licówki, Korony
 700|Implanty, licówki, korony z cyrkonu, All-on-4, leczenie kanałowe i wybielanie w Stambule — jak to działa, ile zostać i dla kogo. Bezpłatna ocena.
+701|Najpierw ratujemy Twoje zęby: leczenie kanałowe, wypełnienia, licówki bez nadmiernego szlifowania — implant tylko w ostateczności. 35+ lat, ★ %(rating)s.
+702|Czy najpierw można uratować Twój własny ząb?
+703|Przed każdym implantem, koroną czy licówką dentystka sprawdza, czy Twój naturalny ząb da się zachować — leczeniem kanałowym, wypełnieniem lub kompozytem. Zdrowy ząb raz stracony nigdy nie odrośnie.
+704|Jak leczenie kanałowe ratuje ząb
+705|Przystępne leczenie zębów w Stambule —
+706|najpierw ratujemy Twoje własne zęby.
+707|Uratowanie zęba zwykle kosztuje dużo mniej niż jego zastąpienie. Materiały z certyfikatem CE, stała pisemna wycena i żadnych ukrytych kosztów — podana cena to cena, którą płacisz.
+708|najpierw ratujemy Twoje naturalne zęby.
+709|Zdrowy ząb raz stracony nigdy nie odrośnie. Dlatego najpierw leczymy i naprawiamy Twoje własne zęby — leczenie kanałowe przed ekstrakcją, wypełnienie przed koroną, kompozyt przed licówkami — a implant zalecamy tylko, gdy zęba naprawdę nie da się uratować.
+710|Najpierw ratujemy naturalne zęby
+711|Najpierw ratować, zastępować tylko w razie potrzeby
+712|Nasz etyczny protokół: staramy się zachować Twoje naturalne zęby. Leczenie kanałowe, wypełnienia i kompozyt są przed implantami, koronami i licówkami — bez wciskania usług i zbędnych zabiegów.

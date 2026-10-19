@@ -699,3 +699,15 @@
 698|İstanbul'da %(treatment)s: fiyatı ne belirler, adil bir teklif neleri içerir ve diş hekiminden yazılı sabit teklif nasıl alınır — WhatsApp'tan ücretsiz.
 699|İstanbul'da Diş Tedavileri 2026 — İmplant, Lamina, Kron
 700|İstanbul'da implant, lamina, zirkonyum kron, All-on-4, kanal tedavisi ve beyazlatma — nasıl yapılır, ne kadar kalırsınız, kime uygundur. Ücretsiz değerlendirme.
+701|Önce doğal dişlerinizi kurtarırız: kanal tedavisi, dolgu, minimal kesimli lamina — implant yalnızca diş kurtarılamıyorsa. 35+ yıl, Google'da ★ %(rating)s.
+702|Önce kendi dişiniz kurtarılabilir mi?
+703|Herhangi bir implant, kaplama veya laminadan önce diş hekimi doğal dişinizin korunup korunamayacağına bakar — kanal tedavisi, dolgu ya da kompozit bonding ile. Sağlıklı bir diş bir kez kaybedilirse geri gelmez.
+704|Kanal tedavisi dişi nasıl kurtarır?
+705|İstanbul'da uygun fiyatlı diş tedavisi —
+706|önce kendi dişleriniz kurtarılır.
+707|Bir dişi kurtarmak çoğu zaman onu değiştirmekten çok daha ucuzdur. CE sertifikalı malzemeler, yazılı sabit teklif ve gizli maliyet yok — teklif ettiğimiz fiyat ödediğiniz fiyattır.
+708|önce doğal dişlerinizi kurtarırız.
+709|Sağlıklı bir diş bir kez kaybedilirse geri gelmez. Bu yüzden önce kendi dişlerinizi tedavi edip onarırız — çekimden önce kanal tedavisi, kaplamadan önce dolgu, laminadan önce kompozit — ve implantı yalnızca diş gerçekten kurtarılamıyorsa öneririz.
+710|Önce doğal diş kurtarılır
+711|Önce kurtar, yalnızca gerekirse değiştir
+712|Etik protokolümüz: doğal dişlerinizi korumaya çalışırız. Kanal tedavisi, dolgu ve kompozit; implant, kaplama ve laminadan önce gelir — gereksiz satış yok, gereksiz işlem yok.

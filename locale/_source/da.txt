@@ -699,3 +699,15 @@
 698|%(treatment)s i Istanbul: hvad der bestemmer prisen, hvad et fair tilbud indeholder, og hvordan du får et fast skriftligt tilbud fra tandlægen.
 699|Tandbehandlinger i Istanbul 2026 — Implantater, Facader, Kroner
 700|Implantater, facader, zirkoniakroner, All-on-4, rodbehandling og tandblegning i Istanbul — forløb, hvor længe du bliver, og hvem det passer til. Gratis vurdering.
+701|Vi redder dine egne tænder først: rodbehandling, fyldninger, skånsomme facader — implantater kun, når tanden ikke kan reddes. 35+ år, ★ %(rating)s på Google.
+702|Kan din egen tand reddes først?
+703|Før ethvert implantat, krone eller facade tjekker tandlægen, om din naturlige tand kan bevares — med rodbehandling, fyldning eller komposit. En sund tand, der er tabt, vokser aldrig igen.
+704|Sådan redder en rodbehandling en tand
+705|Prisvenlig tandbehandling i Istanbul —
+706|dine egne tænder reddes først.
+707|At redde en tand koster som regel langt mindre end at erstatte den. CE-mærkede materialer, fast skriftligt tilbud og ingen skjulte omkostninger — prisen, vi giver, er prisen, du betaler.
+708|vi redder dine egne tænder først.
+709|En sund tand, der er tabt, vokser aldrig igen. Derfor behandler og reparerer vi dine egne tænder først — rodbehandling før udtrækning, fyldning før krone, komposit før facader — og anbefaler kun et implantat, når en tand virkelig ikke kan reddes.
+710|Egne tænder reddes først
+711|Red først, erstat kun ved behov
+712|Vores etiske protokol: vi forsøger at bevare dine egne tænder. Rodbehandling, fyldninger og komposit kommer før implantater, kroner og facader — intet mersalg, ingen unødvendige indgreb.

@@ -26,6 +26,7 @@
       <li>{% trans "Never accept a plan before anyone has examined your teeth" %}</li>
     </ul>
     {% if page.body %}<div class="prose">{{ page.body|markdown }}</div>{% endif %}
+    {% save_first t %}
     {% include "pseo/_price_note.html" %}
     <p><a href="{{ treatment_url }}">{% blocktrans with name=t.name %}Everything about {{ name }}{% endblocktrans %} →</a> · <a href="{{ price_url }}">{% blocktrans with name=t.name %}{{ name }} cost in Turkey{% endblocktrans %} →</a></p>
   </article>

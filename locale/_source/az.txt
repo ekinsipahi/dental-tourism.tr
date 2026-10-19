@@ -699,3 +699,15 @@
 698|İstanbulda %(treatment)s: qiyməti nə müəyyən edir, ədalətli təklifə nə daxildir və həkimdən yazılı sabit təklifi necə almaq olar — WhatsApp-da pulsuz.
 699|İstanbulda Diş Müalicələri 2026 — İmplant, Laminat, Tac
 700|İstanbulda implant, laminat, sirkonium tac, All-on-4, kanal müalicəsi və ağartma — necə aparılır, nə qədər qalırsınız və kimə uyğundur. Pulsuz qiymətləndirmə.
+701|Əvvəlcə təbii dişlərinizi xilas edirik: kanal müalicəsi, plomb, minimal yonmalı vinir — implant yalnız diş xilas edilə bilmədikdə. 35+ il, ★ %(rating)s.
+702|Əvvəlcə öz dişiniz xilas edilə bilərmi?
+703|Hər hansı implant, tac və ya vinirdən əvvəl həkim təbii dişinizin qorunub-qorunmayacağını yoxlayır — kanal müalicəsi, plomb və ya kompozit ilə. Sağlam diş bir dəfə itirilsə, bir daha bitmir.
+704|Kanal müalicəsi dişi necə xilas edir
+705|İstanbulda sərfəli diş müalicəsi —
+706|əvvəlcə öz dişləriniz xilas edilir.
+707|Dişi xilas etmək adətən onu əvəz etməkdən çox daha ucuzdur. CE sertifikatlı materiallar, yazılı sabit təklif və gizli xərc yoxdur — dediyimiz qiymət ödədiyiniz qiymətdir.
+708|əvvəlcə təbii dişlərinizi xilas edirik.
+709|Sağlam diş bir dəfə itirilsə, bir daha bitmir. Buna görə əvvəlcə öz dişlərinizi müalicə edib bərpa edirik — çəkimdən əvvəl kanal müalicəsi, tacdan əvvəl plomb, vinirdən əvvəl kompozit — və implantı yalnız diş həqiqətən xilas edilə bilmədikdə tövsiyə edirik.
+710|Əvvəlcə təbii dişlər xilas edilir
+711|Əvvəlcə xilas et, yalnız lazım olduqda əvəz et
+712|Etik protokolumuz: təbii dişlərinizi qorumağa çalışırıq. Kanal müalicəsi, plomb və kompozit implant, tac və vinirlərdən əvvəl gəlir — artıq satış yoxdur, lazımsız prosedur yoxdur.

@@ -24,6 +24,7 @@
     <nav class="toc" aria-label="{% trans 'Contents' %}" style="margin-bottom:2rem"><p>{% trans "On this page" %}</p><ol>{% for id, title in toc_items %}<li><a href="#{{ id }}">{{ title }}</a></li>{% endfor %}</ol></nav>
     {% endif %}{% endwith %}
     <div class="prose">{{ t.body|markdown }}</div>
+    {% save_first t %}
 
     {% if city_pages %}
     <h2 style="margin-top:2.5rem">{% blocktrans with name=t.name %}{{ name }} by city{% endblocktrans %}</h2>

@@ -383,6 +383,10 @@ a.card:hover { border-color: var(--border-hv); transform: translateY(-3px); back
 .pseo-loss { margin-top: 1rem; font-size: .9rem; color: var(--gold-lt); }
 .pseo-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .8rem; }
 .pseo-gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-sm); }
+.save-first { margin: 2rem 0; padding: 1.2rem 1.4rem; border-left: 4px solid var(--brand, #0f766e); background: var(--bg-alt, #f1f7f6); border-radius: var(--radius-sm); }
+.save-first h2 { font-size: 1.15rem; margin: 0 0 .5rem; }
+.save-first p { margin: 0 0 .6rem; }
+.save-first a { font-weight: 600; }
 .area-photo { margin: 1.4rem 0; }
 .area-photo img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: var(--radius-sm); }
 .area-photo figcaption { font-size: .8rem; color: var(--tx-faint); margin-top: .35rem; }

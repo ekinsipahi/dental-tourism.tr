@@ -300,3 +300,29 @@ def results_block(context, limit=None):
         return ""
     return render_to_string("components/results.html", {"cases": cases, "wa_url": context.get("wa_url"),
                                                         "clinic": clinic}, request=request)
+
+
+# Diş değiştiren tedaviler: önce kendi dişin kurtarılabilir mi? (konumlandırma: "save the natural tooth first")
+SAVE_FIRST_KEYS = {"dental-implants", "all-on-4", "zirconia-crowns", "porcelain-veneers", "hollywood-smile"}
+
+
+@register.inclusion_tag("components/save_first.html")
+def save_first(t):
+    """{% save_first t %} — implant / kron / lamina sayfalarında "önce dişinizi kurtaralım" kutusu."""
+    from django.urls import NoReverseMatch, reverse
+    from django.utils.translation import get_language
+
+    key = getattr(t, "key", "")
+    if key not in SAVE_FIRST_KEYS:
+        return {"show": False}
+    url = ""
+    try:
+        from apps.treatments.models import Treatment
+
+        rc = Treatment.objects.filter(key="root-canal", is_active=True).first()
+        if rc:
+            url = reverse("treatments:detail", kwargs={"slug": rc.localized(get_language()).slug})
+    except NoReverseMatch:
+        url = ""
+    return {"show": True, "root_canal_url": url}
+

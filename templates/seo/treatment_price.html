@@ -5,6 +5,7 @@
 <section class="section"><div class="wrap layout-side">
   <article>
     {% include "pseo/_price_note.html" %}
+    {% save_first t %}
     <h2>{% blocktrans with name=t.name %}What affects the price of {{ name }}{% endblocktrans %}</h2>
     <ul class="pseo-ticks">
       <li>{% trans "Your diagnosis: how many teeth and their condition" %}</li>

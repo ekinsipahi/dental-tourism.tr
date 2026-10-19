@@ -699,3 +699,15 @@
 698|%(treatment)s in Istanbul: was die Kosten bestimmt, was ein faires Angebot enthält und wie Sie einen schriftlichen Festpreis vom Zahnarzt bekommen.
 699|Zahnbehandlungen in Istanbul 2026 — Implantate, Veneers, Kronen
 700|Implantate, Veneers, Zirkonkronen, All-on-4, Wurzelbehandlung und Bleaching in Istanbul — Ablauf, Aufenthaltsdauer und für wen es passt. Kostenlose Einschätzung.
+701|Wir erhalten zuerst Ihre eigenen Zähne: Wurzelbehandlung, Füllungen, schonende Veneers — Implantate nur, wenn nichts mehr zu retten ist. 35+ Jahre, ★ %(rating)s.
+702|Kann Ihr eigener Zahn zuerst gerettet werden?
+703|Vor jedem Implantat, jeder Krone und jedem Veneer prüft die Zahnärztin, ob Ihr natürlicher Zahn erhalten werden kann — mit Wurzelbehandlung, Füllung oder Komposit. Ein gesunder Zahn wächst nicht nach.
+704|Wie eine Wurzelbehandlung einen Zahn rettet
+705|Günstige Zahnbehandlung in Istanbul —
+706|Ihre eigenen Zähne werden zuerst gerettet.
+707|Einen Zahn zu retten kostet meist weit weniger, als ihn zu ersetzen. CE-zertifizierte Materialien, schriftlicher Festpreis, keine versteckten Kosten — der genannte Preis ist der Preis, den Sie zahlen.
+708|wir retten zuerst Ihre natürlichen Zähne.
+709|Ein gesunder Zahn wächst nicht nach. Deshalb behandeln und reparieren wir zuerst Ihre eigenen Zähne — Wurzelbehandlung vor Extraktion, Füllung vor Krone, Komposit vor Veneers — und empfehlen ein Implantat nur, wenn ein Zahn wirklich nicht zu retten ist.
+710|Natürliche Zähne zuerst erhalten
+711|Zuerst erhalten, nur wenn nötig ersetzen
+712|Unser ethisches Protokoll: Wir versuchen, Ihre natürlichen Zähne zu erhalten. Wurzelbehandlung, Füllungen und Komposit kommen vor Implantaten, Kronen und Veneers — kein Upselling, keine unnötigen Eingriffe.
