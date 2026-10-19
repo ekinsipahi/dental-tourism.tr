@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 13:41+0300\n"
+"POT-Creation-Date: 2026-10-19 22:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -531,10 +531,6 @@ msgstr "Zahnbehandlung Istanbul ★%(rating)s — Familienpraxis, 35+ Jahre"
 
 #: apps/core/views.py:88
 #, python-format
-#| msgid ""
-#| "We save your natural teeth first: root canals, fillings and minimal-prep "
-#| "veneers — implants only when a tooth can't be saved. Family dentists, 35+ "
-#| "years, ★ %(rating)s on Google."
 msgid ""
 "We save your natural teeth first: root canals, fillings, minimal-prep "
 "veneers — implants only if a tooth can't be saved. 35+ years, ★ %(rating)s "
@@ -1981,6 +1977,11 @@ msgstr ""
 msgid "From %(c)s"
 msgstr "Aus %(c)s"
 
+#: templates/components/instagram_cta.html:1
+#| msgid "What our patients say"
+msgid "Hear our patients on Instagram"
+msgstr "Hören Sie unsere Patienten auf Instagram"
+
 #: templates/components/navbar.html:4
 msgid "Main navigation"
 msgstr "Hauptnavigation"
@@ -2650,12 +2651,12 @@ msgstr "Patientenerfahrungen"
 msgid "Their stories — your inspiration"
 msgstr "Ihre Geschichten — Ihre Inspiration"
 
-#: templates/home/sections/reviews.html:10
+#: templates/home/sections/reviews.html:11
 msgid "Videos are published with patients' explicit consent."
 msgstr ""
 "Videos werden mit ausdrücklicher Zustimmung der Patienten veröffentlicht."
 
-#: templates/home/sections/reviews.html:10
+#: templates/home/sections/reviews.html:11
 msgid "All patient videos"
 msgstr "Alle Patientenvideos"
 

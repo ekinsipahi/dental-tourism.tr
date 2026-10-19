@@ -239,8 +239,8 @@ a.card:hover { border-color: var(--border-hv); transform: translateY(-3px); back
 .review blockquote { margin: 0; color: var(--tx-muted); font-size: .92rem; }
 .review cite { font-style: normal; font-size: .82rem; color: var(--tx-faint); }
 .video-card { position: relative; aspect-ratio: 9 / 16; border-radius: var(--radius); overflow: hidden; background: var(--bg-card); display: block; color: #fff; text-decoration: none; }
-.video-card img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.75); transition: transform .4s; }
-.video-card:hover img { transform: scale(1.04); }
+.video-card > img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.75); transition: transform .4s; }
+.video-card:hover > img { transform: scale(1.04); }
 .video-card .info { position: absolute; inset: auto 0 0 0; padding: .9rem; background: linear-gradient(transparent, rgba(0,0,0,.85)); font-size: .82rem; }
 .video-card .play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,.2); backdrop-filter: blur(4px); display: grid; place-items: center; }
 
@@ -383,6 +383,11 @@ a.card:hover { border-color: var(--border-hv); transform: translateY(-3px); back
 .pseo-loss { margin-top: 1rem; font-size: .9rem; color: var(--gold-lt); }
 .pseo-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .8rem; }
 .pseo-gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-sm); }
+.ig-cta-row { margin: 1.2rem 0 0; text-align: center; }
+.btn-ig { display: inline-flex; align-items: center; gap: .55rem; padding: .8rem 1.4rem; border-radius: 999px; color: #fff !important; font-weight: 700; text-decoration: none; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); box-shadow: 0 6px 18px rgba(204, 35, 102, .28); transition: transform .2s, box-shadow .2s; }
+.btn-ig:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(204, 35, 102, .38); }
+.btn-ig small { font-weight: 500; opacity: .9; }
+@media (max-width: 480px) { .btn-ig { flex-wrap: wrap; justify-content: center; } }
 .save-first { margin: 2rem 0; padding: 1.2rem 1.4rem; border-left: 4px solid var(--brand, #0f766e); background: var(--bg-alt, #f1f7f6); border-radius: var(--radius-sm); }
 .save-first h2 { font-size: 1.15rem; margin: 0 0 .5rem; }
 .save-first p { margin: 0 0 .6rem; }
