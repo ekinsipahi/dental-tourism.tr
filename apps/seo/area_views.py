@@ -83,14 +83,14 @@ def area_detail(request, area):
         title = _("Dentist near %(area)s ★%(rating)s — Family Clinic, Open 7 Days") % {"area": name, **proof()}
         desc = _("Dentist near %(area)s: our family clinic in Şişli is %(km)s km away, open 7 days. 35+ years' "
                  "experience, ★ %(rating)s on Google. Free WhatsApp assessment.") % {"area": name, "km": km, **proof()}
-        lead = _("Our family dental clinic in Şişli is about %(km)s km from %(area)s. Dr. Dt. Devrim Biriken Sipahi "
+        lead = _("Our family dental clinic in Şişli is about %(km)s km from %(area)s. Dr. Devrim "
                  "and her son Dt. Ekin Sipahi examine and treat every patient personally.") % {"area": name, "km": km}
     else:
         h1 = _("Dental clinic in %(area)s, Istanbul") % {"area": name}
         title = _("Dentist in %(area)s ★%(rating)s — Family Clinic, Open 7 Days") % {"area": name, **proof()}
         desc = _("Family dental clinic in %(area)s, Istanbul: 35+ years' experience, ★ %(rating)s on Google, open 7 "
                  "days a week. Free assessment on WhatsApp.") % {"area": name, **proof()}
-        lead = _("Our family dental clinic is in %(area)s, Istanbul. Dr. Dt. Devrim Biriken Sipahi and her son "
+        lead = _("Our family dental clinic is in %(area)s, Istanbul. Dr. Devrim and her son "
                  "Dt. Ekin Sipahi examine and treat every patient personally.") % {"area": name}
     routes = _routes(area)
     faq = _faq(area, name, routes)

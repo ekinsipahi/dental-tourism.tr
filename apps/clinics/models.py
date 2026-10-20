@@ -346,6 +346,8 @@ class Doctor(TranslatableModel):
     name = models.CharField(max_length=150)
     slug = models.SlugField(max_length=170, unique=True)
     honorific = models.CharField(max_length=30, default="Dr. Dt.", help_text="Dr. Dt. / Prof. Dr. / Dt.")
+    brand_name = models.CharField(max_length=60, blank=True,
+                                  help_text="Pazarlama adı (ör. \"Dr. Devrim\"). Sitede öne çıkar; tam ad altında görünür.")
     title_display = models.CharField(max_length=150, blank=True, help_text="Ör: Dentist, Implantologist")
     specialties = models.JSONField(default=list, blank=True)
     photo = models.ImageField(upload_to="doctors/", blank=True)
@@ -376,6 +378,11 @@ class Doctor(TranslatableModel):
     @property
     def full_name(self):
         return f"{self.honorific} {self.name}".strip()
+
+    @property
+    def display_name(self):
+        """Marka adı varsa o ("Dr. Devrim"), yoksa tam ad."""
+        return self.brand_name or self.full_name
 
     @property
     def photo_src(self):

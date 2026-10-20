@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 
 # Asla çevrilmeyecek özel isimler
 GLOSSARY_KEEP = [
-    "Dr. Devrim Sipahi", "Dr. Dt. Devrim Biriken Sipahi", "dentaltourism.tr", "drdevrim.com",
+    "Dr. Devrim", "Dr. Devrim Sipahi", "Dr. Dt. Devrim Biriken Sipahi", "dentaltourism.tr", "drdevrim.com",
     "WhatsApp", "All-on-4", "All-on-6", "Şişli", "Osmanbey", "Nişantaşı", "Straumann", "Nobel Biocare",
     "Osstem", "E.max", "CE",
 ]

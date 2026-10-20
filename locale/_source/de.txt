@@ -646,11 +646,11 @@
 645|Zahnklinik nahe %(area)s, Istanbul
 646|Zahnarzt nahe %(area)s, Istanbul — Familienpraxis in Şişli
 647|Sie suchen einen Zahnarzt nahe %(area)s? Unsere familiengeführte Zahnpraxis in Şişli ist etwa %(km)s km entfernt. Zuerst die Diagnose, nur die Behandlung, die Sie brauchen. 7 Tage die Woche geöffnet.
-648|Unsere familiengeführte Zahnpraxis in Şişli liegt etwa %(km)s km von %(area)s entfernt. Dr. Dt. Devrim Biriken Sipahi und ihr Sohn Dt. Ekin Sipahi untersuchen und behandeln jeden Patienten persönlich.
+648|Unsere familiengeführte Zahnpraxis in Şişli liegt etwa %(km)s km von %(area)s entfernt. Dr. Devrim und ihr Sohn Dt. Ekin Sipahi untersuchen und behandeln jeden Patienten persönlich.
 649|Zahnklinik in %(area)s, Istanbul
 650|Zahnklinik in %(area)s, Istanbul — Familienpraxis, 7 Tage geöffnet
 651|Familiengeführte Zahnpraxis in %(area)s, Istanbul. Zuerst die Diagnose, nur die Behandlung, die Sie brauchen. 7 Tage die Woche geöffnet — Foto per WhatsApp senden.
-652|Unsere familiengeführte Zahnpraxis befindet sich in %(area)s, Istanbul. Dr. Dt. Devrim Biriken Sipahi und ihr Sohn Dt. Ekin Sipahi untersuchen und behandeln jeden Patienten persönlich.
+652|Unsere familiengeführte Zahnpraxis befindet sich in %(area)s, Istanbul. Dr. Devrim und ihr Sohn Dt. Ekin Sipahi untersuchen und behandeln jeden Patienten persönlich.
 653|Zahnklinik nach Stadtteil
 654|Zahnklinik in Ihrer Nähe in Istanbul: Şişli, Nişantaşı, Taksim, Levent und mehr
 655|Zahnklinik nahe Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul
@@ -661,7 +661,7 @@
 660|Route ab %(area)s anzeigen
 661|Für Patienten, die rund um %(places)s wohnen, arbeiten oder übernachten.
 662|Eine Familienpraxis mit ethischem Ansatz
-663|Dr. Dt. Devrim Biriken Sipahi arbeitet seit mehr als 35 Jahren als Zahnärztin in Istanbul. Ihr Sohn, Dt. Ekin Sipahi, ist ebenfalls Zahnarzt und arbeitet mit ihr in der Praxis. Jede Behandlung beginnt mit einer genauen Diagnose; wir empfehlen nur, was Sie brauchen, und erhalten gesunde Zähne.
+663|Dr. Devrim arbeitet seit mehr als 35 Jahren als Zahnärztin in Istanbul. Ihr Sohn, Dt. Ekin Sipahi, ist ebenfalls Zahnarzt und arbeitet mit ihr in der Praxis. Jede Behandlung beginnt mit einer genauen Diagnose; wir empfehlen nur, was Sie brauchen, und erhalten gesunde Zähne.
 664|Entfernung
 665|etwa %(km)s km
 666|Mit dem Taxi
@@ -675,7 +675,7 @@
 674|Zahnärztlich geführte Familienpraxis in Şişli, Istanbul: 35+ Jahre Erfahrung, ★ %(rating)s aus %(count)s Google-Bewertungen, Sprachen und echte Patientenstimmen.
 675|Zahnbehandlung Istanbul ★%(rating)s — Familienpraxis, 35+ Jahre
 676|Implantate, Veneers und Kronen in Istanbul vom Mutter-Sohn-Zahnarztteam mit 35+ Jahren Erfahrung. ★ %(rating)s bei Google. Kostenlose Einschätzung per WhatsApp.
-677|Über uns — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Familienpraxis
+677|Über uns — Dr. Devrim & Dt. Ekin Sipahi, Familienpraxis
 678|Familiengeführte Zahnpraxis in Şişli, Istanbul: 35+ Jahre Erfahrung, zuerst die Diagnose, nur die nötige Behandlung. Lernen Sie Ihre Zahnärzte kennen.
 679|Kostenlose Zahn-Einschätzung per WhatsApp — Antwort vom Zahnarzt
 680|Foto oder Röntgenbild senden und persönlichen Plan mit schriftlichem Festpreis erhalten — Antwort vom Zahnarzt, nicht vom Callcenter. 7 Tage geöffnet.

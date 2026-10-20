@@ -208,7 +208,7 @@ class DoctorAdmin(OwnerScopedMixin, TranslatableAdmin):
     photo_preview = image_preview("photo_src", 140)
     fieldsets = [
         (None, {"fields": ["clinic", "user", "is_active", "is_lead_doctor", "order"]}),
-        ("Kimlik", {"fields": ["honorific", "name", "slug", ("photo", "photo_url", "photo_preview"), "specialties",
+        ("Kimlik", {"fields": ["honorific", "name", "brand_name", "slug", ("photo", "photo_url", "photo_preview"), "specialties",
                                "languages_spoken"]}),
         ("Eğitim & üyelik (E-E-A-T)", {"fields": ["university", "graduation_year", "diploma_number", "memberships"]}),
         ("İçerik (kaynak dil)", {"fields": ["source_language", "auto_translate", "title_display", "bio",

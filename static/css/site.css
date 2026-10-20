@@ -366,6 +366,13 @@ a.card:hover { border-color: var(--border-hv); transform: translateY(-3px); back
 .review-form ul { list-style: none; padding: 0; margin: 0; }
 
 .logo-img { height: 46px; width: auto; border-radius: 8px; display: block; }
+.logo-media { position: relative; display: block; height: 46px; aspect-ratio: 256 / 110; flex-shrink: 0; }
+.logo-media .logo-img { width: 100%; height: 100%; object-fit: cover; }
+.logo-video { display: none; width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+.logo--video .logo-video { display: block; }
+.logo--video .logo-media .logo-img { display: none; }
+.logo-name { font-family: var(--ff-body, inherit); font-size: .82rem; font-weight: 700; line-height: 1.15; color: var(--tx); letter-spacing: .01em; }
+@media (max-width: 380px) { .logo-name { font-size: .72rem; } }
 .site-footer .logo-img { height: 54px; }
 
 /* ── Programatik SEO sayfaları (gerçek foto + nöromarketing) ───────────── */

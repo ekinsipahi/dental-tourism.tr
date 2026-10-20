@@ -646,11 +646,11 @@
 645|Studio dentistico vicino a %(area)s, Istanbul
 646|Dentista vicino a %(area)s, Istanbul — studio di famiglia a Şişli
 647|Cercate un dentista vicino a %(area)s? Il nostro studio dentistico di famiglia a Şişli è a circa %(km)s km. Prima la diagnosi, solo il trattamento che vi serve. Aperto 7 giorni su 7.
-648|Il nostro studio dentistico di famiglia a Şişli è a circa %(km)s km da %(area)s. La Dott.ssa Dt. Devrim Biriken Sipahi e suo figlio Dt. Ekin Sipahi visitano e curano personalmente ogni paziente.
+648|Il nostro studio dentistico di famiglia a Şişli è a circa %(km)s km da %(area)s. La Dott.ssa Devrim e suo figlio Dt. Ekin Sipahi visitano e curano personalmente ogni paziente.
 649|Studio dentistico a %(area)s, Istanbul
 650|Studio dentistico a %(area)s, Istanbul — dentisti di famiglia, aperto 7 giorni
 651|Studio dentistico di famiglia a %(area)s, Istanbul. Prima la diagnosi, solo il trattamento che vi serve. Aperto 7 giorni su 7 — inviate una foto su WhatsApp.
-652|Il nostro studio dentistico di famiglia è a %(area)s, Istanbul. La Dott.ssa Dt. Devrim Biriken Sipahi e suo figlio Dt. Ekin Sipahi visitano e curano personalmente ogni paziente.
+652|Il nostro studio dentistico di famiglia è a %(area)s, Istanbul. La Dott.ssa Devrim e suo figlio Dt. Ekin Sipahi visitano e curano personalmente ogni paziente.
 653|Studio dentistico per quartiere
 654|Uno studio dentistico vicino a voi a Istanbul: Şişli, Nişantaşı, Taksim, Levent e altri
 655|Studio dentistico vicino a Şişli, Nişantaşı, Taksim, Levent e Beşiktaş — Istanbul
@@ -661,7 +661,7 @@
 660|Indicazioni da %(area)s
 661|Per i pazienti che vivono, lavorano o soggiornano intorno a %(places)s.
 662|Uno studio di famiglia con un approccio etico
-663|La Dott.ssa Dt. Devrim Biriken Sipahi lavora come dentista a Istanbul da oltre 35 anni. Suo figlio, Dt. Ekin Sipahi, è anche lui dentista e lavora con lei nello studio. Ogni trattamento inizia con una diagnosi accurata; consigliamo solo ciò che vi serve e manteniamo sani i denti sani.
+663|La Dott.ssa Devrim lavora come dentista a Istanbul da oltre 35 anni. Suo figlio, Dt. Ekin Sipahi, è anche lui dentista e lavora con lei nello studio. Ogni trattamento inizia con una diagnosi accurata; consigliamo solo ciò che vi serve e manteniamo sani i denti sani.
 664|Distanza
 665|circa %(km)s km
 666|In taxi
@@ -675,7 +675,7 @@
 674|Studio di famiglia guidato da dentisti a Şişli, Istanbul: 35+ anni di esperienza, ★ %(rating)s su %(count)s recensioni Google, lingue parlate e storie vere.
 675|Dentista Istanbul ★%(rating)s — Dentisti di Famiglia, 35+ Anni
 676|Impianti, faccette e corone a Istanbul da un team di dentisti madre e figlio con 35+ anni di esperienza. ★ %(rating)s su Google. Valutazione gratuita su WhatsApp.
-677|Chi siamo — Dott.ssa Devrim Sipahi & Dt. Ekin Sipahi, Dentisti
+677|Chi siamo — Dott.ssa Devrim & Dt. Ekin Sipahi, Dentisti
 678|Studio dentistico di famiglia a Şişli, Istanbul: 35+ anni di esperienza, prima la diagnosi, solo il trattamento necessario. Conoscete i dentisti che vi cureranno.
 679|Valutazione Dentale Gratuita su WhatsApp — Risponde il Dentista
 680|Inviate una foto o una radiografia e ricevete un piano personale con preventivo scritto fisso — risponde il dentista, non un call center. Aperto 7 giorni su 7.

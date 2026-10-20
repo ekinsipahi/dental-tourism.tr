@@ -187,7 +187,7 @@ Read reviews on several platforms, including critical ones on Reddit. Look for d
 
 ## Why patients choose us
 
-- Treatment by Dr. Dt. Devrim Biriken Sipahi personally — Ankara University Faculty of Dentistry, oral and maxillofacial radiology at Marmara University
+- Treatment by Dr. Devrim personally — Ankara University Faculty of Dentistry, oral and maxillofacial radiology at Marmara University
 - Natural teeth first: no unnecessary crowns or veneers
 - Very affordable, with a fixed written quote — call or message us on WhatsApp
 - Central Şişli, near Taksim, open 7 days a week""",
@@ -308,7 +308,7 @@ Istanbul has direct flights to more destinations than almost any other city. Pat
 
 ## A dentist, not a factory
 
-We are a dentist-led clinic: Dr. Dt. Devrim Biriken Sipahi examines and treats you personally. Prices are very affordable and always fixed in writing before treatment — ask by phone or on WhatsApp.""",
+We are a dentist-led clinic: Dr. Devrim examines and treats you personally. Prices are very affordable and always fixed in writing before treatment — ask by phone or on WhatsApp.""",
             "faq": [
                 ["Where is the clinic in Istanbul?", "Abide-i Hürriyet Caddesi No:148, Floor 4, Flat 11, Şişli — about 900 "
                  "metres from Şişli-Mecidiyeköy metro station."],

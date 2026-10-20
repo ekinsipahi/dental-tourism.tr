@@ -646,11 +646,11 @@
 645|%(area)s yaxınlığında diş klinikası, İstanbul
 646|%(area)s yaxınlığında diş həkimi, İstanbul — Şişlidə ailə klinikası
 647|%(area)s yaxınlığında diş həkimi axtarırsınız? Şişlidəki ailə diş klinikamız təxminən %(km)s km məsafədədir. Əvvəlcə diaqnoz, yalnız ehtiyacınız olan müalicə. Həftənin 7 günü açıqdır.
-648|Şişlidəki ailə diş klinikamız %(area)s ərazisindən təxminən %(km)s km məsafədədir. Dr. Dt. Devrim Biriken Sipahi və oğlu Dt. Ekin Sipahi hər pasiyenti şəxsən müayinə və müalicə edirlər.
+648|Şişlidəki ailə diş klinikamız %(area)s ərazisindən təxminən %(km)s km məsafədədir. Dr. Devrim və oğlu Dt. Ekin Sipahi hər pasiyenti şəxsən müayinə və müalicə edirlər.
 649|%(area)s diş klinikası, İstanbul
 650|%(area)s diş klinikası, İstanbul — ailə diş həkimləri, həftənin 7 günü açıq
 651|%(area)s, İstanbulda ailə diş klinikası. Əvvəlcə diaqnoz, yalnız ehtiyacınız olan müalicə. Həftənin 7 günü açıqdır — WhatsApp-da şəkil göndərin.
-652|Ailə diş klinikamız %(area)s, İstanbuldadır. Dr. Dt. Devrim Biriken Sipahi və oğlu Dt. Ekin Sipahi hər pasiyenti şəxsən müayinə və müalicə edirlər.
+652|Ailə diş klinikamız %(area)s, İstanbuldadır. Dr. Devrim və oğlu Dt. Ekin Sipahi hər pasiyenti şəxsən müayinə və müalicə edirlər.
 653|Ərazilərə görə diş klinikası
 654|İstanbulda sizə yaxın diş klinikası: Şişli, Nişantaşı, Taksim, Levent və digərləri
 655|Şişli, Nişantaşı, Taksim, Levent və Beşiktaş yaxınlığında diş klinikası — İstanbul
@@ -661,7 +661,7 @@
 660|%(area)s ərazisindən marşrut
 661|%(places)s ətrafında yaşayan, işləyən və ya qalan pasiyentlər üçün.
 662|Etik yanaşmalı ailə klinikası
-663|Dr. Dt. Devrim Biriken Sipahi 35 ildən çoxdur İstanbulda diş həkimi kimi çalışır. Oğlu Dt. Ekin Sipahi də diş həkimidir və klinikada onunla birlikdə işləyir. Hər müalicə dəqiq diaqnozla başlayır; yalnız ehtiyacınız olanı tövsiyə edir, sağlam dişləri qoruyuruq.
+663|Dr. Devrim 35 ildən çoxdur İstanbulda diş həkimi kimi çalışır. Oğlu Dt. Ekin Sipahi də diş həkimidir və klinikada onunla birlikdə işləyir. Hər müalicə dəqiq diaqnozla başlayır; yalnız ehtiyacınız olanı tövsiyə edir, sağlam dişləri qoruyuruq.
 664|Məsafə
 665|təxminən %(km)s km
 666|Taksi ilə
@@ -675,7 +675,7 @@
 674|Şişlidə həkimlərin idarə etdiyi ailə diş klinikası: 35+ il təcrübə, %(count)s Google rəyində ★ %(rating)s, danışılan dillər və real pasiyent hekayələri.
 675|İstanbul Diş Klinikası ★%(rating)s — Ailə Diş Həkimləri, 35+ İl
 676|İstanbulda implant, laminat və tac: 35+ il təcrübəli ana-oğul diş həkimi komandası. Google-da ★ %(rating)s. WhatsApp-da pulsuz qiymətləndirmə.
-677|Haqqımızda — Dr. Devrim Sipahi və Dt. Ekin Sipahi, Ailə Həkimləri
+677|Haqqımızda — Dr. Devrim və Dt. Ekin Sipahi, Ailə Həkimləri
 678|Şişli, İstanbulda ailə diş klinikası: 35+ il təcrübə, əvvəlcə diaqnoz, yalnız lazım olan müalicə. Sizi müalicə edəcək diş həkimləri ilə tanış olun.
 679|WhatsApp-da Pulsuz Diş Qiymətləndirməsi — Diş Həkimi Cavablayır
 680|Şəkil və ya rentgen göndərin, yazılı sabit təklifli şəxsi plan alın — zəng mərkəzi yox, diş həkimi cavablayır. Həftənin 7 günü açığıq.

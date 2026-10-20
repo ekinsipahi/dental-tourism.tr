@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 22:32+0300\n"
+"POT-Creation-Date: 2026-10-20 17:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,7 +43,7 @@ msgid "Home"
 msgstr "Головна"
 
 #: apps/blog/views.py:44 apps/blog/views.py:75 apps/blog/views.py:141
-#: templates/components/navbar.html:47
+#: templates/components/navbar.html:55
 msgid "Blog"
 msgstr "Блог"
 
@@ -150,8 +150,8 @@ msgstr "Сортувати"
 msgid "All cities"
 msgstr "Усі міста"
 
-#: apps/clinics/search.py:35 templates/components/navbar.html:18
-#: templates/components/navbar.html:83
+#: apps/clinics/search.py:35 templates/components/navbar.html:26
+#: templates/components/navbar.html:91
 msgid "All treatments"
 msgstr "Усі види лікування"
 
@@ -176,7 +176,7 @@ msgstr ""
 "історії."
 
 #: apps/clinics/views.py:39 apps/clinics/views.py:68
-#: templates/clinics/list.html:6 templates/components/navbar.html:58
+#: templates/clinics/list.html:6 templates/components/navbar.html:66
 msgid "Clinics"
 msgstr "Клініки"
 
@@ -355,7 +355,7 @@ msgstr "Безкоштовний розрахунок ціни"
 msgid "Request a private appointment"
 msgstr "Записатися на приватний прийом"
 
-#: apps/core/templatetags/site_tags.py:174 templates/components/navbar.html:73
+#: apps/core/templatetags/site_tags.py:174 templates/components/navbar.html:81
 #: templates/home/sections/hero.html:150
 msgid "Book now"
 msgstr "Записатися"
@@ -527,8 +527,10 @@ msgstr ""
 "★ %(rating)s."
 
 #: apps/core/views.py:111
-msgid "About Us — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Family Dentists"
-msgstr "Про нас — д-р Devrim Sipahi та Ekin Sipahi, сімейні стоматологи"
+#| msgid ""
+#| "About Us — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Family Dentists"
+msgid "About Us — Dr. Devrim & Dt. Ekin Sipahi, Family Dentists"
+msgstr "Про нас — д-р Devrim та Ekin Sipahi, сімейні стоматологи"
 
 #: apps/core/views.py:112
 msgid ""
@@ -539,7 +541,7 @@ msgstr ""
 " лише потрібне лікування. Познайомтеся з лікарями, які вас лікуватимуть."
 
 #: apps/core/views.py:119 apps/seo/common.py:35
-#: templates/components/footer.html:50 templates/components/navbar.html:55
+#: templates/components/footer.html:50 templates/components/navbar.html:63
 msgid "About us"
 msgstr "Про нас"
 
@@ -665,14 +667,18 @@ msgstr ""
 
 #: apps/seo/area_views.py:86
 #, python-format
+#| msgid ""
+#| "Our family dental clinic in Şişli is about %(km)s km from %(area)s. Dr. Dt. "
+#| "Devrim Biriken Sipahi and her son Dt. Ekin Sipahi examine and treat every "
+#| "patient personally."
 msgid ""
-"Our family dental clinic in Şişli is about %(km)s km from %(area)s. Dr. Dt. "
-"Devrim Biriken Sipahi and her son Dt. Ekin Sipahi examine and treat every "
-"patient personally."
+"Our family dental clinic in Şişli is about %(km)s km from %(area)s. Dr. "
+"Devrim and her son Dt. Ekin Sipahi examine and treat every patient "
+"personally."
 msgstr ""
 "Наша сімейна стоматологія в Шишлі розташована приблизно за %(km)s км від "
-"району %(area)s. Д-р Devrim Biriken Sipahi та її син, стоматолог Ekin "
-"Sipahi, особисто оглядають і лікують кожного пацієнта."
+"району %(area)s. Д-р Devrim та її син, стоматолог Ekin Sipahi, особисто "
+"оглядають і лікують кожного пацієнта."
 
 #: apps/seo/area_views.py:89
 #, python-format
@@ -696,14 +702,17 @@ msgstr ""
 
 #: apps/seo/area_views.py:93
 #, python-format
+#| msgid ""
+#| "Our family dental clinic is in %(area)s, Istanbul. Dr. Dt. Devrim Biriken "
+#| "Sipahi and her son Dt. Ekin Sipahi examine and treat every patient "
+#| "personally."
 msgid ""
-"Our family dental clinic is in %(area)s, Istanbul. Dr. Dt. Devrim Biriken "
-"Sipahi and her son Dt. Ekin Sipahi examine and treat every patient "
-"personally."
+"Our family dental clinic is in %(area)s, Istanbul. Dr. Devrim and her son "
+"Dt. Ekin Sipahi examine and treat every patient personally."
 msgstr ""
 "Наша сімейна стоматологія розташована в районі %(area)s, Стамбул. Д-р Devrim"
-" Biriken Sipahi та її син, стоматолог Ekin Sipahi, особисто оглядають і "
-"лікують кожного пацієнта."
+" та її син, стоматолог Ekin Sipahi, особисто оглядають і лікують кожного "
+"пацієнта."
 
 #: apps/seo/area_views.py:105 apps/seo/area_views.py:109
 #: apps/seo/area_views.py:128 apps/seo/area_views.py:135
@@ -747,7 +756,7 @@ msgstr ""
 
 #: apps/seo/common.py:38 templates/clinics/detail.html:74
 #: templates/clinics/doctor.html:26 templates/components/footer.html:51
-#: templates/components/navbar.html:56 templates/components/navbar.html:93
+#: templates/components/navbar.html:64 templates/components/navbar.html:101
 #: templates/components/reviews.html:16 templates/home/sections/hero.html:182
 msgid "Patient reviews"
 msgstr "Відгуки пацієнтів"
@@ -868,8 +877,8 @@ msgstr ""
 "гіди про лікування зубів у Туреччині від стоматологів зі Стамбула."
 
 #: apps/seo/guide_views.py:34 apps/seo/guide_views.py:70
-#: templates/components/footer.html:32 templates/components/navbar.html:41
-#: templates/components/navbar.html:87
+#: templates/components/footer.html:32 templates/components/navbar.html:49
+#: templates/components/navbar.html:95
 msgid "Guides"
 msgstr "Гіди"
 
@@ -990,7 +999,7 @@ msgstr ""
 #: apps/seo/package_views.py:108 apps/seo/package_views.py:116
 #: apps/seo/package_views.py:147 apps/seo/package_views.py:156
 #: templates/components/footer.html:37 templates/components/footer.html:38
-#: templates/components/navbar.html:85
+#: templates/components/navbar.html:93
 msgid "Dental packages"
 msgstr "Стоматологічні тури"
 
@@ -1132,8 +1141,8 @@ msgstr ""
 
 #: apps/seo/views.py:69 apps/treatments/views.py:27
 #: apps/treatments/views.py:88 templates/404.html:8
-#: templates/components/footer.html:27 templates/components/navbar.html:10
-#: templates/components/navbar.html:81 templates/treatments/list.html:6
+#: templates/components/footer.html:27 templates/components/navbar.html:18
+#: templates/components/navbar.html:89 templates/treatments/list.html:6
 msgid "Treatments"
 msgstr "Лікування"
 
@@ -1206,8 +1215,8 @@ msgstr ""
 "отримати фіксовану письмову ціну від лікаря — безкоштовно у WhatsApp."
 
 #: apps/seo/views.py:113 apps/seo/views.py:116 apps/seo/views.py:145
-#: apps/seo/views.py:151 templates/components/footer.html:29
-#: templates/components/navbar.html:51 templates/components/navbar.html:91
+#: apps/seo/views.py:153 templates/components/footer.html:29
+#: templates/components/navbar.html:59 templates/components/navbar.html:99
 msgid "Prices"
 msgstr "Ціни"
 
@@ -1243,7 +1252,7 @@ msgstr ""
 "кошторис і як отримати фіксований письмовий кошторис від лікаря — "
 "безкоштовно у WhatsApp."
 
-#: apps/seo/views.py:152
+#: apps/seo/views.py:154
 #, python-format
 msgid ""
 "What affects the price of %(treatment)s, what is included — and how to get "
@@ -1430,16 +1439,21 @@ msgid "A family clinic with an ethical approach"
 msgstr "Сімейна клініка з етичним підходом"
 
 #: templates/areas/detail.html:17 templates/areas/index.html:16
+#| msgid ""
+#| "Dr. Dt. Devrim Biriken Sipahi has worked as a dentist in Istanbul for more "
+#| "than 35 years. Her son, Dt. Ekin Sipahi, is also a dentist and works with "
+#| "her at the clinic. Every treatment starts with an accurate diagnosis; we "
+#| "recommend only what you need and keep healthy teeth healthy."
 msgid ""
-"Dr. Dt. Devrim Biriken Sipahi has worked as a dentist in Istanbul for more "
-"than 35 years. Her son, Dt. Ekin Sipahi, is also a dentist and works with "
-"her at the clinic. Every treatment starts with an accurate diagnosis; we "
-"recommend only what you need and keep healthy teeth healthy."
+"Dr. Devrim has worked as a dentist in Istanbul for more than 35 years. Her "
+"son, Dt. Ekin Sipahi, is also a dentist and works with her at the clinic. "
+"Every treatment starts with an accurate diagnosis; we recommend only what "
+"you need and keep healthy teeth healthy."
 msgstr ""
-"Д-р Devrim Biriken Sipahi працює стоматологом у Стамбулі понад 35 років. Її "
-"син, Ekin Sipahi, теж стоматолог і працює разом із нею в клініці. Кожне "
-"лікування починається з точної діагностики; ми рекомендуємо лише те, що вам "
-"справді потрібно, і зберігаємо здорові зуби."
+"Д-р Devrim працює стоматологом у Стамбулі понад 35 років. Її син, Ekin "
+"Sipahi, теж стоматолог і працює разом із нею в клініці. Кожне лікування "
+"починається з точної діагностики; ми рекомендуємо лише те, що вам справді "
+"потрібно, і зберігаємо здорові зуби."
 
 #: templates/areas/detail.html:21 templates/packages/origin.html:24
 #: templates/treatments/detail.html:37
@@ -1528,11 +1542,15 @@ msgid "read them on Google"
 msgstr "читати в Google"
 
 #: templates/base.html:67 templates/components/footer.html:43
-#: templates/components/navbar.html:59 templates/components/navbar.html:94
+#: templates/components/navbar.html:67 templates/components/navbar.html:102
 msgid "Contact"
 msgstr "Контакти"
 
-#: templates/base.html:74 templates/contact.html:13
+#: templates/base.html:75
+msgid "Hear our patients on Instagram"
+msgstr "Послухайте наших пацієнтів в Instagram"
+
+#: templates/base.html:80 templates/contact.html:13
 msgid "Chat on WhatsApp"
 msgstr "Написати у WhatsApp"
 
@@ -1945,91 +1963,86 @@ msgstr ""
 msgid "From %(c)s"
 msgstr "З країни: %(c)s"
 
-#: templates/components/instagram_cta.html:1
-#| msgid "What our patients say"
-msgid "Hear our patients on Instagram"
-msgstr "Послухайте наших пацієнтів в Instagram"
-
 #: templates/components/navbar.html:4
 msgid "Main navigation"
 msgstr "Головне меню"
 
-#: templates/components/navbar.html:19 templates/pseo/_price_note.html:3
+#: templates/components/navbar.html:27 templates/pseo/_price_note.html:3
 msgid "What does it cost?"
 msgstr "Скільки це коштує?"
 
-#: templates/components/navbar.html:20
+#: templates/components/navbar.html:28
 msgid "Before & after"
 msgstr "До і після"
 
-#: templates/components/navbar.html:25 templates/components/navbar.html:84
+#: templates/components/navbar.html:33 templates/components/navbar.html:92
 msgid "Packages"
 msgstr "Тури"
 
-#: templates/components/navbar.html:29 templates/packages/index.html:19
+#: templates/components/navbar.html:37 templates/packages/index.html:19
 #: templates/packages/origin.html:34
 msgid "Dental packages by treatment"
 msgstr "Стоматологічні пакети за видами лікування"
 
-#: templates/components/navbar.html:30 templates/packages/index.html:20
+#: templates/components/navbar.html:38 templates/packages/index.html:20
 #: templates/packages/origin.html:35 templates/seo/treatment_city.html:15
 #: templates/seo/treatment_price.html:24 templates/treatments/detail.html:16
 #, python-format
 msgid "%(name)s package"
 msgstr "%(name)s: пакет"
 
-#: templates/components/navbar.html:33 templates/packages/treatment.html:40
+#: templates/components/navbar.html:41 templates/packages/treatment.html:40
 msgid "Travelling from"
 msgstr "Летите з"
 
-#: templates/components/navbar.html:37
+#: templates/components/navbar.html:45
 #: templates/home/sections/treatments.html:13
 msgid "Explore personalised dental packages"
 msgstr "Індивідуальні стоматологічні тури"
 
-#: templates/components/navbar.html:44
+#: templates/components/navbar.html:52
 msgid "Choosing a clinic"
 msgstr "Вибір клініки"
 
-#: templates/components/navbar.html:45
+#: templates/components/navbar.html:53
 msgid "Locations"
 msgstr "Локації"
 
-#: templates/components/navbar.html:46
+#: templates/components/navbar.html:54
 msgid "Practical"
 msgstr "Корисне"
 
-#: templates/components/navbar.html:53 templates/components/navbar.html:92
+#: templates/components/navbar.html:61 templates/components/navbar.html:100
 msgid "About"
 msgstr "Про нас"
 
-#: templates/components/navbar.html:57
+#: templates/components/navbar.html:65
 msgid "Our clinic"
 msgstr "Наша клініка"
 
-#: templates/components/navbar.html:65
+#: templates/components/navbar.html:73
 msgid "Change language"
 msgstr "Змінити мову"
 
-#: templates/components/navbar.html:73
+#: templates/components/navbar.html:81
 msgid "Get a free quote"
 msgstr "Безкоштовний розрахунок"
 
-#: templates/components/navbar.html:73
+#: templates/components/navbar.html:81
 msgid "Private consultation"
 msgstr "Приватна консультація"
 
-#: templates/components/navbar.html:73
-#: templates/components/treatment_card.html:7
+#: templates/components/navbar.html:81
+#: templates/components/treatment_card.html:8
 #: templates/home/sections/hero.html:12 templates/seo/_clinic_offers.html:8
 msgid "Personal treatment plan"
 msgstr "Особистий план лікування"
 
-#: templates/components/navbar.html:73 templates/contact.html:6
+#: templates/components/navbar.html:81 templates/contact.html:6
 msgid "Free consultation"
 msgstr "Безкоштовна консультація"
 
-#: templates/components/navbar.html:75
+#: templates/components/navbar.html:83
 msgid "Menu"
 msgstr "Меню"
 
@@ -2108,13 +2121,13 @@ msgstr ""
 msgid "How root canal treatment saves a tooth"
 msgstr "Як лікування каналів рятує зуб"
 
-#: templates/components/treatment_card.html:7
+#: templates/components/treatment_card.html:8
 #: templates/seo/treatment_city.html:10 templates/treatments/detail.html:10
 #, python-format
 msgid "%(d)s days in Istanbul"
 msgstr "%(d)s дн. у Стамбулі"
 
-#: templates/components/treatment_card.html:8
+#: templates/components/treatment_card.html:9
 msgid "Details"
 msgstr "Детальніше"
 
@@ -2611,11 +2624,11 @@ msgstr "Досвід пацієнтів"
 msgid "Their stories — your inspiration"
 msgstr "Їхні історії — ваше натхнення"
 
-#: templates/home/sections/reviews.html:11
+#: templates/home/sections/reviews.html:10
 msgid "Videos are published with patients' explicit consent."
 msgstr "Відео публікуються з явної згоди пацієнтів."
 
-#: templates/home/sections/reviews.html:11
+#: templates/home/sections/reviews.html:10
 msgid "All patient videos"
 msgstr "Усі відео пацієнтів"
 

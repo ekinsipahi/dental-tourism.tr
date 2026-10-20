@@ -2,10 +2,10 @@
 <section class="section section-alt" data-track-section="authority"><div class="wrap pseo-proof">
   {% if doctor %}
   <div class="card pseo-doctor">
-    {% if doctor.photo_src %}<img src="{{ doctor.photo_src }}" alt="{{ doctor.name }}" width="160" height="160" loading="lazy">{% endif %}
+    {% if doctor.photo_src %}<img src="{{ doctor.photo_src }}" alt="{{ doctor.full_name }}" width="160" height="160" loading="lazy">{% endif %}
     <div>
       <h2>{% trans "Who will treat you" %}</h2>
-      <p><strong>{{ doctor.name }}</strong>{% if doctor_loc.title_display %} — {{ doctor_loc.title_display }}{% endif %}</p>
+      <p><strong>{{ doctor.display_name }}</strong>{% if doctor.brand_name %} — {{ doctor.full_name }}{% endif %}{% if doctor_loc.title_display %} · {{ doctor_loc.title_display }}{% endif %}</p>
       <ul class="pseo-ticks">
         <li>{% trans "Graduate of Ankara University Faculty of Dentistry" %}</li>
         <li>{% trans "Oral and maxillofacial radiology, Marmara University — precise 3D diagnosis" %}</li>

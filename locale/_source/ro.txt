@@ -646,11 +646,11 @@
 645|Cabinet stomatologic lângă %(area)s, Istanbul
 646|Dentist lângă %(area)s, Istanbul — clinică de familie în Şişli
 647|Căutați un dentist lângă %(area)s? Clinica noastră stomatologică de familie din Şişli este la aproximativ %(km)s km. Mai întâi diagnosticul, doar tratamentul de care aveți nevoie. Deschis 7 zile din 7.
-648|Clinica noastră stomatologică de familie din Şişli se află la aproximativ %(km)s km de %(area)s. Dr. Dt. Devrim Biriken Sipahi și fiul ei, Dt. Ekin Sipahi, consultă și tratează personal fiecare pacient.
+648|Clinica noastră stomatologică de familie din Şişli se află la aproximativ %(km)s km de %(area)s. Dr. Devrim și fiul ei, Dt. Ekin Sipahi, consultă și tratează personal fiecare pacient.
 649|Cabinet stomatologic în %(area)s, Istanbul
 650|Cabinet stomatologic în %(area)s, Istanbul — medici stomatologi de familie, deschis 7 zile
 651|Clinică stomatologică de familie în %(area)s, Istanbul. Mai întâi diagnosticul, doar tratamentul de care aveți nevoie. Deschis 7 zile din 7 — trimiteți o fotografie pe WhatsApp.
-652|Clinica noastră stomatologică de familie este în %(area)s, Istanbul. Dr. Dt. Devrim Biriken Sipahi și fiul ei, Dt. Ekin Sipahi, consultă și tratează personal fiecare pacient.
+652|Clinica noastră stomatologică de familie este în %(area)s, Istanbul. Dr. Devrim și fiul ei, Dt. Ekin Sipahi, consultă și tratează personal fiecare pacient.
 653|Cabinet stomatologic pe cartiere
 654|Cabinet stomatologic aproape de dumneavoastră în Istanbul: Şişli, Nişantaşı, Taksim, Levent și altele
 655|Cabinet stomatologic lângă Şişli, Nişantaşı, Taksim, Levent și Beşiktaş — Istanbul
@@ -661,7 +661,7 @@
 660|Traseu din %(area)s
 661|Pentru pacienții care locuiesc, lucrează sau stau în zona %(places)s.
 662|O clinică de familie cu o abordare etică
-663|Dr. Dt. Devrim Biriken Sipahi lucrează ca medic stomatolog în Istanbul de peste 35 de ani. Fiul ei, Dt. Ekin Sipahi, este și el medic stomatolog și lucrează alături de ea în clinică. Fiecare tratament începe cu un diagnostic corect; recomandăm doar ce vă trebuie și păstrăm dinții sănătoși.
+663|Dr. Devrim lucrează ca medic stomatolog în Istanbul de peste 35 de ani. Fiul ei, Dt. Ekin Sipahi, este și el medic stomatolog și lucrează alături de ea în clinică. Fiecare tratament începe cu un diagnostic corect; recomandăm doar ce vă trebuie și păstrăm dinții sănătoși.
 664|Distanță
 665|aproximativ %(km)s km
 666|Cu taxiul
@@ -675,7 +675,7 @@
 674|Clinică de familie condusă de medici în Şişli, Istanbul: 35+ ani de experiență, ★ %(rating)s din %(count)s recenzii Google, limbi vorbite și povești reale.
 675|Dentist Istanbul ★%(rating)s — Medici de Familie, 35+ Ani
 676|Implanturi, fațete și coroane în Istanbul de la o echipă mamă-fiu de medici stomatologi cu 35+ ani de experiență. ★ %(rating)s pe Google. Evaluare gratuită pe WhatsApp.
-677|Despre noi — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Medici Stomatologi
+677|Despre noi — Dr. Devrim & Dt. Ekin Sipahi, Medici Stomatologi
 678|Clinică stomatologică de familie în Şişli, Istanbul: 35+ ani de experiență, mai întâi diagnosticul, doar tratamentul necesar. Cunoașteți medicii care vă vor trata.
 679|Evaluare Dentară Gratuită pe WhatsApp — Răspunde Medicul
 680|Trimiteți o fotografie sau o radiografie și primiți un plan personal cu ofertă fixă scrisă — răspunde medicul, nu un call center. Deschis 7 zile din 7.

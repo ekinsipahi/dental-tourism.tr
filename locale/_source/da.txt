@@ -646,11 +646,11 @@
 645|Tandklinik nær %(area)s, Istanbul
 646|Tandlæge nær %(area)s, Istanbul — familieklinik i Şişli
 647|Leder du efter en tandlæge nær %(area)s? Vores familietandklinik i Şişli ligger ca. %(km)s km væk. Først diagnose, kun den behandling, du har brug for. Åbent 7 dage om ugen.
-648|Vores familietandklinik i Şişli ligger ca. %(km)s km fra %(area)s. Dr. Dt. Devrim Biriken Sipahi og hendes søn Dt. Ekin Sipahi undersøger og behandler hver patient personligt.
+648|Vores familietandklinik i Şişli ligger ca. %(km)s km fra %(area)s. Dr. Devrim og hendes søn Dt. Ekin Sipahi undersøger og behandler hver patient personligt.
 649|Tandklinik i %(area)s, Istanbul
 650|Tandklinik i %(area)s, Istanbul — familietandlæger, åbent 7 dage
 651|Familietandklinik i %(area)s, Istanbul. Først diagnose, kun den behandling, du har brug for. Åbent 7 dage om ugen — send et foto på WhatsApp.
-652|Vores familietandklinik ligger i %(area)s, Istanbul. Dr. Dt. Devrim Biriken Sipahi og hendes søn Dt. Ekin Sipahi undersøger og behandler hver patient personligt.
+652|Vores familietandklinik ligger i %(area)s, Istanbul. Dr. Devrim og hendes søn Dt. Ekin Sipahi undersøger og behandler hver patient personligt.
 653|Tandklinik efter bydel
 654|Tandklinik nær dig i Istanbul: Şişli, Nişantaşı, Taksim, Levent og flere
 655|Tandklinik nær Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul
@@ -661,7 +661,7 @@
 660|Rutevejledning fra %(area)s
 661|For patienter, der bor, arbejder eller opholder sig omkring %(places)s.
 662|En familieklinik med en etisk tilgang
-663|Dr. Dt. Devrim Biriken Sipahi har arbejdet som tandlæge i Istanbul i mere end 35 år. Hendes søn, Dt. Ekin Sipahi, er også tandlæge og arbejder sammen med hende på klinikken. Hver behandling begynder med en grundig diagnose; vi anbefaler kun det, du har brug for, og bevarer sunde tænder.
+663|Dr. Devrim har arbejdet som tandlæge i Istanbul i mere end 35 år. Hendes søn, Dt. Ekin Sipahi, er også tandlæge og arbejder sammen med hende på klinikken. Hver behandling begynder med en grundig diagnose; vi anbefaler kun det, du har brug for, og bevarer sunde tænder.
 664|Afstand
 665|ca. %(km)s km
 666|Med taxa
@@ -675,7 +675,7 @@
 674|Tandlægeledet familieklinik i Şişli, Istanbul: 35+ års erfaring, ★ %(rating)s fra %(count)s Google-anmeldelser, sprog og rigtige patienthistorier.
 675|Tandlæge Istanbul ★%(rating)s — Familietandlæger, 35+ År
 676|Implantater, facader og kroner i Istanbul fra et tandlægeteam af mor og søn med 35+ års erfaring. ★ %(rating)s på Google. Gratis vurdering på WhatsApp.
-677|Om os — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Familietandlæger
+677|Om os — Dr. Devrim & Dt. Ekin Sipahi, Familietandlæger
 678|Familietandklinik i Şişli, Istanbul: 35+ års erfaring, diagnose først og kun den behandling, du har brug for. Mød tandlægerne, der behandler dig.
 679|Gratis Tandvurdering på WhatsApp — Tandlægen Svarer
 680|Send et foto eller røntgenbillede og få en personlig plan med fast skriftligt tilbud — tandlægen svarer, ikke et callcenter. Åbent 7 dage om ugen.

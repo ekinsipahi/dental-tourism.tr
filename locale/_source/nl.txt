@@ -646,11 +646,11 @@
 645|Tandartspraktijk bij %(area)s, Istanbul
 646|Tandarts bij %(area)s, Istanbul — familiepraktijk in Şişli
 647|Op zoek naar een tandarts bij %(area)s? Onze familiepraktijk in Şişli ligt op ongeveer %(km)s km. Eerst de diagnose, alleen de behandeling die u nodig hebt. 7 dagen per week open.
-648|Onze tandheelkundige familiepraktijk in Şişli ligt op ongeveer %(km)s km van %(area)s. Dr. Dt. Devrim Biriken Sipahi en haar zoon Dt. Ekin Sipahi onderzoeken en behandelen elke patiënt persoonlijk.
+648|Onze tandheelkundige familiepraktijk in Şişli ligt op ongeveer %(km)s km van %(area)s. Dr. Devrim en haar zoon Dt. Ekin Sipahi onderzoeken en behandelen elke patiënt persoonlijk.
 649|Tandartspraktijk in %(area)s, Istanbul
 650|Tandartspraktijk in %(area)s, Istanbul — familiepraktijk, 7 dagen open
 651|Tandheelkundige familiepraktijk in %(area)s, Istanbul. Eerst de diagnose, alleen de behandeling die u nodig hebt. 7 dagen per week open — stuur een foto via WhatsApp.
-652|Onze tandheelkundige familiepraktijk is in %(area)s, Istanbul. Dr. Dt. Devrim Biriken Sipahi en haar zoon Dt. Ekin Sipahi onderzoeken en behandelen elke patiënt persoonlijk.
+652|Onze tandheelkundige familiepraktijk is in %(area)s, Istanbul. Dr. Devrim en haar zoon Dt. Ekin Sipahi onderzoeken en behandelen elke patiënt persoonlijk.
 653|Tandartspraktijk per wijk
 654|Tandartspraktijk bij u in de buurt in Istanbul: Şişli, Nişantaşı, Taksim, Levent en meer
 655|Tandartspraktijk bij Şişli, Nişantaşı, Taksim, Levent & Beşiktaş — Istanbul
@@ -661,7 +661,7 @@
 660|Route vanuit %(area)s
 661|Voor patiënten die rond %(places)s wonen, werken of verblijven.
 662|Een familiepraktijk met een ethische aanpak
-663|Dr. Dt. Devrim Biriken Sipahi werkt al meer dan 35 jaar als tandarts in Istanbul. Haar zoon, Dt. Ekin Sipahi, is ook tandarts en werkt met haar in de praktijk. Elke behandeling begint met een juiste diagnose; we adviseren alleen wat u nodig hebt en houden gezonde tanden gezond.
+663|Dr. Devrim werkt al meer dan 35 jaar als tandarts in Istanbul. Haar zoon, Dt. Ekin Sipahi, is ook tandarts en werkt met haar in de praktijk. Elke behandeling begint met een juiste diagnose; we adviseren alleen wat u nodig hebt en houden gezonde tanden gezond.
 664|Afstand
 665|ongeveer %(km)s km
 666|Met de taxi
@@ -675,7 +675,7 @@
 674|Familiepraktijk in Şişli, Istanbul, geleid door tandartsen: 35+ jaar ervaring, ★ %(rating)s uit %(count)s Google-reviews, gesproken talen en echte patiëntverhalen.
 675|Tandarts Istanbul ★%(rating)s — Familiepraktijk, 35+ Jaar Ervaring
 676|Implantaten, facings en kronen in Istanbul door een moeder-zoon tandartsteam met 35+ jaar ervaring. ★ %(rating)s op Google. Gratis beoordeling via WhatsApp.
-677|Over ons — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Familietandartsen
+677|Over ons — Dr. Devrim & Dt. Ekin Sipahi, Familietandartsen
 678|Tandheelkundige familiepraktijk in Şişli, Istanbul: 35+ jaar ervaring, eerst de diagnose, alleen de behandeling die u nodig hebt. Maak kennis met uw tandartsen.
 679|Gratis Tandartsbeoordeling via WhatsApp — Antwoord van de Tandarts
 680|Stuur een foto of röntgenfoto en ontvang een persoonlijk plan met een vaste schriftelijke offerte — antwoord van de tandarts, geen callcenter. 7 dagen open.

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 22:32+0300\n"
+"POT-Creation-Date: 2026-10-20 17:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +44,7 @@ msgid "Home"
 msgstr "Acasă"
 
 #: apps/blog/views.py:44 apps/blog/views.py:75 apps/blog/views.py:141
-#: templates/components/navbar.html:47
+#: templates/components/navbar.html:55
 msgid "Blog"
 msgstr "Blog"
 
@@ -152,8 +152,8 @@ msgstr "Sortează după"
 msgid "All cities"
 msgstr "Toate orașele"
 
-#: apps/clinics/search.py:35 templates/components/navbar.html:18
-#: templates/components/navbar.html:83
+#: apps/clinics/search.py:35 templates/components/navbar.html:26
+#: templates/components/navbar.html:91
 msgid "All treatments"
 msgstr "Toate tratamentele"
 
@@ -179,7 +179,7 @@ msgstr ""
 "povești reale."
 
 #: apps/clinics/views.py:39 apps/clinics/views.py:68
-#: templates/clinics/list.html:6 templates/components/navbar.html:58
+#: templates/clinics/list.html:6 templates/components/navbar.html:66
 msgid "Clinics"
 msgstr "Clinici"
 
@@ -360,7 +360,7 @@ msgstr "Ofertă de preț gratuită"
 msgid "Request a private appointment"
 msgstr "Solicitați o programare privată"
 
-#: apps/core/templatetags/site_tags.py:174 templates/components/navbar.html:73
+#: apps/core/templatetags/site_tags.py:174 templates/components/navbar.html:81
 #: templates/home/sections/hero.html:150
 msgid "Book now"
 msgstr "Programează acum"
@@ -533,8 +533,10 @@ msgstr ""
 "%(rating)s."
 
 #: apps/core/views.py:111
-msgid "About Us — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Family Dentists"
-msgstr "Despre noi — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Medici Stomatologi"
+#| msgid ""
+#| "About Us — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Family Dentists"
+msgid "About Us — Dr. Devrim & Dt. Ekin Sipahi, Family Dentists"
+msgstr "Despre noi — Dr. Devrim & Dt. Ekin Sipahi, Medici Stomatologi"
 
 #: apps/core/views.py:112
 msgid ""
@@ -546,7 +548,7 @@ msgstr ""
 " vor trata."
 
 #: apps/core/views.py:119 apps/seo/common.py:35
-#: templates/components/footer.html:50 templates/components/navbar.html:55
+#: templates/components/footer.html:50 templates/components/navbar.html:63
 msgid "About us"
 msgstr "Despre noi"
 
@@ -674,14 +676,18 @@ msgstr ""
 
 #: apps/seo/area_views.py:86
 #, python-format
+#| msgid ""
+#| "Our family dental clinic in Şişli is about %(km)s km from %(area)s. Dr. Dt. "
+#| "Devrim Biriken Sipahi and her son Dt. Ekin Sipahi examine and treat every "
+#| "patient personally."
 msgid ""
-"Our family dental clinic in Şişli is about %(km)s km from %(area)s. Dr. Dt. "
-"Devrim Biriken Sipahi and her son Dt. Ekin Sipahi examine and treat every "
-"patient personally."
+"Our family dental clinic in Şişli is about %(km)s km from %(area)s. Dr. "
+"Devrim and her son Dt. Ekin Sipahi examine and treat every patient "
+"personally."
 msgstr ""
 "Clinica noastră stomatologică de familie din Şişli se află la aproximativ "
-"%(km)s km de %(area)s. Dr. Dt. Devrim Biriken Sipahi și fiul ei, Dt. Ekin "
-"Sipahi, consultă și tratează personal fiecare pacient."
+"%(km)s km de %(area)s. Dr. Devrim și fiul ei, Dt. Ekin Sipahi, consultă și "
+"tratează personal fiecare pacient."
 
 #: apps/seo/area_views.py:89
 #, python-format
@@ -705,14 +711,17 @@ msgstr ""
 
 #: apps/seo/area_views.py:93
 #, python-format
+#| msgid ""
+#| "Our family dental clinic is in %(area)s, Istanbul. Dr. Dt. Devrim Biriken "
+#| "Sipahi and her son Dt. Ekin Sipahi examine and treat every patient "
+#| "personally."
 msgid ""
-"Our family dental clinic is in %(area)s, Istanbul. Dr. Dt. Devrim Biriken "
-"Sipahi and her son Dt. Ekin Sipahi examine and treat every patient "
-"personally."
+"Our family dental clinic is in %(area)s, Istanbul. Dr. Devrim and her son "
+"Dt. Ekin Sipahi examine and treat every patient personally."
 msgstr ""
-"Clinica noastră stomatologică de familie este în %(area)s, Istanbul. Dr. Dt."
-" Devrim Biriken Sipahi și fiul ei, Dt. Ekin Sipahi, consultă și tratează "
-"personal fiecare pacient."
+"Clinica noastră stomatologică de familie este în %(area)s, Istanbul. Dr. "
+"Devrim și fiul ei, Dt. Ekin Sipahi, consultă și tratează personal fiecare "
+"pacient."
 
 #: apps/seo/area_views.py:105 apps/seo/area_views.py:109
 #: apps/seo/area_views.py:128 apps/seo/area_views.py:135
@@ -756,7 +765,7 @@ msgstr ""
 
 #: apps/seo/common.py:38 templates/clinics/detail.html:74
 #: templates/clinics/doctor.html:26 templates/components/footer.html:51
-#: templates/components/navbar.html:56 templates/components/navbar.html:93
+#: templates/components/navbar.html:64 templates/components/navbar.html:101
 #: templates/components/reviews.html:16 templates/home/sections/hero.html:182
 msgid "Patient reviews"
 msgstr "Recenziile pacienților"
@@ -878,8 +887,8 @@ msgstr ""
 "Istanbul."
 
 #: apps/seo/guide_views.py:34 apps/seo/guide_views.py:70
-#: templates/components/footer.html:32 templates/components/navbar.html:41
-#: templates/components/navbar.html:87
+#: templates/components/footer.html:32 templates/components/navbar.html:49
+#: templates/components/navbar.html:95
 msgid "Guides"
 msgstr "Ghiduri"
 
@@ -1001,7 +1010,7 @@ msgstr ""
 #: apps/seo/package_views.py:108 apps/seo/package_views.py:116
 #: apps/seo/package_views.py:147 apps/seo/package_views.py:156
 #: templates/components/footer.html:37 templates/components/footer.html:38
-#: templates/components/navbar.html:85
+#: templates/components/navbar.html:93
 msgid "Dental packages"
 msgstr "Pachete dentare"
 
@@ -1146,8 +1155,8 @@ msgstr ""
 
 #: apps/seo/views.py:69 apps/treatments/views.py:27
 #: apps/treatments/views.py:88 templates/404.html:8
-#: templates/components/footer.html:27 templates/components/navbar.html:10
-#: templates/components/navbar.html:81 templates/treatments/list.html:6
+#: templates/components/footer.html:27 templates/components/navbar.html:18
+#: templates/components/navbar.html:89 templates/treatments/list.html:6
 msgid "Treatments"
 msgstr "Tratamente"
 
@@ -1221,8 +1230,8 @@ msgstr ""
 "corectă și cum obțineți un preț fix scris de la medic — gratuit pe WhatsApp."
 
 #: apps/seo/views.py:113 apps/seo/views.py:116 apps/seo/views.py:145
-#: apps/seo/views.py:151 templates/components/footer.html:29
-#: templates/components/navbar.html:51 templates/components/navbar.html:91
+#: apps/seo/views.py:153 templates/components/footer.html:29
+#: templates/components/navbar.html:59 templates/components/navbar.html:99
 msgid "Prices"
 msgstr "Prețuri"
 
@@ -1257,7 +1266,7 @@ msgstr ""
 "%(treatment)s în Istanbul: ce decide prețul, ce include o ofertă corectă și "
 "cum obțineți o ofertă fixă scrisă de la medic — gratuit pe WhatsApp."
 
-#: apps/seo/views.py:152
+#: apps/seo/views.py:154
 #, python-format
 msgid ""
 "What affects the price of %(treatment)s, what is included — and how to get "
@@ -1443,16 +1452,21 @@ msgid "A family clinic with an ethical approach"
 msgstr "O clinică de familie cu o abordare etică"
 
 #: templates/areas/detail.html:17 templates/areas/index.html:16
+#| msgid ""
+#| "Dr. Dt. Devrim Biriken Sipahi has worked as a dentist in Istanbul for more "
+#| "than 35 years. Her son, Dt. Ekin Sipahi, is also a dentist and works with "
+#| "her at the clinic. Every treatment starts with an accurate diagnosis; we "
+#| "recommend only what you need and keep healthy teeth healthy."
 msgid ""
-"Dr. Dt. Devrim Biriken Sipahi has worked as a dentist in Istanbul for more "
-"than 35 years. Her son, Dt. Ekin Sipahi, is also a dentist and works with "
-"her at the clinic. Every treatment starts with an accurate diagnosis; we "
-"recommend only what you need and keep healthy teeth healthy."
+"Dr. Devrim has worked as a dentist in Istanbul for more than 35 years. Her "
+"son, Dt. Ekin Sipahi, is also a dentist and works with her at the clinic. "
+"Every treatment starts with an accurate diagnosis; we recommend only what "
+"you need and keep healthy teeth healthy."
 msgstr ""
-"Dr. Dt. Devrim Biriken Sipahi lucrează ca medic stomatolog în Istanbul de "
-"peste 35 de ani. Fiul ei, Dt. Ekin Sipahi, este și el medic stomatolog și "
-"lucrează alături de ea în clinică. Fiecare tratament începe cu un diagnostic"
-" corect; recomandăm doar ce vă trebuie și păstrăm dinții sănătoși."
+"Dr. Devrim lucrează ca medic stomatolog în Istanbul de peste 35 de ani. Fiul"
+" ei, Dt. Ekin Sipahi, este și el medic stomatolog și lucrează alături de ea "
+"în clinică. Fiecare tratament începe cu un diagnostic corect; recomandăm "
+"doar ce vă trebuie și păstrăm dinții sănătoși."
 
 #: templates/areas/detail.html:21 templates/packages/origin.html:24
 #: templates/treatments/detail.html:37
@@ -1543,11 +1557,15 @@ msgid "read them on Google"
 msgstr "citește-le pe Google"
 
 #: templates/base.html:67 templates/components/footer.html:43
-#: templates/components/navbar.html:59 templates/components/navbar.html:94
+#: templates/components/navbar.html:67 templates/components/navbar.html:102
 msgid "Contact"
 msgstr "Contact"
 
-#: templates/base.html:74 templates/contact.html:13
+#: templates/base.html:75
+msgid "Hear our patients on Instagram"
+msgstr "Ascultați-i pe pacienții noștri pe Instagram"
+
+#: templates/base.html:80 templates/contact.html:13
 msgid "Chat on WhatsApp"
 msgstr "Scrieți-ne pe WhatsApp"
 
@@ -1966,91 +1984,86 @@ msgstr ""
 msgid "From %(c)s"
 msgstr "Din %(c)s"
 
-#: templates/components/instagram_cta.html:1
-#| msgid "What our patients say"
-msgid "Hear our patients on Instagram"
-msgstr "Ascultați-i pe pacienții noștri pe Instagram"
-
 #: templates/components/navbar.html:4
 msgid "Main navigation"
 msgstr "Navigare principală"
 
-#: templates/components/navbar.html:19 templates/pseo/_price_note.html:3
+#: templates/components/navbar.html:27 templates/pseo/_price_note.html:3
 msgid "What does it cost?"
 msgstr "Cât costă?"
 
-#: templates/components/navbar.html:20
+#: templates/components/navbar.html:28
 msgid "Before & after"
 msgstr "Înainte și după"
 
-#: templates/components/navbar.html:25 templates/components/navbar.html:84
+#: templates/components/navbar.html:33 templates/components/navbar.html:92
 msgid "Packages"
 msgstr "Pachete"
 
-#: templates/components/navbar.html:29 templates/packages/index.html:19
+#: templates/components/navbar.html:37 templates/packages/index.html:19
 #: templates/packages/origin.html:34
 msgid "Dental packages by treatment"
 msgstr "Pachete dentare după tratament"
 
-#: templates/components/navbar.html:30 templates/packages/index.html:20
+#: templates/components/navbar.html:38 templates/packages/index.html:20
 #: templates/packages/origin.html:35 templates/seo/treatment_city.html:15
 #: templates/seo/treatment_price.html:24 templates/treatments/detail.html:16
 #, python-format
 msgid "%(name)s package"
 msgstr "Pachet %(name)s"
 
-#: templates/components/navbar.html:33 templates/packages/treatment.html:40
+#: templates/components/navbar.html:41 templates/packages/treatment.html:40
 msgid "Travelling from"
 msgstr "Călătorești din"
 
-#: templates/components/navbar.html:37
+#: templates/components/navbar.html:45
 #: templates/home/sections/treatments.html:13
 msgid "Explore personalised dental packages"
 msgstr "Descoperă pachetele dentare personalizate"
 
-#: templates/components/navbar.html:44
+#: templates/components/navbar.html:52
 msgid "Choosing a clinic"
 msgstr "Alegerea clinicii"
 
-#: templates/components/navbar.html:45
+#: templates/components/navbar.html:53
 msgid "Locations"
 msgstr "Locații"
 
-#: templates/components/navbar.html:46
+#: templates/components/navbar.html:54
 msgid "Practical"
 msgstr "Informații practice"
 
-#: templates/components/navbar.html:53 templates/components/navbar.html:92
+#: templates/components/navbar.html:61 templates/components/navbar.html:100
 msgid "About"
 msgstr "Despre noi"
 
-#: templates/components/navbar.html:57
+#: templates/components/navbar.html:65
 msgid "Our clinic"
 msgstr "Clinica noastră"
 
-#: templates/components/navbar.html:65
+#: templates/components/navbar.html:73
 msgid "Change language"
 msgstr "Schimbă limba"
 
-#: templates/components/navbar.html:73
+#: templates/components/navbar.html:81
 msgid "Get a free quote"
 msgstr "Ofertă gratuită"
 
-#: templates/components/navbar.html:73
+#: templates/components/navbar.html:81
 msgid "Private consultation"
 msgstr "Consultație privată"
 
-#: templates/components/navbar.html:73
-#: templates/components/treatment_card.html:7
+#: templates/components/navbar.html:81
+#: templates/components/treatment_card.html:8
 #: templates/home/sections/hero.html:12 templates/seo/_clinic_offers.html:8
 msgid "Personal treatment plan"
 msgstr "Plan de tratament personal"
 
-#: templates/components/navbar.html:73 templates/contact.html:6
+#: templates/components/navbar.html:81 templates/contact.html:6
 msgid "Free consultation"
 msgstr "Consultație gratuită"
 
-#: templates/components/navbar.html:75
+#: templates/components/navbar.html:83
 msgid "Menu"
 msgstr "Meniu"
 
@@ -2129,13 +2142,13 @@ msgstr ""
 msgid "How root canal treatment saves a tooth"
 msgstr "Cum salvează tratamentul de canal un dinte"
 
-#: templates/components/treatment_card.html:7
+#: templates/components/treatment_card.html:8
 #: templates/seo/treatment_city.html:10 templates/treatments/detail.html:10
 #, python-format
 msgid "%(d)s days in Istanbul"
 msgstr "%(d)s zile în Istanbul"
 
-#: templates/components/treatment_card.html:8
+#: templates/components/treatment_card.html:9
 msgid "Details"
 msgstr "Detalii"
 
@@ -2633,11 +2646,11 @@ msgstr "Experiențele pacienților"
 msgid "Their stories — your inspiration"
 msgstr "Poveștile lor — inspirația dvs."
 
-#: templates/home/sections/reviews.html:11
+#: templates/home/sections/reviews.html:10
 msgid "Videos are published with patients' explicit consent."
 msgstr "Videoclipurile sunt publicate cu acordul explicit al pacienților."
 
-#: templates/home/sections/reviews.html:11
+#: templates/home/sections/reviews.html:10
 msgid "All patient videos"
 msgstr "Toate videoclipurile pacienților"
 

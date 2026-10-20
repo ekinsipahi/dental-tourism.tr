@@ -49,7 +49,7 @@
 
     {% if doctors %}
     <h2 style="margin-top:2.5rem" data-track-section="doctor">{% trans "Dentists" %}</h2>
-    <div class="grid grid-2">{% for d in doctors %}<a class="card" href="{{ d.object.get_absolute_url }}">{% if d.photo_src %}<div class="card-img"><img src="{{ d.photo_src }}" alt="{{ d.full_name }}" loading="lazy"></div>{% endif %}<h3>{{ d.full_name }}</h3><p>{{ d.title_display }}</p></a>{% endfor %}</div>
+    <div class="grid grid-2">{% for d in doctors %}<a class="card" href="{{ d.object.get_absolute_url }}">{% if d.photo_src %}<div class="card-img"><img src="{{ d.photo_src }}" alt="{{ d.full_name }}" loading="lazy"></div>{% endif %}<h3>{{ d.display_name }}</h3>{% if d.brand_name %}<p class="faint" style="margin:-.3rem 0 .4rem">{{ d.full_name }}</p>{% endif %}<p>{{ d.title_display }}</p></a>{% endfor %}</div>
     {% endif %}
   </article>
   <aside class="sticky-side">

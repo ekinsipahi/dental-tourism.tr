@@ -2,8 +2,16 @@
 <header class="site-header">
   <div class="wrap">
     <nav class="nav" aria-label="{% trans 'Main navigation' %}">
-      <a href="{% url 'core:home' %}" class="logo" aria-label="{{ site_name }} — {% trans 'Home' %}">
-        <img src="{% if site_settings.logo %}{{ site_settings.logo.url }}{% else %}{% static 'img/logo-sm.png' %}{% endif %}" alt="Dr. Dt. Devrim Biriken Sipahi — {{ site_name }}" width="114" height="49" class="logo-img">
+      <a href="{% url 'core:home' %}" class="logo" aria-label="Dr. Dt. Devrim Biriken Sipahi — {% trans 'Home' %}">
+        <span class="logo-media">
+          <img src="{% if site_settings.logo %}{{ site_settings.logo.url }}{% else %}{% static 'img/logo-sm.png' %}{% endif %}" alt="Dr. Dt. Devrim Biriken Sipahi — {{ site_name }}" width="114" height="49" class="logo-img">
+          {# Logo videosu: yalnızca gerçekten oynarsa görünür (ui.js); otomatik oynatma engellenirse logo resmi kalır #}
+          <video class="logo-video" muted loop playsinline autoplay preload="metadata" width="114" height="49" aria-hidden="true" tabindex="-1">
+            <source src="{% static 'video/logo-video.webm' %}" type="video/webm">
+            <source src="{% static 'video/logo-video.mp4' %}" type="video/mp4">
+          </video>
+        </span>
+        <span class="logo-name">Dr. Dt. Devrim<br>Biriken Sipahi</span>
       </a>
       <ul class="nav-links">
         <li class="has-mega">

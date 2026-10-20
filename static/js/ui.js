@@ -191,3 +191,22 @@
     });
   }
 })();
+
+/* ── Navbar logo videosu: yalnızca gerçekten oynarsa göster; engellenirse / hata / azaltılmış hareket → logo resmi ── */
+(function () {
+  var v = document.querySelector(".site-header .logo-video");
+  if (!v) return;
+  var logo = v.closest(".logo");
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var saveData = navigator.connection && navigator.connection.saveData;
+  if (reduce || saveData) { v.removeAttribute("autoplay"); v.pause(); v.remove(); return; }
+  v.muted = true;
+  function on() { logo.classList.add("logo--video"); }
+  function off() { logo.classList.remove("logo--video"); }
+  v.addEventListener("playing", on);
+  v.addEventListener("error", off, true);
+  // ui.js defer ile yüklenir: video bu sırada çoktan oynamaya başlamış olabilir ("playing" kaçmasın)
+  if (!v.paused && v.readyState > 2) on();
+  try { var p = v.play(); if (p && p.then) p.then(on, off); } catch (e) { off(); }
+})();
+

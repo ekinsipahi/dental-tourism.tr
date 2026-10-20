@@ -646,11 +646,11 @@
 645|Gabinet stomatologiczny w pobliżu dzielnicy %(area)s, Stambuł
 646|Dentysta w pobliżu dzielnicy %(area)s, Stambuł — rodzinny gabinet w Şişli
 647|Szukasz dentysty w pobliżu dzielnicy %(area)s? Nasz rodzinny gabinet stomatologiczny w Şişli jest oddalony o około %(km)s km. Najpierw diagnoza, tylko potrzebne leczenie. Otwarte 7 dni w tygodniu.
-648|Nasz rodzinny gabinet stomatologiczny w Şişli znajduje się około %(km)s km od dzielnicy %(area)s. Dr Dt. Devrim Biriken Sipahi i jej syn Dt. Ekin Sipahi osobiście badają i leczą każdego pacjenta.
+648|Nasz rodzinny gabinet stomatologiczny w Şişli znajduje się około %(km)s km od dzielnicy %(area)s. Dr Devrim i jej syn Dt. Ekin Sipahi osobiście badają i leczą każdego pacjenta.
 649|Gabinet stomatologiczny w dzielnicy %(area)s, Stambuł
 650|Gabinet stomatologiczny w dzielnicy %(area)s, Stambuł — rodzinni dentyści, otwarte 7 dni
 651|Rodzinny gabinet stomatologiczny w dzielnicy %(area)s, Stambuł. Najpierw diagnoza, tylko potrzebne leczenie. Otwarte 7 dni w tygodniu — wyślij zdjęcie na WhatsApp.
-652|Nasz rodzinny gabinet stomatologiczny znajduje się w dzielnicy %(area)s, Stambuł. Dr Dt. Devrim Biriken Sipahi i jej syn Dt. Ekin Sipahi osobiście badają i leczą każdego pacjenta.
+652|Nasz rodzinny gabinet stomatologiczny znajduje się w dzielnicy %(area)s, Stambuł. Dr Devrim i jej syn Dt. Ekin Sipahi osobiście badają i leczą każdego pacjenta.
 653|Gabinet stomatologiczny według dzielnicy
 654|Gabinet stomatologiczny blisko Ciebie w Stambule: Şişli, Nişantaşı, Taksim, Levent i inne
 655|Gabinet stomatologiczny blisko Şişli, Nişantaşı, Taksim, Levent i Beşiktaş — Stambuł
@@ -661,7 +661,7 @@
 660|Wyznacz trasę z dzielnicy %(area)s
 661|Dla pacjentów, którzy mieszkają, pracują lub nocują w okolicy: %(places)s.
 662|Rodzinny gabinet z etycznym podejściem
-663|Dr Dt. Devrim Biriken Sipahi pracuje jako dentystka w Stambule od ponad 35 lat. Jej syn, Dt. Ekin Sipahi, również jest dentystą i pracuje z nią w gabinecie. Każde leczenie zaczyna się od dokładnej diagnozy; zalecamy tylko to, czego potrzebujesz, i dbamy o zdrowe zęby.
+663|Dr Devrim pracuje jako dentystka w Stambule od ponad 35 lat. Jej syn, Dt. Ekin Sipahi, również jest dentystą i pracuje z nią w gabinecie. Każde leczenie zaczyna się od dokładnej diagnozy; zalecamy tylko to, czego potrzebujesz, i dbamy o zdrowe zęby.
 664|Odległość
 665|około %(km)s km
 666|Taksówką
@@ -675,7 +675,7 @@
 674|Rodzinny gabinet prowadzony przez dentystów w Şişli w Stambule: 35+ lat doświadczenia, ★ %(rating)s z %(count)s opinii Google, języki i prawdziwe historie.
 675|Dentysta Stambuł ★%(rating)s — Rodzinni Dentyści, 35+ Lat
 676|Implanty, licówki i korony w Stambule od zespołu dentystów matka-syn z 35+ letnim doświadczeniem. ★ %(rating)s w Google. Bezpłatna ocena na WhatsApp.
-677|O nas — Dr Devrim Sipahi i Dt. Ekin Sipahi, Rodzinni Dentyści
+677|O nas — Dr Devrim i Dt. Ekin Sipahi, Rodzinni Dentyści
 678|Rodzinny gabinet stomatologiczny w Şişli w Stambule: 35+ lat doświadczenia, najpierw diagnoza, tylko potrzebne leczenie. Poznaj dentystów, którzy będą Cię leczyć.
 679|Bezpłatna Ocena Stomatologiczna na WhatsApp — Odpowiada Dentysta
 680|Wyślij zdjęcie lub RTG i otrzymaj osobisty plan ze stałą pisemną wyceną — odpowiada dentysta, nie call center. Otwarte 7 dni w tygodniu.

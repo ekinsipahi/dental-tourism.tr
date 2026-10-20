@@ -108,7 +108,7 @@ def about(request):
 
     clinic = Clinic.primary()
     doctors = list(clinic.doctors.filter(is_active=True)) if clinic else []
-    _meta_about = page_meta("about", _("About Us — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Family Dentists"),
+    _meta_about = page_meta("about", _("About Us — Dr. Devrim & Dt. Ekin Sipahi, Family Dentists"),
                            _("A family dental clinic in Şişli, Istanbul: 35+ years' experience, diagnosis first and only "
                              "the treatment you need. Meet the dentists who will treat you."))
     seo = Seo(

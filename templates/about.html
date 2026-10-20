@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="about-collage reveal" data-delay="150">
-    {% if doctor.photo_src %}<figure class="ac-main tilt"><img src="{{ doctor.photo_src }}" alt="{{ doctor.name }}" width="520" height="620" fetchpriority="high"><figcaption>{{ doctor.name }}<span>{{ doctor_loc.title_display }}</span></figcaption></figure>{% endif %}
+    {% if doctor.photo_src %}<figure class="ac-main tilt"><img src="{{ doctor.photo_src }}" alt="{{ doctor.full_name }}" width="520" height="620" fetchpriority="high"><figcaption>{{ doctor.display_name }}<span>{% if doctor.brand_name %}{{ doctor.full_name }} · {% endif %}{{ doctor_loc.title_display }}</span></figcaption></figure>{% endif %}
     {% for p in about_photos|slice:":2" %}<figure class="ac-side ac-side-{{ forloop.counter }} tilt"><img src="{{ p.src }}" alt="{{ p.alt }}" width="320" height="240" loading="lazy"></figure>{% endfor %}
     {% if clinic.years_experience %}<div class="ac-badge float"><strong><span data-count="{{ clinic.years_experience }}">{{ clinic.years_experience }}</span>+</strong><span>{% trans "Years experience" %}</span></div>{% endif %}
   </div>
@@ -47,7 +47,7 @@
     {% for d in doctors %}
     <a class="card team-card reveal" href="{{ d.object.get_absolute_url }}" data-delay="{% widthratio forloop.counter0 1 120 %}">
       {% if d.photo_src %}<img class="team-photo" src="{{ d.photo_src }}" alt="{{ d.full_name }}" loading="lazy" width="120" height="120">{% else %}<span class="team-photo team-initial">{{ d.full_name|first }}</span>{% endif %}
-      <div><h3>{{ d.full_name }}</h3><p class="team-title">{{ d.title_display }}</p><p class="muted">{{ d.bio|markdown|striptags|truncatewords:32 }}</p><span class="team-more">{% trans "Read the dentist's profile" %} →</span></div>
+      <div><h3>{{ d.display_name }}</h3><p class="team-title">{% if d.brand_name %}{{ d.full_name }} · {% endif %}{{ d.title_display }}</p><p class="muted">{{ d.bio|markdown|striptags|truncatewords:32 }}</p><span class="team-more">{% trans "Read the dentist's profile" %} →</span></div>
     </a>
     {% endfor %}
   </div>
