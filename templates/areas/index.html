@@ -17,7 +17,7 @@
 </div></section>
 <section class="section"><div class="wrap">
   <h2>{% trans "Treatments at our clinic" %}</h2>
-  <div class="grid grid-4">{% for t in treatments %}<a class="card" href="{{ t.url }}"><h3>{{ t.icon }} {{ t.name }}</h3></a>{% endfor %}</div>
+  <div class="grid grid-4">{% for t in treatments %}<a class="card" href="{{ t.url }}" data-track="treatment"><h3>{{ t.icon }} {{ t.name }}</h3></a>{% endfor %}</div>
 </div></section>
 {% include "pseo/_proof.html" %}
 {% include "pseo/_photos.html" %}

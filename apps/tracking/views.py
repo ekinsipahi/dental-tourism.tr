@@ -13,6 +13,7 @@ VALID_EVENTS = {
     "scroll_depth","time_on_page","section_view",
     "instagram_click","youtube_click","before_after_interact",
     "chatbot_open","chatbot_message","language_switch","review_read",
+    "email_click","nav_click",
 }
 
 def _get_or_create_session(request):

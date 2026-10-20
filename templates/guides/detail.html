@@ -15,7 +15,7 @@
       <span class="eyebrow">{% trans "Our partner agency" %}</span>
       <h2>{% trans "Dental tourism agency in Turkey: Sterr Agency" %}</h2>
       <p class="muted">{% trans "We focus on your treatment and work together with our partner agency. Medical decisions always stay with the dentist." %}</p>
-      <a class="btn btn-outline btn-sm" href="{{ partner_url }}" target="_blank" rel="noopener">{% trans "Dental tourism with Sterr Agency" %} →</a>
+      <a class="btn btn-outline btn-sm" href="{{ partner_url }}" target="_blank" rel="noopener" data-track="partner">{% trans "Dental tourism with Sterr Agency" %} →</a>
     </div>
     {% endif %}
     {% include "pseo/_price_note.html" %}
@@ -37,7 +37,7 @@
 {% page_faq faq=faq %}
 {% if areas %}<section class="section"><div class="wrap">
   <h2><a href="{{ areas_hub }}">{% trans "Dental clinic by district" %}</a></h2>
-  <div class="chips">{% for a in areas %}<a class="chip" href="{{ a.url }}">📍 {{ a.name }}</a>{% endfor %}</div>
+  <div class="chips">{% for a in areas %}<a class="chip" href="{{ a.url }}" data-track="nav">📍 {{ a.name }}</a>{% endfor %}</div>
 </div></section>{% endif %}
 {% include "pseo/_related.html" %}
 {% include "pseo/_links.html" %}

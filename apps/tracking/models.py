@@ -173,7 +173,7 @@ class VisitorSession(models.Model):
         """0-100 arası intent skoru — admin'de gösterilir."""
         score = 0
         score += min(self.whatsapp_clicks * 25, 50)
-        score += min(self.phone_clicks * 20, 40)
+        score += min(self.phone_clicks * 5, 10)  # telefon hattı yanıtlanmıyor: niyet var, iletişim yok
         score += min(self.form_submits * 30, 60)
         score += min(self.cta_clicks * 5, 20)
         score += min(self.video_plays * 5, 10)
@@ -258,6 +258,8 @@ class TrackingEvent(models.Model):
     CHATBOT_MSG      = "chatbot_message"
     LANG_SWITCH      = "language_switch"
     REVIEW_READ      = "review_read"
+    EMAIL_CLICK      = "email_click"
+    NAV_CLICK        = "nav_click"     # iç gezinme (tedavi kartı, semt çipi …) — CTA değil
 
     EVENT_CHOICES = [
         (WHATSAPP_CLICK,  "WhatsApp Click"),
@@ -278,6 +280,8 @@ class TrackingEvent(models.Model):
         (CHATBOT_MSG,     "Chatbot Message"),
         (LANG_SWITCH,     "Language Switch"),
         (REVIEW_READ,     "Review Read"),
+        (EMAIL_CLICK,     "E-mail Click"),
+        (NAV_CLICK,       "Navigation Click"),
     ]
 
     session    = models.ForeignKey(VisitorSession, on_delete=models.CASCADE, related_name="events")
@@ -323,7 +327,27 @@ class ContactClick(TrackingEvent):
         proxy = True
         ordering = ["-timestamp"]
         verbose_name = "İletişim tıklaması"
-        verbose_name_plural = "📞 İletişim tıklamaları (telefon / WhatsApp / form)"
+        verbose_name_plural = "📞 İletişim tıklamaları (WhatsApp / form / telefon denemesi)"
+
+
+SOCIAL_EVENTS = (TrackingEvent.INSTAGRAM_CLICK, TrackingEvent.MAPS_CLICK, TrackingEvent.EMAIL_CLICK,
+                 TrackingEvent.YOUTUBE_CLICK)
+
+
+class SocialClickManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(event_type__in=SOCIAL_EVENTS).select_related("session")
+
+
+class SocialClick(TrackingEvent):
+    """Admin görünümü: Instagram / YouTube / yol tarifi / e-posta — iletişim değil, ilgi ve güven sinyali."""
+    objects = SocialClickManager()
+
+    class Meta:
+        proxy = True
+        ordering = ["-timestamp"]
+        verbose_name = "Sosyal / yol tarifi tıklaması"
+        verbose_name_plural = "🔗 Sosyal / yol tarifi / e-posta tıklamaları"
 
 
 # ── Lead ──────────────────────────────────────────────────────────────────────

@@ -11,7 +11,7 @@ Admin panelinden:
 from django.contrib import admin
 from django.utils.html import format_html, format_html_join
 from django.urls import reverse
-from .models import AdConversion, ContactClick, Lead, PageView, VisitorSession, WhatsAppMatch
+from .models import AdConversion, ContactClick, Lead, PageView, SocialClick, VisitorSession, WhatsAppMatch
 
 
 class MindFilter(admin.SimpleListFilter):
@@ -370,8 +370,10 @@ def _flag(cc):
     return "".join(chr(0x1F1E6 + ord(c) - 65) for c in cc)
 
 
-_TYPE = {"phone_click": ("📞 Telefon", "#2563eb"), "whatsapp_click": ("💬 WhatsApp", "#16a34a"),
-         "form_submit": ("📝 Form", "#9333ea")}
+_TYPE = {"phone_click": ("☎️ Telefon denemesi (hat yanıtlanmıyor)", "#64748b"), "whatsapp_click": ("💬 WhatsApp", "#16a34a"),
+         "form_submit": ("📝 Form", "#9333ea"), "instagram_click": ("📸 Instagram", "#d6249f"),
+         "youtube_click": ("▶️ YouTube", "#dc2626"), "maps_click": ("📍 Yol tarifi / Google", "#2563eb"),
+         "email_click": ("✉️ E-posta", "#0f766e")}
 _SRC = {"google_ads": ("Google Ads", "#1a73e8"), "meta_ads": ("Meta Ads", "#1877f2"),
         "google_organic": ("Google organik", "#34a853"), "bing_organic": ("Bing", "#00809d"), "social": ("Sosyal", "#e91e63"),
         "referral": ("Referans", "#ff9800"), "direct": ("Direkt", "#757575"), "email": ("E-posta", "#9c27b0")}
@@ -407,6 +409,8 @@ class ContactClickAdmin(admin.ModelAdmin):
     @admin.display(description="Eylem", ordering="event_type")
     def action(self, o):
         label, color = _TYPE.get(o.event_type, (o.event_type, "#666"))
+        if o.event_type == "whatsapp_click" and (o.data or {}).get("element") == "whatsapp_call":
+            label, color = "📞 WhatsApp arama", "#15803d"
         return format_html('<span style="background:{};color:#fff;padding:2px 8px;border-radius:10px;'
                            'white-space:nowrap">{}</span>', color, label)
 
@@ -482,3 +486,10 @@ class ContactClickAdmin(admin.ModelAdmin):
                         s.google_keyword or s.utm_term, s.google_campaign or s.utm_campaign, s.gclid or "",
                         o.page_url, o.persona, o.stage, o.language, o.mind, describe(o.mindset)])
         return resp
+
+
+@admin.register(SocialClick)
+class SocialClickAdmin(ContactClickAdmin):
+    """Instagram / YouTube / yol tarifi / e-posta — iletişim listesinden ayrı (iletişim sayılmaz)."""
+    list_filter = ["event_type", "session__ip_country", "session__device_type", "session__traffic_source", "position"]
+

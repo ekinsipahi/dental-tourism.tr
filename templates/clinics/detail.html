@@ -9,7 +9,7 @@
   {% if c.is_fallback %}<p class="fallback-note">{% trans "This page is not yet available in your language — showing the original version." %}</p>{% endif %}
   <div class="meta-row">
     {% if stats.count %}<a href="#reviews">⭐ <strong>{{ stats.avg }}</strong>/5 · {% blocktrans count n=stats.count %}{{ n }} review{% plural %}{{ n }} reviews{% endblocktrans %}</a>{% endif %}
-    {% if c.google_rating %}<a href="{{ c.google_business_url|default:c.maps_url|default:'#reviews' }}" target="_blank" rel="noopener">Google {{ c.google_rating }}★{% if c.google_review_count %} ({{ c.google_review_count }}){% endif %} ↗</a>{% endif %}
+    {% if c.google_rating %}<a href="{{ c.google_business_url|default:c.maps_url|default:'#reviews' }}" target="_blank" rel="noopener" data-track="maps">Google {{ c.google_rating }}★{% if c.google_review_count %} ({{ c.google_review_count }}){% endif %} ↗</a>{% endif %}
   </div>
   {% if links %}<nav class="social-links" aria-label="{% trans 'Profiles' %}">{% for l in links %}<a href="{{ l.url }}" target="_blank" rel="noopener" class="sl sl-{{ l.platform }}" data-track="{% if l.platform == 'instagram' %}instagram{% elif l.platform == 'youtube' %}youtube{% else %}cta{% endif %}">{{ l.label }} ↗</a>{% endfor %}</nav>{% endif %}
   <div class="btn-row" style="margin-top:1.5rem">

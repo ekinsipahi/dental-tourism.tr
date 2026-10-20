@@ -18,8 +18,8 @@
         <p class="muted" style="margin-top:1rem;font-size:.88rem">{% trans "Ethical dental treatment in Istanbul for international patients — transparent diagnosis, fixed prices, direct contact with your dentist." %}</p>
         {% if clinic.google_rating %}<a class="footer-rating" href="{{ clinic.google_business_url|default:'#' }}" target="_blank" rel="noopener"><span class="rv-stars">★★★★★</span> <strong>{{ clinic.google_rating }}</strong> · {% blocktrans count n=clinic.google_review_count|default:0 %}{{ n }} Google review{% plural %}{{ n }} Google reviews{% endblocktrans %}</a>{% endif %}
         <ul class="footer-social">
-          {% if clinic.instagram %}<li><a href="https://www.instagram.com/{{ clinic.instagram }}/" target="_blank" rel="noopener">Instagram</a></li>{% endif %}
-          {% if clinic.youtube_url %}<li><a href="{{ clinic.youtube_url }}" target="_blank" rel="noopener">YouTube</a></li>{% endif %}
+          {% if clinic.instagram %}<li><a href="https://www.instagram.com/{{ clinic.instagram }}/" target="_blank" rel="noopener" data-track="instagram">Instagram</a></li>{% endif %}
+          {% if clinic.youtube_url %}<li><a href="{{ clinic.youtube_url }}" target="_blank" rel="noopener" data-track="youtube">YouTube</a></li>{% endif %}
           {% if clinic.google_business_url %}<li><a href="{{ clinic.google_business_url }}" target="_blank" rel="noopener">Google</a></li>{% endif %}
         </ul>
       </div>
@@ -45,7 +45,7 @@
           {% if wa_url %}<li><a href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">💬 WhatsApp</a></li>{% endif %}
           <li><a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone">📞 {{ clinic.phone }}</a></li>
           {% if wa_call_url %}<li>{% include "components/wa_call.html" with cls="wa-call-link" %}</li>{% endif %}
-          {% if clinic.email %}<li><a href="mailto:{{ clinic.email }}">✉️ {{ clinic.email }}</a></li>{% endif %}
+          {% if clinic.email %}<li><a href="mailto:{{ clinic.email }}" data-track="email">✉️ {{ clinic.email }}</a></li>{% endif %}
           <li class="muted">📍 {{ clinic.address }}</li>
           <li><a href="{% url 'core:about' %}">{% trans "About us" %}</a></li>
           <li><a href="{{ clinic.get_absolute_url }}#reviews">{% trans "Patient reviews" %}</a></li>

@@ -77,15 +77,19 @@
 
   /* ── Google Analytics 4 — tracker'ın topladığı her olay GA4'e de gider (gtag <head>'de, Consent Mode v2) ──
      GA4 → Yönetici → Özel tanımlar'da şu parametreleri "etkinlik kapsamlı boyut" olarak kaydet:
-     button_label, button_position, question, section, faq_topic, persona_mind, page_type, funnel_stage
-     Anahtar etkinlik (key event) yap: phone_click, whatsapp_click, generate_lead, form_start */
+     button_label, button_position, contact_method, question, section, faq_topic, persona_mind, page_type, funnel_stage
+     Anahtar etkinlik (key event) yap: whatsapp_click, generate_lead
+     (phone_click anahtar etkinlik DEĞİL: normal telefon hattı yanıtlanmıyor — yalnızca "aramak istedi" niyeti)
+     contact_method: wa_chat | wa_call | phone — "WhatsApp'tan arayın" ile WhatsApp sohbetini ayırır */
   var GA_NAMES = {
     phone_click: "phone_click", whatsapp_click: "whatsapp_click", form_start: "form_start", form_submit: "generate_lead",
     cta_click: "cta_click", maps_click: "maps_click", instagram_click: "instagram_click", youtube_click: "youtube_click",
     language_switch: "language_switch", scroll_depth: "scroll_depth", faq_open: "faq_open", faq_read: "faq_read",
     section_view: "section_view", section_time: "section_time", before_after_interact: "before_after_view",
-    video_play: "video_start", video_time: "video_watch", time_on_page: "page_read", chatbot_open: "chat_open"
+    video_play: "video_start", video_time: "video_watch", time_on_page: "page_read", chatbot_open: "chat_open",
+    email_click: "email_click", nav_click: "nav_click"
   };
+  var CONTACT_METHOD = { whatsapp: "wa_chat", whatsapp_call: "wa_call", phone: "phone", email: "email" };
   function ga(type, data) {
     var name = GA_NAMES[type];
     if (!name || !window.gtag) return;
@@ -98,6 +102,7 @@
     if (data.seconds != null) p.seconds = data.seconds;
     if (data.depth != null) p.percent_scrolled = data.depth;
     if (data.href) p.link_url = String(data.href).slice(0, 100);
+    if (CONTACT_METHOD[data.element]) p.contact_method = CONTACT_METHOD[data.element];
     if (type === "time_on_page" || type === "section_time" || type === "faq_read") p.transport_type = "beacon";
     try { gtag("event", name, p); } catch (e) {}
   }
@@ -120,7 +125,8 @@
   // Butonun sayfadaki yeri (admin'de "nereden tıkladı")
   var POSITIONS = [[".stage-dock", "stage-dock"], [".wa-float", "wa-float"], [".mobile-menu", "mobile-menu"], [".mega", "mega-menu"],
     [".site-header", "navbar"], [".site-footer", "footer"], [".side-cta", "sidebar"], [".cta-box", "cta-box"],
-    [".pseo-price", "price-note"], [".rv", "reviews"], [".page-head, .h-hero, .hero, [class*=hero]", "hero"]];
+    [".pseo-price", "price-note"], [".rv", "reviews"], [".ig-float", "ig-float"], [".save-first", "save-first"],
+    [".h-ready-banner", "hero"], [".page-head, .h-hero, .hero, [class*=hero]", "hero"]];
   function positionOf(el) {
     for (var i = 0; i < POSITIONS.length; i++) if (el.closest(POSITIONS[i][0])) return POSITIONS[i][1];
     var sec = el.closest("section[id], [data-track-section]");
@@ -160,19 +166,35 @@
   }
 
   // Tıklamalar
-  var MAP = { whatsapp: "whatsapp_click", phone: "phone_click", cta: "cta_click", maps: "maps_click",
-              instagram: "instagram_click", youtube: "youtube_click", before_after: "before_after_interact",
-              "lang-switch": "language_switch", treatment: "cta_click", form: "cta_click", faq: "faq_open" };
+  // whatsapp_call = "WhatsApp'tan arayın" butonu: sayaçlarda WhatsApp tıklaması gibi sayılır (aynı event), ama
+  // data.element / GA4 contact_method ile sohbetten ayrılır. nav = iç gezinme (tedavi kartı, semt çipleri …): CTA DEĞİL.
+  var MAP = { whatsapp: "whatsapp_click", whatsapp_call: "whatsapp_click", phone: "phone_click", cta: "cta_click",
+              maps: "maps_click", instagram: "instagram_click", youtube: "youtube_click", email: "email_click",
+              before_after: "before_after_interact", "lang-switch": "language_switch", treatment: "nav_click",
+              nav: "nav_click", partner: "nav_click", form: "cta_click", faq: "faq_open" };
+  // data-track'i olmayan linkler için güvenlik ağı (href'ten tür çıkarımı)
+  function typeFromHref(href) {
+    if (href.indexOf("tel:") === 0) return "phone";
+    if (href.indexOf("mailto:") === 0) return "email";
+    if (/wa\.me\/|api\.whatsapp\.com/.test(href)) return "whatsapp";
+    if (/instagram\.com/.test(href)) return "instagram";
+    if (/youtube\.com|youtu\.be/.test(href)) return "youtube";
+    if (/google\.[a-z.]+\/maps|maps\.app\.goo\.gl|g\.page/.test(href)) return "maps";
+    return "";
+  }
   document.addEventListener("click", function (e) {
-    var el = e.target.closest("[data-track], a[href^='tel:'], a[href*='wa.me/'], a[href*='api.whatsapp.com']");
+    var el = e.target.closest("[data-track], a[href^='tel:'], a[href^='mailto:'], a[href*='wa.me/'], a[href*='api.whatsapp.com'], " +
+                              "a[href*='instagram.com'], a[href*='youtube.com'], a[href*='youtu.be'], a[href*='google.com/maps'], a[href*='maps.app.goo.gl']");
     if (!el) return;
     var href = el.getAttribute("href") || "";
-    var type = el.dataset.track || (href.indexOf("tel:") === 0 ? "phone" : "whatsapp");
-    if (type === "faq") return;  // SSS: aşağıdaki "toggle" dinleyicisi ölçer (açtı + kaç sn okudu)
-    var label = (el.getAttribute("aria-label") || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
+    var type = el.dataset.track || typeFromHref(href);
+    if (!type || type === "faq") return;  // SSS: aşağıdaki "toggle" dinleyicisi ölçer (açtı + kaç sn okudu)
+    var head = el.querySelector("h2, h3, h4");  // kartlarda tüm kart metni yerine başlık
+    var label = (el.getAttribute("aria-label") || (head && head.textContent) || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
     track(MAP[type] || "cta_click", { element: type, label: label, text: label.slice(0, 60), href: href.slice(0, 200),
                                       position: positionOf(el), screen: screen.width + "x" + screen.height });
-    if ((type === "whatsapp" || type === "phone") && window.fbq) fbq("track", "Contact");  // GA4: ga() gönderir
+    // Meta "Contact": yalnızca WhatsApp (sohbet / arama). Normal telefon hattı yanıtlanmadığı için iletişim sayılmaz.
+    if ((type === "whatsapp" || type === "whatsapp_call") && window.fbq) fbq("track", "Contact");  // GA4: ga() gönderir
   });
 
   // SSS: açtı (zayıf sinyal) + kaç saniye açık tuttu (asıl sinyal). data-mind-q = sorunun persona etiketi
@@ -201,7 +223,7 @@
   });
 
   // Video
-  document.querySelectorAll("video").forEach(function (v) {
+  document.querySelectorAll("video:not(.logo-video)").forEach(function (v) {  // navbar logo animasyonu hasta videosu değil
     var t0 = 0;
     v.addEventListener("play", function () { t0 = Date.now(); track("video_play", {}); });
     v.addEventListener("pause", function () { if (t0) track("video_time", { seconds: Math.round((Date.now() - t0) / 1000) }); t0 = 0; });

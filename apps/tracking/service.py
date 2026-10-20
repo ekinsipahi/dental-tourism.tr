@@ -387,9 +387,8 @@ def _update_session_from_event(session, event_type: str, data: dict):
             update_fields.append("avg_scroll_depth")
 
     elif event_type == TrackingEvent.TIME_ON_PAGE:
-        session.total_time_sec += data.get("seconds", 0)
-        session.page_views += 1
-        update_fields.extend(["total_time_sec", "page_views"])
+        session.total_time_sec += data.get("seconds", 0)  # page_views pageview API'de sayılır (çift sayma yok)
+        update_fields.append("total_time_sec")
 
     session.save(update_fields=update_fields)
 

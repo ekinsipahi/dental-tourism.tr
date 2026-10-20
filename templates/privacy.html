@@ -11,6 +11,6 @@
   <h2>{% trans "Your rights" %}</h2>
   <p>{% trans "Under GDPR and the Turkish KVKK you can request access to, correction or deletion of your data at any time by contacting us." %}</p>
   {% endif %}
-  {% if clinic.email %}<p><a href="mailto:{{ clinic.email }}">{{ clinic.email }}</a></p>{% endif %}
+  {% if clinic.email %}<p><a href="mailto:{{ clinic.email }}" data-track="email">{{ clinic.email }}</a></p>{% endif %}
 </div></section>
 {% endblock %}

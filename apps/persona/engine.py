@@ -26,7 +26,9 @@ CACHE_TTL = 60 * 5
 VISIT_GAP = timedelta(minutes=30)
 SWITCH_CONFIDENCE = 0.45
 STRONG_SWITCH_CONFIDENCE = 0.60   # gösterilen persona'dan başka birine geçiş eşiği (gezinmeyle netleşen niyet)
-CONVERSION_EVENTS = {"whatsapp_click": "whatsapp", "phone_click": "phone", "form_submit": "form"}
+# Dönüşüm = gerçekten bize ulaşan eylem. Normal telefon hattı YANITLANMIYOR → phone_click niyet sinyalidir (karar
+# aşaması), ama bandit / ML için dönüşüm sayılmaz; yoksa model hiç cevaplanmayan bir eyleme doğru öğrenir.
+CONVERSION_EVENTS = {"whatsapp_click": "whatsapp", "form_submit": "form"}
 
 DEFAULT_RESULT = {
     "persona": PERSONA_UNKNOWN, "inferred": PERSONA_UNKNOWN, "confidence": 0.0,
@@ -152,12 +154,14 @@ def funnel_stage(session):
     """Huni aşaması — arayüz buna göre değişir (base.html data-stage):
     awareness     → ilk keşif: eğitici, sakin
     consideration → dönen / fiyat, önce-sonra, hekim, 3+ sayfa: güven kanıtı öne çıkar
-    decision      → WhatsApp / telefon / form / CTA'ya dokundu: iletişim butonları öne çıkar
+    decision      → WhatsApp / telefon / form gönderdi: iletişim butonları öne çıkar
+    CTA tıklaması (tedavi kartı, "ücretsiz danışmanlık" linki …) ve forma odaklanma niyet gösterir ama henüz
+    iletişim değildir → consideration.
     """
-    if (session.whatsapp_clicks or session.phone_clicks or session.form_starts or session.form_submits
-            or session.cta_clicks):
+    if session.whatsapp_clicks or session.phone_clicks or session.form_submits:
         return "decision"
-    if (session.total_sessions >= 2 or session.total_page_views >= 3 or session.price_section_clicks
+    if (session.cta_clicks or session.form_starts or session.total_sessions >= 2 or session.total_page_views >= 3
+            or session.price_section_clicks
             or session.price_section_time >= 10 or session.before_after_views or session.doctor_profile_views
             or session.testimonial_reads >= 2):
         return "consideration"
@@ -313,7 +317,8 @@ def get_or_create_persona(request):
 # ══ 4. Events / feedback ══════════════════════════════════════════════════════
 EVENT_ALIASES = {
     "scroll_depth": "scroll", "before_after_interact": "before_after", "youtube_click": "video_play",
-    "maps_click": "click", "instagram_click": "click", "language_switch": "click",
+    "maps_click": "click", "instagram_click": "social_proof", "language_switch": "click",
+    "nav_click": "click", "email_click": "click",
     "chatbot_open": "click", "chatbot_message": "click", "video_progress": "video_time",
 }
 SECTION_FIELDS = {
@@ -325,6 +330,9 @@ SECTION_FIELDS = {
     "doctor": (None, "doctor_profile_views"),
     "faq": (None, "faq_interactions"),
     "video": ("video_watch_time", None),
+    "videos": ("video_watch_time", None),                    # "Hastalarımız videoda" bölümü (pseo/_photos.html)
+    # "price-note" BİLEREK yok: kalite okuyucusu da fiyat notunu kaydırarak geçer — fiyat ilgisi yalnızca nottaki
+    # butona tıklayınca sayılır (whatsapp/phone + position="price-note"), bkz. test_visitor BestClinicReaderTests
 }
 
 
@@ -371,6 +379,9 @@ def _count_evidence(session, event_type, data, page_url=""):
         changed = True
     elif event_type == "video_play":
         add_evidence(session, "view", "Hasta videosu izledi", {PERSONA_TRUST: 0.6})
+        changed = True
+    elif event_type == "social_proof":
+        add_evidence(session, "click", "Instagram'da hasta hikâyelerine baktı", {PERSONA_TRUST: 0.6})
         changed = True
     if changed:
         session.save(update_fields=["page_scores", "pages_seen", "evidence"])
@@ -436,6 +447,8 @@ def _update_aggregates(s, event_type, data, page_type):
         inc("review_section_time", _num(data.get("seconds"), 600))
     elif event_type == "video_play":
         inc("video_plays")
+    elif event_type == "social_proof":  # Instagram'da hasta hikâyelerine baktı — yorum okumak gibi güven sinyali
+        inc("testimonial_reads")
     elif event_type == "video_time":
         inc("video_watch_time", _num(data.get("seconds"), 1800))
     elif event_type == "urgency_cta":

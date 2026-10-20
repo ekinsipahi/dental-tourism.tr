@@ -32,14 +32,14 @@
 
 <section class="section section-alt"><div class="wrap">
   <h2>{% trans "Treatments at our clinic" %}</h2>
-  <div class="grid grid-4">{% for t in treatments %}<a class="card" href="{{ t.url }}"><h3>{{ t.icon }} {{ t.name }}</h3></a>{% endfor %}</div>
+  <div class="grid grid-4">{% for t in treatments %}<a class="card" href="{{ t.url }}" data-track="treatment"><h3>{{ t.icon }} {{ t.name }}</h3></a>{% endfor %}</div>
 </div></section>
 {% include "pseo/_proof.html" %}
 {% include "pseo/_photos.html" %}
 {% page_faq faq=faq %}
 <section class="section"><div class="wrap">
   <h2>{% trans "Other districts near our clinic" %}</h2>
-  <div class="chips">{% for a in areas %}<a class="chip" href="{{ a.url }}">📍 {{ a.name }}</a>{% endfor %}</div>
+  <div class="chips">{% for a in areas %}<a class="chip" href="{{ a.url }}" data-track="nav">📍 {{ a.name }}</a>{% endfor %}</div>
 </div></section>
 {% include "pseo/_links.html" %}
 <section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>
