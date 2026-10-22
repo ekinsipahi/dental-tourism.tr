@@ -226,16 +226,14 @@ def get_or_create_persona(request):
     cache_key = f"persona:{key}"
     cached = cache.get(cache_key)
     if cached and not request.GET.get("utm_term"):
-        # Yeni bir sayfa türüne geçtiyse (fiyat sayfası, lüks tedavi…) yeniden hesapla — gezinme persona'yı değiştirir
-        from .pages import REPEAT_CAP, page_signal
-
-        kind, _sig = page_signal(request.path)
-        if not kind or cached.get("_seen", []).count(kind) >= REPEAT_CAP:
-            return cached
+        # Sayfa GET'inde DB'ye gidilmez: gezinmenin persona'ya etkisi (apply_page) pageview beacon'ında işlenir
+        # (observe_page) ve önbelleği tazeler.
+        return cached
 
     now = timezone.now()
     session = VisitorSession.objects.filter(session_key=key).first()
     tracking = getattr(request, "tracking_session", None)
+    dirty = False  # yalnızca gerçekten değişen oturum yazılır (önbellek miss'i başına UPDATE olmasın)
     from apps.tracking.visitor import get_visitor_id
 
     vid = get_visitor_id(request)
@@ -244,6 +242,7 @@ def get_or_create_persona(request):
         session = VisitorSession.objects.filter(visitor_id=vid).order_by("-last_seen").first()
         if session is not None:
             session.session_key = key
+            dirty = True
     if session is None:
         ctx = intent_scores(request)
         session = VisitorSession(
@@ -258,10 +257,11 @@ def get_or_create_persona(request):
             visit_started_at=now,
             visitor_id=vid,
         )
-        session.save()
+        dirty = True  # tek INSERT: aşağıda persona skorlarıyla birlikte bir kez yazılır (INSERT + UPDATE değil)
     else:
         if session.last_seen and now - session.last_seen > VISIT_GAP:
             # Yeni ziyaret
+            dirty = True
             session.total_sessions += 1
             session.visit_started_at = now
             session.last_persona_at_exit = session.shown_persona
@@ -276,28 +276,38 @@ def get_or_create_persona(request):
                 session.intent_scores = merged
             if tracking and getattr(tracking, "traffic_source", ""):
                 session.referral_source = tracking.traffic_source
-        session.language_code = getattr(request, "LANGUAGE_CODE", session.language_code)
+        new_lang = getattr(request, "LANGUAGE_CODE", session.language_code)
+        if new_lang != session.language_code:
+            session.language_code = new_lang
+            dirty = True
         if vid and not session.visitor_id:
             session.visitor_id = vid
+            dirty = True
 
-    from .pages import apply_page
-
-    apply_page(session, request.path)
+    # Sayfanın persona'ya etkisi (apply_page) burada DEĞİL, pageview beacon'ında (observe_page) uygulanır
     probs = infer(session)
     best = max(probs, key=probs.get)
-    session.persona_scores = probs
+    if session.persona_scores != probs:
+        session.persona_scores = probs
+        dirty = True
     if best != session.assigned_persona:
         session.update_persona(best, probs[best], "rule")
+        dirty = True
 
     if not settings.PERSONA_UI_ENABLED:
         # Gözlem modu: teşhis kaydedilir, arayüz varsayılan kalır, bandit deneyi yapılmaz
-        session.shown_persona = PERSONA_UNKNOWN
-        session.save()
+        if session.shown_persona != PERSONA_UNKNOWN:
+            session.shown_persona = PERSONA_UNKNOWN
+            dirty = True
+        if dirty:
+            session.save()
         result = _result(session, probs, "observe")
         result["_seen"] = list(session.pages_seen or [])
         cache.set(cache_key, result, CACHE_TTL)
         return result
 
+    if session.pk is None:
+        session.save()
     exposure = PersonaExposure.objects.filter(session=session, visit_number=session.total_sessions).first()
     method = exposure.policy if exposure else "bandit"
     if exposure is None:
@@ -345,6 +355,24 @@ SECTION_FIELDS = {
     # "price-note" BİLEREK yok: kalite okuyucusu da fiyat notunu kaydırarak geçer — fiyat ilgisi yalnızca nottaki
     # butona tıklayınca sayılır (whatsapp/phone + position="price-note"), bkz. test_visitor BestClinicReaderTests
 }
+
+
+def observe_page(session_key, path):
+    """Pageview beacon'ı: sayfanın persona sinyali (apply_page) + yeniden teşhis; değiştiyse yazar, önbelleği tazeler.
+    Sayfa GET'i böylece hiç DB'ye gitmez (get_or_create_persona önbellekten döner)."""
+    from .pages import apply_page
+
+    session = VisitorSession.objects.filter(session_key=session_key).first()
+    if session is None:
+        return
+    if apply_page(session, path):
+        probs = infer(session)
+        best = max(probs, key=probs.get)
+        session.persona_scores = probs
+        if best != session.assigned_persona:
+            session.update_persona(best, probs[best], "rule")
+        session.save()
+        cache.delete(f"persona:{session_key}")  # bir sonraki GET yeni teşhisi hesaplar (yalnızca okur, yazmaz)
 
 
 def record_event(session_key, event_type, data=None, page_url="", page_type="", session=None):

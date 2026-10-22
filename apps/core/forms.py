@@ -25,11 +25,20 @@ class ContactForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        from django.utils.translation import get_language
+
+        from apps.localization.memo import memo
         from apps.localization.models import with_translations
 
-        self.fields["treatment"].queryset = with_translations(Treatment.objects.filter(is_active=True).defer("body", "faq", "short_description"),
-                                                              tr_defer=("body", "faq", "short_description"))
-        self.fields["treatment"].label_from_instance = lambda t: t.localized().name
+        lang = get_language()
+        field = self.fields["treatment"]
+        field.queryset = Treatment.objects.filter(is_active=True)  # yalnızca gönderimde (POST) doğrulama için
+
+        def load():  # seçenek listesi dil başına süreç içi bellekte: formu taşıyan her sayfa 2 sorgu atmaz
+            qs = with_translations(Treatment.objects.filter(is_active=True).defer("body", "faq", "short_description"), lang,
+                                   tr_defer=("body", "faq", "short_description"))
+            return [("", str(field.empty_label))] + [(t.pk, t.localized(lang).name) for t in qs]
+        field.choices = memo(f"contact-choices:{lang}", 300, load, model=Treatment)
 
     def clean_website(self):
         if self.cleaned_data.get("website"):

@@ -74,11 +74,18 @@ def _ev(c, etype, data, page_url="/"):
                   content_type="application/json")
 
 
+def _open(c, url):
+    """Gerçek tarayıcı gibi: sayfa GET'i + pageview beacon'ı (sayfanın persona sinyali beacon'da işlenir, GET'te değil)."""
+    r = c.get(url)
+    c.post("/api/tracking/pageview/", data=json.dumps({"url": url}), content_type="application/json")
+    return r
+
+
 class PageBehaviourTests(SeededTestCase):
     """Sayfa puanı = açılınca %25 + kalan %75 × okuma süresi (60 sn = tam)."""
 
     def _visit(self, c, url, seconds):
-        c.get(url)
+        _open(c, url)
         _ev(c, "time_on_page", {"seconds": seconds}, url)
 
     def test_reading_price_pages_makes_price(self):
@@ -175,7 +182,7 @@ class BestClinicReaderTests(SeededTestCase):
         c = Client(HTTP_USER_AGENT=BROWSER_UA)
         for key in ("best-dental-clinic-turkey", "best-dental-clinic-istanbul"):
             slug = SeoTopic.objects.get(key=key).slug
-            self.assertEqual(c.get(f"/guide/{slug}/").status_code, 200)
+            self.assertEqual(_open(c, f"/guide/{slug}/").status_code, 200)
             _ev(c, "time_on_page", {"seconds": 90}, f"/guide/{slug}/")
             # Sayfadaki fiyat notu ve kenar kutusu ekranda göründü — bu fiyat ilgisi değildir
             self._event(c, "section_view", {"section": "price-note"})
@@ -201,7 +208,7 @@ class BestClinicReaderTests(SeededTestCase):
         from apps.persona.models import VisitorSession
 
         c = Client(HTTP_USER_AGENT=BROWSER_UA)
-        c.get("/prices/")
+        _open(c, "/prices/")
         c.get("/?utm_term=cheap+dental+turkey")
         s = self._session(c)
         old_price = s.page_scores["price"]
@@ -209,7 +216,7 @@ class BestClinicReaderTests(SeededTestCase):
         from django.core.cache import cache
 
         cache.clear()
-        c.get("/guide/best-dental-clinic-turkey-reviews/")
+        _open(c, "/guide/best-dental-clinic-turkey-reviews/")
         s = self._session(c)
         self.assertEqual(s.total_sessions, 2)
         self.assertLess(s.page_scores.get("price", 0), old_price)

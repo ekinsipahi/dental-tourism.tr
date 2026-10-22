@@ -337,9 +337,12 @@ def save_first(t):
     try:
         from apps.treatments.models import Treatment
 
-        rc = Treatment.objects.filter(key="root-canal", is_active=True).first()
-        if rc:
-            url = reverse("treatments:detail", kwargs={"slug": rc.localized(get_language()).slug})
+        from apps.localization.memo import memo
+
+        def load():
+            rc = Treatment.objects.filter(key="root-canal", is_active=True).first()
+            return reverse("treatments:detail", kwargs={"slug": rc.localized(get_language()).slug}) if rc else ""
+        url = memo(f"root-canal-url:{get_language()}", 300, load, model=Treatment)
     except NoReverseMatch:
         url = ""
     return {"show": True, "root_canal_url": url}

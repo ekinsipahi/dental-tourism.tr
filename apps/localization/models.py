@@ -41,6 +41,28 @@ class BaseTranslation(models.Model):
     error = models.TextField(blank=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def _parent_model(self):
+        for f in self._meta.fields:
+            if f.many_to_one and issubclass(f.related_model, TranslatableModel):
+                return f.related_model
+        return None
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        from .memo import bump
+
+        parent = self._parent_model()
+        if parent is not None:
+            bump(parent)
+
+    def delete(self, *args, **kwargs):
+        from .memo import bump
+
+        parent = self._parent_model()
+        if parent is not None:
+            bump(parent)
+        return super().delete(*args, **kwargs)
+
     class Meta:
         abstract = True
 
@@ -133,6 +155,15 @@ class TranslatableModel(models.Model):
     def save(self, *args, **kwargs):
         self.__dict__.pop("_tr_memo", None)
         super().save(*args, **kwargs)
+        from .memo import bump
+
+        bump(type(self))  # süreç içi memo girişleri (slug çözümü, listeler) bu model için geçersiz
+
+    def delete(self, *args, **kwargs):
+        from .memo import bump
+
+        bump(type(self))
+        return super().delete(*args, **kwargs)
 
     def refresh_from_db(self, *args, **kwargs):
         self.__dict__.pop("_tr_memo", None)

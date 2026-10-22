@@ -63,39 +63,56 @@ def home_sections():
     return out
 
 
-def home(request):
-    from apps.clinics.models import Clinic
+def _home_data(clinic, lang):
+    """Ana sayfanın her ziyaretçi için aynı olan verisi (tedaviler, yorumlar, videolar, SSS, slaytlar, vakalar, klinik
+    schema'sı) — dil başına 5 dk süreç içi bellekte. Ziyaretçi başına ~15 Supabase sorgusu yerine işçi başına 5 dk'da 1 kez."""
+    from django.core.cache import caches
 
-    lang = get_language()
-    clinic = Clinic.primary()
-    treatments = localize_list(with_translations(
-        Treatment.objects.filter(is_active=True, is_featured=True), lang), lang)
+    from apps.clinics.models import Clinic as _Clinic, light_reviews
+
+    from .models import ContentBlock
+
+    key = f"home-data:{clinic.pk if clinic else 0}:{lang}"
+    data = caches["local"].get(key)
+    if data is not None:
+        return data
+    treatments = localize_list(with_translations(Treatment.objects.filter(is_active=True, is_featured=True), lang), lang)
     # Tüm yayındaki kliniklerden yorumlar (öne çıkanlar önce) — çok klinikli yapıda karışık gelir
-    from apps.clinics.models import Clinic as _Clinic
-
     live = _Clinic.objects.published()
-    from apps.clinics.models import light_reviews
-
     multi_clinic = live.count() > 1
     reviews = light_reviews(Review.objects.filter(is_published=True, clinic__in=live).exclude(text=""), lang) \
-        .order_by("-is_featured", "order", "-review_date")[:12]
+        .order_by("-is_featured", "order", "-review_date")
     videos = light_reviews(Review.objects.filter(is_published=True, clinic__in=live).exclude(video_id=""), lang) \
-        .order_by("-is_featured", "order")[:6]
+        .order_by("-is_featured", "order")
     if multi_clinic:  # yorum kartında klinik adı/linki yalnızca çok klinikli yapıda gösterilir
         reviews, videos = reviews.select_related("clinic"), videos.select_related("clinic")
     faq = _home_faq(clinic)
-    from .models import ContentBlock
-
     block = ContentBlock.objects.filter(key="home-faq", is_active=True).first()
     if block:
         loc = block.localized(lang)
         if not loc.is_fallback and loc.items:
             faq = loc.items  # Admin'den düzenlenen SSS (FAQPage schema'sı da buradan üretilir)
+    data = {
+        "treatments": treatments, "multi_clinic": multi_clinic, "reviews": list(reviews[:12]), "videos": list(videos[:6]),
+        "faq": faq, "slides": list(clinic.images.filter(show_in_hero=True)[:5]) if clinic else [],
+        "cases": list(clinic.cases.filter(is_published=True, patient_consent=True)[:2]) if clinic else [],
+        "clinic_schema": clinic_schema(clinic, url="/") if clinic else None,
+    }
+    caches["local"].set(key, data, 300)
+    return data
+
+
+def home(request):
+    from apps.clinics.models import Clinic
+
+    lang = get_language()
+    clinic = Clinic.primary()
+    d = _home_data(clinic, lang)
+    treatments, multi_clinic, reviews, videos = d["treatments"], d["multi_clinic"], d["reviews"], d["videos"]
+    faq, slides, cases = d["faq"], d["slides"], d["cases"]
     from apps.clinics.search import ClinicSearchForm
 
     search_form = ClinicSearchForm(lang=lang)
-    slides = list(clinic.images.filter(show_in_hero=True)[:5]) if clinic else []
-    cases = list(clinic.cases.filter(is_published=True, patient_consent=True)[:2]) if clinic else []
 
     _meta_home = page_meta("home", _("Dental Tourism Istanbul ★%(rating)s — Family Dentists, 35+ Years") % proof(),
                            _("We save your natural teeth first: root canals, fillings, minimal-prep veneers — implants only if a "
@@ -106,8 +123,7 @@ def home(request):
         canonical=absolute(request.path),
         alternates=alternates_for("core:home"),
         append_site_name=True,
-        schema=[s for s in [organization_schema(), website_schema(),
-                            clinic_schema(clinic, url="/") if clinic else None, faq_schema(faq)] if s],
+        schema=[s for s in [organization_schema(), website_schema(), d["clinic_schema"], faq_schema(faq)] if s],
     )
     return render(request, "home.html", {
         "seo": seo, "treatments": treatments, "reviews": reviews, "videos": videos, "faq": faq,
@@ -117,10 +133,14 @@ def home(request):
 
 
 def about(request):
-    from apps.clinics.models import Clinic
+    from apps.clinics.models import Clinic, Doctor
+    from apps.localization.memo import memo
+    from apps.localization.models import with_all_translations
 
     clinic = Clinic.primary()
-    doctors = list(clinic.doctors.filter(is_active=True)) if clinic else []
+    # hekimler (tüm dillerdeki çevirileriyle) ve fotoğraflar klinik başına 5 dk süreç içi bellekte
+    doctors = memo(f"about-doctors:{clinic.pk}", 300,
+                   lambda: list(with_all_translations(clinic.doctors.filter(is_active=True))), model=Doctor) if clinic else []
     _meta_about = page_meta("about", _("About Us — Dr. Devrim & Dt. Ekin Sipahi, Family Dentists"),
                            _("A family dental clinic in Şişli, Istanbul: 35+ years' experience, diagnosis first and only "
                              "the treatment you need. Meet the dentists who will treat you."))
@@ -134,7 +154,7 @@ def about(request):
     from apps.seo.common import pseo_context
 
     ctx = pseo_context(request, offset=0, show_cases=True, photos=8)
-    photos = list(clinic.images.all()) if clinic else []
+    photos = memo(f"clinic-photos:{clinic.pk}", 300, lambda: list(clinic.images.all()), model=Clinic) if clinic else []
     ctx.update({"seo": seo, "doctors": [d.localized() for d in doctors], "page_type": "about",
                 "about_photos": photos[:3], "story_photos": photos[3:5] or photos[:2],
                 "clinic_loc": clinic.localized() if clinic else None})
@@ -267,6 +287,9 @@ def healthz(request):
         ping = "ok" if cache.get("healthz") == "1" else "miss"
     except Exception:  # noqa: BLE001
         ping = "error"
+    import os
+
     resp = HttpResponse("ok", content_type="text/plain")
     resp["X-Cache-Backend"], resp["X-Cache-Ping"] = backend, ping
+    resp["X-Commit"] = os.environ.get("RENDER_GIT_COMMIT", "")[:12] or "dev"  # deploy'un yayına çıktığı buradan görülür
     return resp

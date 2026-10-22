@@ -22,7 +22,11 @@ def _treatment(lang, slug):
 
 
 def _page(page_type, treatment, city=None):
-    return LandingPage.objects.filter(page_type=page_type, treatment=treatment, city=city, is_active=True).first()
+    from apps.localization.memo import memo
+
+    return memo(f"landing:{page_type}:{treatment.pk}:{getattr(city, 'pk', '')}", 300,
+                lambda: LandingPage.objects.filter(page_type=page_type, treatment=treatment, city=city, is_active=True).first(),
+                model=LandingPage)
 
 
 def treatment_city(request, slug, city_slug):

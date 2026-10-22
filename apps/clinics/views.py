@@ -21,7 +21,12 @@ def clinic_list(request):
 
     lang = get_language()
     form = ClinicSearchForm(request.GET or None, lang=lang)
-    results = search_clinics(form)
+    if request.GET:
+        results = search_clinics(form)
+    else:  # varsayılan liste dil başına 5 dk süreç içi bellekte (filtreli aramalar her seferinde çalışır)
+        from apps.localization.memo import memo
+
+        results = memo(f"clinic-list:{lang}", 300, lambda: search_clinics(form), model=Clinic)
     page = Paginator(results, 12).get_page(request.GET.get("page"))
     rows = [{"c": clinic.localized(lang), "offer": offer, "min_price": min_price,
              "doctor": next(iter(clinic.doctors.all()), None)} for clinic, offer, min_price in page.object_list]
@@ -46,23 +51,50 @@ def clinic_list(request):
                                                  "page_type": "clinic_list"})
 
 
-def clinic_detail(request, slug):
-    lang = get_language()
-    clinic = get_object_or_404(Clinic.objects.published().select_related("city"), slug=slug)
-    loc = clinic.localized(lang)
+def _clinic_page(slug, lang):
+    """Klinik sayfasının veritabanından gelen her şeyi — (slug, dil) başına 5 dk süreç içi bellekte: aynı sayfa ikinci
+    istekte 0 sorgu. Yorum / hekim / görsel kaydedilince (models.py sinyalleri) ya da 5 dk sonra yenilenir."""
     from apps.localization.models import with_related_translations
 
-    from .forms import ReviewForm
     from .models import light_reviews
 
+    clinic = (with_translations(Clinic.objects.published().select_related("city").prefetch_related("images"), lang)
+              .filter(slug=slug).first())
+    if clinic is None:
+        return None
+    clinic.city.localized(lang)  # şehir çevirisi nesnede ezberlenir → önbellekle birlikte saklanır
     # tedavi adları + slug'lar tek sorguda (döngüde localized() → N sorgu olmasın); gövde/SSS çekilmez
     offers = with_related_translations(
         clinic.treatment_offers.filter(is_active=True, treatment__is_active=True).select_related("treatment")
         .defer("treatment__body", "treatment__faq"), "treatment", lang)
-    offer_rows = [{"offer": o, "t": o.treatment.localized(lang)} for o in offers]
-    doctors = localize_list(with_translations(clinic.doctors.filter(is_active=True), lang), lang)
     reviews = light_reviews(clinic.reviews.filter(is_published=True), lang)
-    alternates = _clinic_alternates(clinic)
+    return {
+        "clinic": clinic,
+        "offer_rows": [{"offer": o, "t": o.treatment.localized(lang)} for o in offers],
+        "doctors": localize_list(with_translations(clinic.doctors.filter(is_active=True), lang), lang),
+        "site_reviews": list(reviews.filter(source=Review.SOURCE_SITE).exclude(text="")[:20]),
+        "external_reviews": list(reviews.exclude(source=Review.SOURCE_SITE).exclude(text="")[:12]),
+        "videos": list(reviews.exclude(video_id="")[:8]),
+        "alternates": _clinic_alternates(clinic),
+        "images": list(clinic.images.all()[:12]),
+        "cases": list(clinic.cases.filter(is_published=True, patient_consent=True)[:6]),
+    }
+
+
+def clinic_detail(request, slug):
+    from django.http import Http404
+
+    from apps.localization.memo import memo
+
+    from .forms import ReviewForm
+
+    lang = get_language()
+    data = memo(f"clinic-page:{slug}:{lang}", 300, lambda: _clinic_page(slug, lang), model=Clinic)
+    if data is None:
+        raise Http404
+    clinic = data["clinic"]
+    loc = clinic.localized(lang)
+    alternates = data["alternates"]
 
     seo = Seo(
         title=fill_proof(loc.meta_title) or _("%(clinic)s — Dental Clinic in %(city)s") % {"clinic": clinic.name,
@@ -77,23 +109,44 @@ def clinic_detail(request, slug):
         schema=[s for s in [clinic_schema(clinic, loc, with_reviews=True), faq_schema(loc.faq)] if s],
     )
     return render(request, "clinics/detail.html", {
-        "seo": seo, "c": loc, "offers": offer_rows, "doctors": doctors,
-        "site_reviews": reviews.filter(source=Review.SOURCE_SITE).exclude(text="")[:20],
-        "external_reviews": reviews.exclude(source=Review.SOURCE_SITE).exclude(text="")[:12],
-        "videos": reviews.exclude(video_id="")[:8],
+        "seo": seo, "c": loc, "offers": data["offer_rows"], "doctors": data["doctors"],
+        "site_reviews": data["site_reviews"], "external_reviews": data["external_reviews"], "videos": data["videos"],
         "stats": clinic.review_stats(), "links": clinic.social_links,
         "review_form": ReviewForm(clinic=clinic),
-        "images": clinic.images.all()[:12], "cases": clinic.cases.filter(is_published=True, patient_consent=True)[:6],
+        "images": data["images"], "cases": data["cases"],
         "page_type": "clinic",
     })
 
 
+def _doctor_page(slug, lang):
+    """Hekim sayfasının veritabanından gelen her şeyi — (slug, dil) başına 5 dk süreç içi bellekte."""
+    from .models import light_reviews
+
+    doctor = (with_translations(Doctor.objects.select_related("clinic", "clinic__city"), lang)
+              .filter(slug=slug, is_active=True, clinic__status=Clinic.STATUS_APPROVED).first())
+    if doctor is None:
+        return None
+    doctor.clinic.localized(lang)  # klinik + şehir çevirileri nesnede ezberlenir (get_absolute_url, başlık)
+    doctor.clinic.city.localized(lang)
+    return {
+        "doctor": doctor, "langs": doctor.live_languages(),
+        "reviews": list(light_reviews(doctor.reviews.filter(is_published=True), lang)[:8]),
+        "posts": list(with_translations(doctor.reviewed_posts.filter(status="published"), lang)[:6]),
+    }
+
+
 def doctor_detail(request, slug):
+    from django.http import Http404
+
+    from apps.localization.memo import memo
+
     lang = get_language()
-    doctor = get_object_or_404(Doctor.objects.select_related("clinic", "clinic__city"),
-                               slug=slug, is_active=True, clinic__status=Clinic.STATUS_APPROVED)
+    data = memo(f"doctor-page:{slug}:{lang}", 300, lambda: _doctor_page(slug, lang), model=Doctor)
+    if data is None:
+        raise Http404
+    doctor = data["doctor"]
     loc = doctor.localized(lang)
-    langs = doctor.live_languages()
+    langs = data["langs"]
     alternates = alternates_for("doctors:detail", lambda lg: {"slug": doctor.slug} if lg in langs else None)
     person = {
         "@context": "https://schema.org",
@@ -122,8 +175,8 @@ def doctor_detail(request, slug):
         schema=[{k: v for k, v in person.items() if v}],
     )
     return render(request, "clinics/doctor.html", {
-        "seo": seo, "d": loc, "clinic": doctor.clinic, "reviews": doctor.reviews.filter(is_published=True)[:8],
-        "posts": doctor.reviewed_posts.filter(status="published")[:6], "page_type": "doctor",
+        "seo": seo, "d": loc, "clinic": doctor.clinic, "reviews": data["reviews"],
+        "posts": data["posts"], "page_type": "doctor",
     })
 
 

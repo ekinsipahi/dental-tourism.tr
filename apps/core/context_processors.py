@@ -77,8 +77,10 @@ def build_wa_message(request, lang, clinic=None):
     text = _("Hello, I would like a free consultation.")
     if persona in persona_ctx:
         text += " " + str(persona_ctx[persona])
-    tracking = getattr(request, "tracking_session", None)
-    src = getattr(tracking, "traffic_source", "") if tracking else ""
+    src = getattr(request, "tracking_source", None)
+    if src is None:  # işaret yok (API / eski yol): nesneden oku
+        tracking = getattr(request, "tracking_session", None)
+        src = getattr(tracking, "traffic_source", "") if tracking else ""
     tag = {"google_ads": "G-Ads", "meta_ads": "Meta", "google_organic": "Google"}.get(src)
     page = request.path.strip("/").split("/")[-1][:40]
     ref = " · ".join(filter(None, [tag, page]))

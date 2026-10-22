@@ -167,6 +167,40 @@ def _parse_device(user_agent: str) -> dict:
     }
 
 
+ACTIVE_TTL = 60 * 30  # "bu ziyaretçi son 30 dk içinde görüldü" işareti (süreç içi bellek)
+
+
+def attach_lazy_session(request):
+    """Sayfa GET'i: ziyaretçi bu işçide son 30 dk içinde görüldüyse takip oturumu DB'den OKUNMAZ.
+    request.tracking_session tembel bir vekildir (yalnızca gerçekten kullanan kod — lead formu — yükler);
+    request.tracking_source (WhatsApp mesajındaki kaynak etiketi için) işaretten gelir.
+    Görülmediyse (ilk sayfa, 30 dk sonra, başka işçi) eski yol: DB'den oku / oluştur, işareti koy."""
+    from django.core.cache import caches
+    from django.utils.functional import SimpleLazyObject
+
+    key = request.session.session_key
+    marker = caches["local"].get(f"tracking_active:{key}") if key else None
+    if marker:
+        request.tracking_source = marker.get("traffic_source", "")
+        request.tracking_session = SimpleLazyObject(lambda: get_or_create_session(request))
+        return
+    session = get_or_create_session(request)
+    request.tracking_session = session
+    request.tracking_source = session.traffic_source if session else ""
+
+
+def real_session(request):
+    """request.tracking_session'ın gerçek nesnesi (tembel vekilse yükler)."""
+    from django.utils.functional import LazyObject, empty
+
+    s = getattr(request, "tracking_session", None)
+    if isinstance(s, LazyObject):
+        if s._wrapped is empty:
+            s._setup()
+        return s._wrapped
+    return s
+
+
 def get_or_create_session(request) -> "VisitorSession":
     """
     Ana giriş noktası. Her middleware çağrısında burası çalışır.
@@ -183,6 +217,9 @@ def get_or_create_session(request) -> "VisitorSession":
 
     session_key = request.session.session_key
     cache_key   = f"tracking_session:{session_key}"
+    from django.core.cache import caches
+
+    local = caches["local"]
 
     # Cache hit
     cached_id = cache.get(cache_key)
@@ -191,6 +228,7 @@ def get_or_create_session(request) -> "VisitorSession":
             session = VisitorSession.objects.get(id=cached_id)
             # Returning visitor — sayacı artır
             _maybe_increment_session(request, session)
+            local.set(f"tracking_active:{session_key}", {"traffic_source": session.traffic_source}, ACTIVE_TTL)
             return session
         except VisitorSession.DoesNotExist:
             cache.delete(cache_key)
@@ -204,6 +242,7 @@ def get_or_create_session(request) -> "VisitorSession":
         session = _create_session(request, session_key)
 
     cache.set(cache_key, session.id, 60 * 30)  # 30 dk cache
+    local.set(f"tracking_active:{session_key}", {"traffic_source": session.traffic_source}, ACTIVE_TTL)
     return session
 
 
@@ -492,7 +531,7 @@ def create_lead(request, *, name="", phone="", email="", message="", page="", la
 
     from .models import Lead
 
-    session = getattr(request, "tracking_session", None)
+    session = real_session(request)  # lead: tembel vekil değil gerçek nesne (FK ataması için)
     persona = (getattr(request, "persona", None) or {}).get("persona", "")
     clinic = clinic or Clinic.primary()
     mind = current_mindset(request.session.session_key)

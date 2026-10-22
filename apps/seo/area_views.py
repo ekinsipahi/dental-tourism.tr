@@ -27,10 +27,14 @@ def _area_links(lang, exclude=None):
 
 
 def _treatment_links(lang):
-    qs = with_translations(Treatment.objects.filter(is_active=True).defer("body", "faq", "short_description"), lang,
-                           tr_defer=("body", "faq", "short_description"))
-    return [{"name": loc.name, "icon": getattr(loc, "icon", ""), "url": reverse("treatments:detail", kwargs={"slug": loc.slug})}
-            for loc in localize_list(qs, lang)]
+    from apps.localization.memo import memo
+
+    def load():
+        qs = with_translations(Treatment.objects.filter(is_active=True).defer("body", "faq", "short_description"), lang,
+                               tr_defer=("body", "faq", "short_description"))
+        return [{"name": loc.name, "icon": getattr(loc, "icon", ""), "url": reverse("treatments:detail", kwargs={"slug": loc.slug})}
+                for loc in localize_list(qs, lang)]
+    return memo(f"treatment-links:{lang}", 300, load, model=Treatment)
 
 
 def _routes(key):

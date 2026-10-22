@@ -60,3 +60,36 @@ class PerformanceTests(SeededTestCase):
         self.assertIn('data-persona="premium"', self.client.get("/").content.decode())
         self.client.cookies["persona_preview"] = "tampered"  # imzasız çerez yok sayılır → zorlanmış persona yok
         self.assertNotIn('data-persona="premium"', self.client.get("/").content.decode())
+
+    def test_returning_visitor_page_view_hits_no_database(self):
+        """Aynı ziyaretçinin sonraki sayfa istekleri — takip işareti, persona önbelleği ve süreç içi memo
+        (slug çözümü, çeviriler, teklifler, listeler) sayesinde — veritabanına hiç gitmez."""
+        self.client.get("/")
+        self.client.get("/treatments/dental-implants/")  # bellek ısınır
+        for url in ("/treatments/dental-implants/", "/clinics/dr-devrim-sipahi/", "/"):
+            self.client.get(url)
+            with CaptureQueriesContext(connection) as ctx:
+                r = self.client.get(url)
+            self.assertEqual(r.status_code, 200)
+            self.assertFalse(r.has_header("X-Bot-Cache"))  # bot önbelleği değil, gerçek render
+            self.assertEqual([q["sql"] for q in ctx.captured_queries], [], url)
+
+    def test_memo_is_invalidated_when_content_is_saved(self):
+        """Admin'de kaydedilen içerik aynı işçide anında görünür (model sürümü artar → eski memo girişleri geçersiz)."""
+        from apps.treatments.models import Treatment
+
+        url = "/treatments/dental-implants/"
+        self.assertEqual(self.client.get(url).status_code, 200)
+        t = Treatment.objects.get(key="dental-implants")
+        t.short_description = "Renamed lead text for the memo test"
+        t.save()
+        self.assertIn("Renamed lead text for the memo test", self.client.get(url).content.decode())
+        if t.get_translation("de") is not None:  # canlı Almanca çeviri varsa: çeviri kaydı da ana modelin sürümünü artırır
+            from apps.core.seo import reverse_in
+
+            tr = t.get_translation("de")
+            de_url = reverse_in("de", "treatments:detail", {"slug": tr.slug})
+            self.assertEqual(self.client.get(de_url).status_code, 200)  # bellek ısınır
+            tr.short_description = "Geänderter Einleitungstext"
+            tr.save()
+            self.assertIn("Geänderter Einleitungstext", self.client.get(de_url).content.decode())

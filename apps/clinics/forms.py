@@ -24,15 +24,25 @@ class ReviewForm(forms.Form):
 
     def __init__(self, *args, clinic=None, **kwargs):
         super().__init__(*args, **kwargs)
+        from django.utils.translation import get_language
+
         from apps.treatments.models import Treatment
 
+        from apps.localization.memo import memo
         from apps.localization.models import with_translations
 
-        qs = Treatment.objects.filter(is_active=True).defer("body", "faq", "short_description")
+        lang = get_language()
+        field = self.fields["treatment"]
+        qs = Treatment.objects.filter(is_active=True)
         if clinic is not None:
             qs = qs.filter(clinic_offers__clinic=clinic).distinct()
-        self.fields["treatment"].queryset = with_translations(qs, tr_defer=("body", "faq", "short_description"))
-        self.fields["treatment"].label_from_instance = lambda t: t.localized().name
+        field.queryset = qs  # yalnızca gönderimde (POST) doğrulama için
+
+        def load():  # seçenekler (klinik, dil) başına süreç içi bellekte: klinik sayfası her istekte 2 sorgu atmaz
+            full = with_translations(qs.defer("body", "faq", "short_description"), lang,
+                                     tr_defer=("body", "faq", "short_description"))
+            return [("", str(field.empty_label))] + [(t.pk, t.localized(lang).name) for t in full]
+        field.choices = memo(f"review-choices:{getattr(clinic, 'pk', '')}:{lang}", 300, load, model=Treatment)
 
     def clean_website(self):
         if self.cleaned_data.get("website"):

@@ -43,11 +43,15 @@ def _hub_faq():
 
 
 def _cards(lang):
-    out = []
-    for loc in localize_list(with_translations(Treatment.objects.filter(is_active=True).defer("body", "faq"), lang,
-                                               tr_defer=("body", "faq")), lang):
-        out.append({"t": loc, "url": reverse("packages:treatment", kwargs={"slug": loc.slug})})
-    return out
+    from apps.localization.memo import memo
+
+    def load():
+        out = []
+        for loc in localize_list(with_translations(Treatment.objects.filter(is_active=True).defer("body", "faq"), lang,
+                                                   tr_defer=("body", "faq")), lang):
+            out.append({"t": loc, "url": reverse("packages:treatment", kwargs={"slug": loc.slug})})
+        return out
+    return memo(f"package-cards:{lang}", 300, load, model=Treatment)
 
 
 def _origin_links(lang):
@@ -92,7 +96,11 @@ def package_treatment(request, slug):
     loc = t.localized(lang)
     if res.redirect_to_lang:
         return redirect(reverse("packages:treatment", kwargs={"slug": loc.slug}), permanent=True)
-    page = LandingPage.objects.filter(page_type=LandingPage.TYPE_TREATMENT_PRICE, treatment=t, is_active=True).first()
+    from apps.localization.memo import memo
+
+    page = memo(f"landing:{LandingPage.TYPE_TREATMENT_PRICE}:{t.pk}:", 300,
+                lambda: LandingPage.objects.filter(page_type=LandingPage.TYPE_TREATMENT_PRICE, treatment=t, is_active=True).first(),
+                model=LandingPage)
     p_loc = page.localized(lang) if page else None
     slugs = language_slugs(t)
     alternates = {lg: absolute(reverse_in(lg, "packages:treatment", {"slug": s})) for lg, s in slugs.items()}
@@ -118,7 +126,9 @@ def package_treatment(request, slug):
         "page": p_loc if p_loc and not p_loc.is_fallback else None, "faq": faq,
         "offers": offers, "treatment_url": reverse("treatments:detail", kwargs={"slug": loc.slug}),
         "price_url": reverse("prices:detail", kwargs={"slug": loc.slug}),
-        "reviews": light_reviews(Review.objects.filter(is_published=True, treatment=t).exclude(text=""), lang)[:6],
+        "reviews": memo(f"treatment-reviews:{t.pk}:{lang}", 300,
+                        lambda: list(light_reviews(Review.objects.filter(is_published=True, treatment=t).exclude(text=""), lang)[:6]),
+                        model=Treatment),
         "related": related_treatments(t, lang), "origins": _origin_links(lang),
         "keywords": P.keywords_for(lang, "treatment", loc.name), "page_type": "package_treatment",
     })
@@ -137,8 +147,10 @@ def package_origin(request, country):
     h1 = _("Dental holiday packages from %(country)s to Istanbul") % {"country": name}
     from apps.clinics.models import Clinic
 
-    reviews = Review.objects.filter(is_published=True, country_code=code, clinic__in=Clinic.objects.published()) \
-        .exclude(text="")[:6]
+    from apps.localization.memo import memo
+
+    reviews = memo(f"origin-reviews:{code}:{lang}", 300, lambda: list(Review.objects.filter(is_published=True, country_code=code, clinic__in=Clinic.objects.published())
+                                                      .exclude(text="")[:6]), model=Clinic)
     seo = Seo(
         title=_("%(country)s to Istanbul for Dental Treatment — 2026 Guide") % {"country": name},
         description=_("Travelling from %(country)s for dental treatment? Flight time, how many trips you need, what a "

@@ -98,7 +98,7 @@ if _db_url:
             "HOST": _u.hostname,
             "PORT": str(_u.port or 5432),
             "CONN_MAX_AGE": config("DB_CONN_MAX_AGE", default=60, cast=int),
-            "CONN_HEALTH_CHECKS": True,
+            "CONN_HEALTH_CHECKS": False,  # her istekte uzak DB'ye fazladan "SELECT 1" gitmesin (bağlantı 60 sn'de yenilenir)
             "OPTIONS": {"sslmode": config("DB_SSLMODE", default="require")},
         }
     }
@@ -112,7 +112,7 @@ elif config("DB_ENGINE", default="sqlite") == "postgres":
             "HOST": config("DB_HOST", default="localhost"),
             "PORT": config("DB_PORT", default="5432"),
             "CONN_MAX_AGE": config("DB_CONN_MAX_AGE", default=60, cast=int),
-            "CONN_HEALTH_CHECKS": True,
+            "CONN_HEALTH_CHECKS": False,
             "OPTIONS": {"sslmode": config("DB_SSLMODE", default="prefer")},
         }
     }

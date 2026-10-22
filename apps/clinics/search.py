@@ -30,15 +30,23 @@ class ClinicSearchForm(forms.Form):
         super().__init__(*args, **kwargs)
         from apps.treatments.models import Treatment
 
+        from django.core.cache import caches
+
         from apps.localization.models import with_translations
 
-        self.fields["city"].choices = [("", _("All cities"))] + [
-            (c.slug, c.localized(lang).name)
-            for c in with_translations(City.objects.filter(is_active=True, clinics__status="approved").distinct(), lang)]
-        self.fields["treatment"].choices = [("", _("All treatments"))] + [
-            (t.key, t.localized(lang).name)
-            for t in with_translations(Treatment.objects.filter(is_active=True).defer("body", "faq", "short_description"), lang,
-                                       tr_defer=("body", "faq", "short_description"))]
+        key = f"search-choices:{lang}"
+        choices = caches["local"].get(key)
+        if choices is None:  # şehir + tedavi adları dil başına 5 dk bellekte (her ana sayfa / klinik listesi isteğinde 4 sorgu yerine 0)
+            choices = {
+                "city": [(c.slug, c.localized(lang).name)
+                         for c in with_translations(City.objects.filter(is_active=True, clinics__status="approved").distinct(), lang)],
+                "treatment": [(t.key, t.localized(lang).name)
+                              for t in with_translations(Treatment.objects.filter(is_active=True).defer("body", "faq", "short_description"),
+                                                         lang, tr_defer=("body", "faq", "short_description"))],
+            }
+            caches["local"].set(key, choices, 300)
+        self.fields["city"].choices = [("", _("All cities"))] + choices["city"]
+        self.fields["treatment"].choices = [("", _("All treatments"))] + choices["treatment"]
         self.fields["language"].choices = [("", _("Any language"))] + [
             (code, meta["native"]) for code, meta in LANGUAGE_META.items()]
 
@@ -49,7 +57,15 @@ class ClinicSearchForm(forms.Form):
 
 def search_clinics(form):
     """Döner: [(clinic, offer_for_selected_treatment_or_None, min_price)]"""
-    qs = Clinic.objects.published().select_related("city").prefetch_related("images", "doctors")
+    from django.db.models import Prefetch
+
+    from apps.localization.models import with_translations
+
+    from .models import Doctor
+
+    # klinik + hekim çevirileri tek sorguda: liste satırlarında .localized() DB'ye gitmez
+    qs = with_translations(Clinic.objects.published().select_related("city").prefetch_related(
+        "images", Prefetch("doctors", queryset=with_translations(Doctor.objects.all()))))
     cd = form.cleaned_data if form.is_valid() else {}
     treatment = cd.get("treatment")
 

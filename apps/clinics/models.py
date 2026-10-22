@@ -184,7 +184,13 @@ class Clinic(TranslatableModel):
 
     @property
     def social_links(self):
-        """Tüm profil linkleri (eski alanlar + ClinicLink kayıtları) — sayfada ikonlar ve schema sameAs için."""
+        """Tüm profil linkleri (eski alanlar + ClinicLink kayıtları) — sayfada ikonlar ve schema sameAs için.
+        Her pSEO sayfasının schema'sında okunur → klinik başına 5 dk süreç içi bellekte."""
+        from apps.localization.memo import memo
+
+        return memo(f"clinic-links:{self.pk}", 300, self._social_links, model=type(self))
+
+    def _social_links(self):
         links = []
         legacy = [("website", self.website), ("google_business", self.google_business_url),
                   ("instagram", f"https://www.instagram.com/{self.instagram}/" if self.instagram else ""),
@@ -201,10 +207,14 @@ class Clinic(TranslatableModel):
         return links
 
     def review_stats(self):
-        """Sitenin kendi yorum sisteminden puan özeti (schema AggregateRating buradan)."""
-        agg = self.reviews.filter(is_published=True, source=Review.SOURCE_SITE).aggregate(
-            avg=models.Avg("rating"), n=models.Count("id"))
-        return {"avg": round(agg["avg"], 1) if agg["avg"] else None, "count": agg["n"]}
+        """Sitenin kendi yorum sisteminden puan özeti (schema AggregateRating buradan) — klinik başına 5 dk bellekte."""
+        from apps.localization.memo import memo
+
+        def load():
+            agg = self.reviews.filter(is_published=True, source=Review.SOURCE_SITE).aggregate(
+                avg=models.Avg("rating"), n=models.Count("id"))
+            return {"avg": round(agg["avg"], 1) if agg["avg"] else None, "count": agg["n"]}
+        return memo(f"review-stats:{self.pk}", 300, load, model=type(self))
 
     @property
     def gallery_preview(self):
@@ -227,7 +237,10 @@ class Clinic(TranslatableModel):
         """Sitenin ana kliniği (cache'li). Yoksa None."""
         clinic = cache.get(PRIMARY_CLINIC_CACHE_KEY)
         if clinic is None:
-            qs = cls.objects.select_related("city")
+            from apps.localization.models import with_all_translations
+
+            # klinik + şehir çevirileri (tüm diller) nesneyle birlikte önbelleğe girer: .localized(dil) DB'ye gitmez
+            qs = with_all_translations(cls.objects.select_related("city"), "city")
             clinic = (
                 (settings.PRIMARY_CLINIC_SLUG and qs.filter(slug=settings.PRIMARY_CLINIC_SLUG).first())
                 or qs.filter(is_primary=True).first()
@@ -509,3 +522,15 @@ def light_reviews(qs, lang):
           .select_related("treatment").defer("treatment__body", "treatment__faq", "treatment__short_description"))
     return with_related_translations(qs, "treatment", lang)
 
+
+def _bump_clinic(sender, **kwargs):
+    """Yorum / hekim / görsel / link / vaka / teklif kaydedildi ya da silindi → kliniğe bağlı süreç içi memo girişleri
+    (klinik sayfası, schema, puan özeti, sosyal linkler, liste) bu işçide anında geçersiz; diğer işçi en çok 5 dk."""
+    from apps.localization.memo import bump
+
+    bump(Clinic)
+
+
+for _m in (Review, Doctor, ClinicImage, ClinicTreatment, ClinicLink, BeforeAfterCase):
+    models.signals.post_save.connect(_bump_clinic, sender=_m, weak=False, dispatch_uid=f"bump-clinic-{_m.__name__}")
+    models.signals.post_delete.connect(_bump_clinic, sender=_m, weak=False, dispatch_uid=f"bump-clinic-del-{_m.__name__}")

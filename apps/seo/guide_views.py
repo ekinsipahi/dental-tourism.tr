@@ -18,11 +18,15 @@ def _faq(loc):
 
 
 def _guide_links(lang, exclude=None):
-    qs = with_translations(SeoTopic.objects.filter(is_active=True, noindex=False).defer("body", "faq", "keywords"), lang,
-                           tr_defer=("body", "faq"))  # 8 çip için 15 rehberin gövdesi (42 KB) çekilmesin
-    return [{"url": reverse("guides:detail", kwargs={"slug": loc.slug}), "h1": loc.h1, "key": loc.object.key,
-             "lead": loc.lead}
-            for loc in localize_list(qs, lang, fallback=False) if loc.object.pk != exclude]
+    from apps.localization.memo import memo
+
+    def load():
+        qs = with_translations(SeoTopic.objects.filter(is_active=True, noindex=False).defer("body", "faq", "keywords"), lang,
+                               tr_defer=("body", "faq"))  # 8 çip için 15 rehberin gövdesi (42 KB) çekilmesin
+        return [{"url": reverse("guides:detail", kwargs={"slug": loc.slug}), "h1": loc.h1, "key": loc.object.key,
+                 "lead": loc.lead, "pk": loc.object.pk} for loc in localize_list(qs, lang, fallback=False)]
+    links = memo(f"guide-links:{lang}", 300, load, model=SeoTopic)
+    return [g for g in links if g["pk"] != exclude]
 
 
 def guide_index(request):

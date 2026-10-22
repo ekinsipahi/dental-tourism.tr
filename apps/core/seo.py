@@ -162,10 +162,18 @@ def website_schema():
 
 
 def clinic_schema(clinic, loc=None, url=None, with_reviews=False):
-    """schema.org Dentist (LocalBusiness + MedicalOrganization)."""
+    """schema.org Dentist (LocalBusiness + MedicalOrganization) — klinik × dil başına 5 dk süreç içi bellekte
+    (sosyal linkler, puan özeti ve yorumlar her sayfa isteğinde yeniden sorgulanmaz)."""
     if clinic is None:
         return None
+    from apps.localization.memo import memo
+
     loc = loc or clinic.localized()
+    return memo(f"clinic-schema:{clinic.pk}:{loc.lang}:{url or ''}:{int(with_reviews)}", 300,
+                lambda: _clinic_schema(clinic, loc, url, with_reviews), model=type(clinic))
+
+
+def _clinic_schema(clinic, loc, url, with_reviews):
     data = {
         "@context": "https://schema.org",
         "@type": ["Dentist", "MedicalClinic"],

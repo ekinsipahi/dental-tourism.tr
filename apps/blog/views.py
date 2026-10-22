@@ -23,15 +23,59 @@ def _posts_in_language(qs, lang):
 
 
 def _categories(lang):
-    cats = BlogCategory.objects.filter(posts__status=BlogPost.STATUS_PUBLISHED).distinct()
-    return localize_list(with_translations(cats, lang), lang)
+    from apps.localization.memo import memo
+
+    def load():
+        cats = BlogCategory.objects.filter(posts__status=BlogPost.STATUS_PUBLISHED).distinct()
+        return localize_list(with_translations(cats, lang), lang)
+    return memo(f"blog-categories:{lang}", 300, load, model=BlogCategory)
+
+
+def _post_page(qs, lang, number, key):
+    """Sayfalanmış yazı listesi — (liste, sayfa no) başına 5 dk süreç içi bellekte; yalnızca o sayfanın yazıları saklanır."""
+    from apps.localization.memo import memo
+
+    number = str(number) if number is not None and str(number).isdigit() else "1"
+    number = str(min(int(number), 999))
+
+    def load():
+        paginator = Paginator(with_translations(qs, lang), PER_PAGE)
+        page = paginator.get_page(number)
+        posts = localize_list(page.object_list, lang, fallback=False)
+        page.object_list = posts
+        paginator.object_list = posts  # sayfa sayısı hesaplandı (count önbellekte); tüm liste belleğe alınmaz
+        return page, posts
+    return memo(f"{key}:{number}", 300, load, model=BlogPost)
+
+
+def _post_extras(post, lang):
+    """Yazı sayfasının yardımcı verisi (URL'ler, kategori, hreflang, ilgili yazılar, hekim, tedavi) — (yazı, dil)
+    başına 5 dk süreç içi bellekte: 17 dilin hreflang'ı için her istekte onlarca çeviri sorgusu atılmaz."""
+    from apps.localization.memo import memo
+
+    def load():
+        related_ids = list(RelatedPost.objects.filter(post=post).values_list("related_post_id", flat=True)[:6])
+        related_qs = BlogPost.published.filter(pk__in=related_ids) if related_ids else \
+            BlogPost.published.filter(category=post.category).exclude(pk=post.pk)
+        reviewer = post.reviewed_by
+        return {
+            "url": post.get_absolute_url(lang),
+            "source_url": post.get_absolute_url(post.source_language),
+            "cat_loc": post.category.localized(lang),
+            "cat_url": post.category.get_absolute_url(lang),
+            "alternates": {lg: absolute(post.get_absolute_url(lg)) for lg in post.live_languages()},
+            "related": localize_list(with_translations(_posts_in_language(related_qs, lang)[:4], lang), lang, fallback=False),
+            "reviewer": reviewer.localized(lang) if reviewer else None,
+            "reviewer_url": absolute(reviewer.get_absolute_url()) if reviewer else "",
+            "treatment": post.treatment.localized(lang) if post.treatment else None,
+        }
+    return memo(f"post-extras:{post.pk}:{lang}", 300, load, model=BlogPost)
 
 
 def blog_list(request):
     lang = get_language()
     qs = _posts_in_language(BlogPost.published.all(), lang)
-    page = Paginator(with_translations(qs, lang), PER_PAGE).get_page(request.GET.get("page"))
-    posts = localize_list(page.object_list, lang, fallback=False)
+    page, posts = _post_page(qs, lang, request.GET.get("page"), f"blog-list:{lang}")
     canonical = absolute(request.path + (f"?page={page.number}" if page.number > 1 else ""))
     _meta_blog = page_meta("blog", _("Dental Tourism Blog 2026 — Honest Advice from Dentists"),
                            _("Implant and veneer costs, safety, recovery and choosing a dentist in Istanbul — practical, "
@@ -62,8 +106,7 @@ def blog_category(request, category_slug):
     if res.redirect_to_lang:
         return redirect(cat.get_absolute_url(lang), permanent=True)
     qs = _posts_in_language(BlogPost.published.filter(category=cat), lang)
-    page = Paginator(with_translations(qs, lang), PER_PAGE).get_page(request.GET.get("page"))
-    posts = localize_list(page.object_list, lang, fallback=False)
+    page, posts = _post_page(qs, lang, request.GET.get("page"), f"blog-cat:{cat.pk}:{lang}")
     slugs = language_slugs(cat)
     alternates = {lg: absolute(reverse_in(lg, "blog:category", {"category_slug": s})) for lg, s in slugs.items()}
     seo = Seo(
@@ -86,27 +129,23 @@ def blog_detail(request, category_slug, post_slug):
         raise Http404
     post = res.obj
     loc = post.localized(lang)
-    correct_url = post.get_absolute_url(lang)
+    extras = _post_extras(post, lang)  # URL'ler, kategori, hreflang, ilgili yazılar, hekim, tedavi — bellekten
+    correct_url = extras["url"]
     # Yanlış dil slug'ı / kategori slug'ı → tek doğru URL'ye 301
     if res.redirect_to_lang or (not loc.is_fallback and request.path != correct_url):
         return redirect(correct_url, permanent=True)
     if loc.is_fallback:
         # Bu dilde çeviri yok: kaynak dildeki yazıya yönlendir (duplicate içerik üretme)
-        return redirect(post.get_absolute_url(post.source_language), permanent=False)
+        return redirect(extras["source_url"], permanent=False)
 
-    cat_loc = post.category.localized(lang)
-    alternates = {lg: absolute(post.get_absolute_url(lg)) for lg in post.live_languages()}
+    cat_loc, alternates = extras["cat_loc"], extras["alternates"]
     canonical = post.canonical_url or alternates.get(lang)
-
-    related_ids = list(RelatedPost.objects.filter(post=post).values_list("related_post_id", flat=True)[:6])
-    related_qs = BlogPost.published.filter(pk__in=related_ids) if related_ids else \
-        BlogPost.published.filter(category=post.category).exclude(pk=post.pk)
-    related = localize_list(with_translations(_posts_in_language(related_qs, lang)[:4], lang), lang, fallback=False)
+    related = extras["related"]
 
     author = None
-    if post.reviewed_by:
-        author = {"@type": "Person", "name": post.reviewed_by.full_name,
-                  "url": absolute(post.reviewed_by.get_absolute_url())}
+    reviewer = extras["reviewer"]
+    if reviewer:
+        author = {"@type": "Person", "name": reviewer.full_name, "url": extras["reviewer_url"]}
     article = {
         "@context": "https://schema.org",
         "@type": post.schema_type,
@@ -122,7 +161,7 @@ def blog_detail(request, category_slug, post_slug):
         "keywords": loc.focus_keyword or None,
         "wordCount": len((loc.content or "").split()),
     }
-    if post.reviewed_by:
+    if reviewer:
         article["reviewedBy"] = author
     if post.schema_type == "MedicalWebPage":
         article["lastReviewed"] = post.updated_at.date().isoformat()
@@ -139,15 +178,14 @@ def blog_detail(request, category_slug, post_slug):
         published=post.published_at.isoformat() if post.published_at else "",
         modified=post.updated_at.isoformat(),
         breadcrumbs=[(_("Home"), reverse("core:home")), (_("Blog"), reverse("blog:post_list")),
-                     (cat_loc.name, post.category.get_absolute_url(lang)), (loc.title, request.path)],
+                     (cat_loc.name, extras["cat_url"]), (loc.title, request.path)],
         schema=[s for s in [{k: v for k, v in article.items() if v is not None}, faq_schema(loc.faq)] if s],
     )
     if not getattr(request, "is_bot", False):
         BlogPost.objects.filter(pk=post.pk).update(view_count=F("view_count") + 1)
 
-    treatment = post.treatment.localized(lang) if post.treatment else None
     return render(request, "blog/detail.html", {
-        "seo": seo, "post": post, "p": loc, "category": cat_loc, "related": related, "treatment": treatment,
-        "reviewer": post.reviewed_by.localized(lang) if post.reviewed_by else None,
+        "seo": seo, "post": post, "p": loc, "category": cat_loc, "related": related, "treatment": extras["treatment"],
+        "reviewer": reviewer,
         "page_type": "blog_detail", "funnel_stage": post.funnel_stage,
     })

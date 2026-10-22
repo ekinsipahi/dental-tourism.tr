@@ -18,7 +18,9 @@ VALID_EVENTS = {
 
 def _get_or_create_session(request):
     """Session'ı al — yoksa yeni oluştur."""
-    session = getattr(request, "tracking_session", None)
+    from .service import real_session
+
+    session = real_session(request)
     if session:
         return session
     # Middleware çalışmadıysa manual oluştur
@@ -138,6 +140,14 @@ def collect_pageview(request):
                 referrer = body.get("referrer", "")[:500],
             )
             session.page_views += 1
+            try:  # sayfanın persona sinyali (GET'te değil burada: sayfa isteği DB'ye gitmesin)
+                from urllib.parse import urlparse
+
+                from apps.persona.engine import observe_page
+
+                observe_page(request.session.session_key, urlparse(body.get("url", "")).path or "/")
+            except Exception as e:  # noqa: BLE001
+                logger.error(f"persona observe: {e}")
             fields = ["page_views", "last_seen"]
             # Tarayıcı saat dilimi + ekran: IP proxy/VPN'den geçse de gerçek ülkeyi gösterir (geo.py)
             from .geo import is_valid_tz

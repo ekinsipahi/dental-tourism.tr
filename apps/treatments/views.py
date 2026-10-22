@@ -56,16 +56,24 @@ def treatment_detail(request, slug):
 
     offers = offers_for(t)
 
-    city_pages = []
-    for page in t.landing_pages.filter(page_type="treatment_city", is_active=True).select_related("city"):
-        city_loc = page.city.localized(lang)
-        city_pages.append({"name": city_loc.name,
-                           "url": reverse("treatments:city", kwargs={"slug": loc.slug, "city_slug": city_loc.slug})})
+    from apps.localization.memo import memo
 
-    posts = localize_list(with_translations(BlogPost.published.filter(treatment=t)[:4], lang), lang, fallback=False)
+    def _city_pages():
+        out = []
+        for page in t.landing_pages.filter(page_type="treatment_city", is_active=True).select_related("city"):
+            city_loc = page.city.localized(lang)
+            out.append({"name": city_loc.name,
+                        "url": reverse("treatments:city", kwargs={"slug": loc.slug, "city_slug": city_loc.slug})})
+        return out
+    city_pages = memo(f"city-pages:{t.pk}:{lang}", 300, _city_pages, model=Treatment)
+    posts = memo(f"treatment-posts:{t.pk}:{lang}", 300,
+                 lambda: localize_list(with_translations(BlogPost.published.filter(treatment=t)[:4], lang), lang, fallback=False),
+                 model=BlogPost)
     from apps.clinics.models import light_reviews
 
-    reviews = light_reviews(Review.objects.filter(is_published=True, treatment=t).exclude(text=""), lang)[:6]
+    reviews = memo(f"treatment-reviews:{t.pk}:{lang}", 300,
+                   lambda: list(light_reviews(Review.objects.filter(is_published=True, treatment=t).exclude(text=""), lang)[:6]),
+                   model=Treatment)
 
     procedure = {
         "@context": "https://schema.org",
