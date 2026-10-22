@@ -30,10 +30,15 @@ class ClinicSearchForm(forms.Form):
         super().__init__(*args, **kwargs)
         from apps.treatments.models import Treatment
 
+        from apps.localization.models import with_translations
+
         self.fields["city"].choices = [("", _("All cities"))] + [
-            (c.slug, c.localized(lang).name) for c in City.objects.filter(is_active=True, clinics__status="approved").distinct()]
+            (c.slug, c.localized(lang).name)
+            for c in with_translations(City.objects.filter(is_active=True, clinics__status="approved").distinct(), lang)]
         self.fields["treatment"].choices = [("", _("All treatments"))] + [
-            (t.key, t.localized(lang).name) for t in Treatment.objects.filter(is_active=True)]
+            (t.key, t.localized(lang).name)
+            for t in with_translations(Treatment.objects.filter(is_active=True).defer("body", "faq", "short_description"), lang,
+                                       tr_defer=("body", "faq", "short_description"))]
         self.fields["language"].choices = [("", _("Any language"))] + [
             (code, meta["native"]) for code, meta in LANGUAGE_META.items()]
 

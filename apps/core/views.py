@@ -42,8 +42,14 @@ HOME_SECTIONS = ["hero", "treatments", "reviews", "how", "clinic-search", "conta
 
 def home_sections():
     """Ana sayfa bölüm sırası/görünürlüğü — admin'de 'home-<bölüm>' content block'larının order/visible alanları."""
+    from django.core.cache import caches
+
     from .models import ContentBlock
 
+    cache = caches["local"]
+    cached = cache.get("home:sections")
+    if cached is not None:
+        return cached
     blocks = {b.key: b for b in ContentBlock.objects.filter(key__in=[f"home-{n}" for n in HOME_SECTIONS])}
     out = []
     for i, name in enumerate(HOME_SECTIONS):
@@ -52,7 +58,9 @@ def home_sections():
             continue
         order = -1 if name == "hero" else (b.order if b is not None and b.order else (i + 1) * 10)
         out.append({"name": name, "order": order, "template": f"home/sections/{name}.html"})
-    return sorted(out, key=lambda x: x["order"])
+    out = sorted(out, key=lambda x: x["order"])
+    cache.set("home:sections", out, 300)  # ContentBlock.save() 'home-*' için siler
+    return out
 
 
 def home(request):
@@ -66,10 +74,15 @@ def home(request):
     from apps.clinics.models import Clinic as _Clinic
 
     live = _Clinic.objects.published()
-    reviews = (Review.objects.filter(is_published=True, clinic__in=live).exclude(text="")
-               .select_related("clinic", "treatment").order_by("-is_featured", "order", "-review_date")[:12])
-    videos = (Review.objects.filter(is_published=True, clinic__in=live).exclude(video_id="")
-              .select_related("clinic", "treatment").order_by("-is_featured", "order")[:6])
+    from apps.clinics.models import light_reviews
+
+    multi_clinic = live.count() > 1
+    reviews = light_reviews(Review.objects.filter(is_published=True, clinic__in=live).exclude(text=""), lang) \
+        .order_by("-is_featured", "order", "-review_date")[:12]
+    videos = light_reviews(Review.objects.filter(is_published=True, clinic__in=live).exclude(video_id=""), lang) \
+        .order_by("-is_featured", "order")[:6]
+    if multi_clinic:  # yorum kartında klinik adı/linki yalnızca çok klinikli yapıda gösterilir
+        reviews, videos = reviews.select_related("clinic"), videos.select_related("clinic")
     faq = _home_faq(clinic)
     from .models import ContentBlock
 
@@ -99,7 +112,7 @@ def home(request):
     return render(request, "home.html", {
         "seo": seo, "treatments": treatments, "reviews": reviews, "videos": videos, "faq": faq,
         "form": ContactForm(), "page_type": "home", "search_form": search_form,
-        "home_sections": home_sections(), "multi_clinic": live.count() > 1, "slides": slides, "cases": cases,
+        "home_sections": home_sections(), "multi_clinic": multi_clinic, "slides": slides, "cases": cases,
     })
 
 
@@ -168,7 +181,7 @@ def privacy(request):
 
 
 @require_GET
-@cache_page(60 * 60)
+@cache_page(60 * 60, cache="local")
 def robots_txt(request):
     lines = [
         "User-agent: *",
@@ -183,7 +196,7 @@ def robots_txt(request):
 
 
 @require_GET
-@cache_page(60 * 60)
+@cache_page(60 * 60, cache="local")
 def llms_txt(request):
     """AI arama motorları için site özeti (llms.txt önerisi)."""
     from apps.clinics.models import Clinic
@@ -226,7 +239,7 @@ def apple_touch_icon(request):
     return redirect(staticfiles_storage.url("icons/apple-touch-icon.png"), permanent=True)
 
 
-@cache_page(60 * 60 * 24)
+@cache_page(60 * 60 * 24, cache="local")
 def webmanifest(request):
     import json
 
@@ -239,3 +252,21 @@ def webmanifest(request):
                   for n in (48, 96, 144, 192, 512)],
     }
     return HttpResponse(json.dumps(data), content_type="application/manifest+json")
+
+
+
+def healthz(request):
+    """Render sağlık kontrolü. Başlıklarda önbellek arka ucu (redis / locmem) ve çalışıp çalışmadığı — deploy sonrası
+    Redis'in gerçekten kullanıldığı buradan görülür; gövde her zaman "ok" (Redis kopsa da site ayakta)."""
+    from django.core.cache import caches
+
+    cache = caches["default"]
+    backend = "redis" if "Redis" in type(cache).__name__ else "locmem"
+    try:
+        cache.set("healthz", "1", 30)
+        ping = "ok" if cache.get("healthz") == "1" else "miss"
+    except Exception:  # noqa: BLE001
+        ping = "error"
+    resp = HttpResponse("ok", content_type="text/plain")
+    resp["X-Cache-Backend"], resp["X-Cache-Ping"] = backend, ping
+    return resp

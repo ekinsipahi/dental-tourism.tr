@@ -1,5 +1,6 @@
 # Render Blueprint — https://render.com/docs/blueprint-spec
-# Veritabanı: Supabase PostgreSQL (DATABASE_URL, session pooler). Redis/Celery YOK.
+# Veritabanı: Supabase PostgreSQL (DATABASE_URL, session pooler). Önbellek: Django LocMemCache (süreç içi bellek;
+# Redis YOK — istenirse REDIS_URL verilince kod Redis'e geçer). Celery YOK — zamanlanmış işler Render Cron Job.
 # Gizli değerler (sync: false) Render panelinden girilir — repoya YAZILMAZ.
 services:
   - type: web

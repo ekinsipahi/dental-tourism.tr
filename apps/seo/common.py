@@ -93,21 +93,48 @@ def persona_hook(persona):
                          _("We save healthy teeth first and plan a real treatment made only for you.")))
 
 
+def clinic_bundle(clinic, lang):
+    """Her pSEO sayfasında aynı olan klinik verisi (fotoğraflar, hekim, kanıt yorumları, videolar, vakalar) — dil başına
+    5 dk süreç içi bellekte: ~1200 sayfa × her istek 6-7 sorgu yerine işçi başına 5 dakikada 6 sorgu."""
+    from django.core.cache import caches
+
+    from apps.clinics.models import BeforeAfterCase, Review, light_reviews
+
+    key = f"clinic-bundle:{clinic.pk}:{lang}"
+    data = caches["local"].get(key)
+    if data is None:
+        doctor = clinic.doctors.filter(is_active=True).first()
+        data = {
+            "images": real_photos(clinic, 100),
+            "doctor": doctor,
+            "doctor_loc": doctor.localized(lang) if doctor else None,
+            "proof_reviews": list(light_reviews(Review.objects.filter(is_published=True, clinic=clinic).exclude(text=""), lang)
+                                  .order_by("-rating", "-created_at")[:3]),
+            "videos": list(light_reviews(Review.objects.filter(is_published=True, clinic=clinic).exclude(video_id=""), lang)[:4]),
+            "cases": list(BeforeAfterCase.objects.filter(clinic=clinic, is_published=True, patient_consent=True)[:6]),
+        }
+        caches["local"].set(key, data, 300)
+    return data
+
+
 def pseo_context(request, *, offset=0, show_cases=False, photos=6):
-    from apps.clinics.models import BeforeAfterCase, Clinic, Review
+    from apps.clinics.models import Clinic
 
     lang = request.LANGUAGE_CODE
     try:
         clinic = Clinic.primary()
     except Exception:  # noqa: BLE001
         clinic = None
-    doctor = clinic.doctors.filter(is_active=True).first() if clinic else None
-    gallery = real_photos(clinic, photos, offset)
+    bundle = clinic_bundle(clinic, lang) if clinic else {}
+    imgs = bundle.get("images") or []
+    k = offset % len(imgs) if imgs else 0
+    gallery = (imgs[k:] + imgs[:k])[:photos]  # offset ile her sayfada farklı bir kapak
+    doctor = bundle.get("doctor")
     hook_title, hook_text = persona_hook(getattr(request, "persona", None))
     ctx = {
         "clinic": clinic,
         "doctor": doctor,
-        "doctor_loc": doctor.localized(lang) if doctor else None,
+        "doctor_loc": bundle.get("doctor_loc"),
         "hero_photo": gallery[0] if gallery else None,
         "gallery": gallery[1:] if len(gallery) > 1 else gallery,
         "trust_links": trust_links(clinic, lang),
@@ -115,13 +142,11 @@ def pseo_context(request, *, offset=0, show_cases=False, photos=6):
         "hook_text": hook_text,
         "rating": clinic.google_rating if clinic else None,
         "rating_count": clinic.google_review_count if clinic else None,
-        "proof_reviews": list(Review.objects.filter(is_published=True, clinic=clinic).exclude(text="")
-                              .order_by("-rating", "-created_at")[:3]) if clinic else [],
+        "proof_reviews": bundle.get("proof_reviews", []),
         "tel_url": "tel:" + "".join(ch for ch in (clinic.phone if clinic else "") if ch.isdigit() or ch == "+"),
     }
     if clinic:  # hasta video yorumları (YouTube Shorts kapakları) — her pSEO sayfasında fotoğraf + video
-        ctx["videos"] = list(Review.objects.filter(is_published=True, clinic=clinic).exclude(video_id="")
-                             .select_related("treatment")[:4])
+        ctx["videos"] = bundle.get("videos", [])
     if show_cases and clinic:
-        ctx["cases"] = list(BeforeAfterCase.objects.filter(clinic=clinic, is_published=True, patient_consent=True)[:6])
+        ctx["cases"] = bundle.get("cases", [])
     return ctx

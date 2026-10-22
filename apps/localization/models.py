@@ -113,13 +113,30 @@ class TranslatableModel(models.Model):
     def get_translation(self, lang, live_only=True):
         if live_only and (allmap := self._all_live()) is not None:
             return allmap.get(lang)
-        # with_translations() ile o dil için (sadece canlı satırlar) prefetch edildiyse DB'ye gitme
-        if live_only and getattr(self, "_prefetched_lang", None) == lang and hasattr(self, "_prefetched_tr"):
-            return self._prefetched_tr[0] if self._prefetched_tr else None
-        qs = self.translations.filter(language_code=lang)
-        if live_only:
-            qs = qs.filter(status__in=LIVE_STATUSES)
-        return qs.first()
+        # with_translations() / with_related_translations() ile o dil prefetch edildiyse DB'ye gitme
+        pre = getattr(self, f"_prefetched_tr_{lang}", None) if live_only else None
+        if pre is None and live_only and getattr(self, "_prefetched_lang", None) == lang and hasattr(self, "_prefetched_tr"):
+            pre = self._prefetched_tr
+        if pre is not None:
+            return pre[0] if pre else None
+        # Aynı nesne üzerinde tekrar tekrar .localized() çağrılır (şablonlar, get_absolute_url) → sonuç nesnede saklanır.
+        # (Nesne ömrü genelde tek istektir; save()/refresh_from_db() bu belleği temizler.)
+        memo = self.__dict__.setdefault("_tr_memo", {})
+        key = (lang, live_only)
+        if key not in memo:
+            qs = self.translations.filter(language_code=lang)
+            if live_only:
+                qs = qs.filter(status__in=LIVE_STATUSES)
+            memo[key] = qs.first()
+        return memo[key]
+
+    def save(self, *args, **kwargs):
+        self.__dict__.pop("_tr_memo", None)
+        super().save(*args, **kwargs)
+
+    def refresh_from_db(self, *args, **kwargs):
+        self.__dict__.pop("_tr_memo", None)
+        super().refresh_from_db(*args, **kwargs)
 
     def has_language(self, lang) -> bool:
         return lang == self.source_language or self.get_translation(lang) is not None
@@ -150,24 +167,43 @@ class TranslatableModel(models.Model):
         return {"total": total, "done": done, "statuses": rows}
 
 
-def with_translations(queryset, lang=None):
-    """Liste sayfalarında N+1 sorgu olmaması için o dildeki çevirileri prefetch eder."""
+def with_translations(queryset, lang=None, tr_defer=()):
+    """Liste sayfalarında N+1 sorgu olmaması için o dildeki çevirileri prefetch eder (dile özel attr:
+    _prefetched_tr_<dil> → localize_list çağrılmasa da obj.localized(lang) DB'ye gitmez).
+    tr_defer: menü / kart gibi yalnızca ad-slug gereken yerlerde çevirinin ağır alanlarını (body, faq) çekme."""
     lang = lang or get_language() or settings.LANGUAGE_CODE
     tr_model = queryset.model.translations.rel.related_model
+    tr_qs = tr_model.objects.filter(language_code=lang, status__in=LIVE_STATUSES)
+    if tr_defer:
+        tr_qs = tr_qs.defer(*tr_defer)
+    return queryset.prefetch_related(Prefetch("translations", queryset=tr_qs, to_attr=f"_prefetched_tr_{lang}"))
+
+
+def with_related_translations(queryset, path, lang=None):
+    """İlişkili çevrilebilir nesnenin (ör. review.treatment, case.treatment) o dildeki çevirisini de tek sorguda
+    yükler: şablondaki r.treatment.localized.name / get_absolute_url() döngüde N sorgu üretmez."""
+    lang = lang or get_language() or settings.LANGUAGE_CODE
+    model = queryset.model._meta.get_field(path).related_model
+    tr_model = model.translations.rel.related_model
     return queryset.prefetch_related(
-        Prefetch("translations",
+        Prefetch(f"{path}__translations",
                  queryset=tr_model.objects.filter(language_code=lang, status__in=LIVE_STATUSES),
-                 to_attr="_prefetched_tr")
+                 to_attr=f"_prefetched_tr_{lang}")
     )
 
 
-def with_all_translations(queryset, *paths):
+def with_all_translations(queryset, *paths, fields=()):
     """Sitemap gibi her nesnenin TÜM dillerini gezen yerler için: tüm canlı çeviriler tek sorguda.
-    paths: ilişkili çevrilebilir nesneler de (ör. "treatment", "city") aynı şekilde yüklenir."""
+    paths: ilişkili çevrilebilir nesneler de (ör. "treatment", "city") aynı şekilde yüklenir.
+    fields: çeviri satırından yalnızca bu sütunlar (ör. sitemap için language_code, status, slug) — 2 MB → birkaç KB."""
     def _prefetch(path, model):
         tr_model = model.translations.rel.related_model
         lookup = f"{path}__translations" if path else "translations"
-        return Prefetch(lookup, queryset=tr_model.objects.filter(status__in=LIVE_STATUSES), to_attr="_all_tr_list")
+        tr_qs = tr_model.objects.filter(status__in=LIVE_STATUSES)
+        if fields:  # sitemap: yalnızca slug/dil gerekir; FK sütunu eşleştirme için şart (ertelenirse satır başına SELECT)
+            names = {f.name for f in tr_model._meta.concrete_fields}
+            tr_qs = tr_qs.only("id", model.translations.rel.field.attname, *[f for f in fields if f in names])
+        return Prefetch(lookup, queryset=tr_qs, to_attr="_all_tr_list")
 
     lookups = [_prefetch("", queryset.model)]
     for path in paths:
@@ -180,7 +216,7 @@ def localize_list(objects, lang=None, fallback=True):
     lang = lang or get_language() or settings.LANGUAGE_CODE
     out = []
     for obj in objects:
-        if hasattr(obj, "_prefetched_tr"):
+        if hasattr(obj, "_prefetched_tr"):  # eski attr adıyla prefetch edilmiş nesneler
             obj._prefetched_lang = lang
         loc = obj.localized(lang, fallback=fallback)
         if loc is not None:

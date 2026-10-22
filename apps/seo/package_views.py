@@ -5,7 +5,7 @@ from django.urls import reverse
 from django.utils.translation import get_language, gettext as _
 
 
-from apps.clinics.models import Review
+from apps.clinics.models import Review, light_reviews
 from apps.core.seo import Seo, absolute, alternates_for, clinic_schema, faq_schema, page_meta, reverse_in
 from apps.localization.models import localize_list, with_translations
 from apps.localization.resolve import language_slugs, resolve_slug
@@ -44,7 +44,8 @@ def _hub_faq():
 
 def _cards(lang):
     out = []
-    for loc in localize_list(with_translations(Treatment.objects.filter(is_active=True), lang), lang):
+    for loc in localize_list(with_translations(Treatment.objects.filter(is_active=True).defer("body", "faq"), lang,
+                                               tr_defer=("body", "faq")), lang):
         out.append({"t": loc, "url": reverse("packages:treatment", kwargs={"slug": loc.slug})})
     return out
 
@@ -117,7 +118,7 @@ def package_treatment(request, slug):
         "page": p_loc if p_loc and not p_loc.is_fallback else None, "faq": faq,
         "offers": offers, "treatment_url": reverse("treatments:detail", kwargs={"slug": loc.slug}),
         "price_url": reverse("prices:detail", kwargs={"slug": loc.slug}),
-        "reviews": Review.objects.filter(is_published=True, treatment=t).exclude(text="")[:6],
+        "reviews": light_reviews(Review.objects.filter(is_published=True, treatment=t).exclude(text=""), lang)[:6],
         "related": related_treatments(t, lang), "origins": _origin_links(lang),
         "keywords": P.keywords_for(lang, "treatment", loc.name), "page_type": "package_treatment",
     })

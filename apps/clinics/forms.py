@@ -26,10 +26,12 @@ class ReviewForm(forms.Form):
         super().__init__(*args, **kwargs)
         from apps.treatments.models import Treatment
 
-        qs = Treatment.objects.filter(is_active=True)
+        from apps.localization.models import with_translations
+
+        qs = Treatment.objects.filter(is_active=True).defer("body", "faq", "short_description")
         if clinic is not None:
             qs = qs.filter(clinic_offers__clinic=clinic).distinct()
-        self.fields["treatment"].queryset = qs
+        self.fields["treatment"].queryset = with_translations(qs, tr_defer=("body", "faq", "short_description"))
         self.fields["treatment"].label_from_instance = lambda t: t.localized().name
 
     def clean_website(self):

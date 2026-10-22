@@ -59,23 +59,33 @@ def collect_event(request):
     except Exception:
         return JsonResponse({"ok": False}, status=400)
 
-    event_type = str(body.get("event_type", ""))[:30]
+    # Tek olay {event_type,…} ya da toplu {events:[{event_type,…}, …]} (tracker.js 4 sn'de bir / çıkışta toplar).
+    # Toplu istekte takip oturumu (middleware) ve persona oturumu BİR kez okunur, her olay için ayrı ayrı değil.
+    events = body.get("events") if isinstance(body.get("events"), list) else [body]
+    events = [e for e in events[:50] if isinstance(e, dict)]
+    from .service import record_event
+    from apps.persona.engine import record_event as persona_record
+    from apps.persona.models import VisitorSession as PersonaSession
 
-    data = body.get("data") if isinstance(body.get("data"), dict) else {}
-    page_url = str(body.get("page_url", ""))[:500]
-    if event_type in VALID_EVENTS:
+    skey = request.session.session_key
+    psession = PersonaSession.objects.filter(session_key=skey).first() if skey else None
+    wants_mind = False
+    for ev in events:
+        event_type = str(ev.get("event_type", ""))[:30]
+        data = ev.get("data") if isinstance(ev.get("data"), dict) else {}
+        page_url = str(ev.get("page_url", ""))[:500]
+        if event_type in VALID_EVENTS:
+            try:
+                record_event(session, event_type, data, page_url)
+            except Exception as e:
+                logger.error(f"collect_event: {e}")
+        # Aynı event persona motorunu da besler (tek beacon)
         try:
-            from .service import record_event
-            record_event(session, event_type, data, page_url)
+            persona_record(skey, event_type, data, page_url, str(ev.get("page_type", "")), session=psession)
         except Exception as e:
-            logger.error(f"collect_event: {e}")
-
-    # Aynı event persona motorunu da besler (tek beacon)
-    try:
-        from apps.persona.engine import record_event as persona_record
-        persona_record(request.session.session_key, event_type, data, page_url, str(body.get("page_type", "")))
-    except Exception as e:
-        logger.error(f"persona event: {e}")
+            logger.error(f"persona event: {e}")
+        if event_type in MIND_EVENTS or data.get("position") == "price-note":
+            wants_mind = True
 
     # localStorage'da saklanan ilk-dokunuş reklam atfı (gclid/fbclid/utm) — oturumda yoksa doldur
     attr = body.get("attr") if isinstance(body.get("attr"), dict) else {}
@@ -86,7 +96,7 @@ def collect_event(request):
             type(session).objects.filter(pk=session.pk).update(**upd)
 
     payload = {"ok": True}
-    if event_type in MIND_EVENTS or data.get("position") == "price-note":
+    if wants_mind:
         # Sayfa yenilenmeden konumlandırma: tracker.js bunu localStorage'a (dt_mind) yazar, mesajı anında değiştirir
         from .service import current_mindset
 

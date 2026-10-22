@@ -63,7 +63,9 @@ def treatment_detail(request, slug):
                            "url": reverse("treatments:city", kwargs={"slug": loc.slug, "city_slug": city_loc.slug})})
 
     posts = localize_list(with_translations(BlogPost.published.filter(treatment=t)[:4], lang), lang, fallback=False)
-    reviews = Review.objects.filter(is_published=True, treatment=t).exclude(text="")[:6]
+    from apps.clinics.models import light_reviews
+
+    reviews = light_reviews(Review.objects.filter(is_published=True, treatment=t).exclude(text=""), lang)[:6]
 
     procedure = {
         "@context": "https://schema.org",

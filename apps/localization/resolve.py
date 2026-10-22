@@ -41,6 +41,7 @@ def resolve_slug(model, lang, slug, base_qs=None):
 def language_slugs(obj):
     """{lang: slug} — nesnenin yayında olduğu tüm diller."""
     out = {obj.source_language: obj.slug}
-    for tr in obj.translations.filter(status__in=LIVE_STATUSES).only("language_code", "slug"):
-        out[tr.language_code] = tr.slug
+    # values_list: .only() FK sütununu erteliyor, Django her satır için ek SELECT yapıyordu (1 yerine 17 sorgu)
+    for code, slug in obj.translations.filter(status__in=LIVE_STATUSES).values_list("language_code", "slug"):
+        out[code] = slug
     return {c: out[c] for c, _ in settings.LANGUAGES if c in out}

@@ -86,6 +86,10 @@ class ContentBlock(TranslatableModel):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         cache.delete_many([f"cblock:{self.key}:{c}" for c, _ in settings.LANGUAGES])
+        if self.key.startswith("home-"):
+            from django.core.cache import caches
+
+            caches["local"].delete("home:sections")  # ana sayfa bölüm sırası / görünürlüğü (core.views.home_sections)
 
 
 class ContentBlockTranslation(BaseTranslation):

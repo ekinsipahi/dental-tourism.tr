@@ -25,8 +25,10 @@ class ContactForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        qs = Treatment.objects.filter(is_active=True)
-        self.fields["treatment"].queryset = qs
+        from apps.localization.models import with_translations
+
+        self.fields["treatment"].queryset = with_translations(Treatment.objects.filter(is_active=True).defer("body", "faq", "short_description"),
+                                                              tr_defer=("body", "faq", "short_description"))
         self.fields["treatment"].label_from_instance = lambda t: t.localized().name
 
     def clean_website(self):

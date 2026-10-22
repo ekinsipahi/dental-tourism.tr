@@ -77,9 +77,10 @@ class TranslatableSitemap(I18nSitemap):
 
 
 def _all(qs, *paths):
+    """Sitemap yalnızca slug ve dil okur: çeviri satırlarının gövdeleri (toplam ~1.8 MB) çekilmez."""
     from apps.localization.models import with_all_translations
 
-    return with_all_translations(qs, *paths)
+    return with_all_translations(qs, *paths, fields=("language_code", "status", "slug"))
 
 
 class TreatmentSitemap(TranslatableSitemap):
@@ -253,6 +254,27 @@ class GuideSitemap(TranslatableSitemap):
 
     def lastmod(self, obj):
         return obj.updated_at
+
+
+def sitemap_xml(request):
+    """/sitemap.xml — ~1200 URL × 17 hreflang (~2 MB). İçerik host'a, isteğin diline ve query string'e bağlı değil
+    (I18nSitemap tüm dilleri kendi gezer, domain _Site'tan). O yüzden cache_page yerine TEK anahtar, süreç içi "local"
+    bellekte 6 saat: her işçi 6 saatte bir üretir; ?x=1 ile yeniden ürettirilemez; Redis/DB'ye blob yazılmaz."""
+    from django.contrib.sitemaps.views import sitemap as django_sitemap
+    from django.core.cache import caches
+    from django.http import HttpResponse
+    from django.utils import translation
+
+    cache = caches["local"]
+    body = cache.get("sitemap:xml")
+    if body is None:
+        with translation.override(settings.LANGUAGE_CODE):
+            response = django_sitemap(request, SITEMAPS)
+            if hasattr(response, "render"):
+                response.render()
+            body = response.content
+        cache.set("sitemap:xml", body, 60 * 60 * 6)
+    return HttpResponse(body, content_type="application/xml")
 
 
 SITEMAPS = {

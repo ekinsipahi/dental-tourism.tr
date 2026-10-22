@@ -36,7 +36,8 @@ def _nav_menu(lang):
     from apps.treatments.models import Treatment
 
     treatments = []
-    for loc in localize_list(with_translations(Treatment.objects.filter(is_active=True), lang), lang):
+    for loc in localize_list(with_translations(Treatment.objects.filter(is_active=True).defer("body", "faq", "short_description"),
+                                               lang, tr_defer=("body", "faq", "short_description")), lang):
         treatments.append({"name": loc.name, "icon": loc.icon, "url": loc.object.get_absolute_url(),
                            "package_url": reverse("packages:treatment", kwargs={"slug": loc.slug}),
                            "price_url": reverse("prices:detail", kwargs={"slug": loc.slug})})
@@ -44,7 +45,8 @@ def _nav_menu(lang):
     kind_group = {"pillar": "choose", "general": "choose", "trust": "choose", "compare": "choose",
                   "gallery": "choose", "location": "places", "guide": "practical", "service": "practical",
                   "b2b": "practical"}
-    topics = with_translations(SeoTopic.objects.filter(is_active=True, noindex=False), lang)
+    topics = with_translations(SeoTopic.objects.filter(is_active=True, noindex=False).defer("body", "faq", "keywords"), lang,
+                               tr_defer=("body", "faq"))
     for loc in localize_list(topics, lang, fallback=False):
         groups[kind_group.get(loc.object.kind, "practical")].append(
             {"name": loc.h1.split(" — ")[0].split("? ")[0][:70], "url": reverse("guides:detail", kwargs={"slug": loc.slug}),

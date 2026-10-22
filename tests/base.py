@@ -11,9 +11,10 @@ class SeededTestCase(TestCase):
         call_command("seed_data", "--keywords", verbosity=0, stdout=open("/dev/null", "w"))
 
     def setUp(self):
-        from django.core.cache import cache
+        from django.core.cache import cache, caches
 
         cache.clear()
+        caches["local"].clear()  # sitemap / bot sayfa önbelleği testler arasında sızmasın
         self.client.defaults["HTTP_USER_AGENT"] = BROWSER_UA
 
 

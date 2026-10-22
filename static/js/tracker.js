@@ -108,19 +108,33 @@
   }
 
   var MIND_EVENTS = { faq_open: 1, faq_read: 1, cert_click: 1, before_after_interact: 1, video_play: 1, youtube_click: 1 };
+  /* ── Olaylar TOPLU gider: bir sayfa görüntülemede 6-12 ayrı POST (her biri sunucuda 2 oturum okuması + yazma) yerine
+     1-3 istek. Hemen giden: iletişim/CTA/form olayları (sayfa terk edilebilir) ve "mind" cevabı beklenen olaylar;
+     kalanı (scroll, bölüm görünürlüğü …) 4 sn'de bir ya da çıkışta tek beacon içinde {events:[…]}. ── */
+  var queue = [], qTimer = null, NOW_RE = /_click$|^form_/;
+  function flushQueue() {
+    if (qTimer) { clearTimeout(qTimer); qTimer = null; }
+    if (!queue.length) return;
+    var batch = queue; queue = [];
+    post(EVENT_API, { events: batch, vid: VID, attr: ATTR });
+  }
   function track(type, data) {
     data = data || {};
     data.persona = data.persona || D.persona || ""; data.stage = data.stage || STAGE; data.lang = data.lang || D.lang || "";
-    var payload = { event_type: type, data: data, page_url: PAGE_URL, page_type: PAGE_TYPE, vid: VID, attr: ATTR };
+    var ev = { event_type: type, data: data, page_url: PAGE_URL, page_type: PAGE_TYPE };
     ga(type, data);
     if ((MIND_EVENTS[type] || data.position === "price-note") && !flushed) {  // çıkarken beacon (fetch iptal olabilir)
       // Yanıtı bekle: persona motoru yeni teşhisi döner
-      fetch(EVENT_API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload),
+      fetch(EVENT_API, { method: "POST", headers: { "Content-Type": "application/json" },
+                         body: JSON.stringify({ event_type: type, data: data, page_url: PAGE_URL, page_type: PAGE_TYPE, vid: VID, attr: ATTR }),
                          credentials: "same-origin" })
         .then(function (r) { return r.json(); }).then(function (j) { if (j && j.mind) setMind(j.mind); }).catch(function () {});
       return;
     }
-    post(EVENT_API, payload);
+    queue.push(ev);
+    if (flushed) return;                       // çıkış: flush() en sonda hepsini tek beacon'la yollar
+    if (NOW_RE.test(type)) flushQueue();
+    else if (!qTimer) qTimer = setTimeout(flushQueue, 4000);
   }
   // Butonun sayfadaki yeri (admin'de "nereden tıkladı")
   var POSITIONS = [[".stage-dock", "stage-dock"], [".wa-float", "wa-float"], [".mobile-menu", "mobile-menu"], [".mega", "mega-menu"],
@@ -239,6 +253,7 @@
     var secs = Math.round((Date.now() - start) / 1000);
     track("time_on_page", { seconds: secs });
     if (secs < 10 && !Object.keys(fired).length) track("bounce", {});
+    flushQueue();  // bölüm süreleri + sayfa süresi + bekleyenler: tek beacon
   }
   addEventListener("pagehide", flush);
   document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") flush(); });

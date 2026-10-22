@@ -185,16 +185,27 @@ def _result(session, probs, method):
     }
 
 
+PREVIEW_COOKIE, PREVIEW_SALT, PREVIEW_MAX_AGE = "persona_preview", "persona-preview", 60 * 60 * 24
+
+
 def _forced(request):
-    """?persona=price ile önizleme (DEBUG veya staff). Exposure kaydedilmez."""
+    """?persona=price ile önizleme (DEBUG veya staff). Exposure kaydedilmez.
+    Önizleme İMZALI ÇEREZDE tutulur (middleware yazar): request.user / request.session'a yalnızca ?persona= verildiğinde
+    dokunulur, böylece anonim her GET'te django_session satırı okunmaz."""
     forced = request.GET.get("persona")
-    allowed = settings.DEBUG or (getattr(request, "user", None) and request.user.is_staff)
-    if forced is not None and allowed:
-        if forced in PERSONAS:
-            request.session["persona_preview"] = forced
-        else:
-            request.session.pop("persona_preview", None)
-    preview = request.session.get("persona_preview") if allowed else None
+    preview = None
+    if forced is not None:
+        allowed = settings.DEBUG or (getattr(request, "user", None) is not None and request.user.is_staff)
+        if allowed:
+            preview = forced if forced in PERSONAS else None
+            request._persona_preview = preview or ""  # PersonaMiddleware: çerezi yazar ("" → siler)
+    elif request.COOKIES.get(PREVIEW_COOKIE):
+        try:
+            preview = request.get_signed_cookie(PREVIEW_COOKIE, salt=PREVIEW_SALT, max_age=PREVIEW_MAX_AGE)
+        except Exception:  # noqa: BLE001 — bozuk / süresi dolmuş imza
+            preview = None
+        if preview not in PERSONAS:
+            preview = None
     if preview:
         return {**DEFAULT_RESULT, "persona": preview, "inferred": preview, "confidence": 1.0,
                 "theme_class": PERSONA_THEME[preview], "method": "forced", "is_known": True}
@@ -336,10 +347,12 @@ SECTION_FIELDS = {
 }
 
 
-def record_event(session_key, event_type, data=None, page_url="", page_type=""):
+def record_event(session_key, event_type, data=None, page_url="", page_type="", session=None):
+    """session: toplu olaylarda çağıran bir kez okuyup aynı nesneyi verir (her olayda SELECT yapılmasın)."""
     data = data if isinstance(data, dict) else {}
     event_type = EVENT_ALIASES.get(event_type, event_type)
-    session = VisitorSession.objects.filter(session_key=session_key).first()
+    if session is None:
+        session = VisitorSession.objects.filter(session_key=session_key).first()
     if session is None:
         return
     valid = {c for c, _ in BehaviorEvent.EVENT_TYPES}

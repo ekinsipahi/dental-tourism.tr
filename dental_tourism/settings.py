@@ -53,6 +53,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "apps.core.middleware.BotDetectionMiddleware",
+    "apps.core.middleware.BotPageCacheMiddleware",   # botlara (Google, Bing …) sayfayı bellekten ver: 0 DB sorgusu
     "apps.tracking.middleware.TrackingMiddleware",
     "apps.persona.middleware.PersonaMiddleware",
     "apps.seo.middleware.RedirectFallbackMiddleware",
@@ -121,14 +122,38 @@ else:
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # ── Cache / Session ──────────────────────────────────────────────────────────
-# Redis YOK: veritabanı cache'i (tüm gunicorn işçileri arasında paylaşılır).
-# Kurulumda bir kez: python manage.py createcachetable
+# Önbellek VERİTABANINDA DEĞİL. (Eskiden DatabaseCache'ti: her cache.get başka bölgedeki Supabase'e bir gidiş-dönüş
+# demekti — istek başına 5-6 çağrı → sayfa 5 sn, Supabase egress limiti.)
+#   REDIS_URL varsa → Redis (Render Key Value, web ile aynı bölge, tüm gunicorn işçileri paylaşır: admin'de yapılan
+#                     değişiklik ve persona/aşama güncellemesi anında her işçide görünür)
+#   yoksa          → süreç içi bellek (LocMem). İşçi başına ayrıdır: cache.delete yalnızca o işçide çalışır, diğer
+#                     işçi TTL kadar (en çok 5 dk) eski değeri gösterebilir. Doğruluk bozulmaz, gecikir.
+#   "local"        → her zaman süreç içi: sitemap gibi büyük bloblar Redis'i (25 MB) doldurmasın.
+#   "sessions"     → aynı arka uç, commit öneki YOK: oturum önbelleği deploy'larda yeniden kurulmasın / birikmesin.
 # KEY_PREFIX = commit → her deploy temiz önbellekle başlar (sitemap/llms.txt yeni dil ve sayfaları hemen görür).
 # Oturumlar cached_db: önbellekte bulunamazsa DB'den okunur, kimse oturumdan düşmez.
-CACHES = {"default": {"BACKEND": "django.core.cache.backends.db.DatabaseCache", "LOCATION": "django_cache",
-                      "KEY_PREFIX": config("RENDER_GIT_COMMIT", default="")[:12],
-                      "OPTIONS": {"MAX_ENTRIES": 20000}}}
-SESSION_ENGINE = "django.contrib.sessions.backends.cached_db"
+_CACHE_PREFIX = config("RENDER_GIT_COMMIT", default="")[:12]
+REDIS_URL = config("REDIS_URL", default="")
+
+
+def _cache(location, prefix=_CACHE_PREFIX, shared=True):
+    if shared and REDIS_URL:
+        # Redis koparsa sayfa 500 vermesin: hata = önbellekte yok (dental_tourism/cache_backends.py)
+        return {"BACKEND": "dental_tourism.cache_backends.ResilientRedisCache", "LOCATION": REDIS_URL, "KEY_PREFIX": prefix}
+    return {"BACKEND": "django.core.cache.backends.locmem.LocMemCache", "LOCATION": location, "KEY_PREFIX": prefix,
+            "OPTIONS": {"MAX_ENTRIES": 20000}}
+
+
+CACHES = {
+    "default": _cache("dental-default"),
+    "sessions": _cache("dental-sessions", prefix=""),
+    "local": {**_cache("dental-local", shared=False), "OPTIONS": {"MAX_ENTRIES": 4000}},  # sitemap + bot sayfa önbelleği
+}
+# Oturum: Redis varsa cached_db ("sessions" alias'ı); yoksa doğrudan DB — süreç içi önbellekte oturum tutmak iki işçi
+# arasında tutarsızlık (kayıp güncelleme) yaratır. Anonim ziyaretçide oturum zaten yüklenmez (persona önizlemesi imzalı
+# çerezde, bkz. apps/persona/engine.py _forced) → DB'ye ek sorgu yok.
+SESSION_ENGINE = "django.contrib.sessions.backends.cached_db" if REDIS_URL else "django.contrib.sessions.backends.db"
+SESSION_CACHE_ALIAS = "sessions"
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 90  # 90 gün
 
 # ── i18n — 17 dil ────────────────────────────────────────────────────────────

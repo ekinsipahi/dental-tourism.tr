@@ -19,26 +19,26 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.http import HttpResponse
-from django.views.decorators.cache import cache_page
 from django.urls import include, path
 from django.utils.translation import gettext_lazy as _
 
 from apps.core import views as core_views
-from apps.core.sitemaps import SITEMAPS
+from apps.core.sitemaps import SITEMAPS, sitemap_xml
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("robots.txt", core_views.robots_txt, name="robots"),
     # Render health check — veritabanına dokunmaz, HTTPS yönlendirmesinden muaf (SECURE_REDIRECT_EXEMPT)
-    path("healthz", lambda request: HttpResponse("ok", content_type="text/plain"), name="healthz"),
+    path("healthz", core_views.healthz, name="healthz"),
     path("llms.txt", core_views.llms_txt, name="llms"),
     path("favicon.ico", core_views.favicon, name="favicon"),
     path("apple-touch-icon.png", core_views.apple_touch_icon),
     path("site.webmanifest", core_views.webmanifest, name="webmanifest"),
     # TEK sitemap: tüm bölümler (sayfalar, tedaviler, rehberler, paketler, fiyat, köken, blog, klinik, hekim)
     # hreflang alternates + x-default ile tek <urlset> içinde
-    # 6 saat önbellek (DatabaseCache) — 949 URL × 16 dil hreflang her istekte yeniden üretilmez
-    path("sitemap.xml", cache_page(60 * 60 * 6)(sitemap), {"sitemaps": SITEMAPS}, name="sitemap-index"),
+    # 6 saat önbellek — ~1200 URL × 17 dil hreflang her istekte yeniden üretilmez. Birkaç MB'lık blob olduğu için
+    # süreç içi "local" önbellekte (Redis'i doldurmasın; işçi başına 6 saatte bir üretilir)
+    path("sitemap.xml", sitemap_xml, name="sitemap-index"),
     path("sitemap-<section>.xml", sitemap, {"sitemaps": SITEMAPS}, name="sitemap-section"),
     path("api/persona/", include("apps.persona.api_urls")),
     path("api/tracking/", include("apps.tracking.urls")),

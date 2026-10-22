@@ -29,6 +29,14 @@ class PersonaMiddleware:
             request.persona = dict(DEFAULT)
         response = self.get_response(request)
         visitor.set_cookie(request, response)
+        if hasattr(request, "_persona_preview"):  # ?persona= önizlemesi (staff/DEBUG) — imzalı çerez, oturum değil
+            from .engine import PREVIEW_COOKIE, PREVIEW_MAX_AGE, PREVIEW_SALT
+
+            if request._persona_preview:
+                response.set_signed_cookie(PREVIEW_COOKIE, request._persona_preview, salt=PREVIEW_SALT,
+                                           max_age=PREVIEW_MAX_AGE, httponly=True, samesite="Lax")
+            else:
+                response.delete_cookie(PREVIEW_COOKIE)
         if request.persona.get("is_known"):
             response.headers["Vary"] = ", ".join(filter(None, [response.headers.get("Vary"), "Cookie"]))
         return response

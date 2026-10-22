@@ -18,7 +18,8 @@ def _faq(loc):
 
 
 def _guide_links(lang, exclude=None):
-    qs = with_translations(SeoTopic.objects.filter(is_active=True, noindex=False), lang)
+    qs = with_translations(SeoTopic.objects.filter(is_active=True, noindex=False).defer("body", "faq", "keywords"), lang,
+                           tr_defer=("body", "faq"))  # 8 çip için 15 rehberin gövdesi (42 KB) çekilmesin
     return [{"url": reverse("guides:detail", kwargs={"slug": loc.slug}), "h1": loc.h1, "key": loc.object.key,
              "lead": loc.lead}
             for loc in localize_list(qs, lang, fallback=False) if loc.object.pk != exclude]

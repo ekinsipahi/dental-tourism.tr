@@ -262,8 +262,37 @@ def faq_block(context, faq=None, faq_title=None, wrap_class=None):
             continue
         seen.add(key)
         items.append({"question": q, "answer": a, "mind": tags.get(key, "")})
-    return render_to_string("components/faq.html", {"faq": items, "faq_title": faq_title, "wrap_class": wrap_class},
-                            request=request)
+    # request=... VERİLMEZ: aksi halde tüm context processor'lar (site_context, persona) bu parça için yeniden çalışır
+    return render_to_string("components/faq.html", {"faq": items, "faq_title": faq_title, "wrap_class": wrap_class})
+
+
+def _results_cases(clinic, lang):
+    """Önce/sonra vakaları (düz sözlükler) — dil başına 5 dk süreç içi bellekte: her sayfada 42 KB JSON + ~13 sorgu yerine 0."""
+    from django.core.cache import caches
+
+    from apps.localization.models import with_related_translations
+
+    key = f"results:{clinic.pk}:{lang}"
+    cases = caches["local"].get(key)
+    if cases is not None:
+        return cases
+    qs = with_related_translations(clinic.cases.filter(is_published=True, patient_consent=True).select_related("treatment"),
+                                   "treatment", lang).order_by("order", "pk")
+    cases = []
+    for c in qs:
+        if not (c.before_src and c.after_src):
+            continue
+        title, caption = c.text_in(lang)
+        tname = ""
+        if c.treatment_id:
+            try:
+                tname = c.treatment.localized(lang).name
+            except Exception:  # noqa: BLE001
+                tname = c.treatment.name
+        cases.append({"before": c.before_src, "after": c.after_src, "title": title, "caption": caption,
+                      "treatment": tname, "treatment_url": c.treatment.get_absolute_url() if c.treatment_id else ""})
+    caches["local"].set(key, cases, 300)
+    return cases
 
 
 @register.simple_tag(takes_context=True)
@@ -282,24 +311,13 @@ def results_block(context, limit=None):
     if clinic is None:
         return ""
     lang = get_language()
-    qs = clinic.cases.filter(is_published=True, patient_consent=True).select_related("treatment").order_by("order", "pk")
-    cases = []
-    for c in qs[: int(limit) if limit else None]:
-        if not (c.before_src and c.after_src):
-            continue
-        title, caption = c.text_in(lang)
-        tname = ""
-        if c.treatment_id:
-            try:
-                tname = c.treatment.localized(lang).name
-            except Exception:  # noqa: BLE001
-                tname = c.treatment.name
-        cases.append({"before": c.before_src, "after": c.after_src, "title": title, "caption": caption,
-                      "treatment": tname, "treatment_url": c.treatment.get_absolute_url() if c.treatment_id else ""})
+    cases = _results_cases(clinic, lang)
+    if limit:
+        cases = cases[: int(limit)]
     if not cases:
         return ""
     return render_to_string("components/results.html", {"cases": cases, "wa_url": context.get("wa_url"),
-                                                        "clinic": clinic}, request=request)
+                                                        "clinic": clinic})  # request yok: bkz. faq_block
 
 
 # Diş değiştiren tedaviler: önce kendi dişin kurtarılabilir mi? (konumlandırma: "save the natural tooth first")

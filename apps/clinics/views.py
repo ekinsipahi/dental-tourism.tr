@@ -50,19 +50,26 @@ def clinic_detail(request, slug):
     lang = get_language()
     clinic = get_object_or_404(Clinic.objects.published().select_related("city"), slug=slug)
     loc = clinic.localized(lang)
-    offers = (clinic.treatment_offers.filter(is_active=True, treatment__is_active=True)
-              .select_related("treatment"))
+    from apps.localization.models import with_related_translations
+
+    from .forms import ReviewForm
+    from .models import light_reviews
+
+    # tedavi adları + slug'lar tek sorguda (döngüde localized() → N sorgu olmasın); gövde/SSS çekilmez
+    offers = with_related_translations(
+        clinic.treatment_offers.filter(is_active=True, treatment__is_active=True).select_related("treatment")
+        .defer("treatment__body", "treatment__faq"), "treatment", lang)
     offer_rows = [{"offer": o, "t": o.treatment.localized(lang)} for o in offers]
     doctors = localize_list(with_translations(clinic.doctors.filter(is_active=True), lang), lang)
-    reviews = clinic.reviews.filter(is_published=True).select_related("treatment")
-    from .forms import ReviewForm
+    reviews = light_reviews(clinic.reviews.filter(is_published=True), lang)
+    alternates = _clinic_alternates(clinic)
 
     seo = Seo(
         title=fill_proof(loc.meta_title) or _("%(clinic)s — Dental Clinic in %(city)s") % {"clinic": clinic.name,
                                                                           "city": clinic.city.localized(lang).name},
         description=fill_proof(loc.meta_description) or loc.short_description,
-        canonical=_clinic_alternates(clinic).get(lang) or absolute(request.path),
-        alternates=_clinic_alternates(clinic),
+        canonical=alternates.get(lang) or absolute(request.path),
+        alternates=alternates,
         robots="noindex,follow" if loc.is_fallback else "index,follow,max-image-preview:large",
         image=clinic.display_image,
         breadcrumbs=[(_("Home"), reverse("core:home")), (_("Clinics"), reverse("clinics:list")),

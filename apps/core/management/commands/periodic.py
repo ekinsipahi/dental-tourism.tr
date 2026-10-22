@@ -37,8 +37,11 @@ def job_persona():
 
 
 def job_cleanup():
+    from django.core.management import call_command
+
     from apps.tracking.tasks import cleanup_old_sessions
 
+    call_command("clearsessions", verbosity=0)  # süresi dolmuş django_session satırları (90 gün)
     return cleanup_old_sessions()
 
 

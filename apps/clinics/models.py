@@ -482,12 +482,30 @@ class Review(models.Model):
         return "".join(chr(0x1F1E6 + ord(c) - ord("A")) for c in self.country_code.upper())
 
     def text_in(self, lang):
-        """(metin, çeviri_mi) — ziyaretçinin dilinde metin; yoksa orijinal."""
+        """(metin, çeviri_mi) — ziyaretçinin dilinde metin; yoksa orijinal.
+        light_reviews() ile yüklendiyse 17 dillik JSON yerine yalnızca o dilin metni (text_l) gelmiştir."""
         if not lang or lang == self.language or not self.text:
             return self.text, False
-        tr = (self.text_translations or {}).get(lang)
+        if "text_translations" in self.get_deferred_fields():
+            tr = getattr(self, "text_l", None)
+        else:
+            tr = (self.text_translations or {}).get(lang)
         return (tr, True) if tr else (self.text, False)
 
     @property
     def is_internal(self):
         return self.source == self.SOURCE_SITE
+
+
+def light_reviews(qs, lang):
+    """Yorum listeleri için hafif sorgu: 17 dillik text_translations JSON'u yerine yalnızca ziyaretçinin dili (text_l),
+    tedavi satırının gövdesi/SSS'si çekilmez, tedavi adı için çeviri tek sorguda prefetch edilir.
+    Satır başına ~5 KB → ~0.6 KB (ana sayfa 180 KB → ~25 KB)."""
+    from django.db.models.fields.json import KeyTextTransform
+
+    from apps.localization.models import with_related_translations
+
+    qs = (qs.annotate(text_l=KeyTextTransform(lang, "text_translations")).defer("text_translations")
+          .select_related("treatment").defer("treatment__body", "treatment__faq", "treatment__short_description"))
+    return with_related_translations(qs, "treatment", lang)
+
