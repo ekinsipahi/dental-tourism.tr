@@ -87,7 +87,7 @@
     language_switch: "language_switch", scroll_depth: "scroll_depth", faq_open: "faq_open", faq_read: "faq_read",
     section_view: "section_view", section_time: "section_time", before_after_interact: "before_after_view",
     video_play: "video_start", video_time: "video_watch", time_on_page: "page_read", chatbot_open: "chat_open",
-    email_click: "email_click", nav_click: "nav_click"
+    email_click: "email_click", nav_click: "nav_click", contact_return: "contact_return"
   };
   var CONTACT_METHOD = { whatsapp: "wa_chat", whatsapp_call: "wa_call", phone: "phone", email: "email" };
   function ga(type, data) {
@@ -102,6 +102,8 @@
     if (data.seconds != null) p.seconds = data.seconds;
     if (data.depth != null) p.percent_scrolled = data.depth;
     if (data.href) p.link_url = String(data.href).slice(0, 100);
+    if (data.away_seconds != null) p.away_seconds = data.away_seconds;
+    if (data.kind) p.contact_kind = data.kind;
     if (CONTACT_METHOD[data.element]) p.contact_method = CONTACT_METHOD[data.element];
     if (type === "time_on_page" || type === "section_time" || type === "faq_read") p.transport_type = "beacon";
     try { gtag("event", name, p); } catch (e) {}
@@ -196,6 +198,9 @@
     if (/google\.[a-z.]+\/maps|maps\.app\.goo\.gl|g\.page/.test(href)) return "maps";
     return "";
   }
+  // Son iletişim tıklaması: telefon / WhatsApp / harita / e-posta uygulamasından siteye dönüşü ölçmek için
+  var CONTACT_KINDS = { phone: "phone", whatsapp: "whatsapp", whatsapp_call: "whatsapp_call", maps: "maps", email: "email" };
+  var lastContact = null, CONTACT_RETURN_WINDOW = 15 * 60000;
   document.addEventListener("click", function (e) {
     var el = e.target.closest("[data-track], a[href^='tel:'], a[href^='mailto:'], a[href*='wa.me/'], a[href*='api.whatsapp.com'], " +
                               "a[href*='instagram.com'], a[href*='youtube.com'], a[href*='youtu.be'], a[href*='google.com/maps'], a[href*='maps.app.goo.gl']");
@@ -207,6 +212,7 @@
     var label = (el.getAttribute("aria-label") || (head && head.textContent) || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
     track(MAP[type] || "cta_click", { element: type, label: label, text: label.slice(0, 60), href: href.slice(0, 200),
                                       position: positionOf(el), screen: screen.width + "x" + screen.height });
+    if (CONTACT_KINDS[type]) lastContact = { kind: CONTACT_KINDS[type], label: label.slice(0, 60), position: positionOf(el), t: Date.now() };
     // Meta "Contact": yalnızca WhatsApp (sohbet / arama). Normal telefon hattı yanıtlanmadığı için iletişim sayılmaz.
     if ((type === "whatsapp" || type === "whatsapp_call") && window.fbq) fbq("track", "Contact");  // GA4: ga() gönderir
   });
@@ -243,18 +249,42 @@
     v.addEventListener("pause", function () { if (t0) track("video_time", { seconds: Math.round((Date.now() - t0) / 1000) }); t0 = 0; });
   });
 
-  // Çıkışta: süre + bölüm süreleri
-  var start = Date.now(), flushed = false;
+  // Çıkışta / sekme arka plana geçince: süre + bölüm süreleri. Geri gelince sayaçlar sıfırdan başlar ve
+  // `flushed` açılır (eski sürümde bir kez true olup kalıyor, dönüşten sonraki tüm olaylar sessizce düşüyordu).
+  // time_on_page segment segment gider; sunucu toplar → aktif süre (arka planda geçen süre sayılmaz).
+  var start = Date.now(), flushed = false, hiddenAt = 0, segment = 0;
   function flush() {
     if (flushed) return; flushed = true;
     Object.keys(faqOpen).forEach(faqClose);
     Object.keys(visibleSince).forEach(function (s) { dwell[s] = (dwell[s] || 0) + (Date.now() - visibleSince[s]) / 1000; });
     Object.keys(dwell).forEach(function (s) { if (dwell[s] >= 3) track("section_time", { section: s, seconds: Math.round(dwell[s]) }); });
     var secs = Math.round((Date.now() - start) / 1000);
-    track("time_on_page", { seconds: secs });
-    if (secs < 10 && !Object.keys(fired).length) track("bounce", {});
+    track("time_on_page", { seconds: secs, segment: segment });
+    if (segment === 0 && secs < 10 && !Object.keys(fired).length) track("bounce", {});
     flushQueue();  // bölüm süreleri + sayfa süresi + bekleyenler: tek beacon
   }
-  addEventListener("pagehide", flush);
-  document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") flush(); });
+  // Sekme geri geldi (telefon / WhatsApp / harita uygulamasından dönüş dahil): sayaçları yeniden başlat; iletişim
+  // tıklamasından sonraki dönüşü ayrı olay olarak kaydet — kaç sn uzak kaldı → muhtemelen aradı / yazdı mı?
+  function resume() {
+    if (!flushed) return;
+    flushed = false; segment++;
+    var away = hiddenAt ? Math.round((Date.now() - hiddenAt) / 1000) : 0;
+    hiddenAt = 0; start = Date.now(); dwell = {};
+    Object.keys(visibleSince).forEach(function (s) { visibleSince[s] = Date.now(); });
+    document.querySelectorAll("details[data-track='faq'][open]").forEach(function (d) {  // açık kalan SSS yeniden sayılsın
+      var i = faqInfo(d); if (!faqOpen[i.q]) faqOpen[i.q] = { t: Date.now(), mind: i.mind };
+    });
+    if (lastContact && Date.now() - lastContact.t < CONTACT_RETURN_WINDOW) {
+      track("contact_return", { kind: lastContact.kind, label: lastContact.label, position: lastContact.position,
+                                away_seconds: away, likely_contacted: away >= 8 });
+      lastContact = null;
+    }
+    if (queue.length) flushQueue();
+  }
+  addEventListener("pagehide", function () { hiddenAt = hiddenAt || Date.now(); flush(); });
+  addEventListener("pageshow", function (e) { if (e.persisted) resume(); });  // bfcache'ten geri dönüş
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") { hiddenAt = Date.now(); flush(); }
+    else resume();
+  });
 })();

@@ -151,6 +151,11 @@ yer almaz) — ince/duplicate içerik cezası riskine karşı.
   (şifredeki özel karakterler percent-encode: `*`→`%2A`, `!`→`%21`). SSL zorunlu (`DB_SSLMODE=require`).
 - **Render:** `render.yaml` (Blueprint) + `build.sh` (pip, collectstatic, migrate, createcachetable).
   Gizli değerler (`DATABASE_URL`, `SECRET_KEY`, `ANTHROPIC_API_KEY`) Render panelinden girilir — repoda yok.
+- **Lead / webhook koruması** (`apps/tracking/views.py`): `/api/tracking/lead/` yalnızca sitede sayfa açmış
+  (oturum çerezli), aynı kökenden (ALLOWED_HOSTS + `TRACKING_ALLOWED_ORIGINS`, ör. `https://drdevrim.com`) gelen,
+  bot olmayan isteklere açıktır; oturum başına 3/saat, IP başına 5/saat limit, gizli `website` honeypot alanı,
+  16 KB gövde sınırı. `/api/tracking/whatsapp-webhook/` `WHATSAPP_WEBHOOK_SECRET` boşsa kapalıdır (404);
+  çağıran `X-Webhook-Secret` (veya `Authorization: Bearer`) başlığı gönderir.
 - **Cache:** veritabanı cache'i (`python manage.py createcachetable`). Arka plan işleri: web sürecinde sınırlı thread havuzu.
 - **Zamanlanmış işler:** `python manage.py periodic [--job translations|conversions|related|cleanup|persona]`
   (Render Cron Job veya sistem cron'u).
@@ -164,5 +169,9 @@ yer almaz) — ince/duplicate içerik cezası riskine karşı.
   persona geçmişi, niyet skorları ve reklam atfı (gclid/fbclid/utm — ilk ve son dokunuş, localStorage) korunur.
 - Tıklamalar (telefon, WhatsApp, CTA, form, video, harita, FAQ, bölüm süreleri) `/api/tracking/event/` ile hem
   dönüşüm takibine hem persona motoruna gider (admin → Tracking / Persona, `/api/dashboard/`).
+- Sekme arka plana geçince (`visibilitychange`) sayfa süresi segment olarak gönderilir, geri gelince sayaçlar sıfırdan
+  başlar; `time_on_page` sunucuda toplanır (aktif süre). Telefon / WhatsApp / harita tıklamasından sonra siteye dönüş
+  `contact_return` olayıdır (`away_seconds`, `likely_contacted` = 8 sn+ uzak kaldı) ve admin → Contact clicks'te
+  tıklamanın hemen altında "↩️ Aramadan döndü" olarak görünür.
 - `<html data-persona=… data-stage=…>`: persona'ya göre renk/yazı/CTA, huni aşamasına göre
   (awareness → consideration → decision) güven bandı ve mobil iletişim çubuğu.

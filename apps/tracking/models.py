@@ -260,6 +260,7 @@ class TrackingEvent(models.Model):
     REVIEW_READ      = "review_read"
     EMAIL_CLICK      = "email_click"
     NAV_CLICK        = "nav_click"     # iç gezinme (tedavi kartı, semt çipi …) — CTA değil
+    CONTACT_RETURN   = "contact_return"  # telefon / WhatsApp / harita tıklamasından sonra siteye dönüş (kaç sn uzak kaldı)
 
     EVENT_CHOICES = [
         (WHATSAPP_CLICK,  "WhatsApp Click"),
@@ -282,6 +283,7 @@ class TrackingEvent(models.Model):
         (REVIEW_READ,     "Review Read"),
         (EMAIL_CLICK,     "E-mail Click"),
         (NAV_CLICK,       "Navigation Click"),
+        (CONTACT_RETURN,  "Contact Return"),
     ]
 
     session    = models.ForeignKey(VisitorSession, on_delete=models.CASCADE, related_name="events")
@@ -311,7 +313,8 @@ class TrackingEvent(models.Model):
         return f"{self.event_type} | {self.timestamp.strftime('%H:%M:%S')}"
 
 
-CONTACT_EVENTS = (TrackingEvent.PHONE_CLICK, TrackingEvent.WHATSAPP_CLICK, TrackingEvent.FORM_SUBMIT)
+CONTACT_EVENTS = (TrackingEvent.PHONE_CLICK, TrackingEvent.WHATSAPP_CLICK, TrackingEvent.FORM_SUBMIT,
+                  TrackingEvent.CONTACT_RETURN)  # dönüş olayı iletişim listesinde tıklamanın hemen altında görünür
 
 
 class ContactClickManager(models.Manager):

@@ -370,7 +370,7 @@ def _flag(cc):
     return "".join(chr(0x1F1E6 + ord(c) - 65) for c in cc)
 
 
-_TYPE = {"phone_click": ("☎️ Telefon denemesi (hat yanıtlanmıyor)", "#64748b"), "whatsapp_click": ("💬 WhatsApp", "#16a34a"),
+_TYPE = {"contact_return": ("↩️ Aramadan döndü", "#0f766e"), "phone_click": ("☎️ Telefon denemesi (hat yanıtlanmıyor)", "#64748b"), "whatsapp_click": ("💬 WhatsApp", "#16a34a"),
          "form_submit": ("📝 Form", "#9333ea"), "instagram_click": ("📸 Instagram", "#d6249f"),
          "youtube_click": ("▶️ YouTube", "#dc2626"), "maps_click": ("📍 Yol tarifi / Google", "#2563eb"),
          "email_click": ("✉️ E-posta", "#0f766e")}

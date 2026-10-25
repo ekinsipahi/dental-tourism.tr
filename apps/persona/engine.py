@@ -449,9 +449,12 @@ def _update_aggregates(s, event_type, data, page_type):
         fields |= {"avg_scroll_depth", "max_scroll_depth"}
     elif event_type == "time_on_page":
         inc("total_time_spent_sec", _num(data.get("seconds"), 1800))
-        inc("total_page_views")
-        if page_type == "blog_detail":
-            inc("blog_reads")
+        # tracker.js sayfa süresini segment segment yollar (sekme her arka plana geçtiğinde bir tane);
+        # sayfa görüntüleme yalnızca ilk segmentte sayılır, yoksa her sekme değişimi yeni ziyaret gibi görünür
+        if _num(data.get("segment"), 10_000) == 0:
+            inc("total_page_views")
+            if page_type == "blog_detail":
+                inc("blog_reads")
     elif event_type in ("section_view", "section_time"):
         section = str(data.get("section", ""))
         time_field, count_field = SECTION_FIELDS.get(section, (None, None))
