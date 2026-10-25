@@ -1,6 +1,12 @@
+import hashlib
+import hmac
 import json
 import logging
-from django.http import JsonResponse
+from urllib.parse import urlparse
+
+from django.conf import settings
+from django.core.cache import cache
+from django.http import Http404, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.contrib.admin.views.decorators import staff_member_required
@@ -14,6 +20,7 @@ VALID_EVENTS = {
     "instagram_click","youtube_click","before_after_interact",
     "chatbot_open","chatbot_message","language_switch","review_read",
     "email_click","nav_click",
+    "contact_return",  # telefon/WhatsApp/harita tıklamasından sonra sekmeye dönüş (away_seconds, likely_contacted)
 }
 
 def _get_or_create_session(request):
@@ -30,6 +37,50 @@ def _get_or_create_session(request):
     except Exception as e:
         logger.warning(f"Session create failed: {e}")
         return None
+
+
+# Kimliksiz uçlar için koruma: lead ucu oturum çerezi + aynı köken + hız limiti ister; webhook paylaşılan anahtar ister.
+LEAD_LIMIT_PER_SESSION = 3   # saatte, oturum başına
+LEAD_LIMIT_PER_IP = 5        # saatte, IP başına (iki gunicorn işçisi → pratikte en çok iki katı)
+WEBHOOK_LIMIT_PER_IP = 120   # saatte — anahtar denemesine karşı
+
+
+def _ip_hash(request):
+    from .service import _get_client_ip
+
+    return hashlib.sha256((_get_client_ip(request) or "?").encode()).hexdigest()[:24]
+
+
+def _rate_limited(key, limit, window):
+    """Süreç içi önbellekte basit sayaç: pencere içinde limit aşıldıysa True."""
+    key = f"rl:{key}"
+    n = cache.get(key, 0)
+    if n >= limit:
+        return True
+    if n == 0:
+        cache.set(key, 1, window)
+    else:
+        try:
+            cache.incr(key)
+        except ValueError:  # pencere bu arada kapandı
+            cache.set(key, 1, window)
+    return False
+
+
+def _same_origin(request):
+    """Origin/Referer başlığı varsa bizim alanımızdan olmalı (başka siteden / scriptten POST reddedilir)."""
+    src = request.META.get("HTTP_ORIGIN") or request.META.get("HTTP_REFERER") or ""
+    if not src:
+        return True  # başlık yok: oturum çerezi + hız limiti korur
+    host = (urlparse(src).hostname or "").lower()
+    try:
+        own = request.get_host().split(":")[0].lower()
+    except Exception:  # noqa: BLE001
+        own = ""
+    allowed = {h.lstrip(".").lower() for h in settings.ALLOWED_HOSTS}
+    # Dış siteler (ör. https://drdevrim.com) TRACKING_ALLOWED_ORIGINS ile eklenir — ileride CORS entegrasyonu için
+    allowed |= {(urlparse(o).hostname or o).lstrip(".").lower() for o in settings.TRACKING_ALLOWED_ORIGINS if o}
+    return bool(host) and (host == own or host in allowed or "*" in allowed)
 
 
 MIND_EVENTS = {"faq_open", "faq_read", "cert_click", "before_after", "before_after_interact", "video_play", "youtube_click"}
@@ -170,21 +221,37 @@ def collect_pageview(request):
 @csrf_exempt
 @require_POST
 def submit_lead(request):
+    # Kimliksiz uç: yalnızca sitede sayfa açmış (oturum çerezli), aynı kökenden gelen, bot olmayan ve hız limitini
+    # aşmayan istekler lead oluşturabilir — dışarıdan script ile sahte lead basılamaz.
+    session_cookie = request.COOKIES.get(settings.SESSION_COOKIE_NAME, "")
+    if getattr(request, "is_bot", False) or not session_cookie or not _same_origin(request):
+        return JsonResponse({"ok": False, "error": "forbidden"}, status=403)
+    if len(request.body) > 16 * 1024:  # tek lead için fazlasıyla yeterli; büyük gövdeyle DB/log şişirilemesin
+        return JsonResponse({"ok": False, "error": "payload too large"}, status=413)
+    if (_rate_limited(f"lead-s:{session_cookie[:40]}", LEAD_LIMIT_PER_SESSION, 3600)
+            or _rate_limited(f"lead-ip:{_ip_hash(request)}", LEAD_LIMIT_PER_IP, 3600)):
+        return JsonResponse({"ok": False, "error": "too many requests"}, status=429)
     _get_or_create_session(request)  # request.tracking_session'ı garanti eder
 
     try:
         body = json.loads(request.body.decode("utf-8"))
+        if not isinstance(body, dict):
+            raise ValueError
     except Exception:
         return JsonResponse({"ok": False}, status=400)
+    if body.get("website"):  # spam tuzağı (formdaki gizli alan) — gerçek kullanıcı doldurmaz
+        return JsonResponse({"ok": False}, status=400)
 
-    name    = body.get("name", "").strip()
-    phone   = body.get("phone", "").strip()
-    message = body.get("message", "").strip()
-    page    = body.get("page", "").strip()
-    lang    = body.get("language", "").strip()
+    name    = str(body.get("name", ""))[:200].strip()
+    phone   = str(body.get("phone", ""))[:30].strip()
+    message = str(body.get("message", ""))[:3000].strip()
+    page    = str(body.get("page", ""))[:500].strip()
+    lang    = str(body.get("language", ""))[:10].strip()
 
     if not phone and not name:
         return JsonResponse({"ok": False, "error": "name or phone required"}, status=400)
+    if phone and sum(c.isdigit() for c in phone) < 7:
+        return JsonResponse({"ok": False, "error": "invalid phone"}, status=400)
 
     try:
         from .service import create_lead
@@ -199,13 +266,27 @@ def submit_lead(request):
 @csrf_exempt
 @require_POST
 def whatsapp_webhook(request):
+    """WhatsApp sağlayıcısından gelen mesaj bildirimi → oturum eşleştirme (match_whatsapp).
+    Paylaşılan gizli anahtar şart (WHATSAPP_WEBHOOK_SECRET, .env / Render env; X-Webhook-Secret ya da
+    Authorization: Bearer başlığı). Anahtar tanımlı değilse uç kapalıdır (404); yanlışsa 403 — dışarıdan sahte
+    WhatsApp lead'i / eşleşmesi üretilemez. IP başına hız limiti anahtar denemesini de keser."""
+    secret = settings.WHATSAPP_WEBHOOK_SECRET
+    if not secret:
+        raise Http404
+    if _rate_limited(f"wh-ip:{_ip_hash(request)}", WEBHOOK_LIMIT_PER_IP, 3600):
+        return JsonResponse({"ok": False, "error": "too many requests"}, status=429)
+    given = request.headers.get("X-Webhook-Secret", "") or request.headers.get("Authorization", "").removeprefix("Bearer ").strip()
+    if not hmac.compare_digest(given.encode(), secret.encode()):
+        return JsonResponse({"ok": False, "error": "forbidden"}, status=403)
     try:
         body = json.loads(request.body.decode("utf-8"))
+        if not isinstance(body, dict):
+            raise ValueError
     except Exception:
         return JsonResponse({"ok": False}, status=400)
 
-    wa_phone   = body.get("phone", "").strip()
-    wa_message = body.get("message", "").strip()
+    wa_phone   = str(body.get("phone", ""))[:30].strip()
+    wa_message = str(body.get("message", ""))[:3000].strip()
     if not wa_phone:
         return JsonResponse({"ok": False, "error": "phone required"}, status=400)
 

@@ -185,6 +185,10 @@ REST_FRAMEWORK = {
     "DEFAULT_THROTTLE_RATES": {"anon": "200/min"},
 }
 
+# ── Lead ucu için ek izinli kökenler (apps/tracking/views.py → _same_origin) ───────────────────
+# Kendi alan adlarımız (ALLOWED_HOSTS) her zaman izinli; dış siteler (ör. https://drdevrim.com) buraya eklenir.
+TRACKING_ALLOWED_ORIGINS = config("TRACKING_ALLOWED_ORIGINS", default="", cast=Csv())
+
 # Testler .env'deki DEBUG'dan bağımsız: manifest'siz statik, HTTPS yönlendirmesi yok
 TESTING = len(sys.argv) > 1 and sys.argv[1] == "test"
 if TESTING:
@@ -204,6 +208,8 @@ if not DEBUG and not TESTING:
 SITE_NAME = config("SITE_NAME", default="dentaltourism.tr")
 SITE_DOMAIN = config("SITE_DOMAIN", default="dentaltourism.tr")
 SITE_URL = config("SITE_URL", default="https://dentaltourism.tr").rstrip("/")
+# WhatsApp webhook'u (api/tracking/whatsapp-webhook/) yalnızca bu anahtarla çağrılabilir; boşsa uç kapalıdır (404)
+WHATSAPP_WEBHOOK_SECRET = config("WHATSAPP_WEBHOOK_SECRET", default="")
 # [(url, mod)] — mod: root (her dilde ana sayfa) · en (tr→kök, diğerleri /en/) · lang (/<dil>/)
 PROFILE_SITES = [(u.split("|")[0].strip().rstrip("/"), (u.split("|") + ["root"])[1].strip())
                  for u in config("PROFILE_SITES", default="").split(",") if u.strip()]
