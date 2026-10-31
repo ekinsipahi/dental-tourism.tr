@@ -3169,6 +3169,10 @@ msgstr ""
 "Alla behandlingar vi erbjuder, med ärlig information om förloppet, hur länge"
 " du behöver stanna i Istanbul och vad det kostar."
 
+#: templates/components/footer.html:22
+msgid "Dr. Devrim Biriken Sipahi's clinic websites"
+msgstr "Dr Devrim Biriken Sipahis klinikwebbplatser"
+
 #, python-format
 #~ msgid ""
 #~ "Implants, veneers and crowns in Istanbul from a mother-and-son dentist team "

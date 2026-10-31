@@ -139,7 +139,18 @@ def site_context(request):
             "bing_verification": settings.BING_SITE_VERIFICATION,
         },
         "suggested_language": _suggested_language(request, lang),
+        "profile_sites": _profile_sites(lang),
     }
+
+
+def _profile_sites(lang):
+    """Hekimin diğer siteleri — ziyaretçinin dilindeki sayfaya (footer)."""
+    try:
+        from apps.seo.common import profile_site_links
+
+        return profile_site_links(lang)
+    except Exception:  # noqa: BLE001
+        return []
 
 
 def _suggested_language(request, current):

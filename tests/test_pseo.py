@@ -48,9 +48,9 @@ class PseoTests(SeededTestCase):
                 self.assertNotIn("{rating}", html, url)  # meta'daki yer tutucu Google puanıyla dolmalı
                 self.assertIn("https://cdn.example.com/real.jpg", html)
                 self.assertIn("instagram.com/drdevrimbirikensipahi", html)
-                suffix = "" if lang == "tr" else f"{lang}/"  # drdevrim.com: o anki dilin ana sayfası
-                self.assertIn(f'href="https://drdevrim.com/{suffix}"', html)
-                self.assertIn(f"https://devrimbirikensipahi.com.tr/{suffix}", html)
+                # hekim siteleri o anki dilin ana sayfasına: drdevrim.com /lang/<dil>/, devrimbirikensipahi.com.tr /<dil>/
+                self.assertIn('href="https://drdevrim.com/' + ("" if lang == "tr" else f"lang/{lang}/") + '"', html)
+                self.assertIn("https://devrimbirikensipahi.com.tr/" + ("" if lang == "tr" else f"{lang}/"), html)
 
     def test_package_and_price_pages(self):
         for name, kwargs in [("packages:index", {}), ("prices:index", {}),

@@ -37,7 +37,7 @@ services:
       - key: PRIMARY_CLINIC_SLUG
         value: dr-devrim-sipahi
       - key: PROFILE_SITES
-        value: https://drdevrim.com|lang,https://devrimbirikensipahi.com.tr|lang
+        value: https://drdevrim.com|langpath,https://devrimbirikensipahi.com.tr|lang
       - key: PARTNER_AGENCY_URL
         value: https://sterragency.com/dental-tourism
       - key: EMAIL_ENABLED

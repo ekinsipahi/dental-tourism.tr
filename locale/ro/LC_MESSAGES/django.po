@@ -3203,6 +3203,10 @@ msgstr ""
 "Toate tratamentele pe care le oferim, cu informații oneste despre procedură,"
 " cât timp trebuie să stați în Istanbul și cât costă."
 
+#: templates/components/footer.html:22
+msgid "Dr. Devrim Biriken Sipahi's clinic websites"
+msgstr "Site-urile clinicii Dr. Devrim Biriken Sipahi"
+
 #, python-format
 #~ msgid ""
 #~ "Implants, veneers and crowns in Istanbul from a mother-and-son dentist team "

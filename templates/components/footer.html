@@ -22,6 +22,8 @@
           {% if clinic.youtube_url %}<li><a href="{{ clinic.youtube_url }}" target="_blank" rel="noopener" data-track="youtube">YouTube</a></li>{% endif %}
           {% if clinic.google_business_url %}<li><a href="{{ clinic.google_business_url }}" target="_blank" rel="noopener">Google</a></li>{% endif %}
         </ul>
+        {% if profile_sites %}<p class="muted footer-sites-title">{% trans "Dr. Devrim Biriken Sipahi's clinic websites" %}</p>
+        <ul class="footer-social footer-sites">{% for s in profile_sites %}<li><a href="{{ s.url }}" hreflang="{{ s.lang }}" target="_blank" rel="noopener" data-track="partner">{{ s.label }}</a></li>{% endfor %}</ul>{% endif %}
       </div>
       <div>
         <p class="footer-title">{% trans "Treatments" %}</p>

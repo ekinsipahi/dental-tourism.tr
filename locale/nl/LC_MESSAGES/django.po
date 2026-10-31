@@ -3200,6 +3200,10 @@ msgstr ""
 "Alle behandelingen die we aanbieden, met eerlijke informatie over de "
 "procedure, hoe lang u in Istanbul moet blijven en wat het kost."
 
+#: templates/components/footer.html:22
+msgid "Dr. Devrim Biriken Sipahi's clinic websites"
+msgstr "Klinieksites van dr. Devrim Biriken Sipahi"
+
 #, python-format
 #~ msgid ""
 #~ "Implants, veneers and crowns in Istanbul from a mother-and-son dentist team "

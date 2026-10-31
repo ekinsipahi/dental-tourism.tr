@@ -211,8 +211,17 @@ SITE_URL = config("SITE_URL", default="https://dentaltourism.tr").rstrip("/")
 # WhatsApp webhook'u (api/tracking/whatsapp-webhook/) yalnızca bu anahtarla çağrılabilir; boşsa uç kapalıdır (404)
 WHATSAPP_WEBHOOK_SECRET = config("WHATSAPP_WEBHOOK_SECRET", default="")
 # [(url, mod)] — mod: root (her dilde ana sayfa) · en (tr→kök, diğerleri /en/) · lang (/<dil>/)
-PROFILE_SITES = [(u.split("|")[0].strip().rstrip("/"), (u.split("|") + ["root"])[1].strip())
-                 for u in config("PROFILE_SITES", default="").split(",") if u.strip()]
+# Hekimin diğer siteleri (footer + pSEO güven linkleri): "https://site|mod[|dil+dil…]" virgülle ayrılır.
+#   mod: root (/), en (/en/), lang (/<dil>/), langpath (/lang/<dil>/). Dil listesi verilmezse bilinen siteler için
+#   apps/seo/common.KNOWN_PROFILE_SITES, diğerleri için tüm diller varsayılır; desteklenmeyen dil → /en/ → kök.
+def _profile_site(u):
+    parts = [p.strip() for p in u.split("|")]
+    mode = parts[1] if len(parts) > 1 and parts[1] else "root"
+    langs = frozenset(p for p in (parts[2] if len(parts) > 2 else "").split("+") if p) or None
+    return parts[0].rstrip("/"), mode, langs
+
+
+PROFILE_SITES = [_profile_site(u) for u in config("PROFILE_SITES", default="").split(",") if u.strip()]
 PARTNER_AGENCY_URL = config("PARTNER_AGENCY_URL", default="")
 IPINFO_TOKEN = config("IPINFO_TOKEN", default="")  # ipinfo.io — iletişim tıklamalarında ülke/şehir/sağlayıcı
 BACKGROUND_WORKERS = config("BACKGROUND_WORKERS", default=2, cast=int)

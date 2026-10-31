@@ -3170,6 +3170,10 @@ msgstr ""
 "Təklif etdiyimiz bütün müalicələr — prosedur, İstanbulda qalma müddəti və "
 "qiymət haqqında dürüst məlumatla."
 
+#: templates/components/footer.html:22
+msgid "Dr. Devrim Biriken Sipahi's clinic websites"
+msgstr "Dr. Devrim Biriken Sipahinin klinika saytları"
+
 #, python-format
 #~ msgid ""
 #~ "Implants, veneers and crowns in Istanbul from a mother-and-son dentist team "

@@ -16,16 +16,34 @@ from django.urls import reverse
 from django.utils.translation import gettext as _
 
 
+# Hekimin diğer sitelerinin gerçek URL şeması ve yayındaki dilleri (hreflang listelerinden) — ziyaretçi hangi dilde
+# geziyorsa o dildeki sayfaya gider; o dil yoksa İngilizce, o da yoksa kök (Türkçe).
+KNOWN_PROFILE_SITES = {
+    "drdevrim.com": ("langpath", frozenset("ar az bg de el en es fa fr he it nl pl ro ru sq uk".split())),
+    "devrimbirikensipahi.com.tr": ("lang", frozenset("ar az bg da de en es fr it nl no pl ro ru sv uk".split())),
+}
+
+
+def profile_site_url(base, mode, langs, lang):
+    host = base.split("://", 1)[-1].split("/", 1)[0].lower().removeprefix("www.")
+    known = KNOWN_PROFILE_SITES.get(host)
+    if known:  # bilinen site: gerçek URL şeması ve dil listesi (.env'deki mod eksik/yanlış olsa da doğru link)
+        mode, langs = known[0], langs or known[1]
+    if mode == "root" or lang == "tr":
+        return f"{base}/", "tr"
+    if mode == "en":
+        return f"{base}/en/", "en"
+    code = lang if (langs is None or lang in langs) else ("en" if (langs is None or "en" in langs) else "")
+    if not code:
+        return f"{base}/", "tr"
+    return (f"{base}/lang/{code}/" if mode == "langpath" else f"{base}/{code}/"), code
+
+
 def profile_site_links(lang):
     out = []
-    for base, mode in settings.PROFILE_SITES:
-        if mode == "lang":
-            url = f"{base}/" if lang == "tr" else f"{base}/{lang}/"
-        elif mode == "en":
-            url = f"{base}/" if lang == "tr" else f"{base}/en/"
-        else:  # root
-            url = f"{base}/"
-        out.append({"url": url, "label": base.split("://", 1)[-1]})
+    for base, mode, langs in settings.PROFILE_SITES:
+        url, code = profile_site_url(base, mode, langs, lang)
+        out.append({"url": url, "label": base.split("://", 1)[-1], "lang": code})
     return out
 
 
