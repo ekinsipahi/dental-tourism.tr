@@ -77,7 +77,7 @@ def _clinic_page(slug, lang):
         "videos": list(reviews.exclude(video_id="")[:8]),
         "alternates": _clinic_alternates(clinic),
         "images": list(clinic.images.all()[:12]),
-        "cases": list(clinic.cases.filter(is_published=True, patient_consent=True)[:6]),
+        "cases": list(clinic.cases.filter(is_published=True, patient_consent=True)[:8]),
     }
 
 

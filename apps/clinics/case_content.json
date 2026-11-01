@@ -1,7 +1,82 @@
 [
  {
-  "key": "zirconia-1",
+  "key": "sebnem",
   "order": 0,
+  "treatment": null,
+  "text": {
+   "en": {
+    "title": "Şebnem — aesthetic gum reshaping",
+    "caption": "Şebnem came to us from Germany. Her uneven gum line was reshaped aesthetically and her smile brought into balance with her face."
+   },
+   "tr": {
+    "title": "Şebnem — estetik dişeti şekillendirme",
+    "caption": "Almanya'dan gelen Şebnem'in düzensiz dişeti seviyesi estetik olarak şekillendirildi; gülüşü yüzüyle uyumlu hale getirildi."
+   },
+   "de": {
+    "title": "Şebnem — ästhetische Zahnfleischkorrektur",
+    "caption": "Şebnem kam aus Deutschland zu uns. Ihr ungleichmäßiger Zahnfleischverlauf wurde ästhetisch neu geformt und ihr Lächeln in Einklang mit ihrem Gesicht gebracht."
+   },
+   "nl": {
+    "title": "Şebnem — esthetische tandvleescorrectie",
+    "caption": "Şebnem kwam vanuit Duitsland naar ons. Haar ongelijke tandvleeslijn werd esthetisch bijgewerkt en haar glimlach in balans gebracht met haar gezicht."
+   },
+   "fr": {
+    "title": "Şebnem — remodelage esthétique des gencives",
+    "caption": "Şebnem est venue d'Allemagne. Sa ligne gingivale irrégulière a été remodelée de façon esthétique et son sourire harmonisé avec son visage."
+   },
+   "it": {
+    "title": "Şebnem — rimodellamento estetico gengivale",
+    "caption": "Şebnem è venuta da noi dalla Germania. La linea gengivale irregolare è stata rimodellata esteticamente e il sorriso armonizzato con il viso."
+   },
+   "es": {
+    "title": "Şebnem — remodelado estético de encías",
+    "caption": "Şebnem vino desde Alemania. Su línea de encía irregular se remodeló estéticamente y su sonrisa se armonizó con su rostro."
+   },
+   "pl": {
+    "title": "Şebnem — estetyczna korekta dziąseł",
+    "caption": "Şebnem przyjechała do nas z Niemiec. Nierówną linię dziąseł wymodelowano estetycznie, a uśmiech zharmonizowano z rysami twarzy."
+   },
+   "ru": {
+    "title": "Шебнем — эстетическая коррекция десны",
+    "caption": "Шебнем приехала к нам из Германии. Неровный контур десны был эстетически скорректирован, а улыбка приведена в гармонию с лицом."
+   },
+   "uk": {
+    "title": "Шебнем — естетична корекція ясен",
+    "caption": "Шебнем приїхала до нас із Німеччини. Нерівний контур ясен було естетично скориговано, а усмішку гармонізовано з обличчям."
+   },
+   "ar": {
+    "title": "شبنم — تجميل خط اللثة",
+    "caption": "جاءت شبنم إلينا من ألمانيا. أُعيد تشكيل خط اللثة غير المنتظم تجميلياً وأصبحت ابتسامتها متناغمة مع ملامح وجهها."
+   },
+   "sv": {
+    "title": "Şebnem — estetisk tandköttskorrigering",
+    "caption": "Şebnem kom till oss från Tyskland. Hennes ojämna tandköttslinje formades om estetiskt och leendet kom i balans med ansiktet."
+   },
+   "da": {
+    "title": "Şebnem — æstetisk tandkødskorrektion",
+    "caption": "Şebnem kom til os fra Tyskland. Hendes ujævne tandkødslinje blev æstetisk omformet, og smilet bragt i balance med ansigtet."
+   },
+   "no": {
+    "title": "Şebnem — estetisk tannkjøttkorreksjon",
+    "caption": "Şebnem kom til oss fra Tyskland. Den ujevne tannkjøttlinjen ble estetisk omformet, og smilet kom i balanse med ansiktet."
+   },
+   "ro": {
+    "title": "Şebnem — remodelare estetică a gingiei",
+    "caption": "Şebnem a venit la noi din Germania. Linia gingivală neuniformă a fost remodelată estetic, iar zâmbetul adus în armonie cu chipul ei."
+   },
+   "bg": {
+    "title": "Шебнем — естетично оформяне на венците",
+    "caption": "Шебнем дойде при нас от Германия. Неравната линия на венците беше естетично оформена, а усмивката — в хармония с лицето ѝ."
+   },
+   "az": {
+    "title": "Şəbnəm — estetik diş əti formalaşdırması",
+    "caption": "Şəbnəm bizə Almaniyadan gəlib. Qeyri-bərabər diş əti xətti estetik şəkildə formalaşdırıldı və gülüşü üzü ilə uyğunlaşdırıldı."
+   }
+  }
+ },
+ {
+  "key": "zirconia-1",
+  "order": 1,
   "treatment": "zirconia-crowns",
   "text": {
    "en": {
@@ -76,7 +151,7 @@
  },
  {
   "key": "zirconia-2",
-  "order": 1,
+  "order": 2,
   "treatment": "zirconia-crowns",
   "text": {
    "en": {
@@ -151,7 +226,7 @@
  },
  {
   "key": "composite-1",
-  "order": 2,
+  "order": 3,
   "treatment": "composite-veneers",
   "text": {
    "en": {
@@ -226,7 +301,7 @@
  },
  {
   "key": "composite-2",
-  "order": 3,
+  "order": 4,
   "treatment": "composite-veneers",
   "text": {
    "en": {
@@ -301,7 +376,7 @@
  },
  {
   "key": "sanem",
-  "order": 4,
+  "order": 5,
   "treatment": "composite-veneers",
   "text": {
    "en": {
@@ -376,7 +451,7 @@
  },
  {
   "key": "hazan",
-  "order": 5,
+  "order": 6,
   "treatment": "",
   "text": {
    "en": {

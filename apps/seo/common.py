@@ -129,7 +129,7 @@ def clinic_bundle(clinic, lang):
             "proof_reviews": list(light_reviews(Review.objects.filter(is_published=True, clinic=clinic).exclude(text=""), lang)
                                   .order_by("-rating", "-created_at")[:3]),
             "videos": list(light_reviews(Review.objects.filter(is_published=True, clinic=clinic).exclude(video_id=""), lang)[:4]),
-            "cases": list(BeforeAfterCase.objects.filter(clinic=clinic, is_published=True, patient_consent=True)[:6]),
+            "cases": list(BeforeAfterCase.objects.filter(clinic=clinic, is_published=True, patient_consent=True)[:8]),
         }
         caches["local"].set(key, data, 300)
     return data
