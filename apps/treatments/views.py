@@ -99,8 +99,13 @@ def treatment_detail(request, slug):
                      (loc.name, request.path)],
         schema=[s for s in [procedure, faq_schema(loc.faq)] if s],
     )
+    from apps.clinics.models import Clinic
+    from apps.seo.common import clinic_bundle
+
+    clinic = Clinic.primary()
+    bundle = clinic_bundle(clinic, lang) if clinic else {}
     return render(request, "treatments/detail.html", {
-        "seo": seo, "t": loc, "offers": offers,
+        "seo": seo, "t": loc, "offers": offers, "doctor": bundle.get("doctor"), "doctor_loc": bundle.get("doctor_loc"),
         "city_pages": city_pages, "posts": posts, "reviews": reviews,
         "related": related_treatments(t, lang), "page_type": "treatment",
         "package_url": reverse("packages:treatment", kwargs={"slug": loc.slug}),

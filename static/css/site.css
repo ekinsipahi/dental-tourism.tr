@@ -407,3 +407,11 @@ a.card:hover { border-color: var(--border-hv); transform: translateY(-3px); back
 .pseo-links a { display: inline-block; padding: .5rem .9rem; border: 1px solid var(--border); border-radius: 999px; text-decoration: none; color: var(--tx); font-size: .88rem; }
 .pseo-links a:hover { border-color: var(--brand-lt); }
 @media (max-width: 860px) { .pseo-head-grid, .pseo-proof { grid-template-columns: 1fr; } .pseo-hero-photo { order: -1; } }
+
+/* Hekimin notu — fiyat / paket / tedavi sayfalarında şablon metnin yerine geçen birinci ağızdan not */
+.doctor-note{display:flex;gap:.9rem;align-items:flex-start;padding:1rem 1.1rem;margin:.6rem 0 1.4rem;border-left:3px solid var(--gold,#c9a44c);background:var(--surface-alt,rgba(0,0,0,.03));border-radius:10px}
+.doctor-note img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none}
+.doctor-note-by{margin:0 0 .35rem;font-size:.88rem;color:var(--muted,#6b7280)}
+.doctor-note .prose p{margin:.45rem 0}
+@media (max-width:600px){.doctor-note{padding:.85rem}.doctor-note img{width:44px;height:44px}}
+

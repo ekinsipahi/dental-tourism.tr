@@ -18,6 +18,7 @@
       {% if d.university %}<li><span>{% trans "University" %}</span><strong>{{ d.university }}</strong></li>{% endif %}
       {% if d.graduation_year %}<li><span>{% trans "Graduated" %}</span><strong>{{ d.graduation_year }}</strong></li>{% endif %}
       {% if d.languages_spoken %}<li><span>{% trans "Languages" %}</span><strong>{{ d.languages_spoken|join:", "|upper }}</strong></li>{% endif %}
+      {% if d.instagram %}<li><span>Instagram</span><strong><a href="https://www.instagram.com/{{ d.instagram }}/" target="_blank" rel="noopener" data-track="instagram">@{{ d.instagram }}</a></strong></li>{% endif %}
     </ul>
     {% if d.memberships %}<div class="chips" style="margin-top:1rem">{% for m in d.memberships %}<span class="badge badge-gold">{{ m }}</span>{% endfor %}</div>{% endif %}
     <a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ clinic.whatsapp_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask the dentist" %}</a>

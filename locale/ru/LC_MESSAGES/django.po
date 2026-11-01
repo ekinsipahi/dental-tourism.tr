@@ -3188,6 +3188,21 @@ msgstr ""
 msgid "Dr. Devrim Biriken Sipahi's clinic websites"
 msgstr "Сайты клиники доктора Деврим Бирикен Сипахи"
 
+msgid "The dentist's note"
+msgstr "Комментарий врача"
+
+#, python-format
+msgid "Your %(name)s treatment, day by day"
+msgstr "Ваше лечение (%(name)s) день за днём"
+
+#, python-format
+msgid "When we advise against %(name)s"
+msgstr "Когда мы не рекомендуем %(name)s"
+
+#, python-format
+msgid "Graduate of %(u)s"
+msgstr "Образование: %(u)s"
+
 #, python-format
 #~ msgid ""
 #~ "Implants, veneers and crowns in Istanbul from a mother-and-son dentist team "

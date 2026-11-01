@@ -107,7 +107,7 @@ class Command(BaseCommand):
         h = ekin.compute_source_hash()
         for lang in HUMAN_LANGS:
             ekin.translations.update_or_create(language_code=lang, defaults={
-                "title_display": {"tr": "Diş Hekimi", "de": "Zahnärztin", "nl": "Tandarts"}[lang],
+                "title_display": {"tr": "Diş Hekimi", "de": "Zahnarzt", "nl": "Tandarts"}[lang],  # Dt. Ekin: erkek
                 "bio": d["doctor_bio"][3][lang], "status": TranslationStatus.REVIEWED, "source_hash": h})
         self.stdout.write("✓ Dr. Devrim Sipahi özgeçmişi + Dt. Ekin Sipahi")
 

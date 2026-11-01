@@ -5,9 +5,14 @@ Tedavi çevirilerini apps/treatments/treatment_content/<dil>.json dosyalarından
   python manage.py seed_treatment_translations --overwrite # dosyadakini yeniden yazar (yayındaki slug korunur)
 
 Dosya formatı: {"<EN slug>": {"name", "slug", "short_description", "body", "faq": [[soru, cevap]...],
-                              "meta_title", "meta_description", "focus_keyword"}}
+                              "meta_title", "meta_description", "focus_keyword",
+                              "price_factors", "program", "refusals"   # hekimin notları (isteğe bağlı)}}
+en.json yalnızca hekim notlarını taşır (kaynak dil metni Treatment'a yazılır). Canlı çevirilere yalnızca EKSİK
+notlar eklenir; notlar kaynak hash'ine girdiği için, notlar dışında değişmemiş çevirilerin hash'i tazelenir
+(OUTDATED → AI ile yeniden çeviri tetiklenmesin).
 FİYAT RAKAMI YAZILMAZ.
 """
+import hashlib
 import json
 from pathlib import Path
 
@@ -21,6 +26,19 @@ from apps.localization.models import TranslationStatus
 from apps.treatments.models import Treatment, TreatmentTranslation
 
 CONTENT_DIR = Path(__file__).resolve().parents[2] / "treatment_content"
+NOTE_FIELDS = ("price_factors", "program", "refusals")
+
+
+def _hash_of(payload):
+    return hashlib.sha256(json.dumps(payload, sort_keys=True, ensure_ascii=False, default=str).encode()).hexdigest()
+
+
+def _known_hashes(t, before):
+    """Çevirinin 'güncel' sayılacağı eski kaynak hash'leri: not alanları yokken (ilk deploy) ve bu çalıştırmadan önceki
+    not değerleriyle (sonraki deploy'larda yeni not eklendiğinde) hesaplanan hash'ler."""
+    payload = t.source_payload()
+    return {_hash_of({f: v for f, v in payload.items() if f not in NOTE_FIELDS}),
+            _hash_of({**payload, **before.get(t.pk, {})})}
 
 
 class Command(BaseCommand):
@@ -31,17 +49,38 @@ class Command(BaseCommand):
 
     def handle(self, overwrite=False, **o):
         n = 0
+        before = {}  # treatment.pk → bu çalıştırmada değişen not alanlarının ÖNCEKİ değerleri (hash tazeleme için)
         with transaction.atomic():
-            for lang in LANGUAGE_META:
+            # kaynak dil (en) önce: hekim notları önce Treatment'a yazılır, çevirilerin hash'i ondan sonra hesaplanır
+            for lang in sorted(LANGUAGE_META, key=lambda code: code != "en"):
                 f = CONTENT_DIR / f"{lang}.json"
                 if not f.exists():
                     continue
                 data = json.loads(f.read_text(encoding="utf-8"))
                 for t in Treatment.objects.filter(slug__in=data):
                     d = data[t.slug]
+                    if lang == t.source_language:  # en.json: yalnızca hekim notları, boş olanlar dolar
+                        upd = [k for k in NOTE_FIELDS if d.get(k) and (overwrite or not getattr(t, k))]
+                        if upd:
+                            before[t.pk] = {k: getattr(t, k) for k in upd}
+                            for k in upd:
+                                setattr(t, k, d[k])
+                            t.save(update_fields=upd + ["updated_at"])
+                            n += 1
+                        continue
                     tr = TreatmentTranslation.objects.filter(treatment=t, language_code=lang).first()
                     live = tr and tr.status in (TranslationStatus.MACHINE, TranslationStatus.REVIEWED)
                     if live and not overwrite:
+                        upd = [k for k in NOTE_FIELDS if d.get(k) and not getattr(tr, k)]
+                        for k in upd:
+                            setattr(tr, k, d[k])
+                        full = t.compute_source_hash()
+                        if tr.source_hash != full and tr.source_hash in _known_hashes(t, before):
+                            tr.source_hash = full  # yalnızca not alanları eklendi → çeviri güncel sayılır (AI yeniden çeviri yok)
+                            upd.append("source_hash")
+                        if upd:
+                            tr.save(update_fields=upd + ["updated_at"])
+                            n += 1
                         continue
                     tr = tr or TreatmentTranslation(treatment=t, language_code=lang)
                     if not (tr.pk and tr.slug and live):
@@ -53,6 +92,8 @@ class Command(BaseCommand):
                     tr.meta_title = d["meta_title"][:70]
                     tr.meta_description = d["meta_description"][:170]
                     tr.focus_keyword = d.get("focus_keyword", "")
+                    for k in NOTE_FIELDS:
+                        setattr(tr, k, d.get(k, ""))
                     tr.status = TranslationStatus.REVIEWED
                     tr.source_hash = t.compute_source_hash()
                     tr.model_used = "seed_treatment_translations"

@@ -17,6 +17,10 @@
     </ul>
     <p class="muted">{% blocktrans with d=t.stay_days|default:"3–7" %}Typical stay in Istanbul: {{ d }} days.{% endblocktrans %}</p>
 
+    {% if t.program %}
+    <h2>{% blocktrans with name=t.name %}Your {{ name }} treatment, day by day{% endblocktrans %}</h2>
+    {% include "pseo/_doctor_note.html" with text=t.program %}
+    {% else %}
     <h2>{% blocktrans with name=t.name %}How to choose the best {{ name }} clinic in Istanbul{% endblocktrans %}</h2>
     <p>{% blocktrans with name=t.name %}The best clinic for {{ name }} in Istanbul and Turkey is not the one with the cheapest offer or the biggest advertising — it is the one where an experienced dentist examines you, explains the alternatives and recommends {{ name }} only if you really need it.{% endblocktrans %}</p>
     <ul>
@@ -25,6 +29,7 @@
       <li>{% trans "Read reviews on Google and Trustpilot — and how the clinic replies" %}</li>
       <li>{% trans "Never accept a plan before anyone has examined your teeth" %}</li>
     </ul>
+    {% endif %}
     {% if page.body %}<div class="prose">{{ page.body|markdown }}</div>{% endif %}
     {% save_first t %}
     {% include "pseo/_price_note.html" %}

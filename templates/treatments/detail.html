@@ -30,6 +30,10 @@
     <h2 style="margin-top:2.5rem">{% blocktrans with name=t.name %}{{ name }} by city{% endblocktrans %}</h2>
     <div class="chips">{% for c in city_pages %}<a class="chip" href="{{ c.url }}">{{ t.name }} {{ c.name }}</a>{% endfor %}</div>
     {% endif %}
+    {% if t.refusals %}
+    <h2 style="margin-top:2.5rem">{% blocktrans with name=t.name %}When we advise against {{ name }}{% endblocktrans %}</h2>
+    {% include "pseo/_doctor_note.html" with text=t.refusals %}
+    {% endif %}
   </article>
 
   <aside class="sticky-side">

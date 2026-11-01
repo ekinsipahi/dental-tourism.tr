@@ -1,0 +1,9 @@
+{% load i18n %}
+{# Hekimin notu — şablon metnin yerine geçen, birinci ağızdan sayfaya özgü içerik. text: düz metin (boş satır = paragraf) #}
+<div class="doctor-note" data-track-section="doctor-note">
+  {% if doctor.photo_src %}<img src="{{ doctor.photo_src }}" alt="{{ doctor.full_name }}" width="56" height="56" loading="lazy">{% endif %}
+  <div>
+    <p class="doctor-note-by"><strong>{% if doctor %}{{ doctor.full_name }}{% else %}Dr. Dt. Devrim Biriken Sipahi{% endif %}</strong> · {% trans "The dentist's note" %}</p>
+    <div class="prose">{{ text|linebreaks }}</div>
+  </div>
+</div>

@@ -160,6 +160,7 @@ def doctor_detail(request, slug):
         "alumniOf": {"@type": "CollegeOrUniversity", "name": doctor.university} if doctor.university else None,
         "memberOf": [{"@type": "Organization", "name": m} for m in doctor.memberships] or None,
         "image": absolute(doctor.photo_src) if doctor.photo_src else None,
+        "sameAs": [f"https://www.instagram.com/{doctor.instagram}/"] if doctor.instagram else None,
     }
     seo = Seo(
         title=fill_proof(loc.meta_title) or _("%(doctor)s — Dentist in %(city)s") % {"doctor": doctor.full_name,

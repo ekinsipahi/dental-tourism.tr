@@ -9,7 +9,8 @@ class Treatment(TranslatableModel):
     """Bir tedavi türü (implant, veneer...). Her dilde ayrı slug + içerik."""
 
     TRANSLATED_FIELDS = ("name", "slug", "short_description", "body", "faq",
-                         "meta_title", "meta_description", "focus_keyword")
+                         "meta_title", "meta_description", "focus_keyword",
+                         "price_factors", "program", "refusals")
 
     CATEGORY_CHOICES = [
         ("implant", "Implantology"), ("cosmetic", "Cosmetic"), ("restorative", "Restorative"),
@@ -46,6 +47,10 @@ class Treatment(TranslatableModel):
     meta_title = models.CharField(max_length=70, blank=True)
     meta_description = models.CharField(max_length=170, blank=True)
     focus_keyword = models.CharField(max_length=120, blank=True)
+    # Hekimin notları (birinci ağızdan, düz metin; boş satırla paragraf) — şablon-dışı, sayfaya özgü içerik:
+    price_factors = models.TextField(blank=True, help_text="Fiyat sayfası: fiyatı asıl belirleyen etkenler, hangi muayene bulgusu teklifi değiştirir")
+    program = models.TextField(blank=True, help_text="Paket sayfası: yurt dışından gelen hasta için gün gün program, iki geliş arasında ne olur")
+    refusals = models.TextField(blank=True, help_text="Tedavi sayfası: bu tedaviyi hangi hastaya yapmıyoruz, ne öneriyoruz")
 
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -88,6 +93,9 @@ class TreatmentTranslation(BaseTranslation):
     meta_title = models.CharField(max_length=70, blank=True)
     meta_description = models.CharField(max_length=170, blank=True)
     focus_keyword = models.CharField(max_length=120, blank=True)
+    price_factors = models.TextField(blank=True)
+    program = models.TextField(blank=True)
+    refusals = models.TextField(blank=True)
 
     class Meta:
         unique_together = [("treatment", "language_code"), ("language_code", "slug")]

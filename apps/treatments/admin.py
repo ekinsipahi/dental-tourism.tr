@@ -9,7 +9,8 @@ from .models import MarketPrice, Treatment, TreatmentTranslation
 class TreatmentTranslationInline(TranslationInlineBase):
     model = TreatmentTranslation
     fields = ["language_code", "status", "name", "slug", "short_description", "body", "faq", "meta_title",
-              "meta_description", "focus_keyword", "translated_at", "model_used", "error"]
+              "meta_description", "focus_keyword", "price_factors", "program", "refusals",
+              "translated_at", "model_used", "error"]
 
 
 class MarketPriceInline(admin.TabularInline):
@@ -37,6 +38,9 @@ class TreatmentAdmin(TranslatableAdmin):
         ("İçerik (kaynak dil)", {"fields": ["source_language", "auto_translate", "name", "slug", "short_description",
                                             "body", "faq", "meta_title", "meta_description", "focus_keyword",
                                             "translation_matrix"]}),
+        ("Hekimin notları (kaynak dil)", {"fields": ["price_factors", "program", "refusals"],
+                                          "description": "Fiyat / paket / tedavi sayfalarında şablon metnin yerine geçen, "
+                                                         "birinci ağızdan kısa notlar. Boş bırakılırsa genel metin gösterilir."}),
     ]
 
 

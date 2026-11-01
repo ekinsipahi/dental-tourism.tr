@@ -7,8 +7,9 @@
       <h2>{% trans "Who will treat you" %}</h2>
       <p><strong>{{ doctor.display_name }}</strong>{% if doctor.brand_name %} — {{ doctor.full_name }}{% endif %}{% if doctor_loc.title_display %} · {{ doctor_loc.title_display }}{% endif %}</p>
       <ul class="pseo-ticks">
-        <li>{% trans "Graduate of Ankara University Faculty of Dentistry" %}</li>
-        <li>{% trans "Oral and maxillofacial radiology, Marmara University — precise 3D diagnosis" %}</li>
+        {% if doctor.university %}<li>{% blocktrans with u=doctor.university %}Graduate of {{ u }}{% endblocktrans %}{% if doctor.graduation_year %} ({{ doctor.graduation_year }}){% endif %}</li>{% else %}<li>{% trans "Graduate of Ankara University Faculty of Dentistry" %}</li>{% endif %}
+        {% if doctor.is_lead_doctor %}<li>{% trans "Oral and maxillofacial radiology, Marmara University — precise 3D diagnosis" %}</li>{% endif %}
+        {% for m in doctor.memberships %}<li>{{ m }}</li>{% endfor %}
         <li>{% trans "Examines and treats every patient personally" %}</li>
       </ul>
       <a href="{{ doctor.get_absolute_url }}">{% trans "Read the dentist's profile" %} →</a>

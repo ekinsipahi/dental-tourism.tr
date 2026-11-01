@@ -7,12 +7,14 @@
     {% include "pseo/_price_note.html" %}
     {% save_first t %}
     <h2>{% blocktrans with name=t.name %}What affects the price of {{ name }}{% endblocktrans %}</h2>
+    {% if t.price_factors %}{% include "pseo/_doctor_note.html" with text=t.price_factors %}{% else %}
     <ul class="pseo-ticks">
       <li>{% trans "Your diagnosis: how many teeth and their condition" %}</li>
       <li>{% trans "The brand and type of materials" %}</li>
       <li>{% trans "Whether preparatory treatment is needed" %}</li>
       <li>{% trans "The number of visits to Istanbul" %}</li>
     </ul>
+    {% endif %}
     <h2>{% trans "Included in your quote" %}</h2>
     <ul class="pseo-ticks">
       <li>{% trans "Examination, X-ray and 3D scan" %}</li>

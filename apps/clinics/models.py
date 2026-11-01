@@ -365,6 +365,7 @@ class Doctor(TranslatableModel):
     specialties = models.JSONField(default=list, blank=True)
     photo = models.ImageField(upload_to="doctors/", blank=True)
     photo_url = models.URLField(max_length=500, blank=True, help_text="Dosya yüklemek yerine görsel linki")
+    instagram = models.CharField(max_length=60, blank=True, help_text="Kullanıcı adı, @ olmadan — ör. dt.ekinsipahi")
     graduation_year = models.PositiveIntegerField(null=True, blank=True)
     university = models.CharField(max_length=200, blank=True)
     diploma_number = models.CharField(max_length=100, blank=True)
