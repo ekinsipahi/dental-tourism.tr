@@ -69,7 +69,7 @@ services:
     plan: starter
     schedule: "0 3 * * *"
     buildCommand: pip install -r requirements.txt
-    startCommand: python manage.py periodic --job related --job cleanup --job persona
+    startCommand: python manage.py periodic --job seed --job related --job cleanup --job persona
     envVars:
       - fromGroup: dental-tourism-shared
 

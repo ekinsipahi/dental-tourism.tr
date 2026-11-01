@@ -45,6 +45,17 @@ def job_cleanup():
     return cleanup_old_sessions()
 
 
+def job_seed():
+    """Dosya tabanlı içerik seed'leri (vakalar/fotoğraflar + çeviriler/hekim notları). build.sh'ta da çalışır; burada
+    günlük cron'dan bir kez daha koşar: build adımı atlanırsa/kesilirse içerik en geç ertesi gece canlıya ulaşır.
+    İdempotent — yalnızca eksik/boş olanları yazar."""
+    from django.core.management import call_command
+
+    call_command("seed_media", verbosity=0)
+    call_command("seed_translations", verbosity=0)
+    return "seed ok"
+
+
 def job_conversions():
     """Son 24 saatte başarısız olan reklam dönüşümlerini yeniden gönderir."""
     from apps.tracking.models import AdConversion
@@ -61,7 +72,7 @@ def job_conversions():
     return {"retried": n}
 
 
-JOBS = {"translations": job_translations, "related": job_related, "persona": job_persona,
+JOBS = {"seed": job_seed, "translations": job_translations, "related": job_related, "persona": job_persona,
         "cleanup": job_cleanup, "conversions": job_conversions}
 
 
