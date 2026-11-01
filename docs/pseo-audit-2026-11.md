@@ -50,8 +50,8 @@ Ne iyi durumda: tüm başlıklar benzersiz (token şablonu olsa da), `name="keyw
 | Madde | Durum | Nerede |
 |---|---|---|
 | Fiyat sayfası — "fiyatı belirleyen etkenler" (kanal, zirkonya, e.max lamina, Hollywood smile, implant, All-on-4) | ✅ yapıldı — hekimin sözlerinden, 17 dil | `Treatment.price_factors` → `templates/seo/treatment_price.html` (genel 4 maddenin yerine, "Hekimin notu" kutusu) |
-| Paket sayfası — "gün gün program" (implant, All-on-4, kompozit, kanal, zirkonya, e.max, Hollywood smile) | 🔄 yazılıyor (17 dil) | `Treatment.program` → `templates/packages/treatment.html` ("How to choose…" paragrafının yerine) |
-| Tedavi sayfası — "hangi vakayı reddediyoruz" (Hollywood smile, e.max, kompozit, zirkonya, implant, All-on-4) | 🔄 yazılıyor (17 dil) | `Treatment.refusals` → `templates/treatments/detail.html` |
+| Paket sayfası — "gün gün program" (implant, All-on-4, kompozit, kanal, zirkonya, e.max, Hollywood smile) | ✅ yapıldı — 17 dil, canlıda | `Treatment.program` → `templates/packages/treatment.html` ("How to choose…" paragrafının yerine) |
+| Tedavi sayfası — "hangi vakayı reddediyoruz" (Hollywood smile, e.max, kompozit, zirkonya, implant, All-on-4) | ✅ yapıldı — 17 dil, canlıda | `Treatment.refusals` → `templates/treatments/detail.html` |
 | Hekim kutusu: sabit 3 madde yerine alanlar (üniversite, mezuniyet, üyelikler) | ✅ yapıldı | `templates/pseo/_proof.html` |
 | Dt. Ekin: mezuniyet yılı (2025), okul (İstanbul Kent Üniversitesi Diş Hekimliği), Instagram (@dt.ekinsipahi), 17 dilde özgeçmiş; de/ar unvan cinsiyet düzeltmesi | ✅ yapıldı | `Doctor` alanları + `profile_content/ekin_bio.json`, `seed_profile_translations` |
 | Galeri: yeni vaka (Şebnem — dişeti şekillendirme, Almanya) en üstte, 17 dil | ✅ yapıldı | `apps/clinics/case_content.json` |
@@ -59,6 +59,8 @@ Ne iyi durumda: tüm başlıklar benzersiz (token şablonu olsa da), `name="keyw
 | Dr. Devrim: mezuniyet yılı, diploma/oda kaydı, radyoloji eğitimi + somut vaka (B1-1) | ⏳ hekimden bilgi bekleniyor | `Doctor.graduation_year` … |
 | Dt. Ekin: üyelikler, konuştuğu diller | ⏳ hekimden bilgi bekleniyor | `Doctor.memberships`, `languages_spoken` |
 | Ülke / semt sayfaları: budama + hekim notu; ortak SSS seyreltme; title'dan ★ ve sabit yıl; eksik x-default (32 ülke) | ⏳ yapılmadı (§C.2–3, §C.6, §D) | — |
+
+**Deploy notu (1 Kasım 2026):** üretimde dosya seed'leri (`seed_translations`) 11 Ekim'den beri build'de uygulanmamıştı — Bulgarca tedavi çevirileri hiç yüklenmemişti, hekim notları da gelmedi. `python manage.py seed_translations` elle çalıştırıldı (122 çeviri + 304 not alanı + Bulgarca), ayrıca günlük cron'a `--job seed` eklendi; build adımının neden atlandığı Render build log'undan doğrulanacak.
 
 Hekim notları admin'den düzenlenebilir: Tedaviler → "Hekimin notları (kaynak dil)" + her dilin çeviri satırı. Boş bırakılan tedavide genel şablon metni görünür.
 
@@ -70,8 +72,8 @@ Kural aynı: Türkçe, birinci ağızdan, 3–6 cümle, rakam/marka/gerçek göz
 Slotlar: tedavi gövdesi (`Treatment.body`, admin); paket sayfası için hazır ama **boş** `LandingPage(treatment_price).intro/body/faq` (10 kayıt, `apps/seo/models.py:87-132`, şablonda `templates/packages/treatment.html:9,28`); fiyat sayfasında yeni bir "Hekimin notu" bloğu gerekiyor (slot yok, eklenmeli).
 
 - ✅ **Her tedavi için fiyat sayfasına** (A-sorularına ek): "Bu tedavide fiyatı asıl belirleyen 3 şey nedir ve hangi muayene bulgusu teklifi değiştirir?" (implant: kemik grefti/sinüs lift, abutment tipi, anında/geç yükleme; lamina: diş sayısı, mock-up, e.max vs feldspatik; kanal: kanal sayısı, retreatment). Bu cevap `treatment_price.html:9-15`'teki genel 4 maddenin **yerine** geçmeli.
-- 🔄 **Her tedavi için paket sayfasına**: "Yurt dışından gelen hasta için bu tedavinin gün gün programı nedir; iki geliş arasında ne yaşanır; tek gelişe sığmayan durum hangisi?" (C1'in tedaviye özel hâli → `LandingPage.body`).
-- 🔄 **Reddettiğiniz vakalar**: "Bu tedaviyi hangi hastaya yapmayı reddediyorsunuz ve ne öneriyorsunuz?" (kompozit lamina, Hollywood smile, beyazlatma, zirkonyum için ayrı ayrı; A3-2 ve A8-3 kısmen var, diğerleri yok).
+- ✅ **Her tedavi için paket sayfasına**: "Yurt dışından gelen hasta için bu tedavinin gün gün programı nedir; iki geliş arasında ne yaşanır; tek gelişe sığmayan durum hangisi?" (C1'in tedaviye özel hâli → `LandingPage.body`).
+- ✅ **Reddettiğiniz vakalar**: "Bu tedaviyi hangi hastaya yapmayı reddediyorsunuz ve ne öneriyorsunuz?" (kompozit lamina, Hollywood smile, beyazlatma, zirkonyum için ayrı ayrı; A3-2 ve A8-3 kısmen var, diğerleri yok).
 - **Malzeme**: `ClinicTreatment.brands` ve `warranty_years` alanları (`apps/clinics/models.py:436-437`) tüm tedavilerde boş ve sayfada gösterilmiyor. Marka + garanti yılını yazın; "Materials we use" satırı olarak üç sayfaya da eklenmeli (teknik iş).
 - **KALDIR / BİRLEŞTİR**: temizlik, dolgu, beyazlatma için `/prices/` ve `/packages/` sayfaları (6 × 17 = 102 URL) — içerik gelmeden `noindex` veya tedavi sayfasına 301. Paket şablonundaki "How to choose the best X clinic" paragrafı (`packages/treatment.html:20-27`) tüm tedavilerde kaldırılmalı; yerine hekim notu.
 
