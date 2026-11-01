@@ -33,6 +33,14 @@ def _hash_of(payload):
     return hashlib.sha256(json.dumps(payload, sort_keys=True, ensure_ascii=False, default=str).encode()).hexdigest()
 
 
+def _file_key(t):
+    """Dosyalardaki anahtar İngilizce slug'dır: kaynak dil İngilizce değilse İngilizce çeviri satırının slug'ı kullanılır."""
+    if t.source_language == "en":
+        return t.slug
+    en = t.translations.filter(language_code="en").first()
+    return en.slug if en else t.slug
+
+
 def _known_hashes(t, before):
     """Çevirinin 'güncel' sayılacağı eski kaynak hash'leri: not alanları yokken (ilk deploy) ve bu çalıştırmadan önceki
     not değerleriyle (sonraki deploy'larda yeni not eklendiğinde) hesaplanan hash'ler."""
@@ -48,18 +56,23 @@ class Command(BaseCommand):
         parser.add_argument("--overwrite", action="store_true")
 
     def handle(self, overwrite=False, **o):
-        n = 0
+        n = notes_written = 0
+        matched = set()
         before = {}  # treatment.pk → bu çalıştırmada değişen not alanlarının ÖNCEKİ değerleri (hash tazeleme için)
+        treatments = list(Treatment.objects.all())
         with transaction.atomic():
-            # kaynak dil (en) önce: hekim notları önce Treatment'a yazılır, çevirilerin hash'i ondan sonra hesaplanır
-            for lang in sorted(LANGUAGE_META, key=lambda code: code != "en"):
+            # kaynak dil önce: hekim notları önce Treatment'a yazılır, çevirilerin hash'i ondan sonra hesaplanır
+            for lang in sorted(LANGUAGE_META, key=lambda code: not any(code == t.source_language for t in treatments)):
                 f = CONTENT_DIR / f"{lang}.json"
                 if not f.exists():
                     continue
                 data = json.loads(f.read_text(encoding="utf-8"))
-                for t in Treatment.objects.filter(slug__in=data):
-                    d = data[t.slug]
-                    if lang == t.source_language:  # en.json: yalnızca hekim notları, boş olanlar dolar
+                for t in treatments:
+                    d = data.get(_file_key(t))
+                    if d is None:
+                        continue
+                    matched.add(t.key)
+                    if lang == t.source_language:  # kaynak dil dosyası: yalnızca hekim notları, boş olanlar dolar
                         upd = [k for k in NOTE_FIELDS if d.get(k) and (overwrite or not getattr(t, k))]
                         if upd:
                             before[t.pk] = {k: getattr(t, k) for k in upd}
@@ -67,6 +80,7 @@ class Command(BaseCommand):
                                 setattr(t, k, d[k])
                             t.save(update_fields=upd + ["updated_at"])
                             n += 1
+                            notes_written += len(upd)
                         continue
                     tr = TreatmentTranslation.objects.filter(treatment=t, language_code=lang).first()
                     live = tr and tr.status in (TranslationStatus.MACHINE, TranslationStatus.REVIEWED)
@@ -81,6 +95,9 @@ class Command(BaseCommand):
                         if upd:
                             tr.save(update_fields=upd + ["updated_at"])
                             n += 1
+                            notes_written += len([k for k in upd if k in NOTE_FIELDS])
+                        continue
+                    if tr is None and "slug" not in d:  # yalnızca not taşıyan dosya (en.json) yeni satır açamaz
                         continue
                     tr = tr or TreatmentTranslation(treatment=t, language_code=lang)
                     if not (tr.pk and tr.slug and live):
@@ -101,4 +118,6 @@ class Command(BaseCommand):
                     tr.error = ""
                     tr.save()
                     n += 1
-        self.stdout.write(self.style.SUCCESS(f"✓ {n} tedavi çevirisi yazıldı"))
+        self.stdout.write(self.style.SUCCESS(
+            f"✓ {n} tedavi çevirisi yazıldı (hekim notu alanı: {notes_written}; dosyayla eşleşen tedavi: "
+            f"{len(matched)}/{len(treatments)}; eşleşmeyen: {sorted(t.key for t in treatments if t.key not in matched) or '-'})"))

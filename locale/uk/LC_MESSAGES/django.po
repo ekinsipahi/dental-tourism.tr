@@ -3194,7 +3194,7 @@ msgstr "Ваше лікування (%(name)s) день за днем"
 
 #, python-format
 msgid "When we advise against %(name)s"
-msgstr "Коли ми не радимо %(name)s"
+msgstr "Коли ми не радимо: %(name)s"
 
 #, python-format
 msgid "Graduate of %(u)s"

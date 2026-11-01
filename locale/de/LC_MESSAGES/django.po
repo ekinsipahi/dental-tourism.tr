@@ -3239,7 +3239,7 @@ msgstr "Ihre %(name)s-Behandlung Tag für Tag"
 
 #, python-format
 msgid "When we advise against %(name)s"
-msgstr "Wann wir von %(name)s abraten"
+msgstr "Wann wir abraten: %(name)s"
 
 #, python-format
 msgid "Graduate of %(u)s"

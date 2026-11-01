@@ -3199,11 +3199,11 @@ msgstr "Komentarz lekarki"
 
 #, python-format
 msgid "Your %(name)s treatment, day by day"
-msgstr "Leczenie %(name)s dzień po dniu"
+msgstr "Leczenie krok po kroku: %(name)s"
 
 #, python-format
 msgid "When we advise against %(name)s"
-msgstr "Kiedy odradzamy %(name)s"
+msgstr "Kiedy odradzamy: %(name)s"
 
 #, python-format
 msgid "Graduate of %(u)s"

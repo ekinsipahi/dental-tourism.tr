@@ -83,8 +83,11 @@ class Command(BaseCommand):
     def handle(self, overwrite=False, **o):
         clinic = Clinic.primary()
         devrim = Doctor.objects.filter(clinic=clinic, slug="devrim-biriken-sipahi").first()
-        ekin = Doctor.objects.filter(clinic=clinic, slug="ekin-sipahi").first()
+        ekin = (Doctor.objects.filter(clinic=clinic, slug="ekin-sipahi").first()
+                or Doctor.objects.filter(slug="ekin-sipahi").first())
         n = 0
+        self.stdout.write(f"klinik: {clinic.slug if clinic else '-'} · Dr. Devrim: {'var' if devrim else 'YOK'} · "
+                          f"Dt. Ekin: {'var' if ekin else 'YOK'}")
         if ekin:  # hekimin verdiği bilgiler (2026-11): yalnızca boş alanlar dolar, admin düzenlemesi ezilmez
             facts = {"graduation_year": 2025, "university": "İstanbul Kent University, Faculty of Dentistry",
                      "instagram": "dt.ekinsipahi"}
