@@ -330,10 +330,12 @@ class ResultsAndFaqEverywhereTests(SeededTestCase):
 
         html = self.client.get("/").content.decode()
         srcs = re.findall(r'cases/([a-z0-9-]+)-after\.jpg', html)
-        self.assertEqual(srcs, ["zirconia-1", "zirconia-2", "composite-1", "composite-2", "sanem", "hazan"])
+        # Şebnem (dişeti şekillendirme) en üstte, sonra zirkonya → kompozit → Sanem, Hazan
+        self.assertEqual(srcs, ["sebnem", "zirconia-1", "zirconia-2", "composite-1", "composite-2", "sanem", "hazan"])
         self.assertLess(html.index('id="reviews-h2"'), html.index('id="results"'))   # ana sayfada yorumların altında
         de = self.client.get("/de/").content.decode()
         self.assertIn("Natürliches monolithisches Zirkon", de)
+        self.assertIn("Şebnem — ästhetische Zahnfleischkorrektur", de)
 
 
 class BrowserTimezoneTests(SeededTestCase):
