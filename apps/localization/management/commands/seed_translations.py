@@ -28,6 +28,7 @@ class Command(BaseCommand):
 
         SeedData(stdout=self.stdout, stderr=self.stderr)._city()
         call_command("seed_treatment_translations", stdout=self.stdout)
+        call_command("apply_content_fixes", stdout=self.stdout)  # yayındaki yanlış cümleler (content_fixes.json)
         call_command("seed_profile_translations", stdout=self.stdout)
         missing_kw = set(LANGUAGE_META) - set(Keyword.objects.values_list("language", flat=True).distinct())
         call_command("seed_topics", no_keywords=not missing_kw, stdout=self.stdout)

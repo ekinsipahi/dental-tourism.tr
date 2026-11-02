@@ -52,7 +52,7 @@ Well-made porcelain veneers can last 10–15 years with good hygiene, a night gu
         "faq": [
             {"question": "Will my teeth be ground down?", "answer": "A thin layer of enamel is usually removed so the veneer does not look bulky. We remove only what is necessary and discuss non-prep options when suitable."},
             {"question": "How many veneers do I need?", "answer": "That depends on your smile line. Many patients need 6–10 upper teeth; we decide together after the digital smile design."},
-            {"question": "Porcelain or composite veneers?", "answer": "Porcelain lasts longer and keeps its colour; composite is cheaper, done in one session and needs no tooth reduction, but needs polishing and repairs more often."},
+            {"question": "Porcelain or composite veneers?", "answer": "Porcelain lasts longer and keeps its colour; composite is cheaper, done in one session and needs no tooth reduction, and with a good material and proper care it also keeps its colour for years."},
         ],
     },
     {
@@ -133,9 +133,9 @@ A treated back tooth usually needs a crown to protect it from breaking.""",
 Composite veneers are made from tooth-coloured resin applied and shaped directly on your teeth. In most cases no enamel needs to be removed.
 
 ## Pros and cons
-They are faster and more affordable than porcelain and fully reversible, but they can stain and chip more easily and need polishing every year or two.""",
+They are faster and more affordable than porcelain and fully reversible. With a good composite material and sensible eating habits they keep their colour for years — often no yellowing even after 5–6 or 10 years — and we have patients who have worn their composite veneers for 20 years. They need no separate maintenance schedule: the small polishing touches are simply part of your routine scaling visits.""",
         "faq": [
-            {"question": "How long do composite veneers last?", "answer": "Typically 5–7 years with good care and regular polishing."},
+            {"question": "How long do composite veneers last?", "answer": "With a good composite material and proper care, many years — we have patients who have worn theirs for 20 years. There is no fixed polishing or replacement interval; minor polishing is done during routine scaling visits."},
         ],
     },
     {
