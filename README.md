@@ -156,6 +156,12 @@ yer almaz) — ince/duplicate içerik cezası riskine karşı.
   bot olmayan isteklere açıktır; oturum başına 3/saat, IP başına 5/saat limit, gizli `website` honeypot alanı,
   16 KB gövde sınırı. `/api/tracking/whatsapp-webhook/` `WHATSAPP_WEBHOOK_SECRET` boşsa kapalıdır (404);
   çağıran `X-Webhook-Secret` (veya `Authorization: Bearer`) başlığı gönderir.
+- **Veritabanını Render Postgres'e taşıma** (`scripts/migrate_db_to_render.py`): Render'da aynı bölgede (Frankfurt)
+  bir Postgres aç → External Database URL'yi yerel `.env`'e `RENDER_DATABASE_URL=` olarak koy → betik Supabase'den
+  yalnızca `public` şemasını `pg_dump` eder, Render'a `pg_restore` eder, tablo satır sayılarını karşılaştırır →
+  Render env group'ta `DATABASE_URL` = Internal Database URL, `DB_SSLMODE=prefer` → web yeniden deploy → `--verify`.
+  Dump `.migrate_tmp/` altında kalır (gitignore). Dump ile env değişimi arasındaki birkaç dakikanın takip olayları
+  Supabase'de kalır; sakin bir saatte yapın.
 - **Cache:** veritabanı cache'i (`python manage.py createcachetable`). Arka plan işleri: web sürecinde sınırlı thread havuzu.
 - **Zamanlanmış işler:** `python manage.py periodic [--job translations|conversions|related|cleanup|persona]`
   (Render Cron Job veya sistem cron'u).

@@ -73,6 +73,13 @@ services:
     envVars:
       - fromGroup: dental-tourism-shared
 
+# Veritabanı: Render Postgres (Frankfurt, web ile aynı bölge → egress yok). Dashboard'dan açıldı; bağlantı dizesi
+# env group'taki DATABASE_URL'de (Internal Database URL). Blueprint ile yönetmek istenirse:
+#   databases:
+#     - name: dental-tourism-db
+#       region: frankfurt
+#       plan: basic-256mb
+#   ve env group'ta DATABASE_URL için  fromDatabase: {name: dental-tourism-db, property: connectionString}
 envVarGroups:
   - name: dental-tourism-shared
     envVars:

@@ -12,3 +12,6 @@ venv/
 .qodo/
 *.sqlite3
 .DS_Store
+
+# Supabase → Render taşıma dökümü (hasta verisi içerir, asla commit edilmez)
+.migrate_tmp/
