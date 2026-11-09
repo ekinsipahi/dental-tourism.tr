@@ -5,25 +5,27 @@ from django.test import Client
 
 from apps.persona.models import VisitorSession
 
-from .base import BROWSER_UA, SeededTestCase
+from .base import BROWSER_UA, SeededTestCase, visit
 
 
 class VisitorIdTests(SeededTestCase):
     def test_first_visit_sets_persistent_cookie(self):
         r = self.client.get("/")
-        self.assertIn("dt_vid", r.cookies)
+        self.assertIn("dt_vid", r.cookies)  # kalıcı kimlik çerezi ilk GET'te yazılır (DB'siz)
         vid = r.cookies["dt_vid"].value
         self.assertRegex(vid, r"^[a-f0-9]{32}$")
+        self.assertFalse(VisitorSession.objects.exists())  # oturum kaydı ancak JS beacon'ıyla açılır
+        self.client.post("/api/tracking/pageview/", data=json.dumps({"url": "http://testserver/"}), content_type="application/json")
         self.assertEqual(VisitorSession.objects.get(session_key=self.client.session.session_key).visitor_id, vid)
 
     def test_returning_visitor_with_new_session_keeps_history(self):
-        self.client.get("/?utm_term=cheap+dental+turkey")
+        visit(self.client, "/?utm_term=cheap+dental+turkey")
         vid = self.client.cookies["dt_vid"].value
         first = VisitorSession.objects.get(visitor_id=vid)
         # Yeni tarayıcı oturumu (sessionid yok) ama aynı dt_vid çerezi
         c2 = Client(HTTP_USER_AGENT=BROWSER_UA)
         c2.cookies["dt_vid"] = vid
-        c2.get("/")
+        visit(c2, "/")
         self.assertEqual(VisitorSession.objects.filter(visitor_id=vid).count(), 1)  # aynı kişi, tek kayıt
         again = VisitorSession.objects.get(visitor_id=vid)
         self.assertEqual(again.pk, first.pk)
@@ -53,9 +55,15 @@ class ReferrerTrackingTests(SeededTestCase):
         for ref in ("https://www.google.com/search?q=dental+clinic+istanbul", "https://www.bing.com/",
                     "https://www.instagram.com/", "https://example.org/blog"):
             c = Client(HTTP_USER_AGENT=BROWSER_UA)
+            before = TrackingSession.objects.count()
             self.assertEqual(c.get("/", HTTP_REFERER=ref).status_code, 200)
+            self.assertEqual(TrackingSession.objects.count(), before)  # sayfa GET'i oturum açmaz (JS yok = insan değil)
+            # gerçek tarayıcı: pageview beacon'ı sayfanın url/referrer'ını taşır → oturum burada, doğru kaynakla doğar
+            c.post("/api/tracking/pageview/", data=json.dumps({"url": "http://testserver/", "referrer": ref}),
+                   content_type="application/json")
             s = TrackingSession.objects.get(session_key=c.session.session_key)
             self.assertEqual(s.referrer_url, ref)
+            self.assertEqual(s.landing_page, "/")
             r = c.post("/api/tracking/event/", data=json.dumps({"event_type": "phone_click"}), content_type="application/json")
             self.assertEqual(r.status_code, 200)
             s.refresh_from_db()
@@ -147,7 +155,7 @@ class ContactClickTrackingTests(SeededTestCase):
     def test_lead_form_records_form_submit_event(self):
         from apps.tracking.models import ContactClick, Lead
 
-        self.client.get("/")
+        visit(self.client, "/")
         r = self.client.post("/api/tracking/lead/", data=json.dumps({"name": "Anna", "phone": "+491511234567",
                                                                      "page": "/en/contact/", "language": "en"}),
                              content_type="application/json")

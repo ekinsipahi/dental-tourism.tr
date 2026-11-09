@@ -171,4 +171,13 @@ def cleanup_old_sessions():
         created_at__lt=cutoff,
         is_lead=False,
     ).delete()
-    logger.info(f"Cleaned {deleted} old sessions")
+    # JS beacon'ı hiç gelmemiş oturumlar (tarayıcı gibi görünen botlar; 2026-11 öncesi sayfa GET'inde açılıyordu):
+    # 2 günden eski ve lead olmayanlar silinir; persona tarafındaki eşleri de (aynı session_key) gider.
+    from apps.persona.models import VisitorSession as PersonaSession
+
+    stale = VisitorSession.objects.filter(page_views=0, is_lead=False, created_at__lt=timezone.now() - timedelta(days=2))
+    keys = list(stale.values_list("session_key", flat=True)[:5000])
+    junk, _ = VisitorSession.objects.filter(session_key__in=keys).delete()
+    pjunk, _ = PersonaSession.objects.filter(session_key__in=keys).delete()
+    logger.info(f"Cleaned {deleted} old sessions, {junk} no-beacon sessions, {pjunk} persona rows")
+    return {"old": deleted, "no_beacon": junk, "persona": pjunk}

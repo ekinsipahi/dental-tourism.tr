@@ -1,6 +1,16 @@
 from django.core.management import call_command
 from django.test import TestCase, override_settings
 
+def visit(client, url="/", referrer=""):
+    """Gerçek tarayıcı gibi: sayfa GET'i + pageview beacon'ı (oturum ve persona kaydı beacon'da açılır)."""
+    import json
+
+    r = client.get(url, HTTP_REFERER=referrer) if referrer else client.get(url)
+    client.post("/api/tracking/pageview/", data=json.dumps({"url": "http://testserver" + url, "referrer": referrer}),
+                content_type="application/json")
+    return r
+
+
 BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
 

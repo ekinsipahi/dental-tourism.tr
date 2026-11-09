@@ -33,8 +33,15 @@ class BotDetectionTests(SeededTestCase):
     def test_real_browsers_are_tracked(self):
         from apps.tracking.models import VisitorSession
 
+        import json
+
         for ua in HUMANS:
             c = Client(HTTP_USER_AGENT=ua)
             self.assertEqual(c.get("/").status_code, 200, ua)
+            self.assertNotIn("sessionid", c.cookies, ua)  # GET'te oturum yok; JS beacon'ı açar
+            r = c.post("/api/tracking/pageview/", data=json.dumps({"url": "http://testserver/de/", "referrer": ""}),
+                       content_type="application/json")
+            self.assertEqual(r.status_code, 200)
             self.assertIn("sessionid", c.cookies, ua)
         self.assertEqual(VisitorSession.objects.count(), len(HUMANS))
+        self.assertEqual(VisitorSession.objects.filter(landing_page="/de/", language_code="de").count(), len(HUMANS))

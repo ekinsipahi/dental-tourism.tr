@@ -171,22 +171,50 @@ ACTIVE_TTL = 60 * 30  # "bu ziyaretçi son 30 dk içinde görüldü" işareti (s
 
 
 def attach_lazy_session(request):
-    """Sayfa GET'i: ziyaretçi bu işçide son 30 dk içinde görüldüyse takip oturumu DB'den OKUNMAZ.
-    request.tracking_session tembel bir vekildir (yalnızca gerçekten kullanan kod — lead formu — yükler);
-    request.tracking_source (WhatsApp mesajındaki kaynak etiketi için) işaretten gelir.
-    Görülmediyse (ilk sayfa, 30 dk sonra, başka işçi) eski yol: DB'den oku / oluştur, işareti koy."""
+    """Sayfa GET'i veritabanına DOKUNMAZ: takip oturumu ilk JS beacon'ında (pageview / event) açılır — "JS yok =
+    insan değil" (tarayıcı gibi görünen ama JS çalıştırmayan tarayıcılar günde yüzlerce boş oturum açıyordu).
+    request.tracking_session tembel bir vekildir (yalnızca gerçekten kullanan kod — lead formu — yükler/oluşturur);
+    request.tracking_source (WhatsApp mesajındaki kaynak etiketi) işaretten, yoksa bu isteğin referrer/UTM'inden gelir."""
     from django.core.cache import caches
     from django.utils.functional import SimpleLazyObject
 
     key = request.session.session_key
     marker = caches["local"].get(f"tracking_active:{key}") if key else None
+    request.tracking_session = SimpleLazyObject(lambda: get_or_create_session(request))
     if marker:
         request.tracking_source = marker.get("traffic_source", "")
-        request.tracking_session = SimpleLazyObject(lambda: get_or_create_session(request))
-        return
-    session = get_or_create_session(request)
-    request.tracking_session = session
-    request.tracking_source = session.traffic_source if session else ""
+    else:
+        try:
+            request.tracking_source = _detect_traffic_source(request).get("traffic_source", "")
+        except Exception:  # noqa: BLE001
+            request.tracking_source = ""
+
+
+class PageRequest:
+    """Beacon isteği + SAYFANIN bağlamı: yol, sorgu parametreleri (gclid/utm), referrer ve dil sayfadan;
+    oturum, çerezler, IP ve User-Agent beacon isteğinden. get_or_create_session / get_or_create_persona bunu bir
+    request gibi kullanır — böylece ilk beacon'da açılan oturum, sayfa GET'inde açılmış gibi doğru veriyle dolar."""
+
+    def __init__(self, request, url, referrer=""):
+        from urllib.parse import urlparse
+
+        from django.conf import settings
+        from django.http import QueryDict
+
+        from dental_tourism.languages import LANGUAGE_META
+
+        self._request = request
+        u = urlparse(url or "")
+        self.path = (u.path or "/")[:500]
+        self.GET = QueryDict(u.query or "")
+        meta = dict(request.META)
+        meta["HTTP_REFERER"] = (referrer or "")[:1000]
+        self.META = meta
+        first = self.path.strip("/").split("/")[0] if self.path.strip("/") else ""
+        self.LANGUAGE_CODE = first if first in LANGUAGE_META else settings.LANGUAGE_CODE
+
+    def __getattr__(self, name):  # session, COOKIES, user, _dt_vid … gerçek istekten
+        return getattr(self._request, name)
 
 
 def real_session(request):

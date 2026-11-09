@@ -21,7 +21,7 @@ class PersonaMiddleware:
         try:
             from .engine import get_or_create_persona
 
-            request.persona = get_or_create_persona(request)
+            request.persona = get_or_create_persona(request, create=False)  # GET'te yazma yok; oturum beacon'da doğar
         except Exception:  # noqa: BLE001 — kişiselleştirme asla sayfayı düşürmemeli
             import logging
 

@@ -212,7 +212,9 @@ def _forced(request):
     return None
 
 
-def get_or_create_persona(request):
+def get_or_create_persona(request, create=True):
+    """create=False (sayfa GET'i): yalnızca önbellek / mevcut oturum okunur, hiçbir şey yazılmaz — yeni ziyaretçi
+    varsayılan sonucu alır. create=True (ilk JS beacon'ı): oturum yoksa sayfa bağlamıyla oluşturulur."""
     if getattr(request, "is_bot", False):
         return dict(DEFAULT_RESULT)
 
@@ -221,6 +223,8 @@ def get_or_create_persona(request):
         return forced
 
     if not request.session.session_key:
+        if not create:
+            return dict(DEFAULT_RESULT)
         request.session.save()
     key = request.session.session_key
     cache_key = f"persona:{key}"
@@ -232,7 +236,13 @@ def get_or_create_persona(request):
 
     now = timezone.now()
     session = VisitorSession.objects.filter(session_key=key).first()
+    if session is None and not create:
+        return dict(DEFAULT_RESULT)  # sayfa GET'i: yeni ziyaretçi için yazma yok, oturum beacon'da açılır
+    from django.utils.functional import LazyObject, empty
+
     tracking = getattr(request, "tracking_session", None)
+    if isinstance(tracking, LazyObject) and tracking._wrapped is empty:
+        tracking = None  # tembel vekil: GET'te takip oturumunu bu yüzden yükleme/oluşturma
     dirty = False  # yalnızca gerçekten değişen oturum yazılır (önbellek miss'i başına UPDATE olmasın)
     from apps.tracking.visitor import get_visitor_id
 
@@ -249,7 +259,8 @@ def get_or_create_persona(request):
             session_key=key,
             language_code=getattr(request, "LANGUAGE_CODE", "") or "",
             device_type=_detect_device(request),
-            referral_source=(getattr(tracking, "traffic_source", "") or _detect_referral(request)),
+            referral_source=(getattr(tracking, "traffic_source", "") or getattr(request, "tracking_source", "")
+                             or _detect_referral(request)),
             country_code=(getattr(tracking, "ip_country", "") or ""),
             landing_path=request.path[:500],
             search_query=ctx["query"],
@@ -274,8 +285,9 @@ def get_or_create_persona(request):
                 for p, v in ctx["scores"].items():
                     merged[p] = max(merged.get(p, 0), v)
                 session.intent_scores = merged
-            if tracking and getattr(tracking, "traffic_source", ""):
-                session.referral_source = tracking.traffic_source
+            src = getattr(tracking, "traffic_source", "") or getattr(request, "tracking_source", "")
+            if src:
+                session.referral_source = src
         new_lang = getattr(request, "LANGUAGE_CODE", session.language_code)
         if new_lang != session.language_code:
             session.language_code = new_lang

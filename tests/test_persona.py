@@ -7,7 +7,7 @@ from apps.persona.engine import infer
 from apps.persona.intent import score_text
 from apps.persona.models import PersonaArmStat, PersonaExposure, VisitorSession
 
-from .base import SeededTestCase
+from .base import SeededTestCase, visit
 
 
 class IntentTests(SeededTestCase):
@@ -86,7 +86,7 @@ class BanditTests(SeededTestCase):
 @override_settings(PERSONA_UI_ENABLED=True)
 class EndToEndPersonaTests(SeededTestCase):
     def test_visit_creates_exposure_and_whatsapp_click_converts(self):
-        self.client.get("/de/?utm_term=zahnimplantate+kosten&gclid=x")
+        visit(self.client, "/de/?utm_term=zahnimplantate+kosten&gclid=x")  # oturum + exposure ilk beacon'da doğar
         session = VisitorSession.objects.get()
         self.assertEqual(session.search_query, "zahnimplantate kosten")
         exposure = PersonaExposure.objects.get(session=session)
@@ -99,7 +99,7 @@ class EndToEndPersonaTests(SeededTestCase):
 
     def test_one_exposure_per_visit(self):
         for _ in range(3):
-            self.client.get("/")
+            visit(self.client, "/")
         self.assertEqual(PersonaExposure.objects.count(), 1)
 
     def test_bots_are_not_tracked_and_see_default(self):

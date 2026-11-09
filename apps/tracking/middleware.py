@@ -16,13 +16,10 @@ class TrackingMiddleware:
             return self.get_response(request)
         try:
             from . import visitor
-            from .service import attach_lazy_session, get_or_create_session
+            from .service import attach_lazy_session
 
             visitor.ensure_visitor_id(request)  # ilk istekte de kalıcı kimlik (çerez PersonaMiddleware yanıtında yazılır)
-            if request.path.startswith("/api/"):
-                request.tracking_session = get_or_create_session(request)  # API'ler nesneyi hemen kullanır
-            else:
-                attach_lazy_session(request)  # sayfa isteği: ziyaretçi son 30 dk içinde görüldüyse DB'ye gidilmez
+            attach_lazy_session(request)  # DB'ye gidilmez; oturum ilk JS beacon'ında (pageview/event) açılır
         except Exception as e:  # noqa: BLE001
             logger.warning("TrackingMiddleware error: %s", e)
         return self.get_response(request)

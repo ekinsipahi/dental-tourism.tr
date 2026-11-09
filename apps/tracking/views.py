@@ -23,18 +23,27 @@ VALID_EVENTS = {
     "contact_return",  # telefon/WhatsApp/harita tıklamasından sonra sekmeye dönüş (away_seconds, likely_contacted)
 }
 
-def _get_or_create_session(request):
-    """Session'ı al — yoksa yeni oluştur."""
-    from .service import real_session
+def _page_request(request, body):
+    """Beacon gövdesindeki sayfa bağlamı (url, referrer) ile istek vekili — oturum/persona burada doğru veriyle açılır."""
+    from .service import PageRequest
 
-    session = real_session(request)
-    if session:
-        return session
-    # Middleware çalışmadıysa manual oluştur
+    body = body if isinstance(body, dict) else {}
+    url = body.get("url") or body.get("page_url") or ""
+    if not url and isinstance(body.get("events"), list) and body["events"]:
+        first = body["events"][0] if isinstance(body["events"][0], dict) else {}
+        url = first.get("page_url", "")
+    return PageRequest(request, str(url)[:1000], str(body.get("referrer", ""))[:1000])
+
+
+def _get_or_create_session(request, body=None):
+    """Takip oturumu: varsa al, yoksa SAYFA bağlamıyla (beacon gövdesi) oluştur — sayfa GET'i artık oturum açmaz."""
     try:
         from .service import get_or_create_session
-        return get_or_create_session(request)
-    except Exception as e:
+
+        session = get_or_create_session(_page_request(request, body) if body else request)
+        request.tracking_session = session
+        return session
+    except Exception as e:  # noqa: BLE001
         logger.warning(f"Session create failed: {e}")
         return None
 
@@ -100,7 +109,7 @@ def collect_event(request):
     body_vid = visitor.clean(_peek.get("vid")) if isinstance(_peek, dict) else ""
     if body_vid and not visitor.clean(request.COOKIES.get(visitor.COOKIE)):
         request._dt_vid, request._dt_vid_new = body_vid, True
-    session = _get_or_create_session(request)
+    session = _get_or_create_session(request, _peek)
     vid = visitor.get_visitor_id(request)
     if session and vid and not session.visitor_id:
         type(session).objects.filter(pk=session.pk).update(visitor_id=vid)
@@ -122,6 +131,16 @@ def collect_event(request):
 
     skey = request.session.session_key
     psession = PersonaSession.objects.filter(session_key=skey).first() if skey else None
+    if psession is None and skey:
+        try:  # olay pageview beacon'ından önce geldiyse persona oturumu burada açılır
+            from apps.persona.engine import get_or_create_persona
+
+            preq = _page_request(request, body)
+            preq.tracking_session = session
+            get_or_create_persona(preq, create=True)
+            psession = PersonaSession.objects.filter(session_key=skey).first()
+        except Exception as e:  # noqa: BLE001
+            logger.error(f"persona create: {e}")
     wants_mind = False
     for ev in events:
         event_type = str(ev.get("event_type", ""))[:30]
@@ -175,7 +194,7 @@ def collect_pageview(request):
     body_vid = visitor.clean(_peek.get("vid")) if isinstance(_peek, dict) else ""
     if body_vid and not visitor.clean(request.COOKIES.get(visitor.COOKIE)):
         request._dt_vid, request._dt_vid_new = body_vid, True
-    session = _get_or_create_session(request)
+    session = _get_or_create_session(request, _peek)
     vid = visitor.get_visitor_id(request)
     if session and vid and not session.visitor_id:
         type(session).objects.filter(pk=session.pk).update(visitor_id=vid)
@@ -183,6 +202,15 @@ def collect_pageview(request):
     try:
         body = json.loads(request.body.decode("utf-8"))
         if session:
+            # Persona oturumu da ilk beacon'da doğar (sayfa GET'inde DB'ye gidilmez); sayfanın GET/referrer bağlamıyla
+            try:
+                from apps.persona.engine import get_or_create_persona
+
+                preq = _page_request(request, body)
+                preq.tracking_session = session
+                get_or_create_persona(preq, create=True)
+            except Exception as e:  # noqa: BLE001
+                logger.error(f"persona create: {e}")
             from .models import PageView
             PageView.objects.create(
                 session  = session,
@@ -231,7 +259,7 @@ def submit_lead(request):
     if (_rate_limited(f"lead-s:{session_cookie[:40]}", LEAD_LIMIT_PER_SESSION, 3600)
             or _rate_limited(f"lead-ip:{_ip_hash(request)}", LEAD_LIMIT_PER_IP, 3600)):
         return JsonResponse({"ok": False, "error": "too many requests"}, status=429)
-    _get_or_create_session(request)  # request.tracking_session'ı garanti eder
+    _get_or_create_session(request, {"url": str(request.META.get("HTTP_REFERER", ""))[:1000]})  # oturum yoksa formun sayfasıyla aç
 
     try:
         body = json.loads(request.body.decode("utf-8"))
