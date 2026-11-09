@@ -4,7 +4,12 @@ BOT_RE = re.compile(
     r"bot|crawl|spider|slurp|bingpreview|facebookexternalhit|embedly|quora link preview|"
     r"whatsapp|telegrambot|discordbot|linkedinbot|pinterest|vkshare|w3c_validator|lighthouse|"
     r"pagespeed|gtmetrix|headless|python-requests|curl|wget|ahrefs|semrush|mj12|dotbot|petalbot|"
-    r"yandex|baiduspider|duckduckbot|applebot|gptbot|claudebot|ccbot|perplexity",
+    r"yandex|baiduspider|duckduckbot|applebot|gptbot|claudebot|ccbot|perplexity|"
+    # UA'sında "bot" geçmeyen tarayıcılar / araçlar (canlı veride oturum açtıkları görüldü, 2026-11):
+    r"googleother|google-inspectiontool|storebot|prefetch proxy|go-http-client|rust_sniffer|skypeuripreview|"
+    r"okhttp|python|java/|libwww|scrapy|httpclient|axios|node-fetch|postmanruntime|insomnia|httpx|aiohttp|"
+    r"phantomjs|puppeteer|playwright|selenium|chrome-lighthouse|dataprovider|screaming frog|siteaudit|"
+    r"semrushbot|seokicks|serpstat|netcraft|archive\.org|ia_archiver|bytespider|amazonbot|meta-externalagent",
     re.I,
 )
 
@@ -18,7 +23,10 @@ class BotDetectionMiddleware:
 
     def __call__(self, request):
         ua = request.META.get("HTTP_USER_AGENT", "")
-        request.is_bot = not ua or bool(BOT_RE.search(ua))
+        # Tarayıcı imzası olmayan ya da yalnızca "Mozilla/5.0" gibi kırpık UA'lar da bot sayılır (gerçek tarayıcılar
+        # AppleWebKit / Gecko / Trident içerir); bunlar JS çalıştırmadığı için zaten hiç beacon göndermiyordu.
+        request.is_bot = (not ua or bool(BOT_RE.search(ua))
+                          or not any(sig in ua for sig in ("AppleWebKit", "Gecko", "Trident", "Opera")))
         return self.get_response(request)
 
 

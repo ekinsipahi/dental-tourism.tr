@@ -1,7 +1,7 @@
 from django.core.management import call_command
 from django.test import TestCase, override_settings
 
-BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120 Safari/537.36"
+BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
 
 @override_settings(AUTO_TRANSLATE_ON_PUBLISH=False, ANTHROPIC_API_KEY="", PERSONA_EXPLORATION_RATE=0.0)
