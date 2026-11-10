@@ -8,8 +8,16 @@ from . import bandit
 from .models import MLModelVersion, PersonaArmStat, PersonaExposure, VisitorSession
 
 
+def _human_sessions():
+    """JS beacon'ı göndermiş (gerçek tarayıcı) oturumlar — botlar/JS'siz istemciler dönüşüm oranını sulandırmasın."""
+    from apps.tracking.models import VisitorSession as TrackingSession
+
+    keys = TrackingSession.objects.filter(page_views__gt=0).values("session_key")
+    return VisitorSession.objects.filter(session_key__in=keys)
+
+
 def _data():
-    sessions = VisitorSession.objects.all()
+    sessions = _human_sessions()
     total = sessions.count()
     converted = sessions.filter(converted=True).count()
     segments = (PersonaArmStat.objects.exclude(segment=bandit.GLOBAL)
@@ -44,7 +52,7 @@ def dashboard(request):
 
 @staff_member_required
 def funnel(request):
-    s = VisitorSession.objects.all()
+    s = _human_sessions()
     return JsonResponse({
         "visitors": s.count(),
         "engaged": s.filter(total_page_views__gte=2).count(),

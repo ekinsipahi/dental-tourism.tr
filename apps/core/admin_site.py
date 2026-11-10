@@ -73,14 +73,22 @@ class DentalAdminSite(admin.AdminSite):
         from apps.localization.llm import is_configured
         from apps.persona.models import MLModelVersion, PersonaExposure
         from apps.seo.models import Keyword, LandingPage
-        from apps.tracking.models import Lead
+        from django.db.models import Q
+
+        from apps.tracking.models import Lead, PageView, VisitorSession
 
         now = timezone.now()
         today = now.replace(hour=0, minute=0, second=0, microsecond=0)
         leads = Lead.objects.all()
         if not request.user.is_superuser:
             leads = leads.filter(clinic__owner=request.user)
-        exposures = PersonaExposure.objects.filter(created_at__gte=now - timedelta(days=30))
+        since = now - timedelta(days=30)
+        # Gerçek ziyaretçi = JS beacon'ı göndermiş oturum (page_views > 0); JS çalıştırmayan tarayıcılar/botlar sayılmaz
+        humans = VisitorSession.objects.filter(created_at__gte=since, page_views__gt=0)
+        humans_n = humans.count()
+        contacted = humans.filter(Q(whatsapp_clicks__gte=1) | Q(phone_clicks__gte=1) | Q(is_lead=True)).count()
+        junk_n = VisitorSession.objects.filter(created_at__gte=since, page_views=0).count()
+        exposures = PersonaExposure.objects.filter(created_at__gte=since)
         exp_n = exposures.count()
         exp_c = exposures.filter(converted=True).count()
         return {
@@ -99,6 +107,11 @@ class DentalAdminSite(admin.AdminSite):
                 "landing_total": LandingPage.objects.count(),
                 "cr_30d": round(exp_c / exp_n * 100, 2) if exp_n else 0,
                 "exposures_30d": exp_n,
+                "visitors_30d": humans_n,
+                "pageviews_30d": PageView.objects.filter(timestamp__gte=since).count(),
+                "contact_rate_30d": round(contacted / humans_n * 100, 1) if humans_n else 0,
+                "contacted_30d": contacted,
+                "junk_30d": junk_n,
             },
             "latest_leads": leads.select_related("clinic", "treatment")[:8],
             "review_posts": BlogPost.objects.filter(status="review").order_by("-created_at")[:6],

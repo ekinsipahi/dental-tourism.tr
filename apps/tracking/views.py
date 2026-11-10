@@ -350,7 +350,7 @@ def dashboard_stats(request):
     now         = timezone.now()
     today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
     week_start  = today_start - timedelta(days=7)
-    sessions    = VisitorSession.objects.all()
+    sessions    = VisitorSession.objects.filter(page_views__gt=0)  # gerçek ziyaretçi: JS beacon'ı göndermiş oturum
     leads       = Lead.objects.all()
 
     return JsonResponse({

@@ -22,7 +22,9 @@
     <div class="dt-kpi"><div class="n">{{ kpi.posts_live }}</div><div class="l">Yayındaki yazı</div></div>
     <div class="dt-kpi"><a href="{% url 'admin:seo_landingpage_changelist' %}"><div class="n">{{ kpi.landing_live }}/{{ kpi.landing_total }}</div><div class="l">İndexlenen programatik sayfa</div></a></div>
     <div class="dt-kpi"><a href="{% url 'admin:seo_keyword_changelist' %}"><div class="n">{{ kpi.keywords }}</div><div class="l">Keyword ({{ kpi.keywords_open }} sayfasız)</div></a></div>
-    <div class="dt-kpi"><a href="/api/dashboard/"><div class="n">%{{ kpi.cr_30d }}</div><div class="l">Persona dönüşüm (30g, {{ kpi.exposures_30d }} ziyaret)</div></a></div>
+    <div class="dt-kpi"><a href="{% url 'admin:tracking_visitorsession_changelist' %}?human=yes"><div class="n">{{ kpi.visitors_30d }}</div><div class="l">Gerçek ziyaretçi (30g) · {{ kpi.pageviews_30d }} sayfa{% if kpi.junk_30d %} · {{ kpi.junk_30d }} bot/JS'siz sayılmadı{% endif %}</div></a></div>
+    <div class="dt-kpi"><a href="{% url 'admin:tracking_contactclick_changelist' %}"><div class="n">%{{ kpi.contact_rate_30d }}</div><div class="l">İletişim oranı (30g): {{ kpi.contacted_30d }} / {{ kpi.visitors_30d }} ziyaretçi WhatsApp, telefon veya form</div></a></div>
+    {% if kpi.exposures_30d %}<div class="dt-kpi"><a href="/api/dashboard/"><div class="n">%{{ kpi.cr_30d }}</div><div class="l">Persona deneyi dönüşümü (30g, {{ kpi.exposures_30d }} gösterim)</div></a></div>{% endif %}
     {% if kpi.clinics_pending %}<div class="dt-kpi"><a href="{% url 'admin:clinics_clinic_changelist' %}?status__exact=pending"><div class="n">{{ kpi.clinics_pending }}</div><div class="l">Onay bekleyen klinik</div></a></div>{% endif %}
   </div>
 

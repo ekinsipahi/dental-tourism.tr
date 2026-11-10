@@ -48,6 +48,22 @@ def mind_html(mind):
                        title, level[1], level[0], mind.get("signals", 0), bars, why)
 
 
+class HumanFilter(admin.SimpleListFilter):
+    """Gerçek ziyaretçi = JS beacon'ı göndermiş oturum; JS çalıştırmayan tarayıcılar/botlar 'hayır' tarafında kalır."""
+    title = "gerçek ziyaretçi"
+    parameter_name = "human"
+
+    def lookups(self, request, model_admin):
+        return [("yes", "Evet — JS beacon gönderdi"), ("no", "Hayır — JS çalışmadı (bot/tarayıcı)")]
+
+    def queryset(self, request, qs):
+        if self.value() == "yes":
+            return qs.filter(page_views__gt=0)
+        if self.value() == "no":
+            return qs.filter(page_views=0)
+        return qs
+
+
 @admin.register(VisitorSession)
 class VisitorSessionAdmin(admin.ModelAdmin):
     list_display = [
@@ -55,7 +71,7 @@ class VisitorSessionAdmin(admin.ModelAdmin):
         "device_icon", "intent_score_bar", "conversion_flags",
         "page_views", "total_time_display", "last_seen",
     ]
-    list_filter  = [
+    list_filter  = [HumanFilter,
         "traffic_source", "device_type", "ip_country",
         "is_lead", "is_converted", "is_qualified",
         "whatsapp_matched",
