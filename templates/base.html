@@ -65,7 +65,7 @@
   {% if wa_url and persona.stage == "decision" %}
   {# Karar aşaması: mobilde sabit alt iletişim çubuğu #}
   <div class="stage-dock" role="complementary" aria-label="{% trans 'Contact' %}">
-    <a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=16 %} WhatsApp</a>
+    <a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=16 %} WhatsApp</a> {% include "components/email_cta.html" %}
     {% if clinic.phone %}<a href="tel:{{ clinic.phone|cut:' ' }}" class="btn btn-outline" data-track="phone">📞 {% trans "Call us" %}</a>{% endif %}
     {% include "components/wa_call.html" %}
   </div>

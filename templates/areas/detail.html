@@ -25,7 +25,7 @@
       <li><span>{% trans "Open" %}</span><strong>{% trans "7 days a week" %}</strong></li>
     </ul>
     {% if clinic.address %}<p class="faint" style="margin-top:.8rem">{{ clinic.address }}</p>{% endif %}
-    {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my personal plan" %}</a>{% endif %}
+    {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my personal plan" %}</a>{% endif %} {% include "components/email_cta.html" %}
     {% include "components/wa_call.html" with style="width:100%;margin-top:.6rem" %}</div>
   </aside>
 </div></section>

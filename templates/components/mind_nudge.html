@@ -8,7 +8,7 @@
     <strong>{{ m.title }}</strong>
     <p>{{ m.text }}</p>
     <div class="mind-btns">
-      {% if wa_url %}<a href="{{ wa_url }}" class="btn btn-wa btn-sm" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=14 %} {{ m.button }}</a>{% endif %}
+      {% if wa_url %}<a href="{{ wa_url }}" class="btn btn-wa btn-sm" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=14 %} {{ m.button }}</a>{% endif %} {% include "components/email_cta.html" %}
       {% if m.reviews and clinic %}<a href="{{ clinic.get_absolute_url }}#reviews" class="btn btn-outline btn-sm">⭐ {% blocktrans count n=clinic.google_review_count|default:0 %}{{ n }} Google review{% plural %}{{ n }} Google reviews{% endblocktrans %}</a>{% endif %}
     </div>
   </div>

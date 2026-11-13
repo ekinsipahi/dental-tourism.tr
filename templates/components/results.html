@@ -27,6 +27,6 @@
       </figure>
       {% endfor %}
     </div>
-    {% if wa_url %}<p class="results-cta"><a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=16 %} {% trans "Ask a question" %}</a></p>{% endif %}
+    {% if wa_url %}<p class="results-cta"><a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=16 %} {% trans "Ask a question" %}</a> {% include "components/email_cta.html" %}</p>{% endif %}
   </div>
 </section>

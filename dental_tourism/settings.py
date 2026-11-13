@@ -258,7 +258,8 @@ EMAIL_PORT = config("EMAIL_PORT", default=587, cast=int)
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = config("EMAIL_HOST_USER", default="")
 EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", default="")
-DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL", default="info@dentaltourism.tr")
+PATIENT_CONTACT_EMAIL = "ekinsipahi8@gmail.com"
+DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL", default="ekinsipahi8@gmail.com")
 SERVER_EMAIL = EMAIL_HOST_USER or DEFAULT_FROM_EMAIL
 LEAD_NOTIFY_EMAIL = config("LEAD_NOTIFY_EMAIL", default="")
 

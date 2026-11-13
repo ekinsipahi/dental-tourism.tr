@@ -134,7 +134,7 @@ class Command(BaseCommand):
             "latitude": Decimal("41.066152"), "longitude": Decimal("28.982098"),
             "maps_url": "https://maps.app.goo.gl/devrimklinik",
             "maps_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.129955534435!2d28.982098085114472!3d41.06615189745108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab763e965bb4b%3A0x13b23dc999f216f8!2sDi%C5%9F%20hekimi%20Devrim%20Biriken%20Sipahi!5e0!3m2!1sen!2us!4v1749301527909!5m2!1sen!2us",
-            "phone": "+90 505 577 18 83", "whatsapp": "905055771883", "email": "info@dentaltourism.tr",
+            "phone": "+90 505 577 18 83", "whatsapp": "905055771883", "email": "ekinsipahi8@gmail.com",
             "website": "https://drdevrim.com", "instagram": "drdevrimbirikensipahi",
             "youtube_url": "https://www.youtube.com/@devrimbirikensipahi",
             "founded_year": 2020, "years_experience": 35, "patients_treated": 10000,

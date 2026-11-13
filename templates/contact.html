@@ -10,6 +10,7 @@
 <section class="section"><div class="wrap layout-side">
   <div class="card" style="padding:clamp(1.4rem,3vw,2.2rem)">{% include "components/contact_form.html" %}</div>
   <aside class="sticky-side">
+    <div class="side-cta"><h2>✉ {% trans "Email" %}</h2>{% include "components/email_cta.html" %}</div>
     {% if wa_url %}<div class="side-cta"><h2>💬 WhatsApp</h2><p class="muted">{% trans "Fastest reply — usually within 30 minutes during clinic hours." %}</p><a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Chat on WhatsApp" %}</a></div>{% endif %}
     {% if clinic %}<div class="side-cta"><h2>📍 {% trans "Clinic" %}</h2>
       <address style="font-style:normal" class="muted">{{ clinic.name }}<br>{{ clinic.address }}<br><a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone">{{ clinic.phone }}</a><br>{% include "components/wa_call.html" with cls="wa-call-link" note=1 %}{% if clinic.email %}<br><a href="mailto:{{ clinic.email }}" data-track="email">{{ clinic.email }}</a>{% endif %}</address>

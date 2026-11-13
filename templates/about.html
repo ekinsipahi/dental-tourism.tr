@@ -9,7 +9,7 @@
     <p class="lead">{% trans "We believe the most important skill in dentistry is knowing when not to treat. Every plan starts with saving your natural teeth, a transparent diagnosis and a fixed written price." %}</p>
     {% if clinic.google_rating %}<a class="about-rating" href="{{ clinic.google_business_url|default:'#reviews' }}" target="_blank" rel="noopener"><span class="rv-stars">★★★★★</span> <strong>{{ clinic.google_rating }}</strong> · {% blocktrans count n=clinic.google_review_count|default:0 %}{{ n }} Google review{% plural %}{{ n }} Google reviews{% endblocktrans %} ↗</a>{% endif %}
     <div class="btn-row" style="margin-top:1.4rem">
-      {% if wa_url %}<a class="btn btn-wa" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} {% trans "Send a photo — free assessment" %}</a>{% endif %}
+      {% if wa_url %}<a class="btn btn-wa" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} {% trans "Send a photo — free assessment" %}</a>{% endif %} {% include "components/email_cta.html" %}
       {% if clinic.phone %}<a class="btn btn-outline" href="{{ tel_url }}" data-track="phone">📞 {% trans "Call us" %}</a>{% endif %}
       {% include "components/wa_call.html" with note=1 %}
     </div>

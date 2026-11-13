@@ -11,7 +11,7 @@
     {% if offers %}<span>🏥 {% blocktrans count n=offers|length %}{{ n }} clinic{% plural %}{{ n }} clinics{% endblocktrans %}</span>{% endif %}
   </div>
   <div class="btn-row" style="margin-top:1.5rem">
-    {% if wa_url %}<a class="btn btn-wa" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} {% trans "Free assessment on WhatsApp" %}</a>{% endif %}
+    {% if wa_url %}<a class="btn btn-wa" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} {% trans "Free assessment on WhatsApp" %}</a>{% endif %} {% include "components/email_cta.html" %}
     <a class="btn btn-outline" href="{{ package_url }}">{% blocktrans with name=t.name %}{{ name }} package{% endblocktrans %} →</a>
   </div>
 </div></header>

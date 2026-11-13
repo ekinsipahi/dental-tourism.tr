@@ -7,7 +7,7 @@
         <p class="muted">{% trans "Send a photo — free assessment" %} · {% trans "No obligation · reply from the dentist, not a call centre · open 7 days a week" %}</p>
       </div>
       <div class="btn-row">
-        {% if wa_url %}<a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} WhatsApp</a>{% endif %}
+        {% if wa_url %}<a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} WhatsApp</a>{% endif %} {% include "components/email_cta.html" %}
         {% if clinic.phone %}<a href="tel:{{ clinic.phone|cut:' ' }}" class="btn btn-outline" data-track="phone">📞 {{ clinic.phone }}</a>{% endif %}
         {% include "components/wa_call.html" with note=1 %}
       </div>

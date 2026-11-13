@@ -12,7 +12,7 @@
           <li>{% trans "No obligation whatsoever" %}</li>
           <li>{% trans "Fixed price — no hidden fees" %}</li>
         </ul>
-        {% if wa_url %}<p class="muted">{% trans "For a faster reply, message the dentist directly:" %}</p><a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="btn btn-wa">{% include "components/wa-icon.html" with size=17 %} WhatsApp</a>{% endif %}
+        {% if wa_url %}<p class="muted">{% trans "For a faster reply, message the dentist directly:" %}</p><a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="btn btn-wa">{% include "components/wa-icon.html" with size=17 %} WhatsApp</a>{% endif %} {% include "components/email_cta.html" %}
       </div>
       <div class="card" style="padding:clamp(1.4rem,3vw,2.2rem)">{% include "components/contact_form.html" %}</div>
     </div>

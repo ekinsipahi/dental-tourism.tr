@@ -6,7 +6,7 @@
   <h1>{% trans "Thank you — your request has been received" %}</h1>
   <p class="lead">{% trans "The dentist will contact you within 24 hours. For a faster answer, you can also send us a message on WhatsApp now." %}</p>
   <div class="btn-row" style="justify-content:center;margin-top:1.5rem">
-    {% if wa_url %}<a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">WhatsApp</a>{% endif %}
+    {% if wa_url %}<a href="{{ wa_url }}" class="btn btn-wa" data-track="whatsapp" target="_blank" rel="noopener">WhatsApp</a>{% endif %} {% include "components/email_cta.html" %}
     <a href="{% url 'blog:post_list' %}" class="btn btn-outline">{% trans "Read our patient guides" %}</a>
   </div>
 </div></section>

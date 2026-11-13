@@ -302,3 +302,11 @@ a.card:hover, .card.value:hover, .team-card:hover { transform: translateY(-4px);
 .h-btn-phone.h-btn-wacall:hover { color: #15803d; }
 .wa-call-link { color: #25d366; font-weight: 600; text-decoration: none; }
 .wa-call-link:hover { text-decoration: underline; }
+
+/* Direct email contact alongside WhatsApp, including multilingual landing pages. */
+.email-cta { display: inline-flex; gap: .5rem; align-items: center; justify-content: center; max-width: 100%; white-space: normal; background: #fff; color: #065f46; border: 1px solid #b7d5c5; font-size: .9rem; text-decoration: none; }
+.email-cta bdi { min-width: 0; overflow-wrap: anywhere; }
+.email-cta:hover { background: #ecfdf5; color: #064e3b; border-color: #065f46; }
+.email-cta:focus-visible { outline: 3px solid #065f46; outline-offset: 3px; }
+.side-cta .email-cta { width: 100%; margin-top: .6rem; }
+.results-cta .email-cta { margin-inline-start: .5rem; }

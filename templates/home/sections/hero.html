@@ -11,7 +11,7 @@
       <p class="h-lead au3">{% cblock "home-hero-price" "body" _("Saving a tooth usually costs far less than replacing it. CE-certified materials, a fixed written quote and no hidden costs — the price we quote is the price you pay.") %}</p>
       <ul class="h-pills au3" style="list-style:none;padding:0"><li class="h-pill">✓ {% trans "Personal treatment plan" %}</li><li class="h-pill">✓ {% trans "Fixed written quote" %}</li><li class="h-pill">✓ {% trans "Free assessment — WhatsApp" %}</li></ul>
       <div class="h-cta-row au4">
-        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-price" "button_text" _("Get a free price quote") %}</a>
+        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-price" "button_text" _("Get a free price quote") %}</a> {% include "components/email_cta.html" %}
         {% if clinic %}<a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone" class="h-btn-phone">{{ clinic.phone }}</a>{% endif %}
         {% include "components/wa_call.html" with cls="h-btn-phone h-btn-wacall" note=1 %}
       </div>
@@ -34,7 +34,7 @@
         <div class="h-trust-card"><span class="h-trust-icon">👩‍⚕️</span><div><div class="h-trust-title">{% trans "One dentist, full responsibility" %}</div><div class="h-trust-sub">{% trans "The same dentist from consultation to aftercare" %}</div></div></div>
       </div>
       <div class="h-cta-row au4">
-        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-fear" "button_text" _("Ask your question") %}</a>
+        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-fear" "button_text" _("Ask your question") %}</a> {% include "components/email_cta.html" %}
         {% if clinic %}<a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone" class="h-btn-phone">{{ clinic.phone }}</a>{% endif %}
         {% include "components/wa_call.html" with cls="h-btn-phone h-btn-wacall" note=1 %}
       </div>
@@ -52,7 +52,7 @@
       <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-shame" "title" _("Smile design in Istanbul —") %} <em>{% cblock "home-hero-shame" "subtitle" _("smile like yourself again.") %}</em></h1>
       <p class="h-lead au3">{% cblock "home-hero-shame" "body" _("A natural smile that is truly yours, with as little tooth preparation as possible. Our goal is not only a beautiful result, but a healthy and lasting one.") %}</p>
       <div class="h-cta-row au4">
-        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-shame" "button_text" _("Ask about smile design") %}</a>
+        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-shame" "button_text" _("Ask about smile design") %}</a> {% include "components/email_cta.html" %}
         <a href="#before-after" class="h-btn-outline">{% trans "Before / after" %} ↓</a>
       </div>
     </div>
@@ -85,7 +85,7 @@
       <div class="h-tstep h-tstep-done" role="listitem"><div class="h-tstep-day">{% trans "Fri" %}</div><div class="h-tstep-desc">{% trans "Final fitting — fly home" %}</div></div>
     </div>
     <div class="h-cta-row h-cta-center au4">
-      <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-urgency" "button_text" _("Check this week's availability") %}</a>
+      <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-urgency" "button_text" _("Check this week's availability") %}</a> {% include "components/email_cta.html" %}
     </div>
   </div>
 </section>
@@ -100,7 +100,7 @@
       <p class="h-lead au3">{% cblock "home-hero-trust" "body" _("Don't trust us blindly — watch our patients' real stories first. Ask anything. No pressure, no rush.") %}</p>
       <div class="h-cta-row au4">
         <a href="#reviews" class="h-btn-outline">{% trans "See patient reviews" %}</a>
-        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa">{% include "components/wa-icon.html" with size=17 color="#fff" %} {% cblock "home-hero-trust" "button_text" _("Ask a question") %}</a>
+        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa">{% include "components/wa-icon.html" with size=17 color="#fff" %} {% cblock "home-hero-trust" "button_text" _("Ask a question") %}</a> {% include "components/email_cta.html" %}
       </div>
       <p class="h-micro au5">{% trans "No commitment. Just answers." %}</p>
     </div>
@@ -122,7 +122,7 @@
     <div class="h-premium-rule au1"><div class="h-premium-line"></div><span class="h-premium-label">{% trans "Private clinic" %}{% if clinic %} — {{ clinic.district }}, {{ clinic.city.localized.name }}{% endif %}</span><div class="h-premium-line"></div></div>
     <h1 id="hero-h1" class="h-h1 h-h1-center au2">{% cblock "home-hero-premium" "title" _("Premium dental clinic in Istanbul —") %} <em class="gold">{% cblock "home-hero-premium" "subtitle" _("dentistry as an art.") %}</em></h1>
     <p class="h-lead h-lead-center au3" style="margin-bottom:0">{% cblock "home-hero-premium" "body" _("Decades of experience and aesthetic precision. Only what you need — nothing more, nothing less.") %}</p>
-    <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-gold au4">{% cblock "home-hero-premium" "button_text" _("Request a private appointment") %}</a>
+    <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-gold au4">{% cblock "home-hero-premium" "button_text" _("Request a private appointment") %}</a> {% include "components/email_cta.html" %}
     {% include "home/_stats.html" %}
   </div>
 </section>
@@ -137,7 +137,7 @@
       <p class="h-lead au3">{% cblock "home-hero-quality" "body" _("Every plan starts with a careful examination and a digital smile design. We save healthy teeth first, use premium materials, and one experienced dentist carries out every step.") %}</p>
       <ul class="h-pills au3" style="list-style:none;padding:0"><li class="h-pill">✓ {% trans "Digital smile design" %}</li><li class="h-pill">✓ {% trans "Minimal preparation" %}</li><li class="h-pill">✓ {% trans "One dentist, start to finish" %}</li></ul>
       <div class="h-cta-row au4">
-        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-quality" "button_text" _("Get my personal treatment plan") %}</a>
+        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-quality" "button_text" _("Get my personal treatment plan") %}</a> {% include "components/email_cta.html" %}
         <a href="{% url 'core:about' %}" class="h-btn-outline">{% trans "Meet your dentist" %}</a>
       </div>
     </div>
@@ -156,7 +156,7 @@
         <h1 id="hero-h1" class="h-h1 au2">{% cblock "home-hero-ready" "title" _("Book your dental treatment in Istanbul —") %} <em>{% cblock "home-hero-ready" "subtitle" _("are you ready?") %}</em></h1>
         <p class="h-lead au3">{% cblock "home-hero-ready" "body" _("Free evaluation, personal treatment plan, fixed price. Reply within 24 hours.") %}</p>
         <div class="h-cta-row au4">
-          <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} WhatsApp</a>
+          <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} WhatsApp</a> {% include "components/email_cta.html" %}
           <a href="#contact" data-track="cta" class="h-btn-primary">{% trans "Book an appointment" %}</a>
         </div>
       </div>
@@ -176,7 +176,7 @@
       <div class="h-faq au3" data-track-section="faq">
         {% for item in faq|slice:":3" %}<details class="h-faq-item" data-track="faq"><summary class="h-faq-summary">{{ item.question }} <span class="h-faq-icon">+</span></summary><div class="h-faq-body">{{ item.answer }}</div></details>{% endfor %}
       </div>
-      <div class="h-cta-row au4"><a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa">{% include "components/wa-icon.html" with size=17 color="#fff" %} {% cblock "home-hero-skeptic" "button_text" _("Ask any question — free") %}</a></div>
+      <div class="h-cta-row au4"><a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa">{% include "components/wa-icon.html" with size=17 color="#fff" %} {% cblock "home-hero-skeptic" "button_text" _("Ask any question — free") %}</a> {% include "components/email_cta.html" %}</div>
     </div>
   </div>
   <div class="h-rev-panel" aria-label="{% trans 'Patient reviews' %}" data-track-section="reviews">
@@ -202,7 +202,7 @@
       </ul>
       {% include "home/_stats.html" %}
       <div class="h-cta-row au5">
-        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-default" "button_text" _("Free assessment — WhatsApp") %}</a>
+        <a href="{{ wa_url }}" target="_blank" rel="noopener" data-track="whatsapp" class="h-btn-wa h-btn-wa-lg">{% include "components/wa-icon.html" with size=18 color="#fff" %} {% cblock "home-hero-default" "button_text" _("Free assessment — WhatsApp") %}</a> {% include "components/email_cta.html" %}
         {% if clinic %}<a href="tel:{{ clinic.phone|cut:' ' }}" data-track="phone" class="h-btn-phone">{{ clinic.phone }}</a>{% endif %}
         {% include "components/wa_call.html" with cls="h-btn-phone h-btn-wacall" note=1 %}
       </div>

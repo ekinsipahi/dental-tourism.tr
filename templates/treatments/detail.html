@@ -12,7 +12,7 @@
   </div>
   {% if t.is_fallback %}<p class="fallback-note">{% trans "This page is not yet available in your language — showing the original version." %}</p>{% endif %}
   <div class="btn-row" style="margin-top:1.5rem">
-    {% if wa_url %}<a class="btn btn-wa" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} {% trans "Free assessment on WhatsApp" %}</a>{% endif %}
+    {% if wa_url %}<a class="btn btn-wa" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=17 %} {% trans "Free assessment on WhatsApp" %}</a>{% endif %} {% include "components/email_cta.html" %}
     <a class="btn btn-outline" href="{{ package_url }}">{% blocktrans with name=t.name %}{{ name }} package{% endblocktrans %} →</a>
   </div>
 </div></header>
@@ -44,7 +44,7 @@
         {% if t.visits %}<li><span>{% trans "Visits" %}</span><strong>{{ t.visits }}</strong></li>{% endif %}
         {% if t.anesthesia == "Local" %}<li><span>{% trans "Anaesthesia" %}</span><strong>{% trans "Local" %}</strong></li>{% endif %}
       </ul>
-      {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my personal plan" %}</a>{% endif %}
+      {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my personal plan" %}</a>{% endif %} {% include "components/email_cta.html" %}
     </div>
     {% if offers %}
     <div class="side-cta"><h2>{% trans "Clinics offering this treatment" %}</h2>

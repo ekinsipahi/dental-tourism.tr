@@ -26,7 +26,7 @@
       <li><span>{% trans "Clinic" %}</span><strong>Şişli, {{ lang_meta.istanbul }}</strong></li>
       <li><span>{% trans "Open" %}</span><strong>{% trans "7 days a week" %}</strong></li>
     </ul>
-    {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my personal plan" %}</a>{% endif %}</div>
+    {% if wa_url %}<a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask for my personal plan" %}</a>{% endif %} {% include "components/email_cta.html" %}</div>
   </aside>
 </div></section>
 

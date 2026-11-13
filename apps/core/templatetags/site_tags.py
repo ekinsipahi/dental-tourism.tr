@@ -317,6 +317,7 @@ def results_block(context, limit=None):
     if not cases:
         return ""
     return render_to_string("components/results.html", {"cases": cases, "wa_url": context.get("wa_url"),
+                                                        "contact_email": context.get("contact_email"),
                                                         "clinic": clinic})  # request yok: bkz. faq_block
 
 

@@ -21,7 +21,7 @@
       {% if d.instagram %}<li><span>Instagram</span><strong><a href="https://www.instagram.com/{{ d.instagram }}/" target="_blank" rel="noopener" data-track="instagram">@{{ d.instagram }}</a></strong></li>{% endif %}
     </ul>
     {% if d.memberships %}<div class="chips" style="margin-top:1rem">{% for m in d.memberships %}<span class="badge badge-gold">{{ m }}</span>{% endfor %}</div>{% endif %}
-    <a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ clinic.whatsapp_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask the dentist" %}</a>
+    <a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ clinic.whatsapp_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask the dentist" %}</a> {% include "components/email_cta.html" %}
   </div></aside>
 </div></section>
 {% if reviews %}<section class="section section-alt"><div class="wrap"><h2>{% trans "Patient reviews" %}</h2>{% include "components/reviews.html" %}</div></section>{% endif %}

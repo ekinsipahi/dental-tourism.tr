@@ -126,6 +126,7 @@ def site_context(request):
         "lang_dir": meta["dir"],
         "clinic": clinic,
         "wa_url": wa_url,
+        "contact_email": settings.PATIENT_CONTACT_EMAIL,
         "wa_call_url": wa_call_url,
         "nav_treatments": nav_treatments,
         "nav": nav,
