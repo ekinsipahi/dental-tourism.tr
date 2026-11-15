@@ -42,6 +42,7 @@ urlpatterns = [
     path("sitemap-<section>.xml", sitemap, {"sitemaps": SITEMAPS}, name="sitemap-section"),
     path("api/persona/", include("apps.persona.api_urls")),
     path("api/tracking/", include("apps.tracking.urls")),
+    path("api/t/", include("apps.tracking.external_urls")),  # kardeş sitelerin çerezsiz beacon'ları (dt-track.js)
     path("api/dashboard/", include("apps.persona.dashboard_urls")),
 ]
 

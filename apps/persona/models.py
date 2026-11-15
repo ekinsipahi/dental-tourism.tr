@@ -44,7 +44,8 @@ PERSONA_THEME[PERSONA_UNKNOWN] = "theme-default"
 
 
 class VisitorSession(models.Model):
-    session_key = models.CharField(max_length=40, unique=True, db_index=True)
+    session_key = models.CharField(max_length=64, unique=True, db_index=True)
+    site = models.CharField(max_length=12, default="dt", db_index=True)  # dt / drd / dbs — site bazlı ayrı öğrenme için
     visitor_id = models.CharField(max_length=40, blank=True, db_index=True,
                                   help_text="Kalıcı ziyaretçi kimliği (dt_vid çerezi + localStorage) — oturum değişse de aynı kişi")
     created_at = models.DateTimeField(auto_now_add=True)

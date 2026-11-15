@@ -187,7 +187,19 @@ REST_FRAMEWORK = {
 
 # ── Lead ucu için ek izinli kökenler (apps/tracking/views.py → _same_origin) ───────────────────
 # Kendi alan adlarımız (ALLOWED_HOSTS) her zaman izinli; dış siteler (ör. https://drdevrim.com) buraya eklenir.
-TRACKING_ALLOWED_ORIGINS = config("TRACKING_ALLOWED_ORIGINS", default="", cast=Csv())
+# Çok siteli takip ("merkezi sinir sistemi"): kardeş siteler dt-track.js ile buraya çerezsiz beacon gönderir.
+# Anahtar = kısa site kodu (session_key önekinde kullanılır); origins = CORS / köken allowlist'i.
+TRACKING_SITES = {
+    "dt": {"name": "dentaltourism.tr", "domain": "dentaltourism.tr", "origins": []},  # bu site: çerezli iç API
+    "drd": {"name": "drdevrim.com", "domain": "drdevrim.com",
+            "origins": ["https://drdevrim.com", "https://www.drdevrim.com"]},
+    "dbs": {"name": "devrimbirikensipahi.com.tr", "domain": "devrimbirikensipahi.com.tr",
+            "origins": ["https://devrimbirikensipahi.com.tr", "https://www.devrimbirikensipahi.com.tr"]},
+}
+# Geliştirme / test kökenleri (ör. http://localhost:3000) — virgülle; üretimde boş
+TRACKING_DEV_ORIGINS = config("TRACKING_DEV_ORIGINS", default="", cast=Csv())
+TRACKING_ALLOWED_ORIGINS = sorted({*config("TRACKING_ALLOWED_ORIGINS", default="", cast=Csv()),
+                                   *[o for s in TRACKING_SITES.values() for o in s["origins"]], *TRACKING_DEV_ORIGINS})
 
 # Testler .env'deki DEBUG'dan bağımsız: manifest'siz statik, HTTPS yönlendirmesi yok
 TESTING = len(sys.argv) > 1 and sys.argv[1] == "test"

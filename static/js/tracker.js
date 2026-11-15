@@ -20,10 +20,13 @@
   var VID_RE = /^[a-f0-9]{32}$/;
   function getCookie(n) { var m = document.cookie.match("(?:^|; )" + n + "=([^;]*)"); return m ? decodeURIComponent(m[1]) : ""; }
   function setCookie(n, v) { document.cookie = n + "=" + v + "; max-age=" + (400 * 86400) + "; path=/; SameSite=Lax" + (location.protocol === "https:" ? "; Secure" : ""); }
-  var VID = "";
+  var VID = "", PREV_VID = "";
   try {
     var c = getCookie("dt_vid"), l = localStorage.getItem("dt_vid");
     VID = VID_RE.test(c) ? c : (VID_RE.test(l || "") ? l : "");
+    // Kardeş siteden (drdevrim.com / devrimbirikensipahi.com.tr) ?dtv= ile gelen ziyaretçi: aynı kişi, kimliği benimse
+    var handoff = new URLSearchParams(location.search).get("dtv") || "";
+    if (VID_RE.test(handoff) && handoff !== VID) { PREV_VID = VID; VID = handoff; }
     if (VID) { if (l !== VID) localStorage.setItem("dt_vid", VID); if (c !== VID) setCookie("dt_vid", VID); }
   } catch (e) {}
 
@@ -154,7 +157,13 @@
   var TZ = "";
   try { TZ = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
   post(PAGEVIEW_API, { url: location.href, title: document.title, referrer: document.referrer, vid: VID, attr: ATTR,
-                       tz: TZ, sw: screen.width, sh: screen.height });
+                       tz: TZ, sw: screen.width, sh: screen.height, page_type: PAGE_TYPE, prev_vid: PREV_VID });
+  // Kardeş sitelere giden linklere kimliği ekle → üç sitede tek yolculuk
+  var SISTERS = /(^|\.)(drdevrim\.com|devrimbirikensipahi\.com\.tr)$/i;
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a[href^='http']"); if (!a || !VID) return;
+    try { var u = new URL(a.href); if (SISTERS.test(u.hostname) && !u.searchParams.get("dtv")) { u.searchParams.set("dtv", VID); a.href = u.toString(); } } catch (err) {}
+  }, true);
 
   // Scroll derinliği
   var fired = {};

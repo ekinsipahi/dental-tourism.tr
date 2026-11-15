@@ -1,0 +1,25 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<div id="content-main" style="max-width:1100px">
+  <p><a href="{% url 'admin:tracking_visitorsession_changelist' %}">← Oturumlar</a></p>
+  {% if not timeline %}<p>Bu ziyaretçi kimliği için oturum yok.</p>{% else %}
+  <p class="help">Kimlik <code>{{ vid }}</code> · {{ timeline|length }} oturum · siteler: {{ sites|join:", " }}. Kardeş siteler arası geçişlerde kimlik <code>?dtv=</code> ile taşınır; bağımsız açılan sekmeler eşleştirilemez.</p>
+  {% for t in timeline %}
+  <div class="module" style="margin-bottom:18px">
+    <table style="width:100%">
+      <caption>{{ t.site }} · {{ t.session.created_at|date:"d.m.Y H:i" }} · {{ t.session.traffic_source }} · {{ t.session.device_type }} · {{ t.session.ip_country }}
+        {% if t.session.landing_page %} · giriş: <code>{{ t.session.landing_page }}</code>{% endif %}</caption>
+      <tr><th style="width:90px">Saat</th><th style="width:150px">Olay</th><th>Sayfa / etiket</th><th style="width:90px">Süre / konum</th></tr>
+      {% for r in t.rows %}
+      <tr>
+        <td>{{ r.t|date:"H:i:s" }}</td>
+        <td>{% if r.kind == "page" %}📄 {{ r.label }}{% elif r.kind == "whatsapp_click" %}💬 WhatsApp{% elif r.kind == "phone_click" %}☎️ Telefon{% elif r.kind == "maps_click" %}📍 Harita{% elif r.kind == "form_submit" %}📝 Form{% elif r.kind == "form_start" %}✏️ Form başladı{% elif r.kind == "contact_return" %}↩️ Dönüş{% elif r.kind == "faq_read" %}❓ SSS okudu{% else %}{{ r.kind }}{% endif %}</td>
+        <td>{% if r.kind == "page" %}<a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.url|truncatechars:90 }}</a>{% else %}{{ r.label|truncatechars:90 }}{% endif %}</td>
+        <td>{% if r.secs %}{{ r.secs }} sn{% elif r.position %}{{ r.position }}{% endif %}</td>
+      </tr>
+      {% empty %}<tr><td colspan="4">Olay yok.</td></tr>{% endfor %}
+    </table>
+  </div>
+  {% endfor %}{% endif %}
+</div>
+{% endblock %}

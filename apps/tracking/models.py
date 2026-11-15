@@ -56,6 +56,8 @@ class VisitorSession(models.Model):
     id             = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     session_key    = models.CharField(max_length=64, unique=True, db_index=True)
     visitor_id     = models.CharField(max_length=40, blank=True, db_index=True)  # dt_vid — kalıcı ziyaretçi
+    site           = models.CharField(max_length=12, default="dt", db_index=True,
+                                      help_text="Hangi site: dt = dentaltourism.tr, drd = drdevrim.com, dbs = devrimbirikensipahi.com.tr")
     created_at     = models.DateTimeField(auto_now_add=True)
     last_seen      = models.DateTimeField(auto_now=True)
 
@@ -219,6 +221,8 @@ class PageView(models.Model):
     url        = models.CharField(max_length=500)
     title      = models.CharField(max_length=300, blank=True)
     referrer   = models.CharField(max_length=500, blank=True)
+    page_type  = models.CharField(max_length=40, blank=True, db_index=True,
+                                  help_text="Üç sitede ortak anlam: home, pseo-area, treatment, price, package, guide, doctor, clinic, contact, qa, blog, redirect …")
     timestamp  = models.DateTimeField(auto_now_add=True)
     time_on_page_sec = models.PositiveIntegerField(default=0)
     scroll_depth     = models.FloatField(default=0.0)

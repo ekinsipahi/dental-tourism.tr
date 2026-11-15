@@ -257,6 +257,7 @@ def get_or_create_persona(request, create=True):
         ctx = intent_scores(request)
         session = VisitorSession(
             session_key=key,
+            site=getattr(request, "site", "dt"),
             language_code=getattr(request, "LANGUAGE_CODE", "") or "",
             device_type=_detect_device(request),
             referral_source=(getattr(tracking, "traffic_source", "") or getattr(request, "tracking_source", "")

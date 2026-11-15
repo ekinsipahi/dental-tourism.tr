@@ -212,11 +212,21 @@ def collect_pageview(request):
             except Exception as e:  # noqa: BLE001
                 logger.error(f"persona create: {e}")
             from .models import PageView
+            from urllib.parse import urlparse as _up
+
+            from .pagetypes import page_type_for
+
+            prev = str(body.get("prev_vid", ""))
+            if prev and vid and prev != vid and len(prev) == 32:
+                from .service import merge_visitor
+
+                merge_visitor(prev, vid)  # kardeş siteden ?dtv= ile gelen kimlik: eski oturumlar yeni kimliğe bağlanır
             PageView.objects.create(
                 session  = session,
                 url      = body.get("url", "")[:500],
                 title    = body.get("title", "")[:300],
                 referrer = body.get("referrer", "")[:500],
+                page_type = page_type_for("dt", _up(str(body.get("url", ""))).path, str(body.get("page_type", ""))[:40]),
             )
             session.page_views += 1
             try:  # sayfanın persona sinyali (GET'te değil burada: sayfa isteği DB'ye gitmesin)

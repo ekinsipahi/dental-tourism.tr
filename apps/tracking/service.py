@@ -9,7 +9,7 @@ import hashlib
 import logging
 from datetime import timedelta
 from django.utils import timezone
-from django.core.cache import cache
+from django.core.cache import cache, caches
 
 from typing import TYPE_CHECKING
 
@@ -217,6 +217,57 @@ class PageRequest:
         return getattr(self._request, name)
 
 
+class _ExternalSession:
+    """Dış site beacon'ı için Django oturumu yerine geçen nesne: anahtar istemciden (site:sid) gelir."""
+
+    def __init__(self, key):
+        self.session_key = key
+
+    def save(self):
+        return None
+
+
+class ExternalPageRequest(PageRequest):
+    """Kardeş siteden (drdevrim.com, devrimbirikensipahi.com.tr) gelen çerezsiz beacon: kimlik ve oturum gövdeden."""
+
+    def __init__(self, request, site, sid, vid, url, referrer=""):
+        super().__init__(request, url, referrer)
+        self.site = site
+        self.session = _ExternalSession(f"{site}:{sid}")
+        self.COOKIES = {}
+        self._dt_vid = vid or ""
+        self.is_bot = False
+        self.tracking_source = ""
+
+
+def get_or_create_external_session(preq):
+    """Dış site oturumu: session_key = '<site>:<sid>'. Varsa döner, yoksa sayfa bağlamıyla oluşturur."""
+    from .models import VisitorSession
+
+    key = preq.session.session_key
+    session = VisitorSession.objects.filter(session_key=key).first()
+    if session is None:
+        session = _create_session(preq, key, site=preq.site)
+    else:
+        _maybe_increment_session(preq, session)
+    caches["local"].set(f"tracking_active:{key}", {"traffic_source": session.traffic_source}, ACTIVE_TTL)
+    preq.tracking_session = session
+    return session
+
+
+def merge_visitor(old_vid, new_vid):
+    """Siteler arası geçişte kimlik birleşmesi: eski kimlikle açılmış oturumlar yeni kimliğe bağlanır (geçmiş korunur)."""
+    from apps.persona.models import VisitorSession as PersonaSession
+
+    from .models import VisitorSession
+
+    if not old_vid or not new_vid or old_vid == new_vid:
+        return 0
+    n = VisitorSession.objects.filter(visitor_id=old_vid).update(visitor_id=new_vid)
+    n += PersonaSession.objects.filter(visitor_id=old_vid).update(visitor_id=new_vid)
+    return n
+
+
 def real_session(request):
     """request.tracking_session'ın gerçek nesnesi (tembel vekilse yükler)."""
     from django.utils.functional import LazyObject, empty
@@ -297,7 +348,7 @@ def _maybe_increment_session(request, session):
                                      "gclid", "fbclid", "utm_source", "utm_campaign"])
 
 
-def _create_session(request, session_key: str) -> "VisitorSession":
+def _create_session(request, session_key: str, site: str = "dt") -> "VisitorSession":
     """Yeni session oluştur — tüm bilgileri doldur."""
     from .models import VisitorSession
 
@@ -320,6 +371,7 @@ def _create_session(request, session_key: str) -> "VisitorSession":
     # Alanlar tek sözlükte birleştirilir: kaynak tespiti de referrer_url döndürebilir (çift anahtar hatası olmasın)
     fields = {
         "session_key": session_key,
+        "site": site,
         "visitor_id": vid,
         "session_count": (prev.session_count + 1) if prev else 1,
         "landing_page": request.path[:500],

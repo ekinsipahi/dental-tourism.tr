@@ -66,12 +66,12 @@ class HumanFilter(admin.SimpleListFilter):
 
 @admin.register(VisitorSession)
 class VisitorSessionAdmin(admin.ModelAdmin):
-    list_display = [
+    list_display = ["site_badge", "journey_link", 
         "session_short", "traffic_source_badge", "country_flag",
         "device_icon", "intent_score_bar", "conversion_flags",
         "page_views", "total_time_display", "last_seen",
     ]
-    list_filter  = [HumanFilter,
+    list_filter  = [HumanFilter, "site",
         "traffic_source", "device_type", "ip_country",
         "is_lead", "is_converted", "is_qualified",
         "whatsapp_matched",
@@ -197,6 +197,45 @@ class VisitorSessionAdmin(admin.ModelAdmin):
             return f"{t}s"
         return f"{t//60}m {t%60}s"
     total_time_display.short_description = "Time"
+
+    @admin.display(description="Site", ordering="site")
+    def site_badge(self, obj):
+        names = {"dt": "dentaltourism", "drd": "drdevrim", "dbs": "devrimbs"}
+        return names.get(obj.site, obj.site)
+
+    @admin.display(description="Yolculuk")
+    def journey_link(self, obj):
+        if not obj.visitor_id:
+            return "—"
+        return format_html('<a href="{}?vid={}">🧭 {} oturum</a>', reverse("admin:tracking_journey"), obj.visitor_id,
+                           VisitorSession.objects.filter(visitor_id=obj.visitor_id).count())
+
+    def get_urls(self):
+        from django.urls import path
+
+        return [path("journey/", self.admin_site.admin_view(self.journey_view), name="tracking_journey")] + super().get_urls()
+
+    def journey_view(self, request):
+        """Bir ziyaretçinin (dt_vid) üç sitedeki birleşik yolculuğu: oturumlar → sayfalar + iletişim olayları, zaman sırasıyla."""
+        from django.shortcuts import render
+
+        vid = request.GET.get("vid", "")[:40]
+        sessions = list(VisitorSession.objects.filter(visitor_id=vid).order_by("created_at")) if vid else []
+        site_names = {"dt": "dentaltourism.tr", "drd": "drdevrim.com", "dbs": "devrimbirikensipahi.com.tr"}
+        timeline = []
+        for s in sessions:
+            rows = [{"t": pv.timestamp, "kind": "page", "label": pv.page_type or "page", "url": pv.url, "secs": pv.time_on_page_sec}
+                    for pv in s.pageviews.all()]
+            rows += [{"t": ev.timestamp, "kind": ev.event_type, "label": ev.label or ev.event_type, "url": ev.page_url, "position": ev.position}
+                     for ev in s.events.filter(event_type__in=["whatsapp_click", "phone_click", "maps_click", "email_click",
+                                                               "instagram_click", "youtube_click", "form_start", "form_submit",
+                                                               "contact_return", "faq_read", "language_switch"])]
+            rows.sort(key=lambda r: r["t"])
+            timeline.append({"session": s, "site": site_names.get(s.site, s.site), "rows": rows})
+        ctx = {**self.admin_site.each_context(request), "title": f"Ziyaretçi yolculuğu · {vid[:8]}…", "vid": vid,
+               "timeline": timeline, "sites": sorted({t["site"] for t in timeline})}
+        return render(request, "admin/tracking/journey.html", ctx)
+
 
 
 
