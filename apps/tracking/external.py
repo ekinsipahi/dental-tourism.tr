@@ -139,7 +139,7 @@ def ext_pageview(request):
             from apps.persona.engine import get_or_create_persona, observe_page
 
             get_or_create_persona(preq, create=True)
-            observe_page(preq.session.session_key, preq.path)
+            observe_page(preq.session.session_key, preq.path, page_type=str(body.get("page_type", ""))[:40])
         except Exception as e:  # noqa: BLE001
             logger.error(f"ext persona: {e}")
     except Exception as e:  # noqa: BLE001
