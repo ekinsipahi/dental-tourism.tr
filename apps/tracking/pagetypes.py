@@ -52,6 +52,8 @@ def page_type_for(site, path, hint=""):
     """hint: sayfanın kendi bildirdiği tür (dentaltourism şablonları PAGE_TYPE gönderir) — varsa o kazanır."""
     if hint:
         return str(hint)[:40]
+    if site == "drd":   # /lang/en/hizmetler/… → /hizmetler/… (dil öneki tür belirlemez)
+        path = re.sub(r"^/lang/[a-z]{2}(?=/|$)", "", path or "/") or "/"
     for pattern, kind in _COMPILED.get(site, ()):
         if pattern.search(path or "/"):
             return kind

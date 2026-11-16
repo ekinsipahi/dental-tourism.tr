@@ -92,6 +92,32 @@ def _prepare(request):
     return preq, body, None
 
 
+def _decision(preq):
+    """Kardeş siteye dönen kişiselleştirme kararı: persona + aklındaki (mind) + o dildeki nazik mesaj.
+    Zayıf sinyalde mesaj yok (dentaltourism'deki mind_nudge ile aynı mantık; metinler aynı katalogdan)."""
+    from django.utils import translation
+
+    from .service import current_mindset
+
+    try:
+        mind = current_mindset(preq.session.session_key) or {}
+    except Exception:  # noqa: BLE001
+        return {}
+    top, level = mind.get("top", "unknown"), mind.get("level", "weak")
+    out = {"persona": top, "level": level, "confidence": mind.get("confidence", 0.0), "message": None}
+    if top != "unknown" and level != "weak":
+        try:
+            from apps.core.templatetags.site_tags import mind_messages
+
+            with translation.override(preq.LANGUAGE_CODE):
+                for m in mind_messages():
+                    if m["key"] == top:
+                        out["message"] = {"key": top, "title": str(m["title"]), "text": str(m["text"]), "button": str(m["button"])}
+        except Exception:  # noqa: BLE001
+            pass
+    return out
+
+
 def _attribution(session, body):
     attr = body.get("attr") if isinstance(body.get("attr"), dict) else {}
     if session and attr:
@@ -145,7 +171,7 @@ def ext_pageview(request):
     except Exception as e:  # noqa: BLE001
         logger.error(f"ext_pageview: {e}")
         return _cors(JsonResponse({"ok": False}, status=500), preq._origin)
-    return _cors(JsonResponse({"ok": True}), preq._origin)
+    return _cors(JsonResponse({"ok": True, "decision": _decision(preq)}), preq._origin)
 
 
 @csrf_exempt
@@ -194,6 +220,7 @@ def ext_event(request):
             m = current_mindset(skey)
             if m:
                 payload["mind"] = m.get("top", "")
+            payload["decision"] = _decision(preq)
     except Exception as e:  # noqa: BLE001
         logger.error(f"ext_event: {e}")
         return _cors(JsonResponse({"ok": False}, status=500), preq._origin)
@@ -306,3 +333,13 @@ def ext_lead(request):
         logger.error(f"ext_lead: {e}")
         return _cors(JsonResponse({"ok": False, "error": "server error"}, status=500), origin)
     return _cors(JsonResponse({"ok": True, "lead_id": lead.pk}), origin)
+
+
+@csrf_exempt
+@require_http_methods(["POST", "OPTIONS"])
+def ext_persona(request):
+    """SPA route geçişi / yeniden kontrol: {site, vid, sid, url} → mevcut karar (DB'ye yazmaz)."""
+    preq, body, err = _prepare(request)
+    if err is not None:
+        return err
+    return _cors(JsonResponse({"ok": True, "decision": _decision(preq)}), preq._origin)

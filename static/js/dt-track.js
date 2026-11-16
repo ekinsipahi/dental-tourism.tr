@@ -63,6 +63,16 @@
     ATTR_KEYS.forEach(function (k) { var v = (last && last[k]) || (first && first[k]); if (v) ATTR[k] = v; });
   } catch (e) {}
 
+  // ── Kişiselleştirme kararı: merkez {persona, level, message} döner → <html data-dt-persona data-dt-level>, "dt:persona" olayı
+  // Kardeş site isterse bu olaya göre nazik bir mesaj gösterir (dentaltourism'deki mind_nudge gibi). Varsayılan: yalnızca işaret.
+  function applyDecision(d) {
+    if (!d || !d.persona) return;
+    var root = document.documentElement, changed = root.getAttribute("data-dt-persona") !== d.persona || root.getAttribute("data-dt-level") !== (d.level || "weak");
+    root.setAttribute("data-dt-persona", d.persona); root.setAttribute("data-dt-level", d.level || "weak");
+    if (window.dtTrack) window.dtTrack.decision = d;
+    try { document.dispatchEvent(new CustomEvent("dt:persona", { detail: { decision: d, changed: changed } })); } catch (e) {}
+  }
+
   // ── Taşıma: text/plain → CORS ön-uçuşu yok; sendBeacon çıkışta da ulaşır ─────────────────────────────────────
   function post(path, payload, cb) {
     payload.site = SITE; payload.vid = VID; payload.sid = SID; payload.attr = ATTR;
@@ -71,7 +81,7 @@
     if (!cb && navigator.sendBeacon) { try { if (navigator.sendBeacon(url, new Blob([body], { type: "text/plain" }))) return; } catch (e) {} }
     try {
       fetch(url, { method: "POST", mode: "cors", credentials: "omit", keepalive: true, headers: { "Content-Type": "text/plain" }, body: body })
-        .then(function (r) { return cb ? r.json() : null; }).then(function (j) { if (cb && j) cb(j); }).catch(function () {});
+        .then(function (r) { return r.json(); }).then(function (j) { if (j && j.decision) applyDecision(j.decision); if (cb && j) cb(j); }).catch(function () {});
     } catch (e) {}
   }
 
@@ -111,7 +121,8 @@
   function pageview(hint) {
     PAGE_URL = location.pathname; PAGE_TYPE = hint || PAGE_HINT;
     post("/api/t/pageview/", { url: location.href, title: document.title, referrer: document.referrer, tz: TZ,
-                                sw: screen.width, sh: screen.height, page_type: PAGE_TYPE, prev_vid: PREV_VID });
+                                sw: screen.width, sh: screen.height, page_type: PAGE_TYPE, prev_vid: PREV_VID },
+         function () {});  // fetch yolu: karar yanıtta döner (sendBeacon yanıt vermez)
     PREV_VID = "";
     fired = {}; seen = {}; dwell = {}; start = Date.now(); segment = 0; flushed = false;
   }
@@ -251,6 +262,8 @@
   document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") { hiddenAt = Date.now(); flush(); } else resume(); });
 
   // SPA (Nuxt) route geçişi: eski sayfayı kapat, yenisini aç
-  window.dtTrack = { track: track, pageview: function (hint) { flush(); pageview(hint); }, lead: lead, vid: VID, sid: SID };
+  window.dtTrack = { track: track, pageview: function (hint) { flush(); pageview(hint); }, lead: lead, vid: VID, sid: SID,
+                     decision: null,
+                     refresh: function (cb) { post("/api/t/persona/", { url: location.href }, function (j) { if (cb) cb(j && j.decision); }) } };
   pageview(PAGE_HINT);
 })();

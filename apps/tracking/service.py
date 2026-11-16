@@ -210,7 +210,10 @@ class PageRequest:
         meta = dict(request.META)
         meta["HTTP_REFERER"] = (referrer or "")[:1000]
         self.META = meta
-        first = self.path.strip("/").split("/")[0] if self.path.strip("/") else ""
+        parts = self.path.strip("/").split("/") if self.path.strip("/") else []
+        if parts and parts[0] == "lang" and len(parts) > 1:   # drdevrim.com: /lang/<code>/…
+            parts = parts[1:]
+        first = parts[0] if parts else ""
         self.LANGUAGE_CODE = first if first in LANGUAGE_META else settings.LANGUAGE_CODE
 
     def __getattr__(self, name):  # session, COOKIES, user, _dt_vid … gerçek istekten

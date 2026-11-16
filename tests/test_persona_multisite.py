@@ -192,3 +192,43 @@ class FaqTopicTests(SeededTestCase):
         self.assertEqual(canonical_section("price-note"), "price-note")  # bilerek sayılmaz
         self.assertEqual(canonical_section("hero"), "hero")
         self.assertEqual(canonical_section("price"), "price")
+
+
+class DecisionDeliveryTests(SeededTestCase):
+    """Merkez kararı kardeş siteye verir: pageview/event yanıtında ve /api/t/persona/ ucunda {persona, level, message}."""
+
+    def test_weak_signal_returns_persona_without_message(self):
+        b = _Site("drd", DRD, "7" * 24)
+        d = json.loads(b.page("/", seconds=None).content)["decision"]
+        self.assertEqual(d["level"], "weak")
+        self.assertIsNone(d["message"])
+
+    def test_decided_visitor_gets_localized_message_in_the_sister_sites_language(self):
+        # drdevrim İngilizce: /lang/en/… → mesaj İngilizce
+        b = _Site("drd", DRD, "8" * 24)
+        for path in ("/lang/en/hizmetler/implant", "/lang/en/hizmetler/zirkonyum-kaplama",
+                     "/lang/en/hizmetler/lamina", "/lang/en/hizmetler/dis-beyazlatma"):
+            b.page(path, seconds=35)
+        r = b.event("faq_open", {"q": "Is it safe?"}, "/lang/en/hizmetler/lamina")
+        d = json.loads(r.content)["decision"]
+        self.assertEqual(d["persona"], "skeptic")
+        self.assertNotEqual(d["level"], "weak")
+        self.assertEqual(d["message"]["key"], "skeptic")
+        self.assertEqual(d["message"]["title"], "Everything here is real")
+        # Yeniden kontrol ucu (SPA geçişi): yazmaz, aynı kararı döner
+        r2 = b._post("/api/t/persona/", {"url": DRD + "/lang/en/doktorlar"})
+        self.assertEqual(json.loads(r2.content)["decision"]["message"]["title"], "Everything here is real")
+
+        # devrimbirikensipahi Almanca: /de/… → aynı karar Almanca
+        c = _Site("dbs", DBS, "9" * 24)
+        for path in ("/de/implant", "/de/zirkonyum", "/de/lamina", "/de/beyazlatma"):
+            c.page(path, seconds=35, page_type="treatment")
+        d = json.loads(c._post("/api/t/persona/", {"url": DBS + "/de/"}).content)["decision"]
+        self.assertEqual(d["persona"], "skeptic")
+        self.assertNotEqual(d["message"]["title"], "Everything here is real")  # çevrilmiş metin
+
+    def test_persona_endpoint_rejects_unknown_origin(self):
+        c = Client()
+        r = c.post("/api/t/persona/", data=json.dumps({"site": "drd", "vid": VID, "sid": "6" * 24, "url": DRD + "/"}),
+                   content_type="text/plain", HTTP_USER_AGENT=BROWSER_UA, HTTP_ORIGIN="https://evil.example")
+        self.assertEqual(r.status_code, 403)

@@ -92,6 +92,7 @@ class DentalAdminSite(admin.AdminSite):
         exp_n = exposures.count()
         exp_c = exposures.filter(converted=True).count()
         return {
+            "sites": self._site_rows(humans, since, now),
             "api_ready": is_configured(),
             "background": "thread pool",
             "kpi": {
@@ -118,6 +119,38 @@ class DentalAdminSite(admin.AdminSite):
             "coverage": self._coverage_summary(),
             "ml_model": MLModelVersion.objects.filter(is_active=True).first(),
         }
+
+    def _site_rows(self, humans, since, now):
+        """Üç sitenin (dentaltourism / drdevrim / devrimbirikensipahi) 30 günlük özeti + şu an aktif ziyaretçi."""
+        from django.db.models import Count, F, Q
+
+        from apps.persona.models import VisitorSession as PersonaSession
+        from apps.tracking.models import Lead, PageView
+
+        active_since = now - timedelta(minutes=30)
+        by_site = {r["site"]: r for r in humans.values("site").annotate(
+            n=Count("id"),
+            contacted=Count("id", filter=Q(whatsapp_clicks__gte=1) | Q(phone_clicks__gte=1) | Q(is_lead=True)),
+            active=Count("id", filter=Q(last_seen__gte=active_since)))}
+        pv = {r["site"]: r["n"] for r in PageView.objects.filter(timestamp__gte=since, session__page_views__gt=0)
+              .values(site=F("session__site")).annotate(n=Count("id"))}
+        leads = {r["site"]: r["n"] for r in Lead.objects.filter(created_at__gte=since).values("site").annotate(n=Count("id"))}
+        personas = {}
+        for r in (PersonaSession.objects.filter(created_at__gte=since).exclude(assigned_persona="unknown")
+                  .values("site", "assigned_persona").annotate(n=Count("id")).order_by("site", "-n")):
+            personas.setdefault(r["site"], [])
+            if len(personas[r["site"]]) < 3:
+                personas[r["site"]].append((r["assigned_persona"], r["n"]))
+        rows = []
+        for code, meta in settings.TRACKING_SITES.items():
+            s = by_site.get(code, {})
+            n = s.get("n", 0)
+            rows.append({
+                "code": code, "name": meta["name"], "visitors": n, "pageviews": pv.get(code, 0),
+                "contacted": s.get("contacted", 0), "contact_rate": round(s.get("contacted", 0) / n * 100, 1) if n else 0,
+                "leads": leads.get(code, 0), "active": s.get("active", 0), "personas": personas.get(code, []),
+            })
+        return rows
 
     def _coverage_summary(self):
         from apps.localization.models import LIVE_STATUSES, TranslationStatus

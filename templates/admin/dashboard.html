@@ -28,6 +28,21 @@
     {% if kpi.clinics_pending %}<div class="dt-kpi"><a href="{% url 'admin:clinics_clinic_changelist' %}?status__exact=pending"><div class="n">{{ kpi.clinics_pending }}</div><div class="l">Onay bekleyen klinik</div></a></div>{% endif %}
   </div>
 
+  <div class="module" style="margin-bottom:20px">
+    <table style="width:100%"><caption>🧠 Merkezi takip — site bazında (30 gün)</caption>
+      <tr><th>Site</th><th>Şu an aktif</th><th>Gerçek ziyaretçi</th><th>Sayfa</th><th>İletişim</th><th>Lead</th><th>Öne çıkan personalar</th><th></th></tr>
+      {% for s in sites %}<tr>
+        <td><strong>{{ s.name }}</strong> <span style="opacity:.6">({{ s.code }})</span></td>
+        <td>{% if s.active %}<span style="color:#1a7f37;font-weight:600">● {{ s.active }}</span>{% else %}<span style="opacity:.5">—</span>{% endif %}</td>
+        <td>{{ s.visitors }}</td><td>{{ s.pageviews }}</td>
+        <td>%{{ s.contact_rate }} <span style="opacity:.6">({{ s.contacted }})</span></td>
+        <td>{{ s.leads }}</td>
+        <td>{% for p, n in s.personas %}<span style="display:inline-block;padding:1px 6px;margin:1px;border-radius:9px;background:#eef2ff">{{ p }} · {{ n }}</span>{% empty %}<span style="opacity:.5">henüz yok</span>{% endfor %}</td>
+        <td><a href="{% url 'admin:tracking_visitorsession_changelist' %}?site__exact={{ s.code }}&human=yes">oturumlar →</a></td>
+      </tr>{% endfor %}
+    </table>
+  </div>
+
   <div class="dt-two" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
     <div class="module">
       <table style="width:100%"><caption>📥 Son lead'ler</caption>
