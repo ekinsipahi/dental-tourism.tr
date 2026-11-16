@@ -8,10 +8,59 @@ Admin panelinden:
 - Lead mi, converted mı
 - Hangi kampanyadan
 """
+from django.conf import settings
 from django.contrib import admin
 from django.utils.html import format_html, format_html_join
 from django.urls import reverse
 from .models import AdConversion, ContactClick, Lead, PageView, SocialClick, VisitorSession, WhatsAppMatch
+
+
+# ── Site yardımcıları: üç sitenin yolları kendi alan adına bağlanır (drdevrim yolu dentaltourism linki olmasın) ──
+def site_name(code):
+    return settings.TRACKING_SITES.get(code, {}).get("name", code or "?")
+
+
+def site_base(code):
+    domain = settings.TRACKING_SITES.get(code, {}).get("domain") or settings.TRACKING_SITES["dt"]["domain"]
+    return f"https://{domain}"
+
+
+def site_url(code, path):
+    """Site kodu + yol (ya da tam URL) → o sitenin mutlak adresi."""
+    path = path or ""
+    if path.startswith(("http://", "https://")):
+        return path
+    return site_base(code) + ("/" + path.lstrip("/") if path else "/")
+
+
+def site_badge_html(code):
+    colors = {"dt": "#0f766e", "drd": "#1d4ed8", "dbs": "#7c3aed"}
+    return format_html('<span style="background:{};color:#fff;padding:1px 6px;border-radius:3px;font-size:.65rem;'
+                       'white-space:nowrap">{}</span>', colors.get(code, "#64748b"), site_name(code))
+
+
+def site_link_html(code, path, width=45):
+    if not path:
+        return format_html("{} —", site_badge_html(code))
+    return format_html('{} <a href="{}" target="_blank" rel="noopener">{}</a>', site_badge_html(code),
+                       site_url(code, path), (path or "")[:width])
+
+
+class SessionSiteFilter(admin.SimpleListFilter):
+    """Oturumun sitesi (session__site): dentaltourism / drdevrim / devrimbirikensipahi."""
+    title = "site"
+    parameter_name = "site"
+    field = "session__site"
+
+    def lookups(self, request, model_admin):
+        return [(k, v["name"]) for k, v in settings.TRACKING_SITES.items()]
+
+    def queryset(self, request, qs):
+        return qs.filter(**{self.field: self.value()}) if self.value() else qs
+
+
+class LeadSiteFilter(SessionSiteFilter):
+    field = "site"
 
 
 class MindFilter(admin.SimpleListFilter):
@@ -200,8 +249,7 @@ class VisitorSessionAdmin(admin.ModelAdmin):
 
     @admin.display(description="Site", ordering="site")
     def site_badge(self, obj):
-        names = {"dt": "dentaltourism", "drd": "drdevrim", "dbs": "devrimbs"}
-        return names.get(obj.site, obj.site)
+        return site_badge_html(obj.site)
 
     @admin.display(description="Yolculuk")
     def journey_link(self, obj):
@@ -219,22 +267,41 @@ class VisitorSessionAdmin(admin.ModelAdmin):
         """Bir ziyaretçinin (dt_vid) üç sitedeki birleşik yolculuğu: oturumlar → sayfalar + iletişim olayları, zaman sırasıyla."""
         from django.shortcuts import render
 
+        from datetime import timedelta
+
         vid = request.GET.get("vid", "")[:40]
         sessions = list(VisitorSession.objects.filter(visitor_id=vid).order_by("created_at")) if vid else []
-        site_names = {"dt": "dentaltourism.tr", "drd": "drdevrim.com", "dbs": "devrimbirikensipahi.com.tr"}
-        timeline = []
+        timeline = [self._journey_block(s) for s in sessions]
+        # Muhtemelen aynı ziyaretçi: başka sitede, kimliği taşınmamış (ayrı sekme / dtv'siz link) ama aynı IP + cihaz +
+        # tarayıcı ile bu ziyaretçinin oturumlarına ±30 dk içinde açılmış oturumlar — yaklaşık eşleşme, kesin değil.
+        probable, seen = [], {s.pk for s in sessions}
         for s in sessions:
-            rows = [{"t": pv.timestamp, "kind": "page", "label": pv.page_type or "page", "url": pv.url, "secs": pv.time_on_page_sec}
-                    for pv in s.pageviews.all()]
-            rows += [{"t": ev.timestamp, "kind": ev.event_type, "label": ev.label or ev.event_type, "url": ev.page_url, "position": ev.position}
-                     for ev in s.events.filter(event_type__in=["whatsapp_click", "phone_click", "maps_click", "email_click",
-                                                               "instagram_click", "youtube_click", "form_start", "form_submit",
-                                                               "contact_return", "faq_read", "language_switch"])]
-            rows.sort(key=lambda r: r["t"])
-            timeline.append({"session": s, "site": site_names.get(s.site, s.site), "rows": rows})
+            if not s.ip_hash or not s.user_agent:
+                continue
+            window = timedelta(minutes=30)
+            qs = (VisitorSession.objects.filter(ip_hash=s.ip_hash, device_type=s.device_type, user_agent=s.user_agent,
+                                                created_at__gte=s.created_at - window, created_at__lte=s.last_seen + window)
+                  .exclude(site=s.site).exclude(pk__in=seen).order_by("created_at"))
+            if vid:
+                qs = qs.exclude(visitor_id=vid)
+            for m in qs[:20]:
+                seen.add(m.pk)
+                probable.append({**self._journey_block(m), "near": s, "near_site": site_name(s.site)})
         ctx = {**self.admin_site.each_context(request), "title": f"Ziyaretçi yolculuğu · {vid[:8]}…", "vid": vid,
-               "timeline": timeline, "sites": sorted({t["site"] for t in timeline})}
+               "timeline": timeline, "sites": sorted({t["site"] for t in timeline}), "probable": probable}
         return render(request, "admin/tracking/journey.html", ctx)
+
+    @staticmethod
+    def _journey_block(s):
+        rows = [{"t": pv.timestamp, "kind": "page", "label": pv.page_type or "page", "url": site_url(s.site, pv.url),
+                 "path": pv.url, "secs": pv.time_on_page_sec} for pv in s.pageviews.all()]
+        rows += [{"t": ev.timestamp, "kind": ev.event_type, "label": ev.label or ev.event_type, "url": site_url(s.site, ev.page_url),
+                  "path": ev.page_url, "position": ev.position}
+                 for ev in s.events.filter(event_type__in=["whatsapp_click", "phone_click", "maps_click", "email_click",
+                                                           "instagram_click", "youtube_click", "form_start", "form_submit",
+                                                           "contact_return", "faq_read", "language_switch"])]
+        rows.sort(key=lambda r: r["t"])
+        return {"session": s, "site": site_name(s.site), "base": site_base(s.site), "rows": rows}
 
 
 
@@ -271,13 +338,17 @@ class LeadAdmin(admin.ModelAdmin):
         return format_html("{} {} · {} {}<br><span style='color:#888'>{}. ziyaret · 📞{} 💬{}</span>", icon, model,
                            s.os_name, s.browser_name, s.session_count, s.phone_clicks, s.whatsapp_clicks)
 
+    @admin.display(description="Site / sayfa", ordering="site")
+    def site_page(self, o):
+        return site_link_html(o.site, o.page, 40)
+
     list_display = [
-        "name_or_anon", "clinic", "persona", "source_badge", "status_badge",
+        "name_or_anon", "site_page", "clinic", "persona", "source_badge", "status_badge",
         "contact_info", "lead_mind", "traffic_info", "lead_location", "lead_device",
         "wa_match_status", "created_at",
     ]
-    list_filter  = ["status", MindFilter, "clinic", "source", "traffic_source", "persona", "ip_country", "language", "whatsapp_matched"]
-    search_fields = ["name", "phone", "email", "gclid", "fbclid", "utm_campaign"]
+    list_filter  = ["status", LeadSiteFilter, MindFilter, "clinic", "source", "traffic_source", "persona", "ip_country", "language", "whatsapp_matched"]
+    search_fields = ["name", "phone", "email", "gclid", "fbclid", "utm_campaign", "external_id"]
 
     date_hierarchy = "created_at"
     list_per_page = 30
@@ -288,7 +359,7 @@ class LeadAdmin(admin.ModelAdmin):
 
     fieldsets = [
         ("Contact", {"fields": ["name", "phone", "email", "message"]}),
-        ("Status", {"fields": ["clinic", "treatment", "source", "status", "persona", "notes", "assigned_to"]}),
+        ("Status", {"fields": ["site", "external_id", "clinic", "treatment", "source", "status", "persona", "notes", "assigned_to"]}),
         ("Traffic", {"fields": [
             "traffic_source", "gclid", "fbclid",
             "utm_campaign", "utm_source", "page", "language",
@@ -308,10 +379,11 @@ class LeadAdmin(admin.ModelAdmin):
     def source_badge(self, obj):
         colors = {
             "form": "#7c3aed", "whatsapp": "#25d366",
-            "phone": "#2563eb", "chatbot": "#f59e0b",
+            "phone": "#2563eb", "chatbot": "#f59e0b", "callme": "#0f766e", "booking": "#1d4ed8",
         }
         color = colors.get(obj.source, "#9ca3af")
-        labels = {"form": "📝 Form", "whatsapp": "💬 WA", "phone": "📞 Phone", "chatbot": "🤖 Bot"}
+        labels = {"form": "📝 Form", "whatsapp": "💬 WA", "phone": "📞 Phone", "chatbot": "🤖 Bot",
+                  "callme": "📲 Beni ara", "booking": "📅 Randevu"}
         label = labels.get(obj.source, obj.source)
         return format_html(
             '<span style="background:{};color:#fff;padding:2px 8px;border-radius:4px;font-size:.72rem">{}</span>',
@@ -403,9 +475,15 @@ class WhatsAppMatchAdmin(admin.ModelAdmin):
 
 @admin.register(PageView)
 class PageViewAdmin(admin.ModelAdmin):
-    list_display = ["url", "title", "timestamp", "session"]
-    search_fields = ["url", "title"]
+    list_display = ["site_url_col", "title", "page_type", "timestamp", "session"]
+    list_filter = [SessionSiteFilter, "page_type"]
+    search_fields = ["url", "title", "session__visitor_id"]
     readonly_fields = [f.name for f in PageView._meta.fields]
+    list_select_related = ["session"]
+
+    @admin.display(description="Site / sayfa", ordering="url")
+    def site_url_col(self, o):
+        return site_link_html(o.session.site, o.url, 60)
 
 
 @admin.register(AdConversion)
@@ -438,8 +516,8 @@ _SRC = {"google_ads": ("Google Ads", "#1a73e8"), "meta_ads": ("Meta Ads", "#1877
 class ContactClickAdmin(admin.ModelAdmin):
     list_display = ["when", "action", "mind_col", "button", "visitor", "location", "device", "source", "page",
                     "persona_stage"]
-    list_filter = ["event_type", MindFilter, "session__ip_country", "session__device_type", "session__traffic_source",
-                   "persona", "stage", "language", "position"]
+    list_filter = ["event_type", SessionSiteFilter, MindFilter, "session__ip_country", "session__device_type",
+                   "session__traffic_source", "persona", "stage", "language", "position"]
     search_fields = ["session__visitor_id", "session__session_key", "session__ip_city", "session__ip_region",
                      "session__ip_org", "session__google_keyword", "session__utm_term", "session__utm_campaign",
                      "session__gclid", "page_url", "label"]
@@ -507,9 +585,9 @@ class ContactClickAdmin(admin.ModelAdmin):
         return format_html('<span style="color:{};font-weight:600">{}</span><br><span style="color:#888">{}</span>',
                            color, label, detail[:50])
 
-    @admin.display(description="Sayfa")
+    @admin.display(description="Site / sayfa", ordering="session__site")
     def page(self, o):
-        return format_html('<a href="{}" target="_blank">{}</a>', o.page_url, (o.page_url or "—")[:45])
+        return site_link_html(o.session.site, o.page_url, 45)
 
     @admin.display(description="Persona / aşama", ordering="persona")
     def persona_stage(self, o):
@@ -529,22 +607,22 @@ class ContactClickAdmin(admin.ModelAdmin):
         resp["Content-Disposition"] = 'attachment; filename="iletisim-tiklamalari.csv"'
         resp.write("\ufeff")
         w = csv.writer(resp)
-        w.writerow(["zaman", "eylem", "buton", "yer", "ziyaretci_id", "ziyaret_no", "ip", "ulke", "sehir", "bolge",
+        w.writerow(["zaman", "site", "eylem", "buton", "yer", "ziyaretci_id", "ziyaret_no", "ip", "ulke", "sehir", "bolge",
                     "saglayici", "cihaz", "marka", "model", "isletim_sistemi", "tarayici", "kaynak", "anahtar_kelime",
                     "kampanya", "gclid", "sayfa", "persona", "asama", "dil", "aklindaki", "aklindaki_detay"])
         for o in queryset.select_related("session"):
             s = o.session
-            w.writerow([timezone.localtime(o.timestamp).strftime("%Y-%m-%d %H:%M:%S"), o.event_type, o.label, o.position,
+            w.writerow([timezone.localtime(o.timestamp).strftime("%Y-%m-%d %H:%M:%S"), o.session.site, o.event_type, o.label, o.position,
                         s.visitor_id, s.session_count, s.ip_address or "", s.ip_country, s.ip_city, s.ip_region, s.ip_org,
                         s.device_type, s.device_brand, s.device_model, f"{s.os_name} {s.os_version}".strip(),
                         f"{s.browser_name} {s.browser_version}".strip(), s.traffic_source,
                         s.google_keyword or s.utm_term, s.google_campaign or s.utm_campaign, s.gclid or "",
-                        o.page_url, o.persona, o.stage, o.language, o.mind, describe(o.mindset)])
+                        site_url(o.session.site, o.page_url), o.persona, o.stage, o.language, o.mind, describe(o.mindset)])
         return resp
 
 
 @admin.register(SocialClick)
 class SocialClickAdmin(ContactClickAdmin):
     """Instagram / YouTube / yol tarifi / e-posta — iletişim listesinden ayrı (iletişim sayılmaz)."""
-    list_filter = ["event_type", "session__ip_country", "session__device_type", "session__traffic_source", "position"]
+    list_filter = ["event_type", SessionSiteFilter, "session__ip_country", "session__device_type", "session__traffic_source", "position"]
 

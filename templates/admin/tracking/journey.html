@@ -7,19 +7,45 @@
   {% for t in timeline %}
   <div class="module" style="margin-bottom:18px">
     <table style="width:100%">
-      <caption>{{ t.site }} · {{ t.session.created_at|date:"d.m.Y H:i" }} · {{ t.session.traffic_source }} · {{ t.session.device_type }} · {{ t.session.ip_country }}
+      <caption><a href="{{ t.base }}" target="_blank" rel="noopener">{{ t.site }}</a> · {{ t.session.created_at|date:"d.m.Y H:i" }} · {{ t.session.traffic_source }} · {{ t.session.device_type }} · {{ t.session.ip_country }}
         {% if t.session.landing_page %} · giriş: <code>{{ t.session.landing_page }}</code>{% endif %}</caption>
       <tr><th style="width:90px">Saat</th><th style="width:150px">Olay</th><th>Sayfa / etiket</th><th style="width:90px">Süre / konum</th></tr>
       {% for r in t.rows %}
       <tr>
         <td>{{ r.t|date:"H:i:s" }}</td>
         <td>{% if r.kind == "page" %}📄 {{ r.label }}{% elif r.kind == "whatsapp_click" %}💬 WhatsApp{% elif r.kind == "phone_click" %}☎️ Telefon{% elif r.kind == "maps_click" %}📍 Harita{% elif r.kind == "form_submit" %}📝 Form{% elif r.kind == "form_start" %}✏️ Form başladı{% elif r.kind == "contact_return" %}↩️ Dönüş{% elif r.kind == "faq_read" %}❓ SSS okudu{% else %}{{ r.kind }}{% endif %}</td>
-        <td>{% if r.kind == "page" %}<a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.url|truncatechars:90 }}</a>{% else %}{{ r.label|truncatechars:90 }}{% endif %}</td>
+        <td>{% if r.kind == "page" %}<a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.path|truncatechars:90 }}</a>{% else %}{{ r.label|truncatechars:90 }}{% if r.path %} <a href="{{ r.url }}" target="_blank" rel="noopener" style="color:#888">({{ r.path|truncatechars:40 }})</a>{% endif %}{% endif %}</td>
         <td>{% if r.secs %}{{ r.secs }} sn{% elif r.position %}{{ r.position }}{% endif %}</td>
       </tr>
       {% empty %}<tr><td colspan="4">Olay yok.</td></tr>{% endfor %}
     </table>
   </div>
   {% endfor %}{% endif %}
+  {% if probable %}
+  <div class="module" id="probable" style="margin-top:28px;border:2px dashed #b45309;padding:10px">
+    <h2 style="background:#fef3c7;color:#92400e">⚠️ Muhtemelen aynı ziyaretçi ({{ probable|length }} oturum) — YAKLAŞIK eşleşme</h2>
+    <p class="help">Bu oturumlar başka bir sitede, bu kimlik taşınmadan açıldı (ayrı sekme, <code>?dtv=</code>'siz link). Aynı IP + aynı cihaz türü +
+      aynı tarayıcı imzasıyla, yukarıdaki oturumlardan birinin ±30 dk içinde. Kesin değildir — aynı ağdaki (ofis, aile) başka biri de olabilir.</p>
+    {% for t in probable %}
+    <div class="module" style="margin-bottom:14px;opacity:.9">
+      <table style="width:100%">
+        <caption><a href="{{ t.base }}" target="_blank" rel="noopener">{{ t.site }}</a> · {{ t.session.created_at|date:"d.m.Y H:i" }} · {{ t.session.traffic_source }} · {{ t.session.device_type }} · {{ t.session.ip_country }}
+          {% if t.session.landing_page %} · giriş: <code>{{ t.session.landing_page }}</code>{% endif %}
+          · <span style="color:#b45309">≈ {{ t.near_site }} {{ t.near.created_at|date:"H:i" }} oturumuna yakın</span>
+          {% if t.session.visitor_id %} · <a href="?vid={{ t.session.visitor_id }}">kendi yolculuğu →</a>{% endif %}</caption>
+        <tr><th style="width:90px">Saat</th><th style="width:150px">Olay</th><th>Sayfa / etiket</th><th style="width:90px">Süre / konum</th></tr>
+        {% for r in t.rows %}
+        <tr>
+          <td>{{ r.t|date:"H:i:s" }}</td>
+          <td>{% if r.kind == "page" %}📄 {{ r.label }}{% elif r.kind == "whatsapp_click" %}💬 WhatsApp{% elif r.kind == "phone_click" %}☎️ Telefon{% elif r.kind == "form_submit" %}📝 Form{% else %}{{ r.kind }}{% endif %}</td>
+          <td>{% if r.kind == "page" %}<a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.path|truncatechars:90 }}</a>{% else %}{{ r.label|truncatechars:90 }}{% endif %}</td>
+          <td>{% if r.secs %}{{ r.secs }} sn{% elif r.position %}{{ r.position }}{% endif %}</td>
+        </tr>
+        {% empty %}<tr><td colspan="4">Olay yok.</td></tr>{% endfor %}
+      </table>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
 </div>
 {% endblock %}

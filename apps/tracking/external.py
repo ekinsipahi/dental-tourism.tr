@@ -3,12 +3,16 @@ Kardeş sitelerin (drdevrim.com — Nuxt, devrimbirikensipahi.com.tr — Django)
 
     POST /api/t/pageview/   {site, vid, sid, url, title, referrer, tz, sw, sh, attr, prev_vid?}
     POST /api/t/event/      {site, vid, sid, events:[{event_type, data, page_url}], attr}
+    POST /api/t/lead/       {site, vid, sid, name, phone, email?, message?, page, language?, source, gclid?, attr?}
+                            → {ok, lead_id}. Sunucudan sunucuya: X-DT-Key: <settings.DT_LEAD_KEY> başlığı köken
+                            kontrolünü ve hız limitini atlar (+ external_id, created_at isteğe bağlı).
 
 Kimlik ve oturum GÖVDEDEN gelir (çapraz site çerezi yok): vid = localStorage'daki kalıcı ziyaretçi kimliği,
 sid = istemcinin ürettiği 30 dk'lık oturum kimliği → session_key "<site>:<sid>". Gövde text/plain olarak gönderilir
 (CORS ön-uçuşu yok); yanıt yalnızca izinli kökenlere (settings.TRACKING_SITES[...]["origins"]) açılır.
 Aynı ziyaretçi siteler arası linkle geçtiğinde (?dtv=…) prev_vid ile eski kimlik yeniye birleştirilir.
 """
+import hmac
 import json
 import logging
 import re
@@ -194,3 +198,111 @@ def ext_event(request):
         logger.error(f"ext_event: {e}")
         return _cors(JsonResponse({"ok": False}, status=500), preq._origin)
     return _cors(JsonResponse(payload), preq._origin)
+
+
+LEAD_LIMIT_PER_SID = 3     # saatte, oturum (site:sid) başına
+LEAD_LIMIT_PER_IP = 10     # saatte, IP başına
+LEAD_BODY_MAX = 16 * 1024
+
+
+def _lead_key_ok(request):
+    """Sunucudan sunucuya aktarım: X-DT-Key başlığı DT_LEAD_KEY ile eşleşiyor mu? (None = başlık yok)"""
+    given = request.headers.get("X-DT-Key", "")
+    if not given:
+        return None
+    key = settings.DT_LEAD_KEY or ""
+    return bool(key) and hmac.compare_digest(given.encode(), key.encode())
+
+
+@csrf_exempt
+@require_http_methods(["POST", "OPTIONS"])
+def ext_lead(request):
+    """Kardeş sitelerin merkezi lead ucu: formdan (dt-track.js → dtTrack.lead) ya da kardeş sitenin arka ucundan
+    (X-DT-Key) gelen lead, Lead(site=…) olarak kaydedilir ve varsa "<site>:<sid>" oturumuna bağlanır."""
+    s2s = _lead_key_ok(request)
+    if s2s is False:
+        return JsonResponse({"ok": False, "error": "key"}, status=403)
+    ok, origin = _origin_allowed(request)
+    if request.method == "OPTIONS":
+        return _cors(HttpResponse(status=204 if ok else 403), origin)
+    if not s2s:
+        if not ok:
+            return JsonResponse({"ok": False, "error": "origin"}, status=403)
+        if getattr(request, "is_bot", False):
+            return JsonResponse({"ok": False, "error": "forbidden"}, status=403)
+    if len(request.body) > LEAD_BODY_MAX:
+        return _cors(JsonResponse({"ok": False, "error": "payload too large"}, status=413), origin)
+    body = _body(request)
+    if body is None:
+        return _cors(JsonResponse({"ok": False}, status=400), origin)
+    if body.get("website"):  # spam tuzağı — gerçek kullanıcı doldurmaz
+        return _cors(JsonResponse({"ok": False}, status=400), origin)
+
+    site = str(body.get("site", ""))[:12]
+    sid, vid = str(body.get("sid", ""))[:40], str(body.get("vid", ""))[:40]
+    if site not in settings.TRACKING_SITES or (site == "dt" and not s2s):
+        return _cors(JsonResponse({"ok": False, "error": "site"}, status=400), origin)
+    if (sid and not ID_RE.match(sid)) or (vid and not ID_RE.match(vid)) or (not sid and not s2s):
+        return _cors(JsonResponse({"ok": False, "error": "sid"}, status=400), origin)
+
+    name = str(body.get("name", ""))[:200].strip()
+    phone = str(body.get("phone", ""))[:30].strip()
+    email = str(body.get("email", ""))[:254].strip()
+    message = str(body.get("message", ""))[:3000].strip()
+    page = str(body.get("page", ""))[:500].strip()
+    language = str(body.get("language", ""))[:10].strip()
+    source = str(body.get("source", "form"))[:20]
+    external_id = str(body.get("external_id", ""))[:60].strip() if s2s else ""
+    from .models import Lead
+
+    if source not in Lead.EXTERNAL_SOURCES:
+        source = Lead.SOURCE_FORM
+    if not phone and not name:
+        return _cors(JsonResponse({"ok": False, "error": "name or phone required"}, status=400), origin)
+    if phone and sum(c.isdigit() for c in phone) < 7:
+        return _cors(JsonResponse({"ok": False, "error": "invalid phone"}, status=400), origin)
+    if not s2s and (_rate_limited(f"ext-lead-s:{site}:{sid}", LEAD_LIMIT_PER_SID, 3600)
+                    or _rate_limited(f"ext-lead-ip:{_ip_hash(request)}", LEAD_LIMIT_PER_IP, 3600)):
+        return _cors(JsonResponse({"ok": False, "error": "too many requests"}, status=429), origin)
+    if external_id:
+        dup = Lead.objects.filter(site=site, external_id=external_id).only("pk").first()
+        if dup is not None:  # aynı kaydın tekrar aktarımı: ikinci lead açılmaz
+            return _cors(JsonResponse({"ok": True, "lead_id": dup.pk, "duplicate": True}), origin)
+
+    from .service import ExternalPageRequest, create_lead, get_or_create_external_session
+
+    try:
+        preq = ExternalPageRequest(request, site, sid, vid, page, str(body.get("referrer", ""))[:1000])
+        if not language:  # dil verilmediyse sayfa yolundan (/de/…)
+            from dental_tourism.languages import LANGUAGE_META
+
+            first = preq.path.strip("/").split("/")[0]
+            language = first if first in LANGUAGE_META else ""
+        if sid:
+            session = get_or_create_external_session(preq)
+            _attribution(session, body)
+            gclid = str(body.get("gclid", ""))[:255]
+            if gclid and not session.gclid:
+                type(session).objects.filter(pk=session.pk).update(gclid=gclid, traffic_source="google_ads")
+                session.gclid, session.traffic_source = gclid, "google_ads"
+        else:
+            preq.tracking_session = None  # arka uçtan oturumsuz aktarım: lead bağımsız kaydedilir
+            preq.session.session_key = ""
+        lead = create_lead(preq, name=name, phone=phone, email=email, message=message, page=page,
+                           language=language, source=source)
+        upd = {"site": site}
+        if external_id:
+            upd["external_id"] = external_id
+        if s2s and body.get("created_at"):
+            from django.utils.dateparse import parse_datetime
+
+            created = parse_datetime(str(body["created_at"])[:40])
+            if created is not None:
+                from django.utils import timezone as tz
+
+                upd["created_at"] = created if tz.is_aware(created) else tz.make_aware(created)
+        Lead.objects.filter(pk=lead.pk).update(**upd)
+    except Exception as e:  # noqa: BLE001
+        logger.error(f"ext_lead: {e}")
+        return _cors(JsonResponse({"ok": False, "error": "server error"}, status=500), origin)
+    return _cors(JsonResponse({"ok": True, "lead_id": lead.pk}), origin)

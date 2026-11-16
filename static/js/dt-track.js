@@ -4,7 +4,12 @@
  *
  *   <script src="https://dentaltourism.tr/static/js/dt-track.js" data-site="drd" defer></script>
  *   data-api   (isteğe bağlı) merkez kök URL — varsayılan https://dentaltourism.tr
- *   data-page  (isteğe bağlı) sayfa türü ipucu (home, pseo-area, treatment …) — yoksa merkez URL'den çıkarır
+ *   data-page  (isteğe bağlı) sayfa türü ipucu (home, pseo-area, treatment …) — yoksa <meta name="dt-page">,
+ *              o da yoksa merkez URL'den çıkarır
+ *
+ * Lead: window.dtTrack.lead({name, phone, email, message, source}, cb) → POST /api/t/lead/ (site/vid/sid/page
+ * otomatik eklenir, JSON yanıtı döner). Sunucu tarafı formlar için her submit'te forma dt_vid / dt_sid / dt_site
+ * gizli alanları eklenir — arka uç bunları X-DT-Key ile merkeze iletir.
  *
  * Toplananlar: sayfa görüntüleme (SPA: window.dtTrack.pageview()), sekme görünürken geçen süre, scroll derinliği,
  * bölüm görünürlüğü/süresi, SSS açma + okuma süresi (details ve class tabanlı akordeonlar), video, form başlatma/
@@ -18,7 +23,7 @@
   if (!me) return;
   var SITE = me.getAttribute("data-site") || "";
   var API = (me.getAttribute("data-api") || "https://dentaltourism.tr").replace(/\/$/, "");
-  var PAGE_HINT = me.getAttribute("data-page") || "";
+  var PAGE_HINT = me.getAttribute("data-page") || (function () { var m = document.querySelector('meta[name="dt-page"]'); return (m && m.getAttribute("content")) || ""; })();
   if (!SITE) return;
   var ID_RE = /^[a-f0-9]{16,40}$/, SISTERS = /(^|\.)(dentaltourism\.tr|drdevrim\.com|devrimbirikensipahi\.com\.tr)$/i;
 
@@ -189,7 +194,31 @@
     var f = e.target.closest && e.target.closest("form"); if (!f || formsStarted.get(f)) return;
     formsStarted.set(f, 1); track("form_start", { form: f.id || f.className || "" });
   }, true);
-  document.addEventListener("submit", function (e) { var f = e.target; track("form_submit", { form: f.id || f.className || "" }); }, true);
+  function hidden(f, name, value) {
+    var el = f.querySelector('input[name="' + name + '"]');
+    if (!el) { el = document.createElement("input"); el.type = "hidden"; el.name = name; f.appendChild(el); }
+    el.value = value;
+  }
+  document.addEventListener("submit", function (e) {
+    var f = e.target; if (!f || f.tagName !== "FORM") return;
+    try { hidden(f, "dt_vid", VID); hidden(f, "dt_sid", SID); hidden(f, "dt_site", SITE); } catch (err) {}  // sunucu tarafı form → kimlik merkeze iletilir
+    track("form_submit", { form: f.id || f.className || "" });
+  }, true);
+
+  // ── Lead: formdan / chatbot'tan merkeze (yanıt gerekir → fetch) ───────────────────────────────────────────────
+  function lead(payload, cb) {
+    payload = payload || {};
+    payload.site = SITE; payload.vid = VID; payload.sid = SID; payload.attr = ATTR;
+    if (!payload.page) payload.page = location.href;
+    if (!payload.language) payload.language = (document.documentElement.lang || "").slice(0, 10);
+    if (!payload.source) payload.source = "form";
+    touch();
+    var p = fetch(API + "/api/t/lead/", { method: "POST", mode: "cors", credentials: "omit", keepalive: true,
+                                          headers: { "Content-Type": "text/plain" }, body: JSON.stringify(payload) })
+      .then(function (r) { return r.json(); });
+    if (cb) p.then(cb, function () { cb({ ok: false, error: "network" }); });
+    return p;
+  }
 
   // ── Video ───────────────────────────────────────────────────────────────────────────────────────────────────
   document.addEventListener("play", function (e) { if (e.target.tagName === "VIDEO" && !e.target.autoplay && !e.target.muted) track("video_play", {}); }, true);
@@ -222,6 +251,6 @@
   document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") { hiddenAt = Date.now(); flush(); } else resume(); });
 
   // SPA (Nuxt) route geçişi: eski sayfayı kapat, yenisini aç
-  window.dtTrack = { track: track, pageview: function (hint) { flush(); pageview(hint); }, vid: VID };
+  window.dtTrack = { track: track, pageview: function (hint) { flush(); pageview(hint); }, lead: lead, vid: VID, sid: SID };
   pageview(PAGE_HINT);
 })();

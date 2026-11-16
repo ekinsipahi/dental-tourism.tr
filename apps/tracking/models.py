@@ -367,12 +367,17 @@ class Lead(models.Model):
     SOURCE_WHATSAPP  = "whatsapp"
     SOURCE_PHONE     = "phone"
     SOURCE_CHATBOT   = "chatbot"
+    SOURCE_CALLME    = "callme"    # "beni ara" formu (devrimbirikensipahi CallMeLead)
+    SOURCE_BOOKING   = "booking"   # randevu formu
     SOURCE_CHOICES   = [
         (SOURCE_FORM,     "Contact Form"),
         (SOURCE_WHATSAPP, "WhatsApp"),
         (SOURCE_PHONE,    "Phone Call"),
         (SOURCE_CHATBOT,  "AI Chatbot"),
+        (SOURCE_CALLME,   "Call-me Form"),
+        (SOURCE_BOOKING,  "Booking Form"),
     ]
+    EXTERNAL_SOURCES = (SOURCE_FORM, SOURCE_CHATBOT, SOURCE_CALLME, SOURCE_BOOKING)  # /api/t/lead/ kabul eder
 
     STATUS_NEW       = "new"
     STATUS_CONTACTED = "contacted"
@@ -400,6 +405,10 @@ class Lead(models.Model):
     mindset      = models.JSONField(default=dict, blank=True)
     source       = models.CharField(max_length=20, choices=SOURCE_CHOICES)
     status       = models.CharField(max_length=20, choices=STATUS_CHOICES, default=STATUS_NEW)
+    # Hangi sitenin formu: dt = dentaltourism.tr, drd = drdevrim.com, dbs = devrimbirikensipahi.com.tr (/api/t/lead/)
+    site         = models.CharField(max_length=12, default="dt", db_index=True)
+    external_id  = models.CharField(max_length=60, blank=True, db_index=True,
+                                    help_text="Kardeş sitenin kendi kayıt kimliği (sunucudan sunucuya aktarımda tekrar önleme)")
 
     # İletişim bilgileri
     name         = models.CharField(max_length=200, blank=True)

@@ -196,6 +196,9 @@ TRACKING_SITES = {
     "dbs": {"name": "devrimbirikensipahi.com.tr", "domain": "devrimbirikensipahi.com.tr",
             "origins": ["https://devrimbirikensipahi.com.tr", "https://www.devrimbirikensipahi.com.tr"]},
 }
+# Sunucudan sunucuya lead aktarımı (/api/t/lead/, X-DT-Key başlığı): kardeş sitenin arka ucu (devrimbirikensipahi
+# Django) kendi form kayıtlarını buraya iletir. Boşsa kapalı; köken kontrolünü ve hız limitini atlar.
+DT_LEAD_KEY = config("DT_LEAD_KEY", default="")
 # Geliştirme / test kökenleri (ör. http://localhost:3000) — virgülle; üretimde boş
 TRACKING_DEV_ORIGINS = config("TRACKING_DEV_ORIGINS", default="", cast=Csv())
 TRACKING_ALLOWED_ORIGINS = sorted({*config("TRACKING_ALLOWED_ORIGINS", default="", cast=Csv()),
