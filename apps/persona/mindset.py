@@ -84,7 +84,98 @@ CONTENT_LEXICON = {
         ("avant apres", 1.6), ("antes y despues", 1.6), ("once sonra", 1.6), ("dogal gorun", 1.6),
     ],
 }
+# Kardeş sitelerin SSS'leri etiketsiz serbest metindir (TR kökte; EN/DE/RU/UK/BG/AR…) — konu sözlüğü:
+# fiyat / ödeme / taksit / sigorta, ağrı / uyuşturma / sterilizasyon, garanti, malzeme / marka / ömür / sertifika,
+# süre / seans / gün, güven / "kim tedavi edecek" / başarı oranı, sonuç / doğal görünüm / renk / çarpıklık, ulaşım / saat.
+FAQ_LEXICON = {
+    PERSONA_FEAR: [
+        ("болка", 2.2), ("болит", 2.2), ("болезнен", 2.0), ("упойка", 1.8), ("يؤلم", 2.2), ("بنج", 1.8), ("bolesn", 2.2), ("uyusur", 1.6), ("uyusma", 1.6),
+        ("sedasyon", 1.8), ("acisiz", 1.6), ("agrisiz", 1.6), ("painless", 1.6), ("schmerzfrei", 1.6), ("без боли", 1.6),
+        ("steril", 1.6), ("hijyen", 1.4), ("hygien", 1.4), ("enfeksiyon", 1.8), ("стерил", 1.6), ("гигиен", 1.4), ("تعقيم", 1.6),
+        ("kanama", 1.6), ("bleeding", 1.6), ("blutung", 1.6), ("кровотеч", 1.6), ("sisme", 1.2), ("swelling", 1.2), ("schwellung", 1.2),
+        ("yan etki", 1.6), ("side effect", 1.6), ("nebenwirkung", 1.6), ("побочн", 1.6),
+    ],
+    PERSONA_QUALITY: [
+        ("wie lange halt", 2.0), ("how long will", 1.6), ("прослуж", 1.8), ("omur", 1.6), ("dayanir", 1.6), ("materia", 1.6), ("материал", 1.6), ("марк", 1.4), ("مواد", 1.6), ("hangi implant", 1.8), ("hangi marka", 1.8),
+        ("welche marke", 1.6), ("welches implantat", 1.8), ("какой имплант", 1.8), ("какая марка", 1.6), ("quale impianto", 1.8),
+        ("que implante", 1.8), ("quel implant", 1.8), ("welk implantaat", 1.8), ("jaki implant", 1.8), ("ce implant", 1.8),
+        ("какъв имплант", 1.8), ("certificate", 1.4), ("sertifika", 1.4), ("zertifikat", 1.4), ("сертифик", 1.4), ("شهاد", 1.4),
+        ("kac yil", 1.6), ("how many years", 1.6), ("wie viele jahre", 1.6), ("сколько лет", 1.6), ("ile lat", 1.6),
+        ("cuantos anos", 1.6), ("quanti anni", 1.6), ("combien d annees", 1.6), ("hoeveel jaar", 1.6), ("колко години", 1.6),
+        ("cati ani", 1.6), ("dogal", 1.0), ("sonuc", 0.8), ("result", 0.8), ("ergebnis", 0.8), ("результат", 0.8), ("resultat", 0.8),
+        ("risultat", 0.8), ("resultad", 0.8), ("wynik", 0.8), ("نتيجة", 0.8), ("نتائج", 0.8), ("резултат", 0.8),
+        ("dijital", 1.0), ("digital", 1.0), ("3d", 1.0), ("3-boyutlu", 1.0), ("tomografi", 1.0), ("cbct", 1.2),
+        ("teknoloji", 1.0), ("technolog", 1.0), ("технолог", 1.0),
+    ],
+    PERSONA_URGENCY: [
+        ("ne kadar surer", 1.6), ("kac saat", 1.4), ("kac randevu", 1.6), ("tek seferde", 1.6), ("ayni gun", 1.8),
+        ("wie lange dauert", 1.6), ("wie viele sitzungen", 1.6), ("how many sessions", 1.6), ("how many appointments", 1.6),
+        ("сколько длится", 1.6), ("сколько визитов", 1.6), ("за один раз", 1.6), ("колко време", 1.6), ("колко дни", 1.8),
+        ("колко посещения", 1.6), ("cat dureaza", 1.6), ("cate vizite", 1.6), ("jak dlugo trwa", 1.6), ("ile wizyt", 1.6),
+        ("hoeveel afspraken", 1.6), ("hoe lang duurt", 1.6), ("combien de seances", 1.6), ("combien de rendez", 1.6),
+        ("quante sedute", 1.6), ("quante visite", 1.6), ("cuantas sesiones", 1.6), ("cuantas visitas", 1.6),
+        ("كم جلسة", 1.6), ("كم مدة", 1.6), ("كم تستغرق", 1.6), ("hur lang tid", 1.6), ("hvor lang tid", 1.6),
+        ("iyilesme suresi", 1.4), ("healing time", 1.4), ("heilungsdauer", 1.4), ("recovery", 1.2), ("заживл", 1.4),
+    ],
+    PERSONA_PRICE: [
+        ("kredi karti", 1.6), ("credit card", 1.6), ("kreditkarte", 1.6), ("carte bancaire", 1.6), ("кредитн", 1.6),
+        ("creditcard", 1.6), ("carta di credito", 1.6), ("tarjeta", 1.6), ("karta", 1.4), ("بطاقة", 1.6),
+        ("sigorta", 1.6), ("insurance", 1.6), ("versicherung", 1.6), ("verzekering", 1.6), ("assurance", 1.6),
+        ("assicurazione", 1.6), ("seguro", 1.6), ("ubezpiecz", 1.6), ("страхов", 1.6), ("застрахов", 1.6), ("asigurar", 1.6), ("تأمين", 1.6),
+        ("kaca", 1.6), ("tutar", 1.4), ("maliyet", 1.6), ("ratenzahlung", 1.8), ("вноск", 1.8), ("разсрочен", 1.8), ("rata", 1.4),
+        ("raty", 1.6), ("cuota", 1.6), ("plazos", 1.8), ("mensualit", 1.8), ("echelonn", 1.6), ("termijn", 1.6), ("gespreid", 1.6),
+        ("acompte", 1.4), ("anzahlung", 1.4), ("kapora", 1.4), ("on odeme", 1.4), ("предоплат", 1.4), ("депозит", 1.4),
+        ("depozit", 1.4), ("anticipo", 1.4), ("inklusive", 1.4), ("inclus", 1.4), ("incluso", 1.4), ("incluido", 1.4),
+        ("включ", 1.4), ("inbegrepen", 1.4), ("شامل", 1.4), ("indirim", 1.6), ("kampanya", 1.4), ("rabatt", 1.6), ("скидк", 1.6), ("отстъпк", 1.6), ("خصم", 1.6),
+        ("ucretsiz", 1.2), ("free", 1.0), ("kostenlos", 1.2), ("gratis", 1.2), ("бесплатн", 1.2), ("безплатн", 1.2), ("مجان", 1.2),
+    ],
+    PERSONA_READY: [
+        ("otopark", 1.4), ("parking", 1.4), ("parkplatz", 1.4), ("парковк", 1.4), ("nasil gel", 1.4), ("nasil ulas", 1.4),
+        ("metro", 1.2), ("calisma saat", 1.4), ("opening hours", 1.4), ("offnungszeiten", 1.4), ("часы работы", 1.4),
+        ("horaire", 1.4), ("orari", 1.4), ("horario", 1.4), ("godziny", 1.4), ("работно време", 1.4),
+        ("randevu nasil", 1.6), ("how to book", 1.6), ("how do i book", 1.6), ("termin vereinbaren", 1.6), ("как записаться", 1.6),
+        ("online randevu", 1.4), ("ne zaman gelebilirim", 1.4), ("hemen randevu", 1.6), ("bugun", 1.2), ("today", 1.2), ("heute", 1.2), ("сегодня", 1.2),
+    ],
+    PERSONA_TRUST: [
+        ("who will", 1.4), ("kim tedavi", 1.6), ("kim yapiyor", 1.4), ("kim bakiyor", 1.4), ("wer behandelt", 1.6),
+        ("кто будет", 1.4), ("кто лечит", 1.4), ("chi esegu", 1.4), ("kto", 1.2), ("кой", 1.2),
+        ("tercuman", 0.8), ("translator", 0.8), ("interpreter", 0.8), ("dolmetscher", 0.8), ("переводчик", 0.8),
+        ("ingilizce", 1.0), ("english speaking", 1.2), ("deutsch sprechen", 1.2), ("по-русски", 1.2), ("русский", 1.0), ("arapca", 1.0), ("عربي", 1.0),
+    ],
+    PERSONA_SKEPTIC: [
+        ("referans", 1.2), ("reference", 1.2), ("neden siz", 1.4), ("why choose", 1.4), ("why you", 1.2), ("warum sie", 1.4),
+        ("почему вы", 1.4), ("basari oran", 1.6), ("success rate", 1.6), ("erfolgsquote", 1.6), ("успешн", 1.4),
+        ("taux de reussite", 1.6), ("tasso di successo", 1.6), ("tasa de exito", 1.6), ("fark", 1.0), ("difference", 1.0),
+        ("unterschied", 1.0), ("разниц", 1.0), ("hangisi", 1.2), ("which one", 1.2), ("which is better", 1.4), ("welche ist besser", 1.4), ("что лучше", 1.4),
+        ("basarisiz", 1.4), ("fail", 1.4), ("dusme", 1.2), ("dusers", 1.2), ("fall out", 1.4), ("ausfallen", 1.2), ("выпад", 1.4), ("kirilir", 1.2), ("break", 1.2), ("bricht", 1.2), ("сломает", 1.2),
+    ],
+    PERSONA_PREMIUM: [
+        ("ozel oda", 1.8), ("konaklama", 1.4), ("accommodation", 1.4), ("unterkunft", 1.4), ("проживан", 1.4), ("hebergement", 1.4),
+        ("alloggio", 1.4), ("alojamiento", 1.4), ("nocleg", 1.4), ("настаняван", 1.4), ("cazare", 1.4), ("إقامة", 1.4),
+        ("tercuman", 0.8), ("translator", 0.8), ("interpreter", 0.8), ("dolmetscher", 0.8), ("переводчик", 0.8),
+        ("ucak", 1.0), ("flight", 1.0), ("flug", 1.0), ("перелет", 1.0), ("havaliman", 1.2), ("airport", 1.2), ("flughafen", 1.2), ("аэропорт", 1.2),
+    ],
+    PERSONA_SHAME: [
+        ("sarilik", 1.4), ("sari dis", 1.6), ("yellow", 1.4), ("gelb", 1.4), ("желт", 1.4), ("jaune", 1.4), ("giall", 1.4),
+        ("amarill", 1.4), ("zolt", 1.4), ("اصفر", 1.4), ("carpik", 1.6), ("egri", 1.4), ("dis arasi", 1.4), ("lucke", 1.4), ("щель", 1.4),
+        ("leke", 1.4), ("stain", 1.4), ("fleck", 1.4), ("пятн", 1.4), ("utan", 1.6), ("embarrass", 1.8), ("confidence", 1.4),
+        ("ozguven", 1.6), ("selbstbewusst", 1.4), ("peinlich", 1.8), ("стесня", 1.8), ("уверенност", 1.4), ("gummy", 1.6),
+        ("dis eti gulus", 1.6), ("gulumse", 1.2), ("beyazlat", 1.2), ("whiten", 1.2), ("bleaching", 1.2), ("aufhell", 1.2), ("отбел", 1.2), ("blanch", 1.2),
+        ("estetik", 1.2), ("aesthetic", 1.2), ("asthetisch", 1.2), ("эстетич", 1.2), ("fotograf", 1.0), ("photo", 1.0), ("foto", 1.0), ("фото", 1.0),
+    ],
+}
+for _p, _pats in FAQ_LEXICON.items():
+    CONTENT_LEXICON.setdefault(_p, []).extend(_pats)
 _CONTENT = {p: [(_compile(pat), w) for pat, w in pats] for p, pats in CONTENT_LEXICON.items()}
+
+
+def faq_topic(question):
+    """Serbest metin SSS sorusunun konusu: (persona, skor) — eşleşme yoksa ('unknown', 0)."""
+    sc = score_content(question)
+    if not sc:
+        return PERSONA_UNKNOWN, 0.0
+    top = max(sc, key=sc.get)
+    return top, sc[top]
 
 EVIDENCE_CAP = 60
 FAQ_WEIGHT = 0.6        # sözlükle sınıflanan soru: skor × ağırlık (en fazla FAQ_MAX)

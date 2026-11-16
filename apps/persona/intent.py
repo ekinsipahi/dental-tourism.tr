@@ -218,7 +218,7 @@ def intent_scores(request) -> dict:
     # pages.py'de süreye göre sayılıyor — iki kez saymayalım (3 sn bakan kişi "fiyatçı" olmasın)
     from .pages import page_signal
 
-    if page_signal(request.path)[0] is None:
+    if page_signal(request.path, getattr(request, "site", "dt"))[0] is None:
         for persona, s in score_text(request.path).items():
             scores[persona] = scores.get(persona, 0) + s * 0.5
     return {"query": query, "scores": scores}

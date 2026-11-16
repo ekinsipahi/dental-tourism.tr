@@ -68,8 +68,9 @@ def behavior_scores(s: VisitorSession) -> dict:
     sc[PERSONA_URGENCY] += s.urgency_keyword_hits * 1.5
     if 0 < s.total_time_spent_sec < 40 and s.cta_clicks:
         sc[PERSONA_URGENCY] += 0.8
-    # Hazır
-    sc[PERSONA_READY] += s.cta_clicks * 0.6 + s.form_starts * 1.5 + s.whatsapp_clicks * 2.0
+    # Hazır — telefon denemesi de karar sinyalidir (dönüşüm sayılmaz ama niyet gösterir), form gönderimi en güçlüsü
+    sc[PERSONA_READY] += s.cta_clicks * 0.6 + s.form_starts * 1.5 + s.whatsapp_clicks * 2.0 \
+        + min(s.phone_clicks, 3) * 1.0 + min(s.form_submits, 2) * 2.0
     if s.total_sessions >= 3:
         sc[PERSONA_READY] += 1.0
         sc[PERSONA_TRUST] += 0.5
@@ -351,10 +352,22 @@ def get_or_create_persona(request, create=True):
 # ══ 4. Events / feedback ══════════════════════════════════════════════════════
 EVENT_ALIASES = {
     "scroll_depth": "scroll", "before_after_interact": "before_after", "youtube_click": "video_play",
-    "maps_click": "click", "instagram_click": "social_proof", "language_switch": "click",
-    "nav_click": "click", "email_click": "click",
+    "instagram_click": "social_proof", "nav_click": "click",
     "chatbot_open": "click", "chatbot_message": "click", "video_progress": "video_time",
 }
+# Kardeş sitelerin bölüm kimlikleri serbest metindir (section[id] / data-track-section: "hizmetler", "doktorlar",
+# "yorumlar", "sss", "fiyatlar", "galeri" …) → dentaltourism'in bölüm adlarına çevrilir. Yalnızca BİLİNMEYEN adlar
+# çevrilir; "price-note" gibi bilerek sayılmayan adlar olduğu gibi kalır.
+SECTION_ALIASES = (
+    ("price", ("fiyat", "price", "pricing", "preis", "prijs", "prix", "tarif", "prezz", "precio", "cennik", "cena", "цен", "ucret", "اسعار", "سعر")),
+    ("reviews", ("yorum", "review", "testimonial", "bewertung", "rezension", "отзыв", "avis", "recens", "opini", "referans", "shorts", "تقييم", "تجارب")),
+    ("safety", ("garanti", "guarantee", "warranty", "sertifika", "certif", "zertifik", "safety", "guven", "steril", "hijyen", "hygien", "гарант", "ضمان")),
+    ("before_after", ("once-sonra", "oncesonra", "before", "vorher", "avant", "prima-dopo", "antes", "до-после", "قبل")),
+    ("gallery", ("galeri", "gallery", "galerie", "foto", "photo", "smile-gallery", "галере", "صور")),
+    ("doctor", ("doktor", "doctor", "hekim", "dentist", "team", "ekip", "arzt", "zahnarzt", "врач", "hakkimizda", "about", "uber-uns", "o-nas", "kimdir", "ozgecmis", "طبيب")),
+    ("faq", ("sss", "faq", "soru", "fragen", "вопрос", "question", "preguntas", "domande", "pytania", "vragen", "اسئلة")),
+    ("video", ("video", "youtube", "видео")),
+)
 SECTION_FIELDS = {
     "price": ("price_section_time", "price_section_clicks"),
     "reviews": ("review_section_time", "testimonial_reads"),
@@ -370,22 +383,60 @@ SECTION_FIELDS = {
 }
 
 
-def observe_page(session_key, path):
+NON_SIGNAL_SECTIONS = {"price-note", "sidebar", "content", "hero", "cta", "contact", "footer", "nav"}
+
+
+def canonical_section(name):
+    """Bölüm adı → SECTION_FIELDS anahtarı. Bilinen / bilerek sayılmayan adlar aynen; kardeş sitelerin serbest
+    kimlikleri ('yorumlar', 'doktorlar', 'sss', 'fiyatlar') sözlükle çevrilir."""
+    from .intent import normalize
+
+    name = str(name or "")
+    if not name or name in SECTION_FIELDS or name in NON_SIGNAL_SECTIONS:
+        return name
+    n = normalize(name).replace(" ", "-")
+    for canon, needles in SECTION_ALIASES:
+        if any(w in n for w in needles):
+            return canon
+    return name
+
+
+def observe_page(session_key, path, page_type="", site=""):
     """Pageview beacon'ı: sayfanın persona sinyali (apply_page) + yeniden teşhis; değiştiyse yazar, önbelleği tazeler.
-    Sayfa GET'i böylece hiç DB'ye gitmez (get_or_create_persona önbellekten döner)."""
+    Sayfa GET'i böylece hiç DB'ye gitmez (get_or_create_persona önbellekten döner).
+    page_type: sayfanın bildirdiği tür ipucu (kardeş siteler: data-page); site: oturumunkinden farklıysa."""
     from .pages import apply_page
 
     session = VisitorSession.objects.filter(session_key=session_key).first()
     if session is None:
         return
-    if apply_page(session, path):
-        probs = infer(session)
-        best = max(probs, key=probs.get)
-        session.persona_scores = probs
-        if best != session.assigned_persona:
-            session.update_persona(best, probs[best], "rule")
+    if site and site != session.site:
+        session.site = site
+    if apply_page(session, path, page_type):
+        _rediagnose(session, force=True)
         session.save()
         cache.delete(f"persona:{session_key}")  # bir sonraki GET yeni teşhisi hesaplar (yalnızca okur, yazmaz)
+
+
+def _rediagnose(session, force=False):
+    """Kanıt değişti → persona dağılımını yeniden hesapla; en olası persona değiştiyse (ya da güven belirgin
+    oynadıysa) oturuma yaz. Böylece admin'deki 'persona' alanı yalnızca sayfa beacon'ında değil, SSS okuma /
+    telefon / aramadan dönüş gibi olaylardan sonra da güncel kalır. Döner: yazılacak alanlar (boşsa değişiklik yok)."""
+    probs = infer(session)
+    best = max(probs, key=probs.get)
+    moved = abs(probs[best] - float(session.persona_confidence or 0)) >= 0.05
+    if not (force or best != session.assigned_persona or moved):
+        return []
+    session.persona_scores = probs
+    fields = ["persona_scores"]
+    if best != session.assigned_persona:
+        session.update_persona(best, probs[best], "rule")
+        fields += ["assigned_persona", "persona_confidence", "persona_method", "persona_updated_at",
+                   "persona_switches", "previous_personas"]
+    elif moved:
+        session.persona_confidence = probs[best]
+        fields.append("persona_confidence")
+    return fields
 
 
 def record_event(session_key, event_type, data=None, page_url="", page_type="", session=None):
@@ -399,31 +450,103 @@ def record_event(session_key, event_type, data=None, page_url="", page_type="", 
     valid = {c for c, _ in BehaviorEvent.EVENT_TYPES}
     if event_type not in valid:
         return
+    # Sayfa türü: olayın bildirdiği ipucu, yoksa site + yoldan (kardeş siteler: /hizmetler/… → treatment)
+    page_type = _page_type(session, page_url, page_type)
     BehaviorEvent.objects.create(session=session, event_type=event_type, data=data,
                                  page_url=(page_url or "")[:500], page_type=(page_type or "")[:30])
     _update_aggregates(session, event_type, data, page_type)
-    _count_evidence(session, event_type, data, page_url)
+    _count_evidence(session, event_type, data, page_url, page_type)
+    fields = _rediagnose(session)
+    if fields:
+        session.save(update_fields=fields)
     if event_type in CONVERSION_EVENTS:
         _record_conversion(session, CONVERSION_EVENTS[event_type])
     cache.delete(f"persona:{session_key}")
 
 
-def _count_evidence(session, event_type, data, page_url=""):
-    """Persona motorunun sayacı: sayfa süresi, SSS (açtı / kaç sn okudu), fiyat sorma… → kanıt günlüğü + skor."""
+def _page_type(session, page_url, hint=""):
+    from urllib.parse import urlparse
+
+    from .pages import page_type_of
+
+    if hint:
+        return str(hint)[:30]
+    if not page_url:
+        return ""
+    try:
+        return page_type_of(getattr(session, "site", "dt"), urlparse(page_url).path or "/")
+    except Exception:  # noqa: BLE001
+        return ""
+
+
+# İletişim tıklamaları → kanıt: (persona ağırlıkları, etiket, sayaçla zaten puanlanıyor mu?).
+# whatsapp/phone/form/cta sayaçları behavior_scores'ta puanlanır → burada yalnızca kanıt günlüğüne yazılır (çift sayım
+# olmasın); harita / e-posta için sayaç yok → puan burada eklenir. Konum (position) etiketi tamamlar; fiyat notundaki
+# buton ayrıca fiyat sinyali verir (price_section_clicks sayacı, _update_aggregates).
+CONTACT_SIGNALS = {
+    "phone_click": ({PERSONA_READY: 1.0}, "Telefonu tıkladı", True),
+    "whatsapp_click": ({PERSONA_READY: 2.0}, "WhatsApp'ı tıkladı", True),
+    "form_start": ({PERSONA_READY: 1.5}, "Forma başladı", True),
+    "form_submit": ({PERSONA_READY: 2.0}, "Form gönderdi", True),
+    "cta_click": ({PERSONA_READY: 0.6}, "Çağrı butonunu tıkladı", True),
+    "maps_click": ({PERSONA_READY: 1.0, PERSONA_URGENCY: 0.3}, "Yol tarifine baktı (harita)", False),
+    "email_click": ({PERSONA_READY: 0.6, PERSONA_TRUST: 0.3}, "E-posta adresini tıkladı", False),
+}
+
+
+def _add_scores(session, sig):
+    from .pages import _add
+
+    return _add(session, sig, 1.0)
+
+
+def _count_evidence(session, event_type, data, page_url="", page_type=""):
+    """Persona motorunun sayacı: sayfa süresi, SSS (açtı / kaç sn okudu), fiyat sorma, iletişim tıklamaları,
+    aramadan dönüş, dil değişimi… → kanıt günlüğü + skor."""
     from urllib.parse import urlparse
 
     from .mindset import add_evidence, apply_faq
     from .pages import apply_dwell
 
     changed = False
+    position = str(data.get("position") or "")
     if event_type == "faq_open":
         changed = apply_faq(session, data.get("q", ""), str(data.get("mind", "")))
     elif event_type == "faq_read":
         changed = apply_faq(session, data.get("q", ""), str(data.get("mind", "")), seconds=_num(data.get("seconds"), 600))
     elif event_type == "time_on_page" and page_url:
-        changed = apply_dwell(session, urlparse(page_url).path or "/", _num(data.get("seconds"), 1800))
-    elif event_type in ("whatsapp_click", "phone_click") and data.get("position") == "price-note":
-        add_evidence(session, "click", "Fiyatını sordu (fiyat notu)", {PERSONA_PRICE: 0.8})
+        changed = apply_dwell(session, urlparse(page_url).path or "/", _num(data.get("seconds"), 1800), page_type)
+    elif event_type in CONTACT_SIGNALS:
+        sig, label, counted = CONTACT_SIGNALS[event_type]
+        sig, extra = dict(sig), {}
+        if position == "price-note" and event_type in ("whatsapp_click", "phone_click"):
+            sig[PERSONA_PRICE] = 0.8        # sayaçta: price_section_clicks
+            label = "Fiyatını sordu (fiyat notu)"
+        elif position:
+            label = f"{label} ({position})"
+        started = session.visit_started_at or timezone.now()
+        if (event_type != "cta_click" and (timezone.now() - started).total_seconds() < 45
+                and "seq:fast-contact" not in (session.pages_seen or [])):
+            extra[PERSONA_URGENCY] = 0.5      # girişten 45 sn içinde aradı: acelesi var (ziyaret başına bir kez)
+            session.pages_seen = [*(session.pages_seen or []), "seq:fast-contact"][-40:]
+        add_evidence(session, "click", label, {**sig, **extra})
+        _add_scores(session, extra if counted else {**sig, **extra})
+        changed = True
+    elif event_type == "contact_return":
+        # Telefon / WhatsApp / harita uygulamasından siteye döndü: 8+ sn uzak kaldıysa büyük olasılıkla ulaştı
+        away = _num(data.get("away_seconds"), 3600)
+        likely = bool(data.get("likely_contacted")) or away >= 8
+        kind = str(data.get("kind") or "iletişim")
+        sig = {PERSONA_READY: 1.5 if likely else 0.5}
+        add_evidence(session, "click", f"{kind} sonrası siteye döndü ({away} sn uzakta)", sig)
+        _add_scores(session, sig)
+        changed = True
+    elif event_type == "language_switch":
+        # Kendi dilinde okumak istiyor: anlamaya çalışan, dikkatli okuyan ziyaretçi
+        lang = str(data.get("to") or data.get("lang") or "")
+        sig = {PERSONA_TRUST: 0.3, PERSONA_SKEPTIC: 0.2}
+        add_evidence(session, "click", f"Dil değiştirdi{f' → {lang}' if lang else ''}", sig)
+        _add_scores(session, sig)
         changed = True
     elif event_type == "cert_click":
         add_evidence(session, "click", "Sertifika / garanti inceledi", {PERSONA_FEAR: 1.5, PERSONA_QUALITY: 0.5})
@@ -466,10 +589,10 @@ def _update_aggregates(s, event_type, data, page_type):
         # sayfa görüntüleme yalnızca ilk segmentte sayılır, yoksa her sekme değişimi yeni ziyaret gibi görünür
         if _num(data.get("segment"), 10_000) == 0:
             inc("total_page_views")
-            if page_type == "blog_detail":
+            if page_type in ("blog_detail", "blog"):
                 inc("blog_reads")
     elif event_type in ("section_view", "section_time"):
-        section = str(data.get("section", ""))
+        section = canonical_section(data.get("section", ""))
         time_field, count_field = SECTION_FIELDS.get(section, (None, None))
         if event_type == "section_time" and time_field:
             inc(time_field, _num(data.get("seconds"), 600))

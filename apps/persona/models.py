@@ -145,7 +145,8 @@ class BehaviorEvent(models.Model):
         ("price_hover", "Price hover"), ("review_read", "Review read"), ("faq_open", "FAQ open"), ("faq_read", "FAQ read (seconds)"),
         ("click", "Click"), ("bounce", "Bounce"), ("cert_click", "Certification click"),
         ("before_after", "Before/after"), ("urgency_cta", "Urgency CTA"), ("pageview", "Page view"),
-        ("social_proof", "Social proof (Instagram)"),
+        ("social_proof", "Social proof (Instagram)"), ("maps_click", "Maps / directions"), ("email_click", "E-mail"),
+        ("language_switch", "Language switch"), ("contact_return", "Returned after contact click"),
     ]
 
     session = models.ForeignKey(VisitorSession, on_delete=models.CASCADE, related_name="events")
