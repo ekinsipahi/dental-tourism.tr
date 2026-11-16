@@ -191,9 +191,9 @@ REST_FRAMEWORK = {
 # Anahtar = kısa site kodu (session_key önekinde kullanılır); origins = CORS / köken allowlist'i.
 TRACKING_SITES = {
     "dt": {"name": "dentaltourism.tr", "domain": "dentaltourism.tr", "origins": []},  # bu site: çerezli iç API
-    "drd": {"name": "drdevrim.com", "domain": "drdevrim.com",
+    "drd": {"name": "drdevrim.com", "domain": "drdevrim.com", "default_language": "tr",   # kök Türkçe, /lang/<kod>/
             "origins": ["https://drdevrim.com", "https://www.drdevrim.com"]},
-    "dbs": {"name": "devrimbirikensipahi.com.tr", "domain": "devrimbirikensipahi.com.tr",
+    "dbs": {"name": "devrimbirikensipahi.com.tr", "domain": "devrimbirikensipahi.com.tr", "default_language": "tr",  # kök Türkçe, /<kod>/
             "origins": ["https://devrimbirikensipahi.com.tr", "https://www.devrimbirikensipahi.com.tr"]},
 }
 # Sunucudan sunucuya lead aktarımı (/api/t/lead/, X-DT-Key başlığı): kardeş sitenin arka ucu (devrimbirikensipahi

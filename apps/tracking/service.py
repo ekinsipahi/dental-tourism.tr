@@ -236,6 +236,14 @@ class ExternalPageRequest(PageRequest):
     def __init__(self, request, site, sid, vid, url, referrer=""):
         super().__init__(request, url, referrer)
         self.site = site
+        # Önek yoksa kardeş sitenin kendi varsayılan dili (ikisinde de kök Türkçe) — dentaltourism'in dili değil
+        from django.conf import settings
+        from dental_tourism.languages import LANGUAGE_META
+        parts = [p for p in self.path.strip("/").split("/") if p]
+        if parts and parts[0] == "lang":
+            parts = parts[1:]
+        if not (parts and parts[0] in LANGUAGE_META):
+            self.LANGUAGE_CODE = settings.TRACKING_SITES.get(site, {}).get("default_language", self.LANGUAGE_CODE)
         self.session = _ExternalSession(f"{site}:{sid}")
         self.COOKIES = {}
         self._dt_vid = vid or ""

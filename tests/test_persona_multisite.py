@@ -232,3 +232,12 @@ class DecisionDeliveryTests(SeededTestCase):
         r = c.post("/api/t/persona/", data=json.dumps({"site": "drd", "vid": VID, "sid": "6" * 24, "url": DRD + "/"}),
                    content_type="text/plain", HTTP_USER_AGENT=BROWSER_UA, HTTP_ORIGIN="https://evil.example")
         self.assertEqual(r.status_code, 403)
+
+    def test_root_pages_of_sister_sites_are_turkish(self):
+        b = _Site("dbs", DBS, "a1" * 12)
+        for path in ("/implant", "/zirkonyum", "/lamina", "/beyazlatma"):
+            b.page(path, seconds=35, page_type="treatment")
+        d = json.loads(b._post("/api/t/persona/", {"url": DBS + "/"}).content)["decision"]
+        self.assertEqual(d["persona"], "skeptic")
+        self.assertNotEqual(d["message"]["title"], "Everything here is real")   # Türkçe çeviri
+        self.assertEqual(d["message"]["button"], d["message"]["button"].strip())
