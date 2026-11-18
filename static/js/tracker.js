@@ -235,8 +235,11 @@
     var now = Date.now(); if (now - galleryT < 2000) return; galleryT = now;
     var sec = img.closest("[data-track-section], section[id], [class*=gallery], [class*=lightbox], [class*=swiper], [class*=before], figure");
     var name = sec ? (sec.getAttribute("data-track-section") || sec.id || String(sec.className || "").split(" ")[0]) : "";
-    if (/before|after/.test(String(name).toLowerCase())) track("before_after_interact", { section: name.slice(0, 40), label: (img.alt || "").slice(0, 60), position: positionOf(img) });
-    else track("gallery_view", { section: name.slice(0, 40), label: (img.alt || "").slice(0, 60), position: positionOf(img) });
+    var n = String(name).toLowerCase(), cls = String((img.closest("[class*=gallery], [class*=lightbox], [class*=swiper], figure") || {}).className || "").toLowerCase();
+    var data = { section: name.slice(0, 40), label: (img.alt || "").slice(0, 60), position: positionOf(img) };
+    if (/before|after/.test(n + " " + cls)) track("before_after_interact", data);
+    else if (/gallery|photo|lightbox|swiper|figure/.test(n + " " + cls) || img.closest("figure")) track("gallery_view", data);
+    else { data.element = "image"; track("ui_click", data); }   // içerik / hero görseli: kayıt var, persona ağırlığı yok
   }
   // data-track'i olmayan linkler için güvenlik ağı (href'ten tür çıkarımı)
   function typeFromHref(href) {

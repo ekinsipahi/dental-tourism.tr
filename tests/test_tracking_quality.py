@@ -207,3 +207,19 @@ class CrossSiteTests(SeededTestCase):
         p = PersonaSession.objects.get(session_key="dbs:" + "f" * 24)   # aynı kimlik: persona satırı yeni oturuma bağlandı
         self.assertEqual(p.site, "dbs")
         self.assertIn("Acil diş hekimi sayfasına geldi", labels("dbs:" + "f" * 24))
+
+
+class PageViewDwellTests(SeededTestCase):
+    def test_exit_beacon_updates_the_pageview_it_belongs_to_even_if_the_next_pageview_arrived_first(self):
+        c = Client()
+        sid = "ab" * 12
+        body = {"site": "drd", "vid": VID, "sid": sid, "title": "t"}
+        ext(c, "/api/t/pageview/", {**body, "url": DRD + "/disci/buyukcekmece/kumburgaz/"})
+        ext(c, "/api/t/pageview/", {**body, "url": DRD + "/"})                       # SPA geçişi: yeni sayfa önce geldi
+        events(c, sid, [{"event_type": "time_on_page", "data": {"seconds": 33, "segment": 0, "max_scroll": 70},
+                         "page_url": "/disci/buyukcekmece/kumburgaz/"}])
+        events(c, sid, [{"event_type": "time_on_page", "data": {"seconds": 4, "segment": 0, "max_scroll": 10}, "page_url": "/"}])
+        first = PageView.objects.get(session__session_key="drd:" + sid, url__contains="kumburgaz")
+        home = PageView.objects.get(session__session_key="drd:" + sid, url=DRD + "/")
+        self.assertEqual((first.time_on_page_sec, first.scroll_depth), (33, 70.0))
+        self.assertEqual((home.time_on_page_sec, home.scroll_depth), (4, 10.0))

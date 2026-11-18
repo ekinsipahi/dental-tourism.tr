@@ -208,9 +208,11 @@
     var now = Date.now(); if (now - galleryT < 2000) return; galleryT = now;
     var sec = img.closest("[data-track-section], section[id], [class*=gallery], [class*=galeri], [class*=lightbox], [class*=swiper], [class*=before], [class*=once], figure");
     var name = sec ? (sec.getAttribute("data-track-section") || sec.id || String(sec.className || "").split(" ")[0]) : "";
-    var n = String(name).toLowerCase();
-    if (/before|after|once|sonra|vorher|nachher/.test(n)) track("before_after_interact", { section: name.slice(0, 40), label: (img.alt || "").slice(0, 60), position: positionOf(img) });
-    else track("gallery_view", { section: name.slice(0, 40), label: (img.alt || "").slice(0, 60), position: positionOf(img) });
+    var n = String(name).toLowerCase(), cls = String((img.closest("[class*=gallery], [class*=galeri], [class*=lightbox], [class*=swiper], figure") || {}).className || "").toLowerCase();
+    var data = { section: name.slice(0, 40), label: (img.alt || "").slice(0, 60), position: positionOf(img) };
+    if (/before|after|once|sonra|vorher|nachher/.test(n + " " + cls)) track("before_after_interact", data);
+    else if (/galeri|gallery|foto|photo|lightbox|swiper|kareler|figure/.test(n + " " + cls) || img.closest("figure")) track("gallery_view", data);
+    else { data.element = "image"; track("ui_click", data); }   // hero / arka plan görseli: kayıt var, persona ağırlığı yok
   }
   document.addEventListener("click", function (e) {
     var t = e.target; if (!t || !t.closest) return;

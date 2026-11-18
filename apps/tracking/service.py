@@ -469,11 +469,11 @@ def record_event(session, event_type: str, data: dict, page_url: str = ""):
             and not session.ip_country and session.ip_address:
         _enrich_geo_async(session.id, session.ip_address)
 
-    _update_session_from_event(session, event_type, data)
+    _update_session_from_event(session, event_type, data, page_url)
     cache.delete(f"tracking_session:{session.session_key}")
 
 
-def _update_session_from_event(session, event_type: str, data: dict):
+def _update_session_from_event(session, event_type: str, data: dict, page_url: str = ""):
     """Session'daki sayaçları güncelle."""
     from .models import TrackingEvent
 
@@ -523,7 +523,7 @@ def _update_session_from_event(session, event_type: str, data: dict):
         session.total_time_sec += _int(data.get("seconds"), 1800)  # page_views pageview API'de sayılır (çift sayma yok)
         update_fields.append("total_time_sec")
         # Çıkış beacon'ı son sayfanın özetini taşır: okuma süresi + en derin kaydırma → PageView satırına (yolculukta görünür)
-        _finish_last_pageview(session, _int(data.get("seconds"), 1800), _int(data.get("max_scroll"), 100))
+        _finish_last_pageview(session, _int(data.get("seconds"), 1800), _int(data.get("max_scroll"), 100), page_url)
 
     elif event_type == TrackingEvent.FORM_SUBMIT and str(data.get("form", "")) == "calendly":
         pass  # Calendly randevusu: form_submit sayaçları yukarıda işlendi (is_lead=True)
@@ -543,15 +543,20 @@ def _int(v, cap):
         return 0
 
 
-def _finish_last_pageview(session, seconds, max_scroll):
-    """Son PageView satırına süre ve kaydırma derinliği yazılır (segmentler toplanır; derinlik en büyük değer)."""
+def _finish_last_pageview(session, seconds, max_scroll, page_url=""):
+    """Çıkış beacon'ının ait olduğu PageView satırına süre ve kaydırma derinliği yazılır (segmentler toplanır; derinlik
+    en büyük değer). SPA geçişinde yeni sayfanın beacon'ı önce işlenebilir → yola göre eşleştirilir, yoksa en son satır."""
+    from urllib.parse import urlparse
+
     from django.db.models import F, Case, When, Value, FloatField
 
     from .models import PageView
 
-    pv = PageView.objects.filter(session=session).order_by("-timestamp").values_list("id", flat=True).first()
-    if pv is None:
+    path = (urlparse(page_url).path if page_url else "") or ""
+    recent = list(PageView.objects.filter(session=session).order_by("-timestamp").values_list("id", "url")[:5])
+    if not recent:
         return
+    pv = next((i for i, u in recent if path and (urlparse(u).path or "/").rstrip("/") == path.rstrip("/")), recent[0][0])
     PageView.objects.filter(id=pv).update(
         time_on_page_sec=F("time_on_page_sec") + seconds,
         scroll_depth=Case(When(scroll_depth__lt=max_scroll, then=Value(float(max_scroll))), default=F("scroll_depth"),
