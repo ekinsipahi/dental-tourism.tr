@@ -38,8 +38,10 @@ _RULES = {
         (r"/(?:tesekkur|callme-tesekkur)", "thanks"),
         (r"/onay/", "confirmation"),
         (r"/dental-tourism", "dental-tourism"),
-        (r"/neden-biz", "about"),
-        (r"/sisli-dis-hekimi", "pseo-area"),
+        (r"/(?:acil-dis|emergency|notfall|urgence|urgenza|urgencia)", "emergency"),   # "acil diş hekimi" — şimdi, hemen
+        (r"/(?:neden-biz|why-us|warum-wir|waarom-wij|pourquoi|perche|por-que|dlaczego|pochemu|zashto)", "about"),
+        (r"/sisli-dis-(?:hekimi|klinigi)", "pseo-area"),
+        (r"/(?:kvkk|privacy|accounts|gizlilik)/", "page"),
         (r"/(?:soru-cevap|question-and-answer)/", "qa"),
         (r"/blog/", "blog"),
         (r"^/(?:[a-z]{2}/)?[a-z0-9-]+/?$", "treatment"),  # kategori sayfaları (8 tedavi slug'ı)

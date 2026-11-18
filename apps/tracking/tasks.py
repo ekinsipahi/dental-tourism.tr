@@ -56,6 +56,10 @@ def enrich_geo_task(session_id: str, ip: str):
         VisitorSession.objects.filter(id=uuid.UUID(str(session_id))).update(**geo)
         logger.info("Geo enriched: %s → %s/%s (%s)", str(session_id)[:8], geo.get("ip_country"), geo.get("ip_city"),
                     geo.get("geo_source"))
+        # Bulut / VPS / barındırma kuruluşu ve hiç dokunmamış oturum → JS çalıştıran bot (PetalBot, Google render…)
+        from .bots import flag_session_if_datacenter
+
+        flag_session_if_datacenter(uuid.UUID(str(session_id)), geo.get("ip_org", ""))
 
 
 def send_google_conversion(ad_conversion_id: int):
@@ -179,5 +183,10 @@ def cleanup_old_sessions():
     keys = list(stale.values_list("session_key", flat=True)[:5000])
     junk, _ = VisitorSession.objects.filter(session_key__in=keys).delete()
     pjunk, _ = PersonaSession.objects.filter(session_key__in=keys).delete()
-    logger.info(f"Cleaned {deleted} old sessions, {junk} no-beacon sessions, {pjunk} persona rows")
-    return {"old": deleted, "no_beacon": junk, "persona": pjunk}
+    # Bot bayraklı oturumlar (datacenter/webdriver) 7 gün incelenebilir kalır, sonra silinir (KPI'larda zaten sayılmaz)
+    bots = VisitorSession.objects.filter(is_lead=False, created_at__lt=timezone.now() - timedelta(days=7)).exclude(bot_reason="")
+    bkeys = list(bots.values_list("session_key", flat=True)[:5000])
+    bjunk, _ = VisitorSession.objects.filter(session_key__in=bkeys).delete()
+    PersonaSession.objects.filter(session_key__in=bkeys).delete()
+    logger.info(f"Cleaned {deleted} old sessions, {junk} no-beacon sessions, {pjunk} persona rows, {bjunk} bot sessions")
+    return {"old": deleted, "no_beacon": junk, "persona": pjunk, "bots": bjunk}

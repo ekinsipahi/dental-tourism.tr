@@ -12,7 +12,9 @@ def _human_sessions():
     """JS beacon'ı göndermiş (gerçek tarayıcı) oturumlar — botlar/JS'siz istemciler dönüşüm oranını sulandırmasın."""
     from apps.tracking.models import VisitorSession as TrackingSession
 
-    keys = TrackingSession.objects.filter(page_views__gt=0).values("session_key")
+    from apps.tracking.models import HUMAN_Q
+
+    keys = TrackingSession.objects.filter(HUMAN_Q).values("session_key")
     return VisitorSession.objects.filter(session_key__in=keys)
 
 

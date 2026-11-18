@@ -59,7 +59,7 @@ services:
     plan: starter
     schedule: "15 * * * *"
     buildCommand: pip install -r requirements.txt
-    startCommand: python manage.py periodic --job translations --job conversions
+    startCommand: python manage.py periodic --job translations --job conversions --job tracking
     envVars:
       - fromGroup: dental-tourism-shared
   - type: cron

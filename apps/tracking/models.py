@@ -60,6 +60,9 @@ class VisitorSession(models.Model):
                                       help_text="Hangi site: dt = dentaltourism.tr, drd = drdevrim.com, dbs = devrimbirikensipahi.com.tr")
     created_at     = models.DateTimeField(auto_now_add=True)
     last_seen      = models.DateTimeField(auto_now=True)
+    # Bot bayrağı: "" = insan; "datacenter" (IP kuruluşu bulut/VPS, hiç dokunmadı), "webdriver" (otomasyon). Bkz. bots.py.
+    bot_reason     = models.CharField(max_length=20, blank=True, default="", db_index=True)
+    engaged_at     = models.DateTimeField(null=True, blank=True, help_text="İlk insan hareketi (parmak/fare/klavye/tekerlek)")
 
     # ── Trafik kaynağı ──
     traffic_source = models.CharField(max_length=30, choices=TrafficSource.CHOICES, default=TrafficSource.UNKNOWN)
@@ -265,6 +268,22 @@ class TrackingEvent(models.Model):
     EMAIL_CLICK      = "email_click"
     NAV_CLICK        = "nav_click"     # iç gezinme (tedavi kartı, semt çipi …) — CTA değil
     CONTACT_RETURN   = "contact_return"  # telefon / WhatsApp / harita tıklamasından sonra siteye dönüş (kaç sn uzak kaldı)
+    # 2026-11-18: davranışın "nedeni" için eklenen olaylar
+    SECTION_TIME     = "section_time"    # bölümde geçen süre (çıkışta)
+    ENGAGED          = "engaged"         # ilk insan hareketi (parmak / fare / klavye / tekerlek) — bot ayrımı
+    UI_CLICK         = "ui_click"        # menü, sekme, slayt oku, dil açılır listesi… (href'siz buton / # bağlantı)
+    OUTBOUND_CLICK   = "outbound_click"  # başka bir siteye giden bağlantı (Google yorumları vb.)
+    GALLERY_VIEW     = "gallery_view"    # galeri fotoğrafına dokundu / büyüttü
+    PHONE_COPY       = "phone_copy"      # telefon numarasını kopyaladı (masaüstünde aramanın karşılığı)
+    TEXT_COPY        = "text_copy"       # adres / metin kopyaladı
+    TAB_RETURN       = "tab_return"      # başka sekmeye gitti, 20+ sn sonra geri geldi (karşılaştırma yapıyor)
+    EXIT_INTENT      = "exit_intent"     # fare pencereyi üstten terk etti (masaüstü)
+    FORM_ABANDON     = "form_abandon"    # forma başladı, göndermeden çıktı (son alan)
+    BOOKING_STEP     = "booking_step"    # Calendly adımı (takvime baktı / saat seçti / randevu aldı)
+    JS_ERROR         = "js_error"        # sayfada JS hatası (bozuk buton = kayıp hasta)
+    RAGE_CLICK       = "rage_click"      # aynı yere 1 sn içinde 3+ tıklama (çalışmayan öğe)
+    CONSENT          = "consent"         # çerez onayı (kabul / ret)
+    BOUNCE           = "bounce"          # 10 sn altı, kaydırmasız çıkış
 
     EVENT_CHOICES = [
         (WHATSAPP_CLICK,  "WhatsApp Click"),
@@ -288,6 +307,11 @@ class TrackingEvent(models.Model):
         (EMAIL_CLICK,     "E-mail Click"),
         (NAV_CLICK,       "Navigation Click"),
         (CONTACT_RETURN,  "Contact Return"),
+        (SECTION_TIME,    "Section Time"), (ENGAGED, "Engaged"), (UI_CLICK, "UI Click"), (OUTBOUND_CLICK, "Outbound Click"),
+        (GALLERY_VIEW,    "Gallery View"), (PHONE_COPY, "Phone Copied"), (TEXT_COPY, "Text Copied"),
+        (TAB_RETURN,      "Tab Return"), (EXIT_INTENT, "Exit Intent"), (FORM_ABANDON, "Form Abandon"),
+        (BOOKING_STEP,    "Booking Step"), (JS_ERROR, "JS Error"), (RAGE_CLICK, "Rage Click"), (CONSENT, "Consent"),
+        (BOUNCE,          "Bounce"),
     ]
 
     session    = models.ForeignKey(VisitorSession, on_delete=models.CASCADE, related_name="events")
@@ -318,7 +342,12 @@ class TrackingEvent(models.Model):
 
 
 CONTACT_EVENTS = (TrackingEvent.PHONE_CLICK, TrackingEvent.WHATSAPP_CLICK, TrackingEvent.FORM_SUBMIT,
-                  TrackingEvent.CONTACT_RETURN)  # dönüş olayı iletişim listesinde tıklamanın hemen altında görünür
+                  TrackingEvent.CONTACT_RETURN,  # dönüş olayı iletişim listesinde tıklamanın hemen altında görünür
+                  TrackingEvent.PHONE_COPY, TrackingEvent.BOOKING_STEP)
+
+# "Gerçek ziyaretçi" tanımı — TEK YER: JS beacon'ı göndermiş (page_views>0) ve bot bayrağı olmayan oturum.
+# Admin KPI'ları, HumanFilter, /api/tracking/dashboard/ ve persona panosu bunu kullanır (bkz. bots.py).
+HUMAN_Q = models.Q(page_views__gt=0, bot_reason="")
 
 
 class ContactClickManager(models.Manager):

@@ -21,7 +21,14 @@ VALID_EVENTS = {
     "chatbot_open","chatbot_message","language_switch","review_read",
     "email_click","nav_click",
     "contact_return",  # telefon/WhatsApp/harita tıklamasından sonra sekmeye dönüş (away_seconds, likely_contacted)
+    # 2026-11-18: "neden yazdı / neden yazmadı" için eklenenler (models.TrackingEvent açıklamaları)
+    "section_time","engaged","ui_click","outbound_click","gallery_view","phone_copy","text_copy","tab_return",
+    "exit_intent","form_abandon","booking_step","js_error","rage_click","consent","bounce",
 }
+# Otomasyon altındaki tarayıcı (navigator.webdriver) → oturum açılmaz; tracker beacon'da wd:1 gönderir
+def _is_webdriver(body):
+    return isinstance(body, dict) and body.get("wd") in (1, True, "1")
+
 
 def _page_request(request, body):
     """Beacon gövdesindeki sayfa bağlamı (url, referrer) ile istek vekili — oturum/persona burada doğru veriyle açılır."""
@@ -130,34 +137,47 @@ def collect_event(request):
     from apps.persona.models import VisitorSession as PersonaSession
 
     skey = request.session.session_key
-    psession = PersonaSession.objects.filter(session_key=skey).first() if skey else None
-    if psession is None and skey:
-        try:  # olay pageview beacon'ından önce geldiyse persona oturumu burada açılır
-            from apps.persona.engine import get_or_create_persona
-
-            preq = _page_request(request, body)
-            preq.tracking_session = session
-            get_or_create_persona(preq, create=True)
-            psession = PersonaSession.objects.filter(session_key=skey).first()
-        except Exception as e:  # noqa: BLE001
-            logger.error(f"persona create: {e}")
     wants_mind = False
-    for ev in events:
-        event_type = str(ev.get("event_type", ""))[:30]
-        data = ev.get("data") if isinstance(ev.get("data"), dict) else {}
-        page_url = str(ev.get("page_url", ""))[:500]
-        if event_type in VALID_EVENTS:
+    # Aynı ziyaretçinin eşzamanlı beacon'ları (tıklama + çıkış) aynı satırları günceller: satır kilidi olmadan sonraki
+    # istek öncekinin kanıt/sayaç yazımını eziyordu (WhatsApp tıklaması persona kanıtından kayboluyordu). Postgres'te
+    # SELECT … FOR UPDATE sıraya sokar; SQLite'ta (testler) etkisizdir.
+    from django.db import transaction
+
+    with transaction.atomic():
+        from .models import VisitorSession as TrackingSession
+
+        locked = TrackingSession.objects.select_for_update().filter(pk=session.pk).first()
+        if locked is not None:
+            session = locked
+        psession = PersonaSession.objects.select_for_update().filter(session_key=skey).first() if skey else None
+        if psession is None and skey:
+            try:  # olay pageview beacon'ından önce geldiyse persona oturumu burada açılır
+                from apps.persona.engine import get_or_create_persona
+
+                preq = _page_request(request, body)
+                preq.tracking_session = session
+                get_or_create_persona(preq, create=True)
+                psession = PersonaSession.objects.select_for_update().filter(session_key=skey).first()
+            except Exception as e:  # noqa: BLE001
+                logger.error(f"persona create: {e}")
+        for ev in events:
+            event_type = str(ev.get("event_type", ""))[:30]
+            data = ev.get("data") if isinstance(ev.get("data"), dict) else {}
+            page_url = str(ev.get("page_url", ""))[:500]
+            if event_type in VALID_EVENTS:
+                try:
+                    with transaction.atomic():
+                        record_event(session, event_type, data, page_url)
+                except Exception as e:
+                    logger.error(f"collect_event: {e}")
+            # Aynı event persona motorunu da besler (tek beacon)
             try:
-                record_event(session, event_type, data, page_url)
+                with transaction.atomic():
+                    persona_record(skey, event_type, data, page_url, str(ev.get("page_type", "")), session=psession)
             except Exception as e:
-                logger.error(f"collect_event: {e}")
-        # Aynı event persona motorunu da besler (tek beacon)
-        try:
-            persona_record(skey, event_type, data, page_url, str(ev.get("page_type", "")), session=psession)
-        except Exception as e:
-            logger.error(f"persona event: {e}")
-        if event_type in MIND_EVENTS or data.get("position") == "price-note":
-            wants_mind = True
+                logger.error(f"persona event: {e}")
+            if event_type in MIND_EVENTS or data.get("position") == "price-note":
+                wants_mind = True
 
     # localStorage'da saklanan ilk-dokunuş reklam atfı (gclid/fbclid/utm) — oturumda yoksa doldur
     attr = body.get("attr") if isinstance(body.get("attr"), dict) else {}
@@ -194,6 +214,8 @@ def collect_pageview(request):
     body_vid = visitor.clean(_peek.get("vid")) if isinstance(_peek, dict) else ""
     if body_vid and not visitor.clean(request.COOKIES.get(visitor.COOKIE)):
         request._dt_vid, request._dt_vid_new = body_vid, True
+    if _is_webdriver(_peek):
+        return JsonResponse({"ok": True, "bot": True})
     session = _get_or_create_session(request, _peek)
     vid = visitor.get_visitor_id(request)
     if session and vid and not session.visitor_id:
@@ -360,7 +382,9 @@ def dashboard_stats(request):
     now         = timezone.now()
     today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
     week_start  = today_start - timedelta(days=7)
-    sessions    = VisitorSession.objects.filter(page_views__gt=0)  # gerçek ziyaretçi: JS beacon'ı göndermiş oturum
+    from .models import HUMAN_Q
+
+    sessions    = VisitorSession.objects.filter(HUMAN_Q)  # gerçek ziyaretçi: JS beacon'ı göndermiş, bot bayrağı olmayan oturum
     leads       = Lead.objects.all()
 
     return JsonResponse({

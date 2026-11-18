@@ -137,6 +137,8 @@ def ext_pageview(request):
     from .pagetypes import page_type_for
     from .service import get_or_create_external_session, merge_visitor
 
+    if body.get("wd") in (1, True, "1"):   # navigator.webdriver: otomasyon altındaki tarayıcı → oturum açılmaz
+        return _cors(JsonResponse({"ok": True, "bot": True}), preq._origin)
     try:
         prev = str(body.get("prev_vid", ""))
         if prev and ID_RE.match(prev) and preq._dt_vid:
@@ -165,7 +167,7 @@ def ext_pageview(request):
             from apps.persona.engine import get_or_create_persona, observe_page
 
             get_or_create_persona(preq, create=True)
-            observe_page(preq.session.session_key, preq.path, page_type=str(body.get("page_type", ""))[:40])
+            observe_page(preq.session.session_key, preq.path, page_type=str(body.get("page_type", ""))[:40], site=preq.site)
         except Exception as e:  # noqa: BLE001
             logger.error(f"ext persona: {e}")
     except Exception as e:  # noqa: BLE001
@@ -186,35 +188,47 @@ def ext_event(request):
 
     from .service import current_mindset, get_or_create_external_session, record_event
 
+    from django.db import transaction
+
+    from .models import VisitorSession as TrackingSession
+
     try:
-        session = get_or_create_external_session(preq)
         events = body.get("events") if isinstance(body.get("events"), list) else [body]
         events = [e for e in events[:50] if isinstance(e, dict)]
         skey = preq.session.session_key
-        psession = PersonaSession.objects.filter(session_key=skey).first()
-        if psession is None:
-            try:
-                get_or_create_persona(preq, create=True)
-                psession = PersonaSession.objects.filter(session_key=skey).first()
-            except Exception as e:  # noqa: BLE001
-                logger.error(f"ext persona create: {e}")
         wants_mind = False
-        for ev in events:
-            event_type = str(ev.get("event_type", ""))[:30]
-            data = ev.get("data") if isinstance(ev.get("data"), dict) else {}
-            page_url = str(ev.get("page_url", ""))[:500]
-            if event_type in VALID_EVENTS:
+        # Satır kilidi: aynı ziyaretçinin eşzamanlı beacon'ları (tıklama + çıkış) birbirinin kanıt/sayaç yazımını
+        # ezmesin (Postgres SELECT … FOR UPDATE; SQLite'ta etkisiz). Bkz. apps/persona/rebuild.py
+        with transaction.atomic():
+            session = get_or_create_external_session(preq)
+            locked = TrackingSession.objects.select_for_update().filter(pk=session.pk).first()
+            if locked is not None:
+                session = locked
+            psession = PersonaSession.objects.select_for_update().filter(session_key=skey).first()
+            if psession is None:
                 try:
-                    record_event(session, event_type, data, page_url)
+                    get_or_create_persona(preq, create=True)
+                    psession = PersonaSession.objects.select_for_update().filter(session_key=skey).first()
                 except Exception as e:  # noqa: BLE001
-                    logger.error(f"ext_event: {e}")
-            try:
-                persona_record(skey, event_type, data, page_url, str(ev.get("page_type", "")), session=psession)
-            except Exception as e:  # noqa: BLE001
-                logger.error(f"ext persona event: {e}")
-            if event_type in MIND_EVENTS or data.get("position") == "price-note":
-                wants_mind = True
-        _attribution(session, body)
+                    logger.error(f"ext persona create: {e}")
+            for ev in events:
+                event_type = str(ev.get("event_type", ""))[:30]
+                data = ev.get("data") if isinstance(ev.get("data"), dict) else {}
+                page_url = str(ev.get("page_url", ""))[:500]
+                if event_type in VALID_EVENTS:
+                    try:
+                        with transaction.atomic():
+                            record_event(session, event_type, data, page_url)
+                    except Exception as e:  # noqa: BLE001
+                        logger.error(f"ext_event: {e}")
+                try:
+                    with transaction.atomic():
+                        persona_record(skey, event_type, data, page_url, str(ev.get("page_type", "")), session=psession)
+                except Exception as e:  # noqa: BLE001
+                    logger.error(f"ext persona event: {e}")
+                if event_type in MIND_EVENTS or data.get("position") == "price-note":
+                    wants_mind = True
+            _attribution(session, body)
         payload = {"ok": True}
         if wants_mind:
             m = current_mindset(skey)

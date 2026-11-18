@@ -416,10 +416,13 @@ def _enrich_geo_async(session_id, ip: str):
     except ValueError:
         return
     try:
+        from django.db import transaction
+
         from apps.localization.dispatch import run_in_background
 
         from .tasks import enrich_geo_task
-        run_in_background(enrich_geo_task, str(session_id), ip)
+        # atomic blok içinde (olay beacon'ı) başlatılırsa thread satırı henüz göremez → commit sonrası
+        transaction.on_commit(lambda: run_in_background(enrich_geo_task, str(session_id), ip))
     except Exception:  # noqa: BLE001
         pass
 
@@ -517,10 +520,43 @@ def _update_session_from_event(session, event_type: str, data: dict):
             update_fields.append("avg_scroll_depth")
 
     elif event_type == TrackingEvent.TIME_ON_PAGE:
-        session.total_time_sec += data.get("seconds", 0)  # page_views pageview API'de sayılır (çift sayma yok)
+        session.total_time_sec += _int(data.get("seconds"), 1800)  # page_views pageview API'de sayılır (çift sayma yok)
         update_fields.append("total_time_sec")
+        # Çıkış beacon'ı son sayfanın özetini taşır: okuma süresi + en derin kaydırma → PageView satırına (yolculukta görünür)
+        _finish_last_pageview(session, _int(data.get("seconds"), 1800), _int(data.get("max_scroll"), 100))
+
+    elif event_type == TrackingEvent.FORM_SUBMIT and str(data.get("form", "")) == "calendly":
+        pass  # Calendly randevusu: form_submit sayaçları yukarıda işlendi (is_lead=True)
+
+    # İnsan kanıtı: ilk hareket + "datacenter" bot bayrağının kalkması (VPN / kurumsal proxy arkasındaki gerçek kişi)
+    from .bots import unflag_on_engagement
+
+    update_fields += unflag_on_engagement(session, event_type)
 
     session.save(update_fields=update_fields)
+
+
+def _int(v, cap):
+    try:
+        return max(0, min(int(float(v)), cap))
+    except (TypeError, ValueError):
+        return 0
+
+
+def _finish_last_pageview(session, seconds, max_scroll):
+    """Son PageView satırına süre ve kaydırma derinliği yazılır (segmentler toplanır; derinlik en büyük değer)."""
+    from django.db.models import F, Case, When, Value, FloatField
+
+    from .models import PageView
+
+    pv = PageView.objects.filter(session=session).order_by("-timestamp").values_list("id", flat=True).first()
+    if pv is None:
+        return
+    PageView.objects.filter(id=pv).update(
+        time_on_page_sec=F("time_on_page_sec") + seconds,
+        scroll_depth=Case(When(scroll_depth__lt=max_scroll, then=Value(float(max_scroll))), default=F("scroll_depth"),
+                          output_field=FloatField()),
+    )
 
 
 def match_whatsapp(wa_phone: str, wa_message: str, received_at=None) -> dict:

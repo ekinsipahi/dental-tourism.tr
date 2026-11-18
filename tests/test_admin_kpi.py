@@ -49,6 +49,7 @@ class AdminKpiTests(SeededTestCase):
         import re
         row = re.search(r"<tr>\s*<td><strong>drdevrim\.com</strong>.*?</tr>", html, re.S).group(0)
         self.assertIn("● 1", row)            # şu an aktif
-        self.assertIn("<td>1</td><td>1</td>", row)  # 1 ziyaretçi, 1 sayfa
+        self.assertIn("<td>1 <span", row)  # 1 ziyaretçi
+        self.assertIn("(1 etkileşimli)</span></td><td>1</td>", row)  # telefon tıklaması = insan hareketi; 1 sayfa
         self.assertIn("%100.0", row)
         self.assertIn("site__exact=drd", row)

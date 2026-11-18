@@ -2,9 +2,11 @@
  * Birleşik tracker — tek endpoint (/api/tracking/event/) hem dönüşüm takibini
  * hem persona motorunu besler.
  *
- * Toplanan sinyaller: sayfa görüntüleme, scroll derinliği, bölüm görünürlüğü ve
- * bölümde geçirilen süre (data-track-section), tıklamalar (data-track),
- * FAQ açma, video, form başlatma/gönderme, sayfada kalma süresi.
+ * Toplanan sinyaller: sayfa görüntüleme, ilk insan hareketi (engaged — bot ayrımı), scroll derinliği, bölüm görünürlüğü
+ * ve bölümde geçirilen süre (data-track-section), tüm tıklamalar (data-track; iç bağlantı = nav_click, dış = outbound_click,
+ * href'siz buton = ui_click), galeri fotoğrafı, gömülü harita/YouTube, telefon numarası kopyalama, FAQ açma + okuma,
+ * video, form başlatma/gönderme/yarım bırakma, çerez onayı, çıkış niyeti, başka sekmeden dönüş, sinirli tıklama,
+ * JS hatası, sayfada kalma süresi (+ en derin kaydırma).
  *
  * Kalıcılık: dt_vid (çerez + localStorage) ile aynı ziyaretçi oturumlar arasında tanınır;
  * gclid/fbclid/utm ilk ve son dokunuş olarak localStorage'da saklanır ve her olayla gönderilir.
@@ -90,7 +92,9 @@
     language_switch: "language_switch", scroll_depth: "scroll_depth", faq_open: "faq_open", faq_read: "faq_read",
     section_view: "section_view", section_time: "section_time", before_after_interact: "before_after_view",
     video_play: "video_start", video_time: "video_watch", time_on_page: "page_read", chatbot_open: "chat_open",
-    email_click: "email_click", nav_click: "nav_click", contact_return: "contact_return"
+    email_click: "email_click", nav_click: "nav_click", contact_return: "contact_return",
+    phone_copy: "phone_copy", tab_return: "tab_return", form_abandon: "form_abandon", exit_intent: "exit_intent",
+    gallery_view: "gallery_view", outbound_click: "outbound_click", consent: "consent_choice"
   };
   var CONTACT_METHOD = { whatsapp: "wa_chat", whatsapp_call: "wa_call", phone: "phone", email: "email" };
   function ga(type, data) {
@@ -116,7 +120,7 @@
   /* ── Olaylar TOPLU gider: bir sayfa görüntülemede 6-12 ayrı POST (her biri sunucuda 2 oturum okuması + yazma) yerine
      1-3 istek. Hemen giden: iletişim/CTA/form olayları (sayfa terk edilebilir) ve "mind" cevabı beklenen olaylar;
      kalanı (scroll, bölüm görünürlüğü …) 4 sn'de bir ya da çıkışta tek beacon içinde {events:[…]}. ── */
-  var queue = [], qTimer = null, NOW_RE = /_click$|^form_/;
+  var queue = [], qTimer = null, NOW_RE = /_click$|^form_|^phone_copy$/;
   function flushQueue() {
     if (qTimer) { clearTimeout(qTimer); qTimer = null; }
     if (!queue.length) return;
@@ -147,6 +151,7 @@
     [".pseo-price", "price-note"], [".rv", "reviews"], [".ig-float", "ig-float"], [".save-first", "save-first"],
     [".h-ready-banner", "hero"], [".page-head, .h-hero, .hero, [class*=hero]", "hero"]];
   function positionOf(el) {
+    if (!el || !el.closest) return "content";
     for (var i = 0; i < POSITIONS.length; i++) if (el.closest(POSITIONS[i][0])) return POSITIONS[i][1];
     var sec = el.closest("section[id], [data-track-section]");
     return sec ? (sec.id || sec.getAttribute("data-track-section")) : "content";
@@ -156,8 +161,21 @@
   // tz: tarayıcı saat dilimi — IP proxy/VPN'den (Zscaler vb.) geçse bile gerçek ülkeyi verir
   var TZ = "";
   try { TZ = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+  var WD = 0; try { WD = navigator.webdriver ? 1 : 0; } catch (e) {}
   post(PAGEVIEW_API, { url: location.href, title: document.title, referrer: document.referrer, vid: VID, attr: ATTR,
-                       tz: TZ, sw: screen.width, sh: screen.height, page_type: PAGE_TYPE, prev_vid: PREV_VID });
+                       tz: TZ, sw: screen.width, sh: screen.height, page_type: PAGE_TYPE, prev_vid: PREV_VID,
+                       wd: WD, tp: navigator.maxTouchPoints || 0, lg: (navigator.languages || []).length, dpr: window.devicePixelRatio || 1 });
+  function txt(el, n) { return ((el && (el.getAttribute("aria-label") || el.textContent)) || "").replace(/\s+/g, " ").trim().slice(0, n || 100); }
+
+  // İlk insan hareketi: parmak / fare / klavye / tekerlek (kaydırma değil — başsız tarayıcılar da kaydırır). Bot ayrımı +
+  // ilk etkileşime kadar geçen süre. JS çalıştıran tarayıcı botları (bulut IP'leri) hiç hareket üretmez.
+  var ENGAGED = false, T0 = Date.now(), moves = 0, clicks = 0;
+  function engage(kind) { if (ENGAGED) return; ENGAGED = true; track("engaged", { kind: kind, after_ms: Date.now() - T0 }); }
+  addEventListener("pointerdown", function () { clicks++; engage("pointer"); }, true);
+  addEventListener("touchstart", function () { engage("touch"); }, { passive: true, capture: true });
+  addEventListener("keydown", function () { engage("key"); }, true);
+  addEventListener("wheel", function () { engage("wheel"); }, { passive: true, capture: true });
+  addEventListener("mousemove", function () { if (++moves >= 3) engage("mouse"); }, { passive: true, capture: true });
   // Kardeş sitelere giden linklere kimliği ekle → üç sitede tek yolculuk
   var SISTERS = /(^|\.)(drdevrim\.com|devrimbirikensipahi\.com\.tr)$/i;
   document.addEventListener("click", function (e) {
@@ -166,10 +184,11 @@
   }, true);
 
   // Scroll derinliği
-  var fired = {};
+  var fired = {}, maxDepth = 0;
   addEventListener("scroll", function () {
     var h = document.documentElement.scrollHeight - innerHeight;
     var d = h > 0 ? Math.round(scrollY / h * 100) : 100;
+    if (d > maxDepth) maxDepth = Math.min(d, 100);
     [25, 50, 75, 90].forEach(function (t) { if (d >= t && !fired[t]) { fired[t] = 1; track("scroll_depth", { depth: t }); } });
   }, { passive: true });
 
@@ -195,8 +214,30 @@
   // data.element / GA4 contact_method ile sohbetten ayrılır. nav = iç gezinme (tedavi kartı, semt çipleri …): CTA DEĞİL.
   var MAP = { whatsapp: "whatsapp_click", whatsapp_call: "whatsapp_click", phone: "phone_click", cta: "cta_click",
               maps: "maps_click", instagram: "instagram_click", youtube: "youtube_click", email: "email_click",
-              before_after: "before_after_interact", "lang-switch": "language_switch", treatment: "nav_click",
-              nav: "nav_click", partner: "nav_click", form: "cta_click", faq: "faq_open" };
+              before_after: "before_after_interact", "lang-switch": "language_switch", lang: "language_switch", treatment: "nav_click",
+              nav: "nav_click", partner: "nav_click", form: "cta_click", faq: "faq_open", outbound: "outbound_click",
+              ui: "ui_click", gallery: "gallery_view", consent: "consent" };
+  var LANGS = /^(tr|en|de|fr|nl|it|es|pl|ru|uk|bg|sv|da|no|ro|ar|az)$/;
+  function langOfPath(p) { var m = (p || "").match(/^\/([a-z]{2})(?=\/|$)/); return m && LANGS.test(m[1]) ? m[1] : ""; }
+  var CUR_LANG = langOfPath(location.pathname) || (document.documentElement.lang || "en").slice(0, 2).toLowerCase();
+  // data-track'i olmayan öğeler: iç bağlantı → nav (dil öneki değiştiyse language_switch); başka site → outbound; href'siz / # → ui
+  function classifyLink(el, href) {
+    if (el.tagName !== "A" || !href || href.charAt(0) === "#" || /^javascript:/i.test(href)) return { type: "ui" };
+    var u; try { u = new URL(href, location.href); } catch (e) { return { type: "ui" }; }
+    if (!/^https?:$/.test(u.protocol)) return { type: "" };
+    if (u.hostname !== location.hostname) return { type: SISTERS.test(u.hostname) ? "nav" : "outbound" };
+    var to = langOfPath(u.pathname) || "en";
+    if (to !== CUR_LANG && langOfPath(u.pathname)) return { type: "lang", to: to };
+    return { type: "nav" };
+  }
+  var lastClick = { k: "", t: 0 }, rage = { el: null, n: 0, t: 0 }, rageSent = false, galleryT = 0;
+  function galleryClick(img) {
+    var now = Date.now(); if (now - galleryT < 2000) return; galleryT = now;
+    var sec = img.closest("[data-track-section], section[id], [class*=gallery], [class*=lightbox], [class*=swiper], [class*=before], figure");
+    var name = sec ? (sec.getAttribute("data-track-section") || sec.id || String(sec.className || "").split(" ")[0]) : "";
+    if (/before|after/.test(String(name).toLowerCase())) track("before_after_interact", { section: name.slice(0, 40), label: (img.alt || "").slice(0, 60), position: positionOf(img) });
+    else track("gallery_view", { section: name.slice(0, 40), label: (img.alt || "").slice(0, 60), position: positionOf(img) });
+  }
   // data-track'i olmayan linkler için güvenlik ağı (href'ten tür çıkarımı)
   function typeFromHref(href) {
     if (href.indexOf("tel:") === 0) return "phone";
@@ -211,19 +252,68 @@
   var CONTACT_KINDS = { phone: "phone", whatsapp: "whatsapp", whatsapp_call: "whatsapp_call", maps: "maps", email: "email" };
   var lastContact = null, CONTACT_RETURN_WINDOW = 15 * 60000;
   document.addEventListener("click", function (e) {
-    var el = e.target.closest("[data-track], a[href^='tel:'], a[href^='mailto:'], a[href*='wa.me/'], a[href*='api.whatsapp.com'], " +
-                              "a[href*='instagram.com'], a[href*='youtube.com'], a[href*='youtu.be'], a[href*='google.com/maps'], a[href*='maps.app.goo.gl']");
-    if (!el) return;
+    var t = e.target; if (!t || !t.closest) return;
+    var now = Date.now();
+    if (rage.el === t && now - rage.t < 1000) rage.n++; else { rage.el = t; rage.n = 1; }
+    rage.t = now;
+    if (rage.n >= 3 && !rageSent) { rageSent = true; track("rage_click", { label: txt(t, 60), position: positionOf(t) }); }
+    var el = t.closest("a[href], button, [role=button], [data-track], [data-consent], summary");
+    if (!el) { if (t.tagName === "IMG") galleryClick(t); return; }
+    if (el.tagName === "SUMMARY") return;  // SSS: aşağıdaki "toggle" dinleyicisi ölçer (açtı + kaç sn okudu)
     var href = el.getAttribute("href") || "";
-    var type = el.dataset.track || typeFromHref(href);
-    if (!type || type === "faq") return;  // SSS: aşağıdaki "toggle" dinleyicisi ölçer (açtı + kaç sn okudu)
+    var type = el.dataset.track || (el.getAttribute("data-consent") ? "consent" : "") || typeFromHref(href), to = "";
+    if (type === "faq") return;
+    if (!type) {
+      if (t.tagName === "IMG" && el.tagName !== "A" && !el.closest("button")) { galleryClick(t); return; }
+      var c = classifyLink(el, href); type = c.type; to = c.to || "";
+      if (!type) return;
+      if (type === "ui" && el.closest("form") && (el.type === "submit" || (el.tagName === "BUTTON" && !el.type))) return;  // form_submit sayar
+    }
     var head = el.querySelector("h2, h3, h4");  // kartlarda tüm kart metni yerine başlık
-    var label = (el.getAttribute("aria-label") || (head && head.textContent) || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
-    track(MAP[type] || "cta_click", { element: type, label: label, text: label.slice(0, 60), href: href.slice(0, 200),
-                                      position: positionOf(el), screen: screen.width + "x" + screen.height });
-    if (CONTACT_KINDS[type]) lastContact = { kind: CONTACT_KINDS[type], label: label.slice(0, 60), position: positionOf(el), t: Date.now() };
+    var label = (el.getAttribute("aria-label") || (head && head.textContent) || el.textContent || el.title || "").replace(/\s+/g, " ").trim().slice(0, 100);
+    if (!label && el.querySelector("img")) label = (el.querySelector("img").alt || "").slice(0, 100);
+    var name = MAP[type] || "ui_click", key = name + "|" + label + "|" + href;
+    if (key === lastClick.k && now - lastClick.t < 1500) return;   // iç içe öğelerden çift tetiklenme
+    lastClick = { k: key, t: now };
+    var data = { element: type, label: label, text: label.slice(0, 60), href: href.slice(0, 200),
+                 position: positionOf(el), screen: screen.width + "x" + screen.height };
+    if (to) data.to = to;
+    if (type === "consent") data.choice = el.getAttribute("data-consent");
+    track(name, data);
+    if (CONTACT_KINDS[type]) lastContact = { kind: CONTACT_KINDS[type], label: label.slice(0, 60), position: positionOf(el), t: now };
     // Meta "Contact": yalnızca WhatsApp (sohbet / arama). Normal telefon hattı yanıtlanmadığı için iletişim sayılmaz.
     if ((type === "whatsapp" || type === "whatsapp_call") && window.fbq) fbq("track", "Contact");  // GA4: ga() gönderir
+  }, true);
+
+  // Telefon numarası / adres kopyalama (masaüstünde aramanın karşılığı)
+  document.addEventListener("copy", function () {
+    var s = "", node = null;
+    try { var sel = getSelection(); s = String(sel || ""); node = sel && sel.anchorNode && (sel.anchorNode.nodeType === 1 ? sel.anchorNode : sel.anchorNode.parentElement); } catch (e) {}
+    s = s.replace(/\s+/g, " ").trim(); if (!s) return;
+    var digits = (s.match(/\d/g) || []).length;
+    if (digits >= 7 && s.length <= 40) track("phone_copy", { label: s.slice(0, 40), position: positionOf(node) });
+    else if (s.length >= 15) track("text_copy", { label: s.slice(0, 80), position: positionOf(node) });
+  });
+
+  // Gömülü harita / YouTube: iframe'e tıklama (pencere odağı iframe'e geçer)
+  var iframeSeen = {};
+  addEventListener("blur", function () {
+    setTimeout(function () {
+      var a = document.activeElement; if (!a || a.tagName !== "IFRAME") return;
+      var src = a.src || a.getAttribute("data-src") || "", host = ""; try { host = new URL(src, location.href).hostname; } catch (e) {}
+      if (iframeSeen[src || host]) return; iframeSeen[src || host] = 1;
+      var pos = positionOf(a);
+      if (/youtube|youtu\.be|vimeo/.test(host)) track("video_play", { embed: host, label: a.title || "video (gömülü)", position: pos });
+      else if (/maps/.test(src) && /google/.test(host)) track("maps_click", { element: "maps", label: "harita (gömülü)", position: pos, embed: 1 });
+      else if (host && !/googletagmanager|doubleclick|facebook|recaptcha/.test(host)) track("ui_click", { element: "iframe", label: host, position: pos });
+    }, 0);
+  });
+
+  // JS hatası (bozuk buton = kayıp hasta) — sayfa başına bir kez
+  var errSent = false;
+  addEventListener("error", function (e) {
+    if (errSent || !e || !e.message || e.message === "Script error.") return; errSent = true;
+    track("js_error", { label: String(e.message).slice(0, 120), src: String(e.filename || "").slice(-80), line: e.lineno || 0 });
   });
 
   // SSS: açtı (zayıf sinyal) + kaç saniye açık tuttu (asıl sinyal). data-mind-q = sorunun persona etiketi
@@ -245,11 +335,20 @@
     else faqClose(i.q);
   }, true);
 
-  // Form başlatma
-  document.querySelectorAll("form").forEach(function (f) {
-    var started = false;
-    f.addEventListener("focusin", function () { if (!started) { started = true; track("form_start", {}); } });
-  });
+  // Formlar: başlangıç, son alan, gönderim, yarım bırakma (çıkışta form_abandon)
+  var startedForms = [];
+  function formRec(f) { for (var i = 0; i < startedForms.length; i++) if (startedForms[i].f === f) return startedForms[i]; return null; }
+  function formName(f) { return (f.id || f.getAttribute("name") || f.className || "form").toString().slice(0, 60); }
+  document.addEventListener("focusin", function (e) {
+    var el = e.target, f = el.closest && el.closest("form"); if (!f) return;
+    var r = formRec(f);
+    if (!r) { r = { f: f, field: "", done: false }; startedForms.push(r); track("form_start", { form: formName(f) }); }
+    if (el.name || el.id) r.field = (el.name || el.id).slice(0, 40);
+  }, true);
+  document.addEventListener("submit", function (e) { var r = e.target && e.target.tagName === "FORM" ? formRec(e.target) : null; if (r) r.done = true; }, true);
+  function abandonForms() {
+    startedForms.forEach(function (r) { if (!r.done && !r.abandoned) { r.abandoned = true; track("form_abandon", { form: formName(r.f), field: r.field, label: r.field }); } });
+  }
 
   // Video
   document.querySelectorAll("video:not(.logo-video)").forEach(function (v) {  // navbar logo animasyonu hasta videosu değil
@@ -262,16 +361,25 @@
   // `flushed` açılır (eski sürümde bir kez true olup kalıyor, dönüşten sonraki tüm olaylar sessizce düşüyordu).
   // time_on_page segment segment gider; sunucu toplar → aktif süre (arka planda geçen süre sayılmaz).
   var start = Date.now(), flushed = false, hiddenAt = 0, segment = 0;
+  var exitSent = false;
   function flush() {
     if (flushed) return; flushed = true;
     Object.keys(faqOpen).forEach(faqClose);
+    abandonForms();
     Object.keys(visibleSince).forEach(function (s) { dwell[s] = (dwell[s] || 0) + (Date.now() - visibleSince[s]) / 1000; });
     Object.keys(dwell).forEach(function (s) { if (dwell[s] >= 3) track("section_time", { section: s, seconds: Math.round(dwell[s]) }); });
     var secs = Math.round((Date.now() - start) / 1000);
-    track("time_on_page", { seconds: secs, segment: segment });
-    if (segment === 0 && secs < 10 && !Object.keys(fired).length) track("bounce", {});
+    track("time_on_page", { seconds: secs, segment: segment, max_scroll: maxDepth, clicks: clicks, engaged: ENGAGED });
+    if (segment === 0 && secs < 10 && !Object.keys(fired).length && !clicks) track("bounce", {});
     flushQueue();  // bölüm süreleri + sayfa süresi + bekleyenler: tek beacon
   }
+  // Çıkış niyeti (masaüstü): fare pencereyi üstten terk etti — bir kez
+  try {
+    if (matchMedia("(pointer:fine)").matches) document.addEventListener("mouseout", function (e) {
+      if (exitSent || e.relatedTarget || e.clientY > 0) return; exitSent = true;
+      track("exit_intent", { after_sec: Math.round((Date.now() - start) / 1000), max_scroll: maxDepth, label: maxDepth + "%" });
+    });
+  } catch (e) {}
   // Sekme geri geldi (telefon / WhatsApp / harita uygulamasından dönüş dahil): sayaçları yeniden başlat; iletişim
   // tıklamasından sonraki dönüşü ayrı olay olarak kaydet — kaç sn uzak kaldı → muhtemelen aradı / yazdı mı?
   function resume() {
@@ -287,6 +395,8 @@
       track("contact_return", { kind: lastContact.kind, label: lastContact.label, position: lastContact.position,
                                 away_seconds: away, likely_contacted: away >= 8 });
       lastContact = null;
+    } else if (away >= 20) {
+      track("tab_return", { away_seconds: away, label: away + " sn" });   // başka sekmelerde dolaştı (karşılaştırma)
     }
     if (queue.length) flushQueue();
   }

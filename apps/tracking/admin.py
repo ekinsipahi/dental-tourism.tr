@@ -103,11 +103,16 @@ class HumanFilter(admin.SimpleListFilter):
     parameter_name = "human"
 
     def lookups(self, request, model_admin):
-        return [("yes", "Evet — JS beacon gönderdi"), ("no", "Hayır — JS çalışmadı (bot/tarayıcı)")]
+        return [("yes", "Evet — gerçek ziyaretçi"), ("bot", "Bot — JS çalıştırdı ama veri merkezi / otomasyon"),
+                ("no", "Hayır — JS çalışmadı (bot/tarayıcı)")]
 
     def queryset(self, request, qs):
+        from .models import HUMAN_Q
+
         if self.value() == "yes":
-            return qs.filter(page_views__gt=0)
+            return qs.filter(HUMAN_Q)
+        if self.value() == "bot":
+            return qs.exclude(bot_reason="")
         if self.value() == "no":
             return qs.filter(page_views=0)
         return qs
@@ -120,7 +125,7 @@ class VisitorSessionAdmin(admin.ModelAdmin):
         "device_icon", "intent_score_bar", "conversion_flags",
         "page_views", "total_time_display", "last_seen",
     ]
-    list_filter  = [HumanFilter, "site",
+    list_filter  = [HumanFilter, "site", "bot_reason",
         "traffic_source", "device_type", "ip_country",
         "is_lead", "is_converted", "is_qualified",
         "whatsapp_matched",
@@ -299,7 +304,12 @@ class VisitorSessionAdmin(admin.ModelAdmin):
                   "path": ev.page_url, "position": ev.position}
                  for ev in s.events.filter(event_type__in=["whatsapp_click", "phone_click", "maps_click", "email_click",
                                                            "instagram_click", "youtube_click", "form_start", "form_submit",
-                                                           "contact_return", "faq_read", "language_switch"])]
+                                                           "contact_return", "faq_read", "language_switch",
+                                                           "nav_click", "ui_click", "outbound_click", "gallery_view",
+                                                           "before_after_interact", "video_play", "phone_copy", "text_copy",
+                                                           "booking_step", "form_abandon", "tab_return", "exit_intent",
+                                                           "chatbot_open", "chatbot_message", "rage_click", "js_error",
+                                                           "engaged", "consent"])]
         rows.sort(key=lambda r: r["t"])
         return {"session": s, "site": site_name(s.site), "base": site_base(s.site), "rows": rows}
 
@@ -506,7 +516,8 @@ def _flag(cc):
 _TYPE = {"contact_return": ("↩️ Aramadan döndü", "#0f766e"), "phone_click": ("☎️ Telefon denemesi (hat yanıtlanmıyor)", "#64748b"), "whatsapp_click": ("💬 WhatsApp", "#16a34a"),
          "form_submit": ("📝 Form", "#9333ea"), "instagram_click": ("📸 Instagram", "#d6249f"),
          "youtube_click": ("▶️ YouTube", "#dc2626"), "maps_click": ("📍 Yol tarifi / Google", "#2563eb"),
-         "email_click": ("✉️ E-posta", "#0f766e")}
+         "email_click": ("✉️ E-posta", "#0f766e"), "phone_copy": ("📋 Numarayı kopyaladı", "#64748b"),
+         "booking_step": ("📅 Calendly adımı", "#9333ea")}
 _SRC = {"google_ads": ("Google Ads", "#1a73e8"), "meta_ads": ("Meta Ads", "#1877f2"),
         "google_organic": ("Google organik", "#34a853"), "bing_organic": ("Bing", "#00809d"), "social": ("Sosyal", "#e91e63"),
         "referral": ("Referans", "#ff9800"), "direct": ("Direkt", "#757575"), "email": ("E-posta", "#9c27b0")}

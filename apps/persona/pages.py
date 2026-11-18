@@ -40,7 +40,7 @@ DWELL_FULL = 60          # bu kadar saniye okunursa kalan payın tamamı
 DWELL_MIN = 5            # altı = sayılmaz
 # Sayfa türüne göre "tam okuma" süresi: iletişim sayfasında 20 sn kalmak zaten anlamlıdır, bir blog yazısı 90 sn ister
 DWELL_FULL_BY_TYPE = {"contact": 20, "booking": 30, "redirect": 10, "thanks": 10, "confirmation": 10,
-                      "blog": 90, "guide": 90, "reviews": 75, "qa": 75, "doctor": 45}
+                      "blog": 90, "guide": 90, "reviews": 75, "qa": 75, "doctor": 45, "emergency": 30}
 
 TREATMENT_SIGNALS = {
     "porcelain-veneers": {PERSONA_SKEPTIC: 0.5, PERSONA_SHAME: 0.2},
@@ -56,18 +56,59 @@ TREATMENT_SIGNALS = {
     "orthodontics": {PERSONA_SKEPTIC: 0.5, PERSONA_SHAME: 0.2},
     "gum-treatment": {PERSONA_SKEPTIC: 0.4, PERSONA_FEAR: 0.3},
     "pediatric-dentistry": {PERSONA_SKEPTIC: 0.4, PERSONA_TRUST: 0.3},
+    # Kardeş sitelerin hizmet sayfaları (drdevrim /hizmetler/*, devrimbirikensipahi kategori sayfaları)
+    "tooth-extraction": {PERSONA_FEAR: 0.5, PERSONA_URGENCY: 0.4, PERSONA_SKEPTIC: 0.2},      # diş çekimi: ağrı var, korkuyor
+    "emergency-dentistry": {PERSONA_URGENCY: 1.2, PERSONA_FEAR: 0.4, PERSONA_READY: 0.4},     # acil diş: şimdi, hemen
+    "digital-dentistry": {PERSONA_QUALITY: 0.7, PERSONA_PREMIUM: 0.2, PERSONA_SKEPTIC: 0.2},  # dijital/CAD-CAM: teknolojiye bakıyor
+    "oral-surgery": {PERSONA_FEAR: 0.7, PERSONA_SKEPTIC: 0.3},                                # apikal rezeksiyon, 20 yaş: korku
+    "dentures": {PERSONA_SKEPTIC: 0.4, PERSONA_PRICE: 0.2, PERSONA_FEAR: 0.2},                # protez: kıyaslıyor
 }
+
+# Kardeş sitelerin pSEO aileleri: ARAMA NİYETİ URL'DEDİR — "hafta sonu açık dişçi" acildir, "en iyi dişçi" kaliteyi
+# kıyaslar, "prof. diş hekimi" statü/uzmanlık arar, "estetik diş kliniği" görünüş derdindedir, "<semt> dişçi" yakınında
+# ve şimdi arıyordur. (drdevrim: /haftasonu/<ilçe>/, /en-iyi-disci/<ilçe>/, /uzman-dis-hekimi/, /prof-dis-hekimi/,
+# /estetik-dis-klinigi/, /disci/<ilçe>/<semt>/; devrimbirikensipahi: /sisli-dis-hekimi, /acil-dis-hekimi)
+PSEO_FAMILY_SIGNALS = {
+    "haftasonu": {PERSONA_URGENCY: 1.0, PERSONA_READY: 0.4},
+    "hafta-sonu": {PERSONA_URGENCY: 1.0, PERSONA_READY: 0.4},
+    "acil": {PERSONA_URGENCY: 1.2, PERSONA_READY: 0.4, PERSONA_FEAR: 0.2},
+    "en-iyi-disci": {PERSONA_QUALITY: 0.8, PERSONA_SKEPTIC: 0.4, PERSONA_READY: 0.2},
+    "uzman-dis-hekimi": {PERSONA_QUALITY: 0.8, PERSONA_TRUST: 0.3, PERSONA_READY: 0.2},
+    "prof-dis-hekimi": {PERSONA_QUALITY: 0.7, PERSONA_PREMIUM: 0.4, PERSONA_TRUST: 0.3},
+    "estetik-dis-klinigi": {PERSONA_SHAME: 0.6, PERSONA_PREMIUM: 0.5, PERSONA_READY: 0.2},
+    "disci": {PERSONA_READY: 0.5, PERSONA_URGENCY: 0.3},
+}
+
+
+def pseo_family(path):
+    """/haftasonu/cekmekoy/ → 'haftasonu'; /lang/en/… ve /en/… önekleri atlanır; bilinmeyen aile → ''."""
+    parts = [p for p in (path or "").split("/") if p]
+    if parts and parts[0] == "lang":
+        parts = parts[1:]
+    if parts and len(parts[0]) == 2 and parts[0].isalpha():
+        parts = parts[1:]
+    return parts[0] if parts and parts[0] in PSEO_FAMILY_SIGNALS else ""
 
 # Kardeş sitelerin tedavi URL'leri (TR / EN / DE / RU slug parçaları) → kanonik tedavi anahtarı
 EXT_TREATMENT_WORDS = (
     ("all-on", "all-on-4-implants"), ("allon", "all-on-4-implants"),
+    ("implant-ustu", "dentures"), ("sabit-protez", "dentures"), ("protez", "dentures"), ("denture", "dentures"), ("prothese", "dentures"),
     ("implant", "dental-implants"), ("имплант", "dental-implants"),
+    ("acil", "emergency-dentistry"), ("emergency", "emergency-dentistry"), ("notfall", "emergency-dentistry"),
+    ("cekim", "tooth-extraction"), ("extraction", "tooth-extraction"), ("удален", "tooth-extraction"),
+    ("dijital", "digital-dentistry"), ("digital", "digital-dentistry"), ("cad-cam", "digital-dentistry"),
+    ("apikal", "oral-surgery"), ("rezeksiyon", "oral-surgery"), ("cerrahi", "oral-surgery"), ("surgery", "oral-surgery"),
+    ("yirmi-yas", "oral-surgery"), ("20-yas", "oral-surgery"), ("gomulu", "oral-surgery"),
+    ("fissur", "pediatric-dentistry"), ("sut-dis", "pediatric-dentistry"),
+    ("piyasment", "gum-treatment"), ("kuretaj", "gum-treatment"),
+    ("metal-tel", "orthodontics"),
+    ("gulus", "hollywood-smile"),
     ("lamina", "porcelain-veneers"), ("veneer", "porcelain-veneers"), ("porselen", "porcelain-veneers"),
     ("винир", "porcelain-veneers"), ("facette", "porcelain-veneers"),
     ("zirkon", "zirconia-crowns"), ("zircon", "zirconia-crowns"), ("kaplama", "zirconia-crowns"), ("kron", "zirconia-crowns"),
     ("crown", "zirconia-crowns"), ("циркон", "zirconia-crowns"),
     ("hollywood", "hollywood-smile"), ("gulus-tasarim", "hollywood-smile"), ("smile-design", "hollywood-smile"),
-    ("smile-makeover", "hollywood-smile"), ("estetik-dis", "hollywood-smile"),
+    ("smile-makeover", "hollywood-smile"), ("estetik-dis", "hollywood-smile"), ("estetik", "hollywood-smile"),
     ("kompozit", "composite-veneers"), ("composite", "composite-veneers"), ("bonding", "composite-veneers"),
     ("beyazlat", "teeth-whitening"), ("whitening", "teeth-whitening"), ("bleaching", "teeth-whitening"), ("отбелив", "teeth-whitening"),
     ("kanal", "root-canal-treatment"), ("root-canal", "root-canal-treatment"), ("endodont", "root-canal-treatment"),
@@ -133,6 +174,7 @@ PAGE_TYPE_SIGNALS = {
     "blog": {PERSONA_SKEPTIC: 0.5},
     "reviews": {PERSONA_SKEPTIC: 0.7, PERSONA_TRUST: 0.6},        # "yorumları okuyor → kararsız, kanıt arıyor"
     "dental-tourism": {PERSONA_SKEPTIC: 0.4, PERSONA_PRICE: 0.3},
+    "emergency": {PERSONA_URGENCY: 1.2, PERSONA_FEAR: 0.4, PERSONA_READY: 0.4},   # "acil diş hekimi" sayfası
     "page": {},
 }
 
@@ -163,6 +205,8 @@ SEQUENCE_RULES = (
      "Gezdikten sonra randevuya geçti — karar aşaması"),
     ("redirect", lambda prev, n: n == 1 and len(prev) >= 1, {PERSONA_READY: 0.4},
      "Gezdikten sonra aramaya gitti — karar aşaması"),
+    ("emergency", lambda prev, n: n == 1, {PERSONA_URGENCY: 0.3},
+     "Acil diş hekimi sayfasına geldi — şimdi, hemen"),
 )
 
 
@@ -254,6 +298,8 @@ def page_signal(path, site="dt", page_type=""):
     if ptype == "treatment":
         canonical = ext_treatment(path)
         sig = dict(TREATMENT_SIGNALS.get(canonical) or PAGE_TYPE_SIGNALS["treatment"])
+    elif ptype == "pseo-area":
+        sig = dict(PSEO_FAMILY_SIGNALS.get(pseo_family(path)) or PAGE_TYPE_SIGNALS["pseo-area"])
     else:
         sig = dict(PAGE_TYPE_SIGNALS.get(ptype, {}))
     return f"{ptype}@{_short_path(path)}", sig

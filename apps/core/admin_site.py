@@ -84,10 +84,12 @@ class DentalAdminSite(admin.AdminSite):
             leads = leads.filter(clinic__owner=request.user)
         since = now - timedelta(days=30)
         # Gerçek ziyaretçi = JS beacon'ı göndermiş oturum (page_views > 0); JS çalıştırmayan tarayıcılar/botlar sayılmaz
-        humans = VisitorSession.objects.filter(created_at__gte=since, page_views__gt=0)
+        from apps.tracking.models import HUMAN_Q
+
+        humans = VisitorSession.objects.filter(created_at__gte=since).filter(HUMAN_Q)
         humans_n = humans.count()
         contacted = humans.filter(Q(whatsapp_clicks__gte=1) | Q(phone_clicks__gte=1) | Q(is_lead=True)).count()
-        junk_n = VisitorSession.objects.filter(created_at__gte=since, page_views=0).count()
+        junk_n = VisitorSession.objects.filter(created_at__gte=since).filter(Q(page_views=0) | ~Q(bot_reason="")).count()
         exposures = PersonaExposure.objects.filter(created_at__gte=since)
         exp_n = exposures.count()
         exp_c = exposures.filter(converted=True).count()
@@ -125,14 +127,17 @@ class DentalAdminSite(admin.AdminSite):
         from django.db.models import Count, F, Q
 
         from apps.persona.models import VisitorSession as PersonaSession
-        from apps.tracking.models import Lead, PageView
+        from apps.tracking.models import Lead, PageView, VisitorSession
 
         active_since = now - timedelta(minutes=30)
         by_site = {r["site"]: r for r in humans.values("site").annotate(
             n=Count("id"),
             contacted=Count("id", filter=Q(whatsapp_clicks__gte=1) | Q(phone_clicks__gte=1) | Q(is_lead=True)),
-            active=Count("id", filter=Q(last_seen__gte=active_since)))}
-        pv = {r["site"]: r["n"] for r in PageView.objects.filter(timestamp__gte=since, session__page_views__gt=0)
+            active=Count("id", filter=Q(last_seen__gte=active_since)),
+            engaged=Count("id", filter=Q(engaged_at__isnull=False)))}
+        bots = {r["site"]: r["n"] for r in VisitorSession.objects.filter(created_at__gte=since).exclude(bot_reason="")
+                .values("site").annotate(n=Count("id"))}
+        pv = {r["site"]: r["n"] for r in PageView.objects.filter(timestamp__gte=since, session__page_views__gt=0, session__bot_reason="")
               .values(site=F("session__site")).annotate(n=Count("id"))}
         leads = {r["site"]: r["n"] for r in Lead.objects.filter(created_at__gte=since).values("site").annotate(n=Count("id"))}
         personas = {}
@@ -149,6 +154,7 @@ class DentalAdminSite(admin.AdminSite):
                 "code": code, "name": meta["name"], "visitors": n, "pageviews": pv.get(code, 0),
                 "contacted": s.get("contacted", 0), "contact_rate": round(s.get("contacted", 0) / n * 100, 1) if n else 0,
                 "leads": leads.get(code, 0), "active": s.get("active", 0), "personas": personas.get(code, []),
+                "engaged": s.get("engaged", 0), "bots": bots.get(code, 0),
             })
         return rows
 

@@ -56,6 +56,17 @@ def job_seed():
     return "seed ok"
 
 
+def job_tracking():
+    """Saat başı veri kalitesi: (1) veri merkezinden gelmiş, hiç dokunmamış oturumlar bot olarak işaretlenir;
+    (2) son saatlerde iletişim tıklaması persona kanıtına girmemiş oturumlar ham veriden yeniden kurulur."""
+    from apps.persona.rebuild import rebuild_many
+    from apps.tracking.bots import flag_datacenter_sessions
+
+    flagged = flag_datacenter_sessions(days=3)
+    repaired = rebuild_many(days=1, only_missing=True)
+    return {"flagged": flagged, "repaired": repaired}
+
+
 def job_conversions():
     """Son 24 saatte başarısız olan reklam dönüşümlerini yeniden gönderir."""
     from apps.tracking.models import AdConversion
@@ -73,7 +84,7 @@ def job_conversions():
 
 
 JOBS = {"seed": job_seed, "translations": job_translations, "related": job_related, "persona": job_persona,
-        "cleanup": job_cleanup, "conversions": job_conversions}
+        "cleanup": job_cleanup, "conversions": job_conversions, "tracking": job_tracking}
 
 
 class Command(BaseCommand):

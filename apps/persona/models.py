@@ -147,6 +147,8 @@ class BehaviorEvent(models.Model):
         ("before_after", "Before/after"), ("urgency_cta", "Urgency CTA"), ("pageview", "Page view"),
         ("social_proof", "Social proof (Instagram)"), ("maps_click", "Maps / directions"), ("email_click", "E-mail"),
         ("language_switch", "Language switch"), ("contact_return", "Returned after contact click"),
+        ("phone_copy", "Phone number copied"), ("tab_return", "Returned to tab"), ("form_abandon", "Form abandoned"),
+        ("booking_step", "Booking step (Calendly)"), ("text_copy", "Text copied"),
     ]
 
     session = models.ForeignKey(VisitorSession, on_delete=models.CASCADE, related_name="events")
