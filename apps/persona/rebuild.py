@@ -87,6 +87,12 @@ def rebuild_many(days=30, site="", only_missing=False, limit=None, log=None) -> 
     qs = TSession.objects.filter(HUMAN_Q, created_at__gte=since).order_by("created_at")
     if site:
         qs = qs.filter(site=site)
+    if only_missing:   # yalnızca iletişim olayı olan oturumlar aday (tek sorgu; yüzlerce oturumda tek tek sayım yapılmaz)
+        from apps.tracking.models import TrackingEvent
+
+        keys = TrackingEvent.objects.filter(timestamp__gte=since, event_type__in=CONTACT_EVENTS) \
+            .values_list("session__session_key", flat=True).distinct()
+        qs = qs.filter(session_key__in=keys)
     if limit:
         qs = qs[:limit]
     stats = {"scanned": 0, "rebuilt": 0, "skipped_no_persona": 0, "skipped_ok": 0, "changed": 0}

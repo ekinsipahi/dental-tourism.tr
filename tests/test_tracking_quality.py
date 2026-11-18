@@ -4,8 +4,9 @@ import json
 from unittest import mock
 
 from django.contrib.auth import get_user_model
+from django.core.cache import caches
 from django.core.management import call_command
-from django.test import Client
+from django.test import Client, override_settings
 
 from apps.persona.models import VisitorSession as PersonaSession
 from apps.tracking.models import HUMAN_Q, PageView, TrackingEvent, VisitorSession
@@ -223,3 +224,37 @@ class PageViewDwellTests(SeededTestCase):
         home = PageView.objects.get(session__session_key="drd:" + sid, url=DRD + "/")
         self.assertEqual((first.time_on_page_sec, first.scroll_depth), (33, 70.0))
         self.assertEqual((home.time_on_page_sec, home.scroll_depth), (4, 10.0))
+
+
+class HousekeepingTests(SeededTestCase):
+    """Cron olmadan da veri temizlenir: ilk pageview beacon'ı arka planda bot işaretleme + kanıt onarımı başlatır."""
+
+    def setUp(self):
+        super().setUp()
+        caches["local"].delete("housekeeping:last")
+        caches["local"].delete("housekeeping:boot")
+
+    @override_settings(TRACKING_HOUSEKEEPING=True)
+    def test_first_beacon_schedules_flagging_and_repair_then_throttles(self):
+        c = Client()
+        # 1) hiç dokunmamış Google LLC oturumu  2) WhatsApp tıklaması kanıttan silinmiş oturum
+        ext(c, "/api/t/pageview/", {"site": "dbs", "vid": "1" * 32, "sid": "1" * 24, "url": DBS + "/blog/x/", "title": "t"}, DBS)
+        VisitorSession.objects.filter(session_key="dbs:" + "1" * 24).update(ip_org="AS15169 Google LLC")
+        ext(c, "/api/t/pageview/", {"site": "drd", "vid": "2" * 32, "sid": "2" * 24, "url": DRD + "/disci/sisli/", "title": "t"})
+        events(c, "2" * 24, [{"event_type": "whatsapp_click", "data": {"position": "hero", "label": "WhatsApp", "element": "whatsapp"}, "page_url": "/disci/sisli/"}], vid="2" * 32)
+        p = PersonaSession.objects.get(session_key="drd:" + "2" * 24)
+        p.evidence = []
+        p.save(update_fields=["evidence"])
+        caches["local"].delete("housekeeping:last")
+        caches["local"].delete("housekeeping:boot")
+
+        calls = []
+        def inline(func, *a, **k):
+            calls.append(a)
+            return func(*a, **k)
+        with mock.patch("apps.localization.dispatch.run_in_background", side_effect=inline):
+            ext(c, "/api/t/pageview/", {"site": "drd", "vid": "3" * 32, "sid": "3" * 24, "url": DRD + "/", "title": "t"})   # tetikler (30 gün)
+            ext(c, "/api/t/pageview/", {"site": "drd", "vid": "3" * 32, "sid": "3" * 24, "url": DRD + "/doktorlar", "title": "t"})  # 30 dk içinde: tetiklemez
+        self.assertEqual(calls, [(30,)])
+        self.assertEqual(VisitorSession.objects.get(session_key="dbs:" + "1" * 24).bot_reason, "datacenter")
+        self.assertIn("WhatsApp'ı tıkladı (hero)", labels("drd:" + "2" * 24))

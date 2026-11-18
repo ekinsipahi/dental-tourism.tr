@@ -274,6 +274,12 @@ def collect_pageview(request):
             session.save(update_fields=fields)
     except Exception as e:
         logger.error(f"collect_pageview: {e}")
+    try:
+        from .housekeeping import maybe_run
+
+        maybe_run()   # 30 dk'da bir arka planda: bot işaretleme + persona kanıt onarımı (isteği bloklamaz)
+    except Exception:  # noqa: BLE001
+        pass
 
     return JsonResponse({"ok": True})
 

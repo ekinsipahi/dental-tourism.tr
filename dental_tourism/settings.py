@@ -206,6 +206,8 @@ TRACKING_ALLOWED_ORIGINS = sorted({*config("TRACKING_ALLOWED_ORIGINS", default="
 
 # Testler .env'deki DEBUG'dan bağımsız: manifest'siz statik, HTTPS yönlendirmesi yok
 TESTING = len(sys.argv) > 1 and sys.argv[1] == "test"
+# Beacon tetikli bakım (bot işaretleme + persona kanıt onarımı) — cron'a bağımlı değil; testlerde kapalı
+TRACKING_HOUSEKEEPING = config("TRACKING_HOUSEKEEPING", default=True, cast=bool) and not TESTING
 if TESTING:
     STORAGES["staticfiles"] = {"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"}
 

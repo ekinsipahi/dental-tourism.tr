@@ -173,6 +173,12 @@ def ext_pageview(request):
     except Exception as e:  # noqa: BLE001
         logger.error(f"ext_pageview: {e}")
         return _cors(JsonResponse({"ok": False}, status=500), preq._origin)
+    try:
+        from .housekeeping import maybe_run
+
+        maybe_run()   # 30 dk'da bir arka planda: bot işaretleme + persona kanıt onarımı (isteği bloklamaz)
+    except Exception:  # noqa: BLE001
+        pass
     return _cors(JsonResponse({"ok": True, "decision": _decision(preq)}), preq._origin)
 
 
