@@ -14,3 +14,8 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dental_tourism.settings')
 
 application = get_wsgi_application()
+
+# Dosya seed'leri (blog, çeviriler) deploy'a bağımlı olmadan, süreç açılınca arka planda (apps/core/boot.py)
+from apps.core.boot import start_boot_seeds  # noqa: E402
+
+start_boot_seeds()

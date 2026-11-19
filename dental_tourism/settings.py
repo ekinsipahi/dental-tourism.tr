@@ -208,6 +208,9 @@ TRACKING_ALLOWED_ORIGINS = sorted({*config("TRACKING_ALLOWED_ORIGINS", default="
 TESTING = len(sys.argv) > 1 and sys.argv[1] == "test"
 # Beacon tetikli bakım (bot işaretleme + persona kanıt onarımı) — cron'a bağımlı değil; testlerde kapalı
 TRACKING_HOUSEKEEPING = config("TRACKING_HOUSEKEEPING", default=True, cast=bool) and not TESTING
+# Web süreci açılınca dosya seed'lerini (blog yazıları, çeviriler, hekim notları) arka planda uygula — build.sh'taki
+# seed adımı Render'da güvenilir çalışmıyor (apps/core/boot.py). Geliştirme ve testlerde kapalı.
+BOOT_SEEDS = config("BOOT_SEEDS", default=not DEBUG, cast=bool) and not TESTING
 if TESTING:
     STORAGES["staticfiles"] = {"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"}
 
