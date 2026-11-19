@@ -29,10 +29,20 @@ faq:
     a: A preliminary one. We discuss your case on WhatsApp or e-mail, look at your scan and tell you in writing what is likely to be possible. The final treatment plan is made after an intraoral examination, because whether a tooth can be kept cannot always be decided from an X-ray.
   - q: What if my implant fails after I return home?
     a: We keep in touch after you go home and ask how you are doing. If an implant fails, we place a new one and do not charge for it.
+  - q: Can my dentist at home do the follow-up or the crown?
+    a: Yes, if that is what you prefer. If you wish, we explain the case to your dentist directly.
+  - q: What happens if I do not have enough bone?
+    a: We do sinus lifts with grafting. If the bone is still insufficient, short implants are an option. For a back jaw where the bone has resorbed, All-on-4 can be considered. We generally do not do membrane-based bone augmentation.
+  - q: I am afraid of the dentist. Do you offer sedation?
+    a: We do not recommend it. Sedation belongs in a hospital setting and costs about as much as the dental treatment itself. We use partial sedation only very rarely, and not for fear; it is not something for a clinic setting.
+  - q: Can I speak to previous patients?
+    a: No. Patient rights do not allow us to put you in touch with other patients. You can watch their stories on our Instagram.
+  - q: Do you speak my language?
+    a: We work in Turkish and English. A Russian-speaking interpreter is available, and we bring in an interpreter when it is needed.
 ---
 ## The short answer
 
-Yes. Having [dental implants](/treatments/dental-implants/) placed in Turkey is a reasonable decision, and with the right dentist and an experienced clinic there is generally nothing to be afraid of. Thousands of international patients have been treated in our clinic in Şişli, Istanbul.
+Yes. Having [dental implants](/treatments/dental-implants/) placed in Turkey is a reasonable decision, and with the right dentist and an experienced clinic there is generally nothing to be afraid of. Thousands of international patients have been treated in our clinic in Şişli, Istanbul. They come from Russia, Canada, the United States, the United Kingdom, Moldova, Belarus, Arabic-speaking countries and across Europe.
 
 The risk is not the country. It is the clinic: who looks at your jaw before anything is drilled, who places the implant, which system goes into the bone, how much time the plan allows for healing, and whether anyone is still answering you after you fly home. Below is how we handle each of these points, so that you can hold any clinic against the same list.
 
@@ -44,6 +54,7 @@ The risk is not the country. It is the clinic: who looks at your jaw before anyt
 - You receive the identification stickers of your implant, so any dentist can identify it later.
 - One trip is usually not enough: unless there is enough bone for immediate loading, the implant heals for two to three months before the final teeth.
 - If an implant fails, we place a new one and do not charge for it.
+- Implants placed elsewhere that have failed: we identify the brand first, then decide what can be kept and what must be replaced.
 
 ## Start with the reviews, and read the bad ones
 
@@ -81,7 +92,7 @@ That depends on the difficulty of the case. Implants are placed by Dr. Devrim Bi
 
 ## Which implant system we use, and why you get the labels
 
-We currently work with the S.I.N. implant system. Nobel Biocare, Straumann and other premium systems are available as well; they cost considerably more, so they are discussed case by case with the patient.
+We currently work with the S.I.N. implant system, which we chose for its quality. Nobel Biocare, Straumann and other premium systems are available as well; they cost considerably more, so they are discussed case by case with the patient.
 
 <figure class="fig-left">
 <img src="{static:img/blog/is-it-safe-to-get-dental-implants-in-turkey/implant-label.jpg}" alt="An implant identification label showing implant type and size, lot number, expiry date and sterility mark" width="496" height="403">
@@ -104,7 +115,13 @@ In our experience, if you smoke little or not at all, there is no reason for an 
 
 The possibility of failure always exists. It depends on complications, and some of them are caused by the patient's own situation rather than by the surgery. That is why we ask about your health and your smoking before we start, and why we tell you in advance what happens if it does fail.
 
-We stay in touch after you return and ask, more than once, how you are doing. If something is wrong, we help. If an implant fails, we place a new one and do not charge for it. It is that simple. Our [aftercare guide](/guide/dental-guarantee-aftercare-turkey/) explains how follow-up works from abroad.
+While you are still in Istanbul, you reach the clinic directly if anything comes up; if painkillers are needed, they are prescribed before you leave the chair. After you return we stay in touch and ask, more than once, how you are doing. If something is wrong, we help. Your own dentist at home can take over the follow-up or the crown if you prefer, and if you wish we explain the case to them directly. If an implant fails, we place a new one and do not charge for it. It is that simple. Our [aftercare guide](/guide/dental-guarantee-aftercare-turkey/) explains how follow-up works from abroad.
+
+## If an implant from another clinic has failed
+
+Yes, we treat patients whose implants were placed elsewhere, and the first thing we do is find out the brand. If the brand is known, we order the matching parts and can continue on the existing implant. If one implant has failed, we replace it with a new one. If all of them have failed, we stop and ask why; sometimes the honest answer is that implants should not have been indicated for that patient in the first place, and that has to be assessed before anything new is placed.
+
+An implant that cannot be used can sometimes be left buried in the bone, "put to sleep", while a new implant of our own system is placed beside it. When a bridge is planned, two different implant systems can be combined with the right parts. Bring whatever you have: the brand or the identification stickers of your implants, and your X-rays.
 
 ## Before you contact any clinic: six things to ask yourself
 

@@ -98,3 +98,20 @@ format ve çeviri Claude'dan. Eski devrimbirikensipahi yazısındaki iddialar ka
 - Cevapsız: B8 (implant yılı/sayısı), B11 (komplikasyon listesi), B12 (ret örnekleri — kısmen), B13 (başka yerde yapılmış vakalar), B14 (belgeler), B17 (liste cevaplardan derlendi), B20 (gözlem), K5/K6/K7 ayrıntı, fotoğraflar.
 - B17 (hekim, hasta diliyle yazılacak; "doktor değilmiş gibi"): 1) Beni tedavi edecek doktorun adı ne; internetten araştır, akademik makalelerine bak; gelen doktor gerçekten o mu, değilse ad-soyad öğren ve araştır; vakit yoksa gereksiz risk alma. 2) Google yorumları iyi mi kötü mü; çok fazla kötü yorum var mı; sahte yorumlar ayırt edilemeyebilir ama çok kötü yorum her şeyi söyler. 3) Diş çekip implant mı diyorlar, sağlam dişi kurtarmaya mı çalışıyorlar; asıl mesele bu, diş gidince geri gelmez. 4) Telefonda ayrı, klinikte ayrı şey mi söylediler (çekip implant, komple kesme, 3 bin euro+ rakamlar) → doktorsuz kliniklerin hareketi. 5) Mutlaka Google profili olmalı; merdiven altı, doktor olmayan kişiler çok ucuza diş yapabilir; sağlamlığı ve ortamı iki kere düşündürmeli; herkes "ben doktorum" diyebilir. 6) Bilindik ya da doğrudan doktor isimli yerlere gidin; ucuz diye sağlığınızdan olmayın. — Yazıda 4. maddedeki euro rakamı kural gereği yazılmadı ("several times higher than discussed").
 
+### Claude'un ek sorularına cevaplar (hekim, 19.11.2026 akşam)
+- C1 başka klinikte başarısız implant: markasını öğreniyoruz; biliniyorsa parçalar istenir, üstüne devam edilebilir; fail olanın yerine yenisi; hepsi fail olduysa düşünürüz, belki endikasyon hiç konmamalıydı, bakılması lazım; implant "uyutma" yapılabilir, yanına bizim marka konur; gerekirse köprüde 2 farklı implant birleştirilir. → E1'e bölüm eklendi.
+- C2 kemik yetersiz: sinüs lift + greft yapıyoruz; yetersizse short implant; membranlı ogmentasyona fazla bulaşmıyoruz; arka bölge eridiyse All-on-4 düşünülebilir. Süre: cevap yok. → E1 SSS.
+- C3 ülkedeki hekim: isterse yapar, sorun yok; isterse hekimine anlatırız. → E1.
+- C4 sedasyon: önermiyoruz; hastane ortamı ister ve tedavi kadar para; kısmi sedasyon çok nadir; korkudan dolayı bu yöntemlere bulaşmıyoruz. → E1 SSS.
+- C5 ilk randevu: cevap yok. C7 All-on-4 takvim: anlaşılmadı, atlandı. C11 türbin sterilizasyonu: atlandı.
+- C6 S.I.N.: kaliteli olduğu için geçtik. → E1.
+- C8 gece sorun: doğrudan klinik; ağrı kesici vs. öncesinde yazılır. → E1.
+- C9 unvanlar: Dt. 5 yıl diş hekimi; Dr. doktora yapmış 5+4; Uzm. Dt. devlet üzerinden uzmanlık 5+4; implantolog = implant üzerine master. → E2 (EN8) için.
+- C10 kaplama provası: getirilince bakılır, beğenilmezse değiştirilir; önceden Instagram'daki işlere bakılmalı; doğal ve estetik odaklı. → E5 için.
+- C12 ülkeler: Rusya, Kanada, ABD, Moldova, Belarus, Arapça konuşan ülkeler, UK, Avrupa. → E1 + /about/.
+- C13 referans: hasta hakları gereği hastalarla konuşturmuyoruz; Instagram'da izlenebilir. → E1 SSS, E2.
+- C14 gece plağı: evet, değerlendiririz. → D7/E9 için.
+- C15 kayıtlar: saklanıyor, istenirse paylaşılır. → B3 için.
+- C16 diller: İngilizce konuşuyoruz; gerekli görülürse tercüman; Rusça tercüman var (RU sayfalara not). → E1 SSS + RU CTA notu; klinik dilleri tr/en.
+- C17 kontrol sıklığı, C18 ödeme: henüz cevap yok.
+

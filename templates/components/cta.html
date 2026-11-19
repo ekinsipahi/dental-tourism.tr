@@ -19,6 +19,7 @@
     <h2>{% trans "Free assessment — no obligation" %}</h2>
     <p>{% trans "Send us a photo or X-ray. Our dentist will reply with an honest treatment plan and a fixed price." %}</p>
   {% endif %}
+  {% if lang_code == "ru" %}<p style="font-size:.9rem;margin-top:.4rem">{% trans "A Russian-speaking interpreter is available in the clinic." %}</p>{% endif %}
   <div class="btn-row">
     {% if wa_url %}<a href="{{ wa_url }}" class="btn btn-lg" style="background:#fff;color:#065f46" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=18 %} WhatsApp</a>{% endif %} {% include "components/email_cta.html" %}
     {% if clinic.phone %}<a href="tel:{{ clinic.phone|cut:' ' }}" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.5)" data-track="phone">📞 {% trans "Call us" %}</a>{% endif %}

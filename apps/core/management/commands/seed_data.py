@@ -138,7 +138,7 @@ class Command(BaseCommand):
             "website": "https://drdevrim.com", "instagram": "drdevrimbirikensipahi",
             "youtube_url": "https://www.youtube.com/@devrimbirikensipahi",
             "founded_year": 2020, "years_experience": 35, "patients_treated": 10000,
-            "google_rating": Decimal("4.9"), "languages_spoken": ["tr", "en", "de", "nl"],
+            "google_rating": Decimal("4.9"), "languages_spoken": ["tr", "en"],  # hekim 19.11.2026: İngilizce konuşuyoruz; Rusça tercüman var (dil değil)
             "accreditations": [], "opening_hours": ["Mo-Fr 09:00-19:00", "Sa 10:00-16:00"],
             "source_language": "en",
         })

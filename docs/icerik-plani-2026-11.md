@@ -271,22 +271,22 @@ botuna sorduğu sorular. Her biri ya mevcut bir parçaya eklenir ya da yeni kıs
 
 | # | Soru (hastanın sorduğu biçim) | Neden YZ cevaplayamıyor | Nereye |
 |---|---|---|---|
-| C1 | Başka klinikte başarısız olmuş implantımı yeniden yaptırabilir miyim? Ne getirmeliyim? | Kabul kriterleri ve istenen belgeler kliniğe özgü | E6'ya bölüm ya da yeni EN yazı |
-| C2 | Kemik yetersizse ne oluyor: greft / sinüs lift yapıyor musunuz, süre nasıl değişiyor? | Hangi vakaların alındığı, gelen cerrahlar, süre | E4 + D6 |
-| C3 | Ülkemdeki diş hekimim takibi / kaplamayı yapabilir mi? Yabancı hekimle nasıl çalışıyorsunuz? | İş birliği pratiği, hangi belgeler veriliyor (stiker, radyografi) | E6 |
-| C4 | Diş hekimi korkum var; sedasyon / uyutma var mı? Nasıl yaklaşıyorsunuz? | Anestezi seçenekleri cevapsız (B6) | yeni EN+TR kısa yazı |
-| C5 | İlk randevu nasıl geçer, saat saat? Aynı gün tedaviye başlanır mı? | Klinik akışı (B2) | B2 sayfası + E7 |
-| C6 | Neden S.I.N. implant? Premium sistemden farkı sadece fiyat mı? | Hekimin tercih gerekçesi | E1 güncelleme + D6 |
-| C7 | All-on-4 / tüm çene için gerçekçi takvim nedir, kaç seyahat? | Kliniğin gerçek pratiği (seed metninde iddia var, hekim onayı yok) | E4 |
-| C8 | İstanbul'dayken ameliyattan sonraki gece sorun olursa kime ulaşırım? | Acil düzeni (B1) | B1 + E10 |
-| C9 | Dt. / Dr. Dt. / Uzm. Dt. ne demek? Türkiye'de kim "implantolog" diyebilir? | Unvan mevzuatı ve kliniğin unvanları | E2 (EN8) |
-| C10 | Son kaplamaların rengini / şeklini beğenmezsem uçmadan önce değişir mi? Prova var mı? | Protez akışı, prova sayısı | E5 |
-| C11 | Türbin ve el aletlerini nasıl sterilize ediyorsunuz; otoklav sınıfı ne, kayıt tutuluyor mu? | B5'in ayrıntısı | B3 sayfası |
-| C12 | Hangi ülkelerden hasta geliyor, en sık hangi tedavi için? | Kliniğin verisi | /about/ + E2 |
-| C13 | Önceki hastalarla konuşabilir miyim / referans veriyor musunuz? | Klinik politikası | E2 |
-| C14 | Bruksizm (gece sıkma) varsa implant ve kaplama sonrası gece plağı veriyor musunuz? | Klinik protokolü | D7 + E9 |
-| C15 | Kayıtlarım, fotoğraflarım, radyografim nasıl saklanıyor, paylaşılıyor mu (KVKK/GDPR)? | Klinik uygulaması | B3 |
-| C16 | Hangi dilleri konuşuyorsunuz, tercüman var mı? | Klinik gerçeği (langs: tr, en, de kayıtlı) | /about/ + E7 |
+| ~~C1~~ ✅ | Başka klinikte başarısız olmuş implantımı yeniden yaptırabilir miyim? Ne getirmeliyim? | cevaplandı 19.11 | E1'e bölüm eklendi |
+| ~~C2~~ ✅ | Kemik yetersizse ne oluyor: greft / sinüs lift yapıyor musunuz, süre nasıl değişiyor? | cevaplandı 19.11 | E1 SSS |
+| ~~C3~~ ✅ | Ülkemdeki diş hekimim takibi / kaplamayı yapabilir mi? Yabancı hekimle nasıl çalışıyorsunuz? | cevaplandı 19.11 | E1 |
+| ~~C4~~ ✅ | Diş hekimi korkum var; sedasyon / uyutma var mı? Nasıl yaklaşıyorsunuz? | cevaplandı 19.11 | E1 SSS |
+| ~~C5~~ ✖ | İlk randevu nasıl geçer, saat saat? Aynı gün tedaviye başlanır mı? | atlandı (hekim) | — |
+| ~~C6~~ ✅ | Neden S.I.N. implant? Premium sistemden farkı sadece fiyat mı? | cevaplandı 19.11 | E1 |
+| ~~C7~~ ✖ | All-on-4 / tüm çene için gerçekçi takvim nedir, kaç seyahat? | atlandı (hekim) | — |
+| ~~C8~~ ✅ | İstanbul'dayken ameliyattan sonraki gece sorun olursa kime ulaşırım? | cevaplandı 19.11 | E1 |
+| ~~C9~~ ✅ | Dt. / Dr. Dt. / Uzm. Dt. ne demek? Türkiye'de kim "implantolog" diyebilir? | cevaplandı 19.11 | E2 bekliyor |
+| ~~C10~~ ✅ | Son kaplamaların rengini / şeklini beğenmezsem uçmadan önce değişir mi? Prova var mı? | cevaplandı 19.11 | E5 bekliyor |
+| ~~C11~~ ✖ | Türbin ve el aletlerini nasıl sterilize ediyorsunuz; otoklav sınıfı ne, kayıt tutuluyor mu? | atlandı (hekim) | — |
+| ~~C12~~ ✅ | Hangi ülkelerden hasta geliyor, en sık hangi tedavi için? | cevaplandı 19.11 | E1 |
+| ~~C13~~ ✅ | Önceki hastalarla konuşabilir miyim / referans veriyor musunuz? | cevaplandı 19.11 | E1 SSS |
+| ~~C14~~ ✅ | Bruksizm (gece sıkma) varsa implant ve kaplama sonrası gece plağı veriyor musunuz? | cevaplandı 19.11 | D7/E9 bekliyor |
+| ~~C15~~ ✅ | Kayıtlarım, fotoğraflarım, radyografim nasıl saklanıyor, paylaşılıyor mu (KVKK/GDPR)? | cevaplandı 19.11 | B3 bekliyor |
+| ~~C16~~ ✅ | Hangi dilleri konuşuyorsunuz, tercüman var mı? | cevaplandı 19.11 | E1 SSS + RU notu |
 | C17 | İmplant sonrası kaç ayda bir kontrol; kontrolü ülkemde yaptırabilir miyim? | Takip protokolü | E6 |
 | C18 | Ödeme nasıl: kapora, taksit, kart / nakit, hangi para birimi? (rakamsız) | Klinik politikası | E3 |
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-19 20:44+0300\n"
+"POT-Creation-Date: 2026-11-19 21:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Pris på implantater og fasetter, sikkerhet, tilheling og valg av tannlege i "
 "Istanbul — praktiske, ærlige råd fra tannleger med over 35 års erfaring."
 
-#: apps/blog/views.py:123 apps/blog/views.py:153 apps/blog/views.py:222
+#: apps/blog/views.py:123 apps/blog/views.py:153 apps/blog/views.py:224
 #: apps/clinics/views.py:44 apps/clinics/views.py:107
 #: apps/clinics/views.py:184 apps/core/views.py:152 apps/seo/area_views.py:110
 #: apps/seo/area_views.py:133 apps/seo/common.py:52 apps/seo/guide_views.py:39
@@ -42,7 +42,7 @@ msgstr ""
 msgid "Home"
 msgstr "Hjem"
 
-#: apps/blog/views.py:123 apps/blog/views.py:153 apps/blog/views.py:222
+#: apps/blog/views.py:123 apps/blog/views.py:153 apps/blog/views.py:224
 #: templates/components/navbar.html:55
 msgid "Blog"
 msgstr "Blogg"
@@ -743,7 +743,7 @@ msgstr ""
 "hit."
 
 #: apps/seo/common.py:56 templates/clinics/detail.html:74
-#: templates/clinics/doctor.html:27 templates/components/footer.html:53
+#: templates/clinics/doctor.html:33 templates/components/footer.html:53
 #: templates/components/navbar.html:64 templates/components/navbar.html:101
 #: templates/components/reviews.html:16 templates/home/sections/hero.html:182
 msgid "Patient reviews"
@@ -1337,7 +1337,7 @@ msgid "Send a photo — free assessment"
 msgstr "Send et bilde – gratis vurdering"
 
 #: templates/about.html:13 templates/base.html:69
-#: templates/components/cta.html:24 templates/pseo/_hero.html:12
+#: templates/components/cta.html:25 templates/pseo/_hero.html:12
 msgid "Call us"
 msgstr "Ring oss"
 
@@ -1819,6 +1819,12 @@ msgstr "Universitet"
 msgid "Graduated"
 msgstr "Utdannet"
 
+#: templates/clinics/doctor.html:29
+#, python-format
+#| msgid "Everything about %(name)s"
+msgid "Articles by %(name)s"
+msgstr "Artikler av %(name)s"
+
 #: templates/clinics/list.html:7
 msgid "Dental clinics in Istanbul for international patients"
 msgstr "Tannklinikker i Istanbul for internasjonale pasienter"
@@ -1959,7 +1965,11 @@ msgstr ""
 "Send oss et bilde eller røntgenbilde. Tannlegen vår svarer med en ærlig "
 "behandlingsplan og en fast pris."
 
-#: templates/components/cta.html:26
+#: templates/components/cta.html:22
+msgid "A Russian-speaking interpreter is available in the clinic."
+msgstr "En russisktalende tolk er tilgjengelig på klinikken."
+
+#: templates/components/cta.html:27
 msgid "Contact form"
 msgstr "Kontaktskjema"
 
@@ -2233,7 +2243,6 @@ msgid "Dental tourism with Sterr Agency"
 msgstr "Tannturisme med Sterr Agency"
 
 #: templates/guides/detail.html:44
-#| msgid "Your dentist"
 msgid "From our dentists"
 msgstr "Fra våre tannleger"
 
