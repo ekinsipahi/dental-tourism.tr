@@ -5,7 +5,7 @@ Kaynak: danışman listesindeki 54 soru (10 Türkçe hasta sorusu, 17 klinik uzm
 
 ## Kurallar
 
-- **Site rolleri:** Türkçe klinik karar yazıları → **drdevrim.com/blog/**. İngilizce turist yazıları → **dentaltourism.tr/blog/** (kaynak dil EN, çeviri sırası RU → DE → BG → FR, sonra diğerleri). Klinik işleyiş sayfaları (saatler, acil, ilk muayene, sterilizasyon, tedavi listesi) → **devrimbirikensipahi.com.tr**.
+- **Site rolleri:** Türkçe klinik karar yazıları → **drdevrim.com/blog/**. İngilizce turist yazıları → **dentaltourism.tr/blog/** (kaynak dil EN; hekim kararı 19.11: şimdilik yalnızca İngilizce, çeviri yok). Klinik işleyiş sayfaları (saatler, acil, ilk muayene, sterilizasyon, tedavi listesi) → **devrimbirikensipahi.com.tr**.
 - **Bir konu, bir dilde, tek alan adında.** Aynı konunun Türkçesi drdevrim'de, İngilizcesi dentaltourism'de olabilir; aynı dilde iki kopya olmaz. Çakışan eski sayfalar 301 ile yeni parçaya gider (§5).
 - **Rehber varsa yazı açılmaz:** soru mevcut bir `/guide/` konusunu karşılıyorsa hekim cevabı rehber gövdesine girer; blog yalnızca soru biçimli, tarihli, imzalı yazılar için.
 - **Klinik iddia yalnızca hekimden.** Her parçanın "Hekimden" listesi cevaplanmadan yazı yazılmaz. Rakam (yıl, vaka sayısı, süre) yalnızca hekimin verdiği rakamdır. Fiyat, yüzde tasarruf, otel/uçuş/transfer vaadi yok. "En iyi", "garantili", "ağrısız" gibi üstünlük ve kesinlik ifadeleri yok (sağlık tanıtım mevzuatı).
@@ -125,7 +125,7 @@ Hekimden: aşamalar ve bekleme süreleri (kendi protokolü), tek seyahatte biten
 Fotoğraf: zaman çizelgesi grafiği (kendi verimizle), geçici protez örneği, implant belgesi.
 Bağlantılar: /treatments/dental-implants/, /packages/dental-implants/, E6, E7.
 
-### ~~E1 — Is it safe to get dental implants in Turkey?~~ ✅ yayında 19.11.2026 (EN; RU/DE/BG/FR çevirileri bekliyor)
+### ~~E1 — Is it safe to get dental implants in Turkey?~~ ✅ yayında 19.11.2026 (EN; hekim kararı: şimdilik çeviri yok)
 Soruları: EN1.
 Hekimden: güvenliği belirleyen gerçek faktörler (planlama, tomografi, sterilizasyon, hekim deneyimi, malzeme izlenebilirliği), riskleri açıkça; "ucuz ve hızlı" talebine nasıl yanıt verdiği; yurt dışında yapılmış ve sorun çıkan vakalarla karşılaşıyor mu, en sık hata ne.
 Fotoğraf: sterilizasyon, implant belgesi, tomografi.
