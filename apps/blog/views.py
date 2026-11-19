@@ -59,6 +59,14 @@ def _first_paragraph(markdown_text, limit=260):
     return ""
 
 
+def _content_images(markdown_text):
+    """Gövdedeki görseller (Markdown ![..](src) ve ham <img src>) — şemadaki image listesi için."""
+    import re
+
+    text = markdown_text or ""
+    return re.findall(r"!\[[^\]]*\]\(([^)\s]+)", text) + re.findall(r'<img[^>]+src="([^"]+)"', text)
+
+
 def person_schema(doctor_loc, url):
     """Yazar/onaylayan hekim için Person — hekim sayfasındaki Person ile aynı @id (tek kimlik)."""
     d = doctor_loc.object
@@ -171,6 +179,8 @@ def blog_detail(request, category_slug, post_slug):
 
     author = person_schema(extras["author"], extras["author_url"]) if extras["author"] else None
     reviewer = extras["reviewer"]
+    images = [absolute(post.image_src)] if post.image_src else []
+    images += [absolute(src) for src in _content_images(loc.content) if absolute(src) not in images]
     article = {
         "@context": "https://schema.org",
         "@type": post.schema_type,
@@ -182,16 +192,21 @@ def blog_detail(request, category_slug, post_slug):
         "dateModified": post.updated_at.isoformat(),
         "author": author or {"@id": absolute("/#organization")},
         "publisher": organization_schema(),
-        "image": absolute(post.image_src) if post.image_src else None,
+        "image": images or None,
         "keywords": loc.focus_keyword or None,
         "wordCount": len((loc.content or "").split()),
+        "articleSection": cat_loc.name,
+        "isAccessibleForFree": True,
     }
+    if extras["treatment"]:
+        article["about"] = {"@type": "MedicalProcedure", "name": extras["treatment"].name}
     if reviewer:
         article["reviewedBy"] = person_schema(reviewer, extras["reviewer_url"])
     elif author and post.schema_type == "MedicalWebPage":
         article["reviewedBy"] = author
     if post.schema_type == "MedicalWebPage":
         article["lastReviewed"] = post.updated_at.date().isoformat()
+        article["audience"] = {"@type": "MedicalAudience", "audienceType": "Patient"}
 
     seo = Seo(
         title=loc.meta_title or loc.title,

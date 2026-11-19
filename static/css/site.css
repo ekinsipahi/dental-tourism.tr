@@ -261,6 +261,15 @@ a.card:hover { border-color: var(--border-hv); transform: translateY(-3px); back
 .cta-inline { margin-top: 1.8rem; padding: 1rem 1.2rem; border-left: 3px solid var(--brand); background: var(--bg-card); border-radius: var(--radius); font-size: .95rem; }
 .cta-inline a { font-weight: 600; white-space: nowrap; }
 .author-box h2 a { color: inherit; text-decoration: none; }
+/* Blog — gövde içi gerçek fotoğraflar (sollu sağlı figürler; mobilde tam genişlik) */
+.prose figure { margin: 1.5rem 0; }
+.prose figure img { margin: 0; width: 100%; height: auto; display: block; }
+.prose figcaption { font-size: .82rem; color: var(--tx-muted); margin-top: .5rem; line-height: 1.45; }
+.prose .fig-left, .prose .fig-right { width: 46%; margin: .3rem 0 1rem; }
+.prose .fig-left { float: left; margin-right: 1.5rem; }
+.prose .fig-right { float: right; margin-left: 1.5rem; }
+.prose .fig-full, .prose h2 { clear: both; }
+@media (max-width: 640px) { .prose .fig-left, .prose .fig-right { float: none; width: 100%; margin: 1.2rem 0; } }
 
 /* ── Forms ──────────────────────────────────────────────────────────────── */
 .form { display: grid; gap: 1rem; }

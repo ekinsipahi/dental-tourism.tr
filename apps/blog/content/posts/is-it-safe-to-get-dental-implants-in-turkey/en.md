@@ -6,6 +6,8 @@ excerpt: Yes, if you choose the right dentist and an experienced clinic. What we
 meta_title: Is It Safe to Get Dental Implants in Turkey? A Dentist Answers
 meta_description: Yes, with the right dentist. What we check before placing an implant in Istanbul, why one trip is usually not enough, which implant systems we use, and what happens if one fails.
 focus_keyword: dental implants in turkey safe
+featured_image: img/clinic/gallery/devrim-slide3.jpg
+featured_image_alt: Dr. Dt. Devrim Biriken Sipahi at the reception desk of her clinic in Şişli, Istanbul
 author: devrim-biriken-sipahi
 treatment: dental-implants
 schema_type: MedicalWebPage
@@ -33,6 +35,15 @@ Yes. Having [dental implants](/treatments/dental-implants/) placed in Turkey is 
 
 The risk is not the country. It is the clinic: who looks at your jaw before anything is drilled, who places the implant, which system goes into the bone, how much time the plan allows for healing, and whether anyone is still answering you after you fly home. Below is how we handle each of these points, so that you can hold any clinic against the same list.
 
+**Key points**
+
+- The decision to place an implant rests on a tomography (CBCT) scan and an examination in the clinic, not on a phone call.
+- Diabetes, bone medication, blood thinners, corticosteroids and several other conditions change the plan; they must be disclosed first.
+- Instruments are autoclaved and opened from sealed pouches for each patient.
+- You receive the identification stickers of your implant, so any dentist can identify it later.
+- One trip is usually not enough: unless there is enough bone for immediate loading, the implant heals for two to three months before the final teeth.
+- If an implant fails, we place a new one and do not charge for it.
+
 ## Start with the reviews, and read the bad ones
 
 Before you look at prices or photos, look at the reviews, including the negative ones. Our rule of thumb: a clinic with 70 or more reviews and only a few bad ones is generally a safe choice. A clinic with many bad reviews is not, however good its photos look. What patients complain about tells you more than the average star rating.
@@ -51,7 +62,17 @@ Heart conditions, diabetes, high blood pressure, Paget's disease and other bone 
 
 ## How instruments are sterilised
 
+<figure class="fig-right">
+<img src="{static:img/blog/is-it-safe-to-get-dental-implants-in-turkey/autoclave.jpg}" alt="The autoclave in the sterilisation unit of our dental clinic in Şişli, Istanbul" width="1200" height="1600">
+<figcaption>The autoclave in our sterilisation unit in Şişli. Photographed in our clinic, not a stock image.</figcaption>
+</figure>
+
 Instruments are sterilised in an autoclave and stored in sealed pouches. After every appointment the used set is removed, and a new set is opened from its pouches for the next patient. This is normal sterilisation practice, and it is what you should expect to see in any clinic you visit.
+
+<figure class="fig-full">
+<img src="{static:img/blog/is-it-safe-to-get-dental-implants-in-turkey/sterile-pouches.jpg}" alt="Dental hand instruments in sealed sterilisation pouches with colour indicators, ready for the next patient" width="1200" height="1600">
+<figcaption>Hand instruments arrive at the chair like this: each set in a sealed sterilisation pouch. The printed indicator on the pouch changes colour once it has been through the autoclave.</figcaption>
+</figure>
 
 ## Who places the implant
 
@@ -61,7 +82,12 @@ That depends on the difficulty of the case. Implants are placed by Dr. Devrim Bi
 
 We currently work with the S.I.N. implant system. Nobel Biocare, Straumann and other premium systems are available as well; they cost considerably more, so they are discussed case by case with the patient.
 
-Whatever system is used, you receive the implant's identification stickers, which record the brand, type and lot number. Keep them. Years from now, any dentist in any country can identify your implant from them and order compatible parts. We do this so that the implant never becomes a problem for you later.
+<figure class="fig-left">
+<img src="{static:img/blog/is-it-safe-to-get-dental-implants-in-turkey/implant-label.jpg}" alt="An implant identification label showing implant type and size, lot number, expiry date and sterility mark" width="496" height="403">
+<figcaption>An implant identification label, like the stickers you take home: type and size, lot number, expiry date and the code that identifies the implant as genuine.</figcaption>
+</figure>
+
+Whatever system is used, you receive the implant's identification stickers. They carry the brand, the implant's original identification (type and size), the lot number, the expiry date and a barcode or QR code, which is also how the implant can be verified as genuine. Keep them. Years from now, any dentist in any country can identify your implant from them and order compatible parts. We do this so that the implant never becomes a problem for you later.
 
 ## Can everything be done in one trip? Usually not
 
@@ -74,6 +100,8 @@ Immediate loading, a temporary tooth fitted within the first week, is possible o
 In our experience, if you smoke little or not at all, there is no reason for an implant to fail. The health conditions and medicines described above are the other factors, which is why we insist on knowing them. Tell us honestly how much you smoke; it is part of the planning.
 
 ## What happens if an implant fails after you go home
+
+The possibility of failure always exists. It depends on complications, and some of them are caused by the patient's own situation rather than by the surgery. That is why we ask about your health and your smoking before we start, and why we tell you in advance what happens if it does fail.
 
 We stay in touch after you return and ask, more than once, how you are doing. If something is wrong, we help. If an implant fails, we place a new one and do not charge for it. It is that simple. Our [aftercare guide](/guide/dental-guarantee-aftercare-turkey/) explains how follow-up works from abroad.
 
