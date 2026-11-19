@@ -151,6 +151,7 @@ def doctor_detail(request, slug):
     person = {
         "@context": "https://schema.org",
         "@type": ["Person", "Physician"],
+        "@id": (alternates.get(lang) or absolute(request.path)) + "#person",  # blog yazılarındaki author ile aynı kimlik
         "name": doctor.full_name,
         "jobTitle": loc.title_display or "Dentist",
         "url": alternates.get(lang) or absolute(request.path),

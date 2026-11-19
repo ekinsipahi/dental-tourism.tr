@@ -18,3 +18,4 @@ bleach==6.2.0
 polib==1.2.0
 requests==2.32.3
 Babel==2.18.0
+PyYAML==6.0.2

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n site_tags %}
+{% load i18n site_tags blog_tags %}
 {% block content %}
 <article itemscope itemtype="https://schema.org/BlogPosting">
 <header class="page-head"><div class="wrap-narrow">
@@ -8,10 +8,11 @@
   <h1 itemprop="headline" style="margin-top:1rem">{{ p.title }}</h1>
   {% if p.excerpt %}<p class="lead">{{ p.excerpt }}</p>{% endif %}
   <div class="meta-row">
+    {% if author %}<span itemprop="author" itemscope itemtype="https://schema.org/Person">✍️ {% trans "Written by" %} <a href="{{ author_url }}" itemprop="url"><span itemprop="name">{{ author.full_name }}</span></a></span>{% endif %}
     {% if post.published_at %}<span>📅 <time datetime="{{ post.published_at|date:'c' }}" itemprop="datePublished">{{ post.published_at|date:"DATE_FORMAT" }}</time></span>{% endif %}
     {% if post.updated_at|date:"Ymd" != post.published_at|date:"Ymd" %}<span>🔄 {% trans "Updated" %} <time datetime="{{ post.updated_at|date:'c' }}" itemprop="dateModified">{{ post.updated_at|date:"DATE_FORMAT" }}</time></span>{% endif %}
     <span>⏱️ {% blocktrans with n=p.reading_time %}{{ n }} min read{% endblocktrans %}</span>
-    {% if reviewer %}<span>🩺 {% trans "Medically reviewed by" %} <a href="{{ reviewer.object.get_absolute_url }}">{{ reviewer.full_name }}</a></span>{% endif %}
+    {% if reviewer %}<span>🩺 {% trans "Medically reviewed by" %} <a href="{{ reviewer_url }}">{{ reviewer.full_name }}</a></span>{% endif %}
   </div>
 </div></header>
 
@@ -21,10 +22,27 @@
   {% with toc_items=p.content|toc %}{% if toc_items|length > 2 %}
   <nav class="toc" aria-label="{% trans 'Contents' %}" style="margin-bottom:2rem"><p>{% trans "In this article" %}</p><ol>{% for id, title in toc_items %}<li><a href="#{{ id }}">{{ title }}</a></li>{% endfor %}</ol></nav>
   {% endif %}{% endwith %}
-  <div class="prose" itemprop="articleBody" data-track-section="content">{{ p.content|markdown }}</div>
+  <div class="prose" itemprop="articleBody" data-track-section="content">{% blog_body p.content %}</div>
+
+  <p class="cta-inline" data-track-section="cta-inline">{% cblock "blog-inline-cta" "subtitle" _("Not sure what applies to your own teeth? Send your X-ray or a photo and the dentist replies personally with a written preliminary assessment — before you book anything.") %}
+    {% if wa_url %}<a href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% cblock "blog-inline-cta" "button_text" _("Send your X-ray on WhatsApp") %} →</a>{% else %}<a href="{% url 'core:contact' %}" data-track="cta">{% cblock "blog-inline-cta" "button_text" _("Send your X-ray on WhatsApp") %} →</a>{% endif %}</p>
+
+  {% if author %}
+  <aside class="side-cta author-box" style="margin-top:2.5rem;display:flex;gap:1.1rem;align-items:flex-start" data-track-section="author">
+    {% if author.photo_src %}<a href="{{ author_url }}" style="flex:none"><img src="{{ author.photo_src }}" alt="{{ author.full_name }}" width="72" height="72" loading="lazy" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--brand)"></a>{% endif %}
+    <div>
+      <p class="eyebrow" style="margin:0 0 .3rem">{% trans "Written by" %}</p>
+      <h2 style="font-size:1.1rem;margin:0"><a href="{{ author_url }}">{{ author.full_name }}</a></h2>
+      {% if author.title_display %}<p class="muted" style="margin:.2rem 0 0">{{ author.title_display }}</p>{% endif %}
+      {% if author_bio %}<p style="margin:.6rem 0 0">{{ author_bio }}</p>{% endif %}
+      <p style="margin:.6rem 0 0"><a href="{{ author_url }}">{% trans "Qualifications" %} →</a>{% if author.instagram %} · <a href="https://www.instagram.com/{{ author.instagram }}/" target="_blank" rel="noopener" data-track="instagram">Instagram</a>{% endif %}</p>
+      {% if reviewer %}<p class="faint" style="margin:.6rem 0 0">🩺 {% trans "Medically reviewed by" %} <a href="{{ reviewer_url }}">{{ reviewer.full_name }}</a></p>{% endif %}
+    </div>
+  </aside>
+  {% endif %}
 
   {% if treatment %}
-  <div class="side-cta" style="margin-top:2.5rem" data-track-section="sidebar">
+  <div class="side-cta" style="margin-top:1.5rem" data-track-section="sidebar">
     <h2>{{ treatment.icon }} {{ treatment.name }}</h2>
     <p class="muted">{{ treatment.short_description|truncatechars:200 }}</p>
     <a class="btn btn-outline btn-sm" href="{{ treatment.object.get_absolute_url }}">{% trans "Prices and details" %} →</a>

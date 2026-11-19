@@ -4,7 +4,7 @@ Render build'inde her deploy'da çalışır (build.sh): yeni bir dil eklendiğin
 
   python manage.py seed_translations
 
-Sırasıyla: şehir adları (LANGUAGE_META) → tedaviler → klinik/hekim profilleri → rehberler → yorumlar.
+Sırasıyla: şehir adları (LANGUAGE_META) → tedaviler → klinik/hekim profilleri → rehberler → yorumlar → blog yazıları.
 Keyword tablosu (yüzlerce upsert) yalnızca keyword'ü hiç olmayan bir dil varsa yeniden yazılır; her deploy'da değil.
 """
 from django.core.management import call_command
@@ -33,3 +33,4 @@ class Command(BaseCommand):
         missing_kw = set(LANGUAGE_META) - set(Keyword.objects.values_list("language", flat=True).distinct())
         call_command("seed_topics", no_keywords=not missing_kw, stdout=self.stdout)
         call_command("seed_review_translations", stdout=self.stdout)
+        call_command("seed_blog", stdout=self.stdout)  # apps/blog/content: yazılar + kategori çevirileri (dosya esastır)

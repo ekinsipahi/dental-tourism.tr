@@ -48,6 +48,27 @@ def _post_page(qs, lang, number, key):
     return memo(f"{key}:{number}", 300, load, model=BlogPost)
 
 
+def _first_paragraph(markdown_text, limit=260):
+    """Hekim biyografisinin ilk paragrafı (düz metin) — yazar kutusu için."""
+    import re
+
+    for para in re.split(r"\n\s*\n", (markdown_text or "").strip()):
+        text = re.sub(r"[#*_`>\[\]()]+", "", para).strip()
+        if len(text) > 40:
+            return text if len(text) <= limit else text[: limit - 1].rsplit(" ", 1)[0] + "…"
+    return ""
+
+
+def person_schema(doctor_loc, url):
+    """Yazar/onaylayan hekim için Person — hekim sayfasındaki Person ile aynı @id (tek kimlik)."""
+    d = doctor_loc.object
+    out = {"@type": "Person", "@id": url + "#person", "name": d.full_name, "url": url,
+           "jobTitle": doctor_loc.title_display or "Dentist",
+           "image": absolute(d.photo_src) if d.photo_src else None,
+           "sameAs": [f"https://www.instagram.com/{d.instagram}/"] if d.instagram else None}
+    return {k: v for k, v in out.items() if v}
+
+
 def _post_extras(post, lang):
     """Yazı sayfasının yardımcı verisi (URL'ler, kategori, hreflang, ilgili yazılar, hekim, tedavi) — (yazı, dil)
     başına 5 dk süreç içi bellekte: 17 dilin hreflang'ı için her istekte onlarca çeviri sorgusu atılmaz."""
@@ -57,7 +78,10 @@ def _post_extras(post, lang):
         related_ids = list(RelatedPost.objects.filter(post=post).values_list("related_post_id", flat=True)[:6])
         related_qs = BlogPost.published.filter(pk__in=related_ids) if related_ids else \
             BlogPost.published.filter(category=post.category).exclude(pk=post.pk)
-        reviewer = post.reviewed_by
+        # Yazar = yazan/konuşan hekim (doctor_author); yoksa onaylayan hekim yazar sayılır. Onaylayan hekim
+        # yazardan farklıysa ayrıca "medically reviewed by" olarak gösterilir.
+        author = post.doctor_author or post.reviewed_by
+        reviewer = post.reviewed_by if post.reviewed_by and post.reviewed_by != author else None
         return {
             "url": post.get_absolute_url(lang),
             "source_url": post.get_absolute_url(post.source_language),
@@ -65,6 +89,9 @@ def _post_extras(post, lang):
             "cat_url": post.category.get_absolute_url(lang),
             "alternates": {lg: absolute(post.get_absolute_url(lg)) for lg in post.live_languages()},
             "related": localize_list(with_translations(_posts_in_language(related_qs, lang)[:4], lang), lang, fallback=False),
+            "author": author.localized(lang) if author else None,
+            "author_url": absolute(author.get_absolute_url()) if author else "",
+            "author_bio": _first_paragraph(author.localized(lang).bio) if author else "",
             "reviewer": reviewer.localized(lang) if reviewer else None,
             "reviewer_url": absolute(reviewer.get_absolute_url()) if reviewer else "",
             "treatment": post.treatment.localized(lang) if post.treatment else None,
@@ -142,10 +169,8 @@ def blog_detail(request, category_slug, post_slug):
     canonical = post.canonical_url or alternates.get(lang)
     related = extras["related"]
 
-    author = None
+    author = person_schema(extras["author"], extras["author_url"]) if extras["author"] else None
     reviewer = extras["reviewer"]
-    if reviewer:
-        author = {"@type": "Person", "name": reviewer.full_name, "url": extras["reviewer_url"]}
     article = {
         "@context": "https://schema.org",
         "@type": post.schema_type,
@@ -162,6 +187,8 @@ def blog_detail(request, category_slug, post_slug):
         "wordCount": len((loc.content or "").split()),
     }
     if reviewer:
+        article["reviewedBy"] = person_schema(reviewer, extras["reviewer_url"])
+    elif author and post.schema_type == "MedicalWebPage":
         article["reviewedBy"] = author
     if post.schema_type == "MedicalWebPage":
         article["lastReviewed"] = post.updated_at.date().isoformat()
@@ -186,6 +213,7 @@ def blog_detail(request, category_slug, post_slug):
 
     return render(request, "blog/detail.html", {
         "seo": seo, "post": post, "p": loc, "category": cat_loc, "related": related, "treatment": extras["treatment"],
-        "reviewer": reviewer,
+        "author": extras["author"], "author_url": extras["author_url"], "author_bio": extras["author_bio"],
+        "reviewer": reviewer, "reviewer_url": extras["reviewer_url"],
         "page_type": "blog_detail", "funnel_stage": post.funnel_stage,
     })

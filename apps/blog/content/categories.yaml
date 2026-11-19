@@ -1,0 +1,66 @@
+# Blog kategorileri — kaynak dil EN, diğer 16 dil elle yazılmış (API anahtarı gerekmez).
+# seed_blog: kategori yoksa oluşturur; çevirileri yalnızca EKSİKSE yazar (admin düzenlemelerini ezmez).
+# Anahtar = EN slug (apps/blog/content/posts/*/en.md içindeki `category:` değeri).
+
+safety-and-quality:
+  funnel_stage: consideration
+  order: 20
+  en: {name: "Safety and quality", description: "What makes dental treatment safe: planning, imaging, sterilisation, materials and follow-up — explained by the treating dentist."}
+  de: {name: "Sicherheit und Qualität", slug: sicherheit-und-qualitaet, description: "Was eine Zahnbehandlung sicher macht: Planung, Bildgebung, Sterilisation, Materialien und Nachsorge — erklärt von der behandelnden Zahnärztin."}
+  nl: {name: "Veiligheid en kwaliteit", slug: veiligheid-en-kwaliteit, description: "Wat een tandheelkundige behandeling veilig maakt: planning, beeldvorming, sterilisatie, materialen en nazorg — uitgelegd door de behandelend tandarts."}
+  fr: {name: "Sécurité et qualité", slug: securite-et-qualite, description: "Ce qui rend un traitement dentaire sûr : planification, imagerie, stérilisation, matériaux et suivi — expliqué par le dentiste traitant."}
+  it: {name: "Sicurezza e qualità", slug: sicurezza-e-qualita, description: "Cosa rende sicuro un trattamento dentale: pianificazione, diagnostica per immagini, sterilizzazione, materiali e controlli — spiegato dal dentista curante."}
+  es: {name: "Seguridad y calidad", slug: seguridad-y-calidad, description: "Qué hace seguro un tratamiento dental: planificación, radiología, esterilización, materiales y seguimiento — explicado por el dentista que trata."}
+  pl: {name: "Bezpieczeństwo i jakość", slug: bezpieczenstwo-i-jakosc, description: "Co sprawia, że leczenie stomatologiczne jest bezpieczne: planowanie, diagnostyka obrazowa, sterylizacja, materiały i kontrola — wyjaśnia lekarz prowadzący."}
+  ru: {name: "Безопасность и качество", slug: bezopasnost-i-kachestvo, description: "Что делает стоматологическое лечение безопасным: планирование, снимки, стерилизация, материалы и наблюдение — объясняет лечащий врач."}
+  uk: {name: "Безпека та якість", slug: bezpeka-ta-yakist, description: "Що робить стоматологічне лікування безпечним: планування, знімки, стерилізація, матеріали та спостереження — пояснює лікар."}
+  ar: {name: "السلامة والجودة", slug: alsalama-waljawda, description: "ما الذي يجعل علاج الأسنان آمنًا: التخطيط والتصوير والتعقيم والمواد والمتابعة — بشرح من الطبيبة المعالجة."}
+  sv: {name: "Säkerhet och kvalitet", slug: sakerhet-och-kvalitet, description: "Vad som gör tandvård säker: planering, röntgen, sterilisering, material och uppföljning — förklarat av behandlande tandläkare."}
+  da: {name: "Sikkerhed og kvalitet", slug: sikkerhed-og-kvalitet, description: "Hvad der gør tandbehandling sikker: planlægning, røntgen, sterilisation, materialer og opfølgning — forklaret af den behandlende tandlæge."}
+  "no": {name: "Sikkerhet og kvalitet", slug: sikkerhet-og-kvalitet, description: "Hva som gjør tannbehandling trygg: planlegging, røntgen, sterilisering, materialer og oppfølging — forklart av behandlende tannlege."}
+  ro: {name: "Siguranță și calitate", slug: siguranta-si-calitate, description: "Ce face un tratament dentar sigur: planificare, imagistică, sterilizare, materiale și urmărire — explicat de medicul curant."}
+  bg: {name: "Безопасност и качество", slug: bezopasnost-i-kachestvo, description: "Какво прави денталното лечение безопасно: планиране, снимки, стерилизация, материали и проследяване — обяснено от лекуващия лекар."}
+  az: {name: "Təhlükəsizlik və keyfiyyət", slug: tehlukesizlik-ve-keyfiyyet, description: "Diş müalicəsini təhlükəsiz edən nədir: planlaşdırma, görüntüləmə, sterilizasiya, materiallar və nəzarət — müalicə edən həkimin izahı ilə."}
+  tr: {name: "Güvenlik ve kalite", slug: guvenlik-ve-kalite, description: "Diş tedavisini güvenli yapan nedir: planlama, görüntüleme, sterilizasyon, malzeme ve takip — tedaviyi yapan hekimin anlatımıyla."}
+
+treatment-decisions:
+  funnel_stage: consideration
+  order: 21
+  en: {name: "Treatment decisions", description: "When a treatment is the right choice and when we advise against it — the dentist's own decision criteria, without sales talk."}
+  de: {name: "Behandlungsentscheidungen", slug: behandlungsentscheidungen, description: "Wann eine Behandlung die richtige Wahl ist und wann wir davon abraten — die Entscheidungskriterien der Zahnärztin, ohne Verkaufsgespräch."}
+  nl: {name: "Behandelkeuzes", slug: behandelkeuzes, description: "Wanneer een behandeling de juiste keuze is en wanneer wij het afraden — de eigen criteria van de tandarts, zonder verkooppraat."}
+  fr: {name: "Choix de traitement", slug: choix-de-traitement, description: "Quand un traitement est le bon choix et quand nous le déconseillons — les critères de décision du dentiste, sans discours commercial."}
+  it: {name: "Scelte di trattamento", slug: scelte-di-trattamento, description: "Quando un trattamento è la scelta giusta e quando lo sconsigliamo — i criteri decisionali del dentista, senza toni commerciali."}
+  es: {name: "Decisiones de tratamiento", slug: decisiones-de-tratamiento, description: "Cuándo un tratamiento es la opción correcta y cuándo lo desaconsejamos — los criterios del propio dentista, sin discurso de ventas."}
+  pl: {name: "Decyzje o leczeniu", slug: decyzje-o-leczeniu, description: "Kiedy dane leczenie jest właściwym wyborem, a kiedy je odradzamy — własne kryteria lekarza, bez sprzedażowej narracji."}
+  ru: {name: "Выбор лечения", slug: vybor-lecheniya, description: "Когда лечение действительно показано, а когда мы его не рекомендуем — критерии самого врача, без рекламы."}
+  uk: {name: "Вибір лікування", slug: vybir-likuvannya, description: "Коли лікування справді доцільне, а коли ми його не радимо — критерії самого лікаря, без реклами."}
+  ar: {name: "قرارات العلاج", slug: qararat-alilaj, description: "متى يكون العلاج هو الخيار الصحيح ومتى ننصح بعدمه — معايير الطبيبة نفسها، دون أسلوب تسويقي."}
+  sv: {name: "Behandlingsval", slug: behandlingsval, description: "När en behandling är rätt val och när vi avråder — tandläkarens egna kriterier, utan säljsnack."}
+  da: {name: "Behandlingsvalg", slug: behandlingsvalg, description: "Når en behandling er det rigtige valg, og når vi fraråder den — tandlægens egne kriterier, uden salgstale."}
+  "no": {name: "Behandlingsvalg", slug: behandlingsvalg, description: "Når en behandling er riktig valg, og når vi fraråder den — tannlegens egne kriterier, uten salgsprat."}
+  ro: {name: "Decizii de tratament", slug: decizii-de-tratament, description: "Când un tratament este alegerea potrivită și când îl descurajăm — criteriile proprii ale medicului, fără discurs de vânzare."}
+  bg: {name: "Избор на лечение", slug: izbor-na-lechenie, description: "Кога едно лечение е правилният избор и кога не го препоръчваме — критериите на самия лекар, без рекламни обещания."}
+  az: {name: "Müalicə seçimi", slug: mualice-secimi, description: "Müalicə nə vaxt doğru seçimdir, nə vaxt məsləhət görmürük — həkimin öz qərar meyarları, satış dili olmadan."}
+  tr: {name: "Tedavi kararları", slug: tedavi-kararlari, description: "Bir tedavi ne zaman doğru seçimdir, ne zaman önermeyiz — hekimin kendi karar ölçütleri, satış dili olmadan."}
+
+planning-your-trip:
+  funnel_stage: decision
+  order: 22
+  en: {name: "Planning your trip", description: "Step-by-step guidance for travelling to Istanbul for dental treatment: what to send before you travel, how many visits, how long to stay."}
+  de: {name: "Reiseplanung", slug: reiseplanung, description: "Schritt für Schritt zur Zahnbehandlung in Istanbul: Was Sie vorab schicken, wie viele Besuche nötig sind, wie lange Sie bleiben."}
+  nl: {name: "Uw reis plannen", slug: uw-reis-plannen, description: "Stap voor stap naar een tandheelkundige behandeling in Istanbul: wat u vooraf stuurt, hoeveel bezoeken nodig zijn, hoe lang u blijft."}
+  fr: {name: "Préparer votre voyage", slug: preparer-votre-voyage, description: "Étape par étape vers un traitement dentaire à Istanbul : que nous envoyer avant de partir, combien de visites, combien de temps rester."}
+  it: {name: "Organizzare il viaggio", slug: organizzare-il-viaggio, description: "Passo dopo passo verso le cure dentali a Istanbul: cosa inviare prima di partire, quante visite servono, quanto restare."}
+  es: {name: "Planificar su viaje", slug: planificar-su-viaje, description: "Paso a paso hacia un tratamiento dental en Estambul: qué enviar antes de viajar, cuántas visitas hacen falta, cuánto tiempo quedarse."}
+  pl: {name: "Planowanie podróży", slug: planowanie-podrozy, description: "Krok po kroku do leczenia stomatologicznego w Stambule: co przesłać przed wyjazdem, ile wizyt, jak długo zostać."}
+  ru: {name: "Планирование поездки", slug: planirovanie-poezdki, description: "Пошагово о поездке на лечение зубов в Стамбул: что прислать заранее, сколько визитов нужно, сколько дней оставаться."}
+  uk: {name: "Планування поїздки", slug: planuvannya-poyizdky, description: "Покроково про поїздку на лікування зубів до Стамбула: що надіслати заздалегідь, скільки візитів потрібно, скільки днів залишатися."}
+  ar: {name: "تخطيط رحلتك", slug: takhtit-rihlatik, description: "خطوة بخطوة نحو علاج الأسنان في إسطنبول: ما الذي ترسله قبل السفر، وعدد الزيارات، ومدة الإقامة."}
+  sv: {name: "Planera din resa", slug: planera-din-resa, description: "Steg för steg till tandvård i Istanbul: vad du skickar i förväg, hur många besök som krävs, hur länge du stannar."}
+  da: {name: "Planlæg din rejse", slug: planlaeg-din-rejse, description: "Trin for trin til tandbehandling i Istanbul: hvad du sender på forhånd, hvor mange besøg der skal til, hvor længe du bliver."}
+  "no": {name: "Planlegg reisen", slug: planlegg-reisen, description: "Steg for steg til tannbehandling i Istanbul: hva du sender på forhånd, hvor mange besøk som trengs, hvor lenge du blir."}
+  ro: {name: "Planificarea călătoriei", slug: planificarea-calatoriei, description: "Pas cu pas spre tratamentul dentar la Istanbul: ce trimiteți înainte de plecare, câte vizite sunt necesare, cât timp rămâneți."}
+  bg: {name: "Планиране на пътуването", slug: planirane-na-patuvaneto, description: "Стъпка по стъпка към дентално лечение в Истанбул: какво да изпратите предварително, колко посещения са нужни, колко дни да останете."}
+  az: {name: "Səyahətin planlanması", slug: seyahetin-planlanmasi, description: "İstanbulda diş müalicəsinə addım-addım: səfərdən əvvəl nə göndərməli, neçə ziyarət lazımdır, nə qədər qalmalı."}
+  tr: {name: "Seyahat planı", slug: seyahat-plani, description: "İstanbul'da diş tedavisi için adım adım: seyahatten önce ne gönderilir, kaç ziyaret gerekir, kaç gün kalınır."}

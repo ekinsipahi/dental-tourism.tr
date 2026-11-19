@@ -46,7 +46,7 @@ class BlogPostAdmin(TranslatableAdmin):
                                "featured_image_url", "featured_image_alt"]}),
         ("SEO", {"fields": ["meta_title", "meta_description", "focus_keyword", "seo_check", "schema_type",
                             "canonical_url", "noindex"]}),
-        ("İlişkiler / E-E-A-T", {"fields": ["reviewed_by", "clinic", "treatment", "author"]}),
+        ("İlişkiler / E-E-A-T", {"fields": ["doctor_author", "reviewed_by", "clinic", "treatment", "author"]}),
         ("Strateji", {"fields": ["funnel_stage", "target_personas", "content_source", "ai_generation_prompt"],
                       "classes": ["collapse"]}),
         ("İstatistik", {"fields": ["view_count", "created_at", "updated_at"], "classes": ["collapse"]}),

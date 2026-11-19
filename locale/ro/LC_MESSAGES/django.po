@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-20 17:51+0300\n"
+"POT-Creation-Date: 2026-11-19 19:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\n"
 
-#: apps/blog/views.py:36
+#: apps/blog/views.py:107
 msgid "Dental Tourism Blog 2026 — Honest Advice from Dentists"
 msgstr "Blog Turism Dentar 2026 — Sfaturi Oneste de la Medici Stomatologi"
 
-#: apps/blog/views.py:37
+#: apps/blog/views.py:108
 msgid ""
 "Implant and veneer costs, safety, recovery and choosing a dentist in "
 "Istanbul — practical, honest advice from dentists with 35+ years' "
@@ -31,24 +31,24 @@ msgstr ""
 "dentist în Istanbul — sfaturi oneste de la medici cu peste 35 de ani de "
 "experiență."
 
-#: apps/blog/views.py:44 apps/blog/views.py:75 apps/blog/views.py:141
-#: apps/clinics/views.py:39 apps/clinics/views.py:68 apps/clinics/views.py:113
-#: apps/core/views.py:119 apps/seo/area_views.py:105
-#: apps/seo/area_views.py:128 apps/seo/common.py:34 apps/seo/guide_views.py:34
-#: apps/seo/guide_views.py:70 apps/seo/package_views.py:67
-#: apps/seo/package_views.py:108 apps/seo/package_views.py:147
-#: apps/seo/views.py:69 apps/seo/views.py:113 apps/seo/views.py:145
-#: apps/treatments/views.py:27 apps/treatments/views.py:88
+#: apps/blog/views.py:115 apps/blog/views.py:145 apps/blog/views.py:207
+#: apps/clinics/views.py:44 apps/clinics/views.py:107
+#: apps/clinics/views.py:175 apps/core/views.py:152 apps/seo/area_views.py:110
+#: apps/seo/area_views.py:133 apps/seo/common.py:52 apps/seo/guide_views.py:39
+#: apps/seo/guide_views.py:75 apps/seo/package_views.py:72
+#: apps/seo/package_views.py:117 apps/seo/package_views.py:160
+#: apps/seo/views.py:73 apps/seo/views.py:117 apps/seo/views.py:149
+#: apps/treatments/views.py:27 apps/treatments/views.py:98
 #: templates/404.html:8 templates/components/navbar.html:5
 msgid "Home"
 msgstr "Acasă"
 
-#: apps/blog/views.py:44 apps/blog/views.py:75 apps/blog/views.py:141
+#: apps/blog/views.py:115 apps/blog/views.py:145 apps/blog/views.py:207
 #: templates/components/navbar.html:55
 msgid "Blog"
 msgstr "Blog"
 
-#: apps/blog/views.py:70
+#: apps/blog/views.py:140
 #, python-format
 msgid "%(category)s — Dental Tourism Blog"
 msgstr "%(category)s — Blog despre turismul dentar"
@@ -65,7 +65,7 @@ msgstr "Numele dvs."
 msgid "Shown as first name and initial, e.g. 'Anna K.'"
 msgstr "Afișat ca prenume și inițială, de ex. 'Anna K.'"
 
-#: apps/clinics/forms.py:13 apps/core/forms.py:14
+#: apps/clinics/forms.py:13 apps/core/forms.py:14 templates/contact.html:13
 msgid "Email"
 msgstr "E-mail"
 
@@ -148,26 +148,26 @@ msgstr "Doar clinici verificate"
 msgid "Sort by"
 msgstr "Sortează după"
 
-#: apps/clinics/search.py:33
+#: apps/clinics/search.py:48
 msgid "All cities"
 msgstr "Toate orașele"
 
-#: apps/clinics/search.py:35 templates/components/navbar.html:26
+#: apps/clinics/search.py:49 templates/components/navbar.html:26
 #: templates/components/navbar.html:91
 msgid "All treatments"
 msgstr "Toate tratamentele"
 
-#: apps/clinics/search.py:37
+#: apps/clinics/search.py:50
 msgid "Any language"
 msgstr "Orice limbă"
 
-#: apps/clinics/views.py:29
+#: apps/clinics/views.py:34
 #, python-format
 msgid "Our Dental Clinic in Istanbul — Şişli, ★%(rating)s, Open 7 Days"
 msgstr ""
 "Clinica Noastră Stomatologică din Istanbul — Şişli, ★%(rating)s, 7 Zile"
 
-#: apps/clinics/views.py:30
+#: apps/clinics/views.py:35
 #, python-format
 msgid ""
 "Dentist-led family clinic in Şişli, Istanbul: 35+ years' experience, ★ "
@@ -178,74 +178,74 @@ msgstr ""
 "experiență, ★ %(rating)s din %(count)s recenzii Google, limbi vorbite și "
 "povești reale."
 
-#: apps/clinics/views.py:39 apps/clinics/views.py:68
+#: apps/clinics/views.py:44 apps/clinics/views.py:107
 #: templates/clinics/list.html:6 templates/components/navbar.html:66
 msgid "Clinics"
 msgstr "Clinici"
 
-#: apps/clinics/views.py:61
+#: apps/clinics/views.py:100
 #, python-format
 msgid "%(clinic)s — Dental Clinic in %(city)s"
 msgstr "%(clinic)s — clinică dentară în %(city)s"
 
-#: apps/clinics/views.py:105
+#: apps/clinics/views.py:167
 #, python-format
 msgid "%(doctor)s — Dentist in %(city)s"
 msgstr "%(doctor)s — medic dentist în %(city)s"
 
-#: apps/clinics/views.py:144
+#: apps/clinics/views.py:206
 msgid "Too many reviews from your connection. Please try again later."
 msgstr "Prea multe recenzii de pe conexiunea dvs. Încercați mai târziu."
 
-#: apps/clinics/views.py:148
+#: apps/clinics/views.py:210
 msgid "Please check the review form and try again."
 msgstr "Verificați formularul de recenzie și încercați din nou."
 
-#: apps/clinics/views.py:164
+#: apps/clinics/views.py:226
 msgid "Thank you! Your review will be published after a short check."
 msgstr "Mulțumim! Recenzia dvs. va fi publicată după o scurtă verificare."
 
-#: apps/core/context_processors.py:65
+#: apps/core/context_processors.py:67
 msgid "I have some questions about safety and the treatment process."
 msgstr "Am câteva întrebări despre siguranță și desfășurarea tratamentului."
 
-#: apps/core/context_processors.py:66
+#: apps/core/context_processors.py:68
 msgid "I would like to get a price quote."
 msgstr "Aș dori să primesc o ofertă de preț."
 
-#: apps/core/context_processors.py:67
+#: apps/core/context_processors.py:69
 msgid "I would like to ask about available appointments this week."
 msgstr "Aș dori să întreb despre programările disponibile săptămâna aceasta."
 
-#: apps/core/context_processors.py:68
+#: apps/core/context_processors.py:70
 msgid "I would like information about smile design."
 msgstr "Aș dori informații despre designul zâmbetului."
 
-#: apps/core/context_processors.py:69
+#: apps/core/context_processors.py:71
 msgid "I would like to request a private appointment."
 msgstr "Aș dori să solicit o programare privată."
 
-#: apps/core/context_processors.py:70
+#: apps/core/context_processors.py:72
 msgid "I would like a personalised treatment plan."
 msgstr "Aș dori un plan de tratament personalizat."
 
-#: apps/core/context_processors.py:71
+#: apps/core/context_processors.py:73
 msgid "I would like to book an appointment."
 msgstr "Aș dori să fac o programare."
 
-#: apps/core/context_processors.py:72
+#: apps/core/context_processors.py:74
 msgid "I would like information about materials and certificates."
 msgstr "Aș dori informații despre materiale și certificate."
 
-#: apps/core/context_processors.py:73
+#: apps/core/context_processors.py:75
 msgid "I would like to learn more."
 msgstr "Aș dori să aflu mai multe."
 
-#: apps/core/context_processors.py:75
+#: apps/core/context_processors.py:77
 msgid "Hello, I would like a free consultation."
 msgstr "Bună ziua, aș dori o consultație gratuită."
 
-#: apps/core/context_processors.py:101
+#: apps/core/context_processors.py:105
 msgid "Hello, I would like to talk to you on a WhatsApp call."
 msgstr "Bună ziua, aș dori să vorbim printr-un apel WhatsApp."
 
@@ -283,7 +283,7 @@ msgstr ""
 "Sunt de acord cu prelucrarea datelor mele pentru a primi un răspuns la "
 "solicitare (GDPR / KVKK)."
 
-#: apps/core/forms.py:41
+#: apps/core/forms.py:52
 msgid "Please enter a valid phone number with country code."
 msgstr "Introduceți un număr de telefon valid, cu prefixul țării."
 
@@ -315,7 +315,7 @@ msgstr "per ședință"
 msgid "per smile"
 msgstr "per zâmbet"
 
-#: apps/core/templatetags/site_tags.py:165 apps/seo/common.py:81
+#: apps/core/templatetags/site_tags.py:165 apps/seo/common.py:99
 msgid "A treatment planned for you — not a template"
 msgstr "Un tratament planificat pentru tine — nu un șablon"
 
@@ -336,7 +336,7 @@ msgstr "Primește planul meu de tratament"
 msgid "Everything here is real"
 msgstr "Totul aici este real"
 
-#: apps/core/templatetags/site_tags.py:169 apps/seo/common.py:76
+#: apps/core/templatetags/site_tags.py:169 apps/seo/common.py:94
 msgid ""
 "Real reviews with their source, named materials and a written plan before "
 "you travel."
@@ -516,12 +516,12 @@ msgstr "contact/multumim/"
 msgid "privacy/"
 msgstr "confidentialitate/"
 
-#: apps/core/views.py:87
+#: apps/core/views.py:117
 #, python-format
 msgid "Dental Tourism Istanbul ★%(rating)s — Family Dentists, 35+ Years"
 msgstr "Dentist Istanbul ★%(rating)s — Medici de Familie, 35+ Ani"
 
-#: apps/core/views.py:88
+#: apps/core/views.py:118
 #, python-format
 msgid ""
 "We save your natural teeth first: root canals, fillings, minimal-prep "
@@ -532,13 +532,11 @@ msgstr ""
 " minimă — implant doar dacă dintele nu poate fi salvat. 35+ ani, ★ "
 "%(rating)s."
 
-#: apps/core/views.py:111
-#| msgid ""
-#| "About Us — Dr. Devrim Sipahi & Dt. Ekin Sipahi, Family Dentists"
+#: apps/core/views.py:144
 msgid "About Us — Dr. Devrim & Dt. Ekin Sipahi, Family Dentists"
 msgstr "Despre noi — Dr. Devrim & Dt. Ekin Sipahi, Medici Stomatologi"
 
-#: apps/core/views.py:112
+#: apps/core/views.py:145
 msgid ""
 "A family dental clinic in Şişli, Istanbul: 35+ years' experience, diagnosis "
 "first and only the treatment you need. Meet the dentists who will treat you."
@@ -547,20 +545,20 @@ msgstr ""
 "mai întâi diagnosticul, doar tratamentul necesar. Cunoașteți medicii care vă"
 " vor trata."
 
-#: apps/core/views.py:119 apps/seo/common.py:35
-#: templates/components/footer.html:50 templates/components/navbar.html:63
+#: apps/core/views.py:152 apps/seo/common.py:53
+#: templates/components/footer.html:52 templates/components/navbar.html:63
 msgid "About us"
 msgstr "Despre noi"
 
-#: apps/core/views.py:142
+#: apps/core/views.py:175
 msgid "Please check the form and try again."
 msgstr "Verificați formularul și încercați din nou."
 
-#: apps/core/views.py:145
+#: apps/core/views.py:178
 msgid "Free Dental Assessment on WhatsApp — Answered by the Dentist"
 msgstr "Evaluare Dentară Gratuită pe WhatsApp — Răspunde Medicul"
 
-#: apps/core/views.py:146
+#: apps/core/views.py:179
 msgid ""
 "Send a photo or X-ray and receive a personal plan with a fixed written quote"
 " — answered by the dentist, not a call centre. Open 7 days a week."
@@ -569,42 +567,42 @@ msgstr ""
 "ofertă fixă scrisă — răspunde medicul, nu un call center. Deschis 7 zile din"
 " 7."
 
-#: apps/core/views.py:158
+#: apps/core/views.py:191
 msgid "Thank you — we will contact you shortly"
 msgstr "Mulțumim — vă vom contacta în curând"
 
-#: apps/core/views.py:164 templates/privacy.html:4
+#: apps/core/views.py:197 templates/privacy.html:4
 msgid "Privacy Policy"
 msgstr "Politica de confidențialitate"
 
-#: apps/core/views.py:164
+#: apps/core/views.py:197
 msgid "How we process and protect your personal data (GDPR / KVKK)."
 msgstr "Cum prelucrăm și protejăm datele dvs. personale (GDPR / KVKK)."
 
-#: apps/core/views.py:205 templates/404.html:6
+#: apps/core/views.py:238 templates/404.html:6
 msgid "Page not found"
 msgstr "Pagina nu a fost găsită"
 
-#: apps/seo/area_views.py:41
+#: apps/seo/area_views.py:46
 msgid "Metro"
 msgstr "Metrou"
 
-#: apps/seo/area_views.py:45
+#: apps/seo/area_views.py:50
 #, python-format
 msgid "On foot: about %(min)s minutes"
 msgstr "Pe jos: aproximativ %(min)s minute"
 
-#: apps/seo/area_views.py:46
+#: apps/seo/area_views.py:51
 #, python-format
 msgid "By taxi: about %(min)s minutes, depending on traffic"
 msgstr "Cu taxiul: aproximativ %(min)s minute, în funcție de trafic"
 
-#: apps/seo/area_views.py:58
+#: apps/seo/area_views.py:63
 #, python-format
 msgid "How do I get to the clinic from %(area)s?"
 msgstr "Cum ajung la clinică din %(area)s?"
 
-#: apps/seo/area_views.py:60 templates/areas/detail.html:10
+#: apps/seo/area_views.py:65 templates/areas/detail.html:10
 #: templates/areas/index.html:10
 #, python-format
 msgid ""
@@ -614,11 +612,11 @@ msgstr ""
 "Cea mai apropiată stație de metrou: Şişli-Mecidiyeköy (M2, M7), la "
 "aproximativ %(km)s km de clinică."
 
-#: apps/seo/area_views.py:61
+#: apps/seo/area_views.py:66
 msgid "Is the clinic open at weekends?"
 msgstr "Clinica este deschisă în weekend?"
 
-#: apps/seo/area_views.py:62
+#: apps/seo/area_views.py:67
 msgid ""
 "Yes. Our clinic in Şişli is open 7 days a week, including Saturday and "
 "Sunday."
@@ -626,11 +624,11 @@ msgstr ""
 "Da. Clinica noastră din Şişli este deschisă 7 zile din 7, inclusiv sâmbăta "
 "și duminica."
 
-#: apps/seo/area_views.py:63
+#: apps/seo/area_views.py:68
 msgid "Do you treat expats and visitors staying in Istanbul?"
 msgstr "Tratați expați și vizitatori care locuiesc în Istanbul?"
 
-#: apps/seo/area_views.py:64
+#: apps/seo/area_views.py:69
 msgid ""
 "Yes. Many of our patients are expats or visitors staying in Istanbul. Send a"
 " photo or an X-ray on WhatsApp and the dentist will reply with your options."
@@ -639,11 +637,11 @@ msgstr ""
 "Trimiteți o fotografie sau o radiografie pe WhatsApp, iar medicul stomatolog"
 " vă răspunde cu opțiunile dumneavoastră."
 
-#: apps/seo/area_views.py:66
+#: apps/seo/area_views.py:71
 msgid "How much does treatment cost?"
 msgstr "Cât costă tratamentul?"
 
-#: apps/seo/area_views.py:67 apps/seo/package_views.py:178
+#: apps/seo/area_views.py:72 apps/seo/package_views.py:191
 msgid ""
 "Send your photos or X-ray on WhatsApp. After the dentist has reviewed your "
 "case you receive a personal plan with a fixed written quote — we never "
@@ -653,17 +651,17 @@ msgstr ""
 "analizează cazul, primești un plan personal cu preț fix în scris – nu "
 "publicăm niciodată prețuri unice."
 
-#: apps/seo/area_views.py:82
+#: apps/seo/area_views.py:87
 #, python-format
 msgid "Dental clinic near %(area)s, Istanbul"
 msgstr "Cabinet stomatologic lângă %(area)s, Istanbul"
 
-#: apps/seo/area_views.py:83
+#: apps/seo/area_views.py:88
 #, python-format
 msgid "Dentist near %(area)s ★%(rating)s — Family Clinic, Open 7 Days"
 msgstr "Dentist lângă %(area)s ★%(rating)s — Clinică de Familie, 7 Zile"
 
-#: apps/seo/area_views.py:84
+#: apps/seo/area_views.py:89
 #, python-format
 msgid ""
 "Dentist near %(area)s: our family clinic in Şişli is %(km)s km away, open 7 "
@@ -674,12 +672,8 @@ msgstr ""
 " deschisă 7 zile. 35+ ani de experiență, ★ %(rating)s pe Google. Evaluare "
 "gratuită pe WhatsApp."
 
-#: apps/seo/area_views.py:86
+#: apps/seo/area_views.py:91
 #, python-format
-#| msgid ""
-#| "Our family dental clinic in Şişli is about %(km)s km from %(area)s. Dr. Dt. "
-#| "Devrim Biriken Sipahi and her son Dt. Ekin Sipahi examine and treat every "
-#| "patient personally."
 msgid ""
 "Our family dental clinic in Şişli is about %(km)s km from %(area)s. Dr. "
 "Devrim and her son Dt. Ekin Sipahi examine and treat every patient "
@@ -689,17 +683,17 @@ msgstr ""
 "%(km)s km de %(area)s. Dr. Devrim și fiul ei, Dt. Ekin Sipahi, consultă și "
 "tratează personal fiecare pacient."
 
-#: apps/seo/area_views.py:89
+#: apps/seo/area_views.py:94
 #, python-format
 msgid "Dental clinic in %(area)s, Istanbul"
 msgstr "Cabinet stomatologic în %(area)s, Istanbul"
 
-#: apps/seo/area_views.py:90
+#: apps/seo/area_views.py:95
 #, python-format
 msgid "Dentist in %(area)s ★%(rating)s — Family Clinic, Open 7 Days"
 msgstr "Dentist în %(area)s ★%(rating)s — Clinică de Familie, 7 Zile"
 
-#: apps/seo/area_views.py:91
+#: apps/seo/area_views.py:96
 #, python-format
 msgid ""
 "Family dental clinic in %(area)s, Istanbul: 35+ years' experience, ★ "
@@ -709,12 +703,8 @@ msgstr ""
 "experiență, ★ %(rating)s pe Google, deschis 7 zile din 7. Evaluare gratuită "
 "pe WhatsApp."
 
-#: apps/seo/area_views.py:93
+#: apps/seo/area_views.py:98
 #, python-format
-#| msgid ""
-#| "Our family dental clinic is in %(area)s, Istanbul. Dr. Dt. Devrim Biriken "
-#| "Sipahi and her son Dt. Ekin Sipahi examine and treat every patient "
-#| "personally."
 msgid ""
 "Our family dental clinic is in %(area)s, Istanbul. Dr. Devrim and her son "
 "Dt. Ekin Sipahi examine and treat every patient personally."
@@ -723,13 +713,13 @@ msgstr ""
 "Devrim și fiul ei, Dt. Ekin Sipahi, consultă și tratează personal fiecare "
 "pacient."
 
-#: apps/seo/area_views.py:105 apps/seo/area_views.py:109
-#: apps/seo/area_views.py:128 apps/seo/area_views.py:135
+#: apps/seo/area_views.py:110 apps/seo/area_views.py:114
+#: apps/seo/area_views.py:133 apps/seo/area_views.py:140
 #: templates/guides/detail.html:39
 msgid "Dental clinic by district"
 msgstr "Cabinet stomatologic pe cartiere"
 
-#: apps/seo/area_views.py:122
+#: apps/seo/area_views.py:127
 msgid ""
 "Dental clinic near you in Istanbul: Şişli, Nişantaşı, Taksim, Levent and "
 "more"
@@ -737,12 +727,12 @@ msgstr ""
 "Cabinet stomatologic aproape de dumneavoastră în Istanbul: Şişli, Nişantaşı,"
 " Taksim, Levent și altele"
 
-#: apps/seo/area_views.py:124
+#: apps/seo/area_views.py:129
 #, python-format
 msgid "Dentist near Şişli, Nişantaşı, Taksim & Levent ★%(rating)s"
 msgstr "Dentist lângă Şişli, Nişantaşı, Taksim și Levent ★%(rating)s"
 
-#: apps/seo/area_views.py:125
+#: apps/seo/area_views.py:130
 #, python-format
 msgid ""
 "Family dental clinic in Şişli, Istanbul: 35+ years, ★ %(rating)s on Google, "
@@ -753,7 +743,7 @@ msgstr ""
 "deschis 7 zile. Distanța și traseul din Nişantaşı, Taksim, Beşiktaş, Levent "
 "și altele."
 
-#: apps/seo/area_views.py:136
+#: apps/seo/area_views.py:141
 msgid ""
 "Our family dental clinic is in Şişli, close to Nişantaşı, Mecidiyeköy and "
 "the M2 metro line. Choose your district to see the distance and the easiest "
@@ -763,22 +753,22 @@ msgstr ""
 "Nişantaşı, Mecidiyeköy și de linia de metrou M2. Alegeți cartierul pentru a "
 "vedea distanța și cel mai simplu traseu."
 
-#: apps/seo/common.py:38 templates/clinics/detail.html:74
-#: templates/clinics/doctor.html:26 templates/components/footer.html:51
+#: apps/seo/common.py:56 templates/clinics/detail.html:74
+#: templates/clinics/doctor.html:27 templates/components/footer.html:53
 #: templates/components/navbar.html:64 templates/components/navbar.html:101
 #: templates/components/reviews.html:16 templates/home/sections/hero.html:182
 msgid "Patient reviews"
 msgstr "Recenziile pacienților"
 
-#: apps/seo/common.py:44
+#: apps/seo/common.py:62
 msgid "Google reviews"
 msgstr "Recenzii Google"
 
-#: apps/seo/common.py:73
+#: apps/seo/common.py:91
 msgid "Calm, pain-free and explained step by step"
 msgstr "Calm, fără durere și explicat pas cu pas"
 
-#: apps/seo/common.py:74
+#: apps/seo/common.py:92
 msgid ""
 "Local anaesthesia, a dentist who explains everything first, and no decision "
 "under pressure."
@@ -786,24 +776,24 @@ msgstr ""
 "Anestezie locală, un dentist care îți explică totul mai întâi și nicio "
 "decizie sub presiune."
 
-#: apps/seo/common.py:75
+#: apps/seo/common.py:93
 msgid "Check everything before you trust us"
 msgstr "Verifică totul înainte să ai încredere în noi"
 
-#: apps/seo/common.py:77
+#: apps/seo/common.py:95
 msgid "Very affordable — and a fixed price in writing"
 msgstr "Foarte accesibil – și un preț fix în scris"
 
-#: apps/seo/common.py:78
+#: apps/seo/common.py:96
 msgid "No hidden costs. Call or message us and receive your personal quote."
 msgstr ""
 "Fără costuri ascunse. Sună-ne sau scrie-ne și primești oferta ta personală."
 
-#: apps/seo/common.py:79
+#: apps/seo/common.py:97
 msgid "Time with your dentist, not with a sales team"
 msgstr "Timp cu dentistul tău, nu cu o echipă de vânzări"
 
-#: apps/seo/common.py:80
+#: apps/seo/common.py:98
 msgid ""
 "One experienced dentist responsible for your whole treatment, premium "
 "materials, discreet care."
@@ -811,7 +801,7 @@ msgstr ""
 "Un singur dentist cu experiență, responsabil de întregul tratament, "
 "materiale premium și îngrijire discretă."
 
-#: apps/seo/common.py:82
+#: apps/seo/common.py:100
 msgid ""
 "Digital smile design, minimal preparation and one experienced dentist for "
 "every step. Healthy tooth tissue is saved first."
@@ -819,11 +809,11 @@ msgstr ""
 "Design digital al zâmbetului, șlefuire minimă și un singur medic cu "
 "experiență la fiecare pas. Țesutul dentar sănătos este păstrat mai întâi."
 
-#: apps/seo/common.py:83
+#: apps/seo/common.py:101
 msgid "No judgement — only solutions"
 msgstr "Fără judecăți – doar soluții"
 
-#: apps/seo/common.py:84
+#: apps/seo/common.py:102
 msgid ""
 "Whatever the state of your teeth, we have seen it before. We start with what"
 " can be saved."
@@ -831,29 +821,29 @@ msgstr ""
 "Indiferent de starea dinților tăi, am mai văzut-o. Începem cu ce se poate "
 "salva."
 
-#: apps/seo/common.py:85
+#: apps/seo/common.py:103
 msgid "A dentist-led clinic you can check"
 msgstr "O clinică condusă de un dentist, pe care o poți verifica"
 
-#: apps/seo/common.py:86
+#: apps/seo/common.py:104
 msgid "Qualifications, reviews and real photos — all on this page."
 msgstr "Calificări, recenzii și fotografii reale – toate pe această pagină."
 
-#: apps/seo/common.py:87
+#: apps/seo/common.py:105
 msgid "Open 7 days a week in central Istanbul"
 msgstr "Deschis 7 zile din 7, în centrul Istanbulului"
 
-#: apps/seo/common.py:88
+#: apps/seo/common.py:106
 msgid ""
 "Tell us your travel dates; we plan the appointments around your flights."
 msgstr ""
 "Spune-ne datele călătoriei; programăm vizitele în funcție de zborurile tale."
 
-#: apps/seo/common.py:89
+#: apps/seo/common.py:107
 msgid "Plan your visit in one message"
 msgstr "Planifică vizita cu un singur mesaj"
 
-#: apps/seo/common.py:90
+#: apps/seo/common.py:108
 msgid ""
 "Send your photos and travel dates on WhatsApp — we reply with your personal "
 "plan."
@@ -861,23 +851,23 @@ msgstr ""
 "Trimite fotografiile și datele călătoriei pe WhatsApp – îți răspundem cu "
 "planul tău personal."
 
-#: apps/seo/common.py:92 templates/components/footer.html:6
+#: apps/seo/common.py:110 templates/components/footer.html:6
 #: templates/packages/origin.html:19
 msgid "Dental work is more than a Hollywood smile"
 msgstr "Stomatologia înseamnă mai mult decât un zâmbet de Hollywood"
 
-#: apps/seo/common.py:93
+#: apps/seo/common.py:111
 msgid ""
 "We save healthy teeth first and plan a real treatment made only for you."
 msgstr ""
 "Salvăm mai întâi dinții sănătoși și planificăm un tratament real, doar "
 "pentru tine."
 
-#: apps/seo/guide_views.py:30
+#: apps/seo/guide_views.py:35
 msgid "Dental Tourism Guides 2026 — Turkey & Istanbul, by Dentists"
 msgstr "Ghiduri Turism Dentar 2026 — Turcia și Istanbul"
 
-#: apps/seo/guide_views.py:31
+#: apps/seo/guide_views.py:36
 msgid ""
 "Choosing a clinic, reviews, safety, travel, guarantee and aftercare — honest"
 " guides to dental treatment in Turkey, written by dentists in Istanbul."
@@ -886,17 +876,17 @@ msgstr ""
 "ghiduri oneste despre tratamentul dentar în Turcia, scrise de medici din "
 "Istanbul."
 
-#: apps/seo/guide_views.py:34 apps/seo/guide_views.py:70
-#: templates/components/footer.html:32 templates/components/navbar.html:49
+#: apps/seo/guide_views.py:39 apps/seo/guide_views.py:75
+#: templates/components/footer.html:34 templates/components/navbar.html:49
 #: templates/components/navbar.html:95
 msgid "Guides"
 msgstr "Ghiduri"
 
-#: apps/seo/guide_views.py:39
+#: apps/seo/guide_views.py:44
 msgid "Dental tourism guides: Turkey and Istanbul"
 msgstr "Ghiduri de turism dentar: Turcia și Istanbul"
 
-#: apps/seo/guide_views.py:40
+#: apps/seo/guide_views.py:45
 msgid ""
 "Everything you need to decide with confidence — written by a dentist, "
 "without sales talk."
@@ -904,7 +894,7 @@ msgstr ""
 "Tot ce ai nevoie ca să decizi cu încredere – scris de un dentist, fără "
 "discurs de vânzare."
 
-#: apps/seo/guide_views.py:86
+#: apps/seo/guide_views.py:91
 msgid "Guide"
 msgstr "Ghid"
 
@@ -993,11 +983,11 @@ msgstr ""
 "necesită de obicei două vizite scurte la câteva luni distanță; le programăm "
 "pe amândouă în funcție de zborurile tale."
 
-#: apps/seo/package_views.py:62
+#: apps/seo/package_views.py:67
 msgid "Dental Holiday Packages Istanbul 2026 — Planned on Your X-ray"
 msgstr "Vacanță Dentară Istanbul 2026 — Planificată după Radiografie"
 
-#: apps/seo/package_views.py:63
+#: apps/seo/package_views.py:68
 msgid ""
 "No one-size-fits-all deal: your dental package in Istanbul is planned from "
 "your photos or X-ray, with a fixed written quote and aftercare at home."
@@ -1006,20 +996,20 @@ msgstr ""
 "fotografii sau radiografie, cu ofertă fixă scrisă și control după "
 "întoarcere."
 
-#: apps/seo/package_views.py:67 apps/seo/package_views.py:79
-#: apps/seo/package_views.py:108 apps/seo/package_views.py:116
-#: apps/seo/package_views.py:147 apps/seo/package_views.py:156
-#: templates/components/footer.html:37 templates/components/footer.html:38
+#: apps/seo/package_views.py:72 apps/seo/package_views.py:84
+#: apps/seo/package_views.py:117 apps/seo/package_views.py:125
+#: apps/seo/package_views.py:160 apps/seo/package_views.py:169
+#: templates/components/footer.html:39 templates/components/footer.html:40
 #: templates/components/navbar.html:93
 msgid "Dental packages"
 msgstr "Pachete dentare"
 
-#: apps/seo/package_views.py:76
+#: apps/seo/package_views.py:81
 msgid ""
 "Dental tourism packages in Istanbul — personalised, not one-size-fits-all"
 msgstr "Pachete de turism dentar în Istanbul – personalizate, nu standard"
 
-#: apps/seo/package_views.py:77
+#: apps/seo/package_views.py:82
 msgid ""
 "Dental work is more than a Hollywood smile. Your package is built around a "
 "real diagnosis — and your budget goes into your treatment, not into extras."
@@ -1028,17 +1018,17 @@ msgstr ""
 " bazează pe un diagnostic real — iar bugetul tău merge în tratament, nu în "
 "extra-uri."
 
-#: apps/seo/package_views.py:99
+#: apps/seo/package_views.py:108
 #, python-format
 msgid "%(treatment)s package in Istanbul"
 msgstr "Pachet %(treatment)s în Istanbul"
 
-#: apps/seo/package_views.py:102
+#: apps/seo/package_views.py:111
 #, python-format
 msgid "%(treatment)s Package Istanbul — Planned on Your X-ray"
 msgstr "Pachet %(treatment)s Istanbul — Planificat după Radiografie"
 
-#: apps/seo/package_views.py:103
+#: apps/seo/package_views.py:112
 #, python-format
 msgid ""
 "%(treatment)s package in Istanbul: examination, treatment and aftercare "
@@ -1049,17 +1039,17 @@ msgstr ""
 "după cazul și datele dumneavoastră de călătorie. Ofertă fixă scrisă, "
 "evaluare gratuită."
 
-#: apps/seo/package_views.py:136
+#: apps/seo/package_views.py:147
 #, python-format
 msgid "Dental holiday packages from %(country)s to Istanbul"
 msgstr "Vacanțe dentare din %(country)s la Istanbul"
 
-#: apps/seo/package_views.py:142
+#: apps/seo/package_views.py:155
 #, python-format
 msgid "%(country)s to Istanbul for Dental Treatment — 2026 Guide"
 msgstr "Tratament Dentar în Istanbul din %(country)s — Ghid 2026"
 
-#: apps/seo/package_views.py:143
+#: apps/seo/package_views.py:156
 #, python-format
 msgid ""
 "Travelling from %(country)s for dental treatment? Flight time, how many "
@@ -1070,7 +1060,7 @@ msgstr ""
 "călătorii sunt necesare, ce include un pachet corect și cum funcționează "
 "controlul acasă."
 
-#: apps/seo/package_views.py:154
+#: apps/seo/package_views.py:167
 #, python-format
 msgid ""
 "Planning dental treatment in Istanbul from %(country)s? Flight times, how "
@@ -1079,7 +1069,7 @@ msgstr ""
 "Plănuiești tratament dentar în Istanbul din %(country)s? Durata zborurilor, "
 "numărul de călătorii și ce include un pachet personalizat."
 
-#: apps/seo/package_views.py:165
+#: apps/seo/package_views.py:178
 msgid ""
 "We plan treatment to keep the number of trips to a minimum — often one "
 "longer stay, with implants scheduled so that the second visit is short."
@@ -1087,7 +1077,7 @@ msgstr ""
 "Planificăm tratamentul cu cât mai puține călătorii – adesea o ședere mai "
 "lungă, cu implanturile programate astfel încât a doua vizită să fie scurtă."
 
-#: apps/seo/package_views.py:167
+#: apps/seo/package_views.py:180
 msgid ""
 "Crowns, veneers and most other treatments need one trip of about a week; "
 "implants usually need two short trips a few months apart."
@@ -1096,12 +1086,12 @@ msgstr ""
 "aproximativ o săptămână; implanturile, de obicei două călătorii scurte la "
 "câteva luni distanță."
 
-#: apps/seo/package_views.py:170
+#: apps/seo/package_views.py:183
 #, python-format
 msgid "How long is the flight from %(country)s to Istanbul?"
 msgstr "Cât durează zborul din %(country)s la Istanbul?"
 
-#: apps/seo/package_views.py:171
+#: apps/seo/package_views.py:184
 #, python-format
 msgid ""
 "About %(hours)s hours, depending on your departure airport and connection."
@@ -1109,17 +1099,17 @@ msgstr ""
 "Aproximativ %(hours)s ore, în funcție de aeroportul de plecare și de "
 "legătură."
 
-#: apps/seo/package_views.py:173
+#: apps/seo/package_views.py:186
 #, python-format
 msgid "How many trips will I need from %(country)s?"
 msgstr "Câte călătorii îmi vor trebui din %(country)s?"
 
-#: apps/seo/package_views.py:174
+#: apps/seo/package_views.py:187
 #, python-format
 msgid "What happens when I am back in %(country)s?"
 msgstr "Ce se întâmplă după ce mă întorc în %(country)s?"
 
-#: apps/seo/package_views.py:175
+#: apps/seo/package_views.py:188
 msgid ""
 "Follow-up continues on WhatsApp and email. If needed we coordinate with a "
 "local dentist and guide you by video call — you are never left alone."
@@ -1128,21 +1118,21 @@ msgstr ""
 "cu un dentist local și te ghidăm prin apel video – nu rămâi niciodată "
 "singur."
 
-#: apps/seo/package_views.py:177
+#: apps/seo/package_views.py:190
 msgid "How do I get a price for my dental package?"
 msgstr "Cum primesc un preț pentru pachetul meu dentar?"
 
-#: apps/seo/views.py:57
+#: apps/seo/views.py:61
 #, python-format
 msgid "%(treatment)s in %(city)s"
 msgstr "%(treatment)s în %(city)s"
 
-#: apps/seo/views.py:62
+#: apps/seo/views.py:66
 #, python-format
 msgid "%(treatment)s in %(city)s — Personal Plan"
 msgstr "%(treatment)s în %(city)s – plan personal"
 
-#: apps/seo/views.py:64
+#: apps/seo/views.py:68
 #, python-format
 msgid ""
 "Compare %(treatment)s in %(city)s: affordable personal quotes, stay "
@@ -1153,18 +1143,18 @@ msgstr ""
 "șederii, experiența dentistului și recenzii. Consultanță gratuită pe "
 "WhatsApp."
 
-#: apps/seo/views.py:69 apps/treatments/views.py:27
-#: apps/treatments/views.py:88 templates/404.html:8
-#: templates/components/footer.html:27 templates/components/navbar.html:18
+#: apps/seo/views.py:73 apps/treatments/views.py:27
+#: apps/treatments/views.py:98 templates/404.html:8
+#: templates/components/footer.html:29 templates/components/navbar.html:18
 #: templates/components/navbar.html:89 templates/treatments/list.html:6
 msgid "Treatments"
 msgstr "Tratamente"
 
-#: apps/seo/views.py:83
+#: apps/seo/views.py:87
 msgid "How much does dental treatment in Turkey cost?"
 msgstr "Cât costă tratamentul dentar în Turcia?"
 
-#: apps/seo/views.py:84
+#: apps/seo/views.py:88
 msgid ""
 "Dental treatment in Turkey is very affordable compared with Western Europe, "
 "the UK or the Gulf. The exact cost depends on your teeth, so we give you a "
@@ -1176,11 +1166,11 @@ msgstr ""
 "după ce dentistul îți vede fotografiile sau radiografia – sună-ne sau "
 "trimite-le pe WhatsApp."
 
-#: apps/seo/views.py:87
+#: apps/seo/views.py:91
 msgid "Why don't you publish a price list?"
 msgstr "De ce nu publicați o listă de prețuri?"
 
-#: apps/seo/views.py:88
+#: apps/seo/views.py:92
 msgid ""
 "Because a price list sells the same treatment to everyone. Two patients "
 "asking for 'implants' may need completely different plans. We prefer to tell"
@@ -1190,11 +1180,11 @@ msgstr ""
 "care întreabă de „implanturi” pot avea nevoie de planuri complet diferite. "
 "Preferăm să-ți spunem prețul tău real."
 
-#: apps/seo/views.py:90
+#: apps/seo/views.py:94
 msgid "Are cheap dental clinics in Turkey a risk?"
 msgstr "Sunt riscante clinicile dentare ieftine din Turcia?"
 
-#: apps/seo/views.py:91
+#: apps/seo/views.py:95
 msgid ""
 "A very low price often means cheaper materials, no diagnosis or unnecessary "
 "treatment. Ask for material brands, the dentist's name and a written plan — "
@@ -1205,11 +1195,11 @@ msgstr ""
 "dentistului și un plan scris – calitatea și prețul accesibil pot merge "
 "împreună."
 
-#: apps/seo/views.py:94
+#: apps/seo/views.py:98
 msgid "Is the quote fixed?"
 msgstr "Prețul este fix?"
 
-#: apps/seo/views.py:95
+#: apps/seo/views.py:99
 msgid ""
 "Yes. What we agree in writing before treatment is what you pay — no hidden "
 "costs."
@@ -1217,11 +1207,11 @@ msgstr ""
 "Da. Ce stabilim în scris înainte de tratament este ce plătești – fără "
 "costuri ascunse."
 
-#: apps/seo/views.py:108
+#: apps/seo/views.py:112
 msgid "Dental Prices in Turkey 2026 — What Really Decides the Cost"
 msgstr "Prețuri Dentist Turcia 2026 — Ce Decide Cu Adevărat Costul"
 
-#: apps/seo/views.py:109
+#: apps/seo/views.py:113
 msgid ""
 "Why one price list can't fit every mouth, what a fair quote includes and how"
 " to get a fixed written price from the dentist — free on WhatsApp."
@@ -1229,17 +1219,17 @@ msgstr ""
 "De ce o listă de prețuri nu se potrivește oricui, ce include o ofertă "
 "corectă și cum obțineți un preț fix scris de la medic — gratuit pe WhatsApp."
 
-#: apps/seo/views.py:113 apps/seo/views.py:116 apps/seo/views.py:145
-#: apps/seo/views.py:153 templates/components/footer.html:29
+#: apps/seo/views.py:117 apps/seo/views.py:120 apps/seo/views.py:149
+#: apps/seo/views.py:157 templates/components/footer.html:31
 #: templates/components/navbar.html:59 templates/components/navbar.html:99
 msgid "Prices"
 msgstr "Prețuri"
 
-#: apps/seo/views.py:117
+#: apps/seo/views.py:121
 msgid "Dental prices in Turkey: affordable — and personal"
 msgstr "Prețuri tratament dentar în Turcia: accesibile – și personale"
 
-#: apps/seo/views.py:118
+#: apps/seo/views.py:122
 msgid ""
 "How much do teeth cost in Turkey? Very affordable compared with home — but "
 "the honest answer is a personal quote, not a price list."
@@ -1247,17 +1237,17 @@ msgstr ""
 "Cât costă dinții în Turcia? Foarte accesibil față de acasă – dar răspunsul "
 "onest este o ofertă personală, nu o listă de prețuri."
 
-#: apps/seo/views.py:136
+#: apps/seo/views.py:140
 #, python-format
 msgid "%(treatment)s cost in Turkey — affordable, with a fixed quote"
 msgstr "Cost %(treatment)s în Turcia – accesibil, cu preț fix"
 
-#: apps/seo/views.py:139
+#: apps/seo/views.py:143
 #, python-format
 msgid "%(treatment)s Cost in Turkey 2026 — Fixed Written Quote"
 msgstr "Preț %(treatment)s Turcia 2026 — Ofertă Fixă Scrisă"
 
-#: apps/seo/views.py:140
+#: apps/seo/views.py:144
 #, python-format
 msgid ""
 "%(treatment)s in Istanbul: what decides the cost, what a fair quote includes"
@@ -1266,7 +1256,7 @@ msgstr ""
 "%(treatment)s în Istanbul: ce decide prețul, ce include o ofertă corectă și "
 "cum obțineți o ofertă fixă scrisă de la medic — gratuit pe WhatsApp."
 
-#: apps/seo/views.py:154
+#: apps/seo/views.py:158
 #, python-format
 msgid ""
 "What affects the price of %(treatment)s, what is included — and how to get "
@@ -1289,40 +1279,40 @@ msgstr ""
 "albire în Istanbul — cum decurg, cât stați și pentru cine sunt. Evaluare "
 "gratuită."
 
-#: apps/treatments/views.py:80
+#: apps/treatments/views.py:90
 #, python-format
 msgid "%(treatment)s in Istanbul — Procedure & Personal Plan"
 msgstr "%(treatment)s în Istanbul – procedură și plan personal"
 
-#: dental_tourism/urls.py:50
+#: dental_tourism/urls.py:51
 msgid "treatments/"
 msgstr "tratamente/"
 
-#: dental_tourism/urls.py:51
+#: dental_tourism/urls.py:52
 msgid "prices/"
 msgstr "preturi/"
 
-#: dental_tourism/urls.py:52
+#: dental_tourism/urls.py:53
 msgid "packages/"
 msgstr "pachete/"
 
-#: dental_tourism/urls.py:53
+#: dental_tourism/urls.py:54
 msgid "dental-holidays-from/"
 msgstr "vacante-dentare-din/"
 
-#: dental_tourism/urls.py:54
+#: dental_tourism/urls.py:55
 msgid "guide/"
 msgstr "ghid/"
 
-#: dental_tourism/urls.py:55
+#: dental_tourism/urls.py:56
 msgid "dental-clinic/"
 msgstr "cabinet-stomatologic/"
 
-#: dental_tourism/urls.py:56
+#: dental_tourism/urls.py:57
 msgid "clinics/"
 msgstr "clinici/"
 
-#: dental_tourism/urls.py:57
+#: dental_tourism/urls.py:58
 msgid "dentists/"
 msgstr "medici-dentisti/"
 
@@ -1412,7 +1402,7 @@ msgstr "Foarte accesibil – și ce stabilim în scris este ce plătești."
 msgid "Your dentist"
 msgstr "Medicul dvs. dentist"
 
-#: templates/about.html:50 templates/pseo/_proof.html:14
+#: templates/about.html:50 templates/pseo/_proof.html:15
 msgid "Read the dentist's profile"
 msgstr "Vezi profilul dentistului"
 
@@ -1452,11 +1442,6 @@ msgid "A family clinic with an ethical approach"
 msgstr "O clinică de familie cu o abordare etică"
 
 #: templates/areas/detail.html:17 templates/areas/index.html:16
-#| msgid ""
-#| "Dr. Dt. Devrim Biriken Sipahi has worked as a dentist in Istanbul for more "
-#| "than 35 years. Her son, Dt. Ekin Sipahi, is also a dentist and works with "
-#| "her at the clinic. Every treatment starts with an accurate diagnosis; we "
-#| "recommend only what you need and keep healthy teeth healthy."
 msgid ""
 "Dr. Devrim has worked as a dentist in Istanbul for more than 35 years. Her "
 "son, Dt. Ekin Sipahi, is also a dentist and works with her at the clinic. "
@@ -1469,7 +1454,7 @@ msgstr ""
 "doar ce vă trebuie și păstrăm dinții sănătoși."
 
 #: templates/areas/detail.html:21 templates/packages/origin.html:24
-#: templates/treatments/detail.html:37
+#: templates/treatments/detail.html:41
 msgid "At a glance"
 msgstr "Pe scurt"
 
@@ -1491,7 +1476,7 @@ msgstr "Cu taxiul"
 msgid "%(min)s min"
 msgstr "%(min)s min"
 
-#: templates/areas/detail.html:24 templates/contact.html:14
+#: templates/areas/detail.html:24 templates/contact.html:15
 #: templates/packages/origin.html:26
 msgid "Clinic"
 msgstr "Clinică"
@@ -1505,8 +1490,8 @@ msgid "7 days a week"
 msgstr "7 zile din 7"
 
 #: templates/areas/detail.html:28 templates/guides/detail.html:27
-#: templates/packages/origin.html:29 templates/packages/treatment.html:36
-#: templates/treatments/detail.html:43
+#: templates/packages/origin.html:29 templates/packages/treatment.html:41
+#: templates/treatments/detail.html:47
 msgid "Ask for my personal plan"
 msgstr "Cere planul meu personal"
 
@@ -1556,7 +1541,7 @@ msgstr "%(y)s+ ani de experiență"
 msgid "read them on Google"
 msgstr "citește-le pe Google"
 
-#: templates/base.html:67 templates/components/footer.html:43
+#: templates/base.html:67 templates/components/footer.html:45
 #: templates/components/navbar.html:67 templates/components/navbar.html:102
 msgid "Contact"
 msgstr "Contact"
@@ -1565,14 +1550,50 @@ msgstr "Contact"
 msgid "Hear our patients on Instagram"
 msgstr "Ascultați-i pe pacienții noștri pe Instagram"
 
-#: templates/base.html:80 templates/contact.html:13
+#: templates/base.html:80 templates/contact.html:14
 msgid "Chat on WhatsApp"
 msgstr "Scrieți-ne pe WhatsApp"
 
-#: templates/blog/_card.html:7 templates/blog/detail.html:13
+#: templates/blog/_card.html:7 templates/blog/detail.html:14
 #, python-format
 msgid "%(n)s min read"
 msgstr "%(n)s min de citit"
+
+#: templates/blog/_cta_about.html:3
+#| msgid "Who will treat you"
+msgid "Who treats you"
+msgstr "Cine vă tratează"
+
+#: templates/blog/_cta_about.html:4
+msgid ""
+"Affordable dental treatment in Turkey, with ethical standards and a plan "
+"made for you"
+msgstr ""
+"Tratament dentar accesibil în Turcia, cu standarde etice și un plan făcut "
+"pentru dumneavoastră"
+
+#: templates/blog/_cta_about.html:5
+msgid ""
+"We are a family clinic in Şişli, Istanbul: Dr. Dt. Devrim Biriken Sipahi, "
+"with more than 35 years of experience, and Dt. Ekin Sipahi treat every "
+"patient themselves. Before you travel you receive a written plan that says "
+"what we would do, what we would not do and why — and no treatment you do not"
+" need."
+msgstr ""
+"Suntem o clinică de familie în Şişli, Istanbul: Dr. Dt. Devrim Biriken "
+"Sipahi, cu peste 35 de ani de experiență, și Dt. Ekin Sipahi tratează "
+"personal fiecare pacient. Înainte de a călători primiți un plan scris care "
+"spune ce am face, ce nu am face și de ce – și niciun tratament de care nu "
+"aveți nevoie."
+
+#: templates/blog/_cta_about.html:7
+#| msgid "Our clinic"
+msgid "About our clinic"
+msgstr "Despre clinica noastră"
+
+#: templates/blog/_cta_about.html:8 templates/clinics/doctor.html:24
+msgid "Ask the dentist"
+msgstr "Întrebați medicul"
 
 #: templates/blog/_pagination.html:2
 msgid "Pagination"
@@ -1602,28 +1623,51 @@ msgstr "Toate"
 msgid "No articles in this category yet."
 msgstr "Nu există încă articole în această categorie."
 
-#: templates/blog/detail.html:12
+#: templates/blog/detail.html:11 templates/blog/detail.html:34
+msgid "Written by"
+msgstr "Scris de"
+
+#: templates/blog/detail.html:13
 msgid "Updated"
 msgstr "Actualizat"
 
-#: templates/blog/detail.html:14
+#: templates/blog/detail.html:15 templates/blog/detail.html:39
 msgid "Medically reviewed by"
 msgstr "Verificat medical de"
 
-#: templates/blog/detail.html:22 templates/guides/detail.html:10
+#: templates/blog/detail.html:23 templates/guides/detail.html:10
 #: templates/treatments/detail.html:24
 msgid "Contents"
 msgstr "Cuprins"
 
-#: templates/blog/detail.html:22
+#: templates/blog/detail.html:23
 msgid "In this article"
 msgstr "În acest articol"
 
-#: templates/blog/detail.html:30
+#: templates/blog/detail.html:27
+msgid ""
+"Not sure what applies to your own teeth? Send your X-ray or a photo and the "
+"dentist replies personally with a written preliminary assessment — before "
+"you book anything."
+msgstr ""
+"Nu știți ce se aplică dinților dumneavoastră? Trimiteți radiografia sau o "
+"fotografie, iar medicul răspunde personal cu o evaluare preliminară scrisă –"
+" înainte de a rezerva ceva."
+
+#: templates/blog/detail.html:28
+#| msgid "Send photos or an X-ray on WhatsApp"
+msgid "Send your X-ray on WhatsApp"
+msgstr "Trimiteți radiografia pe WhatsApp"
+
+#: templates/blog/detail.html:38 templates/clinics/doctor.html:16
+msgid "Qualifications"
+msgstr "Calificări"
+
+#: templates/blog/detail.html:48
 msgid "Prices and details"
 msgstr "Prețuri și detalii"
 
-#: templates/blog/detail.html:42
+#: templates/blog/detail.html:60
 msgid "You might also find helpful"
 msgstr "S-ar putea să vă intereseze și"
 
@@ -1698,7 +1742,7 @@ msgid "Patients treated"
 msgstr "Pacienți tratați"
 
 #: templates/clinics/detail.html:38 templates/clinics/doctor.html:20
-#: templates/components/footer.html:56
+#: templates/components/footer.html:58
 msgid "Languages"
 msgstr "Limbi"
 
@@ -1711,7 +1755,7 @@ msgid "Stay"
 msgstr "Ședere"
 
 #: templates/clinics/detail.html:46 templates/seo/_clinic_offers.html:9
-#: templates/treatments/detail.html:39
+#: templates/treatments/detail.html:43
 #, python-format
 msgid "%(d)s days"
 msgstr "%(d)s zile"
@@ -1724,7 +1768,7 @@ msgstr "Medici dentiști"
 msgid "Contact & location"
 msgstr "Contact și locație"
 
-#: templates/clinics/detail.html:61 templates/contact.html:16
+#: templates/clinics/detail.html:61 templates/contact.html:17
 msgid "Map"
 msgstr "Hartă"
 
@@ -1796,10 +1840,6 @@ msgstr "Atinge o stea"
 msgid "Submit review"
 msgstr "Trimite recenzia"
 
-#: templates/clinics/doctor.html:16
-msgid "Qualifications"
-msgstr "Calificări"
-
 #: templates/clinics/doctor.html:18
 msgid "University"
 msgstr "Universitate"
@@ -1807,10 +1847,6 @@ msgstr "Universitate"
 #: templates/clinics/doctor.html:19
 msgid "Graduated"
 msgstr "Absolvire"
-
-#: templates/clinics/doctor.html:23
-msgid "Ask the dentist"
-msgstr "Întrebați medicul"
 
 #: templates/clinics/list.html:7
 msgid "Dental clinics in Istanbul for international patients"
@@ -1860,7 +1896,7 @@ msgstr ""
 "Folosim cookie-uri pentru a măsura publicitatea și a îmbunătăți site-ul. "
 "Puteți accepta sau refuza cookie-urile de analiză."
 
-#: templates/components/consent.html:3 templates/components/footer.html:52
+#: templates/components/consent.html:3 templates/components/footer.html:54
 msgid "Privacy policy"
 msgstr "Politica de confidențialitate"
 
@@ -1979,7 +2015,11 @@ msgstr ""
 "Tratament dentar etic în Istanbul pentru pacienți internaționali — "
 "diagnostic transparent, prețuri fixe, contact direct cu medicul dvs."
 
-#: templates/components/footer.html:39 templates/packages/index.html:25
+#: templates/components/footer.html:25
+msgid "Dr. Devrim Biriken Sipahi's clinic websites"
+msgstr "Site-urile clinicii Dr. Devrim Biriken Sipahi"
+
+#: templates/components/footer.html:41 templates/packages/index.html:25
 #, python-format
 msgid "From %(c)s"
 msgstr "Din %(c)s"
@@ -2007,12 +2047,12 @@ msgstr "Pachete dentare după tratament"
 
 #: templates/components/navbar.html:38 templates/packages/index.html:20
 #: templates/packages/origin.html:35 templates/seo/treatment_city.html:15
-#: templates/seo/treatment_price.html:24 templates/treatments/detail.html:16
+#: templates/seo/treatment_price.html:26 templates/treatments/detail.html:16
 #, python-format
 msgid "%(name)s package"
 msgstr "Pachet %(name)s"
 
-#: templates/components/navbar.html:41 templates/packages/treatment.html:40
+#: templates/components/navbar.html:41 templates/packages/treatment.html:45
 msgid "Travelling from"
 msgstr "Călătorești din"
 
@@ -2180,24 +2220,24 @@ msgstr ""
 "Trimiteți-ne datele dvs. — și, dacă aveți, o fotografie sau radiografie pe "
 "WhatsApp. Medicul răspunde personal în 24 de ore."
 
-#: templates/contact.html:13
+#: templates/contact.html:14
 msgid "Fastest reply — usually within 30 minutes during clinic hours."
 msgstr ""
 "Cel mai rapid răspuns — de obicei în 30 de minute în programul clinicii."
 
-#: templates/contact.html:18
+#: templates/contact.html:19
 msgid "Why is it free?"
 msgstr "De ce gratuit?"
 
-#: templates/contact.html:18
+#: templates/contact.html:19
 msgid "No commitment required"
 msgstr "Fără obligații"
 
-#: templates/contact.html:18
+#: templates/contact.html:19
 msgid "Treatment plan and fixed price"
 msgstr "Plan de tratament și preț fix"
 
-#: templates/contact.html:18 templates/home/sections/contact.html:11
+#: templates/contact.html:19 templates/home/sections/contact.html:11
 msgid "Reply within 24 hours"
 msgstr "Răspuns în 24 de ore"
 
@@ -2602,7 +2642,7 @@ msgstr "Cum funcționează"
 msgid "From the first message to your new smile"
 msgstr "De la primul mesaj la noul dvs. zâmbet"
 
-#: templates/home/sections/how.html:8 templates/pseo/_proof.html:21
+#: templates/home/sections/how.html:8 templates/pseo/_proof.html:22
 msgid "Send a photo or X-ray"
 msgstr "Trimiteți o fotografie sau o radiografie"
 
@@ -2823,12 +2863,17 @@ msgstr "Îngrijire pe WhatsApp după ce te întorci acasă"
 msgid "Typical stay in Istanbul: %(d)s days."
 msgstr "Ședere obișnuită în Istanbul: %(d)s zile."
 
-#: templates/packages/treatment.html:20
+#: templates/packages/treatment.html:21
+#, python-format
+msgid "Your %(name)s treatment, day by day"
+msgstr "Tratamentul dumneavoastră %(name)s zi de zi"
+
+#: templates/packages/treatment.html:24
 #, python-format
 msgid "How to choose the best %(name)s clinic in Istanbul"
 msgstr "Cum alegi cea mai bună clinică pentru %(name)s în Istanbul"
 
-#: templates/packages/treatment.html:21
+#: templates/packages/treatment.html:25
 #, python-format
 msgid ""
 "The best clinic for %(name)s in Istanbul and Turkey is not the one with the "
@@ -2841,39 +2886,39 @@ msgstr ""
 "dentist cu experiență te consultă, îți explică alternativele și recomandă "
 "%(name)s doar dacă ai cu adevărat nevoie."
 
-#: templates/packages/treatment.html:23
+#: templates/packages/treatment.html:27
 msgid "Ask who will treat you, and for the dentist's qualifications"
 msgstr "Întreabă cine te va trata și care sunt calificările dentistului"
 
-#: templates/packages/treatment.html:24
+#: templates/packages/treatment.html:28
 msgid "Ask for the brand and origin of every material"
 msgstr "Întreabă marca și originea fiecărui material"
 
-#: templates/packages/treatment.html:25
+#: templates/packages/treatment.html:29
 msgid "Read reviews on Google and Trustpilot — and how the clinic replies"
 msgstr "Citește recenziile pe Google și Trustpilot – și cum răspunde clinica"
 
-#: templates/packages/treatment.html:26
+#: templates/packages/treatment.html:30
 msgid "Never accept a plan before anyone has examined your teeth"
 msgstr "Nu accepta niciodată un plan înainte ca cineva să-ți consulte dinții"
 
-#: templates/packages/treatment.html:31 templates/seo/treatment_price.html:24
+#: templates/packages/treatment.html:36 templates/seo/treatment_price.html:26
 #, python-format
 msgid "Everything about %(name)s"
 msgstr "Totul despre %(name)s"
 
-#: templates/packages/treatment.html:31
+#: templates/packages/treatment.html:36
 #, python-format
 msgid "%(name)s cost in Turkey"
 msgstr "Cost %(name)s în Turcia"
 
-#: templates/packages/treatment.html:47 templates/seo/treatment_city.html:29
-#: templates/treatments/detail.html:55
+#: templates/packages/treatment.html:52 templates/seo/treatment_city.html:29
+#: templates/treatments/detail.html:59
 msgid "What patients say"
 msgstr "Ce spun pacienții"
 
-#: templates/packages/treatment.html:48 templates/seo/treatment_city.html:31
-#: templates/seo/treatment_price.html:38 templates/treatments/detail.html:66
+#: templates/packages/treatment.html:53 templates/seo/treatment_city.html:31
+#: templates/seo/treatment_price.html:40 templates/treatments/detail.html:70
 msgid "Related treatments"
 msgstr "Tratamente similare"
 
@@ -2915,6 +2960,10 @@ msgstr ""
 "Conform GDPR și legii turce KVKK, puteți solicita oricând accesul la date, "
 "rectificarea sau ștergerea lor contactându-ne."
 
+#: templates/pseo/_doctor_note.html:6
+msgid "The dentist's note"
+msgstr "Nota medicului"
+
 #: templates/pseo/_links.html:3
 msgid "Learn more about us"
 msgstr "Află mai multe despre noi"
@@ -2951,13 +3000,18 @@ msgstr ""
 "Bugetul tău merge acolo unde contează — în tratament. Există și opțiuni mai "
 "accesibile; întreabă-ne."
 
-#: templates/pseo/_price_note.html:7 templates/seo/treatment_price.html:29
+#: templates/pseo/_price_note.html:7 templates/seo/treatment_price.html:31
 msgid "Ask for my price on WhatsApp"
 msgstr "Cere prețul meu pe WhatsApp"
 
 #: templates/pseo/_proof.html:7
 msgid "Who will treat you"
 msgstr "Cine te va trata"
+
+#: templates/pseo/_proof.html:10
+#, python-format
+msgid "Graduate of %(u)s"
+msgstr "Diplomă: %(u)s"
 
 #: templates/pseo/_proof.html:10
 msgid "Graduate of Ankara University Faculty of Dentistry"
@@ -2969,35 +3023,35 @@ msgid ""
 msgstr ""
 "Radiologie oro-maxilo-facială, Universitatea Marmara – diagnostic 3D precis"
 
-#: templates/pseo/_proof.html:12
+#: templates/pseo/_proof.html:13
 msgid "Examines and treats every patient personally"
 msgstr "Consultă și tratează personal fiecare pacient"
 
-#: templates/pseo/_proof.html:19
+#: templates/pseo/_proof.html:20
 msgid "Three simple steps"
 msgstr "Trei pași simpli"
 
-#: templates/pseo/_proof.html:21
+#: templates/pseo/_proof.html:22
 msgid "on WhatsApp, it takes one minute."
 msgstr "pe WhatsApp, durează un minut."
 
-#: templates/pseo/_proof.html:22
+#: templates/pseo/_proof.html:23
 msgid "Receive your personal plan"
 msgstr "Primești planul personal"
 
-#: templates/pseo/_proof.html:22
+#: templates/pseo/_proof.html:23
 msgid "with a fixed written quote, no obligation."
 msgstr "cu preț fix în scris, fără obligații."
 
-#: templates/pseo/_proof.html:23
+#: templates/pseo/_proof.html:24
 msgid "Come to Istanbul"
 msgstr "Vino la Istanbul"
 
-#: templates/pseo/_proof.html:23
+#: templates/pseo/_proof.html:24
 msgid "we plan the appointments around your flights."
 msgstr "programăm vizitele în funcție de zborurile tale."
 
-#: templates/pseo/_proof.html:25
+#: templates/pseo/_proof.html:26
 msgid ""
 "Healthy enamel never grows back. Before anyone grinds your teeth for a "
 "template smile, get a second opinion from a dentist who saves teeth first."
@@ -3006,7 +3060,7 @@ msgstr ""
 "dinții pentru un zâmbet șablon, cere a doua opinie de la un dentist care "
 "salvează mai întâi dinții."
 
-#: templates/pseo/_proof.html:28
+#: templates/pseo/_proof.html:29
 msgid "What our patients say"
 msgstr "Ce spun pacienții noștri"
 
@@ -3089,43 +3143,43 @@ msgstr "Nicio clinică nu oferă încă acest tratament în acest oraș."
 msgid "What affects the price of %(name)s"
 msgstr "Ce influențează prețul pentru %(name)s"
 
-#: templates/seo/treatment_price.html:11
+#: templates/seo/treatment_price.html:12
 msgid "Your diagnosis: how many teeth and their condition"
 msgstr "Diagnosticul tău: câți dinți și în ce stare"
 
-#: templates/seo/treatment_price.html:12
+#: templates/seo/treatment_price.html:13
 msgid "The brand and type of materials"
 msgstr "Marca și tipul materialelor"
 
-#: templates/seo/treatment_price.html:13
+#: templates/seo/treatment_price.html:14
 msgid "Whether preparatory treatment is needed"
 msgstr "Dacă e nevoie de tratament pregătitor"
 
-#: templates/seo/treatment_price.html:14
+#: templates/seo/treatment_price.html:15
 msgid "The number of visits to Istanbul"
 msgstr "Numărul de vizite în Istanbul"
 
-#: templates/seo/treatment_price.html:16
+#: templates/seo/treatment_price.html:18
 msgid "Included in your quote"
 msgstr "Inclus în oferta ta"
 
-#: templates/seo/treatment_price.html:18
+#: templates/seo/treatment_price.html:20
 msgid "Examination, X-ray and 3D scan"
 msgstr "Consult, radiografie și scanare 3D"
 
-#: templates/seo/treatment_price.html:19
+#: templates/seo/treatment_price.html:21
 msgid "Treatment by the dentist personally"
 msgstr "Tratament făcut personal de dentist"
 
-#: templates/seo/treatment_price.html:20
+#: templates/seo/treatment_price.html:22
 msgid "Written guarantee information"
 msgstr "Informații de garanție în scris"
 
-#: templates/seo/treatment_price.html:21
+#: templates/seo/treatment_price.html:23
 msgid "Aftercare on WhatsApp"
 msgstr "Îngrijire pe WhatsApp"
 
-#: templates/seo/treatment_price.html:23
+#: templates/seo/treatment_price.html:25
 msgid ""
 "Dental work is more than a Hollywood smile. We recommend only what you "
 "really need — that is also the most affordable plan."
@@ -3167,27 +3221,32 @@ msgstr[2] "%(n)s de vizite"
 msgid "%(name)s by city"
 msgstr "%(name)s pe orașe"
 
-#: templates/treatments/detail.html:39
+#: templates/treatments/detail.html:34
+#, python-format
+msgid "When we advise against %(name)s"
+msgstr "Când nu recomandăm %(name)s"
+
+#: templates/treatments/detail.html:43
 msgid "Stay in Istanbul"
 msgstr "Ședere în Istanbul"
 
-#: templates/treatments/detail.html:40
+#: templates/treatments/detail.html:44
 msgid "Visits"
 msgstr "Vizite"
 
-#: templates/treatments/detail.html:41
+#: templates/treatments/detail.html:45
 msgid "Anaesthesia"
 msgstr "Anestezie"
 
-#: templates/treatments/detail.html:41
+#: templates/treatments/detail.html:45
 msgid "Local"
 msgstr "Locală"
 
-#: templates/treatments/detail.html:46
+#: templates/treatments/detail.html:50
 msgid "Clinics offering this treatment"
 msgstr "Clinici care oferă acest tratament"
 
-#: templates/treatments/detail.html:59
+#: templates/treatments/detail.html:63
 msgid "Guides about this treatment"
 msgstr "Ghiduri despre acest tratament"
 
@@ -3202,25 +3261,6 @@ msgid ""
 msgstr ""
 "Toate tratamentele pe care le oferim, cu informații oneste despre procedură,"
 " cât timp trebuie să stați în Istanbul și cât costă."
-
-#: templates/components/footer.html:22
-msgid "Dr. Devrim Biriken Sipahi's clinic websites"
-msgstr "Site-urile clinicii Dr. Devrim Biriken Sipahi"
-
-msgid "The dentist's note"
-msgstr "Nota medicului"
-
-#, python-format
-msgid "Your %(name)s treatment, day by day"
-msgstr "Tratamentul dumneavoastră %(name)s zi de zi"
-
-#, python-format
-msgid "When we advise against %(name)s"
-msgstr "Când nu recomandăm %(name)s"
-
-#, python-format
-msgid "Graduate of %(u)s"
-msgstr "Diplomă: %(u)s"
 
 #, python-format
 #~ msgid ""

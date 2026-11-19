@@ -96,6 +96,9 @@ class BlogPost(TranslatableModel):
     slug = models.SlugField(max_length=200, unique=True)
     category = models.ForeignKey(BlogCategory, on_delete=models.PROTECT, related_name="posts")
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
+    doctor_author = models.ForeignKey("clinics.Doctor", null=True, blank=True, on_delete=models.SET_NULL,
+                                      related_name="authored_posts",
+                                      help_text="Yazan/konuşan hekim: yazar kutusu ve schema author (E-E-A-T)")
     reviewed_by = models.ForeignKey("clinics.Doctor", null=True, blank=True, on_delete=models.SET_NULL,
                                     related_name="reviewed_posts",
                                     help_text="Tıbbi içerik onayı (E-E-A-T): içeriği kontrol eden hekim")

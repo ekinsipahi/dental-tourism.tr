@@ -20,6 +20,8 @@ LABELS = {
     "home-reviews": "Ana sayfa — Yorumlar bölümü", "home-how": "Ana sayfa — Nasıl çalışır",
     "home-clinic-search": "Ana sayfa — Klinik arama", "home-contact": "Ana sayfa — İletişim formu",
     "home-faq": "Ana sayfa — SSS", "home-cta": "Ana sayfa — Son çağrı (CTA)", "clinics-list": "Klinikler sayfası",
+    "blog-about-cta": "Blog yazısı — yazı içi 'bizi tanıyın' kutusu (3. bölümden önce)",
+    "blog-inline-cta": "Blog yazısı — gövde sonu tek cümlelik röntgen çağrısı",
 }
 SEO_PAGES = {
     "seo-home": "SEO — Ana sayfa title/description", "seo-about": "SEO — Hakkımızda", "seo-contact": "SEO — İletişim",
