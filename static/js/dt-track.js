@@ -177,7 +177,7 @@
   var MAP = { whatsapp: "whatsapp_click", whatsapp_call: "whatsapp_click", phone: "phone_click", cta: "cta_click", maps: "maps_click",
               instagram: "instagram_click", youtube: "youtube_click", email: "email_click", nav: "nav_click", form: "cta_click",
               booking: "cta_click", outbound: "outbound_click", ui: "ui_click", lang: "language_switch", "lang-switch": "language_switch",
-              treatment: "nav_click", partner: "nav_click", before_after: "before_after_interact", gallery: "gallery_view",
+              treatment: "nav_click", partner: "nav_click", blog: "nav_click", before_after: "before_after_interact", gallery: "gallery_view",
               chatbot_open: "chatbot_open", chatbot_toggle: "chatbot_open", chatbot_message: "chatbot_message", faq_tab: "ui_click" };
   function typeFromHref(href) {
     if (!href) return "";

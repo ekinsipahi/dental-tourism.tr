@@ -373,14 +373,15 @@ SECTION_ALIASES = (
     ("process", ("process", "surec", "how", "nasil", "benefits", "avantaj", "dijital", "digital", "teknoloji", "technology", "cad-cam",
                  "tarama", "ablauf", "procedure")),
     ("services", ("services", "hizmetler", "tedaviler", "treatments", "leistungen", "uslugi", "related", "ilgili")),
-    ("blog", ("blog", "yazilar", "topics", "articles", "makale", "posts")),
+    ("blog", ("blog", "yazilar", "yazi", "topics", "articles", "article", "makale", "posts", "post")),
     ("price", ("fiyat", "price", "pricing", "preis", "prijs", "prix", "tarif", "prezz", "precio", "cennik", "cena", "цен", "ucret", "اسعار", "سعر")),
     ("reviews", ("yorum", "review", "testimonial", "bewertung", "rezension", "отзыв", "avis", "recens", "opini", "referans", "shorts", "تقييم", "تجارب")),
     ("safety", ("garanti", "guarantee", "warranty", "sertifika", "certif", "zertifik", "safety", "guven", "steril", "hijyen", "hygien", "гарант", "ضمان",
                 "pain", "agri", "korku", "anxiety", "sedasyon", "sedation", "protokol", "protocol", "painless", "agrisiz")),
     ("before_after", ("once-sonra", "oncesonra", "before", "vorher", "avant", "prima-dopo", "antes", "до-после", "قبل")),
     ("gallery", ("galeri", "gallery", "galerie", "foto", "photo", "smile-gallery", "галере", "صور")),
-    ("doctor", ("doktor", "doctor", "hekim", "dentist", "team", "ekip", "arzt", "zahnarzt", "врач", "hakkimizda", "about", "uber-uns", "o-nas", "kimdir", "ozgecmis", "طبيب")),
+    ("doctor", ("doktor", "doctor", "hekim", "dentist", "team", "ekip", "arzt", "zahnarzt", "врач", "hakkimizda", "about", "uber-uns", "o-nas", "kimdir", "ozgecmis", "طبيب",
+                "author", "yazar")),   # blog yazar kutusu = hekim profiline bakış
     ("faq", ("sss", "faq", "soru", "fragen", "вопрос", "question", "preguntas", "domande", "pytania", "vragen", "اسئلة")),
     ("video", ("video", "youtube", "видео")),
 )
@@ -605,7 +606,21 @@ def _count_evidence(session, event_type, data, page_url="", page_type="", now=No
     elif event_type == "section_time":
         canon = canonical_section(data.get("section", ""))
         secs = _num(data.get("seconds"), 1800)
-        if canon in SECTION_TIME_SIGNALS and secs >= 5:
+        ptype = str(page_type or _page_type(session, page_url) or "")
+        if canon in ("content", "blog") and ptype in ("blog", "blog_detail", "qa") and secs >= 60:
+            # Hekim yazısının gövdesinde ≥ 60 sn: gerçekten okudu (başlığa bakıp çıkmadı) — kanıt arıyor, kaliteyi soruyor
+            from urllib.parse import urlparse
+
+            key = f"read:{(urlparse(page_url).path if page_url else '')[:50]}"
+            seen = list(session.pages_seen or [])
+            if key not in seen:
+                session.pages_seen = [*seen, key][-40:]
+                factor = min(secs / 120, 1.5)
+                sig = {PERSONA_SKEPTIC: round(0.4 * factor, 3), PERSONA_QUALITY: round(0.3 * factor, 3)}
+                add_evidence(session, "view", f"Hekim yazısını okudu ({secs} sn)", sig)
+                _add_scores(session, sig)
+                changed = True
+        elif canon in SECTION_TIME_SIGNALS and secs >= 5:
             key = f"sect:{canon}"
             seen = list(session.pages_seen or [])
             if seen.count(key) < 2:   # ziyaret başına en fazla iki kez (sayfa başına bir bölüm)
@@ -640,6 +655,15 @@ def _count_evidence(session, event_type, data, page_url="", page_type="", now=No
             add_evidence(session, "click", f"Sohbette sordu: {text[:60]}" if text else "Sohbette yazdı", sig)
             _add_scores(session, sig)
             changed = True
+        elif el == "blog" or re.search(r"/(?:blog|soru-cevap|yazilar|articles|makale)/", href):
+            # Hekim yazısına / soru-cevaba tıkladı (üç sitede de): kanıt arıyor — yazı başına bir kez
+            key = f"clk:blog:{href[:50]}"
+            if key not in seen:
+                session.pages_seen = [*seen, key][-40:]
+                sig = {PERSONA_SKEPTIC: 0.3, PERSONA_QUALITY: 0.1}
+                add_evidence(session, "click", f"Hekim yazısına tıkladı: {label[:40]}" if label else "Hekim yazısına tıkladı", sig)
+                _add_scores(session, sig)
+                changed = True
         elif el == "outbound" and re.search(r"google\.[a-z.]+/(?:maps|search|local)|g\.page|maps\.app\.goo|goo\.gl/maps", href):
             if "clk:google" not in seen:
                 session.pages_seen = [*seen, "clk:google"][-40:]

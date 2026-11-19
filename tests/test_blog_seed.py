@@ -32,6 +32,7 @@ reviewed_by: ekin-sipahi
 treatment: dental-implants
 schema_type: MedicalWebPage
 funnel_stage: consideration
+guides: [dental-care-turkey]
 status: published
 published: %(published)s
 faq:
@@ -163,6 +164,15 @@ class SeedBlogTests(SeededTestCase):
         r = self.client.get(de_url)
         self.assertEqual(r.status_code, 200)
         self.assertIn('hreflang="de"', r.content.decode())
+        # İç linkler: hekim sayfası (yazar) ve işaret edilen rehber sayfası yazıya link verir
+        self.assertEqual(post.related_guides, ["dental-care-turkey"])
+        self.assertIn(url, self.client.get("/dentists/devrim-biriken-sipahi/").content.decode())
+        call_command("seed_topics", no_keywords=True, stdout=io.StringIO())
+        g = self.client.get("/guide/dental-care-turkey/")
+        self.assertEqual(g.status_code, 200)
+        self.assertIn(url, g.content.decode())
+        self.assertIn("From our dentists", g.content.decode())
+        self.assertNotIn(url, self.client.get("/guide/dental-tourism/").content.decode())
         # Sitemap
         from django.conf import settings
 

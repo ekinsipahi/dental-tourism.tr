@@ -38,7 +38,7 @@ Kaynak: danışman listesindeki 54 soru (10 Türkçe hasta sorusu, 17 klinik uzm
 | 10 | Çar 2.12 | D5 İmplant mı, köprü mü? | drdevrim | /blog/implant-mi-kopru-mu/ |
 | 11 | Per 3.12 | E7 Röntgeninizle seyahatten önce plan | dentaltourism | /blog/planning-your-trip/send-your-dental-x-ray-for-a-preliminary-assessment/ |
 | 12 | Cum 4.12 | E4 Dental implants in Turkey: how many visits? | dentaltourism | /blog/planning-your-trip/dental-implants-in-turkey-how-many-visits/ |
-| 13 | Cmt 5.12 | E1 Is it safe to get dental implants in Turkey? | dentaltourism | /blog/safety-and-quality/is-it-safe-to-get-dental-implants-in-turkey/ |
+| 13 | ~~Cmt 5.12~~ **19.11 yayında** | ~~E1 Is it safe to get dental implants in Turkey?~~ ✅ | dentaltourism | /blog/safety-and-quality/is-it-safe-to-get-dental-implants-in-turkey/ |
 | 14 | Pzt 7.12 | E8 Why do some dentists refuse crowns on healthy teeth? | dentaltourism | /blog/treatment-decisions/why-dentists-refuse-crowns-on-healthy-teeth/ |
 | 15 | Sal 8.12 | E6 If my implant fails after I return home | dentaltourism (+ rehber gövdesi) | /blog/safety-and-quality/dental-implant-failed-after-returning-home/ · /guide/dental-guarantee-aftercare/ |
 | 16 | Çar 9.12 | D6 Tek diş eksikliğinde implant süreci | drdevrim | /blog/tek-dis-implant-sureci/ |
@@ -125,7 +125,7 @@ Hekimden: aşamalar ve bekleme süreleri (kendi protokolü), tek seyahatte biten
 Fotoğraf: zaman çizelgesi grafiği (kendi verimizle), geçici protez örneği, implant belgesi.
 Bağlantılar: /treatments/dental-implants/, /packages/dental-implants/, E6, E7.
 
-### E1 — Is it safe to get dental implants in Turkey? (dentaltourism, EN → çeviriler)
+### ~~E1 — Is it safe to get dental implants in Turkey?~~ ✅ yayında 19.11.2026 (EN; RU/DE/BG/FR çevirileri bekliyor)
 Soruları: EN1.
 Hekimden: güvenliği belirleyen gerçek faktörler (planlama, tomografi, sterilizasyon, hekim deneyimi, malzeme izlenebilirliği), riskleri açıkça; "ucuz ve hızlı" talebine nasıl yanıt verdiği; yurt dışında yapılmış ve sorun çıkan vakalarla karşılaşıyor mu, en sık hata ne.
 Fotoğraf: sterilizasyon, implant belgesi, tomografi.
@@ -228,7 +228,7 @@ Fotoğraf: hekimler, klinik.
 | ES3 | Ayrık ön dişler ortodonti olmadan kompozitle kapatılır mı? | D8 | drdevrim |
 | ES4 | Kompozit lamina ile porselen lamina farkları | D8 | drdevrim |
 | ES5 | Diş eti çekilmesi olan hastaya estetik kaplama | D9 | drdevrim |
-| EN1 | Is it safe to get dental implants in Turkey? | E1 | dentaltourism |
+| ~~EN1~~ | ~~Is it safe to get dental implants in Turkey?~~ ✅ 19.11 | E1 | dentaltourism |
 | EN2 | How do I find a trustworthy dentist in Istanbul? | E2 | dentaltourism |
 | EN3 | How much does a full mouth restoration cost? (rakamsız) | E3 | dentaltourism |
 | EN4 | Can I get implants in Turkey in one visit? | E4 | dentaltourism |
@@ -263,3 +263,30 @@ Fotoğraf: hekimler, klinik.
 - devrimbirikensipahi `/blog/en-iyi-disci/*` (~55 ince "X açık dişçi" yazısı) ve drdevrim `en-iyi-disci` ailesi (398): "en iyi" üstünlük ifadesi mevzuat riski. Karar: yeniden adlandırma / 301 / noindex.
 - GBP (kullanıcı): ad = tabela/ruhsat adı, açıklama ve "|" yok; kategoriler Dentist (birincil), Dental clinic, Cosmetic dentist, gerçekse Emergency dental service; sahip olunmayan uzmanlık kategorileri yok; saatler B1 ile aynı; logo ve kapak = sitelerdeki aynı görsel.
 - Ölçüm: GSC servis hesabı; Bing Webmaster Tools doğrulaması (dentaltourism, drdevrim).
+
+## 6. Claude'un ek soruları (AEO: yapay zekâya sorulan, hekim cevabı olmadan doğru yazılamayan)
+
+Danışman listesinin dışında, bir yapay zekâ olarak kendim de cevabını bilmediğim ve hastaların arama motoruna / sohbet
+botuna sorduğu sorular. Her biri ya mevcut bir parçaya eklenir ya da yeni kısa yazı olur. Hekim seçer.
+
+| # | Soru (hastanın sorduğu biçim) | Neden YZ cevaplayamıyor | Nereye |
+|---|---|---|---|
+| C1 | Başka klinikte başarısız olmuş implantımı yeniden yaptırabilir miyim? Ne getirmeliyim? | Kabul kriterleri ve istenen belgeler kliniğe özgü | E6'ya bölüm ya da yeni EN yazı |
+| C2 | Kemik yetersizse ne oluyor: greft / sinüs lift yapıyor musunuz, süre nasıl değişiyor? | Hangi vakaların alındığı, gelen cerrahlar, süre | E4 + D6 |
+| C3 | Ülkemdeki diş hekimim takibi / kaplamayı yapabilir mi? Yabancı hekimle nasıl çalışıyorsunuz? | İş birliği pratiği, hangi belgeler veriliyor (stiker, radyografi) | E6 |
+| C4 | Diş hekimi korkum var; sedasyon / uyutma var mı? Nasıl yaklaşıyorsunuz? | Anestezi seçenekleri cevapsız (B6) | yeni EN+TR kısa yazı |
+| C5 | İlk randevu nasıl geçer, saat saat? Aynı gün tedaviye başlanır mı? | Klinik akışı (B2) | B2 sayfası + E7 |
+| C6 | Neden S.I.N. implant? Premium sistemden farkı sadece fiyat mı? | Hekimin tercih gerekçesi | E1 güncelleme + D6 |
+| C7 | All-on-4 / tüm çene için gerçekçi takvim nedir, kaç seyahat? | Kliniğin gerçek pratiği (seed metninde iddia var, hekim onayı yok) | E4 |
+| C8 | İstanbul'dayken ameliyattan sonraki gece sorun olursa kime ulaşırım? | Acil düzeni (B1) | B1 + E10 |
+| C9 | Dt. / Dr. Dt. / Uzm. Dt. ne demek? Türkiye'de kim "implantolog" diyebilir? | Unvan mevzuatı ve kliniğin unvanları | E2 (EN8) |
+| C10 | Son kaplamaların rengini / şeklini beğenmezsem uçmadan önce değişir mi? Prova var mı? | Protez akışı, prova sayısı | E5 |
+| C11 | Türbin ve el aletlerini nasıl sterilize ediyorsunuz; otoklav sınıfı ne, kayıt tutuluyor mu? | B5'in ayrıntısı | B3 sayfası |
+| C12 | Hangi ülkelerden hasta geliyor, en sık hangi tedavi için? | Kliniğin verisi | /about/ + E2 |
+| C13 | Önceki hastalarla konuşabilir miyim / referans veriyor musunuz? | Klinik politikası | E2 |
+| C14 | Bruksizm (gece sıkma) varsa implant ve kaplama sonrası gece plağı veriyor musunuz? | Klinik protokolü | D7 + E9 |
+| C15 | Kayıtlarım, fotoğraflarım, radyografim nasıl saklanıyor, paylaşılıyor mu (KVKK/GDPR)? | Klinik uygulaması | B3 |
+| C16 | Hangi dilleri konuşuyorsunuz, tercüman var mı? | Klinik gerçeği (langs: tr, en, de kayıtlı) | /about/ + E7 |
+| C17 | İmplant sonrası kaç ayda bir kontrol; kontrolü ülkemde yaptırabilir miyim? | Takip protokolü | E6 |
+| C18 | Ödeme nasıl: kapora, taksit, kart / nakit, hangi para birimi? (rakamsız) | Klinik politikası | E3 |
+

@@ -24,5 +24,11 @@
     <a class="btn btn-wa" style="width:100%;margin-top:1rem" href="{{ clinic.whatsapp_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% trans "Ask the dentist" %}</a> {% include "components/email_cta.html" %}
   </div></aside>
 </div></section>
+{% if posts %}
+<section class="section" style="padding-top:0" data-track-section="articles"><div class="wrap">
+  <h2>{% blocktrans with name=d.display_name %}Articles by {{ name }}{% endblocktrans %}</h2>
+  <div class="grid grid-2">{% for p in posts %}{% with loc=p.localized %}<a class="card" href="{{ p.get_absolute_url }}" data-track="blog"><h3>{{ loc.title }}</h3><p>{{ loc.excerpt|truncatechars:140 }}</p></a>{% endwith %}{% endfor %}</div>
+</div></section>
+{% endif %}
 {% if reviews %}<section class="section section-alt"><div class="wrap"><h2>{% trans "Patient reviews" %}</h2>{% include "components/reviews.html" %}</div></section>{% endif %}
 {% endblock %}

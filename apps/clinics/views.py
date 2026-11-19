@@ -131,8 +131,17 @@ def _doctor_page(slug, lang):
     return {
         "doctor": doctor, "langs": doctor.live_languages(),
         "reviews": list(light_reviews(doctor.reviews.filter(is_published=True), lang)[:8]),
-        "posts": list(with_translations(doctor.reviewed_posts.filter(status="published"), lang)[:6]),
+        "posts": list(with_translations(_doctor_posts(doctor), lang)[:6]),
     }
+
+
+def _doctor_posts(doctor):
+    """Hekimin yazdığı (doctor_author) ya da onayladığı (reviewed_by) yayındaki yazılar — hekim sayfasındaki iç linkler."""
+    from django.db.models import Q
+
+    from apps.blog.models import BlogPost
+
+    return BlogPost.published.filter(Q(doctor_author=doctor) | Q(reviewed_by=doctor)).distinct()
 
 
 def doctor_detail(request, slug):

@@ -197,6 +197,8 @@ def blog_detail(request, category_slug, post_slug):
         "wordCount": len((loc.content or "").split()),
         "articleSection": cat_loc.name,
         "isAccessibleForFree": True,
+        # AEO: sesli asistan / özet için doğrudan cevap paragrafı ve anahtar noktalar listesi
+        "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".prose > p:first-of-type", ".prose > ul:first-of-type"]},
     }
     if extras["treatment"]:
         article["about"] = {"@type": "MedicalProcedure", "name": extras["treatment"].name}

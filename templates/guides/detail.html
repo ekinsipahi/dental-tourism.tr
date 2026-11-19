@@ -39,6 +39,12 @@
   <h2><a href="{{ areas_hub }}">{% trans "Dental clinic by district" %}</a></h2>
   <div class="chips">{% for a in areas %}<a class="chip" href="{{ a.url }}" data-track="nav">📍 {{ a.name }}</a>{% endfor %}</div>
 </div></section>{% endif %}
+{% if posts %}
+<section class="section" style="padding-top:0"><div class="wrap">
+  <h2>{% trans "From our dentists" %}</h2>
+  <div class="grid grid-2">{% for p in posts %}<a class="card" href="{{ p.object.get_absolute_url }}" data-track="blog"><h3>{{ p.title }}</h3><p>{{ p.excerpt|truncatechars:140 }}</p></a>{% endfor %}</div>
+</div></section>
+{% endif %}
 {% include "pseo/_related.html" %}
 {% include "pseo/_links.html" %}
 <section class="section" style="padding-top:0"><div class="wrap">{% include "components/cta.html" %}</div></section>

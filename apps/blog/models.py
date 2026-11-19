@@ -123,6 +123,9 @@ class BlogPost(TranslatableModel):
 
     funnel_stage = models.CharField(max_length=20, choices=FUNNEL_CHOICES, default="awareness")
     target_personas = models.JSONField(default=list, blank=True)
+    related_guides = models.JSONField(default=list, blank=True,
+                                      help_text='Rehber anahtarları (SeoTopic.key, ör. ["dental-care-turkey"]): yazı o '
+                                                'rehber sayfalarında "hekimlerimizden" bloğunda listelenir (iç link)')
     content_source = models.CharField(max_length=20, choices=SOURCE_CHOICES, default=SOURCE_MANUAL)
     ai_generation_prompt = models.TextField(blank=True)
 

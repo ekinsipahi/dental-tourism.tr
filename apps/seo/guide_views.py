@@ -47,6 +47,20 @@ def guide_index(request):
     return render(request, "guides/index.html", ctx)
 
 
+def _guide_posts(key, lang):
+    """Bu rehberi `related_guides` ile işaret eden yayındaki yazılar (dilde çevirisi olanlar) — 5 dk süreç içi bellek.
+    JSONField contains SQLite'ta yok; aday sayısı küçük olduğu için Python'da süzülür."""
+    from apps.blog.models import BlogPost
+    from apps.localization.memo import memo
+
+    def load():
+        qs = BlogPost.published.exclude(related_guides=[]).select_related("category")
+        posts = [p for p in with_translations(qs, lang) if key in (p.related_guides or [])][:4]
+        return localize_list(posts, lang, fallback=False)
+
+    return memo(f"guide-posts:{key}:{lang}", 300, load, model=BlogPost)
+
+
 def guide_detail(request, slug):
     lang = get_language()
     res = resolve_slug(SeoTopic, lang, slug, SeoTopic.objects.filter(is_active=True))
@@ -89,5 +103,6 @@ def guide_detail(request, slug):
         ctx["areas"], ctx["areas_hub"] = _area_links(lang), reverse("areas:index")
     ctx.update({"seo": seo, "topic": topic, "t": loc, "h1": loc.h1, "lead": loc.lead, "faq": faq,
                 "eyebrow": _("Guide"), "related_guides": _guide_links(lang, exclude=topic.pk)[:8],
+                "posts": _guide_posts(topic.key, lang),
                 "page_type": f"guide_{topic.kind}"})
     return render(request, "guides/detail.html", ctx)

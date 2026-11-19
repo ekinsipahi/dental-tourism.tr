@@ -32,6 +32,7 @@ reviewed_by: ekin-sipahi                               # isteğe bağlı ikinci 
 treatment: dental-implants                             # tedavi anahtarı (yazı sonunda tedavi kutusu)
 schema_type: MedicalWebPage                            # BlogPosting | Article | MedicalWebPage | HowTo
 funnel_stage: consideration                            # awareness | consideration | decision
+guides: [dental-care-turkey, teeth-done-in-turkey]     # rehber anahtarları (SeoTopic.key): o rehberlerde iç link bloğu
 status: published                                      # draft | review | published
 published: 2026-12-05                                  # yayın tarihi; gelecekse o gün görünür
 auto_translate: false                                  # true → yayınlanınca AI 16 dile çevirir (API anahtarı gerekir)
@@ -68,7 +69,7 @@ TRANSLATED = ("title", "slug", "excerpt", "content", "faq", "featured_image_alt"
               "focus_keyword")
 POST_FIELDS = ("title", "category", "excerpt", "content", "faq", "featured_image_url", "featured_image_alt",
                "meta_title", "meta_description", "focus_keyword", "canonical_url", "noindex", "schema_type",
-               "funnel_stage", "target_personas", "status", "published_at", "auto_translate", "doctor_author",
+               "funnel_stage", "target_personas", "related_guides", "status", "published_at", "auto_translate", "doctor_author",
                "reviewed_by", "treatment", "content_source")
 
 
@@ -231,6 +232,7 @@ class Command(BaseCommand):
             "focus_keyword": (meta.get("focus_keyword") or "")[:120], "canonical_url": meta.get("canonical_url") or "",
             "noindex": bool(meta.get("noindex", False)), "schema_type": meta.get("schema_type", "BlogPosting"),
             "funnel_stage": meta.get("funnel_stage", "awareness"), "target_personas": list(meta.get("target_personas") or []),
+            "related_guides": [str(g) for g in (meta.get("guides") or [])],
             "status": status, "published_at": _aware(meta.get("published")),
             "auto_translate": bool(meta.get("auto_translate", False)),
             "doctor_author": doctor(meta.get("author")), "reviewed_by": doctor(meta.get("reviewed_by")),

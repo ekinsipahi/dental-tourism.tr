@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dentaltourism.tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-19 19:55+0300\n"
+"POT-Creation-Date: 2026-11-19 20:44+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: apps/blog/views.py:107
+#: apps/blog/views.py:115
 msgid "Dental Tourism Blog 2026 — Honest Advice from Dentists"
 msgstr "Блог о стоматологическом туризме 2026 — честные советы врачей"
 
-#: apps/blog/views.py:108
+#: apps/blog/views.py:116
 msgid ""
 "Implant and veneer costs, safety, recovery and choosing a dentist in "
 "Istanbul — practical, honest advice from dentists with 35+ years' "
@@ -31,11 +31,11 @@ msgstr ""
 "стоматолога в Стамбуле — практичные, честные советы врачей с опытом более 35"
 " лет."
 
-#: apps/blog/views.py:115 apps/blog/views.py:145 apps/blog/views.py:207
+#: apps/blog/views.py:123 apps/blog/views.py:153 apps/blog/views.py:222
 #: apps/clinics/views.py:44 apps/clinics/views.py:107
-#: apps/clinics/views.py:175 apps/core/views.py:152 apps/seo/area_views.py:110
+#: apps/clinics/views.py:184 apps/core/views.py:152 apps/seo/area_views.py:110
 #: apps/seo/area_views.py:133 apps/seo/common.py:52 apps/seo/guide_views.py:39
-#: apps/seo/guide_views.py:75 apps/seo/package_views.py:72
+#: apps/seo/guide_views.py:89 apps/seo/package_views.py:72
 #: apps/seo/package_views.py:117 apps/seo/package_views.py:160
 #: apps/seo/views.py:73 apps/seo/views.py:117 apps/seo/views.py:149
 #: apps/treatments/views.py:27 apps/treatments/views.py:98
@@ -43,12 +43,12 @@ msgstr ""
 msgid "Home"
 msgstr "Главная"
 
-#: apps/blog/views.py:115 apps/blog/views.py:145 apps/blog/views.py:207
+#: apps/blog/views.py:123 apps/blog/views.py:153 apps/blog/views.py:222
 #: templates/components/navbar.html:55
 msgid "Blog"
 msgstr "Блог"
 
-#: apps/blog/views.py:140
+#: apps/blog/views.py:148
 #, python-format
 msgid "%(category)s — Dental Tourism Blog"
 msgstr "%(category)s — блог о стоматологическом туризме"
@@ -186,20 +186,20 @@ msgstr "Клиники"
 msgid "%(clinic)s — Dental Clinic in %(city)s"
 msgstr "%(clinic)s — стоматологическая клиника, %(city)s"
 
-#: apps/clinics/views.py:167
+#: apps/clinics/views.py:176
 #, python-format
 msgid "%(doctor)s — Dentist in %(city)s"
 msgstr "%(doctor)s — стоматолог, %(city)s"
 
-#: apps/clinics/views.py:206
+#: apps/clinics/views.py:215
 msgid "Too many reviews from your connection. Please try again later."
 msgstr "Слишком много отзывов с вашего подключения. Попробуйте позже."
 
-#: apps/clinics/views.py:210
+#: apps/clinics/views.py:219
 msgid "Please check the review form and try again."
 msgstr "Проверьте форму отзыва и попробуйте ещё раз."
 
-#: apps/clinics/views.py:226
+#: apps/clinics/views.py:235
 msgid "Thank you! Your review will be published after a short check."
 msgstr "Спасибо! Ваш отзыв будет опубликован после короткой проверки."
 
@@ -867,7 +867,7 @@ msgstr ""
 "Выбор клиники, отзывы, безопасность, поездка, гарантия и наблюдение — "
 "честные гиды о лечении зубов в Турции, написанные стоматологами из Стамбула."
 
-#: apps/seo/guide_views.py:39 apps/seo/guide_views.py:75
+#: apps/seo/guide_views.py:39 apps/seo/guide_views.py:89
 #: templates/components/footer.html:34 templates/components/navbar.html:49
 #: templates/components/navbar.html:95
 msgid "Guides"
@@ -885,7 +885,7 @@ msgstr ""
 "Всё, что нужно для уверенного решения, — написано врачом, без рекламных "
 "обещаний."
 
-#: apps/seo/guide_views.py:91
+#: apps/seo/guide_views.py:105
 msgid "Guide"
 msgstr "Гид"
 
@@ -1561,12 +1561,6 @@ msgstr ""
 "планом, составленным именно для вас"
 
 #: templates/blog/_cta_about.html:5
-#| msgid ""
-#| "We are a family clinic in Şişli, Istanbul: Dr. Dt. Devrim Biriken Sipahi, "
-#| "with more than 35 years of experience, and Dt. Ekin Sipahi treat every "
-#| "patient themselves. Before you travel you receive a written plan that says "
-#| "what we would do, what we would not do and why — and no treatment you do not"
-#| " need."
 msgid ""
 "We are a family clinic in Şişli, Istanbul, run by Dr. Dt. Devrim Biriken "
 "Sipahi, with more than 35 years of experience, and Dt. Ekin Sipahi. Before "
@@ -1638,10 +1632,6 @@ msgid "In this article"
 msgstr "В этой статье"
 
 #: templates/blog/detail.html:27
-#| msgid ""
-#| "Not sure what applies to your own teeth? Send your X-ray or a photo and the "
-#| "dentist replies personally with a written preliminary assessment — before "
-#| "you book anything."
 msgid ""
 "Not sure what applies to your own teeth? Send your X-ray or tomography scan "
 "and we tell you what is possible before you travel. The final decision is "
@@ -2254,6 +2244,11 @@ msgstr ""
 #: templates/guides/detail.html:18
 msgid "Dental tourism with Sterr Agency"
 msgstr "Стоматологический туризм с Sterr Agency"
+
+#: templates/guides/detail.html:44
+#| msgid "Your dentist"
+msgid "From our dentists"
+msgstr "От наших врачей"
 
 #: templates/home/sections/contact.html:7
 msgid "Free initial evaluation"

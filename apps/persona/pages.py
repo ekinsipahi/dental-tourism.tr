@@ -152,6 +152,17 @@ VIEW_SIGNALS = {
     "guides:index": {PERSONA_SKEPTIC: 0.4},
 }
 
+# Blog kategorisi (EN slug; 17 dildeki slug'lar _slug_map ile çözülür) → persona. Yeni persona yok, mevcut 8 tipe bağlanır:
+# "güvenli mi?" yazısı okuyan korku + kanıt arıyor; seyahat planı okuyan karar aşamasında; tedavi kararı okuyan kaliteyi soruyor.
+BLOG_CATEGORY_SIGNALS = {
+    "safety-and-quality": {PERSONA_FEAR: 0.4, PERSONA_SKEPTIC: 0.3},
+    "treatment-decisions": {PERSONA_QUALITY: 0.5},
+    "planning-your-trip": {PERSONA_READY: 0.5, PERSONA_URGENCY: 0.2},
+    "costs-comparisons": {PERSONA_PRICE: 0.6},
+    "treatment-guides": {PERSONA_SKEPTIC: 0.2, PERSONA_QUALITY: 0.2},
+    "dental-health": {PERSONA_QUALITY: 0.2},
+}
+
 # Sayfa TÜRÜ → persona (kardeş siteler; dentaltourism'de URL çözülemezse yedek). Ağırlıklar VIEW_SIGNALS ile aynı ölçekte.
 PAGE_TYPE_SIGNALS = {
     "home": {PERSONA_TRUST: 0.2, PERSONA_SKEPTIC: 0.2},            # ana sayfada uzun kalmak: tanımaya çalışıyor
@@ -224,6 +235,13 @@ def _slug_map(model_label):
             data[t.slug] = t.slug
         for tr in TreatmentTranslation.objects.select_related("treatment").only("slug", "treatment__slug"):
             data[tr.slug] = tr.treatment.slug
+    elif model_label == "blog-category":
+        from apps.blog.models import BlogCategory, BlogCategoryTranslation
+
+        for c in BlogCategory.objects.only("slug"):
+            data[c.slug] = c.slug
+        for tr in BlogCategoryTranslation.objects.select_related("category").only("slug", "category__slug"):
+            data[tr.slug] = tr.category.slug
     else:
         from apps.seo.models import SeoTopic, SeoTopicTranslation
 
@@ -291,6 +309,14 @@ def page_signal(path, site="dt", page_type=""):
             if name == "guides:detail" and slug:
                 topic = _slug_map("topic").get(slug, slug)
                 return f"guide:{topic}", dict(TOPIC_SIGNALS.get(topic, {}))
+            if name == "blog:post_detail":
+                cat_slug = match.kwargs.get("category_slug", "")
+                cat = _slug_map("blog-category").get(cat_slug, cat_slug)
+                sig = dict(VIEW_SIGNALS.get(name, {}))
+                for p, w in BLOG_CATEGORY_SIGNALS.get(cat, {}).items():
+                    sig[p] = round(sig.get(p, 0) + w, 3)
+                # anahtar yazı başına: iki farklı yazı iki farklı sayfa sayılır (kind_type → "blog")
+                return f"blog:{cat}:{match.kwargs.get('post_slug', '')[:40]}", sig
             return name, dict(VIEW_SIGNALS.get(name, {}))
         if not page_type:
             return None, {}

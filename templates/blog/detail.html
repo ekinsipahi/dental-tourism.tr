@@ -24,12 +24,12 @@
   {% endif %}{% endwith %}
   <div class="prose" itemprop="articleBody" data-track-section="content">{% blog_body p.content %}</div>
 
-  <p class="cta-inline" data-track-section="cta-inline">{% cblock "blog-inline-cta" "subtitle" _("Not sure what applies to your own teeth? Send your X-ray or tomography scan and we tell you what is possible before you travel. The final decision is made at the examination in the clinic.") %}
+  <p class="cta-inline" data-track-section="cta-inline"><span>{% cblock "blog-inline-cta" "subtitle" _("Not sure what applies to your own teeth? Send your X-ray or tomography scan and we tell you what is possible before you travel. The final decision is made at the examination in the clinic.") %}</span>
     {% if wa_url %}<a href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% cblock "blog-inline-cta" "button_text" _("Send your X-ray on WhatsApp") %} →</a>{% else %}<a href="{% url 'core:contact' %}" data-track="cta">{% cblock "blog-inline-cta" "button_text" _("Send your X-ray on WhatsApp") %} →</a>{% endif %}</p>
 
   {% if author %}
   <aside class="side-cta author-box" style="margin-top:2.5rem;display:flex;gap:1.1rem;align-items:flex-start" data-track-section="author">
-    {% if author.photo_src %}<a href="{{ author_url }}" style="flex:none"><img src="{{ author.photo_src }}" alt="{{ author.full_name }}" width="72" height="72" loading="lazy" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--brand)"></a>{% endif %}
+    {% if author.photo_src %}<a href="{{ author_url }}" style="flex:none"><img src="{{ author.photo_src }}" alt="{{ author.full_name }}" width="72" height="72" loading="lazy"></a>{% endif %}
     <div>
       <p class="eyebrow" style="margin:0 0 .3rem">{% trans "Written by" %}</p>
       <h2 style="font-size:1.1rem;margin:0"><a href="{{ author_url }}">{{ author.full_name }}</a></h2>

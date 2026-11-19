@@ -3,7 +3,7 @@ title: Is it safe to get dental implants in Turkey?
 slug: is-it-safe-to-get-dental-implants-in-turkey
 category: safety-and-quality
 excerpt: Yes, if you choose the right dentist and an experienced clinic. What we look at before placing an implant, when we make you wait, which implant systems we use, and what happens if an implant fails.
-meta_title: Is It Safe to Get Dental Implants in Turkey? A Dentist Answers
+meta_title: Is It Safe to Get Dental Implants in Turkey? Dentist Answers
 meta_description: Yes, with the right dentist. What we check before placing an implant in Istanbul, why one trip is usually not enough, which implant systems we use, and what happens if one fails.
 focus_keyword: dental implants in turkey safe
 featured_image: img/clinic/gallery/devrim-slide3.jpg
@@ -12,6 +12,7 @@ author: devrim-biriken-sipahi
 treatment: dental-implants
 schema_type: MedicalWebPage
 funnel_stage: consideration
+guides: [dental-care-turkey, teeth-done-in-turkey, dental-guarantee-aftercare, dental-surgery-turkey, best-dental-clinic-turkey, dental-clinic-istanbul]
 status: published
 published: 2026-11-19
 auto_translate: false

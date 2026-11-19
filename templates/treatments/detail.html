@@ -61,7 +61,7 @@
 {% if posts %}
 <section class="section"><div class="wrap">
   <h2>{% trans "Guides about this treatment" %}</h2>
-  <div class="grid grid-2">{% for p in posts %}<a class="card" href="{{ p.object.get_absolute_url }}"><h3>{{ p.title }}</h3><p>{{ p.excerpt|truncatechars:140 }}</p></a>{% endfor %}</div>
+  <div class="grid grid-2">{% for p in posts %}<a class="card" href="{{ p.object.get_absolute_url }}" data-track="blog"><h3>{{ p.title }}</h3><p>{{ p.excerpt|truncatechars:140 }}</p></a>{% endfor %}</div>
 </div></section>
 {% endif %}
 
