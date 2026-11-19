@@ -81,5 +81,20 @@ format ve çeviri Claude'dan. Eski devrimbirikensipahi yazısındaki iddialar ka
 - [F5] Yazarın tedavi anında portresi
 - Hasta görüntüsü/radyografi kullanılacaksa yazılı onam; kimlik bilgisi yok.
 
-## Cevaplar
-(buraya; başına **[Devrim]** / **[Ekin]**)
+## Cevaplar (hekim, 2026-11-19, sohbetten aynen)
+- B1: Evet, Türkiye'de implant yaptırmak mantıklı; doğru hekim ve tecrübeli klinik/hekim altında sakınca yok. Kliniğin yorumlarına, kötü yorumlarına bakılmalı; fazla kötü yorumu olmayan ve 70+ yorumu olan klinik genel olarak olur.
+- B2: faktörler yukarıdakiler.
+- B3: Varsa panoramik ama asıl olarak tomografi (kemik yoğunluğu için).
+- B4: Yazılı plan verilmiyor; WhatsApp/e-posta ile detaylar konuşulur, yapılabilecekler söylenir; kemik için tomografi istenir (varsa daha iyi). İmplant öncesi ağız içi muayene şart: çekilecek diş olup olmadığına uzaktan (panoramik/tomografi) her zaman karar verilemez.
+- B5: Otoklav var; her seans sonrası hepsi atılıp yenisi konuluyor; poşetlerden çıkartılıp konuluyor (normal sterilizasyon).
+- B6: Cerrahi zorluğuna göre Dr. Devrim veya Dt. Ekin; zor vakalarda Türkiye çapında tanınmış tecrübeli cerrahlar kliniğe geliyor. Anestezi: cevap yok.
+- B7: İmplant pasaportu yerine implant stikerları veriliyor (parça uyumu, ileride sorun çıkmasın). Sistem: S.I.N.; Nobel, Straumann vb. var ama çok daha yüksek fiyatlı, ayrıca konuşulmalı.
+- B9: Diyabet, kemik ilaçları, D vitamini implant başarısını etkiler; warfarin/coumadin, kortikosteroid → doktoruyla ek konsültasyon gerekebilir; osteoporoz ilaçları aynı. Kalp, şeker, tansiyon, Paget, kemik hastalıkları, otoimmün hastalıklar mutlaka belirtilmeli; söylenmeden implant yapılmamalı.
+- B10: Tek seyahatte bitirmek genel olarak mümkün değil; yapılırsa üst yapı/protez uyumunda ikinci soru işareti. İmmediat yükleme ilk haftadan itibaren yalnızca yeterli kemik varsa; yoksa alt çene 2 ay, üst çene 3 ay; genelde protez uyumu için ikisinde de 3 ay beklenir.
+- B15/B16: Hastalara tekrar tekrar "nasıl oldunuz" diye soruluyor; kötü durumda yardım ediliyor. Sigara az/yoksa fail olmasını gerektirecek durum yok. Fail olursa ücret almadan tekrar yapılıyor ("garanti" diye yazma).
+- B19: Yazar Dr. Devrim Biriken Sipahi; onaylayan yazılmasın.
+- K4: Mikroskop YOK (eski yazıdaki iddia yanlış).
+- K8: "Binlerce uluslararası hasta" DOĞRU.
+- Cevapsız: B8 (implant yılı/sayısı), B11 (komplikasyon listesi), B12 (ret örnekleri — kısmen), B13 (başka yerde yapılmış vakalar), B14 (belgeler), B17 (liste cevaplardan derlendi), B20 (gözlem), K5/K6/K7 ayrıntı, fotoğraflar.
+- B17 (hekim, hasta diliyle yazılacak; "doktor değilmiş gibi"): 1) Beni tedavi edecek doktorun adı ne; internetten araştır, akademik makalelerine bak; gelen doktor gerçekten o mu, değilse ad-soyad öğren ve araştır; vakit yoksa gereksiz risk alma. 2) Google yorumları iyi mi kötü mü; çok fazla kötü yorum var mı; sahte yorumlar ayırt edilemeyebilir ama çok kötü yorum her şeyi söyler. 3) Diş çekip implant mı diyorlar, sağlam dişi kurtarmaya mı çalışıyorlar; asıl mesele bu, diş gidince geri gelmez. 4) Telefonda ayrı, klinikte ayrı şey mi söylediler (çekip implant, komple kesme, 3 bin euro+ rakamlar) → doktorsuz kliniklerin hareketi. 5) Mutlaka Google profili olmalı; merdiven altı, doktor olmayan kişiler çok ucuza diş yapabilir; sağlamlığı ve ortamı iki kere düşündürmeli; herkes "ben doktorum" diyebilir. 6) Bilindik ya da doğrudan doktor isimli yerlere gidin; ucuz diye sağlığınızdan olmayın. — Yazıda 4. maddedeki euro rakamı kural gereği yazılmadı ("several times higher than discussed").
+

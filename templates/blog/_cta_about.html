@@ -2,7 +2,7 @@
 <aside class="side-cta blog-about" data-track-section="cta-about">
   <p class="eyebrow" style="margin-bottom:.4rem">{% cblock "blog-about-cta" "eyebrow" _("Who treats you") %}</p>
   <h2 style="margin-top:0">{% cblock "blog-about-cta" "title" _("Affordable dental treatment in Turkey, with ethical standards and a plan made for you") %}</h2>
-  <p class="muted">{% cblock "blog-about-cta" "subtitle" _("We are a family clinic in Şişli, Istanbul: Dr. Dt. Devrim Biriken Sipahi, with more than 35 years of experience, and Dt. Ekin Sipahi treat every patient themselves. Before you travel you receive a written plan that says what we would do, what we would not do and why — and no treatment you do not need.") %}</p>
+  <p class="muted">{% cblock "blog-about-cta" "subtitle" _("We are a family clinic in Şişli, Istanbul, run by Dr. Dt. Devrim Biriken Sipahi, with more than 35 years of experience, and Dt. Ekin Sipahi. Before you travel we look at your X-ray or tomography scan and tell you what is possible and what is not; the final plan is made after an examination in the clinic, and we do not recommend treatment you do not need.") %}</p>
   <div class="btn-row">
     <a class="btn btn-sm" href="{% url 'core:about' %}" data-track="cta">{% cblock "blog-about-cta" "button_text" _("About our clinic") %} →</a>
     {% if wa_url %}<a class="btn btn-outline btn-sm" href="{{ wa_url }}" data-track="whatsapp" target="_blank" rel="noopener">{% include "components/wa-icon.html" with size=16 %} {% trans "Ask the dentist" %}</a>{% endif %}
