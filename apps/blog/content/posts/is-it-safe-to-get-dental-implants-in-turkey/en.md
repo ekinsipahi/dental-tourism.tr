@@ -13,7 +13,7 @@ treatment: dental-implants
 schema_type: MedicalWebPage
 funnel_stage: consideration
 status: published
-published: 2026-11-21
+published: 2026-11-19
 auto_translate: false
 faq:
   - q: Can I get dental implants in Turkey in one trip?
