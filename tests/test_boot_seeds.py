@@ -38,3 +38,20 @@ class BootSeedTests(SeededTestCase):
             self.assertIsNotNone(t)
             t.join(timeout=120)
             self.assertFalse(t.is_alive())
+
+    def test_bot_cache_not_written_while_seeding(self):
+        from django.core.cache import caches
+
+        caches["local"].clear()
+        bot = self.client_class(HTTP_USER_AGENT="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)")
+        boot.SEEDING.set()
+        try:
+            r = bot.get("/about/")
+            self.assertEqual(r.status_code, 200)
+            self.assertFalse(r.has_header("X-Bot-Cache"))
+            self.assertFalse(bot.get("/about/").has_header("X-Bot-Cache"))  # seed sürerken ne yazılır ne okunur
+        finally:
+            boot.SEEDING.clear()
+        bot.get("/about/")
+        self.assertEqual(bot.get("/about/")["X-Bot-Cache"], "HIT")  # seed bitince normal bot önbelleği
+

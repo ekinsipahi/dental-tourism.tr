@@ -49,8 +49,10 @@ class BotPageCacheMiddleware:
         return f"bot:{getattr(request, 'LANGUAGE_CODE', '')}:{request.path}"
 
     def __call__(self, request):
+        from apps.core.boot import SEEDING
+
         cacheable = (getattr(request, "is_bot", False) and request.method == "GET" and not request.GET
-                     and not request.path.startswith(self.SKIP))
+                     and not request.path.startswith(self.SKIP) and not SEEDING.is_set())  # seed sürerken yazma
         if not cacheable:
             return self.get_response(request)
         import zlib

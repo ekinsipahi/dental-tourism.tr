@@ -18,16 +18,19 @@ from django.conf import settings
 
 logger = logging.getLogger(__name__)
 LOCK_KEY = 734_002_119  # pg_advisory_lock anahtarı (rastgele sabit)
+# Seed sürerken bot sayfa önbelleğine yazılmaz (apps/core/middleware.BotCacheMiddleware): aksi hâlde Googlebot'un
+# seed bitmeden istediği sayfa, eski içerikle 6 saat önbellekte kalıyordu (rehberde yazı bloğu görünmedi, 19.11).
+SEEDING = threading.Event()
 
 
 def run_seeds_now(delay=0):
     """Seed'leri bu iş parçacığında, senkron çalıştırır. Dönüş: 'ok' | 'failed'."""
     import os
 
-    from django.core.cache import caches
     from django.core.management import call_command
     from django.db import connection, connections
 
+    SEEDING.set()
     if delay:
         time.sleep(delay)
     auto_translate = settings.AUTO_TRANSLATE_ON_PUBLISH  # seed komutları bunu kapatır; web sürecinde geri açılmalı
@@ -53,17 +56,27 @@ def run_seeds_now(delay=0):
                     c.execute("SELECT pg_advisory_unlock(%s)", [LOCK_KEY])
         except Exception:
             logger.exception("boot seeds: unlock failed")
-        try:
-            from apps.localization.memo import bump
-            from apps.blog.models import BlogCategory, BlogPost
-
-            caches["local"].clear()  # sitemap, bot sayfa önbelleği, listeler: yeni içerik görünsün
-            bump(BlogPost)
-            bump(BlogCategory)
-        except Exception:
-            logger.exception("boot seeds: cache clear failed")
+        _clear_caches()
+        SEEDING.clear()
         connections.close_all()
+        if delay:
+            # seed bitmeden başlayıp sonra biten istekler (uçuştaki render) eski içeriği yazmış olabilir: 10 sn sonra bir daha
+            threading.Timer(10, _clear_caches).start()
     return status
+
+
+def _clear_caches():
+    from django.core.cache import caches
+
+    try:
+        from apps.localization.memo import bump
+        from apps.blog.models import BlogCategory, BlogPost
+
+        caches["local"].clear()  # sitemap, bot sayfa önbelleği, memo'lar: yeni içerik hemen görünsün
+        bump(BlogPost)
+        bump(BlogCategory)
+    except Exception:
+        logger.exception("boot seeds: cache clear failed")
 
 
 def start_boot_seeds():
