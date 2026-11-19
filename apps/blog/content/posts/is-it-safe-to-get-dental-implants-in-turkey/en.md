@@ -24,8 +24,8 @@ faq:
     a: Yes. A panoramic X-ray helps if you have one, but the decision about an implant rests on a tomography scan, because it shows bone density. If you already have one, send it before you travel. The final decision is still made after an examination in the clinic.
   - q: Which implant brands do you use?
     a: We currently work with the S.I.N. implant system. Nobel Biocare, Straumann and other premium systems are available at a considerably higher cost and are discussed case by case. In every case you receive the identification stickers of your implant.
-  - q: Do you send a written treatment plan before I travel?
-    a: No. We discuss your case on WhatsApp or e-mail, look at your scan and tell you what is likely to be possible. The treatment plan itself is made after an intraoral examination, because whether a tooth can be kept cannot always be decided from an X-ray.
+  - q: Do you send a treatment plan before I travel?
+    a: A preliminary one. We discuss your case on WhatsApp or e-mail, look at your scan and tell you in writing what is likely to be possible. The final treatment plan is made after an intraoral examination, because whether a tooth can be kept cannot always be decided from an X-ray.
   - q: What if my implant fails after I return home?
     a: We keep in touch after you go home and ask how you are doing. If an implant fails, we place a new one and do not charge for it.
 ---
@@ -52,7 +52,7 @@ Before you look at prices or photos, look at the reviews, including the negative
 
 If a panoramic X-ray exists we look at it, but the decision rests on a tomography scan (CBCT), because that is what shows the density of your bone. We ask every implant patient for one. If you already have a scan, send it to us before you travel; that is the best starting point.
 
-Before you travel we talk through your case on WhatsApp or e-mail. We look at what you send and tell you what is likely to be possible. We do not issue a formal written treatment plan at that stage, and there is a reason for it: the final decision is made in the chair, after an intraoral examination. Whether a tooth can be kept or has to be extracted cannot always be judged from a panoramic X-ray or a tomography scan. An examination in the clinic is therefore a condition before any implant is placed.
+Before you travel we talk through your case on WhatsApp or e-mail. We look at what you send and tell you, in writing, what is likely to be possible. What you do not get at that stage is a final treatment plan, and there is a reason for it: the final decision is made in the chair, after an intraoral examination. Whether a tooth can be kept or has to be extracted cannot always be judged from a panoramic X-ray or a tomography scan. An examination in the clinic is therefore a condition before any implant is placed.
 
 ## Tell us about your health; it changes the plan
 
