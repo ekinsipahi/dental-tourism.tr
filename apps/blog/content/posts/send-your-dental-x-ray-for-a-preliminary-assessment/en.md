@@ -20,7 +20,7 @@ faq:
   - q: What kind of X-ray should I send?
     a: Whatever you have. A panoramic X-ray is a good start. If implants are a possibility, a tomography (CBCT) scan is what we need, because it shows bone density. If you do not have one, it is taken before any implant decision is made.
   - q: How do I send my X-ray?
-    a: On WhatsApp or by e-mail, in whatever format you were given. We look at it and reply in writing.
+    a: On WhatsApp or by e-mail, in whatever format you were given. The messages are answered by the clinic's dentists or their assistants, and the reply comes in writing.
   - q: Will I get a treatment plan before I travel?
     a: You get a preliminary assessment in writing, covering what is likely to be possible, what is not, and how many visits to plan for. The final treatment plan is made after an examination in the clinic.
   - q: Can you tell from my X-ray whether a tooth can be saved?
@@ -74,7 +74,7 @@ Thousands of international patients have gone through this process with our clin
 <figcaption>The final plan is made here, after an examination in the chair, not from a photograph of an X-ray. Photographed in our clinic.</figcaption>
 </figure>
 
-From what you send, we can tell you what is likely: which teeth look as if they can be kept, whether implants look possible, which options are realistic for your case, and how many visits to plan for. We put this in writing, so that you have something to compare and to think about.
+Your message is read and answered by the clinic's dentists or their assistants, not by a call centre. From what you send, we can tell you what is likely: which teeth look as if they can be kept, whether implants look possible, which options are realistic for your case, and how many visits to plan for. We put this in writing, so that you have something to compare and to think about.
 
 What we cannot do from an X-ray is give you a final answer on a tooth. Whether a tooth can be kept or has to be extracted cannot always be judged from a panoramic X-ray or a tomography scan; some of that only shows itself when the tooth is examined in the mouth. Bone density, which decides whether and where an implant can go, needs a tomography scan; a panoramic X-ray alone is not enough for that. So the preliminary assessment is exactly what the name says. It tells you what is likely. It does not commit you, and it does not commit us.
 

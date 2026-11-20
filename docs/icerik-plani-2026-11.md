@@ -37,10 +37,10 @@ Kaynak: danışman listesindeki 54 soru (10 Türkçe hasta sorusu, 17 klinik uzm
 | 9 | Sal 1.12 | D8 Dişleri kestirmeden estetik: bonding, lamina, zirkonyum | drdevrim | /blog/disleri-kestirmeden-estetik/ |
 | 10 | Çar 2.12 | D5 İmplant mı, köprü mü? | drdevrim | /blog/implant-mi-kopru-mu/ |
 | 11 | ~~Per 3.12~~ **20.11 yayında** | ~~E7 Röntgeninizle seyahatten önce plan~~ ✅ | dentaltourism | /blog/planning-your-trip/send-your-dental-x-ray-for-a-preliminary-assessment/ |
-| 12 | Cum 4.12 | E4 Dental implants in Turkey: how many visits? | dentaltourism | /blog/planning-your-trip/dental-implants-in-turkey-how-many-visits/ |
+| 12 | ~~Cum 4.12~~ **21.11 yayında** | ~~E4 Dental implants in Turkey: how many visits?~~ ✅ | dentaltourism | /blog/planning-your-trip/dental-implants-in-turkey-how-many-visits/ |
 | 13 | ~~Cmt 5.12~~ **19.11 yayında** | ~~E1 Is it safe to get dental implants in Turkey?~~ ✅ | dentaltourism | /blog/safety-and-quality/is-it-safe-to-get-dental-implants-in-turkey/ |
 | 14 | Pzt 7.12 | E8 Why do some dentists refuse crowns on healthy teeth? | dentaltourism | /blog/treatment-decisions/why-dentists-refuse-crowns-on-healthy-teeth/ |
-| 15 | Sal 8.12 | E6 If my implant fails after I return home | dentaltourism (+ rehber gövdesi) | /blog/safety-and-quality/dental-implant-failed-after-returning-home/ · /guide/dental-guarantee-aftercare/ |
+| 15 | ~~Sal 8.12~~ **21.11 yayında** | ~~E6 If my implant fails after I return home~~ ✅ (rehber gövdesi henüz değil) | dentaltourism (+ rehber gövdesi) | /blog/safety-and-quality/dental-implant-failed-after-returning-home/ · /guide/dental-guarantee-aftercare/ |
 | 16 | Çar 9.12 | D6 Tek diş eksikliğinde implant süreci | drdevrim | /blog/tek-dis-implant-sureci/ |
 | 17 | Per 10.12 | D9 Sağlam dişe kaplama yapılır mı? Hollywood smile | drdevrim | /blog/saglam-dise-kaplama-yapilir-mi/ |
 | 18 | Cum 11.12 | E9 Risks of 20 zirconia crowns | dentaltourism | /blog/treatment-decisions/risks-of-20-zirconia-crowns-in-turkey/ |
@@ -119,7 +119,7 @@ Hekimden: hangi görüntü yeterli (panoramik/tomografi), neyi uzaktan söyleyeb
 Fotoğraf: WhatsApp'ta görüntü alma akışının kimliksiz ekranı, plan anlatım anı, tomografi ekranı.
 Bağlantılar: /packages/, /about/, /treatments/dental-implants/; drdevrim EN/DE/RU/BG pSEO sayfalarından bu yazıya blok.
 
-### E4 — Dental implants in Turkey: how many visits do you really need? (dentaltourism, EN → çeviriler — ilk makale 3)
+### ~~E4 — Dental implants in Turkey: how many visits do you really need?~~ ✅ yayında 21.11.2026 (EN; hekim cevapları docs/yazilar/e4-e6-hekim-cevaplari.md)
 Soruları: EN4 (tek seyahatte implant tamamlanır mı), ilk makale 3.
 Hekimden: aşamalar ve bekleme süreleri (kendi protokolü), tek seyahatte bitenler/bitmeyenler, aynı gün yükleme hangi durumda, iki gelişin planı, ülkesine dönünce kontrolü nasıl yaptığı.
 Fotoğraf: zaman çizelgesi grafiği (kendi verimizle), geçici protez örneği, implant belgesi.
@@ -137,7 +137,7 @@ Soruları: ilk makale 2, EN11 (sağlam dişleri kestirmeden gülüşümü düzel
 Hekimden: sağlam dişe kaplamayı reddettiği durumlar ve gerekçesi, hastaya sunduğu alternatif (bonding, beyazlatma, ortodonti yönlendirmesi), geri dönüşsüzlük konusunu nasıl anlattığı, reddettiği gerçek bir talep örneği. (Misafir yazılarda verilen ifadeler kullanılabilir: "Hollywood smile'a hayır dediğim durumlar".)
 Fotoğraf: minimal preparasyon örneği (onamlı), kompozit örnekleri.
 
-### E6 — What happens if my dental implant fails after I return home? (dentaltourism, EN → çeviriler; aynı cevaplar /guide/dental-guarantee-aftercare/ gövdesine)
+### ~~E6 — What happens if my dental implant fails after I return home?~~ ✅ yayında 21.11.2026 (EN; docs/yazilar/e6-implant-failed-after-return.md; iki yorum hekime onaylatılacak; rehber gövdesi sonra)
 Soruları: EN6, K8 (komplikasyonda destek).
 Hekimden: başarısızlık belirtileri, hasta ülkesindeyken ilk adım (fotoğraf/radyografi gönderimi, yerel hekimle iletişim), hangi durumda İstanbul'a dönmesi gerekir, garanti/yenileme politikası yazılı mı ve neyi kapsamaz, gerçekten yaşanmış bir örnek (misafir yazı: "başarısız implant yenilendi").
 Fotoğraf: yazılı garanti/implant belgesi örneği, uzaktan takip ekranı.
@@ -231,9 +231,9 @@ Fotoğraf: hekimler, klinik.
 | ~~EN1~~ | ~~Is it safe to get dental implants in Turkey?~~ ✅ 19.11 | E1 | dentaltourism |
 | EN2 | How do I find a trustworthy dentist in Istanbul? | E2 | dentaltourism |
 | EN3 | How much does a full mouth restoration cost? (rakamsız) | E3 | dentaltourism |
-| EN4 | Can I get implants in Turkey in one visit? | E4 | dentaltourism |
+| ~~EN4~~ | ~~Can I get implants in Turkey in one visit?~~ ✅ 21.11 | E4 | dentaltourism |
 | EN5 | How many days should I stay for crowns? | E5 | dentaltourism |
-| EN6 | What if my implant fails after I return home? | E6 | dentaltourism |
+| ~~EN6~~ | ~~What if my implant fails after I return home?~~ ✅ 21.11 | E6 | dentaltourism |
 | ~~EN7~~ | ~~Can I send my X-ray for a preliminary assessment?~~ ✅ 20.11 | E7 | dentaltourism |
 | EN8 | Are Turkish dental qualifications recognized internationally? | E2 | dentaltourism |
 | EN9 | What is included in a dental treatment quote? | E3 | dentaltourism |
@@ -252,7 +252,7 @@ Fotoğraf: hekimler, klinik.
 | K10 | Sterilizasyon, kayıt, takip | B3 (+ /about/ EN özeti) | devrimbirikensipahi · dentaltourism |
 | M1 | Dişi çekmek mi kurtarmak mı? | D1 | drdevrim |
 | M2 | Why do some dentists refuse crowns on healthy teeth? | E8 | dentaltourism |
-| M3 | Dental implants in Turkey: how many visits? | E4 | dentaltourism |
+| ~~M3~~ | ~~Dental implants in Turkey: how many visits?~~ ✅ 21.11 | E4 | dentaltourism |
 | M4 | Diş ağrısında ne zaman acil? | D4 | drdevrim |
 | M5 | What to ask before choosing a clinic in Istanbul? | E2 | dentaltourism |
 
@@ -287,6 +287,9 @@ botuna sorduğu sorular. Her biri ya mevcut bir parçaya eklenir ya da yeni kıs
 | ~~C14~~ ✅ | Bruksizm (gece sıkma) varsa implant ve kaplama sonrası gece plağı veriyor musunuz? | cevaplandı 19.11 | D7/E9 bekliyor |
 | ~~C15~~ ✅ | Kayıtlarım, fotoğraflarım, radyografim nasıl saklanıyor, paylaşılıyor mu (KVKK/GDPR)? | cevaplandı 19.11 | B3 bekliyor |
 | ~~C16~~ ✅ | Hangi dilleri konuşuyorsunuz, tercüman var mı? | cevaplandı 19.11 | E1 SSS + RU notu |
-| C17 | İmplant sonrası kaç ayda bir kontrol; kontrolü ülkemde yaptırabilir miyim? | Takip protokolü | E6 |
+| C17 | İmplant sonrası kaç ayda bir kontrol; kontrolü ülkemde yaptırabilir miyim? | Takip protokolü — 21.11: hâlâ cevapsız | E6'ya eklenecek |
 | C18 | Ödeme nasıl: kapora, taksit, kart / nakit, hangi para birimi? (rakamsız) | Klinik politikası | E3 |
+| C19 | WhatsApp'a kim cevap veriyor? | ✅ 21.11: kliniğin hekimleri veya asistanları | E7'ye işlendi |
+| C20 | Ön değerlendirme ücretsiz mi? | cevapsız | E7 SSS |
+| C21 | Çekim gerekiyorsa implant aynı seansta mı? | ✅ 21.11: evet; beklemek güncel araştırmalara göre önerilmiyor (rezorpsiyon) | E4 |
 
