@@ -33,6 +33,8 @@ faq:
     a: The pattern is the same, two visits about three months apart. What changes is the number of appointments within each week. A sinus lift or bone graft changes the timeline, and we tell you about it in the preliminary assessment.
   - q: What should I do between the two trips?
     a: Look after the implants as we show you, and write to us if anything looks wrong, for example red gums around the implant or an implant that moves. We stay in touch and ask how you are doing.
+  - q: How often should the implants be checked afterwards?
+    a: Normally every six months, at least once a year, and in some severe cases every three months. Your own dentist can do it, and a panoramic X-ray (OPG) shows what is needed.
   - q: When should I contact you in relation to booking flights?
     a: Before you book. Send us your X-ray or tomography scan first, so that the number of visits and the gap between them are known before you plan your travel.
   - q: Can my own dentist make the final crown at home?
@@ -92,7 +94,7 @@ The pattern is the same: two visits of about a week each, about three months apa
 
 ## Before you book your flights
 
-Send us your panoramic X-ray or tomography scan on WhatsApp or e-mail; the messages are answered by the clinic's dentists or their assistants. You receive a written preliminary assessment: what is likely to be possible, how many visits and how long between them. Only then book your travel, around dates that are real. [How to send your X-ray and what the assessment covers](/blog/planning-your-trip/send-your-dental-x-ray-for-a-preliminary-assessment/) is explained step by step in a separate article.
+Send us your panoramic X-ray or tomography scan on WhatsApp or e-mail; the messages are answered by the clinic's dentists or their assistants. You receive a written preliminary assessment, free of charge: what is likely to be possible, how many visits and how long between them. Only then book your travel, around dates that are real. [How to send your X-ray and what the assessment covers](/blog/planning-your-trip/send-your-dental-x-ray-for-a-preliminary-assessment/) is explained step by step in a separate article.
 
 ## The timeline in one list
 
@@ -100,6 +102,6 @@ Send us your panoramic X-ray or tomography scan on WhatsApp or e-mail; the messa
 - **Week one:** examination, tomography if needed, final plan, surgery (extraction in the same session if a tooth has to go), temporary tooth if the bone allows, check before you fly.
 - **About three months:** healing at home; we stay in touch; you write to us if anything looks wrong.
 - **Week two:** impressions, try-in, final teeth; more than two weeks for aesthetic ceramics such as e.max.
-- **After that:** we keep asking how you are doing, and if an implant fails, we place a new one and do not charge for it.
+- **After that:** check-ups every six months, at least once a year, which your own dentist can do with a panoramic X-ray; we keep asking how you are doing, and if an implant fails, we place a new one and do not charge for it.
 
 For the wider picture, see our guides to [dental tourism in Turkey](/guide/dental-tourism/) and [getting your teeth done in Turkey](/guide/getting-teeth-done-in-turkey/), or write to us through the [contact page](/contact/).

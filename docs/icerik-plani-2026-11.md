@@ -44,7 +44,7 @@ Kaynak: danışman listesindeki 54 soru (10 Türkçe hasta sorusu, 17 klinik uzm
 | 16 | Çar 9.12 | D6 Tek diş eksikliğinde implant süreci | drdevrim | /blog/tek-dis-implant-sureci/ |
 | 17 | Per 10.12 | D9 Sağlam dişe kaplama yapılır mı? Hollywood smile | drdevrim | /blog/saglam-dise-kaplama-yapilir-mi/ |
 | 18 | Cum 11.12 | E9 Risks of 20 zirconia crowns | dentaltourism | /blog/treatment-decisions/risks-of-20-zirconia-crowns-in-turkey/ |
-| 19 | Cmt 12.12 | E2 How to find a trustworthy dentist in Istanbul | dentaltourism | /blog/safety-and-quality/how-to-find-a-trustworthy-dentist-in-istanbul/ |
+| 19 | ~~Cmt 12.12~~ **21.11 yayında** | ~~E2 How to find a trustworthy dentist in Istanbul~~ ✅ | dentaltourism | /blog/safety-and-quality/how-to-find-a-trustworthy-dentist-in-istanbul/ |
 | 20 | Pzt 14.12 | D3 Kanal tedavili diş tekrar ağrıyorsa | drdevrim | /blog/kanal-tedavili-dis-tekrar-agriyor/ |
 | 21 | Sal 15.12 | E3 What is included in a dental quote in Turkey | dentaltourism (+ /prices/ özeti) | /blog/planning-your-trip/what-is-included-in-a-dental-quote-in-turkey/ |
 | 22 | Çar 16.12 | D7 Diş eti sağlığı ve implant | drdevrim | /blog/dis-eti-sagligi-ve-implant/ |
@@ -157,7 +157,7 @@ Soruları: EN10.
 Hekimden: 20 kaplamanın biyolojik bedeli, hangi hastada gerçekten gerekir, alternatifleri, uzun dönemde gördüğü sorunlar, monolitik vs katmanlı zirkonyum tercihi (misafir yazıdaki ifadeler: monolitik çoğu hastaya, e.max daha estetik ama kırılgan, parafonksiyon kontrolü).
 Fotoğraf: zirkonyum örnekleri, laboratuvar iş akışı.
 
-### E2 — How do I find a trustworthy dentist in Istanbul? What to ask before choosing (dentaltourism, EN → çeviriler — ilk makale 5)
+### ~~E2 — How do I find a trustworthy dentist in Istanbul? What to ask before choosing~~ ✅ yayında 21.11.2026 (EN; hekimin doğrulama ve denklik cevapları docs/yazilar/e4-e6-hekim-cevaplari.md)
 Soruları: EN2, EN8 (Türk diplomaları uluslararası geçerli mi), ilk makale 5.
 Hekimden: hastanın sorması gereken 8–10 soru (kendi listesi), ruhsat/oda kaydı nasıl doğrulanır, diploma ve unvan denkliği hakkında bildiği, plan ve malzemenin yazılı verilmesi, uzun dönem takip sorusu.
 Fotoğraf: ruhsat/oda belgesi (kimliksiz), diplomalar.
@@ -229,13 +229,13 @@ Fotoğraf: hekimler, klinik.
 | ES4 | Kompozit lamina ile porselen lamina farkları | D8 | drdevrim |
 | ES5 | Diş eti çekilmesi olan hastaya estetik kaplama | D9 | drdevrim |
 | ~~EN1~~ | ~~Is it safe to get dental implants in Turkey?~~ ✅ 19.11 | E1 | dentaltourism |
-| EN2 | How do I find a trustworthy dentist in Istanbul? | E2 | dentaltourism |
+| ~~EN2~~ | ~~How do I find a trustworthy dentist in Istanbul?~~ ✅ 21.11 | E2 | dentaltourism |
 | EN3 | How much does a full mouth restoration cost? (rakamsız) | E3 | dentaltourism |
 | ~~EN4~~ | ~~Can I get implants in Turkey in one visit?~~ ✅ 21.11 | E4 | dentaltourism |
 | EN5 | How many days should I stay for crowns? | E5 | dentaltourism |
 | ~~EN6~~ | ~~What if my implant fails after I return home?~~ ✅ 21.11 | E6 | dentaltourism |
 | ~~EN7~~ | ~~Can I send my X-ray for a preliminary assessment?~~ ✅ 20.11 | E7 | dentaltourism |
-| EN8 | Are Turkish dental qualifications recognized internationally? | E2 | dentaltourism |
+| ~~EN8~~ | ~~Are Turkish dental qualifications recognized internationally?~~ ✅ 21.11 | E2 | dentaltourism |
 | EN9 | What is included in a dental treatment quote? | E3 | dentaltourism |
 | EN10 | Risks of 20 zirconia crowns | E9 | dentaltourism |
 | EN11 | Restore my smile without shaving healthy teeth? | E8 | dentaltourism |
@@ -254,7 +254,7 @@ Fotoğraf: hekimler, klinik.
 | M2 | Why do some dentists refuse crowns on healthy teeth? | E8 | dentaltourism |
 | ~~M3~~ | ~~Dental implants in Turkey: how many visits?~~ ✅ 21.11 | E4 | dentaltourism |
 | M4 | Diş ağrısında ne zaman acil? | D4 | drdevrim |
-| M5 | What to ask before choosing a clinic in Istanbul? | E2 | dentaltourism |
+| ~~M5~~ | ~~What to ask before choosing a clinic in Istanbul?~~ ✅ 21.11 | E2 | dentaltourism |
 
 ## 5. Temizlik ve kullanıcı kararları
 
@@ -287,9 +287,9 @@ botuna sorduğu sorular. Her biri ya mevcut bir parçaya eklenir ya da yeni kıs
 | ~~C14~~ ✅ | Bruksizm (gece sıkma) varsa implant ve kaplama sonrası gece plağı veriyor musunuz? | cevaplandı 19.11 | D7/E9 bekliyor |
 | ~~C15~~ ✅ | Kayıtlarım, fotoğraflarım, radyografim nasıl saklanıyor, paylaşılıyor mu (KVKK/GDPR)? | cevaplandı 19.11 | B3 bekliyor |
 | ~~C16~~ ✅ | Hangi dilleri konuşuyorsunuz, tercüman var mı? | cevaplandı 19.11 | E1 SSS + RU notu |
-| C17 | İmplant sonrası kaç ayda bir kontrol; kontrolü ülkemde yaptırabilir miyim? | Takip protokolü — 21.11: hâlâ cevapsız | E6'ya eklenecek |
+| ~~C17~~ ✅ | İmplant sonrası kaç ayda bir kontrol; kontrolü ülkemde yaptırabilir miyim? | cevaplandı 21.11: normalde 6 ayda bir, yılda 1 olur, ağır durumlarda 3 ayda bir; yerel hekim + panoramik röntgen yeter | E6 + E4 SSS |
 | C18 | Ödeme nasıl: kapora, taksit, kart / nakit, hangi para birimi? (rakamsız) | Klinik politikası | E3 |
 | C19 | WhatsApp'a kim cevap veriyor? | ✅ 21.11: kliniğin hekimleri veya asistanları | E7'ye işlendi |
-| C20 | Ön değerlendirme ücretsiz mi? | cevapsız | E7 SSS |
+| ~~C20~~ ✅ | Ön değerlendirme ücretsiz mi? | cevaplandı 21.11: ücretsiz | E7 SSS + E4 + E2 |
 | C21 | Çekim gerekiyorsa implant aynı seansta mı? | ✅ 21.11: evet; beklemek güncel araştırmalara göre önerilmiyor (rezorpsiyon) | E4 |
 

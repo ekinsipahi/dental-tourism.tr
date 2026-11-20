@@ -2,9 +2,9 @@
 title: What happens if my dental implant fails after I return home?
 slug: dental-implant-failed-after-returning-home
 category: safety-and-quality
-excerpt: Write to us first, with photos and an X-ray if you can get one. The signs that mean you should write at once, what we do from Istanbul, and when a failed implant is replaced at no charge.
+excerpt: Write to us with photos and an X-ray if you can get one. The signs that mean you should write at once, how often an implant is checked, and when a failed implant is replaced at no charge.
 meta_title: What If My Dental Implant Fails After I Return Home?
-meta_description: Write to us first, with photos and an X-ray if you have one. The signs to watch for, what we do, and when a failed implant is replaced at no charge.
+meta_description: Write to us with photos and an X-ray if you have one. The signs to watch for, how often to check the implant, and when a failed one is replaced at no charge.
 focus_keyword: dental implant failed after returning home
 featured_image: img/clinic/gallery/devrim-contact.jpg
 featured_image_alt: Dr. Devrim Biriken Sipahi examining a patient in the treatment room of her clinic in Şişli, Istanbul
@@ -19,10 +19,14 @@ auto_translate: false
 faq:
   - q: Which signs mean I should contact you at once?
     a: Red, inflamed gums around the implant, a sunken or receded appearance under the tooth, an implant that moves, or an implant screw that has come out. These are signs of failure, or of a problem that leads to failure. Write to us the same day.
-  - q: Should I see a dentist near me first?
-    a: No. Write to us first, with photos and an X-ray if you can get one. We assess the implant and tell you what to do. Everything is handled by our clinic.
+  - q: Can a dentist near me check the implant?
+    a: Yes. A check-up with a panoramic X-ray (OPG) shows what is needed. Send us that X-ray and your photos as well, so that we can tell you what to do next.
   - q: If the implant has failed, who pays for the new one?
     a: We place a new implant and do not charge for it. The exception is a failure caused by the patient's own habits, for example smoking, which is not replaced free of charge.
+  - q: What if a final crown breaks?
+    a: It can be remade. In general we do that without charge, but it depends on how it broke, and that is discussed case by case.
+  - q: How often should the implant be checked?
+    a: Normally every six months; once a year is acceptable, and in some severe cases every three months. Your own dentist can do it, and a panoramic X-ray (OPG) shows what is needed.
   - q: My temporary tooth broke. Is that a problem?
     a: No. Temporaries can break, and it is not a sign that anything has gone wrong with the implant. Tell us and it is sorted out.
   - q: Do you check on me after I go home?
@@ -42,14 +46,15 @@ faq:
 ---
 ## The short answer
 
-Write to us first. Send photos of the implant and the gum around it, and an X-ray if you can get one, and we tell you what to do. You do not need to go looking for a dentist near you; everything is handled by our clinic. If the implant has failed, we place a new one and do not charge for it. The only exception is a failure the patient has caused, for example by smoking.
+Write to us. Send photos of the implant and the gum around it, and an X-ray if you can get one, and we tell you what to do. If the implant has failed, we place a new one and do not charge for it. The only exception is a failure the patient has caused, for example by smoking.
 
 The possibility of failure always exists, with any implant, in any country. What matters is what happens next, and whether anyone is still answering you after you have flown home. Below is how we handle it, so that you know before you travel, not after.
 
 **Key points**
 
 - Four signs mean write to us at once: red, inflamed gums around the implant, a sunken or receded look under the tooth, an implant that moves, or a screw that has come out.
-- The first step from home is a message to the clinic with photos and, if possible, an X-ray. Not a local dentist.
+- The first step from home is a message to the clinic with photos and, if possible, a panoramic X-ray; a dentist near you can take that X-ray and check the implant.
+- Check-ups: normally every six months and at least once a year; a panoramic X-ray shows what is needed.
 - If an implant fails, we place a new one and do not charge for it. Patient-caused failures, such as smoking, are the exception.
 - A broken temporary tooth is not a failure. Tell us and it is sorted out.
 - Keep the identification stickers of your implant; they let any dentist identify it years from now.
@@ -63,15 +68,15 @@ These are either signs of failure or signs of a problem that leads to failure. T
 
 ## What is the first step from home?
 
-Write to the clinic. Send the photos, describe what you feel, and send an X-ray if you can get one where you live. We look at it and tell you what to do next. You do not need to find a dentist near you for this, and you do not need to decide on your own whether it is serious; that is our job, and everything about the implant is handled by our clinic.
+Write to the clinic. Send the photos, describe what you feel, and send an X-ray if you can get one where you live. A panoramic X-ray (OPG) taken by a dentist near you shows what we need to see. We look at it and tell you what to do next; you do not need to decide on your own whether it is serious, that is our job.
 
-Your job in the meantime is simpler: look after the implants well. Clean them as you were shown, and keep answering when we ask how you are doing, because we will ask. If you would rather have your own dentist involved, that is fine too; see below.
+Your job in the meantime is simpler: look after the implants well. Clean them as you were shown, and keep answering when we ask how you are doing, because we will ask. Your own dentist can be involved at any point; see below.
 
 ## Who pays if the implant has to be replaced?
 
 If an implant fails, we place a new one and do not charge for it. That is the rule, and it is the same rule we state before you travel. The exception is a failure caused by the patient's own situation: a patient who smokes, for example, is not covered by that rule, and we say so in advance rather than afterwards. This is also why we ask how much you smoke when we plan, and why we tell you honestly if it changes the risk.
 
-Two things are not failures. A temporary tooth can break; temporaries are for the smile while the implant heals, not for hard food, and a broken one is replaced without drama. And the final teeth are not something we expect to lose: we make prostheses to last for many years, which is one of the reasons we do not hurry the healing time before they are made.
+Two things are not failures. A temporary tooth can break; temporaries are for the smile while the implant heals, not for hard food, and a broken one is replaced without drama. And the final teeth are not something we expect to lose: we make prostheses to last for many years, which is one of the reasons we do not hurry the healing time before they are made. If a final crown does break, it can be remade. In general we do that without charge, but it depends on how it broke, and that is a conversation rather than a rule; a crown that was used to open bottles is a different case from one that failed on its own, and we can tell the difference.
 
 ## What if something happens while you are still in Istanbul?
 
@@ -87,7 +92,7 @@ This is why we ask for all of it before we start, and why the plan is made after
 
 ## Can your own dentist at home take over?
 
-Yes, if that is what you prefer. Your dentist can do the follow-up or the crown, and if you wish we explain the case to them directly. Your records and images are kept, and we share them with you or with your dentist when you ask. The one thing we ask is that a suspected failure is reported to us first, so that the implant itself is assessed by the people who placed it.
+Yes, if that is what you prefer. Your dentist can do the follow-up or the crown, and if you wish we explain the case to them directly. Your records and images are kept, and we share them with you or with your dentist when you ask. For routine check-ups your own dentist is well placed: normally every six months, at least once a year, and in some severe cases every three months. A panoramic X-ray (OPG) shows what is needed; send it to us as well and we look at it too.
 
 ## Why the identification stickers matter now
 
@@ -113,7 +118,7 @@ The best time to deal with a failed implant is before it is placed. Send your X-
 - Look after the implants well, as you were shown in the clinic.
 - Keep the identification stickers with your medical papers.
 - Red gums, a sunken look under the tooth, movement, or a screw that has come out: photos and a message to us the same day.
-- Do not start with a dentist near you; start with us. Everything about the implant is handled by our clinic.
+- Check-ups every six months, at least once a year, with your own dentist if that is easier; a panoramic X-ray shows what is needed.
 - A broken temporary is not an emergency. Tell us.
 - When we write to ask how you are doing, answer. It is how problems are caught early.
 

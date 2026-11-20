@@ -21,6 +21,8 @@ faq:
     a: Whatever you have. A panoramic X-ray is a good start. If implants are a possibility, a tomography (CBCT) scan is what we need, because it shows bone density. If you do not have one, it is taken before any implant decision is made.
   - q: How do I send my X-ray?
     a: On WhatsApp or by e-mail, in whatever format you were given. The messages are answered by the clinic's dentists or their assistants, and the reply comes in writing.
+  - q: Is the preliminary assessment free?
+    a: Yes. Sending your X-ray and getting our written assessment costs nothing.
   - q: Will I get a treatment plan before I travel?
     a: You get a preliminary assessment in writing, covering what is likely to be possible, what is not, and how many visits to plan for. The final treatment plan is made after an examination in the clinic.
   - q: Can you tell from my X-ray whether a tooth can be saved?
@@ -42,7 +44,7 @@ faq:
 ---
 ## The short answer
 
-Yes. Send us what you have, a panoramic X-ray or a tomography (CBCT) scan, on WhatsApp or by e-mail. We look at it and tell you, in writing, what is likely to be possible, what is not, and how many visits you should plan for. This is a preliminary assessment, not the final treatment plan. The final plan is made in the clinic, after an examination, and there is a good reason for that, which we explain below.
+Yes. Send us what you have, a panoramic X-ray or a tomography (CBCT) scan, on WhatsApp or by e-mail. We look at it and tell you, in writing, what is likely to be possible, what is not, and how many visits you should plan for. This is a preliminary assessment, it is free of charge, and it is not the final treatment plan. The final plan is made in the clinic, after an examination, and there is a good reason for that, which we explain below.
 
 Thousands of international patients have gone through this process with our clinic in Şişli, Istanbul. They write to us from Russia, Canada, the United States, the United Kingdom, Moldova, Belarus, Arabic-speaking countries and across Europe, and the steps are the same for everyone.
 

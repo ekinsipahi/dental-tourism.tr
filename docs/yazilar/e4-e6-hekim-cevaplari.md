@@ -21,3 +21,20 @@
 
 ## Not
 Hekim: "başka bir ajan ile de bunu yapabilirsin." → E6 bağlam taşıyan ajana (fork) yazdırıldı, E4 Claude; her ikisi de yalnızca bu dosyadaki ve docs/yazilar/e1-*.md'deki cevaplarla.
+
+## Hekimin ikinci tur cevapları (21.11.2026, sohbetten aynen)
+- E2-1 hekim/klinik doğrulama: "Öncelikle internette doktorun tam ismini araştırıp akademik makalesi var mı diye baksın; çıkmıyorsa Dt. olduğu
+  için [makalesi olmaması] ihtimali yüksek. Bunlar yeterli değilse nereden mezun olduğuna ve klinik içinde asılı diplomaya baksın; o da yoksa
+  kliniğin genel görünümüne baksın: isim yok, Google profili yok, kim olduğu belirsiz, doktor diye gelen kişi başka biri mi — hepsi soru
+  işareti. En sonunda 'diplomanızı görebilir miyim' dersiniz, ama o saatten sonra sahte doktor ihtimali çok yüksek olabilir. İsim yok,
+  soyisim yok, klinik arada derede bir yerde → durup düşünmek lazım; fiyat da çok aşırı ucuzsa evet galiba sahte bir doktora denk geldiniz."
+- E2-2 diploma yurt dışı: "Hayır, geçerli değil; her ülkenin kendi kanunlarıyla uyumlu kendi diş hekimleri vardır; maalesef global bir
+  sisteme geçilemedi; Türk diş hekimleri denkliği olan ülkelerde [çalışabilir]."
+- E6-3 "yerel hekime gerek yok" yorumu: "Ne gerek var, bunu çıkart, bunu anlatma." → E6'dan çıkarıldı.
+- E6-4 "başka hekim müdahalesine karışmayız": "Bunu da çıkart, saçma bir ifade." → yazılmadı.
+- E6-5 kalıcı kaplama kırılırsa: "Tekrardan yapabiliyoruz ama duruma bağlı, nasıl kırdığına bağlı, hastadan hastaya değişir; konuşulması
+  gereken bir konu ama genel olarak yenilemeyi ücretsiz yapıyoruz. Kesinlikle duruma bağlı: protezi gazoz açacağı olarak kullanıyorsa…
+  onları biz anlıyoruz."
+- E6-6 kontrol sıklığı (C17 ✅): "Yılda 1 olabilir; normalde 6 ayda bir takip; bazı severe durumlarda 3 ayda bir. Lokal dişçiler de olur;
+  bir OPG / panoramik röntgen ile her şey belli olur."
+- E7 ön değerlendirme (C20 ✅): "Ücretsiz."
