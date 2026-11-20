@@ -36,7 +36,7 @@ Kaynak: danışman listesindeki 54 soru (10 Türkçe hasta sorusu, 17 klinik uzm
 | 8 | Pzt 30.11 | D2 Çürük var, ağrı yok: dolgu mu kanal mı? | drdevrim | /blog/curuk-var-agri-yok-dolgu-mu-kanal-mi/ |
 | 9 | Sal 1.12 | D8 Dişleri kestirmeden estetik: bonding, lamina, zirkonyum | drdevrim | /blog/disleri-kestirmeden-estetik/ |
 | 10 | Çar 2.12 | D5 İmplant mı, köprü mü? | drdevrim | /blog/implant-mi-kopru-mu/ |
-| 11 | Per 3.12 | E7 Röntgeninizle seyahatten önce plan | dentaltourism | /blog/planning-your-trip/send-your-dental-x-ray-for-a-preliminary-assessment/ |
+| 11 | ~~Per 3.12~~ **20.11 yayında** | ~~E7 Röntgeninizle seyahatten önce plan~~ ✅ | dentaltourism | /blog/planning-your-trip/send-your-dental-x-ray-for-a-preliminary-assessment/ |
 | 12 | Cum 4.12 | E4 Dental implants in Turkey: how many visits? | dentaltourism | /blog/planning-your-trip/dental-implants-in-turkey-how-many-visits/ |
 | 13 | ~~Cmt 5.12~~ **19.11 yayında** | ~~E1 Is it safe to get dental implants in Turkey?~~ ✅ | dentaltourism | /blog/safety-and-quality/is-it-safe-to-get-dental-implants-in-turkey/ |
 | 14 | Pzt 7.12 | E8 Why do some dentists refuse crowns on healthy teeth? | dentaltourism | /blog/treatment-decisions/why-dentists-refuse-crowns-on-healthy-teeth/ |
@@ -113,7 +113,7 @@ Soruları: TR6.
 Hekimden: köprüyü hâlâ önerdiği durumlar; implantı önermediği durumlar; komşu dişlerin durumu kararı nasıl etkiler; süre ve seans farkı (kendi pratiği); gerçek bir karar örneği.
 Fotoğraf: model üzerinde köprü ve implant, tomografi ekranı.
 
-### E7 — Can I send my dental X-ray for a preliminary assessment? How we plan before you travel (dentaltourism, EN → RU/DE/BG/FR; ayrıca /about/ süreç bölümü)
+### ~~E7 — Can I send my dental X-ray for a preliminary assessment?~~ ✅ yayında 20.11.2026 (EN; çeviri yok; yeni soru sorulmadan, E1 cevaplarıyla — docs/yazilar/e7-send-your-dental-x-ray.md; /about/ süreç bölümü henüz güncellenmedi)
 Soruları: EN7, K3'ün EN sürümü, K7 (yurt dışı hastanın ilk başvurudan tedavi sonrasına süreci).
 Hekimden: hangi görüntü yeterli (panoramik/tomografi), neyi uzaktan söyleyebilir, neyi söyleyemez; ön değerlendirmede hasta ne alır (yazılı plan? seçenekler?); gelişte planın değiştiği gerçek bir örnek; tipik program (1. gün muayene/tomografi … son gün kontrol); hangi ülkelerden en çok hasta ve en sık hangi tedaviler.
 Fotoğraf: WhatsApp'ta görüntü alma akışının kimliksiz ekranı, plan anlatım anı, tomografi ekranı.
@@ -234,7 +234,7 @@ Fotoğraf: hekimler, klinik.
 | EN4 | Can I get implants in Turkey in one visit? | E4 | dentaltourism |
 | EN5 | How many days should I stay for crowns? | E5 | dentaltourism |
 | EN6 | What if my implant fails after I return home? | E6 | dentaltourism |
-| EN7 | Can I send my X-ray for a preliminary assessment? | E7 | dentaltourism |
+| ~~EN7~~ | ~~Can I send my X-ray for a preliminary assessment?~~ ✅ 20.11 | E7 | dentaltourism |
 | EN8 | Are Turkish dental qualifications recognized internationally? | E2 | dentaltourism |
 | EN9 | What is included in a dental treatment quote? | E3 | dentaltourism |
 | EN10 | Risks of 20 zirconia crowns | E9 | dentaltourism |

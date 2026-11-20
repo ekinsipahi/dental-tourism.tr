@@ -64,7 +64,7 @@ Before you look at prices or photos, look at the reviews, including the negative
 
 If a panoramic X-ray exists we look at it, but the decision rests on a tomography scan (CBCT), because that is what shows the density of your bone. We ask every implant patient for one. If you already have a scan, send it to us before you travel; that is the best starting point.
 
-Before you travel we talk through your case on WhatsApp or e-mail. We look at what you send and tell you, in writing, what is likely to be possible. What you do not get at that stage is a final treatment plan, and there is a reason for it: the final decision is made in the chair, after an intraoral examination. Whether a tooth can be kept or has to be extracted cannot always be judged from a panoramic X-ray or a tomography scan. An examination in the clinic is therefore a condition before any implant is placed.
+Before you travel we talk through your case on WhatsApp or e-mail. We look at what you send and tell you, in writing, what is likely to be possible. What you do not get at that stage is a final treatment plan, and there is a reason for it: the final decision is made in the chair, after an intraoral examination. Whether a tooth can be kept or has to be extracted cannot always be judged from a panoramic X-ray or a tomography scan. An examination in the clinic is therefore a condition before any implant is placed. [How to send your X-ray and what the preliminary assessment covers](/blog/planning-your-trip/send-your-dental-x-ray-for-a-preliminary-assessment/) is explained in a separate article.
 
 ## Tell us about your health; it changes the plan
 
