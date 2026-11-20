@@ -40,8 +40,26 @@ services:
         value: https://drdevrim.com|langpath,https://devrimbirikensipahi.com.tr|lang
       - key: PARTNER_AGENCY_URL
         value: https://sterragency.com/dental-tourism
+      # E-posta bildirimi (lead/yorum): değerler Render panelinden. Gmail: smtp.gmail.com:587 + uygulama şifresi;
+      # alıcı = birincil kliniğin admin'deki e-postası, yoksa LEAD_NOTIFY_EMAIL. Test: manage.py sendtestemail <adres>
       - key: EMAIL_ENABLED
-        value: "False"
+        sync: false
+      - key: EMAIL_HOST
+        sync: false
+      - key: EMAIL_PORT
+        value: "587"
+      - key: EMAIL_HOST_USER
+        sync: false
+      - key: EMAIL_HOST_PASSWORD
+        sync: false
+      - key: DEFAULT_FROM_EMAIL
+        sync: false
+      - key: LEAD_NOTIFY_EMAIL
+        sync: false
+      # Kardeş sitenin arka ucundan lead aktarımı (devrimbirikensipahi → /api/t/lead/, X-DT-Key): devrim-web
+      # servisinde AYNI değer. drdevrim (Nuxt) tarayıcıdan dt-track.js ile gönderir, anahtar gerekmez.
+      - key: DT_LEAD_KEY
+        sync: false
       - key: PERSONA_UI_ENABLED
         value: "False"
       - key: BACKGROUND_WORKERS
