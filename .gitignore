@@ -15,3 +15,7 @@ venv/
 
 # Supabase → Render taşıma dökümü (hasta verisi içerir, asla commit edilmez)
 .migrate_tmp/
+
+# Misafir yazı (backlink) kayıtları: satın alınan yerleşimler, bedeller, çapalar — repo herkese açık, bunlar yalnızca yerelde
+docs/guest-posts.md
+docs/guest-posts/
