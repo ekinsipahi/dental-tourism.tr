@@ -13,6 +13,7 @@ geri alma yolları §8'de. Etki ölçümü §9'da. Ekler: ekA (drdevrim silinen 
 
 Dağıtım: drdevrim `afd0331 → 3c971d3` (Netlify, canlıda 22.11 saat 22:30), devrimbirikensipahi `1674922 → 6ab4d25 → ef04031` (Render devrim-web).
 Blog içerik temizliği (44 yazı, veritabanı): **uygulandı — Render açılış kancası göç 0003'ü dağıtımda çalıştırdı; canlıda 44/44 yazı doğrulandı (22.11.2026 23:05)**.
+Ek dağıtım 23.11.2026 22:02: drdevrim'de "acil" niyeti ve "24 saat" ifadeleri de kaldırıldı (§11).
 
 Not: dağıtım Google core update sürerken yapıldı (hekim kararı, 22.11 gece: "siktir et, alalım"). Sıralama dalgalanması ilk haftalarda update etkisiyle karışacaktır; §9'daki ölçüm bunu ayırmaz, yalnızca kendi ziyaretçi verimizi gösterir.
 
@@ -361,3 +362,45 @@ GSC konum verisini içe aktaramıyoruz; Şişli sayfalarının sorgu konumların
 - drdevrim: sitemap 4.343 (yerel derleme ile birebir aynı); /disci/pendik/, /disci/pendik/kurtkoy/, /en/dentist/tuzla/, /ru/stomatolog/sile/, /de/zahnarzt/silivri/, /fr/dentiste/adalar/, /haftasonu/umraniye/ → 410; /disci/sisli/, /disci/sisli/nisantasi/, /fr/dentiste/sisli/, /nl/tandarts/kagithane/, /ar/tabib-asnan/besiktas/, /az/dis-hekimi/beyoglu/, /sv/tandlakare/sisli/, /ro/dentist/fatih/ → 200; /fr/dentiste → 301 /lang/fr/; /sv/tandlakare → 301 /lang/en/.
 - devrimbirikensipahi: sitemap 128, /accounts/ yok, 13 slug yok; 13 yazı 301 doğru hedefe; /blog/en-iyi-disci/sisli-acik-disci/ 200; ana sayfada Pendik/Kartal/Maltepe/Ataşehir/Beylikdüzü geçmiyor.
 - devrimbirikensipahi içerik temizliği: uygulandı — Render açılış kancası göç 0003'ü dağıtımda çalıştırdı; canlıda 44/44 yazı doğrulandı (22.11.2026 23:05).
+
+## 11. Ek — 23.11.2026: drdevrim'de "acil" niyeti ve "24 saat" ifadeleri kaldırıldı
+
+**Tetikleyici:** drdevrim Search Console'da 22–23.11 sorguları: "acil dişçi esenyurt" (14 gösterim), "nöbetçi dişçi esenyurt" (10),
+"nöbetçi dişçi" (9), "sultangazi 24 saat açık dişçi", "7 24 açık diş hastanesi kadıköy/kartal/maltepe", "esenyurt dişçi 7 24" vb.
+Kaynağı: Google'ın dizinindeki ESKİ sayfa kopyaları ("Nöbetçi dişçi aramadan önce bizi arayın", "7/24 telefon", "07:00–23:00").
+Sorgulardaki Esenyurt, Sultangazi, Kartal, Pendik, Küçükçekmece, Maltepe, Sancaktepe, Başakşehir, Beylikdüzü, Tuzla, Arnavutköy,
+Büyükçekmece, Ümraniye, Ataşehir sayfaları 22.11 gecesinden beri 410; kalan ilçelerin sayfaları yeni metinle yayında. Gösterimler
+Google yeniden taradıkça düşer; site tarafında yapılacak başka şey yok.
+
+**Tarama (kodun tamamı + canlıda 141 sayfa):** "nöbetçi", "7/24", "gece açık" hiçbir yerde yoktu. Kalan iki şey:
+1. Ana sayfa 18 dilde "24 saat içinde geri döneriz" (yanıt süresi cümlesi).
+2. "Acil" niyeti: /hizmetler/acil-dis/ sayfası ("Acil Diş Hekimi İstanbul Şişli" meta başlığı), pSEO şablonlarında "Acil {mahalle}
+   dişçi", "{ilçe} acil diş ağrısında ne yapmalıyım?" SSS'si, şemada "Acil Diş Tedavisi", hizmet kartları, menü, ana sayfa SSS'lerinde
+   acil/Notfall/spoed/urgenze, hizmet etiketi "Acil Tedavi", hizmetler ve hasta yorumları meta açıklamaları, yorum etiketleri.
+Raporlanan "7 24" eşleşmesi logo SVG'sindeki çizim koordinatıdır, metin değildir.
+
+**Yapılanlar (drdevrim commit `cea8d9b`, 28 dosya, 78 ekleme / 76 silme):**
+- /hizmetler/acil-dis/ → **301** → /hizmetler/dis-agrisi/. Hizmet adı "Diş Ağrısı Tedavisi — Haftasonu Dahil, Aynı Gün"; meta başlık
+  "Diş Ağrısı Tedavisi İstanbul Şişli | Haftasonu Açık, Aynı Gün Randevu"; metinlerdeki "acil" → "aynı gün" / "diş ağrısı"
+  (`app/data/services-data.ts`, `app/components/TheNav.vue`, `nuxt.config.ts`). Sitemap: acil-dis çıktı, dis-agrisi girdi (toplam 4.343).
+- `app/pages/disci/[ilce]/index.vue`, `.../[mahalle]/index.vue`, `app/pages/haftasonu/[ilce]/index.vue`, `.../[mahalle]/index.vue`
+  (4 aile şablonu = 195 × 2 canlı sayfa): "acil durumlarda beklemenize gerek yok" → "diş ağrısında…"; "Acil {mahalle} dişçi" →
+  "{mahalle} dişçi"; SSS "{yer} acil diş ağrısında ne yapmalıyım?" → "{yer} diş ağrısı için aynı gün randevu alabilir miyim?";
+  "acil kanal tedavisi" → "kanal tedavisi"; şema "Acil Diş Tedavisi" → "Diş Ağrısı Tedavisi"; "hastane acillerine yönlendirilir" →
+  "pazartesiyi beklemek zorunda kalır"; hizmet kartı → "Diş Ağrısı Tedavisi" (/hizmetler/dis-agrisi/); 🚨 → ⏱️.
+- `app/data/home-i18n/*.ts` (18 dil): "24 saat içinde geri döneriz" → "kısa sürede geri döneriz" karşılıkları; SSS "acil durumlar /
+  Notfällen / spoed / urgenze / спешни / urgjente" → diş ağrısı; etiket "Acil Tedavi / علاج طارئ / Спешно лечение / Urgenza dentale /
+  Spoedbehandeling / Nagły przypadek / Trajtim Urgjent" → aynı gün tedavi karşılıkları.
+- `app/pages/hizmetler/index.vue`, `app/pages/hasta-yorumlari/index.vue` meta açıklamaları; `app/data/reviews-data.ts` etiketleri
+  "Acil Tedavi" → "Aynı Gün Tedavi". Hastaların kendi yorum metinlerine dokunulmadı (bir İngilizce yorumda "emergency" sözcüğü
+  hastanın ifadesi olarak duruyor).
+
+**Dağıtım:** Netlify 21:18 (`cea8d9b`) ve 21:45 (`87ee878`, boş) push'larını yayınlamadı; 22:01'deki üçüncü tetikleme (`5c3d9f0`)
+yaklaşık 4 dakikada çıktı. Nedeni Netlify panelinden (Deploys) görülmeli.
+
+**Canlı doğrulama (23.11 22:05 TR):** /hizmetler/acil-dis/ 301 → /hizmetler/dis-agrisi/ (200); sitemap 4.343, acil-dis yok;
+35 sayfa (ana sayfa, 10 dil sayfası, hizmetler, 4 aile × ilçe/mahalle, 9 yabancı aile) tarandı: "acil / emergency / Notfall / 24 saat /
+7-24 / nöbetçi" yok; tek eşleşme hasta yorumundaki "emergency".
+
+**Google tarafı için öneri:** GSC → URL inspection → "Request indexing": /, /haftasonu/sisli/, /disci/sisli/, /hizmetler/dis-agrisi/.
+Gösterimlerdeki "nöbetçi / 7 24 / acil" kuyruğu yeniden taramayla haftalar içinde söner; silinen ilçelerinki 410 ile düşer.
