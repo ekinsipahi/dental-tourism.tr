@@ -1,0 +1,184 @@
+{
+  "url": "https://dentaltourism.tr",
+  "host": "dentaltourism.tr",
+  "tls": {
+    "host": "dentaltourism.tr",
+    "port": 443,
+    "connected_ip": "216.24.57.1",
+    "verified": true,
+    "verify_error": null,
+    "verify_code": null,
+    "certificate_read": true,
+    "subject": {
+      "common_name": "dentaltourism.tr",
+      "organization": null
+    },
+    "issuer": {
+      "common_name": "WE1",
+      "organization": "Google Trust Services"
+    },
+    "not_before": "2026-10-11T10:38:00Z",
+    "not_after": "2027-01-09T11:37:57Z",
+    "days_until_expiry": 45,
+    "expired": false,
+    "not_yet_valid": false,
+    "san": [
+      "dentaltourism.tr"
+    ],
+    "san_count": 1,
+    "covers_host": true,
+    "sibling_host": "www.dentaltourism.tr",
+    "covers_sibling": false,
+    "protocol": "TLSv1.3",
+    "cipher": "TLS_AES_256_GCM_SHA384",
+    "cipher_bits": 256
+  },
+  "headers": {
+    "url": "https://dentaltourism.tr/",
+    "status": 200,
+    "https": true,
+    "hsts": {
+      "present": true,
+      "value": "max-age=2592000",
+      "max_age": 2592000,
+      "include_subdomains": false,
+      "preload": false,
+      "meets_preload_requirements": false,
+      "preload_gaps": [
+        "max-age is below 31536000 seconds (one year).",
+        "includeSubDomains is missing.",
+        "The preload directive is missing."
+      ],
+      "preload_scope_note": "Covers the header directives, the certificate and the same-host HTTP redirect when those sections ran. Not checked: that every subdomain serves HTTPS, and that this host is the registrable domain the preload list requires.",
+      "issues": [
+        "max-age is below one year.",
+        "includeSubDomains is not set."
+      ]
+    },
+    "csp": {
+      "present": false,
+      "report_only": false,
+      "policies": 0,
+      "issues": [
+        "Content-Security-Policy was not sent."
+      ]
+    },
+    "x_content_type_options": {
+      "present": true,
+      "value": "nosniff",
+      "ok": true
+    },
+    "framing": {
+      "x_frame_options": "DENY",
+      "frame_ancestors": false,
+      "ok": true
+    },
+    "referrer_policy": {
+      "present": true,
+      "value": "same-origin",
+      "ok": true
+    },
+    "permissions_policy": {
+      "present": false,
+      "feature_policy_present": false
+    },
+    "cookies": [
+      {
+        "name": "dt_vid",
+        "secure": true,
+        "http_only": false,
+        "same_site": "Lax",
+        "issues": [
+          "Missing HttpOnly; fine only if scripts must read this cookie."
+        ]
+      },
+      {
+        "name": "csrftoken",
+        "secure": true,
+        "http_only": false,
+        "same_site": "Lax",
+        "issues": [
+          "Missing HttpOnly; fine only if scripts must read this cookie."
+        ]
+      }
+    ]
+  },
+  "redirects": {
+    "http_to_https": {
+      "checked_url": "http://dentaltourism.tr/",
+      "redirects_to_https": true,
+      "one_hop": true,
+      "first_hop_status": 301,
+      "first_hop_target": "https://dentaltourism.tr/",
+      "first_hop_same_host": true,
+      "permanent": true,
+      "hops": 1,
+      "final_url": "https://dentaltourism.tr/",
+      "error": null
+    },
+    "www": {
+      "host": "dentaltourism.tr",
+      "sibling_host": "www.dentaltourism.tr",
+      "host_final_url": "https://dentaltourism.tr/",
+      "sibling_final_url": null,
+      "sibling_resolves": false,
+      "sibling_tls_error": null,
+      "same_final_url": null,
+      "error": "url_safety: DNS resolution failed for www.dentaltourism.tr: [Errno -2] Name or service not known"
+    }
+  },
+  "findings": [
+    {
+      "id": "hsts-weak",
+      "severity": "Low",
+      "message": "The Strict-Transport-Security header is weak.",
+      "evidence": {
+        "value": "max-age=2592000",
+        "issues": [
+          "max-age is below one year.",
+          "includeSubDomains is not set."
+        ]
+      }
+    },
+    {
+      "id": "csp-missing",
+      "severity": "Low",
+      "message": "No Content-Security-Policy header is sent.",
+      "evidence": {}
+    },
+    {
+      "id": "www-sibling-unreachable",
+      "severity": "Info",
+      "message": "The www or non-www counterpart of the host did not answer.",
+      "evidence": {
+        "sibling_host": "www.dentaltourism.tr",
+        "error": "url_safety: DNS resolution failed for www.dentaltourism.tr: [Errno -2] Name or service not known"
+      }
+    },
+    {
+      "id": "permissions-policy-missing",
+      "severity": "Info",
+      "message": "No Permissions-Policy header is sent.",
+      "evidence": {}
+    },
+    {
+      "id": "cookie-missing-httponly",
+      "severity": "Info",
+      "message": "One or more cookies are readable by scripts because HttpOnly is not set.",
+      "evidence": {
+        "cookies": [
+          "dt_vid",
+          "csrftoken"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 0,
+    "Low": 2,
+    "Info": 3,
+    "total": 5
+  }
+}

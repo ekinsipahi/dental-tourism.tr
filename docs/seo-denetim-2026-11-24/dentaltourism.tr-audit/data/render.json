@@ -1,0 +1,113 @@
+{
+  "url": "https://dentaltourism.tr/",
+  "status_code": 200,
+  "content": "<!DOCTYPE html>\n<html lang=\"en\" dir=\"ltr\" data-persona=\"unknown\" data-stage=\"awareness\" data-mind=\"unknown\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  \n<!-- Google tag (gtag.js) \u2014 Consent Mode v2: AB/AEA/UK/\u0130svi\u00e7re'de izin gelene kadar \u00e7erezsiz \u00f6l\u00e7\u00fcm, di\u011fer \u00fclkelerde tam \u00f6l\u00e7\u00fcm -->\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  var _deny = {ad_storage: \"denied\", ad_user_data: \"denied\", ad_personalization: \"denied\", analytics_storage: \"denied\"};\n  var _allow = {ad_storage: \"granted\", ad_user_data: \"granted\", ad_personalization: \"granted\", analytics_storage: \"granted\"};\n  gtag(\"consent\", \"default\", Object.assign({}, _deny, {wait_for_update: 500, region: [\"AT\",\"BE\",\"BG\",\"HR\",\"CY\",\"CZ\",\"DK\",\"EE\",\"FI\",\"FR\",\"DE\",\"GR\",\"HU\",\"IE\",\"IT\",\"LV\",\"LT\",\"LU\",\"MT\",\"NL\",\"PL\",\"PT\",\"RO\",\"SK\",\"SI\",\"ES\",\"SE\",\"IS\",\"LI\",\"NO\",\"GB\",\"CH\"]}));\n  gtag(\"consent\", \"default\", _allow);\n  try { var _c = localStorage.getItem(\"dt_consent\"); if (_c === \"yes\") gtag(\"consent\", \"update\", _allow); else if (_c === \"no\") gtag(\"consent\", \"update\", _deny); } catch (e) {}\n  gtag(\"set\", \"ads_data_redaction\", true);\n  gtag(\"set\", \"url_passthrough\", true);\n  gtag(\"js\", new Date());\n  gtag(\"config\", \"G-KGS2PYPNYG\", {page_type: \"home\", site_language: \"en\", funnel_stage: \"awareness\"});\n  gtag(\"config\", \"AW-17150773342\");\n</script>\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-KGS2PYPNYG\"></script>\n\n\n  <title>Dental Tourism Istanbul \u26054.9 \u2014 Family Dentists, 35+ Years</title>\n  <meta name=\"description\" content=\"We save your natural teeth first: root canals, fillings, minimal-prep veneers \u2014 implants only if a tooth can&#x27;t be saved. 35+ years, \u2605 4.9 on Google.\">\n  <meta name=\"robots\" content=\"index,follow,max-image-preview:large\">\n  <link rel=\"canonical\" href=\"https://dentaltourism.tr/\">\n  <link rel=\"alternate\" hreflang=\"en\" href=\"https://dentaltourism.tr/\">\n  <link rel=\"alternate\" hreflang=\"de\" href=\"https://dentaltourism.tr/de/\">\n  <link rel=\"alternate\" hreflang=\"nl\" href=\"https://dentaltourism.tr/nl/\">\n  <link rel=\"alternate\" hreflang=\"fr\" href=\"https://dentaltourism.tr/fr/\">\n  <link rel=\"alternate\" hreflang=\"it\" href=\"https://dentaltourism.tr/it/\">\n  <link rel=\"alternate\" hreflang=\"es\" href=\"https://dentaltourism.tr/es/\">\n  <link rel=\"alternate\" hreflang=\"pl\" href=\"https://dentaltourism.tr/pl/\">\n  <link rel=\"alternate\" hreflang=\"ru\" href=\"https://dentaltourism.tr/ru/\">\n  <link rel=\"alternate\" hreflang=\"uk\" href=\"https://dentaltourism.tr/uk/\">\n  <link rel=\"alternate\" hreflang=\"ar\" href=\"https://dentaltourism.tr/ar/\">\n  <link rel=\"alternate\" hreflang=\"sv\" href=\"https://dentaltourism.tr/sv/\">\n  <link rel=\"alternate\" hreflang=\"da\" href=\"https://dentaltourism.tr/da/\">\n  <link rel=\"alternate\" hreflang=\"no\" href=\"https://dentaltourism.tr/no/\">\n  <link rel=\"alternate\" hreflang=\"ro\" href=\"https://dentaltourism.tr/ro/\">\n  <link rel=\"alternate\" hreflang=\"bg\" href=\"https://dentaltourism.tr/bg/\">\n  <link rel=\"alternate\" hreflang=\"az\" href=\"https://dentaltourism.tr/az/\">\n  <link rel=\"alternate\" hreflang=\"tr\" href=\"https://dentaltourism.tr/tr/\">\n  <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dentaltourism.tr/\">\n  <meta property=\"og:site_name\" content=\"dentaltourism.tr\">\n  <meta property=\"og:type\" content=\"website\">\n  <meta property=\"og:title\" content=\"Dental Tourism Istanbul \u26054.9 \u2014 Family Dentists, 35+ Years\">\n  <meta property=\"og:description\" content=\"We save your natural teeth first: root canals, fillings, minimal-prep veneers \u2014 implants only if a tooth can&#x27;t be saved. 35+ years, \u2605 4.9 on Google.\">\n  <meta property=\"og:url\" content=\"https://dentaltourism.tr/\">\n  <meta property=\"og:image\" content=\"https://dentaltourism.tr/static/img/og-default.png\">\n  \n  <meta property=\"og:locale\" content=\"en\">\n  <meta property=\"og:locale:alternate\" content=\"de\"><meta property=\"og:locale:alternate\" content=\"nl\"><meta property=\"og:locale:alternate\" content=\"",
+  "raw_content": "<!DOCTYPE html>\n<html lang=\"en\" dir=\"ltr\" data-persona=\"unknown\" data-stage=\"awareness\" data-mind=\"unknown\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  \n<!-- Google tag (gtag.js) \u2014 Consent Mode v2: AB/AEA/UK/\u0130svi\u00e7re'de izin gelene kadar \u00e7erezsiz \u00f6l\u00e7\u00fcm, di\u011fer \u00fclkelerde tam \u00f6l\u00e7\u00fcm -->\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  var _deny = {ad_storage: \"denied\", ad_user_data: \"denied\", ad_personalization: \"denied\", analytics_storage: \"denied\"};\n  var _allow = {ad_storage: \"granted\", ad_user_data: \"granted\", ad_personalization: \"granted\", analytics_storage: \"granted\"};\n  gtag(\"consent\", \"default\", Object.assign({}, _deny, {wait_for_update: 500, region: [\"AT\",\"BE\",\"BG\",\"HR\",\"CY\",\"CZ\",\"DK\",\"EE\",\"FI\",\"FR\",\"DE\",\"GR\",\"HU\",\"IE\",\"IT\",\"LV\",\"LT\",\"LU\",\"MT\",\"NL\",\"PL\",\"PT\",\"RO\",\"SK\",\"SI\",\"ES\",\"SE\",\"IS\",\"LI\",\"NO\",\"GB\",\"CH\"]}));\n  gtag(\"consent\", \"default\", _allow);\n  try { var _c = localStorage.getItem(\"dt_consent\"); if (_c === \"yes\") gtag(\"consent\", \"update\", _allow); else if (_c === \"no\") gtag(\"consent\", \"update\", _deny); } catch (e) {}\n  gtag(\"set\", \"ads_data_redaction\", true);\n  gtag(\"set\", \"url_passthrough\", true);\n  gtag(\"js\", new Date());\n  gtag(\"config\", \"G-KGS2PYPNYG\", {page_type: \"home\", site_language: \"en\", funnel_stage: \"awareness\"});\n  gtag(\"config\", \"AW-17150773342\");\n</script>\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-KGS2PYPNYG\"></script>\n\n\n  <title>Dental Tourism Istanbul \u26054.9 \u2014 Family Dentists, 35+ Years</title>\n  <meta name=\"description\" content=\"We save your natural teeth first: root canals, fillings, minimal-prep veneers \u2014 implants only if a tooth can&#x27;t be saved. 35+ years, \u2605 4.9 on Google.\">\n  <meta name=\"robots\" content=\"index,follow,max-image-preview:large\">\n  <link rel=\"canonical\" href=\"https://dentaltourism.tr/\">\n  <link rel=\"alternate\" hreflang=\"en\" href=\"https://dentaltourism.tr/\">\n  <link rel=\"alternate\" hreflang=\"de\" href=\"https://dentaltourism.tr/de/\">\n  <link rel=\"alternate\" hreflang=\"nl\" href=\"https://dentaltourism.tr/nl/\">\n  <link rel=\"alternate\" hreflang=\"fr\" href=\"https://dentaltourism.tr/fr/\">\n  <link rel=\"alternate\" hreflang=\"it\" href=\"https://dentaltourism.tr/it/\">\n  <link rel=\"alternate\" hreflang=\"es\" href=\"https://dentaltourism.tr/es/\">\n  <link rel=\"alternate\" hreflang=\"pl\" href=\"https://dentaltourism.tr/pl/\">\n  <link rel=\"alternate\" hreflang=\"ru\" href=\"https://dentaltourism.tr/ru/\">\n  <link rel=\"alternate\" hreflang=\"uk\" href=\"https://dentaltourism.tr/uk/\">\n  <link rel=\"alternate\" hreflang=\"ar\" href=\"https://dentaltourism.tr/ar/\">\n  <link rel=\"alternate\" hreflang=\"sv\" href=\"https://dentaltourism.tr/sv/\">\n  <link rel=\"alternate\" hreflang=\"da\" href=\"https://dentaltourism.tr/da/\">\n  <link rel=\"alternate\" hreflang=\"no\" href=\"https://dentaltourism.tr/no/\">\n  <link rel=\"alternate\" hreflang=\"ro\" href=\"https://dentaltourism.tr/ro/\">\n  <link rel=\"alternate\" hreflang=\"bg\" href=\"https://dentaltourism.tr/bg/\">\n  <link rel=\"alternate\" hreflang=\"az\" href=\"https://dentaltourism.tr/az/\">\n  <link rel=\"alternate\" hreflang=\"tr\" href=\"https://dentaltourism.tr/tr/\">\n  <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://dentaltourism.tr/\">\n  <meta property=\"og:site_name\" content=\"dentaltourism.tr\">\n  <meta property=\"og:type\" content=\"website\">\n  <meta property=\"og:title\" content=\"Dental Tourism Istanbul \u26054.9 \u2014 Family Dentists, 35+ Years\">\n  <meta property=\"og:description\" content=\"We save your natural teeth first: root canals, fillings, minimal-prep veneers \u2014 implants only if a tooth can&#x27;t be saved. 35+ years, \u2605 4.9 on Google.\">\n  <meta property=\"og:url\" content=\"https://dentaltourism.tr/\">\n  <meta property=\"og:image\" content=\"https://dentaltourism.tr/static/img/og-default.png\">\n  \n  <meta property=\"og:locale\" content=\"en\">\n  <meta property=\"og:locale:alternate\" content=\"de\"><meta property=\"og:locale:alternate\" content=\"nl\"><meta property=\"og:locale:alternate\" content=\"",
+  "is_spa": false,
+  "extracted_text": "Dental tourism Turkey\nDental treatment in Istanbul \u2014 we save your natural teeth first.\nA healthy tooth, once lost, never grows back. So we treat and repair your own teeth first \u2014 root canal before extraction, filling before crown, composite before veneers \u2014 and recommend an implant only when a tooth truly can't be saved.\n- \u2713 Natural teeth saved first\n- \u2713 No unnecessary treatment\n- \u2713 Fixed written quote\n- \u2713 One dentist \u2014 full responsibility\nWe answer calls on WhatsApp \u2014 call or message us there, voice or video.\nSave first, replace only when needed\nOur ethical protocol: we try to keep your natural teeth. Root canal treatment, fillings and composite come before implants, crowns and veneers \u2014 no upselling, no unnecessary procedures.\nRoot Canal Treatment\nSaves an infected or badly inflamed tooth instead of extracting it. Most teeth can be saved \u2014 and should be.\nTooth Fillings\nAesthetic composite fillings that restore decayed teeth. Done correctly, they last for many years.\nTeeth Cleaning\nProfessional scaling and polishing that removes tartar and stains \u2014 the basis of healthy gums.\nComposite Veneers\nSmile makeover with tooth-coloured composite, sculpted directly on the teeth \u2014 usually without grinding and in a single session.\nTeeth Whitening\nIn-office whitening that lightens natural teeth by several shades in a single visit.\nZirconia Crowns\nStrong, metal-free crowns that protect weakened teeth and look natural \u2014 the most durable crown option available.\nPorcelain Veneers\nThin porcelain shells bonded to the front of the teeth to correct colour, shape and small gaps \u2014 with only as much tooth reduction as is truly necess\u2026\nHollywood Smile\nA complete smile makeover planned digitally \u2014 with veneers or crowns designed to suit your face, not a one-size-fits-all bright white.\nDental Implants\nA titanium root and a natural-looking crown that permanently replace a missing tooth. At our clinic an implant is the last resort \u2014 we try to save yo\u2026\nAll-on-4 Implants\nA complete fixed set of teeth on four (or six) implants per jaw \u2014 for patients who have lost most of their teeth or wear dentures.\nReal patients, real results\nVideos are published with patients' explicit consent. All patient videos \u2192\nBefore & after \u2014 our own patients\nEvery photo is a real patient of our clinic, shared with their consent. Drag to compare.\nFrom the first message to your new smile\n- 1. Send a photo or X-ray Message us on WhatsApp. The dentist reviews your case personally.\n- 2. Get a plan and fixed price You receive an honest treatment plan and a written quote within 24 hours.\n- 3. Travel to Istanbul We schedule your appointments around your travel dates.\n- 4. Treatment & aftercare After you fly home, WhatsApp follow-up continues \u2014 you are never alone.\nSearch dental clinics in Turkey\nFilter by treatment, city and language \u2014 and compare verified clinics side by side.\nLet us call you\nWherever you are, fill in the form for a short consultation. No commitment, no pressure.\n- Reply within 24 hours\n- No obligation whatsoever\n- Fixed price \u2014 no hidden fees\nFor a faster reply, message the dentist directly:\nWhatsApp ekinsipahi8@gmail.com\nFree assessment \u2014 no obligation\nSend us a photo or X-ray. Our dentist will reply with an honest treatment plan and a fixed price.\nWe answer calls on WhatsApp \u2014 call or message us there, voice or video.\nContact form",
+  "publication_date": "2026-01-01",
+  "accessibility_tree": null,
+  "accessibility_error": null,
+  "accessibility_partial": false,
+  "headers": {
+    "Date": "Tue, 24 Nov 2026 16:31:48 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "cf-cache-status": "DYNAMIC",
+    "content-language": "en",
+    "cross-origin-opener-policy": "same-origin",
+    "referrer-policy": "same-origin",
+    "rndr-id": "07476cd8-a049-4e0a",
+    "Server": "cloudflare",
+    "Set-Cookie": "dt_vid=39448764ff044335988c4918eaed15de; expires=Wed, 29 Dec 2027 16:31:48 GMT; Max-Age=34560000; Path=/; SameSite=Lax; Secure, csrftoken=CPqp2YPMKSfyTSkCKgmRhONvnnp76q6B; expires=Tue, 23 Nov 2027 16:31:48 GMT; Max-Age=31449600; Path=/; SameSite=Lax; Secure",
+    "strict-transport-security": "max-age=2592000",
+    "vary": "Cookie, Accept-Language, Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-render-origin-server": "gunicorn",
+    "Content-Encoding": "gzip",
+    "CF-RAY": "a5f9ce57e82216bb-IST",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "redirect_chain": [],
+  "console_errors": [],
+  "render_diagnostics": [],
+  "render_engine": null,
+  "render_ms": null,
+  "mode_used": "raw",
+  "too_large": false,
+  "js_gap": null,
+  "sandbox": null,
+  "error": null,
+  "structured_data": {
+    "block_count": 4,
+    "processed_count": 4,
+    "total_bytes": 4032,
+    "truncated": false,
+    "blocks": [
+      {
+        "index": 1,
+        "size_bytes": 235,
+        "valid": true,
+        "types": [
+          "Organization"
+        ],
+        "types_truncated": false
+      },
+      {
+        "index": 2,
+        "size_bytes": 344,
+        "valid": true,
+        "types": [
+          "WebSite"
+        ],
+        "types_truncated": false
+      },
+      {
+        "index": 3,
+        "size_bytes": 1347,
+        "valid": true,
+        "types": [
+          "Dentist",
+          "GeoCoordinates",
+          "MedicalClinic",
+          "PostalAddress"
+        ],
+        "types_truncated": false
+      },
+      {
+        "index": 4,
+        "size_bytes": 2106,
+        "valid": true,
+        "types": [
+          "Answer",
+          "FAQPage",
+          "Question"
+        ],
+        "types_truncated": false
+      }
+    ]
+  },
+  "truncation": {
+    "limit": 4000,
+    "fields": {
+      "content": {
+        "original_chars": 100866,
+        "returned_chars": 4000,
+        "truncated": true
+      },
+      "raw_content": {
+        "original_chars": 100866,
+        "returned_chars": 4000,
+        "truncated": true
+      },
+      "extracted_text": {
+        "original_chars": 3350,
+        "returned_chars": 3350,
+        "truncated": false
+      }
+    }
+  },
+  "output_written": false
+}

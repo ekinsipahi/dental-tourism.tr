@@ -1,0 +1,129 @@
+{
+  "url": "https://devrimbirikensipahi.com.tr/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "Dr. Dt. Devrim Biriken Sipahi | Di\u015f Hekimi | Kanal, \u0130mplant ve Estetik Di\u015f Tedavileri | \u015ei\u015fli, Mecidiyek\u00f6y",
+    "title_length": 106,
+    "title_count": 1,
+    "meta_description": "35+ y\u0131ll\u0131k deneyimli \u015fi\u015fli di\u015f hekimi Dr. Devrim Biriken Sipahi. Hafta sonu a\u00e7\u0131k di\u015f klini\u011fi. \u0130mplant, estetik lamina, g\u00fcl\u00fc\u015f tasar\u0131m\u0131, kanal tedavisi. Cumartesi-Pazar randevu mevcut. 10.000+ ba\u015far\u0131...",
+    "meta_description_length": 205,
+    "h1": [
+      "Dr. Dt. Devrim Biriken Sipahi"
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://devrimbirikensipahi.com.tr/",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": null,
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 18,
+    "lang": "tr",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 37,
+      "missing_alt": 1,
+      "empty_alt": 18,
+      "missing_dimensions": 34,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 50,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 35,
+      "query_params": []
+    },
+    "html_bytes": 188129,
+    "dom": {
+      "nodes": 1247,
+      "max_depth": 14,
+      "max_children": 65,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:title": "Dr. Devrim Sipahi | 35+ Y\u0131l Tecr\u00fcbe | \u015ei\u015fli Di\u015f Hekimi",
+      "og:type": "website",
+      "og:url": "https://devrimbirikensipahi.com.tr/",
+      "og:locale": "tr",
+      "og:description": "35+ y\u0131ll\u0131k deneyimle \u015ei\u015fli merkezde hizmet. Hafta sonu a\u00e7\u0131k, acil randevu. \u0130mplant, estetik ve kanal tedavisi. 10.000+ ba\u015far\u0131l\u0131 vaka.",
+      "og:image": "/static/images/devrim-contact.webp",
+      "og:site_name": "Dr. Dt. Devrim Biriken Sipahi"
+    },
+    "jsonld_blocks": 3,
+    "jsonld_invalid": 0,
+    "word_count": 2418,
+    "words_measured": true,
+    "title_relevance": 0.91,
+    "description_relevance": 0.88
+  },
+  "findings": [
+    {
+      "id": "title-too-long",
+      "severity": "Medium",
+      "message": "The title is longer than 60 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "106 characters: Dr. Dt. Devrim Biriken Sipahi | Di\u015f Hekimi | Kanal, \u0130mplant ve Estetik Di\u015f Tedavileri | \u015ei\u015fli, Mecidiyek\u00f6y"
+    },
+    {
+      "id": "meta-description-too-long",
+      "severity": "Medium",
+      "message": "The meta description is longer than 160 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "205 characters: 35+ y\u0131ll\u0131k deneyimli \u015fi\u015fli di\u015f hekimi Dr. Devrim Biriken Sipahi. Hafta sonu a\u00e7\u0131k di\u015f klini\u011fi. \u0130mplant, estetik lamina, g\u00fcl\u00fc\u015f tasar\u0131m\u0131, kanal tedavisi. Cumartesi-Pazar randevu mevcut..."
+    },
+    {
+      "id": "images-missing-alt",
+      "severity": "Medium",
+      "message": "Some images have no alt attribute. Screen readers and image search rely on alt text. An empty alt is correct for decorative images.",
+      "evidence": "1 of 37 images: https://www.facebook.com/tr?id=1366216214467162&ev=PageVi...",
+      "count": 1
+    },
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "34 of 37 images: /static/images/favicon.ico, /static/images/langflags/tr.png, /static/images/langflags/tr.png, /static/images/langflags/en.png, /static/images/langflags/de.png (+29 more)",
+      "count": 34
+    },
+    {
+      "id": "wide-dom-node",
+      "severity": "Low",
+      "message": "One element has more than 60 direct children, which is slow to lay out (Lighthouse guidance).",
+      "evidence": "<head> has 65 direct children"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 4,
+    "Low": 1,
+    "total": 5,
+    "checks_run": 47
+  }
+}

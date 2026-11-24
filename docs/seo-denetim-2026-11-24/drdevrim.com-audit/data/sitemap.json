@@ -1,0 +1,130 @@
+{
+  "target": "https://drdevrim.com",
+  "robots_url": "https://drdevrim.com/robots.txt",
+  "declared": [
+    {
+      "url": "https://drdevrim.com/sitemap.xml",
+      "query_redacted": false
+    }
+  ],
+  "found": [
+    {
+      "url": "https://drdevrim.com/sitemap.xml",
+      "query_redacted": false,
+      "source": "robots.txt",
+      "status_code": 200,
+      "kind": "urlset",
+      "valid": true,
+      "error": null
+    }
+  ],
+  "checked": [
+    {
+      "url": "https://drdevrim.com/sitemap.xml",
+      "query_redacted": false,
+      "source": "robots.txt",
+      "status_code": 200,
+      "kind": "urlset",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://drdevrim.com/sitemap_index.xml",
+      "query_redacted": false,
+      "source": "common_path",
+      "status_code": 404,
+      "kind": null,
+      "valid": false,
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://drdevrim.com/sitemap-index.xml",
+      "query_redacted": false,
+      "source": "common_path",
+      "status_code": 404,
+      "kind": null,
+      "valid": false,
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://drdevrim.com/wp-sitemap.xml",
+      "query_redacted": false,
+      "source": "common_path",
+      "status_code": 404,
+      "kind": null,
+      "valid": false,
+      "error": "HTTP 404"
+    }
+  ],
+  "warnings": [],
+  "error": null,
+  "expanded": {
+    "files": [
+      {
+        "url": "https://drdevrim.com/sitemap.xml",
+        "query_redacted": false,
+        "source": "robots.txt",
+        "status_code": 200,
+        "kind": "urlset",
+        "valid": true,
+        "error": null,
+        "gzip": false,
+        "bytes": 928194,
+        "decompressed_bytes": null,
+        "url_count": 4343,
+        "child_count": 0,
+        "invalid_loc_count": 0,
+        "duplicate_count": 0,
+        "lastmod_count": 4343,
+        "lastmod_invalid_count": 0,
+        "lastmod_oldest": "2026-11-23T19:01:24Z",
+        "lastmod_newest": "2026-11-23T19:01:24Z",
+        "lastmod_most_common": "2026-11-23T19:01:24Z",
+        "lastmod_identical_share": 1.0,
+        "cross_host_url_count": 0,
+        "cross_host_url_examples": [],
+        "redacted_url_count": 0,
+        "redacted_url_examples": [],
+        "findings": [],
+        "sample_urls": [
+          "https://drdevrim.com/",
+          "https://drdevrim.com/blog",
+          "https://drdevrim.com/doktorlar",
+          "https://drdevrim.com/hasta-yorumlari",
+          "https://drdevrim.com/hizmetler",
+          "https://drdevrim.com/iletisim",
+          "https://drdevrim.com/disci/bagcilar",
+          "https://drdevrim.com/disci/bahcelievler",
+          "https://drdevrim.com/disci/bakirkoy",
+          "https://drdevrim.com/disci/bayrampasa",
+          "https://drdevrim.com/disci/besiktas",
+          "https://drdevrim.com/disci/beyoglu",
+          "https://drdevrim.com/disci/esenler",
+          "https://drdevrim.com/disci/eyupsultan",
+          "https://drdevrim.com/disci/fatih",
+          "https://drdevrim.com/disci/gaziosmanpasa",
+          "https://drdevrim.com/disci/gungoren",
+          "https://drdevrim.com/disci/kadikoy",
+          "https://drdevrim.com/disci/kagithane",
+          "https://drdevrim.com/disci/sariyer"
+        ]
+      }
+    ],
+    "totals": {
+      "sitemap_files": 1,
+      "total_urls": 4343,
+      "unique_urls": 4343,
+      "duplicates_within_files": 0,
+      "duplicates_across_files": 0,
+      "invalid_locs": 0
+    },
+    "children": {
+      "limit": 50,
+      "listed": 0,
+      "fetched": 0,
+      "skipped": 0
+    },
+    "truncated": false,
+    "sample_size": 20
+  }
+}

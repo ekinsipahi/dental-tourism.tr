@@ -1,0 +1,118 @@
+{
+  "url": "https://dentaltourism.tr/about/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "About Us \u2014 Dr. Devrim & Dt. Ekin Sipahi, Family Dentists",
+    "title_length": 56,
+    "title_count": 1,
+    "meta_description": "A family dental clinic in \u015ei\u015fli, Istanbul: 35+ years' experience, diagnosis first and only the treatment you need. Meet the dentists who will treat you.",
+    "meta_description_length": 152,
+    "h1": [
+      "Ethical dentistry in Istanbul \u2014 only what you need"
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 1,
+    "template_heading_level_skips": 0,
+    "canonical": "https://dentaltourism.tr/about/",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": "robots: index,follow,max-image-preview:large",
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 18,
+    "lang": "en",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 112,
+      "missing_alt": 0,
+      "empty_alt": 52,
+      "missing_dimensions": 14,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 225,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 31,
+      "query_params": []
+    },
+    "html_bytes": 83743,
+    "dom": {
+      "nodes": 928,
+      "max_depth": 12,
+      "max_children": 68,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:site_name": "dentaltourism.tr",
+      "og:type": "website",
+      "og:title": "About Us \u2014 Dr. Devrim & Dt. Ekin Sipahi, Family Dentists",
+      "og:description": "A family dental clinic in \u015ei\u015fli, Istanbul: 35+ years' experience, diagnosis first and only the treatment you need. Meet the dentists who will treat you.",
+      "og:url": "https://dentaltourism.tr/about/",
+      "og:image": "https://dentaltourism.tr/static/img/og-default.png",
+      "og:locale": "en",
+      "og:locale:alternate": "de"
+    },
+    "jsonld_blocks": 1,
+    "jsonld_invalid": 0,
+    "word_count": 1643,
+    "words_measured": true,
+    "title_relevance": 0.8,
+    "description_relevance": 0.85
+  },
+  "findings": [
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "14 of 112 images: /static/img/clinic/cases/sebnem-after.5974f032f609.jpg, /static/img/clinic/cases/sebnem-before.e3db7812c2ed.jpg, /static/img/clinic/cases/zirconia-1-after.6f13cbcb9829.jpg, /stati...",
+      "count": 14
+    },
+    {
+      "id": "heading-level-skip",
+      "severity": "Low",
+      "message": "Heading levels skip inside the main content, for example from H2 to H4. Google Search does not mind heading order, but screen reader users move through a page by heading level.",
+      "evidence": "1 skipped heading level(s) in the main content",
+      "count": 1
+    },
+    {
+      "id": "wide-dom-node",
+      "severity": "Low",
+      "message": "One element has more than 60 direct children, which is slow to lay out (Lighthouse guidance).",
+      "evidence": "<head> has 68 direct children"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 1,
+    "Low": 2,
+    "total": 3,
+    "checks_run": 47
+  }
+}

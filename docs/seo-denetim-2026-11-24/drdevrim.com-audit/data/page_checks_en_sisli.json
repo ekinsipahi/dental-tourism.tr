@@ -1,0 +1,114 @@
+{
+  "url": "https://drdevrim.com/en/dentist/sisli/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "Dentist in \u015ei\u015fli, Istanbul | Best Dental Clinic Turkey \u00b7 35 Years \u00b7 5\u2605 \u00b7 Dr. Devrim Sipahi",
+    "title_length": 90,
+    "title_count": 1,
+    "meta_description": "Looking for a dentist in \u015ei\u015fli, Istanbul? Dr. Devrim Sipahi \u2014 35 years, 10,000+ cases, Google 5\u2605 124 reviews. Dental implants, aesthetic dentistry, same-day appointments in Istanbul, Turkey. Englis...",
+    "meta_description_length": 235,
+    "h1": [
+      "Dentist in \u015ei\u015fli , Istanbul \u2014 35 Years. 10,000+ Cases. Real Results."
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://drdevrim.com/en/dentist/sisli/",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": "robots: index, follow, max-snippet:-1, max-image-preview:large",
+    "x_robots_tag": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "en",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 10,
+      "missing_alt": 0,
+      "empty_alt": 1,
+      "missing_dimensions": 0,
+      "first_image_lazy": true
+    },
+    "links": {
+      "total": 38,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 38,
+      "query_params": []
+    },
+    "html_bytes": 79522,
+    "dom": {
+      "nodes": 345,
+      "max_depth": 13,
+      "max_children": 51,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:title": "Dentist in \u015ei\u015fli, Istanbul | Dr. Devrim Sipahi \u00b7 35 Years \u00b7 5\u2605",
+      "og:description": "Dentist in \u015ei\u015fli, Istanbul: 35 years, 10,000+ cases, Google 5\u2605. Implants, aesthetics, same-day appointments. English speaking. Transparent prices.",
+      "og:url": "https://drdevrim.com/en/dentist/sisli/",
+      "og:image": "https://drdevrim.com/images/og-klinik.jpg",
+      "og:type": "website",
+      "og:locale": "en_US"
+    },
+    "jsonld_blocks": 4,
+    "jsonld_invalid": 0,
+    "word_count": 1129,
+    "words_measured": true,
+    "title_relevance": 1.0,
+    "description_relevance": 1.0
+  },
+  "findings": [
+    {
+      "id": "title-too-long",
+      "severity": "Medium",
+      "message": "The title is longer than 60 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "90 characters: Dentist in \u015ei\u015fli, Istanbul | Best Dental Clinic Turkey \u00b7 35 Years \u00b7 5\u2605 \u00b7 Dr. Devrim Sipahi"
+    },
+    {
+      "id": "meta-description-too-long",
+      "severity": "Medium",
+      "message": "The meta description is longer than 160 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "235 characters: Looking for a dentist in \u015ei\u015fli, Istanbul? Dr. Devrim Sipahi \u2014 35 years, 10,000+ cases, Google 5\u2605 124 reviews. Dental implants, aesthetic dentistry, same-day appointments in Istanbul..."
+    },
+    {
+      "id": "first-image-lazy-loaded",
+      "severity": "Medium",
+      "message": "The first image in the main content is lazy loaded. It is often the largest paint, and lazy loading delays it.",
+      "evidence": "loading=\"lazy\" on /images/clinic/tedavi-1-1200.webp"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 3,
+    "Low": 0,
+    "total": 3,
+    "checks_run": 47
+  }
+}

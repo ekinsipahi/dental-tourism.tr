@@ -1,0 +1,122 @@
+{
+  "url": "https://drdevrim.com/lang/en/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "Dentist in Istanbul (\u015ei\u015fli) | Dr. Devrim Biriken Sipahi \u00b7 35 Years \u00b7 5\u2605",
+    "title_length": 71,
+    "title_count": 1,
+    "meta_description": "English-speaking dental clinic in \u015ei\u015fli, Istanbul. 35+ years of experience, 10,000+ cases, Google 5\u2605 (124 reviews). Implants, smile design, same-day digital dentistry. Open every day, weekends incl...",
+    "meta_description_length": 202,
+    "h1": [
+      "For your teeth, only what is necessary \u2014 nothing more."
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://drdevrim.com/lang/en/",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": "robots: index, follow, max-image-preview:large",
+    "x_robots_tag": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "x_robots_other_agents": [],
+    "hreflang_count": 19,
+    "lang": "en",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 11,
+      "missing_alt": 0,
+      "empty_alt": 1,
+      "missing_dimensions": 5,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 22,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 29,
+      "query_params": []
+    },
+    "html_bytes": 203519,
+    "dom": {
+      "nodes": 1079,
+      "max_depth": 14,
+      "max_children": 74,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:type": "website",
+      "og:site_name": "Dr. Devrim Biriken Sipahi Dental Clinic",
+      "og:locale": "en",
+      "og:title": "Dentist in Istanbul (\u015ei\u015fli) | Dr. Devrim Biriken Sipahi \u00b7 35 Years \u00b7 5\u2605",
+      "og:description": "English-speaking dental clinic in \u015ei\u015fli, Istanbul. 35+ years of experience, 10,000+ cases, Google 5\u2605 (124 reviews). Implants, smile design, same-day digital dentistry. Open every day, weekends incl...",
+      "og:url": "https://drdevrim.com/lang/en/",
+      "og:image": "https://drdevrim.com/images/og-klinik.jpg"
+    },
+    "jsonld_blocks": 3,
+    "jsonld_invalid": 0,
+    "word_count": 1197,
+    "words_measured": true,
+    "title_relevance": 1.0,
+    "description_relevance": 0.81
+  },
+  "findings": [
+    {
+      "id": "title-too-long",
+      "severity": "Medium",
+      "message": "The title is longer than 60 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "71 characters: Dentist in Istanbul (\u015ei\u015fli) | Dr. Devrim Biriken Sipahi \u00b7 35 Years \u00b7 5\u2605"
+    },
+    {
+      "id": "meta-description-too-long",
+      "severity": "Medium",
+      "message": "The meta description is longer than 160 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "202 characters: English-speaking dental clinic in \u015ei\u015fli, Istanbul. 35+ years of experience, 10,000+ cases, Google 5\u2605 (124 reviews). Implants, smile design, same-day digital dentistry. Open every da..."
+    },
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "5 of 11 images: https://i.ytimg.com/vi/pArVqGBhSm4/hqdefault.jpg, https://i.ytimg.com/vi/rnLVclfU0Tc/hqdefault.jpg, https://i.ytimg.com/vi/yEGBHXrapMM/hqdefault.jpg, https://i.ytimg.com/vi/HlCQeyD0...",
+      "count": 5
+    },
+    {
+      "id": "wide-dom-node",
+      "severity": "Low",
+      "message": "One element has more than 60 direct children, which is slow to lay out (Lighthouse guidance).",
+      "evidence": "<head> has 74 direct children"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 3,
+    "Low": 1,
+    "total": 4,
+    "checks_run": 47
+  }
+}

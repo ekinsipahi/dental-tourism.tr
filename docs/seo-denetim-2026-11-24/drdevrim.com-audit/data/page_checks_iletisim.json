@@ -1,0 +1,103 @@
+{
+  "url": "https://drdevrim.com/iletisim/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "\u0130leti\u015fim & Randevu | Dr. Devrim Sipahi Di\u015f Klini\u011fi \u015ei\u015fli",
+    "title_length": 56,
+    "title_count": 1,
+    "meta_description": "Dr. Devrim Biriken Sipahi Di\u015f Klini\u011fi \u2014 \u015ei\u015fli Osmanbey. Haftasonu dahil her g\u00fcn 05:00-00:00 a\u00e7\u0131k. WhatsApp 0505 577 18 83. Randevu ve adres bilgileri.",
+    "meta_description_length": 150,
+    "h1": [
+      "\u0130leti\u015fim & Randevu"
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://drdevrim.com/iletisim/",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": "robots: index, follow",
+    "x_robots_tag": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "tr",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 2,
+      "missing_alt": 0,
+      "empty_alt": 1,
+      "missing_dimensions": 0,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 15,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 30,
+      "query_params": []
+    },
+    "html_bytes": 47137,
+    "dom": {
+      "nodes": 173,
+      "max_depth": 13,
+      "max_children": 46,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:type": "website",
+      "og:site_name": "Dr. Devrim Sipahi Di\u015f Klini\u011fi",
+      "og:locale": "tr_TR",
+      "og:title": "\u0130leti\u015fim & Randevu | Dr. Devrim Sipahi \u015ei\u015fli",
+      "og:description": "\u015ei\u015fli Osmanbey'de, haftasonu dahil her g\u00fcn a\u00e7\u0131k. Randevu i\u00e7in bir mesaj yeterli.",
+      "og:url": "https://drdevrim.com/iletisim/",
+      "og:image": "https://drdevrim.com/images/og-klinik.jpg"
+    },
+    "jsonld_blocks": 3,
+    "jsonld_invalid": 0,
+    "word_count": 112,
+    "words_measured": true,
+    "title_relevance": 0.43,
+    "description_relevance": 0.53
+  },
+  "findings": [
+    {
+      "id": "thin-content",
+      "severity": "Medium",
+      "message": "The page has fewer than 200 words of visible body text. Google has no minimum word count, so this is not a ranking rule. Check that the page fully answers what a visitor came for.",
+      "evidence": "112 words of visible body text"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 1,
+    "Low": 0,
+    "total": 1,
+    "checks_run": 47
+  }
+}

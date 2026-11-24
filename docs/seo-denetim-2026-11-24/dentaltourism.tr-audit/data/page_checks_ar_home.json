@@ -1,0 +1,111 @@
+{
+  "url": "https://dentaltourism.tr/ar/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "\u0637\u0628\u064a\u0628 \u0623\u0633\u0646\u0627\u0646 \u0641\u064a \u0625\u0633\u0637\u0646\u0628\u0648\u0644 \u26054.9 \u2014 \u0639\u064a\u0627\u062f\u0629 \u0639\u0627\u0626\u0644\u064a\u0629\u060c \u062e\u0628\u0631\u0629 35+ \u0639\u0627\u0645\u064b\u0627",
+    "title_length": 57,
+    "title_count": 1,
+    "meta_description": "\u0646\u062d\u0627\u0641\u0638 \u0623\u0648\u0644\u0627\u064b \u0639\u0644\u0649 \u0623\u0633\u0646\u0627\u0646\u0643 \u0627\u0644\u0637\u0628\u064a\u0639\u064a\u0629: \u0639\u0644\u0627\u062c \u0627\u0644\u0639\u0635\u0628 \u0648\u0627\u0644\u062d\u0634\u0648\u0627\u062a \u0648\u0627\u0644\u0642\u0634\u0648\u0631 \u0628\u0623\u0642\u0644 \u062a\u062d\u0636\u064a\u0631 \u2014 \u0648\u0627\u0644\u0632\u0631\u0627\u0639\u0629 \u0641\u0642\u0637 \u0625\u0630\u0627 \u062a\u0639\u0630\u0651\u0631 \u0625\u0646\u0642\u0627\u0630 \u0627\u0644\u0633\u0646. \u062e\u0628\u0631\u0629 35+ \u0639\u0627\u0645\u064b\u0627\u060c \u2605 4.9 \u0639\u0644\u0649 Google.",
+    "meta_description_length": 142,
+    "h1": [
+      "\u0639\u0644\u0627\u062c \u0627\u0644\u0623\u0633\u0646\u0627\u0646 \u0641\u064a \u0625\u0633\u0637\u0646\u0628\u0648\u0644 \u2014 \u0648\u0646\u0628\u062f\u0623 \u0628\u0625\u0646\u0642\u0627\u0630 \u0623\u0633\u0646\u0627\u0646\u0643 \u0627\u0644\u0637\u0628\u064a\u0639\u064a\u0629."
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://dentaltourism.tr/ar/",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": "robots: index,follow,max-image-preview:large",
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 18,
+    "lang": "ar",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 120,
+      "missing_alt": 0,
+      "empty_alt": 52,
+      "missing_dimensions": 19,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 232,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 28,
+      "query_params": []
+    },
+    "html_bytes": 110864,
+    "dom": {
+      "nodes": 1116,
+      "max_depth": 13,
+      "max_children": 74,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:site_name": "dentaltourism.tr",
+      "og:type": "website",
+      "og:title": "\u0637\u0628\u064a\u0628 \u0623\u0633\u0646\u0627\u0646 \u0641\u064a \u0625\u0633\u0637\u0646\u0628\u0648\u0644 \u26054.9 \u2014 \u0639\u064a\u0627\u062f\u0629 \u0639\u0627\u0626\u0644\u064a\u0629\u060c \u062e\u0628\u0631\u0629 35+ \u0639\u0627\u0645\u064b\u0627",
+      "og:description": "\u0646\u062d\u0627\u0641\u0638 \u0623\u0648\u0644\u0627\u064b \u0639\u0644\u0649 \u0623\u0633\u0646\u0627\u0646\u0643 \u0627\u0644\u0637\u0628\u064a\u0639\u064a\u0629: \u0639\u0644\u0627\u062c \u0627\u0644\u0639\u0635\u0628 \u0648\u0627\u0644\u062d\u0634\u0648\u0627\u062a \u0648\u0627\u0644\u0642\u0634\u0648\u0631 \u0628\u0623\u0642\u0644 \u062a\u062d\u0636\u064a\u0631 \u2014 \u0648\u0627\u0644\u0632\u0631\u0627\u0639\u0629 \u0641\u0642\u0637 \u0625\u0630\u0627 \u062a\u0639\u0630\u0651\u0631 \u0625\u0646\u0642\u0627\u0630 \u0627\u0644\u0633\u0646. \u062e\u0628\u0631\u0629 35+ \u0639\u0627\u0645\u064b\u0627\u060c \u2605 4.9 \u0639\u0644\u0649 Google.",
+      "og:url": "https://dentaltourism.tr/ar/",
+      "og:image": "https://dentaltourism.tr/static/img/og-default.png",
+      "og:locale": "ar",
+      "og:locale:alternate": "en"
+    },
+    "jsonld_blocks": 4,
+    "jsonld_invalid": 0,
+    "word_count": 1689,
+    "words_measured": true,
+    "title_relevance": 0.86,
+    "description_relevance": 0.85
+  },
+  "findings": [
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "19 of 120 images: /static/img/clinic/gallery/devrim-slide1.bdbb66979e3c.jpg, /static/img/clinic/gallery/devrim-slide2.25d3beee5be9.jpg, /static/img/clinic/gallery/devrim-contact.4bc412d9fbec.jpg, /...",
+      "count": 19
+    },
+    {
+      "id": "wide-dom-node",
+      "severity": "Low",
+      "message": "One element has more than 60 direct children, which is slow to lay out (Lighthouse guidance).",
+      "evidence": "<head> has 74 direct children"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 1,
+    "Low": 1,
+    "total": 2,
+    "checks_run": 47
+  }
+}

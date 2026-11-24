@@ -1,0 +1,111 @@
+{
+  "url": "https://dentaltourism.tr/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "Dental Tourism Istanbul \u26054.9 \u2014 Family Dentists, 35+ Years",
+    "title_length": 57,
+    "title_count": 1,
+    "meta_description": "We save your natural teeth first: root canals, fillings, minimal-prep veneers \u2014 implants only if a tooth can't be saved. 35+ years, \u2605 4.9 on Google.",
+    "meta_description_length": 148,
+    "h1": [
+      "Dental treatment in Istanbul \u2014 we save your natural teeth first."
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://dentaltourism.tr/",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": "robots: index,follow,max-image-preview:large",
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 18,
+    "lang": "en",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 117,
+      "missing_alt": 0,
+      "empty_alt": 52,
+      "missing_dimensions": 19,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 229,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 25,
+      "query_params": []
+    },
+    "html_bytes": 101855,
+    "dom": {
+      "nodes": 1123,
+      "max_depth": 13,
+      "max_children": 73,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:site_name": "dentaltourism.tr",
+      "og:type": "website",
+      "og:title": "Dental Tourism Istanbul \u26054.9 \u2014 Family Dentists, 35+ Years",
+      "og:description": "We save your natural teeth first: root canals, fillings, minimal-prep veneers \u2014 implants only if a tooth can't be saved. 35+ years, \u2605 4.9 on Google.",
+      "og:url": "https://dentaltourism.tr/",
+      "og:image": "https://dentaltourism.tr/static/img/og-default.png",
+      "og:locale": "en",
+      "og:locale:alternate": "de"
+    },
+    "jsonld_blocks": 4,
+    "jsonld_invalid": 0,
+    "word_count": 2249,
+    "words_measured": true,
+    "title_relevance": 0.83,
+    "description_relevance": 0.87
+  },
+  "findings": [
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "19 of 117 images: /static/img/clinic/gallery/devrim-slide1.bdbb66979e3c.jpg, /static/img/clinic/gallery/devrim-slide2.25d3beee5be9.jpg, /static/img/clinic/gallery/devrim-contact.4bc412d9fbec.jpg, /...",
+      "count": 19
+    },
+    {
+      "id": "wide-dom-node",
+      "severity": "Low",
+      "message": "One element has more than 60 direct children, which is slow to lay out (Lighthouse guidance).",
+      "evidence": "<head> has 73 direct children"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 1,
+    "Low": 1,
+    "total": 2,
+    "checks_run": 47
+  }
+}

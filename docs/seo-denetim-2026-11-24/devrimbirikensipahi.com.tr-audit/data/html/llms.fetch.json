@@ -1,0 +1,66 @@
+{
+  "url": "https://devrimbirikensipahi.com.tr/llms.txt",
+  "status_code": 200,
+  "content": "User-Agent: GPTBot\nAllow: /\n\nUser-Agent: ClaudeBot\nAllow: /\n\nUser-Agent: PerplexityBot\nAllow: /\n\nUser-Agent: CCBot\nAllow: /\n\nUser-Agent: *\nAllow: /\n",
+  "raw_content": "User-Agent: GPTBot\nAllow: /\n\nUser-Agent: ClaudeBot\nAllow: /\n\nUser-Agent: PerplexityBot\nAllow: /\n\nUser-Agent: CCBot\nAllow: /\n\nUser-Agent: *\nAllow: /\n",
+  "is_spa": null,
+  "extracted_text": null,
+  "publication_date": null,
+  "accessibility_tree": null,
+  "accessibility_error": null,
+  "accessibility_partial": false,
+  "headers": {
+    "Date": "Tue, 24 Nov 2026 16:37:38 GMT",
+    "Content-Type": "text/plain",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "cf-cache-status": "DYNAMIC",
+    "content-language": "tr",
+    "cross-origin-opener-policy": "same-origin",
+    "referrer-policy": "same-origin",
+    "rndr-id": "266bd465-976c-4782",
+    "Server": "cloudflare",
+    "vary": "Accept-Language, Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-render-origin-server": "gunicorn",
+    "Content-Encoding": "gzip",
+    "CF-RAY": "a5f9d6e22808c76c-AMS",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "redirect_chain": [],
+  "console_errors": [],
+  "render_diagnostics": [],
+  "render_engine": null,
+  "render_ms": null,
+  "mode_used": "raw",
+  "too_large": false,
+  "error": null,
+  "ttfb_ms": 389,
+  "response_time_ms": 389,
+  "fetch_duration_ms": 393,
+  "content_bytes": 148,
+  "structured_data": {
+    "block_count": 0,
+    "processed_count": 0,
+    "total_bytes": 0,
+    "truncated": false,
+    "blocks": []
+  },
+  "truncation": {
+    "limit": null,
+    "fields": {
+      "content": {
+        "original_chars": 148,
+        "returned_chars": 148,
+        "truncated": false
+      },
+      "raw_content": {
+        "original_chars": 148,
+        "returned_chars": 148,
+        "truncated": false
+      }
+    }
+  },
+  "output_written": false
+}

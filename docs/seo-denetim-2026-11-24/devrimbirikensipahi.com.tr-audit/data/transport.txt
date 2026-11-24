@@ -1,0 +1,176 @@
+{
+  "url": "https://devrimbirikensipahi.com.tr",
+  "host": "devrimbirikensipahi.com.tr",
+  "tls": {
+    "host": "devrimbirikensipahi.com.tr",
+    "port": 443,
+    "connected_ip": "104.21.42.130",
+    "verified": true,
+    "verify_error": null,
+    "verify_code": null,
+    "certificate_read": true,
+    "subject": {
+      "common_name": "devrimbirikensipahi.com.tr",
+      "organization": null
+    },
+    "issuer": {
+      "common_name": "WE1",
+      "organization": "Google Trust Services"
+    },
+    "not_before": "2026-10-09T16:13:46Z",
+    "not_after": "2027-01-07T17:13:42Z",
+    "days_until_expiry": 44,
+    "expired": false,
+    "not_yet_valid": false,
+    "san": [
+      "devrimbirikensipahi.com.tr"
+    ],
+    "san_count": 1,
+    "covers_host": true,
+    "sibling_host": "www.devrimbirikensipahi.com.tr",
+    "covers_sibling": false,
+    "protocol": "TLSv1.3",
+    "cipher": "TLS_AES_256_GCM_SHA384",
+    "cipher_bits": 256
+  },
+  "headers": {
+    "url": "https://devrimbirikensipahi.com.tr/",
+    "status": 200,
+    "https": true,
+    "hsts": {
+      "present": false,
+      "value": null,
+      "max_age": null,
+      "include_subdomains": false,
+      "preload": false,
+      "meets_preload_requirements": false,
+      "preload_gaps": [
+        "No Strict-Transport-Security header."
+      ],
+      "preload_scope_note": "Covers the header directives, the certificate and the same-host HTTP redirect when those sections ran. Not checked: that every subdomain serves HTTPS, and that this host is the registrable domain the preload list requires.",
+      "issues": [
+        "Strict-Transport-Security was not sent."
+      ]
+    },
+    "csp": {
+      "present": false,
+      "report_only": false,
+      "policies": 0,
+      "issues": [
+        "Content-Security-Policy was not sent."
+      ]
+    },
+    "x_content_type_options": {
+      "present": true,
+      "value": "nosniff",
+      "ok": true
+    },
+    "framing": {
+      "x_frame_options": "DENY",
+      "frame_ancestors": false,
+      "ok": true
+    },
+    "referrer_policy": {
+      "present": true,
+      "value": "same-origin",
+      "ok": true
+    },
+    "permissions_policy": {
+      "present": false,
+      "feature_policy_present": false
+    },
+    "cookies": [
+      {
+        "name": "csrftoken",
+        "secure": false,
+        "http_only": false,
+        "same_site": "Lax",
+        "issues": [
+          "Missing Secure on an HTTPS site.",
+          "Missing HttpOnly; fine only if scripts must read this cookie."
+        ]
+      }
+    ]
+  },
+  "redirects": {
+    "http_to_https": {
+      "checked_url": "http://devrimbirikensipahi.com.tr/",
+      "redirects_to_https": true,
+      "one_hop": true,
+      "first_hop_status": 301,
+      "first_hop_target": "https://devrimbirikensipahi.com.tr/",
+      "first_hop_same_host": true,
+      "permanent": true,
+      "hops": 1,
+      "final_url": "https://devrimbirikensipahi.com.tr/",
+      "error": null
+    },
+    "www": {
+      "host": "devrimbirikensipahi.com.tr",
+      "sibling_host": "www.devrimbirikensipahi.com.tr",
+      "host_final_url": "https://devrimbirikensipahi.com.tr/",
+      "sibling_final_url": null,
+      "sibling_resolves": false,
+      "sibling_tls_error": null,
+      "same_final_url": null,
+      "error": "url_safety: DNS resolution failed for www.devrimbirikensipahi.com.tr: [Errno -2] Name or service not known"
+    }
+  },
+  "findings": [
+    {
+      "id": "hsts-missing",
+      "severity": "Medium",
+      "message": "The HTTPS response does not send a Strict-Transport-Security header.",
+      "evidence": {}
+    },
+    {
+      "id": "csp-missing",
+      "severity": "Low",
+      "message": "No Content-Security-Policy header is sent.",
+      "evidence": {}
+    },
+    {
+      "id": "cookie-missing-secure",
+      "severity": "Low",
+      "message": "One or more cookies are set without the Secure flag.",
+      "evidence": {
+        "cookies": [
+          "csrftoken"
+        ]
+      }
+    },
+    {
+      "id": "www-sibling-unreachable",
+      "severity": "Info",
+      "message": "The www or non-www counterpart of the host did not answer.",
+      "evidence": {
+        "sibling_host": "www.devrimbirikensipahi.com.tr",
+        "error": "url_safety: DNS resolution failed for www.devrimbirikensipahi.com.tr: [Errno -2] Name or service not known"
+      }
+    },
+    {
+      "id": "permissions-policy-missing",
+      "severity": "Info",
+      "message": "No Permissions-Policy header is sent.",
+      "evidence": {}
+    },
+    {
+      "id": "cookie-missing-httponly",
+      "severity": "Info",
+      "message": "One or more cookies are readable by scripts because HttpOnly is not set.",
+      "evidence": {
+        "cookies": [
+          "csrftoken"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 1,
+    "Low": 2,
+    "Info": 3,
+    "total": 6
+  }
+}

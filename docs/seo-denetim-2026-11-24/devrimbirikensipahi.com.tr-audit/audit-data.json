@@ -1,0 +1,174 @@
+{
+ "summary": {
+  "health_score": 57,
+  "business_type": "Kurumsal klinik sitesi + blog (yerel, marka); Django 5.2, Render + Cloudflare; 16 dil .po çevirisi dil klasörleriyle",
+  "top_findings": [
+   "Başlıklar 106–114 karakter, açıklamalar 187–205; blog yazılarında çift H1, blog ana sayfasında H1 yok",
+   "Yorum sayısı 352 vs 124, posta kodu 34360 vs 34381, klinik sayfasında saat alanı boş",
+   "29 \"X açık dişçi\" yazısı aynı şablon; /acil-dis-hekimi/ sayfası hekimin kapattığı \"acil\" niyetini hâlâ hedefliyor",
+   "HSTS yok, csrftoken çerezi Secure değil, blog yazılarında hreflang yok",
+   "/dental-tourism/ sayfası 4 dilde hreflang, x-default Türkçe; diğer 12 dilde sayfa yok mu belirsiz"
+  ],
+  "quick_wins": [
+   "Başlıklar 106–114 karakter, açıklamalar 187–205; blog yazılarında çift H1, blog ana sayfasında H1 yok",
+   "Yorum sayısı 352 vs 124, posta kodu 34360 vs 34381, klinik sayfasında saat alanı boş",
+   "HSTS yok, csrftoken çerezi Secure değil, blog yazılarında hreflang yok",
+   "/dental-tourism/ sayfası 4 dilde hreflang, x-default Türkçe; diğer 12 dilde sayfa yok mu belirsiz",
+   "NAP yazımı üç sitede farklı; yorum sayısı ve \"ilk muayene ücretsiz\" iddiası doğrulanmalı"
+  ]
+ },
+ "categories": [
+  {
+   "name": "Teknik SEO",
+   "score": 60,
+   "what_works": [
+    "HTTPS/TLS 1.3, http→https tek adım 301; robots.txt açık; sitemap geçerli (128 URL, lastmod gerçek tarihlerle)",
+    "Ana sayfada 17 dil + x-default hreflang, dil klasörleri (/en/, /fr/, /de/, /ru/) gerçek çeviri ve doğru <html lang>",
+    "llms.txt var; ChatGPT yönlendirmeleri zaten geliyor (merkezi takip)",
+    "Blog yazılarında Article/BlogPosting + yazar + eğitim bilgisi; 44 yazıdaki 7/24, nöbetçi, gece ifadeleri 22.11'de temizlendi; 13 uzak ilçe/gece yazısı 301",
+    "FAQPage şeması ana sayfada ve klinik sayfasında"
+   ],
+   "findings": [
+    {
+     "title": "HSTS yok, csrftoken çerezi Secure değil, blog yazılarında hreflang yok",
+     "severity": "Medium",
+     "description": "Strict-Transport-Security yok; csrftoken Secure bayrağı yok; /blog/... sayfalarında 0 alternate (ana sayfa 18, /dental-tourism/ 5: tr/en/de/nl/x-default); blog TTFB 1,81–1,85 s (ana sayfa 0,38 s). — HSTS tarayıcı güveni; Secure bayrağı CSRF çerezinin HTTP'de sızmaması için; blog yazıları yalnızca Türkçe olduğu için hreflang eksikliği doğru ama tr + x-default çifti tutarlılık sağlar.",
+     "recommendation": "SECURE_HSTS_SECONDS=31536000 + includeSubDomains, CSRF_COOKIE_SECURE=True; blog detayına tr + x-default alternate; blog sorgularını (prev/next, kategori) önbelleğe alıp TTFB'yi 0,5 s altına indirin."
+    }
+   ]
+  },
+  {
+   "name": "İçerik Kalitesi",
+   "score": 55,
+   "what_works": [],
+   "findings": [
+    {
+     "title": "29 \"X açık dişçi\" yazısı aynı şablon; /acil-dis-hekimi/ sayfası hekimin kapattığı \"acil\" niyetini hâlâ hedefliyor",
+     "severity": "High",
+     "description": "/blog/en-iyi-disci/sisli-acik-disci/ 1.297 kelime, komşu ilçe yazıları aynı iskelet (ilçe adı değişiyor); /acil-dis-hekimi/ title \"Şişli Acil Diş Hekimi\", 274 kelime; drdevrim'de aynı niyet 23.11'de \"Diş Ağrısı Tedavisi\" yapıldı ve 13 kaldırılan yazıdan biri hâlâ bu sayfaya 301 gidiyor. — İnce şablon yazılar birbirini kanibalize ediyor; \"acil\" sayfası hekimin kararına aykırı ve gece sorgularını çekiyor.",
+     "recommendation": "/acil-dis-hekimi/ → \"Diş Ağrısı Tedavisi — Aynı Gün\" olarak yeniden adlandır (slug /dis-agrisi-tedavisi/, eski adres 301; acil-disci-istanbul 301'ini de yeni adrese çevir). 29 yazıyı 6–8 bölgesel yazıya birleştirin (Şişli-Osmanbey-Nişantaşı-Mecidiyeköy tek güçlü yazı; Beşiktaş-Etiler-Levent; Kağıthane; Beyoğlu-Taksim-Cihangir; Avrupa yakası merkez), birleşenler 301."
+    }
+   ]
+  },
+  {
+   "name": "Sayfa İçi SEO",
+   "score": 50,
+   "what_works": [],
+   "findings": [
+    {
+     "title": "Başlıklar 106–114 karakter, açıklamalar 187–205; blog yazılarında çift H1, blog ana sayfasında H1 yok",
+     "severity": "High",
+     "description": "Ana sayfa title 106 / desc 205; /blog/english/dentist-istanbul/ title 114, 2 H1; /blog/en-iyi-disci/sisli-acik-disci/ title 85, 2 H1 (aynı metin iki kez); /blog/ H1 0; /randevu-al/ 14 kelime, desc 198. — Google başlığı kesip yeniden yazıyor; çift H1 şablon hatası, blog ana sayfası başlıksız. Randevu sayfası neredeyse boş.",
+     "recommendation": "Şablon: title ≤60 (marka sonda), desc ≤155; blog detay şablonunda başlık bir kez H1 (içerikteki ikinciyi H2 yap veya içerikten çıkar); /blog/ için H1 \"Bilgilendirici Yazılar\"; randevu sayfasına saat, adres, ne zaman dönüş yapıldığı (hekim metni)."
+    },
+    {
+     "title": "/dental-tourism/ sayfası 4 dilde hreflang, x-default Türkçe; diğer 12 dilde sayfa yok mu belirsiz",
+     "severity": "Medium",
+     "description": "/dental-tourism/ alternates: tr, en, de, nl + x-default=/dental-tourism/ (Türkçe). Sitede 16 dil var ama bu sayfada 4. Önceki denetimde EN canonical TR adresini gösteriyordu; şimdi canonical kendine dönüyor (düzelmiş). — Yurt dışı hastaya dönük tek sayfa yarım hreflang kümesiyle İngilizce aramada zayıf kalıyor; dentaltourism.tr ile aynı konuyu iki domainde işlemek \"tek konu, tek domain\" kuralına aykırı (hekim çapraz link istemiyor; yine de konu çakışması not edilmeli).",
+     "recommendation": "Ya 16 dilin tamamına hreflang + x-default=en, ya da sayfayı Türkçe'de bırakıp diğer dillerde noindex; dentaltourism.tr ile konu çakışmasını kabul edilen strateji olarak belgeleyin."
+    },
+    {
+     "title": "NAP yazımı üç sitede farklı; yorum sayısı ve \"ilk muayene ücretsiz\" iddiası doğrulanmalı",
+     "severity": "Medium",
+     "description": "Adres: \"Merkez, Abide-i Hürriyet Cd No:148 D:11 kat 4\" (dbs) / \"Abide-i Hürriyet Caddesi No:148 Kat:4 D:11\" (drdevrim) / \"… D:11 Kat 4, 34360\" (dentaltourism); posta kodu 34360/34381; locality/region alanları ters. /sisli-dis-klinigi/: \"ilk muayene ücretsiz, panoramik röntgen\" (hekim doğrulamalı). — GBP–site–rehber tutarlılığı yerel sıralamanın temel sinyali.",
+     "recommendation": "GBP'deki yazımı birebir alıp üç sitede aynı string'i kullanın; posta kodunu hekim doğrulasın; \"ilk muayene ücretsiz\" GBP'de de yazıyorsa kalsın, yoksa çıkarın."
+    },
+    {
+     "title": "\"Pazar açık dişçi\" niyetine 6 yazı, \"Şişli diş kliniği\" niyetine klinik sayfası (281 kelime) ve ana sayfa yarışıyor",
+     "severity": "Medium",
+     "description": "/blog/en-iyi-disci/pazar-acik-disci/, pazar-acik-disci-sisli/, -osmanbey/, -nisantasi/, -kagithane/, cumartesi-acik-disci-pazar-acik-disci/ aynı niyet; /sisli-dis-klinigi/ 281 kelime, ana sayfa 2.418 kelime. — Google aynı niyet için sitenin hangi sayfasını göstereceğini kararsız bırakır; en çok iniş alan iki sayfadan biri (pazar-acik-disci-sisli) zaten insan trafiği alıyor, dağılmasın.",
+     "recommendation": "\"Pazar açık dişçi Şişli\" için tek güçlü sayfa (pazar-acik-disci-sisli) + diğer 5'i ona 301 veya bölge bölümü olarak içine; /sisli-dis-klinigi/ sayfasını klinik turu, ekip, cihazlar, saat, ulaşım ile 800+ kelimeye çıkarın (hekim metni)."
+    }
+   ]
+  },
+  {
+   "name": "Şema / Yapısal Veri",
+   "score": 58,
+   "what_works": [],
+   "findings": [
+    {
+     "title": "Yorum sayısı 352 vs 124, posta kodu 34360 vs 34381, klinik sayfasında saat alanı boş",
+     "severity": "High",
+     "description": "Blog yazılarında Dentist \"Dr. Devrim Biriken Sipahi - Açık Dişçi\" aggregateRating 4.9 / reviewCount 352, postalCode 34381; ana sayfa MedicalClinic postalCode 34360; drdevrim 124 yorum; /sisli-dis-klinigi/ OpeningHoursSpecification yalnızca dayOfWeek (opens/closes yok). — Çelişen sayılar ve adres alanları Google'ın işletme varlığını birleştirmesini zorlaştırır; kendi sayfasında kendi yorum puanı zaten zengin sonuç üretmez, yanlış sayı yalnızca risk.",
+     "recommendation": "Blog yazılarındaki Dentist bloğunu kaldırıp tek MedicalClinic varlığına (@id) referans verin; aggregateRating'i kaldırın veya GBP'den canlı çekin; posta kodu tek değer (hekim doğrulasın: 34360 mı 34381 mi); klinik sayfasına opens 05:00 / closes 00:00."
+    }
+   ]
+  },
+  {
+   "name": "Performans (CWV)",
+   "score": 55,
+   "what_works": [],
+   "findings": [
+    {
+     "title": "Laboratuvar verisi yok; ana sayfa 188 KB / 1.247 düğüm, 34 görsel boyutsuz, blog TTFB 1,8 s",
+     "severity": "Medium",
+     "description": "PSI anahtarı yok (429), Chromium başlamadı. Ölçüm: ana sayfa 188 KB HTML (35 KB gz), 1.247 düğüm, 34 görsel width/height eksik; blog yazısı TTFB 1,81 s (iki ölçümde de). — Boyutsuz 34 görsel CLS için en somut risk; blog TTFB mobil LCP'yi doğrudan uzatır.",
+     "recommendation": "Görsellere width/height; blog detay sorgularını önbelleğe alın (prev/next, kategori listesi, SSS); PSI anahtarı ile CrUX takibi."
+    }
+   ]
+  },
+  {
+   "name": "AI Arama Hazırlığı",
+   "score": 65,
+   "what_works": [],
+   "findings": [
+    {
+     "title": "llms.txt var; agentic P1'de 1 başarısız kontrol; blog yazarı \"ekin\"",
+     "severity": "Low",
+     "description": "agentic_check summary P1: fail 1, pass 2; BlogPosting author Person name \"ekin\" (küçük harf, unvan yok). — E-E-A-T: yazar kimliği zayıf görünüyor; AI motorları yazar varlığını okur.",
+     "recommendation": "Yazar adını \"Dt. Ekin Sipahi\" + jobTitle + sameAs (Instagram, dentaltourism hekim sayfası) olarak şemaya ve görünür satıra yazın; P1 başarısız kontrolü agentic.json'dan okuyup kapatın."
+    }
+   ]
+  },
+  {
+   "name": "Görseller",
+   "score": 60,
+   "what_works": [],
+   "findings": []
+  }
+ ],
+ "action_plan": {
+  "phases": [
+   {
+    "name": "Phase 1: Critical Fixes",
+    "timeframe": "Week 1",
+    "items": [
+     "Başlıklar 106–114 karakter, açıklamalar 187–205; blog yazılarında çift H1, blog ana sayfasında H1 yok",
+     "Yorum sayısı 352 vs 124, posta kodu 34360 vs 34381, klinik sayfasında saat alanı boş"
+    ]
+   },
+   {
+    "name": "Phase 2: High-Impact Improvements",
+    "timeframe": "Weeks 2-3",
+    "items": [
+     "29 \"X açık dişçi\" yazısı aynı şablon; /acil-dis-hekimi/ sayfası hekimin kapattığı \"acil\" niyetini hâlâ hedefliyor",
+     "HSTS yok, csrftoken çerezi Secure değil, blog yazılarında hreflang yok",
+     "/dental-tourism/ sayfası 4 dilde hreflang, x-default Türkçe; diğer 12 dilde sayfa yok mu belirsiz",
+     "NAP yazımı üç sitede farklı; yorum sayısı ve \"ilk muayene ücretsiz\" iddiası doğrulanmalı"
+    ]
+   },
+   {
+    "name": "Phase 3: Content & Authority",
+    "timeframe": "Month 2",
+    "items": [
+     "Laboratuvar verisi yok; ana sayfa 188 KB / 1.247 düğüm, 34 görsel boyutsuz, blog TTFB 1,8 s",
+     "\"Pazar açık dişçi\" niyetine 6 yazı, \"Şişli diş kliniği\" niyetine klinik sayfası (281 kelime) ve ana sayfa yarışıyor"
+    ]
+   },
+   {
+    "name": "Phase 4: Monitoring & Iteration",
+    "timeframe": "Ongoing",
+    "items": [
+     "GSC + pseo_etki haftalık",
+     "PSI anahtarıyla CWV",
+     "AI referrer takibi"
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "findings_dir": "findings/",
+  "screenshots_dir": "screenshots/"
+ },
+ "generated_at": "2026-11-24T19:50"
+}

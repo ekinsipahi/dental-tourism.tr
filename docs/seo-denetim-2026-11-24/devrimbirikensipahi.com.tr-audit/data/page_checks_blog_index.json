@@ -1,0 +1,137 @@
+{
+  "url": "https://devrimbirikensipahi.com.tr/blog/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "Dr Devrim Sipahi - \u015ei\u015fli Di\u015f Klini\u011fi - Bilgilendirici Yaz\u0131lar",
+    "title_length": 61,
+    "title_count": 1,
+    "meta_description": "Kanal tedavisi, dolgu, implant ve estetik di\u015f hekimli\u011fi hakk\u0131nda g\u00fcncel rehber yaz\u0131lar\u0131.",
+    "meta_description_length": 88,
+    "h1": [],
+    "h1_count": 0,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://devrimbirikensipahi.com.tr/blog/",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": null,
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "tr",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 83,
+      "missing_alt": 1,
+      "empty_alt": 18,
+      "missing_dimensions": 19,
+      "first_image_lazy": true
+    },
+    "links": {
+      "total": 226,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 40,
+      "query_params": []
+    },
+    "html_bytes": 123443,
+    "dom": {
+      "nodes": 880,
+      "max_depth": 14,
+      "max_children": 63,
+      "widest_element": "section"
+    },
+    "open_graph": {
+      "og:type": "website",
+      "og:site_name": "Dr. Dt. Devrim Biriken Sipahi",
+      "og:title": "Blog",
+      "og:description": "Di\u015f tedavileri ve ipu\u00e7lar\u0131.",
+      "og:url": "https://devrimbirikensipahi.com.tr/blog/"
+    },
+    "jsonld_blocks": 2,
+    "jsonld_invalid": 0,
+    "word_count": 1582,
+    "words_measured": true,
+    "title_relevance": 0.71,
+    "description_relevance": 0.36
+  },
+  "findings": [
+    {
+      "id": "title-too-long",
+      "severity": "Medium",
+      "message": "The title is longer than 60 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "61 characters: Dr Devrim Sipahi - \u015ei\u015fli Di\u015f Klini\u011fi - Bilgilendirici Yaz\u0131lar"
+    },
+    {
+      "id": "missing-h1",
+      "severity": "Medium",
+      "message": "No H1 heading was found on the page.",
+      "evidence": "no H1 element with text"
+    },
+    {
+      "id": "images-missing-alt",
+      "severity": "Medium",
+      "message": "Some images have no alt attribute. Screen readers and image search rely on alt text. An empty alt is correct for decorative images.",
+      "evidence": "1 of 83 images: https://www.facebook.com/tr?id=1366216214467162&ev=PageVi...",
+      "count": 1
+    },
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "19 of 83 images: /static/images/favicon.ico, /static/images/langflags/tr.png, /static/images/langflags/tr.png, /static/images/langflags/en.png, /static/images/langflags/de.png (+14 more)",
+      "count": 19
+    },
+    {
+      "id": "first-image-lazy-loaded",
+      "severity": "Medium",
+      "message": "The first image in the main content is lazy loaded. It is often the largest paint, and lazy loading delays it.",
+      "evidence": "loading=\"lazy\" on https://i.imgur.com/yBVY01d.jpeg"
+    },
+    {
+      "id": "wide-dom-node",
+      "severity": "Low",
+      "message": "One element has more than 60 direct children, which is slow to lay out (Lighthouse guidance).",
+      "evidence": "<section> has 63 direct children"
+    },
+    {
+      "id": "missing-og-image",
+      "severity": "Low",
+      "message": "The page has no og:image, so shared links show no preview image.",
+      "evidence": "og:title is present, og:image is not"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 5,
+    "Low": 2,
+    "total": 7,
+    "checks_run": 47
+  }
+}

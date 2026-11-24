@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/user/.claude/skills/seo/scripts/parse_html.py", line 999, in <module>
+    main()
+  File "/home/user/.claude/skills/seo/scripts/parse_html.py", line 953, in main
+    resp = safe_requests_get(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/user/.claude/skills/seo/scripts/url_safety.py", line 1690, in safe_requests_get
+    norm_url, pinned_ip = validate_url_strict(url)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.claude/skills/seo/scripts/url_safety.py", line 712, in validate_url_strict
+    return _validate_url_strict(url, local_targets=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.claude/skills/seo/scripts/url_safety.py", line 743, in _validate_url_strict
+    url, addresses = _validate_url_addresses(url, local_targets=local_targets)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/.claude/skills/seo/scripts/url_safety.py", line 754, in _validate_url_addresses
+    raise URLSafetyError(f"Invalid URL scheme: {parsed.scheme!r}")
+url_safety.URLSafetyError: Invalid URL scheme: ''

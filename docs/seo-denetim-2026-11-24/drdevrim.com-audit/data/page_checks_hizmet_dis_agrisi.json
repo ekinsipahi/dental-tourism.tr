@@ -1,0 +1,112 @@
+{
+  "url": "https://drdevrim.com/hizmetler/dis-agrisi/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "Di\u015f A\u011fr\u0131s\u0131 Tedavisi \u0130stanbul \u015ei\u015fli | Haftasonu A\u00e7\u0131k, Ayn\u0131 G\u00fcn Randevu",
+    "title_length": 69,
+    "title_count": 1,
+    "meta_description": "\u015eiddetli di\u015f a\u011fr\u0131s\u0131, k\u0131r\u0131k di\u015f, apse m\u0131 var? Haftasonu dahil ayn\u0131 g\u00fcn muayene ve tedavi. Her g\u00fcn 05:00-00:00 a\u00e7\u0131k. \u015ei\u015fli'de 35 y\u0131l deneyim.",
+    "meta_description_length": 139,
+    "h1": [
+      "Di\u015f A\u011fr\u0131s\u0131 Tedavisi \u2014 Haftasonu Dahil, Ayn\u0131 G\u00fcn"
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://drdevrim.com/hizmetler/dis-agrisi/",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": "robots: index, follow, max-snippet:-1, max-image-preview:large",
+    "x_robots_tag": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "tr",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 10,
+      "missing_alt": 0,
+      "empty_alt": 1,
+      "missing_dimensions": 0,
+      "first_image_lazy": true
+    },
+    "links": {
+      "total": 17,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 42,
+      "query_params": []
+    },
+    "html_bytes": 64497,
+    "dom": {
+      "nodes": 292,
+      "max_depth": 12,
+      "max_children": 57,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:type": "website",
+      "og:site_name": "Dr. Devrim Sipahi Di\u015f Klini\u011fi",
+      "og:locale": "tr_TR",
+      "og:title": "Di\u015f A\u011fr\u0131s\u0131 Tedavisi \u0130stanbul \u015ei\u015fli | Haftasonu A\u00e7\u0131k, Ayn\u0131 G\u00fcn Randevu",
+      "og:description": "\u015eiddetli di\u015f a\u011fr\u0131s\u0131, k\u0131r\u0131k di\u015f, apse m\u0131 var? Haftasonu dahil ayn\u0131 g\u00fcn muayene ve tedavi. Her g\u00fcn 05:00-00:00 a\u00e7\u0131k. \u015ei\u015fli'de 35 y\u0131l deneyim.",
+      "og:url": "https://drdevrim.com/hizmetler/dis-agrisi/",
+      "og:image": "https://drdevrim.com/images/og-klinik.jpg",
+      "og:image:width": "1200",
+      "og:image:height": "630",
+      "og:image:alt": "Di\u015f A\u011fr\u0131s\u0131 Tedavisi \u2014 Haftasonu Dahil, Ayn\u0131 G\u00fcn - Dr. Devrim Biriken Sipahi Klini\u011fi"
+    },
+    "jsonld_blocks": 4,
+    "jsonld_invalid": 0,
+    "word_count": 361,
+    "words_measured": true,
+    "title_relevance": 0.8,
+    "description_relevance": 0.94
+  },
+  "findings": [
+    {
+      "id": "title-too-long",
+      "severity": "Medium",
+      "message": "The title is longer than 60 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "69 characters: Di\u015f A\u011fr\u0131s\u0131 Tedavisi \u0130stanbul \u015ei\u015fli | Haftasonu A\u00e7\u0131k, Ayn\u0131 G\u00fcn Randevu"
+    },
+    {
+      "id": "first-image-lazy-loaded",
+      "severity": "Medium",
+      "message": "The first image in the main content is lazy loaded. It is often the largest paint, and lazy loading delays it.",
+      "evidence": "loading=\"lazy\" on /images/clinic/tedavi-1-1200.webp"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 2,
+    "Low": 0,
+    "total": 2,
+    "checks_run": 47
+  }
+}

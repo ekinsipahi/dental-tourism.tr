@@ -1,0 +1,38 @@
+{
+  "title": null,
+  "meta_description": null,
+  "meta_robots": null,
+  "canonical": null,
+  "h1": [],
+  "h2": [],
+  "h3": [],
+  "heading_outline": [],
+  "images": [],
+  "links": {
+    "internal": [],
+    "external": []
+  },
+  "schema": [],
+  "schema_invalid": {
+    "count": 0,
+    "samples": []
+  },
+  "open_graph": {},
+  "twitter_card": {},
+  "word_count": 12,
+  "hreflang": [],
+  "hidden_text": {
+    "chars": 0,
+    "by_source": {
+      "comment": 0,
+      "template": 0,
+      "noscript": 0,
+      "hidden_attr": 0,
+      "aria_hidden": 0,
+      "inline_style": 0,
+      "sr_only_class": 0
+    },
+    "collapsed_chars": 0,
+    "samples": []
+  }
+}

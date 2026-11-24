@@ -1,0 +1,135 @@
+{
+  "url": "https://devrimbirikensipahi.com.tr/randevu-al/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "\u015ei\u015fli Di\u015f Hekimi Randevu Al | Dr. Dt. Devrim Biriken Sipahi",
+    "title_length": 59,
+    "title_count": 1,
+    "meta_description": "Dr. Dt. Devrim Biriken Sipahi ile \u015ei\u015fli'de di\u015f hekimi randevusu al\u0131n. Mecidiyek\u00f6y, \u015ei\u015fli ve \u00e7evresinden kolay ula\u015f\u0131m ile estetik di\u015f tedavileri, implant, g\u00fcl\u00fc\u015f tasar\u0131m\u0131 i\u00e7in hemen randevu olu\u015fturun.",
+    "meta_description_length": 198,
+    "h1": [
+      "\u015ei\u015fli Di\u015f Hekimi Randevu Al"
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://devrimbirikensipahi.com.tr/randevu-al",
+    "canonical_status": "self",
+    "canonical_note": "differs from the page URL only by a trailing slash, treated as self-referencing",
+    "meta_robots": "robots: noindex, nofollow",
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "tr",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 1,
+      "missing_alt": 1,
+      "empty_alt": 0,
+      "missing_dimensions": 0,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 4,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 46,
+      "query_params": []
+    },
+    "html_bytes": 10493,
+    "dom": {
+      "nodes": 50,
+      "max_depth": 6,
+      "max_children": 21,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:title": "Dr. Dt. Devrim Biriken Sipahi | \u015ei\u015fli Di\u015f Klini\u011fi"
+    },
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "word_count": 14,
+    "words_measured": true,
+    "title_relevance": 0.14,
+    "description_relevance": 0.04
+  },
+  "findings": [
+    {
+      "id": "noindex",
+      "severity": "Critical",
+      "message": "A robots meta tag asks search engines not to index this page. Confirm this is intended.",
+      "evidence": "meta robots: noindex, nofollow"
+    },
+    {
+      "id": "meta-description-too-long",
+      "severity": "Medium",
+      "message": "The meta description is longer than 160 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "198 characters: Dr. Dt. Devrim Biriken Sipahi ile \u015ei\u015fli'de di\u015f hekimi randevusu al\u0131n. Mecidiyek\u00f6y, \u015ei\u015fli ve \u00e7evresinden kolay ula\u015f\u0131m ile estetik di\u015f tedavileri, implant, g\u00fcl\u00fc\u015f tasar\u0131m\u0131 i\u00e7in hemen r..."
+    },
+    {
+      "id": "duplicate-meta-tags",
+      "severity": "Medium",
+      "message": "The same title, meta tag or canonical appears more than once, so it is unclear which one search engines and social platforms read.",
+      "evidence": "meta viewport x2",
+      "count": 1
+    },
+    {
+      "id": "nofollow",
+      "severity": "Medium",
+      "message": "The page asks search engines not to follow any of its links. Confirm this is intended.",
+      "evidence": "meta robots: noindex, nofollow"
+    },
+    {
+      "id": "images-missing-alt",
+      "severity": "Medium",
+      "message": "Some images have no alt attribute. Screen readers and image search rely on alt text. An empty alt is correct for decorative images.",
+      "evidence": "1 of 1 images: https://www.facebook.com/tr?id=1366216214467162&ev=PageVi...",
+      "count": 1
+    },
+    {
+      "id": "thin-content",
+      "severity": "Medium",
+      "message": "The page has fewer than 200 words of visible body text. Google has no minimum word count, so this is not a ranking rule. Check that the page fully answers what a visitor came for.",
+      "evidence": "14 words of visible body text"
+    },
+    {
+      "id": "missing-og-image",
+      "severity": "Low",
+      "message": "The page has no og:image, so shared links show no preview image.",
+      "evidence": "og:title is present, og:image is not"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 1,
+    "High": 0,
+    "Medium": 5,
+    "Low": 1,
+    "total": 7,
+    "checks_run": 47
+  }
+}

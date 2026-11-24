@@ -1,0 +1,130 @@
+{
+  "target": "https://devrimbirikensipahi.com.tr",
+  "robots_url": "https://devrimbirikensipahi.com.tr/robots.txt",
+  "declared": [
+    {
+      "url": "https://devrimbirikensipahi.com.tr/sitemap.xml",
+      "query_redacted": false
+    }
+  ],
+  "found": [
+    {
+      "url": "https://devrimbirikensipahi.com.tr/sitemap.xml",
+      "query_redacted": false,
+      "source": "robots.txt",
+      "status_code": 200,
+      "kind": "urlset",
+      "valid": true,
+      "error": null
+    }
+  ],
+  "checked": [
+    {
+      "url": "https://devrimbirikensipahi.com.tr/sitemap.xml",
+      "query_redacted": false,
+      "source": "robots.txt",
+      "status_code": 200,
+      "kind": "urlset",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://devrimbirikensipahi.com.tr/sitemap_index.xml",
+      "query_redacted": false,
+      "source": "common_path",
+      "status_code": 404,
+      "kind": null,
+      "valid": false,
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://devrimbirikensipahi.com.tr/sitemap-index.xml",
+      "query_redacted": false,
+      "source": "common_path",
+      "status_code": 404,
+      "kind": null,
+      "valid": false,
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://devrimbirikensipahi.com.tr/wp-sitemap.xml",
+      "query_redacted": false,
+      "source": "common_path",
+      "status_code": 404,
+      "kind": null,
+      "valid": false,
+      "error": "HTTP 404"
+    }
+  ],
+  "warnings": [],
+  "error": null,
+  "expanded": {
+    "files": [
+      {
+        "url": "https://devrimbirikensipahi.com.tr/sitemap.xml",
+        "query_redacted": false,
+        "source": "robots.txt",
+        "status_code": 200,
+        "kind": "urlset",
+        "valid": true,
+        "error": null,
+        "gzip": false,
+        "bytes": 22650,
+        "decompressed_bytes": null,
+        "url_count": 128,
+        "child_count": 0,
+        "invalid_loc_count": 0,
+        "duplicate_count": 0,
+        "lastmod_count": 128,
+        "lastmod_invalid_count": 0,
+        "lastmod_oldest": "2026-03-12",
+        "lastmod_newest": "2026-11-24",
+        "lastmod_most_common": "2026-11-22",
+        "lastmod_identical_share": 0.5703,
+        "cross_host_url_count": 0,
+        "cross_host_url_examples": [],
+        "redacted_url_count": 0,
+        "redacted_url_examples": [],
+        "findings": [],
+        "sample_urls": [
+          "https://devrimbirikensipahi.com.tr/randevu-al",
+          "https://devrimbirikensipahi.com.tr/blog/",
+          "https://devrimbirikensipahi.com.tr/dental-tourism/",
+          "https://devrimbirikensipahi.com.tr/sitemap.xml",
+          "https://devrimbirikensipahi.com.tr/",
+          "https://devrimbirikensipahi.com.tr/instagram-yonlendirme/",
+          "https://devrimbirikensipahi.com.tr/acil-dis-hekimi/",
+          "https://devrimbirikensipahi.com.tr/cocuk-dis-hekimi/",
+          "https://devrimbirikensipahi.com.tr/dis-cekimi/",
+          "https://devrimbirikensipahi.com.tr/dis-tasi-temizligi/",
+          "https://devrimbirikensipahi.com.tr/estetik-dis-hekimi/",
+          "https://devrimbirikensipahi.com.tr/implant-tedavisi/",
+          "https://devrimbirikensipahi.com.tr/kanal-tedavisi/",
+          "https://devrimbirikensipahi.com.tr/sisli-dis-klinigi/",
+          "https://devrimbirikensipahi.com.tr/kvkk/",
+          "https://devrimbirikensipahi.com.tr/maps-yonlendirme/",
+          "https://devrimbirikensipahi.com.tr/warum-wir/",
+          "https://devrimbirikensipahi.com.tr/why-us/",
+          "https://devrimbirikensipahi.com.tr/waarom-wij/",
+          "https://devrimbirikensipahi.com.tr/neden-biz/"
+        ]
+      }
+    ],
+    "totals": {
+      "sitemap_files": 1,
+      "total_urls": 128,
+      "unique_urls": 128,
+      "duplicates_within_files": 0,
+      "duplicates_across_files": 0,
+      "invalid_locs": 0
+    },
+    "children": {
+      "limit": 50,
+      "listed": 0,
+      "fetched": 0,
+      "skipped": 0
+    },
+    "truncated": false,
+    "sample_size": 20
+  }
+}

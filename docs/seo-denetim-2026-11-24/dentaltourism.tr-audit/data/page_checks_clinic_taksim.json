@@ -1,0 +1,111 @@
+{
+  "url": "https://dentaltourism.tr/dental-clinic/taksim/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "Dentist near Taksim \u26054.9 \u2014 Family Clinic, Open 7 Days",
+    "title_length": 53,
+    "title_count": 1,
+    "meta_description": "Dentist near Taksim: our family clinic in \u015ei\u015fli is 3.5 km away, open 7 days. 35+ years' experience, \u2605 4.9 on Google. Free WhatsApp assessment.",
+    "meta_description_length": 142,
+    "h1": [
+      "Dental clinic near Taksim, Istanbul"
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://dentaltourism.tr/dental-clinic/taksim/",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": "robots: index,follow,max-image-preview:large",
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 18,
+    "lang": "en",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 107,
+      "missing_alt": 0,
+      "empty_alt": 52,
+      "missing_dimensions": 14,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 250,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 46,
+      "query_params": []
+    },
+    "html_bytes": 89781,
+    "dom": {
+      "nodes": 965,
+      "max_depth": 12,
+      "max_children": 70,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:site_name": "dentaltourism.tr",
+      "og:type": "website",
+      "og:title": "Dentist near Taksim \u26054.9 \u2014 Family Clinic, Open 7 Days",
+      "og:description": "Dentist near Taksim: our family clinic in \u015ei\u015fli is 3.5 km away, open 7 days. 35+ years' experience, \u2605 4.9 on Google. Free WhatsApp assessment.",
+      "og:url": "https://dentaltourism.tr/dental-clinic/taksim/",
+      "og:image": "https://dentaltourism.tr/static/img/og-default.png",
+      "og:locale": "en",
+      "og:locale:alternate": "de"
+    },
+    "jsonld_blocks": 3,
+    "jsonld_invalid": 0,
+    "word_count": 1587,
+    "words_measured": true,
+    "title_relevance": 1.0,
+    "description_relevance": 0.93
+  },
+  "findings": [
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "14 of 107 images: /static/img/clinic/cases/sebnem-after.5974f032f609.jpg, /static/img/clinic/cases/sebnem-before.e3db7812c2ed.jpg, /static/img/clinic/cases/zirconia-1-after.6f13cbcb9829.jpg, /stati...",
+      "count": 14
+    },
+    {
+      "id": "wide-dom-node",
+      "severity": "Low",
+      "message": "One element has more than 60 direct children, which is slow to lay out (Lighthouse guidance).",
+      "evidence": "<head> has 70 direct children"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 1,
+    "Low": 1,
+    "total": 2,
+    "checks_run": 47
+  }
+}

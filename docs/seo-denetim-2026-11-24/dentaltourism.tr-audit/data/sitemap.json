@@ -1,0 +1,130 @@
+{
+  "target": "https://dentaltourism.tr",
+  "robots_url": "https://dentaltourism.tr/robots.txt",
+  "declared": [
+    {
+      "url": "https://dentaltourism.tr/sitemap.xml",
+      "query_redacted": false
+    }
+  ],
+  "found": [
+    {
+      "url": "https://dentaltourism.tr/sitemap.xml",
+      "query_redacted": false,
+      "source": "robots.txt",
+      "status_code": 200,
+      "kind": "urlset",
+      "valid": true,
+      "error": null
+    }
+  ],
+  "checked": [
+    {
+      "url": "https://dentaltourism.tr/sitemap.xml",
+      "query_redacted": false,
+      "source": "robots.txt",
+      "status_code": 200,
+      "kind": "urlset",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://dentaltourism.tr/sitemap_index.xml",
+      "query_redacted": false,
+      "source": "common_path",
+      "status_code": 404,
+      "kind": null,
+      "valid": false,
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://dentaltourism.tr/sitemap-index.xml",
+      "query_redacted": false,
+      "source": "common_path",
+      "status_code": 404,
+      "kind": null,
+      "valid": false,
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://dentaltourism.tr/wp-sitemap.xml",
+      "query_redacted": false,
+      "source": "common_path",
+      "status_code": 404,
+      "kind": null,
+      "valid": false,
+      "error": "HTTP 404"
+    }
+  ],
+  "warnings": [],
+  "error": null,
+  "expanded": {
+    "files": [
+      {
+        "url": "https://dentaltourism.tr/sitemap.xml",
+        "query_redacted": false,
+        "source": "robots.txt",
+        "status_code": 200,
+        "kind": "urlset",
+        "valid": true,
+        "error": null,
+        "gzip": false,
+        "bytes": 2530604,
+        "decompressed_bytes": null,
+        "url_count": 1284,
+        "child_count": 0,
+        "invalid_loc_count": 0,
+        "duplicate_count": 0,
+        "lastmod_count": 787,
+        "lastmod_invalid_count": 0,
+        "lastmod_oldest": "2026-10-11",
+        "lastmod_newest": "2026-11-23",
+        "lastmod_most_common": "2026-11-01",
+        "lastmod_identical_share": 0.324,
+        "cross_host_url_count": 0,
+        "cross_host_url_examples": [],
+        "redacted_url_count": 0,
+        "redacted_url_examples": [],
+        "findings": [],
+        "sample_urls": [
+          "https://dentaltourism.tr/",
+          "https://dentaltourism.tr/de/",
+          "https://dentaltourism.tr/nl/",
+          "https://dentaltourism.tr/fr/",
+          "https://dentaltourism.tr/it/",
+          "https://dentaltourism.tr/es/",
+          "https://dentaltourism.tr/pl/",
+          "https://dentaltourism.tr/ru/",
+          "https://dentaltourism.tr/uk/",
+          "https://dentaltourism.tr/ar/",
+          "https://dentaltourism.tr/sv/",
+          "https://dentaltourism.tr/da/",
+          "https://dentaltourism.tr/no/",
+          "https://dentaltourism.tr/ro/",
+          "https://dentaltourism.tr/bg/",
+          "https://dentaltourism.tr/az/",
+          "https://dentaltourism.tr/tr/",
+          "https://dentaltourism.tr/about/",
+          "https://dentaltourism.tr/de/ueber-uns/",
+          "https://dentaltourism.tr/nl/over-ons/"
+        ]
+      }
+    ],
+    "totals": {
+      "sitemap_files": 1,
+      "total_urls": 1284,
+      "unique_urls": 1284,
+      "duplicates_within_files": 0,
+      "duplicates_across_files": 0,
+      "invalid_locs": 0
+    },
+    "children": {
+      "limit": 50,
+      "listed": 0,
+      "fetched": 0,
+      "skipped": 0
+    },
+    "truncated": false,
+    "sample_size": 20
+  }
+}

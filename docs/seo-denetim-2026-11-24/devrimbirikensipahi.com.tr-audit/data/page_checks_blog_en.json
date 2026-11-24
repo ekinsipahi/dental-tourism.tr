@@ -1,0 +1,136 @@
+{
+  "url": "https://devrimbirikensipahi.com.tr/blog/english/dentist-istanbul/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "Best Dentist in Istanbul 35+ Years experience | Trusted English-Speaking Dental Clinic | Dr. Devrim Biriken Sipahi",
+    "title_length": 114,
+    "title_count": 1,
+    "meta_description": "Looking for the best dentist in Istanbul near you? Dr. Devrim Biriken Sipahi offers 35+ years of expert dental care in \u015ei\u015fli. English-speaking, 5\u2605 rated, walk-in & scheduled appointments.",
+    "meta_description_length": 187,
+    "h1": [
+      "Best Dentist in Istanbul 35+ Years experience | Trusted English-Speaking Dental Clinic | Dr. Devrim Biriken Sipahi",
+      "Best Dentist in Istanbul \u2014 Trusted, Experienced & Near You"
+    ],
+    "h1_count": 2,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://devrimbirikensipahi.com.tr/blog/english/dentist-istanbul/",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": null,
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "tr",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 23,
+      "missing_alt": 1,
+      "empty_alt": 18,
+      "missing_dimensions": 21,
+      "first_image_lazy": true
+    },
+    "links": {
+      "total": 48,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 65,
+      "query_params": []
+    },
+    "html_bytes": 91640,
+    "dom": {
+      "nodes": 577,
+      "max_depth": 14,
+      "max_children": 28,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:type": "article",
+      "og:site_name": "Dr. Dt. Devrim Biriken Sipahi",
+      "og:title": "Best Dentist in Istanbul 35+ Years experience | Trusted English-Speaking Dental Clinic | Dr. Devrim Biriken Sipahi",
+      "og:description": "Looking for the best dentist in Istanbul near you? Dr. Devrim Biriken Sipahi offers 35+ years of expert dental care in \u015ei\u015fli. English-speaking, 5\u2605 rated, walk-in & scheduled appointments.",
+      "og:url": "https://devrimbirikensipahi.com.tr/blog/english/dentist-istanbul/",
+      "og:image": "https://i.imgur.com/SPFchUw.jpeg"
+    },
+    "jsonld_blocks": 7,
+    "jsonld_invalid": 0,
+    "word_count": 2048,
+    "words_measured": true,
+    "title_relevance": 1.0,
+    "description_relevance": 0.95
+  },
+  "findings": [
+    {
+      "id": "title-too-long",
+      "severity": "Medium",
+      "message": "The title is longer than 60 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "114 characters: Best Dentist in Istanbul 35+ Years experience | Trusted English-Speaking Dental Clinic | Dr. Devrim Biriken Sipahi"
+    },
+    {
+      "id": "meta-description-too-long",
+      "severity": "Medium",
+      "message": "The meta description is longer than 160 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "187 characters: Looking for the best dentist in Istanbul near you? Dr. Devrim Biriken Sipahi offers 35+ years of expert dental care in \u015ei\u015fli. English-speaking, 5\u2605 rated, walk-in & scheduled appoint..."
+    },
+    {
+      "id": "images-missing-alt",
+      "severity": "Medium",
+      "message": "Some images have no alt attribute. Screen readers and image search rely on alt text. An empty alt is correct for decorative images.",
+      "evidence": "1 of 23 images: https://www.facebook.com/tr?id=1366216214467162&ev=PageVi...",
+      "count": 1
+    },
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "21 of 23 images: /static/images/favicon.ico, /static/images/langflags/tr.png, /static/images/langflags/tr.png, /static/images/langflags/en.png, /static/images/langflags/de.png (+16 more)",
+      "count": 21
+    },
+    {
+      "id": "first-image-lazy-loaded",
+      "severity": "Medium",
+      "message": "The first image in the main content is lazy loaded. It is often the largest paint, and lazy loading delays it.",
+      "evidence": "loading=\"lazy\" on https://i.imgur.com/SPFchUw.jpeg"
+    },
+    {
+      "id": "multiple-h1",
+      "severity": "Low",
+      "message": "The page has more than one H1. Google says there is no ideal number of headings, so this does not affect Search on its own. Check that the most prominent heading names the page.",
+      "evidence": "2 H1 headings: Best Dentist in Istanbul 35+ Years experience | Trusted E..., Best Dentist in Istanbul \u2014 Trusted, Experienced & Near You",
+      "count": 2
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 5,
+    "Low": 1,
+    "total": 6,
+    "checks_run": 47
+  }
+}

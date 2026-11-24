@@ -1,0 +1,132 @@
+{
+  "url": "https://drdevrim.com",
+  "host": "drdevrim.com",
+  "tls": {
+    "host": "drdevrim.com",
+    "port": 443,
+    "connected_ip": "104.21.34.58",
+    "verified": true,
+    "verify_error": null,
+    "verify_code": null,
+    "certificate_read": true,
+    "subject": {
+      "common_name": "drdevrim.com",
+      "organization": null
+    },
+    "issuer": {
+      "common_name": "YE2",
+      "organization": "Let's Encrypt"
+    },
+    "not_before": "2026-11-04T02:07:58Z",
+    "not_after": "2027-02-02T02:07:57Z",
+    "days_until_expiry": 69,
+    "expired": false,
+    "not_yet_valid": false,
+    "san": [
+      "*.drdevrim.com",
+      "drdevrim.com"
+    ],
+    "san_count": 2,
+    "covers_host": true,
+    "sibling_host": "www.drdevrim.com",
+    "covers_sibling": true,
+    "protocol": "TLSv1.3",
+    "cipher": "TLS_AES_256_GCM_SHA384",
+    "cipher_bits": 256
+  },
+  "headers": {
+    "url": "https://drdevrim.com/",
+    "status": 200,
+    "https": true,
+    "hsts": {
+      "present": true,
+      "value": "max-age=31536000; includeSubDomains",
+      "max_age": 31536000,
+      "include_subdomains": true,
+      "preload": false,
+      "meets_preload_requirements": false,
+      "preload_gaps": [
+        "The preload directive is missing."
+      ],
+      "preload_scope_note": "Covers the header directives, the certificate and the same-host HTTP redirect when those sections ran. Not checked: that every subdomain serves HTTPS, and that this host is the registrable domain the preload list requires.",
+      "issues": []
+    },
+    "csp": {
+      "present": false,
+      "report_only": false,
+      "policies": 0,
+      "issues": [
+        "Content-Security-Policy was not sent."
+      ]
+    },
+    "x_content_type_options": {
+      "present": true,
+      "value": "nosniff",
+      "ok": true
+    },
+    "framing": {
+      "x_frame_options": "SAMEORIGIN",
+      "frame_ancestors": false,
+      "ok": true
+    },
+    "referrer_policy": {
+      "present": true,
+      "value": "strict-origin-when-cross-origin",
+      "ok": true
+    },
+    "permissions_policy": {
+      "present": true,
+      "feature_policy_present": false
+    },
+    "cookies": []
+  },
+  "redirects": {
+    "http_to_https": {
+      "checked_url": "http://drdevrim.com/",
+      "redirects_to_https": true,
+      "one_hop": true,
+      "first_hop_status": 301,
+      "first_hop_target": "https://drdevrim.com/",
+      "first_hop_same_host": true,
+      "permanent": true,
+      "hops": 1,
+      "final_url": "https://drdevrim.com/",
+      "error": null
+    },
+    "www": {
+      "host": "drdevrim.com",
+      "sibling_host": "www.drdevrim.com",
+      "host_final_url": "https://drdevrim.com/",
+      "sibling_final_url": null,
+      "sibling_resolves": false,
+      "sibling_tls_error": null,
+      "same_final_url": null,
+      "error": "url_safety: DNS resolution failed for www.drdevrim.com: [Errno -2] Name or service not known"
+    }
+  },
+  "findings": [
+    {
+      "id": "csp-missing",
+      "severity": "Low",
+      "message": "No Content-Security-Policy header is sent.",
+      "evidence": {}
+    },
+    {
+      "id": "www-sibling-unreachable",
+      "severity": "Info",
+      "message": "The www or non-www counterpart of the host did not answer.",
+      "evidence": {
+        "sibling_host": "www.drdevrim.com",
+        "error": "url_safety: DNS resolution failed for www.drdevrim.com: [Errno -2] Name or service not known"
+      }
+    }
+  ],
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 0,
+    "Low": 1,
+    "Info": 1,
+    "total": 2
+  }
+}

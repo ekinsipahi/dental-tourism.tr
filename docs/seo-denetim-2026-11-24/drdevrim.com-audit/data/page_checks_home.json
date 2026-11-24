@@ -1,0 +1,121 @@
+{
+  "url": "https://drdevrim.com/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "Dr. Dt. Devrim Biriken Sipahi | \u015ei\u015fli Di\u015f Hekimi \u00b7 35 Y\u0131l \u00b7 5\u2605 124 Yorum",
+    "title_length": 72,
+    "title_count": 1,
+    "meta_description": "\u015ei\u015fli'nin en deneyimli di\u015f hekimi Dr. Devrim Biriken Sipahi. 35+ y\u0131l, 10.000+ hasta, Google 5/5 \u00b7 124 yorum. \u0130mplant, g\u00fcl\u00fc\u015f tasar\u0131m\u0131, ortodonti. Cumartesi-Pazar a\u00e7\u0131k. Hemen randevu al\u0131n.",
+    "meta_description_length": 186,
+    "h1": [
+      "Di\u015finiz i\u00e7in sadece gerekeni yap\u0131yoruz."
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://drdevrim.com/",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": "robots: index, follow",
+    "x_robots_tag": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "x_robots_other_agents": [],
+    "hreflang_count": 19,
+    "lang": "tr",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 11,
+      "missing_alt": 0,
+      "empty_alt": 1,
+      "missing_dimensions": 5,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 21,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 21,
+      "query_params": []
+    },
+    "html_bytes": 202567,
+    "dom": {
+      "nodes": 1073,
+      "max_depth": 14,
+      "max_children": 70,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:title": "Dr. Dt. Devrim Biriken Sipahi | \u015ei\u015fli Di\u015f Hekimi",
+      "og:description": "35 y\u0131ll\u0131k deneyim, 10.000+ mutlu hasta. Google 5\u2605 \u00b7 124 yorum. Hafta sonu da hizmetinizdeyiz.",
+      "og:type": "website",
+      "og:url": "https://drdevrim.com/",
+      "og:locale": "tr_TR",
+      "og:image": "https://drdevrim.com/images/og-klinik.jpg"
+    },
+    "jsonld_blocks": 3,
+    "jsonld_invalid": 0,
+    "word_count": 973,
+    "words_measured": true,
+    "title_relevance": 1.0,
+    "description_relevance": 0.8
+  },
+  "findings": [
+    {
+      "id": "title-too-long",
+      "severity": "Medium",
+      "message": "The title is longer than 60 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "72 characters: Dr. Dt. Devrim Biriken Sipahi | \u015ei\u015fli Di\u015f Hekimi \u00b7 35 Y\u0131l \u00b7 5\u2605 124 Yorum"
+    },
+    {
+      "id": "meta-description-too-long",
+      "severity": "Medium",
+      "message": "The meta description is longer than 160 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "186 characters: \u015ei\u015fli'nin en deneyimli di\u015f hekimi Dr. Devrim Biriken Sipahi. 35+ y\u0131l, 10.000+ hasta, Google 5/5 \u00b7 124 yorum. \u0130mplant, g\u00fcl\u00fc\u015f tasar\u0131m\u0131, ortodonti. Cumartesi-Pazar a\u00e7\u0131k. Hemen randevu..."
+    },
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "5 of 11 images: https://i.ytimg.com/vi/pArVqGBhSm4/hqdefault.jpg, https://i.ytimg.com/vi/rnLVclfU0Tc/hqdefault.jpg, https://i.ytimg.com/vi/yEGBHXrapMM/hqdefault.jpg, https://i.ytimg.com/vi/HlCQeyD0...",
+      "count": 5
+    },
+    {
+      "id": "wide-dom-node",
+      "severity": "Low",
+      "message": "One element has more than 60 direct children, which is slow to lay out (Lighthouse guidance).",
+      "evidence": "<head> has 70 direct children"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 3,
+    "Low": 1,
+    "total": 4,
+    "checks_run": 47
+  }
+}

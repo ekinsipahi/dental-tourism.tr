@@ -1,0 +1,182 @@
+{
+ "summary": {
+  "health_score": 64,
+  "business_type": "Yerel hizmet (aile diş kliniği, Şişli) + programatik konum sayfaları; Nuxt 4 SSR, Netlify + Cloudflare",
+  "top_findings": [
+   "Eski 11 ailede hreflang eksik veya 3 dille sınırlı; yeni 11 ailede 18 giriş",
+   "Ölçekli şablon içeriği: 22 aile × 195 konum = 4.290 sayfa, metin %90+ aynı",
+   "Eski ailelerde başlık ve açıklama fazla uzun, abartılı ve bayat sayı içeriyor",
+   "Aynı sayfada iki Dentist/LocalBusiness varlığı, farklı puan ve bayat yorum sayısı",
+   "www.drdevrim.com DNS'te yok"
+  ],
+  "quick_wins": [
+   "Aynı sayfada iki Dentist/LocalBusiness varlığı, farklı puan ve bayat yorum sayısı",
+   "www.drdevrim.com DNS'te yok",
+   "llms.txt yok; AI tarayıcılar için açık politika yok",
+   "NAP ve saat tutarlı, ancak yorum sayısı ve ortodonti iddiası doğrulanmamış",
+   "Sitemap'te 4.343 URL'nin lastmod'u aynı derleme anı"
+  ]
+ },
+ "categories": [
+  {
+   "name": "Teknik SEO",
+   "score": 72,
+   "what_works": [
+    "HTTPS, HSTS (1 yıl, includeSubDomains), TLS 1.3, tek adımlı http→https 301",
+    "robots.txt temiz, tek sitemap (4.343 URL, geçerli, kopya yok); silinen 2.233 sayfa doğru biçimde 410 + noindex",
+    "Her sayfada tek H1, kendine dönen canonical, index/follow; JSON-LD geçerli (4 blok, 0 hata)",
+    "Yeni 11 dil ailesinde tam hreflang kümesi (17 dil + x-default), Dentist + FAQPage + BreadcrumbList şeması, 05:00–00:00 saatleri tutarlı",
+    "Görsellerde alt eksik yok (yalnızca favicon boş alt), pSEO sayfalarında width/height tam, ilk görsel lazy",
+    "Sunucu yanıtı 0,40–0,66 s, HTML sıkıştırılmış (ana sayfa 35 KB gz)"
+   ],
+   "findings": [
+    {
+     "title": "www.drdevrim.com DNS'te yok",
+     "severity": "Medium",
+     "description": "transport_check: \"DNS resolution failed for www.drdevrim.com\"; sertifika *.drdevrim.com'u kapsıyor ama kayıt yok. — Elle \"www\" yazan hasta boş sayfa görür; eski backlinkler www ile verilmişse kaybolur.",
+     "recommendation": "Cloudflare'de www CNAME → apex, Netlify'da www → drdevrim.com 301."
+    },
+    {
+     "title": "Sitemap'te 4.343 URL'nin lastmod'u aynı derleme anı",
+     "severity": "Low",
+     "description": "lastmod_identical_share 1.0 (2026-11-23T19:01:24Z). Google değişmemiş sayfalara \"değişti\" sinyali almayı güvenilmez sayar ve lastmod'u yok sayar. — Yeni dil sayfaları ve değişen şablonlar için öncelikli tarama şansı kaybolur.",
+     "recommendation": "lastmod'u gerçek değişim tarihinden (şablon/veri commit tarihi) üretin ya da alanı kaldırın; isteğe bağlı: aileler için ayrı sitemap dosyaları + index (GSC'de aile başına indeks takibi)."
+    }
+   ]
+  },
+  {
+   "name": "İçerik Kalitesi",
+   "score": 58,
+   "what_works": [],
+   "findings": [
+    {
+     "title": "Ölçekli şablon içeriği: 22 aile × 195 konum = 4.290 sayfa, metin %90+ aynı",
+     "severity": "High",
+     "description": "/disci/sisli/ 788 kelime, /disci/sisli/nisantasi/ aynı şablon; /fr/dentiste/sisli/ 633 kelime; konum adı ve kuş uçuşu mesafe dışında sayfalar birbirinin kopyası. Google spam politikası \"doorway\" tanımı birebir bu yapı; 22.11 budaması riski 38→17 ilçeye indirdi ama yapı aynı. — Core update dönemlerinde bu tür bölümler topluca değer kaybeder; indekslenmeyen binlerce sayfa tarama bütçesini yer. Dünkü GSC verisi: 4.290 sayfanın yalnızca bir avucu tıklama alıyor (Kadıköy mahalleleri, Şişli).",
+     "recommendation": "Aşama 1: Türkçe 6 aile içinde en zayıf 3'ü (uzman-dis-hekimi, prof-dis-hekimi, estetik-dis-klinigi) noindex veya 410; \"disci\" + \"haftasonu\" + \"en-iyi-disci\" kalsın. Aşama 2: kalan sayfalara konuma özgü gerçek içerik (ulaşım satırı, yakın duraklar, o mahalleden hasta yorumu, hekimin o bölgeye ilişkin notu) ekleyin. Aşama 3: yabancı aileleri 17 ilçe yerine 5–6 merkez ilçeye daraltın."
+    }
+   ]
+  },
+  {
+   "name": "Sayfa İçi SEO",
+   "score": 62,
+   "what_works": [],
+   "findings": [
+    {
+     "title": "Eski 11 ailede hreflang eksik veya 3 dille sınırlı; yeni 11 ailede 18 giriş",
+     "severity": "High",
+     "description": "/disci/sisli/ → 0 hreflang; /en/dentist/sisli/ → 0; /ru/stomatolog/sisli/ → 3 (en, tr, ru); /fr/dentiste/sisli/ → 18 (17 dil + x-default). Aynı konum için 22 sayfa birbirine tutarsız işaret ediyor. — Google hreflang kümelerini karşılıklı doğrular; tek yönlü veya eksik kümeler yok sayılır. Türkçe ana sayfalar (en çok trafik alan aile) hiçbir dil alternatifi bildirmiyor.",
+     "recommendation": "Tüm 22 ailede aynı 17 dil + x-default kümesini üreten tek yardımcı (pseo-i18n.ts) kullanın; TR sayfası x-default olsun. Eski ailelerin şablonlarına eklenmesi tek commit."
+    },
+    {
+     "title": "Eski ailelerde başlık ve açıklama fazla uzun, abartılı ve bayat sayı içeriyor",
+     "severity": "High",
+     "description": "/en/dentist/sisli/ title 90 karakter (\"Best Dental Clinic Turkey\"), description 235; /ru/stomatolog/sisli/nisantasi/ title 77 / desc 231; /haftasonu/sisli/ title 78 / desc 183; ana sayfa title 72 / desc 186; her yerde \"124 yorum\", \"10.000+ vaka/hasta\". — Google 60 karakteri aşan başlığı kısaltır veya yeniden yazar; \"Best … Turkey\" gibi üstünlük iddiaları tıklama getirmiyor ve sağlık alanında güven düşürüyor. \"124 yorum\" sayısı bayat (hekim doğruladı), \"10.000+ vaka\" doğrulanmamış iddia.",
+     "recommendation": "Başlık 55–60, açıklama 140–155 karaktere kısaltın; sayıları kaldırın veya canlı Google puanından besleyin; \"Best Dental Clinic Turkey\" → \"Dentist in Şişli, Istanbul · Family Clinic · 35 Years\". Hekim onayı olmayan \"10.000+\" ifadesini çıkarın."
+    },
+    {
+     "title": "NAP ve saat tutarlı, ancak yorum sayısı ve ortodonti iddiası doğrulanmamış",
+     "severity": "Medium",
+     "description": "Adres \"Abide-i Hürriyet Caddesi No:148 Kat:4 D:11\", telefon +905055771883, 05:00–00:00 × 7 gün her yerde aynı (iyi). Ana sayfa meta: \"ortodonti\" (hekim sorusu 25 açık); \"124 yorum\" bayat; hasMap ve sameAs var. — GBP ile site arasında yorum sayısı ve hizmet listesi uyuşmazsa yerel paket güveni düşer.",
+     "recommendation": "GBP'deki gerçek yorum sayısını canlı çekin veya sayıyı kaldırın; ortodonti/Invisalign hizmetini hekim onaylamadıysa menü ve şemadan çıkarın; GBP kategorisi \"Diş hekimi\" ile şema türü aynı kalsın."
+    },
+    {
+     "title": "\"Hafta sonu açık dişçi\" niyeti güçlü; \"Şişli diş hekimi\" için ana sayfa ile /disci/sisli/ birbiriyle yarışıyor",
+     "severity": "Medium",
+     "description": "Ana sayfa title \"Şişli Diş Hekimi\", /disci/sisli/ title \"Şişli Dişçi … Diş Hekimi\", /en-iyi-disci/sisli/, /uzman-dis-hekimi/sisli/ aynı niyete 4 sayfa. GSC (22–23.11): \"şişli diş hekimi\" 11 gösterim 0 tıklama, \"nişantaşı diş hekimi\" 11/0. — Aynı niyete birden çok sayfa, Google'ın hangisini göstereceğini sürekli değiştirmesine (kanibalizasyon) ve düşük CTR'ye yol açar.",
+     "recommendation": "Şişli için tek hedef sayfa belirleyin (ana sayfa), /disci/sisli/ başlığını \"Şişli'de dişçi arayanlar için: mahalleler, ulaşım, randevu\" gibi tamamlayıcı açıya çevirin; \"pazar açık dişçi\" için /haftasonu/sisli/ tek sayfa kalsın."
+    }
+   ]
+  },
+  {
+   "name": "Şema / Yapısal Veri",
+   "score": 70,
+   "what_works": [],
+   "findings": [
+    {
+     "title": "Aynı sayfada iki Dentist/LocalBusiness varlığı, farklı puan ve bayat yorum sayısı",
+     "severity": "Medium",
+     "description": "Ana sayfa: \"Dr. Dt. Devrim Biriken Sipahi Diş Kliniği\" (ratingValue 5.0, reviewCount 124) + \"Dr. Dt. Devrim Biriken Sipahi\" (ratingValue 5, 124); /disci/sisli/ ve /iletisim/ sayfalarında da iki blok. @id yok, varlıklar birleşmiyor. — Google aynı işletmeyi iki kez görür; AggregateRating için \"kendi sayfanda kendi işletmen\" durumunda zengin sonuç zaten gösterilmez, bayat sayı güven kaybı. Yerel paket sinyali bulanıklaşır.",
+     "recommendation": "Tek Dentist varlığı (@id https://drdevrim.com/#clinic), sayfa şemaları ona referans versin; reviewCount'u GBP'den canlı çekin ya da kaldırın; Person (hekim) worksFor ile bağlansın."
+    }
+   ]
+  },
+  {
+   "name": "Performans (CWV)",
+   "score": 60,
+   "what_works": [],
+   "findings": [
+    {
+     "title": "Laboratuvar verisi alınamadı; ana sayfa HTML 202 KB / 1.073 DOM düğümü, 5 görsel boyutsuz",
+     "severity": "Medium",
+     "description": "PageSpeed API anahtarı yok (anahtarsız istek 429), Chromium başlatılamadı (headless shell exit 127). Ölçülen: TTFB 0,40–0,66 s; ana sayfa HTML 202 KB (35 KB gz), 1.073 düğüm; pSEO sayfası 77 KB / 368 düğüm; ana sayfada 5 görsel width/height eksik (CLS riski). — CWV alan verisi olmadan öncelik sırası tahmindir; CLS için boyutsuz görseller somut risk.",
+     "recommendation": "Ücretsiz PageSpeed API anahtarı alıp claude-seo'ya (~/.config/claude-seo/google-api.json) tanımlayın; ana sayfadaki 5 görsele width/height; ana sayfa HTML'ini küçültün (18 dilin satır içi verisi istemciye gidiyor mu kontrol edin)."
+    }
+   ]
+  },
+  {
+   "name": "AI Arama Hazırlığı",
+   "score": 55,
+   "what_works": [],
+   "findings": [
+    {
+     "title": "llms.txt yok; AI tarayıcılar için açık politika yok",
+     "severity": "Medium",
+     "description": "https://drdevrim.com/llms.txt → 404; robots.txt yalnızca User-agent: * (AI botlara özel satır yok). agentic_check P1 bulguları \"info\" düzeyinde. — ChatGPT/Perplexity alıntıları kardeş sitede (devrimbirikensipahi) zaten geliyor; drdevrim'de klinik özetini makine okunur vermek alıntı şansını artırır. Google için llms.txt etkisizdir, diğer motorlar için ucuz sinyal.",
+     "recommendation": "llms.txt: klinik, hekimler, saat, adres, hizmetler, en önemli 10 sayfa; robots.txt'ye GPTBot/ClaudeBot/PerplexityBot için açık Allow; Content-Signal başlığı isteğe bağlı."
+    }
+   ]
+  },
+  {
+   "name": "Görseller",
+   "score": 80,
+   "what_works": [],
+   "findings": []
+  }
+ ],
+ "action_plan": {
+  "phases": [
+   {
+    "name": "Phase 1: Critical Fixes",
+    "timeframe": "Week 1",
+    "items": []
+   },
+   {
+    "name": "Phase 2: High-Impact Improvements",
+    "timeframe": "Weeks 2-3",
+    "items": [
+     "Eski 11 ailede hreflang eksik veya 3 dille sınırlı; yeni 11 ailede 18 giriş",
+     "Ölçekli şablon içeriği: 22 aile × 195 konum = 4.290 sayfa, metin %90+ aynı",
+     "Eski ailelerde başlık ve açıklama fazla uzun, abartılı ve bayat sayı içeriyor",
+     "Aynı sayfada iki Dentist/LocalBusiness varlığı, farklı puan ve bayat yorum sayısı",
+     "www.drdevrim.com DNS'te yok",
+     "llms.txt yok; AI tarayıcılar için açık politika yok",
+     "NAP ve saat tutarlı, ancak yorum sayısı ve ortodonti iddiası doğrulanmamış"
+    ]
+   },
+   {
+    "name": "Phase 3: Content & Authority",
+    "timeframe": "Month 2",
+    "items": [
+     "Ölçekli şablon içeriği: 22 aile × 195 konum = 4.290 sayfa, metin %90+ aynı",
+     "Laboratuvar verisi alınamadı; ana sayfa HTML 202 KB / 1.073 DOM düğümü, 5 görsel boyutsuz",
+     "\"Hafta sonu açık dişçi\" niyeti güçlü; \"Şişli diş hekimi\" için ana sayfa ile /disci/sisli/ birbiriyle yarışıyor"
+    ]
+   },
+   {
+    "name": "Phase 4: Monitoring & Iteration",
+    "timeframe": "Ongoing",
+    "items": [
+     "GSC + pseo_etki haftalık",
+     "PSI anahtarıyla CWV",
+     "AI referrer takibi"
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "findings_dir": "findings/",
+  "screenshots_dir": "screenshots/"
+ },
+ "generated_at": "2026-11-24T19:50"
+}
