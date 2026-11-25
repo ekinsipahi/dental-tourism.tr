@@ -471,3 +471,10 @@ yayınlamıyordu (denetim bulgusu), orada değişiklik yok.
 
 ekB'deki 2.145 URL (17 ilçe × 11 dil) 410'a döndü; 25.11'de geri açılan 15 ilçenin 11 yeni dil sayfası sitemap'e hiç girmeden
 410 oldu.
+
+## 15. Ek — 26.11.2026: devrimbirikensipahi.com.tr'de pSEO açıldı (hekim kararı)
+
+dbs'de programatik sayfa yoktu (11 para sayfası + 41 bölge blog yazısı). Hekim "aynı mantıkla, daha az" dedi: 23 ilçe + 239 mahalle
+(kesme listesi: Ataşehir ve ötesi hariç), 4 aile + 10 tedavi × ilçe = **1.039 sayfa**, sitemap 128 → **1.127**; 40 bölge blog yazısı
+yeni sayfalara 301; /acil-dis-hekimi/ → /dis-agrisi-tedavisi/ 301 ("acil dişçi değiliz"). dbs commit `897ef7c` (Render, canlı
+doğrulandı). Anahtar kelime → sayfa haritası ve dışarıda kalanlar: `docs/dbs-pseo-keyword-haritasi-2026-11-26.md`.
