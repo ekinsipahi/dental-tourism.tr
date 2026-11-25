@@ -450,3 +450,24 @@ Düzeltme (drdevrim `e59f732`, main):
 Beklenen GSC seyri: çizgisiz adresler yeniden tarandıkça "Alternate page" kaydından "Page with redirect" kaydına geçer;
 sitemap'teki adresler canonical ile aynı olduğundan yeni "alternate" oluşmaz. Sayının düşmesi haftalar alır; GSC'de
 23.11'de başlatılan doğrulama kendiliğinden sürer, yeniden başlatmak gerekmez. Sitemap'i GSC'de bir kez daha "gönder".
+
+## 14. Ek — 26.11.2026: drdevrim'de 22.11'de eklenen 11 dil ailesi geri alındı (hekim kararı)
+
+Hekim: hastalar kendi seçtiği dillerden (İngilizce, Rusça, Ukraynaca, Bulgarca, Almanca) geliyor, 22.11'de eklenen 11 dil
+gereksiz. Veri: son 28 günde (29.10–26.11) bu 11 dilden gelen insan ziyareti 1 (Almanca hariç 0). Uygulama drdevrim `2129540` (main).
+
+| | |
+|---|---|
+| Kaldırılan aileler (11 × 348 = 3.828 sayfa) | nl/tandarts, fr/dentiste, it/dentista, es/dentista, pl/dentysta, ar/tabib-asnan, sv/tandlakare, da/tandlaege, no/tannlege, ro/dentist, az/dis-hekimi |
+| Kalan aileler (11 × 348 = 3.828 sayfa) | disci, haftasonu, en-iyi-disci, uzman-dis-hekimi, prof-dis-hekimi, estetik-dis-klinigi, en/dentist, ru/stomatolog, uk/stomatolog, bg/zabolekar, de/zahnarzt |
+| Sitemap | 7.709 → 3.881 |
+| Kaldırılan adresler | kök dahil 410 Gone (server/middleware/kaldirilan-ilceler.ts, KALDIRILAN_DIL) |
+| Dokunulmayan | /lang/<dil>/ açılış sayfaları (17), /<dil>/ → /lang/<dil>/ 301'leri, dentaltourism'in drdevrim.com/<dil>/ linkleri |
+
+Mekanik: `app/data/pseo-segments.ts` içine `AKTIF_PSEO_DILLER` anahtarı eklendi (şu an boş). Rotalar (`isPseoLang`), sitemap
+(`yeniDilRoutes`), hub 301'leri ve hreflang listesi bu diziden türer; metinler (pseo-i18n.ts) ve `[lang]/[segment]` sayfaları
+yerinde. Geri açmak = diziye dil kodu yazmak (örn. `['ar', 'az']`), başka dosyaya dokunmak gerekmez. Eski 6 aile zaten hreflang
+yayınlamıyordu (denetim bulgusu), orada değişiklik yok.
+
+ekB'deki 2.145 URL (17 ilçe × 11 dil) 410'a döndü; 25.11'de geri açılan 15 ilçenin 11 yeni dil sayfası sitemap'e hiç girmeden
+410 oldu.
