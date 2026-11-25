@@ -430,3 +430,23 @@ Yerel smoke test (node-server derlemesi): /disci/umraniye/, /disci/umraniye/dudu
 
 Etki ölçümü (§9) bu değişiklikle kirlenir: 22.11–25.11 arası 3 günlük "budanmış" dönem tek başına anlamlı değil; `pseo_etki`
 karşılaştırmasında 25.11 sonrası ayrı dönem olarak alınmalı.
+
+## 13. Ek — 26.11.2026: GSC "Alternate page with proper canonical tag" (3.860 sayfa) — kök neden ve düzeltme
+
+GSC'nin drdevrim'de 3.860 pSEO sayfası için verdiği bu "info" kaydı hata değil, ama sitemap ile canonical'ın uyuşmadığını
+gösteriyordu. Kök neden: nuxt.config'de sitemap URL'leri eğik çizgili yazılmıştı (`/disci/sisli/`), ancak @nuxtjs/sitemap
+(nuxt-site-config varsayılanı `trailingSlash: false`) çizgiyi düşürüyordu; canlı sitemap'te 7.709 URL'den yalnızca ana sayfa
+çizgili idi. Sayfaların canonical'ı ise çizgili. Google sitemap'teki çizgisiz adresi tarıyor, canonical'ı çizgili görüyor ve
+çizgisiz adresi "alternate" sayıyordu. Ayrıca çizgisiz adres 301 yerine 200 dönüyordu (her sayfanın iki kopyası).
+
+Düzeltme (drdevrim `e59f732`, main):
+- `site.trailingSlash: true` → sitemap 7.709/7.709 URL çizgili, canonical ile bire bir aynı.
+- `server/middleware/son-egik-cizgi.ts`: çizgisiz sayfa adresi → 301 → çizgili adres (sorgu korunur). Dosyalar (`.xml`, `.txt`,
+  görseller), `/_nuxt`, `/_ipx`, `/api`, `/.netlify`, `/.well-known` dokunulmaz. "son-" öneki dosyayı 410 kuralından sonra
+  çalıştırır: kaldırılan ilçelerin çizgisiz adresi doğrudan 410 alır. routeRules 301'leri (acil-dis, dil kökleri) önce çalışır.
+- Footer'daki `/gizlilik` ve `/kvkk` linkleri çizgili yazıldı; sayfalar mevcut değil (404) — her sayfadan iki kırık link,
+  hekimden metin bekleniyor (ayrı iş).
+
+Beklenen GSC seyri: çizgisiz adresler yeniden tarandıkça "Alternate page" kaydından "Page with redirect" kaydına geçer;
+sitemap'teki adresler canonical ile aynı olduğundan yeni "alternate" oluşmaz. Sayının düşmesi haftalar alır; GSC'de
+23.11'de başlatılan doğrulama kendiliğinden sürer, yeniden başlatmak gerekmez. Sitemap'i GSC'de bir kez daha "gönder".
