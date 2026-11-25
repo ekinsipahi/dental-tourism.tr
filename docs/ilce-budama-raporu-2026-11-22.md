@@ -404,3 +404,29 @@ yaklaşık 4 dakikada çıktı. Nedeni Netlify panelinden (Deploys) görülmeli.
 
 **Google tarafı için öneri:** GSC → URL inspection → "Request indexing": /, /haftasonu/sisli/, /disci/sisli/, /hizmetler/dis-agrisi/.
 Gösterimlerdeki "nöbetçi / 7 24 / acil" kuyruğu yeniden taramayla haftalar içinde söner; silinen ilçelerinki 410 ile düşer.
+
+## 12. Ek — 25.11.2026: drdevrim'de 15 ilçe geri açıldı (hekim kararı)
+
+Hekim, 22.11 budamasının GSC'de görünür bir etkisi olmadığını söyleyip "hepsini geri aç" dedi; yalnızca kliniğe en uzak
+ilçeler dışarıda kalacak. Uygulanan karar (drdevrim `8656a1b`, main):
+
+| | İlçe |
+|---|---|
+| **Geri açılan (15, 138 mahalle)** | Sultangazi, Ümraniye, Beykoz, Ataşehir, Başakşehir, Çekmeköy, Küçükçekmece, Maltepe, Sancaktepe, Avcılar, Arnavutköy, Kartal, Esenyurt, Beylikdüzü, Büyükçekmece |
+| **Kaldırılmış kalan (6)** | Adalar, Çatalca, Pendik, Tuzla, Şile, Silivri — adresleri 410 Gone (server/middleware/kaldirilan-ilceler.ts) |
+
+Mekanik: 15 ilçenin satırı `app/data/istanbul-data-kaldirilan.ts` → `app/data/istanbul-data.ts`'e taşındı; çok dilli
+sayfalardaki "kliniğe X km" ifadesi için her birine merkez koordinatı eklendi; dizi kliniğe uzaklığa göre yeniden
+sıralandı (32 ilçe + 316 mahalle). Rotalar, sitemap ve "diğer ilçeler" listeleri aynı diziden türediği için başka dosya
+değişmedi. Geri gelen sayfalar 22.11'den beri canlı olan metinle (05:00–00:00, acil/nöbetçi/7-24 yok) yayınlanır; 22 aile
+× 348 konum.
+
+Sayılar: sitemap 4.343 → **7.709** URL (yerel derleme; canlı doğrulama aşağıda). Geri gelen URL'ler 22.11'de 410 verenlerle
+aynı adresler (ekA'daki listede bu 15 ilçenin satırları), bu yüzden Google eski dizin kayıtlarını yeniden canlı sayacak.
+
+Yerel smoke test (node-server derlemesi): /disci/umraniye/, /disci/umraniye/dudullu/, /en/dentist/maltepe/,
+/nl/tandarts/esenyurt/ ("26 km van Esenyurt"), /de/zahnarzt/buyukcekmece/mimaroba/ → 200; /disci/tuzla/, /disci/pendik/kurtkoy/,
+/en/dentist/catalca/, /fr/dentiste/adalar/, /disci/sile/, /disci/silivri/ → 410; sitemap'te tuzla/catalca/adalar 0 eşleşme.
+
+Etki ölçümü (§9) bu değişiklikle kirlenir: 22.11–25.11 arası 3 günlük "budanmış" dönem tek başına anlamlı değil; `pseo_etki`
+karşılaştırmasında 25.11 sonrası ayrı dönem olarak alınmalı.
