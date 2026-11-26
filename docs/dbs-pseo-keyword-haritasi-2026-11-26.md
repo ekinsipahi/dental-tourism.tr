@@ -138,3 +138,23 @@ aileler, aynı ilçe için 10 tedavi bağlantısı, "şu an açık" kutusu, heki
 
 Merkezi takip (site=dbs) `manage.py pseo_etki --days 7` ile haftalık; dbs'nin 18–25.11 taban çizgisi: 60 insan oturumu,
 1 iletişim. GSC'ye https://devrimbirikensipahi.com.tr/sitemap.xml yeniden gönderilmeli.
+
+## 9. Denetim — 27.11.2026 (düzeltme)
+
+Bu belgenin 26.11 sürümü bazı ifadeleri "kullanıldı" diye gösteriyordu ama sayfalar render edilip ölçüldüğünde 90 keyword'ün
+yalnızca **26'sı** hedef sayfada birebir geçiyordu; 38'inin sadece kelimeleri dağınıktı, 26'sı hiç yoktu (ör. "diş kliniği şu anda
+açık olanlar", "diş doktoru şişli", "20lik diş çekimi şişli", "diş klinikleri hafta sonu açık mı", "iyi dişçi nasıl bulunur").
+
+Düzeltme (dbs `3ad5d32`): aile ve tedavi metinleri ifadeleri ara başlık / SSS / cümle olarak **birer kez** içerecek şekilde yeniden
+yazıldı. Ölçüm (Türkçe ek ve kelime sırası toleranslı, title/H1/H2/SSS/gövde):
+
+| | Tam geçen | Not |
+|---|---|---|
+| Şişli sayfaları | 88 / 90 | "sin implant": sayfada "SIN implant" (ölçüm harf dönüşümü); "istanbul şişli dişçi": İstanbul ve "Şişli dişçi" ayrı cümlelerde |
+| Kadıköy, Esenyurt sayfaları | 78 / 81 | "Kadıköy diş kliniği randevu" bilerek yok: o semtte klinik varmış gibi okunur |
+
+Kalıcı test: dbs `pseo/tests.py::KeywordKapsamaTests` (16 sayfa, 70 ifade). Bilerek dışarıda (hekim kararı / karar bekliyor):
+acil, nöbetçi, 24 saat, 7-24, gece; prof/doç; endodontist ve çene cerrahı unvanı; mikroskop; metinde "en iyi"; fiyat ifadeleri;
+"uzman diş hekimi"; "cerrah diş doktoru" (son dördü hekime soruldu).
+
+Aynı denetimde bulunan hata: hekim paragrafında Dt. Ekin Sipahi "kızı" yazıyordu; doğrusu "oğlu" (düzeltildi).
