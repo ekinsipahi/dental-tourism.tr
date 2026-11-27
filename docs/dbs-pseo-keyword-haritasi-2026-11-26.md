@@ -35,29 +35,29 @@ kökten Şişli sayfasına 301 gider; diğerlerinin kökü mevcut kategori sayfa
 
 | Keyword (hekimin listesi) | Hacim | Nereye gitti | Sayfada nasıl geçiyor |
 |---|---|---|---|
-| diş kliniği şu anda açık olanlar | 170 | /acik-disci/{ilçe}/[{mahalle}/] | lead: "Şu anda açık diş kliniği arıyorsanız…"; SSS "{İlçe}'de şu anda açık dişçi var mı?"; JS kutusu "Şu an açığız" |
-| açık dişçi şişli, şişli dişçi şu anda açık olanlar | – | /acik-disci/sisli/ | h1 "Şişli Açık Dişçi", title "… Şu An Açık mı?" |
+| diş kliniği şu anda açık olanlar | 170 | /acik-disci/{ilçe}/[{mahalle}/] | lead: "Diş kliniği şu anda açık olanlar arasında mıyız?"; SSS "{İlçe}'de şu anda açık dişçi var mı?"; JS kutusu "Şu an açığız" |
+| açık dişçi şişli, şişli dişçi şu anda açık olanlar | – | /acik-disci/sisli/ | h1 "Şişli Açık Dişçi: Sabah 5'ten Gece 12'ye"; title "Şişli Şu An Açık Dişçi | …" |
 | diş kliniği en yakın, en yakın dişçi | – | /acik-disci/… | SSS "{Yer} için en yakın dişçi siz misiniz?" (km ile dürüst cevap) |
 | nöbetçi dişçi şişli, şişli dişçi 24 saat, 7 24 dişçi şişli, gece açık dişçi şişli, acil dişçi/diş hekimi şişli, diş ağrısı acil dişçi, gece dişçi, nöbetçi diş hekimi avrupa yakası | 20/10/– | **YOK** | hekim: "acil dişçi değiliz"; bu kelimeler hiçbir sayfada geçmez (test tarar). Diş ağrısı niyeti /dis-agrisi-tedavisi/ sayfasına (eski /acil-dis-hekimi/ 301) |
 | diş doktoru şişli | 40 | /dis-klinigi/sisli/ | title "Şişli Diş Kliniği"; "diş doktoru" ifadesi gövdede |
-| çocuk diş doktoru şişli | 20 | /cocuk-dis-hekimi/sisli/ | h1 "Şişli Çocuk Diş Hekimi", keyword listesi "çocuk diş doktoru {yer}" |
-| dişçi şişli, diş hekimi şişli, istanbul şişli dişçi, dişçi şişli yakınında, dişci şişli, dis doktoru sisli, diş şişli | – | /dis-klinigi/sisli/ | tek sayfa, varyasyonlar gövde/SSS |
+| çocuk diş doktoru şişli | 20 | /cocuk-dis-hekimi/sisli/ | h1 "Şişli Çocuk Diş Hekimi"; SSS "Şişli'de çocuk diş doktoru arıyorum…" |
+| dişçi şişli, diş hekimi şişli, istanbul şişli dişçi, dişçi şişli yakınında, dişci şişli, dis doktoru sisli, diş şişli | – | /dis-klinigi/sisli/ | lead "Şişli yakınında dişçi, diş doktoru ya da diş kliniği…"; SSS "İstanbul Şişli'de dişçi randevusu nasıl alırım?" (`84c06c1`) |
 | mecidiyeköy dişçi, nişantaşı diş kliniği, osmanbey dişçi, fulya diş kliniği, bomonti dişçi, gayrettepe dişçi, kurtuluş dişçi | – | /dis-klinigi/sisli/{mecidiyekoy,nisantasi,osmanbey,fulya,bomonti,kurtulus}/ ; gayrettepe → /dis-klinigi/besiktas/gayrettepe/ | mahalle sayfaları (Bomonti ve Kurtuluş bu parti için eklendi) |
 | implant şişli, zirkonyum kaplama şişli, diş beyazlatma şişli, kanal tedavisi şişli, 20lik diş çekimi şişli, diş taşı temizliği şişli, gülüş tasarımı şişli | – | /implant-tedavisi/sisli/, /zirkonyum-kaplama/sisli/, /dis-beyazlatma/sisli/, /kanal-tedavisi/sisli/, /dis-cekimi/sisli/, /dis-tasi-temizligi/sisli/, /gulus-tasarimi/sisli/ | tedavi × ilçe (aynı kalıp 23 ilçe için) |
 | diş teli şişli, şeffaf plak şişli | – | /ortodonti/sisli/, /seffaf-plak/sisli/ | hekim 26.11: ortodonti yapılıyor |
 | implant fiyatları şişli, şişli dişçi fiyatları | – | **YOK** (ayrı sayfa açılmaz) | fiyat kuralı; her sayfada SSS "Fiyat bilgisi alabilir miyim?" → yazılı teklif, WhatsApp |
 | şişli diş kliniği randevu | – | /dis-klinigi/sisli/ | "Saatler ve randevu" bölümü |
 | pazar açık dişçi | 110 | /pazar-acik-disci/{ilçe}/[{mahalle}/] | h1 "{Yer} Pazar Açık Dişçi" |
-| hafta sonu dişçiler açık mı | 90 | /pazar-acik-disci/… | SSS |
+| hafta sonu dişçiler açık mı | 90 | /pazar-acik-disci/… | lead (soru) + SSS "Hafta sonu dişçiler açık mı?" (`84c06c1`) |
 | pazar günü açık diş hekimi | 50 | /pazar-acik-disci/… | lead |
-| hafta sonu açık dişçi | 30 | /pazar-acik-disci/… (dbs) — drdevrim'de /haftasonu/ ailesi zaten var | title/description |
+| hafta sonu açık dişçi | 30 | /pazar-acik-disci/… (dbs) — drdevrim'de /haftasonu/ ailesi zaten var | H2 "Hafta sonu açık dişçi: hangi tedaviler yapılır?" |
 | özel dişçiler hafta sonu açık mı | 30 | /pazar-acik-disci/… | SSS "Özel dişçiler hafta sonu açık mı?" |
 | pazar dişçiler açık mı, diş klinikleri hafta sonu açık mı, pazar dişçi açık mı, pazar açık diş kliniği/hekimi, pazar günü açık dişçi, pazar açık olan dişçiler | 20/20/10/– | /pazar-acik-disci/… | lead + SSS |
 | pazar açık dişçi şişli, cumartesi açık dişçi şişli, bayramda açık dişçi | – | /pazar-acik-disci/sisli/ | SSS "Cumartesi açık mısınız?", "Bayramda açık mısınız?" |
 | hafta sonu açık dişçi istanbul, pazar günü açık dişçi avrupa yakası | – | /pazar-acik-disci/sisli/ (eski blog yazıları buraya 301) | |
-| diş klinikleri istanbul | 110 | /dis-klinigi/{ilçe}/ ailesi (anahtar kelime listesinde) | ilçe sayfaları |
+| diş klinikleri istanbul | 110 | /dis-klinigi/{ilçe}/[{mahalle}/] | gövde "Diş klinikleri İstanbul genelinde…" |
 | diş polikliniği randevu alma | 20 | /dis-klinigi/… | "Saatler ve randevu" |
-| diş kliniği, diş klinik, diş polikliniği, uzman diş hekimi | – | /dis-klinigi/… | gövde; "uzman" yalnızca genel anlamda, unvan iddiası yok |
+| diş kliniği, diş klinik, diş polikliniği, uzman diş hekimi | – | /dis-klinigi/… | gövde; "uzman diş hekimi" SSS "Uzman diş hekimi ile diş hekimi arasındaki fark nedir?" (bilgi sorusu, unvan iddiası yok, `84c06c1`) |
 | diş polisaj nedir / fiyatları | 170/90 | /dis-tasi-temizligi/{ilçe}/ | bölüm "Diş polisajı nedir?", SSS "Polisaj ile beyazlatma aynı şey mi?" (fiyat yok) |
 | Negatifler (ankara, izmir, hastane, devlet, fakülte, maaş, iş ilanları, açma şartları, polisaj macunu, dış cephe, polis, şikayet…) | – | Ads negatif listesi | pSEO'da bu niyetler için sayfa yok |
 
@@ -67,7 +67,7 @@ kökten Şişli sayfasına 301 gider; diğerlerinin kökü mevcut kategori sayfa
 |---|---|---|---|
 | diş hekimi tavsiye | 30 | /dis-hekimi-tavsiye/{ilçe}/ (23 sayfa) | h1 "{İlçe} Diş Hekimi Tavsiye" |
 | diş hekimi tavsiye istanbul, iyi bir dişçi arıyorum, iyi dişçi, iyi bir dişçi | 10/10/– | /dis-hekimi-tavsiye/… | lead "İyi bir diş hekimi arayan hastalar…" |
-| en iyi dişçi istanbul avrupa yakası, en iyi dişçi istanbul, en iyi dişçi nerede/hangisi | 10/– | /dis-hekimi-tavsiye/… yalnızca HEDEF kelime | metinde "en iyi" geçmez (mevzuat; test tarar); "tavsiye", "güvenilir", "deneyim", "hasta yorumları" ile karşılanır |
+| en iyi dişçi istanbul avrupa yakası, en iyi dişçi istanbul, en iyi dişçi nerede/hangisi | 10/– | /dis-hekimi-tavsiye/… | hekim 27.11: yalnızca SSS sorusu — "{İlçe}'de en iyi dişçi hangisi?", "İstanbul Avrupa yakasında en iyi dişçi nerede?" (Anadolu: "İstanbul'da en iyi dişçi nerede?"); title/meta/H1/metinde yok (test tarar) |
 | şişli diş hekimi tavsiye, şişli dişçi tavsiye, şişli iyi dişçi, güvenilir dişçi şişli, şişli dişçi yorumları | – | /dis-hekimi-tavsiye/sisli/ | SSS "Şişli'de güvenilir diş hekimi nasıl bulurum?", "Hasta yorumlarınızı nerede okuyabilirim?" |
 | mecidiyeköy dişçi tavsiye, nişantaşı diş hekimi tavsiye | – | /dis-hekimi-tavsiye/sisli/ (tavsiye ailesi mahalle seviyesine inmez: thin content) | |
 | implant için diş hekimi tavsiye istanbul | – | /dis-hekimi-tavsiye/… SSS + /implant-tedavisi/… | SSS "İmplant için diş hekimi tavsiyesi arıyorum…" |
@@ -81,12 +81,12 @@ Klinikte endodontist, çene cerrahı ve profesör unvanı yok → unvan iddiası
 
 | Keyword | Hacim | Nereye gitti | Nasıl |
 |---|---|---|---|
-| kanal tedavisi uzmanı, diş kanal tedavisi uzmanı, endodonti…, kanal tedavisi şişli/istanbul, kanal tedavisi yenileme | 320/20/– | /kanal-tedavisi/{ilçe}/ | SSS "Kanal tedavisi için uzmana mı gitmeliyim?" (deneyim anlatımı, unvan yok); bölüm "Daha önce kanal tedavisi yapılmış dişte ağrı" (yenileme) |
+| kanal tedavisi uzmanı, diş kanal tedavisi uzmanı, endodonti…, kanal tedavisi şişli/istanbul, kanal tedavisi yenileme | 320/20/– | /kanal-tedavisi/{ilçe}/ | SSS "Kanal tedavisi için uzmana mı gitmeliyim?", "Kanal tedavisi uzmanına ne denir?", "…hangi bölümdür?", "Diş kanal tedavisi uzmanı ne yapar?" (cevapta "endodonti (kanal tedavisi) uzmanı"), "İstanbul'da kanal tedavisi için röntgenimi gönderebilir miyim?" (son ikisi `84c06c1`); bölüm "Kanal tedavisi yenileme"; unvan yok |
 | mikroskopla kanal tedavisi | – | **YOK** | mikroskop iddiası yasak (hekim kuralı) |
-| cerrah diş doktoru, cerrah dişçi, cerrahi diş kliniği, gömülü diş çekimi şişli, yirmilik diş ameliyatı şişli, çene cerrahı şişli | 260/– | /dis-cekimi/{ilçe}/ | SSS "Gömülü diş çekimi için cerrah mı gerekir?" → çoğu klinikte yapılır, derin vakalar yönlendirilir |
-| implant uzmanı, implant cerrahı, implantolog | – | /implant-tedavisi/{ilçe}/ | bölüm "Kim yapıyor, hangi sistem?": Dt. Ekin Sipahi implantoloji master'ı, SIN sistemi |
+| cerrah diş doktoru, cerrah dişçi, cerrahi diş kliniği, gömülü diş çekimi şişli, yirmilik diş ameliyatı şişli, çene cerrahı şişli | 260/– | /dis-cekimi/{ilçe}/ | SSS "Gömülü diş çekimi için cerrah mı gerekir?", "Cerrah diş doktoru ya da cerrah dişçi aramalı mıyım?" (cevapta "cerrahi diş kliniği"), "Diş hekimi cerrah olabilir mi?", "Gömülü 20'lik diş çekimi fiyatı ve cerrahi diş çekimi fiyatları neye göre değişir?" (tutar yok; son üçü `84c06c1`); "{ilçe}'den gömülü diş çekimi…", "…yirmilik diş ameliyatı…"; çene cerrahı unvan olarak yok ("ağız, diş ve çene cerrahisine yönlendiririz") |
+| implant uzmanı, implant cerrahı, implantolog | – | /implant-tedavisi/{ilçe}/ | bölüm "Kim yapıyor, hangi sistem?"; SSS "İmplant cerrahı kim, implantı kim yapıyor?", "İmplantolog ya da implant uzmanı mı aramalıyım?" (`84c06c1`): Dt. Ekin Sipahi implantoloji master'ı, SIN sistemi |
 | prof diş doktoru, prof dr diş hekimi (+istanbul/şişli), prof dişçi, doç dr… | 390/20/10 | **YOK** | profesör yok; hekimin talimatı "yoksa açma" |
-| kanal tedavisi uzmanına ne denir, hangi bölüm, cerrah dişi nasıl çeker, genel cerrah diş çeker mi… | – | blog yazısı "Hangi diş sorunu için hangi uzmana gidilir?" — **henüz yazılmadı** | sıradaki iş |
+| kanal tedavisi uzmanına ne denir, hangi bölüm, cerrah dişi nasıl çeker, genel cerrah diş çeker mi… | – | /kanal-tedavisi/{ilçe}/ ve /dis-cekimi/{ilçe}/ SSS'lerinde var ("Kanal tedavisi uzmanına ne denir?", "Cerrah dişi nasıl çeker…", "Diş hekimi cerrah mıdır, genel cerrah diş çeker mi?") | blog yazısı "Hangi diş sorunu için hangi uzmana gidilir?" henüz yazılmadı |
 | cerrahpaşa, şehirler, isimle aramalar, profdent, macun/fırça, kanal 7 | – | Ads negatif | |
 
 ## 5. Parti 3 — İngilizce (yabancı hasta) → dentaltourism.tr
@@ -159,42 +159,37 @@ acil, nöbetçi, 24 saat, 7-24, gece; prof/doç; endodontist ve çene cerrahı u
 
 Aynı denetimde bulunan hata: hekim paragrafında Dt. Ekin Sipahi "kızı" yazıyordu; doğrusu "oğlu" (düzeltildi).
 
-## 10. Tam denetim — 27.11.2026 (tüm sayfalar, tüm keyword'ler)
+## 10. Eksik keyword'lerin eklenmesi — 27.11.2026
 
-§9'daki ölçüm 16 örnek sayfaya bakıyordu. Bu turda hekimin ham partileri (konuşma kaydından: Parti 1, 2, 4 ve önerilen
-benzerleri) **106 kurala** çevrildi. Şişli için verilen keyword'ler hekimin istediği gibi her ilçe/mahalleye genellendi
-("pazar açık dişçi şişli" → 261 sayfanın her birinde "{yer} pazar açık dişçi"). Sitemap'teki **1.049 sayfanın hepsi** yerelde
-render edildi (dbs `main`, SQLite). Kurallar: ana ifade title + H1'de, soru tipi SSS'te, yan ifade gövdede, "en iyi" yalnızca
-tavsiye SSS'inde, hariç tutulanlar hiçbir yerde.
+Bu belgede "kullanıldı" yazan keyword'ler 1.049 sayfanın hepsi render edilerek tek tek ölçüldü. Sayfada geçmeyenler dbs
+`84c06c1` ile **yeni SSS sorusu** olarak eklendi. Mevcut cümle, title, description, H1, ara başlık ve link değişmedi
+(render karşılaştırması: 593 sayfaya 1–3 soru eklendi, başka fark yok).
 
-| Bulgu (önce) | Düzeltme (dbs `a250bf7`) | Sonra |
+| Keyword | Sayfalar | Eklendiği yer |
 |---|---|---|
-| 51 grup / 114 sayfa aynı title, H1, description (Merkez ×3, Kartaltepe ×3, Esenler/Küçükçekmece/Esenyurt "Fatih" = Fatih ilçesi, Beşiktaş "Arnavutköy" = Arnavutköy ilçesi…) | Aynı adlı / ilçe adlı / genel adlı mahalleler başlıkta ilçeyle: "Kağıthane Merkez Diş Kliniği" (`veri.py::mahalle_ilceyle_yazilir`) | 0 |
-| Güngören'de "Merkez" ve "Güngören Merkez" aynı mahallenin iki kaydı | tek kayıt; `/…/gungoren/merkez/` → 301 | 1.039 → **1.036** sayfa, sitemap **1.124** |
-| Mahalle sayfasında "{ilçe}'nin diğer semtleri" sabit ek: Beşiktaş'nin, Beyoğlu'nin, Kadıköy'nin… (~1.100 yer); Yahya Kemal'da, İstiklal'da, Namık Kemal'da | `nin()`, ince-l istisnası, `mi()` | 0 hata |
-| Açık dişçi title'ında "{yer} açık dişçi" yok ("Şu An Açık Dişçi") — 262/262 | "{yer} Açık Dişçi: Şu An Açık mı? Sabah 5'ten Gece 12'ye" | 261/261 |
-| Ortodonti title'ında "{yer} diş teli" bitişik değil | "{yer} Diş Teli ve Ortodonti" | 23/23 |
-| "istanbul şişli dişçi" yok | Şişli lead: "İstanbul Şişli'de dişçi…" | ✓ |
-| Mahalle sayfasında diğer aile linki "Şişli Diş Kliniği" yazıp Mecidiyeköy sayfasına gidiyordu | çapa = hedefin yeri ("Mecidiyeköy Diş Kliniği") | ✓ |
-| Parti 4: "cerrah diş doktoru" (260), "diş kanal tedavisi uzmanı" (20), "gömülü 20'lik diş çekimi fiyatı" yok | bilgi SSS'i (unvan iddiası yok, tutar yok) | ✓ |
-| Kanal sloganı "Dişinizi Kurtaralım" (24 title) | "Kendi Dişinizi Koruyarak" | ✓ |
-| **Ana sayfa (16 dil)**: "acil randevu", "Acil durumlarda müdahale ediyor musunuz?", "Acil Durumlar İçin", "7 gün 24 saat", "7/24 Canlı Destek"; 8 dilde hafta sonu çevirisine eklenmiş "acil durumlarda da ulaşılabiliriz" | her gün 05:00–00:00 / diş ağrısında aynı gün muayene; `index.html` + 16 `.po/.mo` | 0 (8 dilde test) |
+| uzman diş hekimi | /dis-klinigi/… (262) | SSS "Uzman diş hekimi ile diş hekimi arasındaki fark nedir?" |
+| istanbul şişli dişçi | /dis-klinigi/sisli/ | SSS "İstanbul Şişli'de dişçi randevusu nasıl alırım?" |
+| hafta sonu dişçiler açık mı | /pazar-acik-disci/… (262) | SSS "Hafta sonu dişçiler açık mı?" (önceden yalnızca giriş cümlesinde) |
+| implantolog, implant uzmanı | /implant-tedavisi/{ilçe}/ (23) | SSS "İmplantolog ya da implant uzmanı mı aramalıyım?" |
+| diş kanal tedavisi uzmanı, endodonti kanal tedavisi uzmanı | /kanal-tedavisi/{ilçe}/ (23) | SSS "Diş kanal tedavisi uzmanı ne yapar?" |
+| kanal tedavisi istanbul | /kanal-tedavisi/{ilçe}/ (23) | SSS "İstanbul'da kanal tedavisi için röntgenimi gönderebilir miyim?" |
+| cerrah diş doktoru, cerrah dişçi, cerrahi diş kliniği | /dis-cekimi/{ilçe}/ (23) | SSS "Cerrah diş doktoru ya da cerrah dişçi aramalı mıyım?" |
+| diş hekimi cerrah olabilir mi | /dis-cekimi/{ilçe}/ (23) | SSS "Diş hekimi cerrah olabilir mi?" |
+| gömülü 20lik diş çekimi fiyatı, cerrah diş çekimi fiyatları | /dis-cekimi/{ilçe}/ (23) | SSS "Gömülü 20'lik diş çekimi fiyatı ve cerrahi diş çekimi fiyatları neye göre değişir?" (tutar yok) |
 
-**Sonuç: 106 kuralın 96'sı hedef ailenin bütün sayfalarında sağlanıyor.** Kalan 10'u:
-- Ölçüm aracının sınırı (Google aynı sayar): "diş klinik" (klinik→kliniği yumuşaması), "gömülü 20lik diş çekimi fiyatı" (sayfada
-  "fiyatları"), "en iyi dişçi istanbul" (Avrupa yakası sayfalarında "İstanbul Avrupa yakasında en iyi dişçi nerede?"),
-  "diş hekimi cerrah olabilir mi" (sayfada "Diş hekimi cerrah mıdır, cerrah olabilir mi?").
-- Bilerek: "hafta sonu dişçiler açık mı" (90) SSS'te değil, giriş paragrafının ilk cümlesinde soru olarak; Şişli ilçe sayfasında
-  "dişçi şişli yakınında" yerine "İstanbul Şişli'de dişçi".
-- Unvan çağrışımlı, hacimsiz, eklenmedi: "endodonti kanal tedavisi uzmanı", "cerrah dişçi", "cerrahi diş kliniği".
+Unvan iddiası yok (bilgi soruları, hekim kararı 27.11). Kalıcı test: dbs `pseo/tests.py::KeywordKapsamaTests` (+13 ifade) ve
+`test_hafta_sonu_sorusu_sss_te`.
 
-Diğer ölçümler: yetim pSEO sayfası 0, her sayfaya en az 7 farklı sayfadan link; aileler arası title çakışması yok.
+Sayfada zaten olup yazımı farklı olanlar (dokunulmadı): "{yer} açık dişçi" H1'de (title'da "{yer} Şu An Açık Dişçi"); "{yer} diş teli"
+SSS ve gövdede; "diş klinik" gövdede ("diş klinikleri"); "en iyi dişçi istanbul" Avrupa yakası sayfalarında "İstanbul Avrupa yakasında
+en iyi dişçi nerede?"; mahalle sayfalarında "dişçi {mahalle} yakınında" lead'de "{mahalle}, {ilçe} yakınında dişçi" olarak.
+
+**Geri alınan değişiklik:** aynı gün yapılan `a250bf7` (title'lar, mahalle adları, Güngören birleştirme, Türkçe ekler, ana sayfa
+metinleri) hekimin isteğiyle geri alındı (`5736ea5`). İstenen yalnızca eksik keyword'lerin eklenmesiydi. Geri almayla eski hâline
+dönenler: ana sayfada "acil randevu", "7/24", "7 gün 24 saat" (16 dil); "Beşiktaş'nin" türü ek hataları; kanal title'larında
+"Dişinizi Kurtaralım"; aynı adlı mahallelerde yinelenen title'lar; Güngören'de "Merkez" ve "Güngören Merkez" iki ayrı sayfa.
+Bunlara ancak hekim isterse dokunulur. Sayfa sayısı 1.039, sitemap 1.127.
 
 **Hekim kararı (27.11.2026): Şişli'de eski GBP kategori sayfaları ile pSEO Şişli sayfaları ikisi de kalsın.** Aynı başlığı
 hedefleyen çiftler: /sisli-dis-klinigi/ ↔ /dis-klinigi/sisli/, /implant-tedavisi/ ↔ /implant-tedavisi/sisli/, /kanal-tedavisi/,
-/dis-cekimi/, /dis-tasi-temizligi/, /cocuk-dis-hekimi/ ↔ /…/sisli/. GSC'de hangisinin gösterim aldığına bakılıp gerekirse
-yeniden değerlendirilir.
-
-Açık kalan, kapsam dışı: dental-tourism sayfasında "24 saat içinde dönüş garantisi" ("garanti" kelimesi; acil niyeti değil),
-ana sayfada "en iyi şekilde" (üstünlük iddiası değil), "10.000+ başarılı vaka" (eski metin, doğrulanmadı).
-Denetim betikleri: oturum scratchpad'i `ilce/render_hepsi.py`, `ilce/analiz.py` (kalıcı kontroller dbs `pseo/tests.py::Denetim2711Tests`).
+/dis-cekimi/, /dis-tasi-temizligi/, /cocuk-dis-hekimi/ ↔ /…/sisli/.
