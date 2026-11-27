@@ -158,3 +158,43 @@ acil, nöbetçi, 24 saat, 7-24, gece; prof/doç; endodontist ve çene cerrahı u
 "uzman diş hekimi"; "cerrah diş doktoru" (son dördü hekime soruldu).
 
 Aynı denetimde bulunan hata: hekim paragrafında Dt. Ekin Sipahi "kızı" yazıyordu; doğrusu "oğlu" (düzeltildi).
+
+## 10. Tam denetim — 27.11.2026 (tüm sayfalar, tüm keyword'ler)
+
+§9'daki ölçüm 16 örnek sayfaya bakıyordu. Bu turda hekimin ham partileri (konuşma kaydından: Parti 1, 2, 4 ve önerilen
+benzerleri) **106 kurala** çevrildi. Şişli için verilen keyword'ler hekimin istediği gibi her ilçe/mahalleye genellendi
+("pazar açık dişçi şişli" → 261 sayfanın her birinde "{yer} pazar açık dişçi"). Sitemap'teki **1.049 sayfanın hepsi** yerelde
+render edildi (dbs `main`, SQLite). Kurallar: ana ifade title + H1'de, soru tipi SSS'te, yan ifade gövdede, "en iyi" yalnızca
+tavsiye SSS'inde, hariç tutulanlar hiçbir yerde.
+
+| Bulgu (önce) | Düzeltme (dbs `a250bf7`) | Sonra |
+|---|---|---|
+| 51 grup / 114 sayfa aynı title, H1, description (Merkez ×3, Kartaltepe ×3, Esenler/Küçükçekmece/Esenyurt "Fatih" = Fatih ilçesi, Beşiktaş "Arnavutköy" = Arnavutköy ilçesi…) | Aynı adlı / ilçe adlı / genel adlı mahalleler başlıkta ilçeyle: "Kağıthane Merkez Diş Kliniği" (`veri.py::mahalle_ilceyle_yazilir`) | 0 |
+| Güngören'de "Merkez" ve "Güngören Merkez" aynı mahallenin iki kaydı | tek kayıt; `/…/gungoren/merkez/` → 301 | 1.039 → **1.036** sayfa, sitemap **1.124** |
+| Mahalle sayfasında "{ilçe}'nin diğer semtleri" sabit ek: Beşiktaş'nin, Beyoğlu'nin, Kadıköy'nin… (~1.100 yer); Yahya Kemal'da, İstiklal'da, Namık Kemal'da | `nin()`, ince-l istisnası, `mi()` | 0 hata |
+| Açık dişçi title'ında "{yer} açık dişçi" yok ("Şu An Açık Dişçi") — 262/262 | "{yer} Açık Dişçi: Şu An Açık mı? Sabah 5'ten Gece 12'ye" | 261/261 |
+| Ortodonti title'ında "{yer} diş teli" bitişik değil | "{yer} Diş Teli ve Ortodonti" | 23/23 |
+| "istanbul şişli dişçi" yok | Şişli lead: "İstanbul Şişli'de dişçi…" | ✓ |
+| Mahalle sayfasında diğer aile linki "Şişli Diş Kliniği" yazıp Mecidiyeköy sayfasına gidiyordu | çapa = hedefin yeri ("Mecidiyeköy Diş Kliniği") | ✓ |
+| Parti 4: "cerrah diş doktoru" (260), "diş kanal tedavisi uzmanı" (20), "gömülü 20'lik diş çekimi fiyatı" yok | bilgi SSS'i (unvan iddiası yok, tutar yok) | ✓ |
+| Kanal sloganı "Dişinizi Kurtaralım" (24 title) | "Kendi Dişinizi Koruyarak" | ✓ |
+| **Ana sayfa (16 dil)**: "acil randevu", "Acil durumlarda müdahale ediyor musunuz?", "Acil Durumlar İçin", "7 gün 24 saat", "7/24 Canlı Destek"; 8 dilde hafta sonu çevirisine eklenmiş "acil durumlarda da ulaşılabiliriz" | her gün 05:00–00:00 / diş ağrısında aynı gün muayene; `index.html` + 16 `.po/.mo` | 0 (8 dilde test) |
+
+**Sonuç: 106 kuralın 96'sı hedef ailenin bütün sayfalarında sağlanıyor.** Kalan 10'u:
+- Ölçüm aracının sınırı (Google aynı sayar): "diş klinik" (klinik→kliniği yumuşaması), "gömülü 20lik diş çekimi fiyatı" (sayfada
+  "fiyatları"), "en iyi dişçi istanbul" (Avrupa yakası sayfalarında "İstanbul Avrupa yakasında en iyi dişçi nerede?"),
+  "diş hekimi cerrah olabilir mi" (sayfada "Diş hekimi cerrah mıdır, cerrah olabilir mi?").
+- Bilerek: "hafta sonu dişçiler açık mı" (90) SSS'te değil, giriş paragrafının ilk cümlesinde soru olarak; Şişli ilçe sayfasında
+  "dişçi şişli yakınında" yerine "İstanbul Şişli'de dişçi".
+- Unvan çağrışımlı, hacimsiz, eklenmedi: "endodonti kanal tedavisi uzmanı", "cerrah dişçi", "cerrahi diş kliniği".
+
+Diğer ölçümler: yetim pSEO sayfası 0, her sayfaya en az 7 farklı sayfadan link; aileler arası title çakışması yok.
+
+**Hekim kararı (27.11.2026): Şişli'de eski GBP kategori sayfaları ile pSEO Şişli sayfaları ikisi de kalsın.** Aynı başlığı
+hedefleyen çiftler: /sisli-dis-klinigi/ ↔ /dis-klinigi/sisli/, /implant-tedavisi/ ↔ /implant-tedavisi/sisli/, /kanal-tedavisi/,
+/dis-cekimi/, /dis-tasi-temizligi/, /cocuk-dis-hekimi/ ↔ /…/sisli/. GSC'de hangisinin gösterim aldığına bakılıp gerekirse
+yeniden değerlendirilir.
+
+Açık kalan, kapsam dışı: dental-tourism sayfasında "24 saat içinde dönüş garantisi" ("garanti" kelimesi; acil niyeti değil),
+ana sayfada "en iyi şekilde" (üstünlük iddiası değil), "10.000+ başarılı vaka" (eski metin, doğrulanmadı).
+Denetim betikleri: oturum scratchpad'i `ilce/render_hepsi.py`, `ilce/analiz.py` (kalıcı kontroller dbs `pseo/tests.py::Denetim2711Tests`).
